@@ -19,7 +19,6 @@
     Special Implementation is done for other Regions.
 """
 
-import pyotherside
 import threading
 from datetime import datetime
 from datetime import timezone
@@ -390,6 +389,7 @@ def issueReport(regionID, local, path, fromCache=False):
     else:
          matchingReport = fetchCachedReport(regionID, local, path)
 
+    import pyotherside
     try:
         matchingReport
     except NameError:
