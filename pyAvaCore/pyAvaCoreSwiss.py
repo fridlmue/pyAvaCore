@@ -15,7 +15,6 @@
 """
     The Python Code is responsible for correct fetch of the slf avalanche information.
 """
-import pyotherside
 import threading
 from datetime import datetime
 
@@ -38,6 +37,7 @@ def downloadFiles(lang, path):
 
 # Decodes the information from the Report
 def issueReport(regionID, local, path, fromCache=False):
+    import pyotherside
 
     lang = "en"  #Set Lang to get Report (fr, it, en, de)
     provider = "Report from slf.ch"
