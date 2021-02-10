@@ -14,33 +14,53 @@
 """
 
 import threading
+from datetime import date
 from datetime import datetime
+from datetime import timedelta
 from datetime import timezone
 from urllib.request import urlopen
-import pickle
 from pathlib import Path
 import copy
+import re
+import sys
 
-def addParentInfo(et):
+# avaRisk only
+import pickle
+
+# ALBINA only
+import json
+import logging
+import logging.handlers
+
+logging.basicConfig(
+    format='[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s',
+    level=logging.INFO,
+    handlers=[
+        logging.handlers.TimedRotatingFileHandler(filename=f'logs/pyAvaCore.log', when='midnight'),
+        logging.StreamHandler(),
+    ])
+
+def et_add_parent_info(et):
     for child in et:
         child.attrib['__my_parent__'] = et
-        addParentInfo(child)
+        et_add_parent_info(child)
 
-def getParent(et):
+def et_get_parent(et):
     if '__my_parent__' in et.attrib:
         return et.attrib['__my_parent__']
     else:
         return None
 
-def fetchCachedReport(regionID, local, path):
+def fetch_cached_report(regionID, local, path):
     if Path(path + '/reports/'+regionID+local+'.pkl').is_file():
         with open(path + '/reports/'+regionID+local+'.pkl', 'rb') as input:
             return pickle.load(input)
 
-def getXmlAsElemT(url):
+def get_xml_as_ET(url):
 
     #timeout_time = 5
     #with urlopen(url, timeout=timeout_time) as response:
+    
     with urlopen(url) as response:
         response_content = response.read()
     try:
@@ -54,29 +74,28 @@ def getXmlAsElemT(url):
             root = ET.fromstring(response_content.decode('utf-8'))
     except Exception as e:
         print('error parsing ElementTree: ' + str(e))
-
     return root
 
-def parseXML(root):
+def parse_xml(root):
 
     reports = []
 
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
-        report = avaReport()
+        report = AvaReport()
         for observations in bulletin:
-            addParentInfo(observations)
+            et_add_parent_info(observations)
             for locRef in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
                 report.validRegions.append(observations.attrib.get('{http://www.w3.org/1999/xlink}href'))
             for locRef in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
                 report.validRegions.append(observations.attrib.get('{http://www.w3.org/1999/xlink}href'))
             for dateTimeReport in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                report.repDate = tryParseDateTime(dateTimeReport.text).replace(tzinfo=timezone.utc)
+                report.repDate = try_parse_datetime(dateTimeReport.text).replace(tzinfo=timezone.utc)
             for validTime in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
-                if not (getParent(validTime)):
+                if not (et_get_parent(validTime)):
                     for beginPosition in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                        report.timeBegin = tryParseDateTime(beginPosition.text).replace(tzinfo=timezone.utc)
+                        report.timeBegin = try_parse_datetime(beginPosition.text).replace(tzinfo=timezone.utc)
                     for endPosition in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                        report.timeEnd = tryParseDateTime(endPosition.text).replace(tzinfo=timezone.utc)
+                        report.timeEnd = try_parse_datetime(endPosition.text).replace(tzinfo=timezone.utc)
             for DangerRating in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerRating'):
                 mainValueR = 0
                 for mainValue in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
@@ -84,7 +103,7 @@ def parseXML(root):
                 validElevR = "-"
                 for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                     validElevR = validElevation.attrib.get('{http://www.w3.org/1999/xlink}href')
-                report.dangerMain.append({'mainValue':mainValueR,'validElev':validElevR})
+                report.dangerMain.append(DangerMain(mainValueR, validElevR))
             for DangerPattern in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
                 for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                     report.dangerPattern.append(DangerPatternType.text)
@@ -100,7 +119,7 @@ def parseXML(root):
                 for validElevation in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                     validElevR = validElevation.get('{http://www.w3.org/1999/xlink}href')
                 i = i+1
-                report.problemList.append({'type':typeR,'aspect':aspect,'validElev':validElevR})
+                report.problemList.append(Problem(typeR, aspect, validElevR))
             for avActivityHighlights in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avActivityHighlights'):
                 report.activityHighl = avActivityHighlights.text
             for avActivityComment in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avActivityComment'):
@@ -113,10 +132,10 @@ def parseXML(root):
 
     return reports
 
-def parseXMLVorarlberg(root):
+def parse_xml_vorarlberg(root):
     numberOfRegions = 6
     reports = []
-    report = avaReport()
+    report = AvaReport()
     report.validRegions=[""]
     commentEmpty = 1
     # Common for every Report:
@@ -124,7 +143,7 @@ def parseXMLVorarlberg(root):
         for detail in bulletin:
             for metaDataProperty in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
                 for dateTimeReport in metaDataProperty.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                    report.repDate = tryParseDateTime(dateTimeReport.text)
+                    report.repDate = try_parse_datetime(dateTimeReport.text)
             for bulletinResultsOf in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}bulletinResultsOf'):
                 for travelAdvisoryComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}travelAdvisoryComment'):
                     report.activityCom = travelAdvisoryComment.text
@@ -153,7 +172,7 @@ def parseXMLVorarlberg(root):
                         for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                             validElev = "ElevationRange_" + endPosition.text + "Lw"
                     i = i+1
-                    report.problemList.append({'type':typeR,'aspect':aspect,'validElev':validElev})
+                    report.problemList.append(Problem(typeR, aspect, validElev))
 
 
     for i in range(numberOfRegions+1):
@@ -170,9 +189,9 @@ def parseXMLVorarlberg(root):
                         reports[regionID-1].validRegions[0] = locRef.attrib.get('{http://www.w3.org/1999/xlink}href')
                     for validTime in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                         for beginPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                            reports[regionID-1].timeBegin = tryParseDateTime(beginPosition.text)
+                            reports[regionID-1].timeBegin = try_parse_datetime(beginPosition.text)
                         for endPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                            reports[regionID-1].timeEnd = tryParseDateTime(endPosition.text)
+                            reports[regionID-1].timeEnd = try_parse_datetime(endPosition.text)
                     mainValue = 0
                     validElev = "-"
                     for mainValue in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
@@ -182,21 +201,21 @@ def parseXMLVorarlberg(root):
                             validElev = "ElevationRange_" + beginPosition.text + "Hi"
                         for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                             validElev = "ElevationRange_" + endPosition.text + "Lw"
-                    reports[regionID-1].dangerMain.append({'mainValue':mainValue,'validElev':validElev})
+                    reports[regionID-1].dangerMain.append(DangerMain(mainValue, validElev))
     return reports
 
 
-def parseXMLBavaria(root):
+def parse_xml_bavaria(root):
 
     numberOfRegions = 6
     reports = []
-    report = avaReport()
+    report = AvaReport()
     report.validRegions=[""]
 
     # Common for every Report:
     for metaData in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
         for dateTimeReport in metaData.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                    report.repDate = tryParseDateTime(dateTimeReport.text)
+                    report.repDate = try_parse_datetime(dateTimeReport.text)
 
     for bulletinMeasurements in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}BulletinMeasurements'):
         for travelAdvisoryComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}travelAdvisoryComment'):
@@ -222,7 +241,7 @@ def parseXMLBavaria(root):
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     validElev = "ElevationRange_" + endPosition.text + "Lw"
             i = i+1
-            report.problemList.append({'type':type,'aspect':aspect,'validElev':validElev})
+            report.problemList.append(Problem(type, aspect, validElev))
 
     for i in range(numberOfRegions+1):
         reports.append(copy.deepcopy(report))
@@ -230,7 +249,7 @@ def parseXMLBavaria(root):
     # Check Names of all Regions
 
     for bulletinResultOf in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}bulletinResultsOf'):
-        addParentInfo(bulletinResultOf)
+        et_add_parent_info(bulletinResultOf)
         for locRef in bulletinResultOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
             found = False
             regionID = -1
@@ -248,14 +267,14 @@ def parseXMLBavaria(root):
                 reports[firstFree].validRegions.append(locRef.attrib.get('{http://www.w3.org/1999/xlink}href'))
                 regionID = firstFree
 
-            DangerRating = getParent(locRef)
+            DangerRating = et_get_parent(locRef)
 
 
             for validTime in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                 for beginPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    reports[regionID].timeBegin = tryParseDateTime(beginPosition.text)
+                    reports[regionID].timeBegin = try_parse_datetime(beginPosition.text)
                 for endPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    reports[regionID].timeEnd = tryParseDateTime(endPosition.text)
+                    reports[regionID].timeEnd = try_parse_datetime(endPosition.text)
             mainValue = 0
             validElev = "-"
             for mainValue in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
@@ -265,46 +284,39 @@ def parseXMLBavaria(root):
                     validElev = "ElevationRange_" + beginPosition.text + "Hi"
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     validElev = "ElevationRange_" + endPosition.text + "Lw"
-            reports[regionID].dangerMain.append({'mainValue':mainValue,'validElev':validElev})
+            reports[regionID].dangerMain.append(DangerMain(mainValue, validElev))
 
     return reports
 
-def getReports(url):
-    root = getXmlAsElemT(url)
+def get_reports(url):
+    logging.info('Fetching %s', url)
+    root = get_xml_as_ET(url)
     if "VORARLBERG" in url.upper():
-        reports = parseXMLVorarlberg(root)
+        reports = parse_xml_vorarlberg(root)
     elif "BAYERN" in url.upper():
-        reports = parseXMLBavaria(root)
+        reports = parse_xml_bavaria(root)
     else:
-        reports = parseXML(root)
+        reports = parse_xml(root)
     return reports
 
 
-def tryParseDateTime(inStr):
+def try_parse_datetime(inStr):
     try:
         r_dateTime = datetime.strptime(inStr, '%Y-%m-%dT%XZ')
-        #print(r_dateTime.isoformat())
     except:
         try:
             r_dateTime = datetime.strptime(inStr[:19], '%Y-%m-%dT%X') # 2019-04-30T15:55:29+01:00
-            #print(r_dateTime.isoformat())
         except:
-            # print('some Error in try dateTime') (Normal vor Vorarlberg)
             r_dateTime = datetime.now()
-
     return r_dateTime
-
-
-def issueReport(regionID, local, path, fromCache=False):
-    url = "https://api.avalanche.report/albina/api/bulletins"
-    reports = []
-    provider = ""
-    # Euregio-Region Tirol, Südtirol, Trentino
+    
+def get_report_url(regionID, local=''): #You can ignore "provider" return value by url, _ = getReportsUrl
+     # Euregio-Region Tirol, Südtirol, Trentino
     if ("AT-07" in regionID) or ("IT-32-BZ" in regionID) or ("IT-32-TN" in regionID):
         url = "https://avalanche.report/albina_files/latest/en.xml"
         provider = "The displayed information is provided by an open data API on https://avalanche.report by: Avalanche Warning Service Tirol, Avalanche Warning Service Südtirol, Avalanche Warning Service Trentino."
         if "DE" in local.upper():
-            url += "https://avalanche.report/albina_files/latest/de.xml"
+            url  = "https://avalanche.report/albina_files/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://avalanche.report abgefragt. Diese wird bereitgestellt von: Avalanche Warning Service Tirol, Avalanche Warning Service Südtirol, Avalanche Warning Service Trentino."
 
     # Kärnten
@@ -313,7 +325,7 @@ def issueReport(regionID, local, path, fromCache=False):
         provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird bereitgestellt vom: Lawinenwarndienst Kärnten (https://lawinenwarndienst.ktn.gv.at)."
 
     # Salzburg
-    if "AT-05" in regionID:
+    if regionID.startswith("AT-05"):
         url = "https://www.avalanche-warnings.eu/public/salzburg/caaml/en"
         provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird bereitgestellt vom: Lawinenwarndienst Salzburg (https://lawine.salzburg.at)."
         if "DE" in local.upper():
@@ -321,7 +333,7 @@ def issueReport(regionID, local, path, fromCache=False):
             provider = "The displayed information is provided by an open data API on https://www.avalanche-warnings.eu by: Avalanche Warning Service Salzburg (https://lawine.salzburg.at)."
 
     # Steiermark
-    if "AT-06" in regionID:
+    if regionID.startswith("AT-06"):
         url = "https://www.avalanche-warnings.eu/public/steiermark/caaml/en"
         provider = "The displayed information is provided by an open data API on https://www.avalanche-warnings.eu by: Avalanche Warning Service Steiermark (https://www.lawine-steiermark.at)."
         if "DE" in local.upper():
@@ -329,7 +341,7 @@ def issueReport(regionID, local, path, fromCache=False):
             provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird bereitgestellt vom: Lawinenwarndienst Steiermark (https://www.lawine-steiermark.at)."
 
     # Oberösterreich
-    if "AT-04" in regionID:
+    if regionID.startswith("AT-04"):
         url = "https://www.avalanche-warnings.eu/public/oberoesterreich/caaml"
         provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird bereitgestellt vom: Lawinenwarndienst Oberösterreich (https://www.land-oberoesterreich.gv.at/lawinenwarndienst.htm)."
 
@@ -339,7 +351,7 @@ def issueReport(regionID, local, path, fromCache=False):
         provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird bereitgestellt vom: Lawinenwarndienst Niederösterreich (https://www.lawinenwarndienst-niederoesterreich.at)."
 
     #Vorarlberg
-    if regionID.startswith("AT8"):
+    if regionID.startswith("AT-08"):
         url = "https://warndienste.cnv.at/dibos/lawine_en/avalanche_bulletin_vorarlberg_en.xml"
         provider = "The displayed information is provided by an open data API on https://warndienste.cnv.at by: Landeswarnzentrale Vorarlberg - http://www.vorarlberg.at/lawine"
         if "DE" in local.upper():
@@ -361,31 +373,49 @@ def issueReport(regionID, local, path, fromCache=False):
         if "DE" in local.upper():
             url = "https://conselharan2.cyberneticos.net/albina_files_local/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://lauegi.conselharan.org/ abgefragt. Diese wird bereitgestellt von Conselh Generau d'Aran (https://lauegi.conselharan.org/)."
+            
+    return url, provider 
 
+def issue_report(region_id, local, path, from_cache = False, cli_out = False, send_other_side = True):
+
+    url = "https://api.avalanche.report/albina/api/bulletins"
+    reports = []
+    provider = ""
+    
+    url, provider = get_report_url(region_id, local)
+    
+   
     cached = True
-    if not fromCache:
+    if not from_cache:
         try:
-            reports.extend(getReports(url))
+            reports.extend(get_reports(url))
         except:
-            matchingReport = fetchCachedReport(regionID, local, path)
+            matching_report = fetch_cached_report(region_id, local, path)
 
 
         Path(path + "/reports/").mkdir(parents=True, exist_ok=True)
 
         for report in reports:
-            for currentRegionID in report.validRegions:
-                with open(path + '/reports/'+currentRegionID+local+'.pkl', 'wb') as f:
+            for current_region_id in report.validRegions:
+                with open(path + '/reports/'+current_region_id+local+'.pkl', 'wb') as f:
                     pickle.dump(report, f, pickle.HIGHEST_PROTOCOL)
             for ID in report.validRegions:
-                if ID == regionID:
-                  matchingReport = report
+                if ID == region_id:
+                  matching_report = report
                   cached = False
     else:
-         matchingReport = fetchCachedReport(regionID, local, path)
-
+         matching_report = fetch_cached_report(region_id, local, path)
+    
+    if send_other_side:
+        send_to_other_side(matching_report, provider, cached)
+    
+    if cli_out:
+        cli_print_report(matching_report, provider, cached)
+        
+def send_to_other_side(matching_report, provider, cached): # Should be part of avaRisk not pyAvaCore
     import pyotherside
     try:
-        matchingReport
+        matching_report
     except NameError:
         pyotherside.send('dangerLevel', "Problem resolving Region")
         pyotherside.send('provider', "Couldn't find the RegionID in the Report. Probably it is not served at the moment.")
@@ -394,31 +424,69 @@ def issueReport(regionID, local, path, fromCache=False):
     else:
         dangerLevel = 0
         try:
-            for elem in matchingReport.dangerMain:
+            for elem in matching_report.dangerMain:
                 if elem['mainValue'] > dangerLevel:
                     dangerLevel = elem['mainValue']
         except:
             pyotherside.send('finished', False)
         pyotherside.send('dangerLevel', dangerLevel)
-        pyotherside.send('dangerLevel_h', matchingReport.dangerMain[0]['mainValue'])
-        if (len(matchingReport.dangerMain) > 1):
-            pyotherside.send('dangerLevel_l', matchingReport.dangerMain[1]['mainValue'])
-            pyotherside.send('dangerLevel_alti', matchingReport.dangerMain[0]['validElev'])
+        pyotherside.send('dangerLevel_h', matching_report.dangerMain[0]['mainValue'])
+        if (len(matching_report.dangerMain) > 1):
+            pyotherside.send('dangerLevel_l', matching_report.dangerMain[1]['mainValue'])
+            pyotherside.send('dangerLevel_alti', matching_report.dangerMain[0]['validElev'])
         else:
-            pyotherside.send('dangerLevel_l', matchingReport.dangerMain[0]['mainValue'])
-        pyotherside.send('highlights', matchingReport.activityHighl)
-        pyotherside.send('comment',matchingReport.activityCom.replace("&nbsp;", " "))
-        pyotherside.send('structure', matchingReport.snowStrucCom.replace("&nbsp;", " "))
-        pyotherside.send('tendency', matchingReport.tendencyCom.replace("&nbsp;", " "))
-        pyotherside.send('repDate', matchingReport.repDate)
-        pyotherside.send('validFrom', matchingReport.timeBegin)
-        pyotherside.send('validTo', matchingReport.timeEnd)
-        pyotherside.send('numberOfDPatterns', len(matchingReport.problemList))
-        pyotherside.send('dPatterns', str(matchingReport.problemList).replace("'", '"'))
+            pyotherside.send('dangerLevel_l', matching_report.dangerMain[0]['mainValue'])
+        pyotherside.send('highlights', matching_report.activityHighl)
+        pyotherside.send('comment',matching_report.activityCom.replace("&nbsp;", " "))
+        pyotherside.send('structure', matching_report.snowStrucCom.replace("&nbsp;", " "))
+        pyotherside.send('tendency', matching_report.tendencyCom.replace("&nbsp;", " "))
+        pyotherside.send('repDate', matching_report.repDate)
+        pyotherside.send('validFrom', matching_report.timeBegin)
+        pyotherside.send('validTo', matching_report.timeEnd)
+        pyotherside.send('numberOfDPatterns', len(matching_report.problemList))
+        pyotherside.send('dPatterns', str(matching_report.problemList).replace("'", '"'))
         pyotherside.send('provider', provider)
 
         pyotherside.send('cached', cached)
         pyotherside.send('finished', True)
+
+def cli_print_report(matching_report, provider, cached):
+    try:
+        matching_report
+    except NameError:
+        print('dangerLevel', "Problem resolving Region")
+        print('provider', "Couldn't find the RegionID in the Report. Probably it is not served at the moment.")
+        
+        print('finished')
+    else:
+
+        dangerLevel = 0
+        for elem in matching_report.dangerMain:
+          if elem['mainValue'] > dangerLevel:
+              dangerLevel = elem['mainValue']
+
+        print('dangerLevel', dangerLevel)
+        print('dangerLevel_h', matching_report.dangerMain[0]['mainValue'])
+        if (len(matching_report.dangerMain) > 1):
+            print('dangerLevel_l', matching_report.dangerMain[1]['mainValue'])
+            print('dangerLevel_alti', matching_report.dangerMain[0]['validElev'])
+        else:
+            print('dangerLevel_l', matching_report.dangerMain[0]['mainValue'])
+        print('highlights', matching_report.activityHighl)
+        print('comment',matching_report.activityCom)
+        print('structure', matching_report.snowStrucCom)
+        print('tendency', matching_report.tendencyCom)
+        print('repDate', matching_report.repDate)
+        print('validFrom', matching_report.timeBegin.isoformat())
+        print(matching_report.timeBegin.tzinfo)
+        print('validTo', matching_report.timeEnd)
+        print('numberOfDPatterns', len(matching_report.problemList))
+        print('dPatterns', str(matching_report.problemList).replace("'", '"'))
+        print('provider', provider)
+
+        print('finished')
+        
+        print(matching_report.validRegions)
 
 class Downloader:
     def __init__(self):
@@ -428,13 +496,31 @@ class Downloader:
     def download(self, regionID, local, path):
         if self.bgthread.is_alive():
             return
-        self.bgthread = threading.Thread(target=issueReport(regionID, local, path))
+        self.bgthread = threading.Thread(target=issue_report(regionID, local, path))
         self.bgthread.start()
 
     def cached(self, regionID, local, path):
-        issueReport(regionID, local, path, fromCache=True)
+        issue_report(regionID, local, path, fromCache=True)
+        
+class Problem:
+    type: str
+    aspect: list
+    validElev: str
+    
+    def __init__(self, type: str, aspect: list, validElev: str) -> None:
+        self.type = type
+        self.aspect = aspect
+        self.validElev = validElev
 
-class avaReport:
+class DangerMain:
+    mainValue: int
+    validElev: str
+    
+    def __init__(self, mainValue: int, validElev: str):
+        self.mainValue = mainValue
+        self.validElev = validElev
+
+class AvaReport:
     def __init__(self):
         self.validRegions = []          # list of Regions
         self.repDate = ""               # Date of Report
@@ -448,4 +534,55 @@ class avaReport:
         self.snowStrucCom = "none"      # String comment on snowpack structure
         self.tendencyCom = "none"       # String comment on tendency
 
-downloader = Downloader()
+def clean_elevation(elev: str):
+    if elev in ['', '-', 'ElevationRange_Keine H\u00f6hengrenzeHi']:
+        return None
+    elev = re.sub(r'ElevationRange_(.+)Hi', r'>\1', elev)
+    elev = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'<\1', elev)
+    elev = elev.replace('Forestline', 'Treeline')
+    return elev
+
+def dumper(obj):
+    if type(obj) is datetime:
+        return obj.isoformat()
+    try:
+        return obj.toJSON()
+    except:
+        return obj.__dict__
+
+def download_region(regionID):
+    url, _ = get_report_url(regionID)
+    reports = get_reports(url)
+    report: AvaReport
+    for report in reports:
+        if type(report.timeBegin) is datetime:
+            validityDate = report.timeBegin
+            if validityDate.hour > 15:
+                validityDate = validityDate + timedelta(days=1)
+            validityDate = validityDate.date().isoformat()
+        report.activityHighl = None
+        report.activityCom = None
+        report.snowStrucCom = None
+        report.tendencyCom = None
+        report.validRegions = [r.replace('AT8R', 'AT-08-0') for r in report.validRegions]
+        for danger in report.dangerMain:
+            danger.validElev = clean_elevation(danger.validElev)
+        for problem in report.problemList:
+            problem.validElev = clean_elevation(problem.validElev)
+            problem.aspect = [a.upper().replace('ASPECTRANGE_', '') for a in problem.aspect]
+
+    directory = Path(sys.argv[1] if len(sys.argv) > 1 else '.')
+    with urlopen(url) as http, open(f'{directory}/{validityDate}-{regionID}.xml', mode='wb') as f:
+        logging.info('Writing %s to %s', url, f.name)
+        f.write(http.read())
+    with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
+        logging.info('Writing %s', f.name)
+        json.dump(reports, fp=f, default=dumper, indent=2)
+
+if __name__ == "__main__":
+    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY"]
+    for regionID in regions:
+        try:
+            download_region(regionID)
+        except Exception as e:
+            logging.error('Failed to download %s', regionID, exc_info=e)
