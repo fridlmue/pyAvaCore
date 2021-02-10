@@ -3,7 +3,14 @@
 # https://hub.docker.com/r/library/python/tags/
 image: python:3.6
 
-test:
+unittest:
   script:
     - python -V
     - python setup.py test
+
+pylint:
+  allow_failure: true
+  script:
+    - python -V
+    - pip install pylint
+    - pylint pyAvaCore
