@@ -1,2 +1,4 @@
 *.pyc
 __pycache__
+*.kdev4
+.kdev4
