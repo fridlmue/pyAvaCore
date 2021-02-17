@@ -1,6 +1,8 @@
+"""
+CLI for pyAvaCore
+"""
 from datetime import datetime
 from datetime import timedelta
-from datetime import timezone
 from pathlib import Path
 from urllib.request import urlopen
 import json
@@ -15,20 +17,22 @@ logging.basicConfig(
     format='[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s',
     level=logging.INFO,
     handlers=[
-        logging.handlers.TimedRotatingFileHandler(filename=f'logs/pyAvaCore.log', when='midnight'),
+        logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
         logging.StreamHandler()])
 
 
 def dumper(obj):
-    if type(obj) is datetime:
+    """JSON serialization of datetime"""
+    if isinstance(obj, datetime):
         return obj.isoformat()
     try:
         return obj.toJSON()
-    except:
+    except: # pylint: disable=bare-except
         return obj.__dict__
 
 
 def download_region(regionID):
+    """Downloads the given region and converts it to JSON"""
     if regionID == 'CH':
         url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
         reports = get_reports_ch(str(Path('cache')))
@@ -37,7 +41,7 @@ def download_region(regionID):
         reports = get_reports(url)
     report: AvaReport
     for report in reports:
-        if type(report.validity_begin) is datetime:
+        if isinstance(report.validity_begin, datetime):
             validityDate = report.validity_begin
             if validityDate.hour > 15:
                 validityDate = validityDate + timedelta(days=1)
@@ -63,8 +67,8 @@ def download_region(regionID):
 
 if __name__ == "__main__":
     regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY", "CH"]
-    for regionID in regions:
+    for region in regions:
         try:
-            download_region(regionID)
-        except Exception as e:
-            logging.error('Failed to download %s', regionID, exc_info=e)
+            download_region(region)
+        except Exception as e: # pylint: disable=broad-except
+            logging.error('Failed to download %s', region, exc_info=e)
