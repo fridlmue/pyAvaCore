@@ -631,8 +631,12 @@ def dumper(obj):
         return obj.__dict__
 
 def download_region(regionID):
-    url, _ = get_report_url(regionID)
-    reports = get_reports(url)
+    if regionID == 'CH':
+        url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
+        reports = get_reports_ch(str(Path('cache')))
+    else:
+        url, _ = get_report_url(regionID)
+        reports = get_reports(url)
     report: AvaReport
     for report in reports:
         if type(report.validity_begin) is datetime:
@@ -649,37 +653,12 @@ def download_region(regionID):
             problem.aspect = [a.upper().replace('ASPECTRANGE_', '') for a in problem.aspect]
 
     directory = Path(sys.argv[1] if len(sys.argv) > 1 else '.')
-    with urlopen(url) as http, open(f'{directory}/{validityDate}-{regionID}.xml', mode='wb') as f:
+    with urlopen(url) as http, open(f'{directory}/{validityDate}-{regionID}.{url[-3:]}', mode='wb') as f:
         logging.info('Writing %s to %s', url, f.name)
         f.write(http.read())
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
         json.dump(reports, fp=f, default=dumper, indent=2)
-
-def download_ch():
-    
-    regionID = "CH"
-    reports_ch = get_reports_ch(str(Path.cwd()) + '/cache/')
-        
-    report: AvaReport
-    for report in reports_ch:
-        if type(report.validity_begin) is datetime:
-            validityDate = report.validity_begin
-            if validityDate.hour > 15:
-                validityDate = validityDate + timedelta(days=1)
-            validityDate = validityDate.date().isoformat()
-        report.report_texts = None
-        report.valid_regions = [r.replace('AT8R', 'AT-08-0') for r in report.valid_regions]
-        for danger in report.danger_main:
-            danger.valid_elevation = clean_elevation(danger.valid_elevation)
-        for problem in report.problem_list:
-            problem.valid_elevation = clean_elevation(problem.valid_elevation)
-            problem.aspect = [a.upper().replace('ASPECTRANGE_', '') for a in problem.aspect]
-    
-    directory = Path(sys.argv[1] if len(sys.argv) > 1 else '.')
-    with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
-        logging.info('Writing %s', f.name)
-        json.dump(reports_ch, fp=f, default=dumper, indent=2)
 
 
 if __name__ == "__main__":
@@ -699,13 +678,9 @@ if __name__ == "__main__":
         logging.StreamHandler(),
     ])
     
-    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY"]
+    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY", "CH"]
     for regionID in regions:
         try:
             download_region(regionID)
         except Exception as e:
             logging.error('Failed to download %s', regionID, exc_info=e)
-    try:
-        download_ch()
-    except Exception as e:
-        logging.error('Failed to download %s', regionID, exc_info=e)
