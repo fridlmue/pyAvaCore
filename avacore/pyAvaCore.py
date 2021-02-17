@@ -15,18 +15,17 @@
 
 from datetime import datetime
 from datetime import timezone
-
 from urllib.request import urlopen
-import urllib.request
 from pathlib import Path
+import urllib.request
 import zipfile
 import copy
 import re
-from avacore.png import png
 import base64
-
 import json
 import logging
+
+from avacore.png import png
 
 ### ElementTree helpers
 
@@ -155,11 +154,12 @@ def parse_xml_vorarlberg(root):
                     report.report_texts.append(ReportText('activity_hl', highlights.text))
                 for comment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
                     if comment_empty:
-                        report.tendency_com = comment.text
+                        report.report_texts.append(ReportText('tendency_com', comment.text))
                         comment_empty = 0
                 for wxSynopsisComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                 'wxSynopsisComment'):
-                    activity_com = activity_com + ' <br />Alpinwetterbericht der ZAMG Tirol und Vorarlberg:<br /> ' + str(wxSynopsisComment.text)
+                    activity_com = activity_com + ' <br />Alpinwetterbericht der ZAMG Tirol und Vorarlberg:<br /> ' \
+                        + str(wxSynopsisComment.text)
                 for snowpackStructureComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                        'snowpackStructureComment'):
                     report.report_texts.append(ReportText('snow_struct_com', snowpackStructureComment.text))
@@ -181,7 +181,7 @@ def parse_xml_vorarlberg(root):
                     report.problem_list.append(Problem(type_r, aspect, valid_elevation))
 
     report.report_texts.append(ReportText('activity_com', activity_com))
-    
+
     for i in range(numberOfRegions+1):
         reports.append(copy.deepcopy(report))
 
@@ -232,7 +232,7 @@ def parse_xml_bavaria(root):
         for travelAdvisoryComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                'travelAdvisoryComment'):
             activity_com = travelAdvisoryComment.text
-            
+
         for wxSynopsisComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}wxSynopsisComment'):
             activity_com = activity_com + ' <br />Deutscher Wetterdienst - Regionale Wetterberatung München:<br /> ' \
                 + str(wxSynopsisComment.text)
@@ -257,9 +257,9 @@ def parse_xml_bavaria(root):
                     valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
             i = i+1
             report.problem_list.append(Problem(type_r, aspect, valid_elevation))
-    
+
     report.report_texts.append(ReportText('activity_com', activity_com))
-    
+
     for i in range(number_of_regions+1):
         reports.append(copy.deepcopy(report))
 
@@ -419,8 +419,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
 
 ### CH Helpers and Parsers
 
-# Downloads the swiss avalanche zip for the slf app together with the region mapping information
 def fetch_files_ch(lang, path):
+    '''
+    Downloads the swiss avalanche zip for the slf app together with the region mapping information
+    '''
     Path(path + '/swiss/').mkdir(parents=True, exist_ok=True)
     url = 'https://www.slf.ch/avalanche/mobile/bulletin_'+lang+'.zip'
     urllib.request.urlretrieve(url, path + '/swiss/bulletin_'+lang+'.zip')
@@ -430,17 +432,20 @@ def fetch_files_ch(lang, path):
     with zipfile.ZipFile(path + '/swiss/bulletin_'+lang+'.zip', 'r') as zip_ref:
         zip_ref.extractall(path + '/swiss/')
 
-# Extract dangerous aspects from png
+
 def get_prone_locations(img_text):
+    '''
+    Extract dangerous aspects from png
+    '''
     imgdata = base64.b64decode(img_text)
     png_data = png.Reader(bytes=imgdata)
-    
+
     _, _, px, _ = png_data.read()
-    
+
     px_list = list(px)
-    
+
     aspects = []
-    
+
     if px_list[20][129] == 0:
         aspects.append('AspectRange_NNO')
     if px_list[25][145] == 0:
@@ -457,13 +462,15 @@ def get_prone_locations(img_text):
         aspects.append('AspectRange_WNW')
     if px_list[20][101] == 0:
         aspects.append('AspectRange_NNW')
-        
+
     return aspects
 
 def get_reports_ch(path, lang="en"):
-    
+    '''
+    Download the reports for CH
+    '''
     fetch_files_ch(lang, path)
-    
+
     if Path(path + '/swiss/gk_region2pdf.txt').is_file():
 
         # Receives validity information from text.json
@@ -480,7 +487,8 @@ def get_reports_ch(path, lang="en"):
 
         common_report.rep_date = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
         common_report.validity_begin = common_report.rep_date
-        # Achtung: validity_end is here the next expected update. It should be valis dometimes longer than that. (5PM repot up to 5PM next day)
+        # Achtung: validity_end is here the next expected update. It should be valis dometimes longer than that.
+        # (5PM repot up to 5PM next day)
         common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
         report_ids = []
@@ -496,10 +504,9 @@ def get_reports_ch(path, lang="en"):
                     new_report.report_id = report_id
                     reports.append(new_report)
                 reports[report_ids.index(report_id)].valid_regions.append("CH-" + line[:4])
-        
-        for report in reports:
 
-        # Opens the matching Report
+        for report in reports:
+            # Opens the matching Report-File
             with open(path + '/swiss/1/dst' + report.report_id + '.html', encoding="utf-8") as f:
                 text = f.read()
 
@@ -513,24 +520,24 @@ def get_reports_ch(path, lang="en"):
             prone_locations_img = ReportText('prone_locations_img')
             prone_locations_img.text_content = subtext[:subtext.find('"')]
             general_problem_locations = ''
-            if (len(prone_locations_img.text_content) < 1000): # Sometimes no Picture is attached
+            if len(prone_locations_img.text_content) < 1000: # Sometimes no Picture is attached
                 prone_locations_img.text_content = '-'
             else:
                 general_problem_locations = get_prone_locations(prone_locations_img.text_content)
             report.report_texts.append(prone_locations_img)
-            
+
             # Isolates the prone location Text
             text_pos = subtext.find('alt="')+len('alt="')
             subtext = subtext[text_pos:]
             prone_locations_text = ReportText('prone_locations_text')
             prone_locations_text.text_content = subtext[:subtext.find('"')]
             general_problem_valid_elevation = ''
-            if (prone_locations_text.text_content == 'Content-Type'):
+            if prone_locations_text.text_content == 'Content-Type':
                 prone_locations_text.text_content = '-'
-            else:  
+            else:
                 valid_elevation = ''.join(c for c in prone_locations_text.text_content if c.isdigit())
                 general_problem_valid_elevation = "ElevationRange_" + valid_elevation + "Hi"
-                
+
             report.report_texts.append(prone_locations_text)
             report.problem_list.append(Problem("general", general_problem_locations, general_problem_valid_elevation))
 
@@ -549,32 +556,39 @@ def get_reports_ch(path, lang="en"):
             text = ""
             with open(path + '/swiss/sdwetter.html', encoding="utf-8") as f:
                 text = f.read()
-            
+
             html_weather_snow = ReportText('html_weather_snow')
             html_weather_snow.text_content = text
             report.report_texts.append(html_weather_snow)
-    
+
     return reports
 
 ### Data-Classes
 
 class Problem:
-    type: str
+    '''
+    Defines a avalanche problem with aspect and elevation
+    '''
+    problem_type: str
     aspect: list
     valid_elevation: str
 
-    def __init__(self, type: str, aspect: list, validElev: str) -> None:
-        self.type = type
+    def __init__(self, problem_type: str, aspect: list, validElev: str) -> None:
+        self.problem_type = problem_type
         self.aspect = aspect
         self.valid_elevation = validElev
 
     def __str__(self):
-        return("{'type':'" + self.type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" + self.valid_elevation + "'}")
+        return "{'problem_type':'" + self.problem_type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" \
+            + self.valid_elevation + "'}"
 
     def __repr__(self):
         return str(self)
 
 class DangerMain:
+    '''
+    Defines Danger-Level with elevation
+    '''
     main_value: int
     valid_elevation: str
 
@@ -583,20 +597,26 @@ class DangerMain:
         self.valid_elevation = validElev
 
 class ReportText:
+    '''
+    Defines a report text with type.
+    '''
     text_type: str
     text_content: str
 
-    def __init__ (self, text_type: str, text_content="") -> None:
+    def __init__(self, text_type: str, text_content="") -> None:
         self.text_type = text_type
         self.text_content = text_content
 
     def __str__(self):
-        return("{'text_type':'" + self.text_type + "', 'text_content':" + self.text_content + "'}")
+        return "{'text_type':'" + self.text_type + "', 'text_content':" + self.text_content + "'}"
 
     def __repr__(self):
         return str(self)
 
 class AvaReport:
+    '''
+    Class for the AvaReport
+    '''
     def __init__(self):
         self.report_id = ""                 # ID of the Report
         self.valid_regions = []             # list of Regions
@@ -608,9 +628,12 @@ class AvaReport:
         self.problem_list = []              # list of Problems with Sublist of Aspect&Elevation
         self.report_texts = []              # All textual elements of the Report
 
-### ALBINA-Helpers    
-   
+### ALBINA-Helpers
+
 def clean_elevation(elev: str):
+    '''
+    Cleans up the elevation description. Should move to the XML-Parsers.
+    '''
     if elev in ['', '-', 'ElevationRange_Keine H\u00f6hengrenzeHi']:
         return None
     elev = re.sub(r'ElevationRange_(.+)Hi', r'>\1', elev)

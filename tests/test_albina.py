@@ -18,9 +18,9 @@ class TestAlbina(unittest.TestCase):
         self.assertEqual(report.danger_main[0].main_value, 3)
         self.assertEqual(report.danger_main[0].valid_elevation, 'ElevationRange_TreelineHi')
         self.assertEqual(report.dangerpattern, ['DP6', 'DP2'])
-        self.assertEqual(report.problem_list[0].type, 'drifting snow')
-        self.assertEqual(report.problem_list[1].type, 'gliding snow')
-        self.assertEqual(report.problem_list[2].type, 'old snow')
+        self.assertEqual(report.problem_list[0].problem_type, 'drifting snow')
+        self.assertEqual(report.problem_list[1].problem_type, 'gliding snow')
+        self.assertEqual(report.problem_list[2].problem_type, 'old snow')
 
 if __name__ == '__main__':
     unittest.main()
