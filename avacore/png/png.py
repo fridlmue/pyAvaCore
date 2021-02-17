@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# pylint: skip-file
 
 # png.py - PNG encoder/decoder in pure Python
 #

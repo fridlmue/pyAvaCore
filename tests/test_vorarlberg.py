@@ -18,8 +18,8 @@ class TestVorarlberg(unittest.TestCase):
         self.assertEqual(report.danger_main[0].main_value, 3)
         self.assertEqual(report.danger_main[0].valid_elevation, 'ElevationRange_2200Hi')
         # self.assertEqual(report.dangerPattern, ['DP6', 'DP2'])
-        self.assertEqual(report.problem_list[0].type, 'drifting snow')
-        self.assertEqual(report.problem_list[1].type, 'old snow')
+        self.assertEqual(report.problem_list[0].problem_type, 'drifting snow')
+        self.assertEqual(report.problem_list[1].problem_type, 'old snow')
 
 if __name__ == '__main__':
     unittest.main()
