@@ -14,23 +14,19 @@
 """
 
 from datetime import datetime
-from datetime import timedelta
 from datetime import timezone
 
 from urllib.request import urlopen
 import urllib.request
 from pathlib import Path
 import zipfile
-import pathlib
 import copy
 import re
-import sys
 from avacore.png import png
 import base64
 
 import json
 import logging
-import logging.handlers
 
 ### ElementTree helpers
 
@@ -621,66 +617,3 @@ def clean_elevation(elev: str):
     elev = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'<\1', elev)
     elev = elev.replace('Forestline', 'Treeline')
     return elev
-
-def dumper(obj):
-    if type(obj) is datetime:
-        return obj.isoformat()
-    try:
-        return obj.toJSON()
-    except:
-        return obj.__dict__
-
-def download_region(regionID):
-    if regionID == 'CH':
-        url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
-        reports = get_reports_ch(str(Path('cache')))
-    else:
-        url, _ = get_report_url(regionID)
-        reports = get_reports(url)
-    report: AvaReport
-    for report in reports:
-        if type(report.validity_begin) is datetime:
-            validityDate = report.validity_begin
-            if validityDate.hour > 15:
-                validityDate = validityDate + timedelta(days=1)
-            validityDate = validityDate.date().isoformat()
-        report.report_texts = None
-        report.valid_regions = [r.replace('AT8R', 'AT-08-0') for r in report.valid_regions]
-        for danger in report.danger_main:
-            danger.valid_elevation = clean_elevation(danger.valid_elevation)
-        for problem in report.problem_list:
-            problem.valid_elevation = clean_elevation(problem.valid_elevation)
-            problem.aspect = [a.upper().replace('ASPECTRANGE_', '') for a in problem.aspect]
-
-    directory = Path(sys.argv[1] if len(sys.argv) > 1 else '.')
-    with urlopen(url) as http, open(f'{directory}/{validityDate}-{regionID}.{url[-3:]}', mode='wb') as f:
-        logging.info('Writing %s to %s', url, f.name)
-        f.write(http.read())
-    with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
-        logging.info('Writing %s', f.name)
-        json.dump(reports, fp=f, default=dumper, indent=2)
-
-
-if __name__ == "__main__":
-    
-    
-    # Workaround to get logging not enabled on mobile application. Probably there is a nicer solution
-    log_dir = str(Path.cwd()) + '/logs/'
-    
-    Path(log_dir).mkdir(parents=True, exist_ok=True)
-    open(log_dir + 'pyAvaCore.log', 'a').close()
-    
-    logging.basicConfig(
-    format='[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s',
-    level=logging.INFO,
-    handlers=[
-        logging.handlers.TimedRotatingFileHandler(filename=f'logs/pyAvaCore.log', when='midnight'),
-        logging.StreamHandler(),
-    ])
-    
-    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY", "CH"]
-    for regionID in regions:
-        try:
-            download_region(regionID)
-        except Exception as e:
-            logging.error('Failed to download %s', regionID, exc_info=e)
