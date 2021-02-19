@@ -170,7 +170,7 @@ def parse_xml_vorarlberg(root):
                         type_r = ac_problemt_type.text
                     aspect = []
                     for validAspect in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validAspect'):
-                        aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href'))
+                        aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').replace('O', 'E'))
                     valid_elevation = "-"
                     for validElevation in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                         for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
@@ -623,6 +623,7 @@ class AvaReport:
         self.rep_date = ""                  # Date of Report
         self.validity_begin = ""            # valid Ttime start
         self.validity_end = ""              # valid time end
+        str: self.predecessor_id = None     # ID of first report (AM) if Report is e. g. a PM-Report
         self.danger_main = []               # danger Value and elev
         self.dangerpattern = []             # list of Patterns
         self.problem_list = []              # list of Problems with Sublist of Aspect&Elevation
