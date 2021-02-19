@@ -128,6 +128,10 @@ def parse_xml(root):
                 report.report_texts.append(ReportText('tendency_com', tendencyComment.text))
         reports.append(report)
 
+    for report in reports:
+        if report.report_id.endswith('_PM') and any(x.report_id == report.report_id[:-3] for x in reports):
+            report.predecessor_id = report.report_id[:-3]
+
     return reports
 
 def parse_xml_vorarlberg(root):
