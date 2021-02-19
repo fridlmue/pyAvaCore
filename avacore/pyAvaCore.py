@@ -491,7 +491,7 @@ def get_reports_ch(path, lang="en"):
 
         common_report.rep_date = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
         common_report.validity_begin = common_report.rep_date
-        # Achtung: validity_end is here the next expected update. It should be valis dometimes longer than that.
+        # Achtung: validity_end is here the next expected update. It should be valid sometimes longer than that.
         # (5PM repot up to 5PM next day)
         common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
@@ -502,16 +502,35 @@ def get_reports_ch(path, lang="en"):
         with open(path + '/swiss/gk_region2pdf.txt') as fp:
             for line in fp:
                 report_id = line.split('_')[5][:-5]
+                report_id_pm = None
+                if len(report_id) > 7:
+                    report_id_pm = report_id[7:]
+                    report_id = report_id[:7]
                 if report_id not in report_ids:
                     report_ids.append(report_id)
                     new_report = copy.deepcopy(common_report)
                     new_report.report_id = report_id
                     reports.append(new_report)
+                if not report_id_pm is None and report_id_pm not in report_ids:
+                    report_ids.append(report_id_pm)
+                    new_report = copy.deepcopy(common_report)
+                    new_report.report_id = report_id_pm
+                    new_report.predecessor_id = report_id
+                    reports.append(new_report)
+                elif not report_id_pm is None:
+                    if not report_id in reports[report_ids.index(report_id_pm)].predecessor_id:
+                        reports[report_ids.index(report_id_pm)].predecessor_id += ('_' + report_id)
                 reports[report_ids.index(report_id)].valid_regions.append("CH-" + line[:4])
+                reports[report_ids.index(report_id_pm)].valid_regions.append("CH-" + line[:4])
 
         for report in reports:
             # Opens the matching Report-File
-            with open(path + '/swiss/1/dst' + report.report_id + '.html', encoding="utf-8") as f:
+            
+            folder = '1'
+            if hasattr(report, 'predecessor_id'):
+                folder = '2'
+
+            with open(path + '/swiss/'+folder+'/dst' + report.report_id + '.html', encoding="utf-8") as f:
                 text = f.read()
 
             # Isolates the relevant Danger Information
