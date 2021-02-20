@@ -311,6 +311,7 @@ def parse_xml_bavaria(root):
         if loc_elem[1].time() == time(0, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
+                c_report.valid_regions.append(loc_elem[0])
                 c_report.report_id = report_id + '-' + loc_elem[0]
                 c_report.validity_begin = loc_elem[1]
                 c_report.validity_end = loc_elem[2]
@@ -327,8 +328,8 @@ def parse_xml_bavaria(root):
             report_elem_number = loc_ref_list.index(loc_elem[0])
             if reports[report_elem_number].validity_end > loc_elem[2]:
                 reports[report_elem_number].validity_end = loc_elem[2]
-            if not reports[report_elem_number].danger_main[0].main_value == loc_elem[3].main_value and \
-                    not reports[report_elem_number].danger_main[0].valid_elevation == loc_elem[3].valid_elevation:
+            if not (reports[report_elem_number].danger_main[0].main_value == loc_elem[3].main_value and \
+                    reports[report_elem_number].danger_main[0].valid_elevation == loc_elem[3].valid_elevation):
                 reports[report_elem_number].danger_main.append(loc_elem[3])
             del_index.append(index)
 
@@ -341,6 +342,7 @@ def parse_xml_bavaria(root):
             c_report = copy.deepcopy(reports[report_elem_number])
             loc_ref_list.append(loc_elem[0] + '_PM')
 
+            c_report.valid_regions.append(loc_elem[0])
             c_report.report_id = report_id + '-' + loc_elem[0] + '_PM'
             c_report.validity_begin = loc_elem[1]
             c_report.validity_end = loc_elem[2]
