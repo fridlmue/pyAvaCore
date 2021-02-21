@@ -15,6 +15,7 @@
 
 from datetime import datetime
 from datetime import timezone
+from datetime import time
 from urllib.request import urlopen
 from pathlib import Path
 import urllib.request
@@ -223,14 +224,17 @@ def parse_xml_bavaria(root):
     number_of_regions = 6
     reports = []
     report = AvaReport()
-    report.valid_regions = [""]
+
+    report_id = ''
+    for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
+        report_id = bulletin.attrib.get('{http://www.opengis.net/gml}id')
 
     # Common for every Report:
     for metaData in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
         for dateTimeReport in metaData.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
             report.rep_date = try_parse_datetime(dateTimeReport.text)
 
-    activity_com = ""
+    activity_com = ''
 
     for bulletinMeasurements in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}BulletinMeasurements'):
         for travelAdvisoryComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
@@ -256,54 +260,106 @@ def parse_xml_bavaria(root):
             valid_elevation = "-"
             for validElevation in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
+                    if not 'Keine' in beginPosition.text:
+                        valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
+                    if not 'Keine' in endPosition.text:
+                        valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
             i = i+1
             report.problem_list.append(Problem(type_r, aspect, valid_elevation))
 
     report.report_texts.append(ReportText('activity_com', activity_com))
 
-    for i in range(number_of_regions+1):
-        reports.append(copy.deepcopy(report))
-
-    # Check Names of all Regions
     for bulletinResultOf in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}bulletinResultsOf'):
         et_add_parent_info(bulletinResultOf)
+
+        loc_list = []
+
         for locRef in bulletinResultOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
-            found = False
-            region_id = -1
-            first_free = 100
-            for index, report in enumerate(reports):
-                if any(report.valid_regions):
-                    for region in report.valid_regions:
-                        if region == locRef.attrib.get('{http://www.w3.org/1999/xlink}href'):
-                            found = True
-                            region_id = index
-                else:
-                    if first_free > index:
-                        first_free = index
-            if not found:
-                reports[first_free].valid_regions.append(locRef.attrib.get('{http://www.w3.org/1999/xlink}href'))
-                region_id = first_free
+            current_loc_ref = locRef.attrib.get('{http://www.w3.org/1999/xlink}href')
 
             DangerRating = et_get_parent(locRef)
+            validity_begin = ""
+            validity_end = ""
+            main_value = 0
+            valid_elevation = "-"
 
             for validTime in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                 for beginPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    reports[region_id].validity_begin = try_parse_datetime(beginPosition.text)
+                    validity_begin = try_parse_datetime(beginPosition.text)
                 for endPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    reports[region_id].validity_end = try_parse_datetime(endPosition.text)
+                    validity_end = try_parse_datetime(endPosition.text)
             main_value = 0
             valid_elevation = "-"
             for main_value in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
                 main_value = int(main_value.text)
             for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
+                    if not 'Keine' in beginPosition.text:
+                        valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
-            reports[region_id].danger_main.append(DangerMain(main_value, valid_elevation))
+                    if not 'Keine' in endPosition.text:
+                        valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
+
+            loc_list.append([current_loc_ref, validity_begin, validity_end, DangerMain(main_value, valid_elevation)])
+
+    loc_ref_list = []
+    del_index = []
+
+    for index, loc_elem in enumerate(loc_list):
+        if loc_elem[1].time() == time(0, 0, 0):
+            if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
+                c_report = copy.deepcopy(report)
+                c_report.valid_regions.append(loc_elem[0])
+                c_report.report_id = report_id + '-' + loc_elem[0]
+                c_report.validity_begin = loc_elem[1]
+                c_report.validity_end = loc_elem[2]
+                c_report.danger_main.append(loc_elem[3])
+                loc_ref_list.append(loc_elem[0])
+                reports.append(c_report)
+                del_index.append(index)
+
+    loc_list = [i for j, i in enumerate(loc_list) if j not in del_index]
+    del_index = []
+
+    for index, loc_elem in enumerate(loc_list):
+        if loc_elem[1].time() == time(0, 0, 0):
+            report_elem_number = loc_ref_list.index(loc_elem[0])
+            if reports[report_elem_number].validity_end > loc_elem[2]:
+                reports[report_elem_number].validity_end = loc_elem[2]
+            if not (reports[report_elem_number].danger_main[0].main_value == loc_elem[3].main_value and \
+                    reports[report_elem_number].danger_main[0].valid_elevation == loc_elem[3].valid_elevation):
+                reports[report_elem_number].danger_main.append(loc_elem[3])
+            del_index.append(index)
+
+    loc_list = [i for j, i in enumerate(loc_list) if j not in del_index]
+    del_index = []
+
+    for index, loc_elem in enumerate(loc_list):
+        if not any((loc_elem[0] + '_PM') in loc_ref for loc_ref in loc_ref_list):
+            report_elem_number = loc_ref_list.index(loc_elem[0])
+            c_report = copy.deepcopy(reports[report_elem_number])
+            loc_ref_list.append(loc_elem[0] + '_PM')
+
+            c_report.valid_regions.append(loc_elem[0])
+            c_report.report_id = report_id + '-' + loc_elem[0] + '_PM'
+            c_report.validity_begin = loc_elem[1]
+            c_report.validity_end = loc_elem[2]
+            c_report.predecessor_id = report_id + '-' + loc_elem[0]
+            for danger_main in c_report.danger_main:
+                if danger_main.valid_elevation == loc_elem[3].valid_elevation:
+                    danger_main.main_value = loc_elem[3].main_value
+            reports.append(c_report)
+            del_index.append(index)
+
+    loc_list = [i for j, i in enumerate(loc_list) if j not in del_index]
+    del_index = []
+
+    for index, loc_elem in enumerate(loc_list):
+        report_elem_number = loc_ref_list.index(loc_elem[0] + '_PM')
+        for danger_main in reports[report_elem_number].danger_main:
+            if danger_main.valid_elevation == loc_elem[3].valid_elevation:
+                danger_main.main_value = loc_elem[3].main_value
 
     return reports
 
@@ -525,7 +581,6 @@ def get_reports_ch(path, lang="en"):
 
         for report in reports:
             # Opens the matching Report-File
-            
             folder = '1'
             if hasattr(report, 'predecessor_id'):
                 folder = '2'
