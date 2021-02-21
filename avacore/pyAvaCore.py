@@ -451,13 +451,13 @@ def get_prone_locations(img_text):
     aspects = []
 
     if px_list[20][129] == 0:
-        aspects.append('AspectRange_NNO')
+        aspects.append('AspectRange_NNE')
     if px_list[25][145] == 0:
-        aspects.append('AspectRange_ONO')
+        aspects.append('AspectRange_ENE')
     if px_list[31][145] == 0:
-        aspects.append('AspectRange_OSO')
+        aspects.append('AspectRange_ESE')
     if px_list[36][129] == 0:
-        aspects.append('AspectRange_SSO')
+        aspects.append('AspectRange_SSE')
     if px_list[36][101] == 0:
         aspects.append('AspectRange_SSW')
     if px_list[31][77] == 0:
