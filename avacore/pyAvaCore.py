@@ -224,7 +224,6 @@ def parse_xml_bavaria(root):
     number_of_regions = 6
     reports = []
     report = AvaReport()
-    report.valid_regions = ['']
 
     report_id = ''
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
@@ -346,7 +345,7 @@ def parse_xml_bavaria(root):
             c_report.report_id = report_id + '-' + loc_elem[0] + '_PM'
             c_report.validity_begin = loc_elem[1]
             c_report.validity_end = loc_elem[2]
-            c_report.predecessor_id = loc_elem[0] + '-' + str(loc_elem[1].date())
+            c_report.predecessor_id = report_id + '-' + loc_elem[0]
             for danger_main in c_report.danger_main:
                 if danger_main.valid_elevation == loc_elem[3].valid_elevation:
                     danger_main.main_value = loc_elem[3].main_value
