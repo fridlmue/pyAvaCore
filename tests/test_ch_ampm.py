@@ -25,6 +25,7 @@ class TestCH(unittest.TestCase):
         self.assertIn('AspectRange_NNE', report.problem_list[0].aspect)
         self.assertIn('AspectRange_WNW', report.problem_list[0].aspect)
         self.assertNotIn('AspectRange_ESE', report.problem_list[0].aspect)
+        self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
         report = reports[8]
         self.assertEqual(report.report_id, '8947712')
@@ -41,6 +42,7 @@ class TestCH(unittest.TestCase):
         self.assertIn('AspectRange_NNE', report.problem_list[0].aspect)
         self.assertIn('AspectRange_WNW', report.problem_list[0].aspect)
         self.assertNotIn('AspectRange_SSW', report.problem_list[0].aspect)
+        self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[1]
         self.assertEqual(report.report_id, '8947717')
@@ -57,5 +59,6 @@ class TestCH(unittest.TestCase):
         self.assertNotIn('AspectRange_NNE', report.problem_list[0].aspect)
         self.assertNotIn('AspectRange_WNW', report.problem_list[0].aspect)
         self.assertNotIn('AspectRange_SSW', report.problem_list[0].aspect)
+        self.assertEqual(report.predecessor_id, '8947716_8947711_8947714')
 if __name__ == '__main__':
     unittest.main()
