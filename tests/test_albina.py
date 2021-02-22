@@ -21,6 +21,7 @@ class TestAlbina(unittest.TestCase):
         self.assertEqual(report.problem_list[0].problem_type, 'drifting snow')
         self.assertEqual(report.problem_list[1].problem_type, 'gliding snow')
         self.assertEqual(report.problem_list[2].problem_type, 'old snow')
+        self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
 if __name__ == '__main__':
     unittest.main()

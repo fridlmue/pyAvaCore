@@ -525,11 +525,12 @@ def get_prone_locations(img_text):
 
     return aspects
 
-def get_reports_ch(path, lang="en"):
+def get_reports_ch(path, lang="en", cached=False):
     '''
     Download the reports for CH
     '''
-    fetch_files_ch(lang, path)
+    if not cached:
+        fetch_files_ch(lang, path)
 
     if Path(path + '/swiss/gk_region2pdf.txt').is_file():
 
@@ -590,7 +591,7 @@ def get_reports_ch(path, lang="en"):
 
             # Isolates the relevant Danger Information
             text_pos = text.find('data-level=')+len('data-level=')+1
-            report.danger_main.append(DangerMain(text[text_pos:text_pos+1], ''))
+            report.danger_main.append(DangerMain(int(text[text_pos:text_pos+1]), '-'))
 
             # Isolates the prone location Image
             text_pos = text.find('src="data:image/png;base64,')+len('src="data:image/png;base64,')
