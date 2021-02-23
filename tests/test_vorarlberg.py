@@ -16,7 +16,7 @@ class TestVorarlberg(unittest.TestCase):
         self.assertIn('AT8R3', report.valid_regions)
         self.assertNotIn('AT8R1', report.valid_regions)
         self.assertEqual(report.danger_main[0].main_value, 3)
-        self.assertEqual(report.danger_main[0].valid_elevation, 'ElevationRange_2200Hi')
+        self.assertEqual(report.danger_main[0].valid_elevation, '>2200')
         # self.assertEqual(report.dangerPattern, ['DP6', 'DP2'])
         self.assertEqual(report.problem_list[0].problem_type, 'drifting snow')
         self.assertEqual(report.problem_list[1].problem_type, 'old snow')
