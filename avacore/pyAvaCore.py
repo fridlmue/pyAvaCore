@@ -258,14 +258,14 @@ def parse_xml_vorarlberg(root):
             c_report = copy.deepcopy(reports[report_elem_number])
             loc_ref_list.append(loc_elem[0] + '_PM')
 
-            c_report.valid_regions.append(loc_elem[0])
             c_report.report_id = report_id + '-' + loc_elem[0] + '_PM'
             c_report.validity_begin = loc_elem[1]
             c_report.validity_end = loc_elem[2]
             c_report.predecessor_id = report_id + '-' + loc_elem[0]
-            for danger_main in c_report.danger_main:
-                if danger_main.valid_elevation == loc_elem[3].valid_elevation:
-                    danger_main.main_value = loc_elem[3].main_value
+            
+            c_report.danger_main = []
+            c_report.danger_main.append(loc_elem[3])
+            
             reports.append(c_report)
             del_index.append(index)
 
@@ -401,7 +401,6 @@ def parse_xml_bavaria(root):
             c_report = copy.deepcopy(reports[report_elem_number])
             loc_ref_list.append(loc_elem[0] + '_PM')
 
-            c_report.valid_regions.append(loc_elem[0])
             c_report.report_id = report_id + '-' + loc_elem[0] + '_PM'
             c_report.validity_begin = loc_elem[1]
             c_report.validity_end = loc_elem[2]
