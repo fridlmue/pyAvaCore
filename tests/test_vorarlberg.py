@@ -8,7 +8,7 @@ class TestVorarlberg(unittest.TestCase):
     def test_vorarlberg(self):
         root = ET.parse(f'{__file__}.xml')
         reports = pyAvaCore.parse_xml_vorarlberg(root)
-        self.assertEqual(len(reports), 7)
+        self.assertEqual(len(reports), 6)
         report = reports[2]
         self.assertEqual(report.rep_date.isoformat(), '2021-02-09T07:30:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-09T07:30:00')
