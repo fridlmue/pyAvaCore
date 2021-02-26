@@ -105,18 +105,16 @@ def parse_xml(root):
             for DangerPattern in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
                 for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                     report.dangerpattern.append(DangerPatternType.text)
-            i = 0
             for AvProblem in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}AvProblem'):
                 type_r = ""
                 for avProbType in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                     type_r = avProbType.text
                 aspect = []
                 for validAspect in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validAspect'):
-                    aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href'))
+                    aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').upper().replace('ASPECTRANGE_', ''))
                 valid_elevation = "-"
                 for validElevation in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                     valid_elevation = validElevation.get('{http://www.w3.org/1999/xlink}href')
-                i = i+1
                 report.problem_list.append(Problem(type_r, aspect, valid_elevation))
             for avActivityHighlights in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avActivityHighlights'):
                 report.report_texts.append(ReportText('activity_hl', avActivityHighlights.text))
@@ -168,21 +166,20 @@ def parse_xml_vorarlberg(root):
                 for snowpackStructureComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                        'snowpackStructureComment'):
                     report.report_texts.append(ReportText('snow_struct_com', snowpackStructureComment.text))
-                i = 0
                 for AvProblem in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}AvProblem'):
                     type_r = ""
                     for ac_problemt_type in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                         type_r = ac_problemt_type.text
                     aspect = []
                     for validAspect in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validAspect'):
-                        aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').replace('O', 'E'))
+                        aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').upper().replace(\
+                            'ASPECTRANGE_', '').replace('O', 'E'))
                     valid_elevation = "-"
                     for validElevation in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                         for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                            valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
+                            valid_elevation = ">" + beginPosition.text
                         for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                            valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
-                    i = i+1
+                            valid_elevation = "<" + endPosition.text
                     report.problem_list.append(Problem(type_r, aspect, valid_elevation))
 
     report.report_texts.append(ReportText('activity_com', activity_com))
@@ -210,9 +207,9 @@ def parse_xml_vorarlberg(root):
                         main_value = int(main_value.text)
                     for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                         for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                            valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
+                            valid_elevation = ">" + beginPosition.text
                         for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                            valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
+                            valid_elevation = "<" + endPosition.text
                     reports[region_id-1].danger_main.append(DangerMain(main_value, valid_elevation))
     return reports
 
@@ -249,23 +246,21 @@ def parse_xml_bavaria(root):
             report.report_texts.append(ReportText('snow_struct_com', snowpackStructureComment.text))
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
             report.report_texts.append(ReportText('activity_hl', highlights.text))
-        i = 0
         for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avProblem'):
             type_r = ""
             for avType in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                 type_r = avType.text
             aspect = []
             for validAspect in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validAspect'):
-                aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').lower())
+                aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').upper().replace('ASPECTRANGE_', ''))
             valid_elevation = "-"
             for validElevation in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
                     if not 'Keine' in beginPosition.text:
-                        valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
+                        valid_elevation = ">" + beginPosition.text
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     if not 'Keine' in endPosition.text:
-                        valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
-            i = i+1
+                        valid_elevation = "<" + endPosition.text
             report.problem_list.append(Problem(type_r, aspect, valid_elevation))
 
     report.report_texts.append(ReportText('activity_com', activity_com))
@@ -290,16 +285,15 @@ def parse_xml_bavaria(root):
                 for endPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     validity_end = try_parse_datetime(endPosition.text)
             main_value = 0
-            valid_elevation = "-"
             for main_value in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
                 main_value = int(main_value.text)
             for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
                     if not 'Keine' in beginPosition.text:
-                        valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
+                        valid_elevation = ">" + beginPosition.text
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     if not 'Keine' in endPosition.text:
-                        valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
+                        valid_elevation = "<" + endPosition.text
 
             loc_list.append([current_loc_ref, validity_begin, validity_end, DangerMain(main_value, valid_elevation)])
 
@@ -507,21 +501,21 @@ def get_prone_locations(img_text):
     aspects = []
 
     if px_list[20][129] == 0:
-        aspects.append('AspectRange_NNE')
+        aspects.append('NNE')
     if px_list[25][145] == 0:
-        aspects.append('AspectRange_ENE')
+        aspects.append('ENE')
     if px_list[31][145] == 0:
-        aspects.append('AspectRange_ESE')
+        aspects.append('ESE')
     if px_list[36][129] == 0:
-        aspects.append('AspectRange_SSE')
+        aspects.append('SSE')
     if px_list[36][101] == 0:
-        aspects.append('AspectRange_SSW')
+        aspects.append('SSW')
     if px_list[31][77] == 0:
-        aspects.append('AspectRange_WSW')
+        aspects.append('WSW')
     if px_list[25][77] == 0:
-        aspects.append('AspectRange_WNW')
+        aspects.append('WNW')
     if px_list[20][101] == 0:
-        aspects.append('AspectRange_NNW')
+        aspects.append('NNW')
 
     return aspects
 
@@ -610,12 +604,12 @@ def get_reports_ch(path, lang="en", cached=False):
             subtext = subtext[text_pos:]
             prone_locations_text = ReportText('prone_locations_text')
             prone_locations_text.text_content = subtext[:subtext.find('"')]
-            general_problem_valid_elevation = ''
+            general_problem_valid_elevation = "-"
             if prone_locations_text.text_content == 'Content-Type':
                 prone_locations_text.text_content = '-'
             else:
                 valid_elevation = ''.join(c for c in prone_locations_text.text_content if c.isdigit())
-                general_problem_valid_elevation = "ElevationRange_" + valid_elevation + "Hi"
+                general_problem_valid_elevation = ">" + valid_elevation
 
             report.report_texts.append(prone_locations_text)
             report.problem_list.append(Problem("general", general_problem_locations, general_problem_valid_elevation))
@@ -655,7 +649,7 @@ class Problem:
     def __init__(self, problem_type: str, aspect: list, validElev: str) -> None:
         self.problem_type = problem_type
         self.aspect = aspect
-        self.valid_elevation = validElev
+        self.valid_elevation = clean_elevation(validElev)
 
     def __str__(self):
         return "{'problem_type':'" + self.problem_type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" \
@@ -673,7 +667,7 @@ class DangerMain:
 
     def __init__(self, mainValue: int, validElev: str):
         self.main_value = mainValue
-        self.valid_elevation = validElev
+        self.valid_elevation = clean_elevation(validElev)
 
 class ReportText:
     '''
@@ -708,7 +702,6 @@ class AvaReport:
         self.problem_list = []              # list of Problems with Sublist of Aspect&Elevation
         self.report_texts = []              # All textual elements of the Report
 
-### ALBINA-Helpers
 
 def clean_elevation(elev: str):
     '''

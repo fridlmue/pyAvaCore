@@ -16,7 +16,7 @@ class TestAlbina(unittest.TestCase):
         self.assertIn('AT-07-26', report.valid_regions)
         self.assertNotIn('AT-07-01', report.valid_regions)
         self.assertEqual(report.danger_main[0].main_value, 3)
-        self.assertEqual(report.danger_main[0].valid_elevation, 'ElevationRange_TreelineHi')
+        self.assertEqual(report.danger_main[0].valid_elevation, '>Treeline')
         self.assertEqual(report.dangerpattern, ['DP6', 'DP2'])
         self.assertEqual(report.problem_list[0].problem_type, 'drifting snow')
         self.assertEqual(report.problem_list[1].problem_type, 'gliding snow')

@@ -17,11 +17,11 @@ class TestBavaria(unittest.TestCase):
         self.assertIn('BYALL', report.valid_regions)
         self.assertNotIn('BYAMM', report.valid_regions)
         self.assertEqual(report.danger_main[0].main_value, 3)
-        self.assertEqual(report.danger_main[0].valid_elevation, 'ElevationRange_1500Hi')
+        self.assertEqual(report.danger_main[0].valid_elevation, '>1500')
         self.assertEqual(report.dangerpattern, [])
         self.assertEqual(report.problem_list[0].problem_type, 'drifting snow')
-        self.assertIn('aspectrange_e', report.problem_list[0].aspect)
-        self.assertIn('aspectrange_nw', report.problem_list[0].aspect)
+        self.assertIn('E', report.problem_list[0].aspect)
+        self.assertIn('NW', report.problem_list[0].aspect)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
 if __name__ == '__main__':

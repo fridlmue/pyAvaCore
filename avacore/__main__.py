@@ -48,11 +48,6 @@ def download_region(regionID):
             validityDate = validityDate.date().isoformat()
         report.report_texts = None
         report.valid_regions = [r.replace('AT8R', 'AT-08-0') for r in report.valid_regions]
-        for danger in report.danger_main:
-            danger.valid_elevation = clean_elevation(danger.valid_elevation)
-        for problem in report.problem_list:
-            problem.valid_elevation = clean_elevation(problem.valid_elevation)
-            problem.aspect = [a.upper().replace('ASPECTRANGE_', '') for a in problem.aspect]
 
     directory = Path(sys.argv[1] if len(sys.argv) > 1 else 'data')
     directory.mkdir(parents=True, exist_ok=True)
