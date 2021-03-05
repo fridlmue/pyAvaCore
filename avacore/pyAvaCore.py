@@ -498,7 +498,7 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
         provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird "\
             "bereitgestellt vom: Lawinenwarndienst Oberösterreich (https://www.land-oberoesterreich.gv.at/lawinenwarndienst.htm)."
 
-    # Niederösterreich - Noch nicht angelegt
+    # Niederösterreich
     if region_id.startswith("AT-03"):
         url = "https://www.avalanche-warnings.eu/public/niederoesterreich/caaml"
         provider = "Die dargestellten Informationen werden über eine API auf https://www.avalanche-warnings.eu abgefragt. Diese wird "\
@@ -607,8 +607,8 @@ def get_reports_ch(path, lang="en", cached=False):
 
         common_report.rep_date = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
         common_report.validity_begin = common_report.rep_date
-        # Achtung: validity_end is here the next expected update. It should be valid sometimes longer than that.
-        # (5PM repot up to 5PM next day)
+        # Warning: validity_end is here the next expected update. It should be valid sometimes longer than that.
+        # (5PM report up to 5PM next day)
         common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
         report_ids = []
@@ -760,7 +760,7 @@ class AvaReport:
         self.report_id = ""                 # ID of the Report
         self.valid_regions = []             # list of Regions
         self.rep_date = ""                  # Date of Report
-        self.validity_begin = ""            # valid Ttime start
+        self.validity_begin = ""            # valid time start
         self.validity_end = ""              # valid time end
         str: self.predecessor_id = None     # ID of first report (AM) if Report is e. g. a PM-Report
         self.danger_main = []               # danger Value and elev
