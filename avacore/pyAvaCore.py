@@ -25,6 +25,7 @@ import re
 import base64
 import json
 import logging
+import typing
 
 from avacore.png import png
 
@@ -756,18 +757,33 @@ class AvaReport:
     '''
     Class for the AvaReport
     '''
-    def __init__(self):
-        self.report_id = ""                 # ID of the Report
-        self.valid_regions = []             # list of Regions
-        self.rep_date = ""                  # Date of Report
-        self.validity_begin = ""            # valid time start
-        self.validity_end = ""              # valid time end
-        str: self.predecessor_id = None     # ID of first report (AM) if Report is e. g. a PM-Report
-        self.danger_main = []               # danger Value and elev
-        self.dangerpattern = []             # list of Patterns
-        self.problem_list = []              # list of Problems with Sublist of Aspect&Elevation
-        self.report_texts = []              # All textual elements of the Report
+    report_id: str
+    '''ID of the Report'''
+    valid_regions: typing.List[str]
+    '''list of Regions'''
+    rep_date: datetime
+    '''Date of Report'''
+    validity_begin: datetime
+    '''valid time start'''
+    validity_end: datetime
+    '''valid time end'''
+    predecessor_id: str
+    '''ID of first report (AM) if Report is e. g. a PM-Report'''
+    danger_main: typing.List[DangerMain]
+    '''danger Value and elev'''
+    dangerpattern: typing.List[str]
+    '''list of Patterns'''
+    problem_list: typing.List[Problem]
+    '''list of Problems with Sublist of Aspect&Elevation'''
+    report_texts: typing.List[ReportText]
+    '''All textual elements of the Report'''
 
+    def __init__(self):
+        self.valid_regions = []
+        self.danger_main = []
+        self.dangerpattern = []
+        self.problem_list = []
+        self.report_texts = []
 
 def clean_elevation(elev: str):
     '''
