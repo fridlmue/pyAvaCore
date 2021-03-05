@@ -637,7 +637,8 @@ def get_reports_ch(path, lang="en", cached=False):
                     if not report_id in reports[report_ids.index(report_id_pm)].predecessor_id:
                         reports[report_ids.index(report_id_pm)].predecessor_id += ('_' + report_id)
                 reports[report_ids.index(report_id)].valid_regions.append("CH-" + line[:4])
-                reports[report_ids.index(report_id_pm)].valid_regions.append("CH-" + line[:4])
+                if not report_id_pm is None:
+                    reports[report_ids.index(report_id_pm)].valid_regions.append("CH-" + line[:4])
 
         for report in reports:
             # Opens the matching Report-File
