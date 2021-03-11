@@ -785,6 +785,18 @@ class AvaReport:
         self.problem_list = []
         self.report_texts = []
 
+
+class JSONEncoder(json.JSONEncoder):
+    """JSON serialization of datetime"""
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        try:
+            return obj.toJSON()
+        except: # pylint: disable=bare-except
+            return obj.__dict__
+
+
 def clean_elevation(elev: str):
     '''
     Cleans up the elevation description. Should move to the XML-Parsers.
