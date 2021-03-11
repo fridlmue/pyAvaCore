@@ -10,7 +10,7 @@ import logging
 import logging.handlers
 import sys
 
-from .pyAvaCore import AvaReport, clean_elevation, get_report_url, get_reports, get_reports_ch
+from .pyAvaCore import AvaReport, JSONEncoder, clean_elevation, get_report_url, get_reports, get_reports_ch
 
 Path('logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -19,16 +19,6 @@ logging.basicConfig(
     handlers=[
         logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
         logging.StreamHandler()])
-
-
-def dumper(obj):
-    """JSON serialization of datetime"""
-    if isinstance(obj, datetime):
-        return obj.isoformat()
-    try:
-        return obj.toJSON()
-    except: # pylint: disable=bare-except
-        return obj.__dict__
 
 
 def download_region(regionID):
@@ -57,7 +47,7 @@ def download_region(regionID):
         f.write(http.read())
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
-        json.dump(reports, fp=f, default=dumper, indent=2)
+        json.dump(reports, fp=f, cls=JSONEncoder, indent=2)
 
 
 if __name__ == "__main__":
