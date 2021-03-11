@@ -7,10 +7,12 @@ unittest:
   script:
     - python -V
     - pip install pytest pytest-cov
-    - pytest --cov=avacore tests/
+    - pytest --junitxml=report.xml --cov=avacore tests/
     - coverage xml
   artifacts:
+    when: always
     reports:
+      junit: report.xml
       cobertura: coverage.xml
 
 pylint:
