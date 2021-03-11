@@ -6,7 +6,12 @@ image: python:3.6
 unittest:
   script:
     - python -V
-    - python setup.py test
+    - pip install pytest pytest-cov
+    - pytest --cov=avacore tests/
+    - coverage xml
+  artifacts:
+    reports:
+      cobertura: coverage.xml
 
 pylint:
   allow_failure: true
