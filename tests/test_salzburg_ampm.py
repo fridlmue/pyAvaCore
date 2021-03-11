@@ -1,5 +1,6 @@
 from avacore import pyAvaCore
 import unittest
+import json
 import xml.etree.ElementTree as ET
 
 
@@ -25,6 +26,14 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.problem_list[0].problem_type, 'wet snow')
         self.assertEqual(report.problem_list[1].problem_type, 'gliding snow')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
+
+    def test_salzburg_json(self):
+        with open(f'{__file__}.json', 'r') as f:
+            expected = f.read()
+        root = ET.parse(f'{__file__}.xml')
+        reports = pyAvaCore.parse_xml(root)
+        actual = json.dumps(reports, indent=2, cls=pyAvaCore.JSONEncoder)
+        self.assertEqual(actual, expected)
 
 if __name__ == '__main__':
     unittest.main()

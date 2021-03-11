@@ -1,0 +1,213 @@
+[
+  {
+    "valid_regions": [
+      "AT-05-19",
+      "AT-05-20"
+    ],
+    "danger_main": [
+      {
+        "main_value": 1,
+        "valid_elevation": null
+      }
+    ],
+    "dangerpattern": [],
+    "problem_list": [
+      {
+        "problem_type": "wet snow",
+        "aspect": [
+          "E",
+          "SE",
+          "S",
+          "SW",
+          "W"
+        ],
+        "valid_elevation": null
+      },
+      {
+        "problem_type": "gliding snow",
+        "aspect": [
+          "N",
+          "NE",
+          "E",
+          "SE",
+          "S",
+          "SW",
+          "W",
+          "NW"
+        ],
+        "valid_elevation": null
+      }
+    ],
+    "report_texts": [
+      {
+        "text_type": "activity_hl",
+        "text_content": "Naturally triggered avalanches due to daytime warming"
+      },
+      {
+        "text_type": "activity_com",
+        "text_content": "Avalanche danger is subject to a daytime cycle which, however, is MINOR due to the generally low snow depths on sunny slopes. In early and late morning, stable conditions reign for the most part. Starting at midday, increasingly frequent small, in isolated cases medium-sized glide-snow and superficial wet-snow avalanches (triggerable by skiers) can be expected on very steep south-facing slopes."
+      },
+      {
+        "text_type": "snow_struct_com",
+        "text_content": "Following a night of clear skies and adequate outgoing radiation, a melt-freeze crust capable of bearing loads has formed. In the course of the morning, firn snow is generated, and the moistening process continues. The shallow snowpack has settled well, in many areas it is 0-degree isotherm. On north-facing slopes the snowpack is still dry."
+      },
+      {
+        "text_type": "tendency_com",
+        "text_content": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
+      }
+    ],
+    "report_id": "RID489RGR1",
+    "rep_date": "2021-02-25T17:00:00+00:00",
+    "validity_begin": "2021-02-25T23:00:00+00:00",
+    "validity_end": "2021-02-26T23:00:00+00:00"
+  },
+  {
+    "valid_regions": [
+      "AT-05-18",
+      "AT-05-14",
+      "AT-05-15",
+      "AT-05-17",
+      "AT-05-16",
+      "AT-05-12",
+      "AT-05-08",
+      "AT-05-13",
+      "AT-05-04",
+      "AT-05-21",
+      "AT-05-02",
+      "AT-05-03",
+      "AT-05-01"
+    ],
+    "danger_main": [
+      {
+        "main_value": 1,
+        "valid_elevation": null
+      },
+      {
+        "main_value": 2,
+        "valid_elevation": null
+      }
+    ],
+    "dangerpattern": [],
+    "problem_list": [
+      {
+        "problem_type": "wet snow",
+        "aspect": [
+          "E",
+          "SE",
+          "S",
+          "SW",
+          "W"
+        ],
+        "valid_elevation": null
+      },
+      {
+        "problem_type": "gliding snow",
+        "aspect": [
+          "E",
+          "SE",
+          "S",
+          "SW",
+          "W"
+        ],
+        "valid_elevation": null
+      }
+    ],
+    "report_texts": [
+      {
+        "text_type": "activity_hl",
+        "text_content": "Naturally triggered wet-snow and glide-snow avalanches on sun-drenched steep slopes"
+      },
+      {
+        "text_type": "activity_com",
+        "text_content": "Avalanche danger is subject to a daytime cycle rising from LOW to MODERATE. In early and late morning, favourable and by and large stable conditions reign. In isolated cases at high and high alpine altitudes in shady and in extremely steep terrain, a dry-snow slab avalanche can be triggered. Initial isolated naturally triggered wet-snow avalanches are possible in the latter part of the day, starting at midday increasingly frequent small-to-medium glide-snow and superficial wet-snow avalanches (the latter triggerable by skiers) are possible on very steep sun-drenched slopes below 2600 m. Isolated large-sized releases will be limited to the zones Muhr/Hintermuhr."
+      },
+      {
+        "text_type": "snow_struct_com",
+        "text_content": "Following a night of clear skies and adequate outgoing radiation, a melt-freeze crust capable of bearing loads has formed. In the course of the morning, firn snow is generated, and the moistening process continues. The shallow snowpack has settled well, in many areas it is 0-degree isotherm. On north-facing slopes the snowpack is still dry."
+      },
+      {
+        "text_type": "tendency_com",
+        "text_content": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
+      }
+    ],
+    "report_id": "RID489RGR2",
+    "rep_date": "2021-02-25T17:00:00+00:00",
+    "validity_begin": "2021-02-25T23:00:00+00:00",
+    "validity_end": "2021-02-26T23:00:00+00:00"
+  },
+  {
+    "valid_regions": [
+      "AT-05-10",
+      "AT-05-06",
+      "AT-05-09",
+      "AT-05-05",
+      "AT-05-11",
+      "AT-05-07"
+    ],
+    "danger_main": [
+      {
+        "main_value": 1,
+        "valid_elevation": ">2000"
+      },
+      {
+        "main_value": 1,
+        "valid_elevation": ">2600"
+      },
+      {
+        "main_value": 1,
+        "valid_elevation": "<2000"
+      },
+      {
+        "main_value": 2,
+        "valid_elevation": "<2600"
+      }
+    ],
+    "dangerpattern": [],
+    "problem_list": [
+      {
+        "problem_type": "wet snow",
+        "aspect": [
+          "E",
+          "SE",
+          "S",
+          "SW",
+          "W"
+        ],
+        "valid_elevation": null
+      },
+      {
+        "problem_type": "gliding snow",
+        "aspect": [
+          "E",
+          "SE",
+          "S",
+          "SW",
+          "W"
+        ],
+        "valid_elevation": null
+      }
+    ],
+    "report_texts": [
+      {
+        "text_type": "activity_hl",
+        "text_content": "Naturally triggered wet-snow and glide-snow avalanches below 2600 m"
+      },
+      {
+        "text_type": "activity_com",
+        "text_content": "Avalanche danger is subject to a daytime cycle: in the morning generally LOW (only isolated avalanche prone locations). During the course of the day danger below 2600 m will increase to MODERATE. In isolated cases at high and high alpine altitudes in shady and extremely steep terrain, a dry snow avalanche can be triggered. Initiall isolated naturally triggered wet-snow avalanches (up to magnitude 2) are possible as of late morning; as of midday, increasingly frequent small-to-medium glide-snow and superficial wet-snow avalanches (the latter triggerable by skiers) are possible in steep, sunng terrain below 2600 m."
+      },
+      {
+        "text_type": "snow_struct_com",
+        "text_content": "Following a night of clear skies, melt-freeze crusts dominate. The snowpack has settled well, layers are well connected with one another. Over small spreads in high alpine zones on shady ridgeline slopes there are thin snowpack layers which are prone to triggering. In the course of the morning the snow will turn to firn, subsequently with daytime warming and solar radiation the snowpack will forfeit its firmness below 2600 m. On north-facing slopes the snowpack is still dry."
+      },
+      {
+        "text_type": "tendency_com",
+        "text_content": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
+      }
+    ],
+    "report_id": "RID489RGR3",
+    "rep_date": "2021-02-25T17:00:00+00:00",
+    "validity_begin": "2021-02-25T23:00:00+00:00",
+    "validity_end": "2021-02-26T23:00:00+00:00"
+  }
+]
