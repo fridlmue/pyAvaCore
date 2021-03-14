@@ -181,10 +181,17 @@ def parse_xml_vorarlberg(root):
                             'ASPECTRANGE_', '').replace('O', 'E'))
                     valid_elevation = "-"
                     for validElevation in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
-                        for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                            valid_elevation = ">" + beginPosition.text
-                        for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                            valid_elevation = "<" + endPosition.text
+                        if '{http://www.w3.org/1999/xlink}href' in validElevation.attrib:
+                            if "Treeline" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
+                                if "Hi" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
+                                    valid_elevation = ">Treeline"
+                                if "Lo" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
+                                    valid_elevation = "<Treeline"
+                        else:
+                            for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
+                                valid_elevation = ">" + beginPosition.text
+                            for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
+                                valid_elevation = "<" + endPosition.text
                     report.problem_list.append(Problem(type_r, aspect, valid_elevation))
 
     report.report_texts.append(ReportText('activity_com', activity_com))
@@ -212,12 +219,19 @@ def parse_xml_vorarlberg(root):
             for main_value in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
                 main_value = int(main_value.text)
             for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
-                for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    if not 'Keine' in beginPosition.text:
-                        valid_elevation = ">" + beginPosition.text
-                for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    if not 'Keine' in endPosition.text:
-                        valid_elevation = "<" + endPosition.text
+                if '{http://www.w3.org/1999/xlink}href' in validElevation.attrib:
+                    if "Treeline" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
+                        if "Hi" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
+                            valid_elevation = ">Treeline"
+                        if "Lo" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
+                            valid_elevation = "<Treeline"
+                else:
+                    for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
+                        if not 'Keine' in beginPosition.text:
+                            valid_elevation = ">" + beginPosition.text
+                    for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
+                        if not 'Keine' in endPosition.text:
+                            valid_elevation = "<" + endPosition.text
 
             loc_list.append([current_loc_ref, validity_begin, validity_end, DangerMain(main_value, valid_elevation)])
 
