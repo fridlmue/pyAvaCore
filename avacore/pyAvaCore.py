@@ -16,6 +16,7 @@
 from datetime import datetime
 from datetime import timezone
 from datetime import time
+from datetime import timedelta
 from urllib.request import urlopen
 from pathlib import Path
 import urllib.request
@@ -81,6 +82,14 @@ def parse_xml(root):
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
         report = AvaReport()
         report.report_id = bulletin.attrib.get('{http://www.opengis.net/gml}id')
+        pm_danger_ratings = []
+
+        pm_available = False
+        for DangerRating in bulletin.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerRating'):
+            for validTime in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
+                pm_available = True
+                break
+
         for observations in bulletin:
             et_add_parent_info(observations)
             for locRef in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
@@ -97,12 +106,20 @@ def parse_xml(root):
                         report.validity_end = try_parse_datetime(endPosition.text).replace(tzinfo=timezone.utc)
             for DangerRating in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerRating'):
                 main_value = 0
+                am_rating = True
                 for mainValue in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
                     main_value = int(mainValue.text)
                 valid_elevation = "-"
                 for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                     valid_elevation = validElevation.attrib.get('{http://www.w3.org/1999/xlink}href')
-                report.danger_main.append(DangerMain(main_value, valid_elevation))
+                for beginPosition in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
+                    if '11:00' in beginPosition.text:
+                        am_rating = False
+                        report.validity_end = report.validity_end.replace(hour=11)
+                if am_rating:
+                    report.danger_main.append(DangerMain(main_value, valid_elevation))
+                else:
+                    pm_danger_ratings.append(DangerMain(main_value, valid_elevation))
             for DangerPattern in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
                 for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                     report.dangerpattern.append(DangerPatternType.text)
@@ -127,6 +144,14 @@ def parse_xml(root):
             for tendencyComment in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}tendencyComment'):
                 report.report_texts.append(ReportText('tendency_com', tendencyComment.text))
         reports.append(report)
+
+        if pm_available:
+            pm_report = copy.deepcopy(report)
+            pm_report.danger_main = pm_danger_ratings
+            pm_report.report_id += '_PM'
+            pm_report.validity_begin = pm_report.validity_begin + timedelta(hours=12)
+            pm_report.validity_end = pm_report.validity_end + timedelta(hours=12)
+            reports.append(pm_report)
 
     for report in reports:
         if report.report_id.endswith('_PM') and any(x.report_id == report.report_id[:-3] for x in reports):
