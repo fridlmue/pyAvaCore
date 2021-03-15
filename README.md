@@ -9,7 +9,7 @@ This Project is Licensed under GPL-3.0
 ## Utilization
 
 pyAvaCore is used in the ALBINA project to parse the neighbours bulletins in a unified way as JSON-File.
-It is also used as parser for the mobile app ("avaRisk")[https://github.com/fridlmue/harbour-avarisk] as background parser to fetch a wide variety of reports.
+It is also used as parser for the mobile app ["avaRisk"](https://github.com/fridlmue/harbour-avarisk) as background parser to fetch a wide variety of reports.
 
 ## Dependencies
 
@@ -32,8 +32,8 @@ At the moment the following regions are supported with the localization versions
 
 ### RegionIDs
 
-The IDs for the different regions currently supported can be found (here)[REGIONIDS.md].
+The IDs for the different regions currently supported can be found [here](REGIONIDS.md).
 
 ## Credits
 
-The parser uses the png.py file from the (PyPNG-Project)[https://github.com/drj11/pypng].
+The parser uses the png.py file from the [PyPNG-Project](https://github.com/drj11/pypng).

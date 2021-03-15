@@ -1,4 +1,4 @@
-#Currently used RegionIDs
+# Supported RegionIDs
 
 ## Italy
 
