@@ -32,7 +32,7 @@ At the moment the following regions are supported with the localization versions
 
 ### RegionIDs
 
-The IDs for the different regions currently supported can be found [here](REGIONIDS.md).
+The IDs for the different regions currently supported can be found [here](REGIONS.md).
 
 ## Credits
 
