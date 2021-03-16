@@ -1,6 +1,6 @@
 # pyAvaCore
 
-Python library to download and parse eaws avalanche bulletins
+Python library to download and parse [EAWS](https://www.avalanches.org/) avalanche bulletins
 
 ## License
 
@@ -36,4 +36,4 @@ The IDs for the different regions currently supported can be found [here](REGION
 
 ## Credits
 
-The parser uses the png.py file from the [PyPNG-Project](https://github.com/drj11/pypng).
+The parser uses the png.py file from the [PyPNG-Project](https://github.com/drj11/pypng) ([MIT License](https://github.com/drj11/pypng/blob/main/LICENCE)).
