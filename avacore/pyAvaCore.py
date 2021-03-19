@@ -321,9 +321,9 @@ def parse_xml_vorarlberg(root):
     return reports
 
 
-def parse_xml_bavaria(root):
+def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
-    '''parses Bavarian-Style CAAML-XML. root is a ElementTree'''
+    '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
     
     reports = []
     report = AvaReport()
@@ -395,16 +395,20 @@ def parse_xml_bavaria(root):
                 main_value = int(main_value.text)
             for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    if not 'Keine' in beginPosition.text:
+                    if not ('Keine' in beginPosition.text or beginPosition.text == '0'):
                         valid_elevation = ">" + beginPosition.text
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    if not 'Keine' in endPosition.text:
+                    if not ('Keine' in endPosition.text or endPosition.text == '3000'):
                         valid_elevation = "<" + endPosition.text
 
             loc_list.append([current_loc_ref, validity_begin, validity_end, DangerMain(main_value, valid_elevation)])
 
     loc_ref_list = []
     del_index = []
+
+    if location == 'slovenia':
+        loc_list = [i for j, i in enumerate(loc_list) if i[1].date() == today]
+        
 
     for index, loc_elem in enumerate(loc_list):
         if loc_elem[1].time() == time(0, 0, 0):
@@ -473,7 +477,9 @@ def get_reports(url):
     if "VORARLBERG" in url.upper():
         reports = parse_xml_vorarlberg(root)
     elif "BAYERN" in url.upper():
-        reports = parse_xml_bavaria(root)
+        reports = parse_xml_bavaria(root, "bavaria")
+    elif "ARSO.GOV.SI" in url.upper():
+        reports = parse_xml_bavaria(root, "slovenia")
     else:
         reports = parse_xml(root)
     return reports
@@ -573,6 +579,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             url = "https://conselharan2.cyberneticos.net/albina_files_local/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://lauegi.conselharan.org/ abgefragt. "\
                 "Diese wird bereitgestellt von Conselh Generau d'Aran (https://lauegi.conselharan.org/)."
+
+    if region_id.startswith("SI"):
+        url = "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        provider = "Slovenia"
 
     return url, provider
 
