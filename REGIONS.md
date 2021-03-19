@@ -360,4 +360,34 @@
 
 ## Liechtenstein
 
-- Liechtenstein                                   RegionID: "CH-3311"
+- Liechtenstein                                    RegionID: "CH-3311"
+
+
+## France
+
+
+### Alpes Du Nord
+
+#### Haute Savoie
+- CHABLAIS                                         RegionID: "FR-01"
+- ARAVIS                                           RegionID: "FR-02"
+- MONT-BLANC                                       RegionID: "FR-03"
+#### Savoie                                        
+- BAUGES                                           RegionID: "FR-04"
+- BEAUFORTAIN                                      RegionID: "FR-05"
+- HAUTE-TARENTAISE                                 RegionID: "FR-06"
+- MAURIENNE                                        RegionID: "FR-09"
+- VANOISE                                          RegionID: "FR-10"
+- HAUTE-MAURIENNE                                  RegionID: "FR-11"
+#### Isere                                                                        
+- CHARTREUSE                                       RegionID: "FR-07"
+- BELLEDONNE                                       RegionID: "FR-08"
+- GRANDES-ROUSSES                                  RegionID: "FR-12"
+- VERCORS                                          RegionID: "FR-14"
+- OISANS                                           RegionID: "FR-15"
+
+### Alpes Du Sud
+
+### Pyrenees
+
+### Corse
