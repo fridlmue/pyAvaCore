@@ -365,7 +365,6 @@
 
 ## France
 
-
 ### Alpes Du Nord
 
 #### Haute Savoie
@@ -387,7 +386,37 @@
 - OISANS                                           RegionID: "FR-15"
 
 ### Alpes Du Sud
+#### Hautes Alpes
+- THABOR                                           RegionID: "FR-13"
+- PELVOUX                                          RegionID: "FR-16"
+- QUEYRAS                                          RegionID: "FR-17"
+- DEVOLUY                                          RegionID: "FR-18"
+- CHAMPSAUR                                        RegionID: "FR-19"
+- EMBRUNAIS-PARPAILLON                             RegionID: "FR-20"
+- UBAYE                                            RegionID: "FR-21"
+#### Alpes Maritimes                               
+- HAUT-VAR/HAUT-VERDON                             RegionID: "FR-22"
+- MERCANTOUR                                       RegionID: "FR-23"
 
-### Pyrenees
+### Pyrenees                                       
+#### Pyrenees Atlantique                           
+- PAYS-BASQUE                                      RegionID: "FR-64"
+- ASPE-OSSAU                                       RegionID: "FR-65"
+#### Hautes Pyrenees                                                   
+- HAUTE-BIGORRE                                    RegionID: "FR-66"
+- AURE-LOURON                                      RegionID: "FR-67"
+#### Haute Garonne                                                     
+- LUCHONNAIS                                       RegionID: "FR-68"
+- COUSERANS                                        RegionID: "FR-69"
+#### Ariege                                                            
+- HAUTE-ARIEGE                                     RegionID: "FR-70"
+- ORLU  ST BARTHELEMY                              RegionID: "FR-72"
+#### Andorre                                                         
+- ANDORRE                                          RegionID: "FR-71"
+#### Pyrenees Orientales                           
+- MORENS                                           RegionID: "FR-73"
+- CERDAGNE-CANIGOU                                 RegionID: "FR-74"
 
-### Corse
+### Corse                                          
+- CINTO-ROTONDO                                    RegionID: "FR-40"
+- RENOSO-INCUDINE                                  RegionID: "FR-41"

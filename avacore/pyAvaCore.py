@@ -761,7 +761,6 @@ def get_reports_fr(region_id):
             c_a = 'A' if c.isupper() else 'a'      
             index = ord(c) - ord(c_a)
             access_token += (chr(ord(c_a) + (index + shift_by) % 26))
-    print(access_token)
 
     from urllib.request import urlopen, Request
     req = Request('https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain=' + re.sub('FR-', '', region_id) +  \
