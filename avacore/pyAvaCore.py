@@ -566,11 +566,11 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
 
     #Val d'Aran
     if region_id.startswith("ES-CT-L"):
-        url = "https://conselharan2.cyberneticos.net/albina_files_local/latest/en.xml"
+        url = "http://statics.lauegi.report/albina_files_local/latest/en.xml"
         provider = "The displayed ihe displayed information is provided by an open data API on https://lauegi.conselharan.org/ by: "\
             "Conselh Generau d'Aran - https://lauegi.conselharan.org/"
         if "DE" in local.upper():
-            url = "https://conselharan2.cyberneticos.net/albina_files_local/latest/de.xml"
+            url = "http://statics.lauegi.report/albina_files_local/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://lauegi.conselharan.org/ abgefragt. "\
                 "Diese wird bereitgestellt von Conselh Generau d'Aran (https://lauegi.conselharan.org/)."
 
