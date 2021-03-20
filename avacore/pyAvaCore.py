@@ -166,13 +166,13 @@ def parse_xml_vorarlberg(root):
     reports = []
     report = AvaReport()
     comment_empty = 1
-    
+
     # Common for every Report:
-    
+
     report_id = ''
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
         report_id = bulletin.attrib.get('{http://www.opengis.net/gml}id')
-    
+
     activity_com = ''
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
         for detail in bulletin:
@@ -302,10 +302,10 @@ def parse_xml_vorarlberg(root):
             c_report.validity_begin = loc_elem[1]
             c_report.validity_end = loc_elem[2]
             c_report.predecessor_id = report_id + '-' + loc_elem[0]
-            
+
             c_report.danger_main = []
             c_report.danger_main.append(loc_elem[3])
-            
+
             reports.append(c_report)
             del_index.append(index)
 
@@ -324,7 +324,7 @@ def parse_xml_vorarlberg(root):
 def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
     '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
-    
+
     reports = []
     report = AvaReport()
 
@@ -415,7 +415,6 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
     if location == 'slovenia':
         loc_list = [i for j, i in enumerate(loc_list) if i[1].date() == today]
-        
 
     for index, loc_elem in enumerate(loc_list):
         if loc_elem[1].time() == time(0, 0, 0):

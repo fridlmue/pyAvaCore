@@ -43,7 +43,7 @@ class TestSlovenia(unittest.TestCase):
         self.assertIn('W', report.problem_list[0].aspect)
         self.assertNotIn('N', report.problem_list[0].aspect)
         self.assertEqual(report.predecessor_id, 'BulletinSiID-SI3')
-        
+
         reports = pyAvaCore.parse_xml_bavaria(root, location = 'slovenia', today = datetime.date(2021,3,21))
         self.assertEqual(len(reports), 10)
         report = reports[0]
