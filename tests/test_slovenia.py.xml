@@ -1,0 +1,1022 @@
+<caaml:Bulletin xmlns:caaml="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd" gml:id="BulletinSiID" xml:lang="sl">
+    <caaml:metaDataProperty>
+        <caaml:MetaData>
+            <caaml:dateTimeReport>2021-03-19T07:47:19+00:00</caaml:dateTimeReport>
+            <caaml:srcRef xlink:href="OpIdCaamlARSO"/>
+            <caaml:comment> </caaml:comment>
+        </caaml:MetaData>
+    </caaml:metaDataProperty>
+    <caaml:validTime>
+        <caaml:TimeInstant>
+            <caaml:timePosition>2021-03-19T00:00:00+00:00</caaml:timePosition>
+        </caaml:TimeInstant>
+    </caaml:validTime>
+    <caaml:bulletinResultsOf>
+        <caaml:BulletinMeasurements>
+            <caaml:comment></caaml:comment>
+            <caaml:highlights></caaml:highlights>
+            <caaml:dangerRatings>
+                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI1"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI2"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1700</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI3"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>1800</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI4"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1800</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>2</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-19T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-20T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-20T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-21T12:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-21T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>                <caaml:DangerRating>
+                    <caaml:locRef xlink:href="SI5"/>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-22T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-22T12:00:00+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>0</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                    <caaml:mainValue>1</caaml:mainValue>
+                </caaml:DangerRating>            
+            </caaml:dangerRatings>
+            <caaml:dangerPatterns>
+
+                <caaml:DangerPattern>
+                    <caaml:type>DP4</caaml:type>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-23T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                </caaml:DangerPattern>
+
+            </caaml:dangerPatterns>
+            <caaml:avProblems>
+                <caaml:AvProblem>
+                    <caaml:type>drifting snow</caaml:type>
+                    <caaml:validTime>
+                        <caaml:TimePeriod>
+                            <caaml:beginPosition>2021-03-19T00:00:00+00:00</caaml:beginPosition>
+                            <caaml:endPosition>2021-03-23T23:59:59.999000+00:00</caaml:endPosition>
+                        </caaml:TimePeriod>
+                    </caaml:validTime>
+                    <caaml:validAspect xlink:href="AspectRange_E"/>
+                    <caaml:validAspect xlink:href="AspectRange_SE"/>
+                    <caaml:validAspect xlink:href="AspectRange_S"/>
+                    <caaml:validAspect xlink:href="AspectRange_SW"/>
+                    <caaml:validAspect xlink:href="AspectRange_W"/>
+                    <caaml:validElevation>
+                        <caaml:ElevationRange uom="m">
+                            <caaml:beginPosition>1700</caaml:beginPosition>
+                            <caaml:endPosition>3000</caaml:endPosition>
+                        </caaml:ElevationRange>
+                    </caaml:validElevation>
+                </caaml:AvProblem>
+            </caaml:avProblems>
+            <caaml:wxSynopsisHighlights/>
+            <caaml:wxSynopsisComment>
+                Danes bo dopoldne delno jasno, popoldne pa spremenljivo oblačno, nekateri vrhovi bodo občasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne snežne plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo šibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 °C.
+V soboto bo pretežno oblačno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo več v popoldanskem času. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo povečini šibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 °C.
+V nedeljo bo suho vreme. Sprva bo pretežno jasno, sredi dneva bo oblačnost od severozahoda naraščala. Vrhovi v visokogorju bodo občasno tudi v oblakih. Krepiti se bo začel veter severne smeri. Zjutraj bo še mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 °C. 
+Tudi v začetku prihodnjega tedna bo suho vreme s spremenljivo oblačnostjo. Še bo vetrovno, pihal bo okrepljen severnik.
+            </caaml:wxSynopsisComment>
+            <caaml:avActivityHighlights/>
+            <caaml:avActivityComment/>
+            <caaml:snowpackStructureHighlights/>
+            <caaml:snowpackStructureComment>
+                Snežne razmere so krajevno zelo različne. V zadnjih dneh je ob manjših plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prenašal veter. Snežna odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zatišnih pa je na trdi podlagi plast suhega snega, ki je večinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klož, ki so predvsem na južnih staneh pobočij. Zaradi nizke temperature se sneg na prisojnih pobočjih čez dan ojuži predvsem v sredogorju, v visokogorju pa precej manj in ostaja čez dan večinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.
+                Snežne razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo še vedno nevarno, da sprožite plaz kložastega snega. V začetku prihodnjega tedna se bodo območja z napihanim snegom nekoliko povečala.
+            </caaml:snowpackStructureComment>
+            <caaml:travelAdvisoryHighlights/>
+            <caaml:travelAdvisoryComment>
+                Nevarnost snežnih plazov je nad okoli 1700 m večinoma ZMERNA, 2. stopnje, nižje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko že ob manjši obremenitvi sprožite plaz suhega kložastega snega. Na spihanih območjih ter na grebenih je velika nevarnost zdrsa.
+            </caaml:travelAdvisoryComment>
+        </caaml:BulletinMeasurements>
+    </caaml:bulletinResultsOf>
+    <caaml:locRef xlink:href="SI1"/>
+</caaml:Bulletin>
