@@ -352,7 +352,14 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
             report.report_texts.append(ReportText('snow_struct_com', snowpackStructureComment.text))
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
             report.report_texts.append(ReportText('activity_hl', highlights.text))
-        for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avProblem'):
+
+        for DangerPattern in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
+            for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
+                report.dangerpattern.append(DangerPatternType.text)
+
+        av_problem_tag = 'avProblem' if location == 'bavaria' else 'AvProblem'
+
+        for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}' + av_problem_tag):
             type_r = ""
             for avType in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                 type_r = avType.text
