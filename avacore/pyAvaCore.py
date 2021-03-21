@@ -647,9 +647,12 @@ def get_reports_ch(path, lang="en", cached=False):
 
         common_report.rep_date = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
         common_report.validity_begin = common_report.rep_date
-        # Warning: validity_end is here the next expected update. It should be valid sometimes longer than that.
-        # (5PM report up to 5PM next day)
-        common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
+        if common_report.validity_begin.hour == 17:
+            common_report.validity_end = common_report.validity_begin + timedelta(days = 1)
+        elif common_report.validity_begin.hour == 8:
+            common_report.validity_end = common_report.validity_begin + timedelta(hours = 9)
+        else: #Shourld not happen
+            common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
         report_ids = []
         reports = []
