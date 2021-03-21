@@ -420,3 +420,12 @@
 ### Corse                                          
 - CINTO-ROTONDO                                    RegionID: "FR-40"
 - RENOSO-INCUDINE                                  RegionID: "FR-41"
+
+
+## Slovenia
+
+- (?)                                             RegionID: "SI1"
+- Julian Alps, South and West (?)                 RegionID: "SI2"
+- Julian Alps, Central and Karawanks, West (?)    RegionID: "SI3"
+- Kamnik-Savinja Alps and Karawanks, East (?)     RegionID: "SI4"
+- (?)                                             RegionID: "SI5"

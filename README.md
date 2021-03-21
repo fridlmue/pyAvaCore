@@ -30,6 +30,7 @@ At the moment the following regions are supported with the localization versions
 - FR (https://meteofrance.com/meteo-montagne) (FR)
 - IT Bolzano (https://avalanche.report) (EN/DE)
 - IT Trentino (https://avalanche.report) (EN/DE)
+- SI (http://meteo.arso.gov.si/) (SI)
 
 ### RegionIDs
 
