@@ -14,20 +14,11 @@
 """
 
 from datetime import datetime
-from datetime import timezone
-from datetime import time
-from datetime import timedelta
 from urllib.request import urlopen
-from pathlib import Path
-import urllib.request
-import zipfile
-import copy
 import re
-import base64
 import json
 import logging
 import typing
-import string
 
 from avacore.processor_fr import process_reports_fr
 from avacore.processor_ch import process_reports_ch

@@ -10,7 +10,7 @@ import logging
 import logging.handlers
 import sys
 
-from .pyAvaCore import AvaReport, JSONEncoder, clean_elevation, get_report_url, get_reports, get_reports_ch
+from .pyAvaCore import AvaReport, JSONEncoder, get_report_url, get_reports, get_reports_ch
 
 Path('logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(

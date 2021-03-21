@@ -2,17 +2,7 @@ from datetime import datetime
 from datetime import timezone
 from datetime import time
 from datetime import timedelta
-from urllib.request import urlopen
-from pathlib import Path
-import urllib.request
-import zipfile
 import copy
-import re
-import base64
-import json
-import logging
-import typing
-import string
 
 from avacore import pyAvaCore
 
@@ -174,7 +164,8 @@ def parse_xml_vorarlberg(root):
                                 if "Lo" in validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'):
                                     valid_elevation = "<Treeline"
                         else:
-                            for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
+                            for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS\
+                                                                     beginPosition'):
                                 valid_elevation = ">" + beginPosition.text
                             for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                                 valid_elevation = "<" + endPosition.text

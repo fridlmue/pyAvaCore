@@ -1,17 +1,7 @@
-from datetime import datetime
-from datetime import timezone
-from datetime import time
-from datetime import timedelta
-from urllib.request import urlopen
-from pathlib import Path
+from urllib.request import urlopen, Request
 import urllib.request
-import zipfile
 import copy
 import re
-import base64
-import json
-import logging
-import typing
 import string
 
 from avacore import pyAvaCore
@@ -41,7 +31,6 @@ def process_reports_fr(region_id, path='', cached=False):
                 index = ord(c) - ord(c_a)
                 access_token += (chr(ord(c_a) + (index + shift_by) % 26))
 
-        from urllib.request import urlopen, Request
         req = Request('https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain=' + re.sub('FR-', '', region_id) +  \
                     '&report_type=Forecast&report_subtype=BRA')
         req.add_header('Authorization', 'Bearer ' + access_token)

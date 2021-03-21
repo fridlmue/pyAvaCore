@@ -1,18 +1,11 @@
 from datetime import datetime
-from datetime import timezone
-from datetime import time
 from datetime import timedelta
-from urllib.request import urlopen
 from pathlib import Path
 import urllib.request
 import zipfile
 import copy
-import re
 import base64
 import json
-import logging
-import typing
-import string
 
 from avacore import pyAvaCore
 from avacore.png import png
@@ -88,10 +81,10 @@ def process_reports_ch(path, lang="en", cached=False):
         common_report.rep_date = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
         common_report.validity_begin = common_report.rep_date
         if common_report.validity_begin.hour == 17:
-            common_report.validity_end = common_report.validity_begin + timedelta(days = 1)
+            common_report.validity_end = common_report.validity_begin + timedelta(days=1)
         elif common_report.validity_begin.hour == 8:
-            common_report.validity_end = common_report.validity_begin + timedelta(hours = 9)
-        else: #Shourld not happen
+            common_report.validity_end = common_report.validity_begin + timedelta(hours=9)
+        else: # Shourld not happen
             common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
         report_ids = []
