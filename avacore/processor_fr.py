@@ -1,3 +1,17 @@
+"""
+    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    This file is part of pyAvaCore.
+    pyAvaCore is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    pyAvaCore is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
+"""
 from urllib.request import urlopen, Request
 import urllib.request
 import copy
@@ -5,6 +19,34 @@ import re
 import string
 
 from avacore import pyAvaCore
+
+def download_report_fr(region_id):
+    response = urllib.request.urlopen('https://meteofrance.com/')
+    headers = response.getheaders()
+    session_cookie_raw = response.getheader('Set-Cookie')
+    session_cookie = re.sub('mfsession=', '', session_cookie_raw.split(';')[0])
+
+    access_token = ''
+    shift_by = 13
+    for c in session_cookie:
+        if c.isdigit() or c in string.punctuation:
+            access_token += c
+        else:
+            c_a = 'A' if c.isupper() else 'a'
+            index = ord(c) - ord(c_a)
+            access_token += (chr(ord(c_a) + (index + shift_by) % 26))
+
+    req = Request('https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain=' + re.sub('FR-', '', region_id) +  \
+                '&report_type=Forecast&report_subtype=BRA')
+    req.add_header('Authorization', 'Bearer ' + access_token)
+    response_content = urlopen(req).read()
+
+    try:
+        root = ET.fromstring(response_content.decode('utf-8'))
+    except Exception as r_e:
+        print('error parsing ElementTree: ' + str(r_e))
+
+    return root
 
 def process_reports_fr(region_id, path='', cached=False):
     '''
@@ -16,30 +58,7 @@ def process_reports_fr(region_id, path='', cached=False):
         import xml.etree.ElementTree as ET
 
     if not cached:
-        response = urllib.request.urlopen('https://meteofrance.com/')
-        headers = response.getheaders()
-        session_cookie_raw = response.getheader('Set-Cookie')
-        session_cookie = re.sub('mfsession=', '', session_cookie_raw.split(';')[0])
-
-        access_token = ''
-        shift_by = 13
-        for c in session_cookie:
-            if c.isdigit() or c in string.punctuation:
-                access_token += c
-            else:
-                c_a = 'A' if c.isupper() else 'a'
-                index = ord(c) - ord(c_a)
-                access_token += (chr(ord(c_a) + (index + shift_by) % 26))
-
-        req = Request('https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain=' + re.sub('FR-', '', region_id) +  \
-                    '&report_type=Forecast&report_subtype=BRA')
-        req.add_header('Authorization', 'Bearer ' + access_token)
-        response_content = urlopen(req).read()
-
-        try:
-            root = ET.fromstring(response_content.decode('utf-8'))
-        except Exception as r_e:
-            print('error parsing ElementTree: ' + str(r_e))
+        root = download_report_fr(region_id)
 
     else:
         m_root = ET.parse(path)
