@@ -27,6 +27,7 @@ At the moment the following regions are supported with the localization versions
 - CH (including FL) (https://www.slf.ch/en/index.html) (EN/DE)
 - DE Bavaria (https://www.lawinenwarndienst-bayern.de) (EN/DE)
 - ES Val d'Aran (https://lauegi.conselharan.org/) (EN/DE)
+- FR (https://meteofrance.com/meteo-montagne) (FR)
 - IT Bolzano (https://avalanche.report) (EN/DE)
 - IT Trentino (https://avalanche.report) (EN/DE)
 
