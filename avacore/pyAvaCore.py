@@ -167,13 +167,13 @@ def parse_xml_vorarlberg(root):
     reports = []
     report = AvaReport()
     comment_empty = 1
-    
+
     # Common for every Report:
-    
+
     report_id = ''
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
         report_id = bulletin.attrib.get('{http://www.opengis.net/gml}id')
-    
+
     activity_com = ''
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
         for detail in bulletin:
@@ -303,10 +303,10 @@ def parse_xml_vorarlberg(root):
             c_report.validity_begin = loc_elem[1]
             c_report.validity_end = loc_elem[2]
             c_report.predecessor_id = report_id + '-' + loc_elem[0]
-            
+
             c_report.danger_main = []
             c_report.danger_main.append(loc_elem[3])
-            
+
             reports.append(c_report)
             del_index.append(index)
 
@@ -322,10 +322,10 @@ def parse_xml_vorarlberg(root):
     return reports
 
 
-def parse_xml_bavaria(root):
+def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
-    '''parses Bavarian-Style CAAML-XML. root is a ElementTree'''
-    
+    '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
+
     reports = []
     report = AvaReport()
 
@@ -353,7 +353,14 @@ def parse_xml_bavaria(root):
             report.report_texts.append(ReportText('snow_struct_com', snowpackStructureComment.text))
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
             report.report_texts.append(ReportText('activity_hl', highlights.text))
-        for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avProblem'):
+
+        for DangerPattern in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
+            for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
+                report.dangerpattern.append(DangerPatternType.text)
+
+        av_problem_tag = 'avProblem' if location == 'bavaria' else 'AvProblem'
+
+        for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}' + av_problem_tag):
             type_r = ""
             for avType in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                 type_r = avType.text
@@ -396,16 +403,19 @@ def parse_xml_bavaria(root):
                 main_value = int(main_value.text)
             for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    if not 'Keine' in beginPosition.text:
+                    if not ('Keine' in beginPosition.text or beginPosition.text == '0'):
                         valid_elevation = ">" + beginPosition.text
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    if not 'Keine' in endPosition.text:
+                    if not ('Keine' in endPosition.text or endPosition.text == '3000'):
                         valid_elevation = "<" + endPosition.text
 
             loc_list.append([current_loc_ref, validity_begin, validity_end, DangerMain(main_value, valid_elevation)])
 
     loc_ref_list = []
     del_index = []
+
+    if location == 'slovenia':
+        loc_list = [i for j, i in enumerate(loc_list) if i[1].date() == today]
 
     for index, loc_elem in enumerate(loc_list):
         if loc_elem[1].time() == time(0, 0, 0):
@@ -474,7 +484,9 @@ def get_reports(url):
     if "VORARLBERG" in url.upper():
         reports = parse_xml_vorarlberg(root)
     elif "BAYERN" in url.upper():
-        reports = parse_xml_bavaria(root)
+        reports = parse_xml_bavaria(root, "bavaria")
+    elif "ARSO.GOV.SI" in url.upper():
+        reports = parse_xml_bavaria(root, "slovenia")
     else:
         reports = parse_xml(root)
     return reports
@@ -574,6 +586,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             url = "http://statics.lauegi.report/albina_files_local/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://lauegi.conselharan.org/ abgefragt. "\
                 "Diese wird bereitgestellt von Conselh Generau d'Aran (https://lauegi.conselharan.org/)."
+
+    if region_id.startswith("SI"):
+        url = "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        provider = "Slovenia"
 
     return url, provider
 
