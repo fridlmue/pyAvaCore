@@ -14,6 +14,7 @@
 """
 from datetime import datetime
 from urllib.request import urlopen
+from pathlib import Path
 import re
 import json
 import logging
@@ -28,10 +29,6 @@ from avacore.processor_caaml import parse_xml, parse_xml_bavaria, parse_xml_vora
 def get_xml_as_et(url):
 
     '''returns the xml-file from url as ElementTree'''
-
-
-    #timeout_time = 5
-    #with urlopen(url, timeout=timeout_time) as response:
 
     with urlopen(url) as response:
         response_content = response.read()
@@ -48,18 +45,19 @@ def get_xml_as_et(url):
         print('error parsing ElementTree: ' + str(r_e))
     return root
 
-def get_reports(region_id, local=''):
+def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache=False):
 
     '''returns array of AvaReports for requested region_id and provider information'''
 
-    if region_id.startswith("FR-"):
+    url = ''
+    if region_id.startswith("FR"):
         logging.info('Fetching %s', region_id)
         reports = process_reports_fr(region_id)
         provider = "Rédigé par Météo-France avec la contribution des observateurs du réseau nivo-météorologique. Partenariat : "\
             + "ANMSM (Maires de Stations de Montagne), DSF (Domaines Skiables de France), "\
             + "ADSP (Directeurs de Pistes et de la Sécurité des Stations de Sports d'Hiver) et autres acteurs de la montagne."
-    elif region_id.startswith("CH-"):
-        reports = process_reports_ch(lang=local)
+    elif region_id.startswith("CH"):
+        reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         provider = "WSL Institute for Snow and Avalanche Research SLF: www.slf.ch"
     else:
         url, provider = get_report_url(region_id, local)
@@ -177,18 +175,6 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
         provider = "Slovenia"
 
     return url, provider
-
-def get_reports_fr(region_id, path='', cached=False):
-
-    reports = process_reports_fr(region_id, path, cached)
-
-    return reports
-
-def get_reports_ch(path, lang="en", cached=False):
-
-    reports = process_reports_ch(path, lang, cached)
-
-    return reports
 
 ### Data-Classes
 

@@ -8,7 +8,7 @@ class TestCH(unittest.TestCase):
 
     def test_ch(self):
         # root = ET.parse(f'{__file__}.xml')
-        reports = pyAvaCore.get_reports_ch(str(pathlib.Path(__file__).parent.absolute()), cached=True)
+        reports = pyAvaCore.process_reports_ch(str(pathlib.Path(__file__).parent.absolute()), cached=True)
         self.assertEqual(len(reports), 9)
         report = reports[2]
         self.assertEqual(report.report_id, '8947715')
