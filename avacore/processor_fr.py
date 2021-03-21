@@ -21,6 +21,11 @@ import string
 from avacore import pyAvaCore
 
 def download_report_fr(region_id):
+    try:
+        import xml.etree.cElementTree as ET
+    except ImportError:
+        import xml.etree.ElementTree as ET
+
     response = urllib.request.urlopen('https://meteofrance.com/')
     headers = response.getheaders()
     session_cookie_raw = response.getheader('Set-Cookie')

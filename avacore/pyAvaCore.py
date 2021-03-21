@@ -258,6 +258,40 @@ class AvaReport:
         self.problem_list = []
         self.report_texts = []
 
+    def cli_out(self):
+        print('╔═════ AvaReport ', self.report_id, ' ══════')
+        if hasattr(self, 'predecessor_id'):
+            print('║ This is PM-Report to: ', self.predecessor_id)
+        print('║ Report from:          ', self.rep_date)
+        print('║ Validity:             ', self.validity_begin, ' -> ', self.validity_end)
+        print('║ Valid for:')
+        for region in self.valid_regions:
+            print('║ |- ', region)
+
+        print('╟───── Danger Rating')
+        for danger_main in self.danger_main:
+            if danger_main.valid_elevation != None:
+                print('║ ', danger_main.valid_elevation, ' -> : ', danger_main.main_value)
+            else:
+                print('║ ', danger_main.main_value, ' in entire range')
+
+        print('╟───── Av Problems')
+        for problem in self.problem_list:
+            print('║ Problem: ', problem.problem_type, ' Elevation: ', problem.valid_elevation, ' Aspects: ', problem.aspect)
+
+        if len(self.dangerpattern)  > 0:
+            print('╟───── Danger Patterns')
+            for dangerpattern in self.dangerpattern:
+                print('║ ', dangerpattern)
+
+        print('╟───── Av Texts (if not html or img)')
+        for texts in self.report_texts:
+            if texts.text_type != 'html_report_local' and texts.text_type != 'prone_locations_img' and \
+                texts.text_type != 'html_weather_snow':
+                print('║ ', texts.text_type, ': ', texts.text_content)
+
+        print('╚══════════════════════════════════════════')
+
 
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization of datetime"""
