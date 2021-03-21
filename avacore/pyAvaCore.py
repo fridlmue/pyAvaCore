@@ -48,21 +48,33 @@ def get_xml_as_et(url):
         print('error parsing ElementTree: ' + str(r_e))
     return root
 
-def get_reports(url):
+def get_reports(region_id, local=''):
 
-    '''returns array of AvaReports for requested URL'''
+    '''returns array of AvaReports for requested region_id and provider information'''
 
-    logging.info('Fetching %s', url)
-    root = get_xml_as_et(url)
-    if "VORARLBERG" in url.upper():
-        reports = parse_xml_vorarlberg(root)
-    elif "BAYERN" in url.upper():
-        reports = parse_xml_bavaria(root, "bavaria")
-    elif "ARSO.GOV.SI" in url.upper():
-        reports = parse_xml_bavaria(root, "slovenia")
+    if region_id.startswith("FR-"):
+        logging.info('Fetching %s', region_id)
+        reports = process_reports_fr(region_id)
+        provider = "Rédigé par Météo-France avec la contribution des observateurs du réseau nivo-météorologique. Partenariat : "\
+            + "ANMSM (Maires de Stations de Montagne), DSF (Domaines Skiables de France), "\
+            + "ADSP (Directeurs de Pistes et de la Sécurité des Stations de Sports d'Hiver) et autres acteurs de la montagne."
+    elif region_id.startswith("CH-"):
+        reports = process_reports_ch(lang=local)
+        provider = "WSL Institute for Snow and Avalanche Research SLF: www.slf.ch"
     else:
-        reports = parse_xml(root)
-    return reports
+        url, provider = get_report_url(region_id, local)
+
+        logging.info('Fetching %s', url)
+        root = get_xml_as_et(url)
+        if region_id.startswith("AT8") or region_id.startswith("AT-08"):
+            reports = parse_xml_vorarlberg(root)
+        elif region_id.startswith("BY"):
+            reports = parse_xml_bavaria(root, "bavaria")
+        elif region_id.startswith("SI"):
+            reports = parse_xml_bavaria(root, "slovenia")
+        else:
+            reports = parse_xml(root)
+    return reports, provider, url
 
 
 def try_parse_datetime(datetime_string):

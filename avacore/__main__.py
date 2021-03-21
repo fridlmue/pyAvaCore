@@ -27,8 +27,7 @@ def download_region(regionID):
         url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
         reports = get_reports_ch(str(Path('cache')))
     else:
-        url, _ = get_report_url(regionID)
-        reports = get_reports(url)
+        reports, _, url = get_reports(regionID)
     report: AvaReport
     for report in reports:
         if isinstance(report.validity_begin, datetime):
