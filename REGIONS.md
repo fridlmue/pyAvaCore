@@ -47,6 +47,90 @@
 - Maddalene                                        RegionID: "IT-32-TN-20"
 - Pine' - Valle dei Mocheni                        RegionID: "IT-32-TN-21"
 
+### Piemonte
+
+- ALPI LEPONTINE SUD                               RegionID: "IT-32-VB-03"
+- ALPI LEPONTINE NORD                              RegionID: "IT-32-VB-02"
+- ALPI PENNINE DI CONFINE                          RegionID: "IT-32-VB-01"
+- ALPI PENNINE                                     RegionID: "IT-32-VC-01"
+- ALPI GRAIE                                       RegionID: "IT-32-TO-03"
+- ALPI GRAIE DI CONFINE                            RegionID: "IT-32-TO-01"
+- ALPI COZIE                                       RegionID: "IT-32-TO-04"
+- ALPI COZIE NORD DI CONFINE                       RegionID: "IT-32-TO-02"
+- ALPI COZIE SUD                                   RegionID: "IT-32-CN-03"
+- ALPI COZIE SUD DI CONFINE                        RegionID: "IT-32-CN-01"
+- ALPI MARITTIME OCCIDENTALI                       RegionID: "IT-32-CN-02"
+- ALPI MARITTIME ORIENTALI                         RegionID: "IT-32-CN-04"
+- ALPI LIGURI                                      RegionID: "IT-32-CN-05"
+
+### Aosta
+
+- A - SAINT-PIERRE SAINT-NICHOLAS                  RegionID: "IT-32-AO-A01"
+- A - INTROD ARVIER                                RegionID: "IT-32-AO-A02"
+- A - QUART NUS                                    RegionID: "IT-32-AO-A03"
+- A - POLLEIN SAINT MARCEL                         RegionID: "IT-32-AO-A04"
+- A - BASSA VALTOURNENCHE CHATILLON                RegionID: "IT-32-AO-A05"
+- B - ALTA VALLE DI GRESSONEY                      RegionID: "IT-32-AO-B06"
+- B - MEDIA VAL D'AYAS BRUSSON                     RegionID: "IT-32-AO-B07"
+- B - MEDIA VALLE DEL LYS                          RegionID: "IT-32-AO-B08"
+- B - VALLI DI GRESSONEY, AYAS, CHAMPORCHER        RegionID: "IT-32-AO-B09"
+- B - CHAMPDEPRAZ MONTE AVIC                       RegionID: "IT-32-AO-B10"
+- B - VALLE DI CHAMPORCHER                         RegionID: "IT-32-AO-B11"
+- C - VAL DI COGNE AYMAVILLES                      RegionID: "IT-32-AO-C12"
+- C - VALSAVARENCHE                                RegionID: "IT-32-AO-C13"
+- D - VAL FERRET                                   RegionID: "IT-32-AO-D14"
+- D - VALLE DI LA THUILE                           RegionID: "IT-32-AO-D15"
+- D - VALGRISENCHE                                 RegionID: "IT-32-AO-D16"
+- D - LA SALLE MORGEX                              RegionID: "IT-32-AO-D17"
+- D - GRAN SAN BERNARDO OLLOMONT                   RegionID: "IT-32-AO-D18"
+- D - BASSA E MEDIA VALPELLINE                     RegionID: "IT-32-AO-D19"
+- D - CERVINIA E ALTA VALPELLINE                   RegionID: "IT-32-AO-D20"
+- C - VAL DI RHEMES                                RegionID: "IT-32-AO-C21"
+- D - VAL VENY                                     RegionID: "IT-32-AO-D22"
+- A - TESTATA SAINT-BARTHELEMY                     RegionID: "IT-32-AO-A23"
+- A - VALTOURNENCHE                                RegionID: "IT-32-AO-A24"
+- B - TESTATA VAL D'AYAS SAINT-JACQUES             RegionID: "IT-32-AO-B25"
+- A - PONTEY                                       RegionID: "IT-32-AO-A26"
+
+### Lombardia
+
+- ADAMELLO                                         RegionID: "IT-32-BS-01"
+- OROBIE CENTRALI                                  RegionID: "IT-32-BG-01"
+- PREALPI BERGAMASCHE                              RegionID: "IT-32-BG-02"
+- PREALPI BRESCIANE                                RegionID: "IT-32-BS-02"
+- OROBIE OCCIDENTALI                               RegionID: "IT-32-LC-01"
+- PREALPI OCCIDENTALI                              RegionID: "IT-32-VA-01"
+- RETICHE CENTRALI                                 RegionID: "IT-32-SO-02"
+- RETICHE OCCIDENTALI                              RegionID: "IT-32-SO-01"
+- RETICHE ORIENTALI                                RegionID: "IT-32-SO-03"
+
+### Veneto
+
+- Altopiano, Pasubio, Carega                       RegionID: "IT-32-VI-01"
+- Baldo, Lessini                                   RegionID: "IT-32-VR-01"
+- Vette Feltrine, Visentin, Grappa                 RegionID: "IT-32-BL-06"
+- Alpago, Cansiglio                                RegionID: "IT-32-BL-05"
+- Ampezzo, Cadore                                  RegionID: "IT-32-BL-02"
+- Ansiei, Comelico                                 RegionID: "IT-32-BL-03"
+- Cadore                                           RegionID: "IT-32-BL-04"
+- Agordino, Zoldano                                RegionID: "IT-32-BL-01"
+
+### Friuli
+
+- ALPI CARNICHE OCCIDENTALI                        RegionID: "IT-32-UD-01"
+- ALPI CARNICHE ORIENTALI                          RegionID: "IT-32-UD-02"
+- ALPI GIULIE SENZA CANIN                          RegionID: "IT-32-UD-03"
+- CANIN                                            RegionID: "IT-32-UD-04"
+- PREALPI GIULIE                                   RegionID: "IT-32-UD-05"
+- PREALPI CARNICHE OCCIDENTALI                     RegionID: "IT-32-PN-01"
+- PRALPI CARNICHE ORIENTALI                        RegionID: "IT-32-PN-02"
+
+### Marche
+
+- Appennino Fabrianese                             RegionID: "IT-32-MC-01"
+- Monti Sibillini Ovest                            RegionID: "IT-32-AP-01"
+- Appennino Pesarese                               RegionID: "IT-32-PU-01"
+- Monti Sibillini Est e Laga Marchigiana           RegionID: "IT-32-AP-02"
 
 ## Austria
 

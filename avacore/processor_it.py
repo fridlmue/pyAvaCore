@@ -1,6 +1,7 @@
 import json
 import urllib.request
 import datetime
+from datetime import timedelta
 
 from avacore import pyAvaCore
 
@@ -15,7 +16,6 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
     old = False
 
     p_code, p_zona = it_region_ref[region_id]
-    print(p_zona, p_code)
 
     url = "https://www.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='1'&pIdZona='" \
         + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
@@ -40,9 +40,12 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
         old = True
         url = "https://www.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='-1'&pIdZona='" \
             + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
-        response = requests.get(url, headers=headers)
+        req = urllib.request.Request(url, headers=headers)
 
-        aineva_object = json.loads(response.text)
+        with urllib.request.urlopen(req) as response:
+            content = response.read()
+
+        aineva_object = json.loads(content)
         all_text = aineva_object['d']
         details_1x = all_text.split('£')
         details_10 = details_1x[0].split('|')
@@ -51,14 +54,15 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
 
 
     '''
-    print(len(response.text))
+    # print(len(response.text))
     print(len(details_1x))
     print(len(details_10))
     print(len(details_11))
     print(len(details_12))
     # print(details_2[6])
-
+    print(details_10)
     print(details_11)
+    print(details_12)
     '''
 
     report.rep_date = date_from_report(details_1x[9])
@@ -66,32 +70,48 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
     report.report_id = region_id + '_' + today.isoformat()
     report.validity_begin = datetime.datetime.combine(today, datetime.time(0,0))
     report.validity_end = datetime.datetime.combine(today, datetime.time(23,59))
+    if old:
+        report.validity_begin = report.validity_begin - timedelta(hours = 24)
+        report.validity_end = report.validity_end - timedelta(hours = 24)
+
 
     if int(details_10[0][3]) < 6:
         report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
     else:
         print('not handled yet!')
-
+        # ToDo Needs to check for overday change
+    print(details_10[2][3])
     prefix_alti = ''
     if int(details_10[2][3]) in [1, 2, 3]:
         prefix_alti = '>'
     if int(details_10[2][3]) == 4:
         prefix_alti = '<'
 
-    aspects = []
+    elev_data = details_11[2]
+    if prefix_alti != '' and len(elev_data) < 20:
+        aspects = []
+        general_problem_valid_elevation = ''.join(c for c in elev_data.split('/')[0].split('-')[0] if c.isdigit())
+        # ToDo Aspects are missing at the moment
+        report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
 
-    general_problem_valid_elevation = ''.join(c for c in details_11[2] if c.isdigit())
-    report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
+    av_problem = pyAvaCore.Problem(details_10[3][5:-4].lower(), [], "-")
+    if av_problem.problem_type != '':
+        report.problem_list.append(av_problem)
 
     reports.append(report)
 
     return reports
 
 def date_from_report(date):
-
     date = datetime.datetime.strptime(date, '%d/%m/%Y')
-
     return date
+
+# Only temporary for debug
+def process_all_reports_it():
+    for a in it_region_ref.keys():
+        m_reports = process_reports_it(a)
+        for report in m_reports:
+            report.cli_out()
 
 
 it_region_ref = {
