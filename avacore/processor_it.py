@@ -1,5 +1,5 @@
 import json
-import requests
+import urllib.request
 import datetime
 
 from avacore import pyAvaCore
@@ -24,9 +24,12 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
         "Content-Type": "application/json; charset=utf-8"
         }
 
-    response = requests.get(url, headers=headers)
+    req = urllib.request.Request(url, headers=headers)
 
-    aineva_object = json.loads(response.text)
+    with urllib.request.urlopen(req) as response:
+        content = response.read()
+
+    aineva_object = json.loads(content)
     all_text = aineva_object['d']
     details_1x = all_text.split('£')
     details_10 = details_1x[0].split('|')
