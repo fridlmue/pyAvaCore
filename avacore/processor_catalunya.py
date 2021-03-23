@@ -33,6 +33,7 @@ def process_reports_cat(today=datetime.datetime.today().date()):
 
         report.rep_date = icgc_report['databutlleti']
         report.report_id = 'ES-CT-ICGC-'+ icgc_report['id_zona'] + '_' + str(report.rep_date)
+        report.valid_regions.append('ES-CT-ICGC-'+ icgc_report['id_zona'])
         report.validity_begin = datetime.datetime.combine( \
             datetime.datetime.strptime(icgc_report['datavalidesabutlleti'], '%Y-%m-%d'), datetime.time(0,0))
         report.validity_end = datetime.datetime.combine( \
