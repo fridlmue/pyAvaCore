@@ -31,7 +31,7 @@ def process_reports_cat(today=datetime.datetime.today().date()):
     for icgc_report in icgc_reports:
         report = pyAvaCore.AvaReport()
 
-        report.rep_date = icgc_report['databutlleti']
+        report.rep_date = datetime.datetime.strptime(icgc_report['databutlleti'], '%Y-%m-%d')
         report.report_id = 'ES-CT-ICGC-'+ icgc_report['id_zona'] + '_' + str(report.rep_date)
         report.valid_regions.append('ES-CT-ICGC-'+ icgc_report['id_zona'])
         report.validity_begin = datetime.datetime.combine( \
