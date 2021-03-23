@@ -23,6 +23,7 @@ import typing
 from avacore.processor_fr import process_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_caaml import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
+from avacore.processor_catalunya import process_reports_cat
 
 ### XML-Helpers
 
@@ -59,6 +60,9 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("CH"):
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         provider = "WSL Institute for Snow and Avalanche Research SLF: www.slf.ch"
+    elif region_id.startswith("ES-CT-ICGC"):
+        reports = process_reports_cat(region_id)
+        provider = "Institut Cartogràfic i Geològic de Catalunya: bpa.icgc.cat"
     else:
         url, provider = get_report_url(region_id, local)
 
