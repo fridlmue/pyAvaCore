@@ -101,6 +101,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             url = "https://avalanche.report/albina_files/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://avalanche.report abgefragt. Diese wird "\
             "bereitgestellt von: Avalanche Warning Service Tirol, Avalanche Warning Service Südtirol, Avalanche Warning Service Trentino."
+        if "FR" in local.upper():
+            url = "https://avalanche.report/albina_files/latest/fr.xml"
+        provider = "The displayed information is provided by an open data API on https://avalanche.report by: "\
+            "Avalanche Warning Service Tirol, Avalanche Warning Service Südtirol, Avalanche Warning Service Trentino."
 
     # Kärnten
     if region_id.startswith("AT-02"):
@@ -169,6 +173,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             url = "http://statics.lauegi.report/albina_files_local/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://lauegi.conselharan.org/ abgefragt. "\
                 "Diese wird bereitgestellt von Conselh Generau d'Aran (https://lauegi.conselharan.org/)."
+        if "FR" in local.upper():
+            url = "http://statics.lauegi.report/albina_files_local/latest/fr.xml"
+            provider = "The displayed ihe displayed information is provided by an open data API on https://lauegi.conselharan.org/ by: "\
+                "Conselh Generau d'Aran - https://lauegi.conselharan.org/"
 
     if region_id.startswith("SI"):
         url = "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
