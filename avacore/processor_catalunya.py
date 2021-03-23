@@ -5,7 +5,7 @@ from datetime import timedelta
 
 from avacore import pyAvaCore
 
-def process_reports_cat(region_id, today=datetime.datetime.today().date()):
+def process_reports_cat(today=datetime.datetime.today().date()):
 
     reports = []
 

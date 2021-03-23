@@ -61,7 +61,7 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         provider = "WSL Institute for Snow and Avalanche Research SLF: www.slf.ch"
     elif region_id.startswith("ES-CT-ICGC"):
-        reports = process_reports_cat(region_id)
+        reports = process_reports_cat()
         provider = "Institut Cartogràfic i Geològic de Catalunya: bpa.icgc.cat"
     else:
         url, provider = get_report_url(region_id, local)
