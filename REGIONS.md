@@ -424,11 +424,12 @@
 
 ## Slovenia
 
-- (?)                                             RegionID: "SI1"
-- Julian Alps, South and West (?)                 RegionID: "SI2"
-- Julian Alps, Central and Karawanks, West (?)    RegionID: "SI3"
-- Kamnik-Savinja Alps and Karawanks, East (?)     RegionID: "SI4"
-- (?)                                             RegionID: "SI5"
+- Generalized Slovenia                            RegionID: "SI1"
+- Julian Alps, South and West                     RegionID: "SI2"
+- Julian Alps, Central and Karawanks, West        RegionID: "SI3"
+- Kamnik-Savinja Alps and Karawanks, East         RegionID: "SI4"
+- Other Areas (pre-Apline and Dinaric-Alps)       RegionID: "SI5" 
+
 
 ## Norway
 
@@ -455,4 +456,5 @@
 - Hardanger                                       RegionID: "NO-3034"
 - Vest-Telemark                                   RegionID: "NO-3035"
 - Heiane                                          RegionID: "NO-3037"
+
 
