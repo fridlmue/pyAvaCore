@@ -28,7 +28,7 @@ def process_reports_no(region_id, today=datetime.datetime.today().date()):
     current = 0 # Probably add one after 5 p.m.
 
     report.valid_regions.append(region_id)
-    report.rep_date = datetime.datetime.fromisoformat(varsom_report[current]['PublishTime'])
+    report.rep_date = datetime.datetime.fromisoformat(varsom_report[current]['PublishTime'].split('.')[0])
     report.report_id = (region_id + "_" + str(report.rep_date))
 
     report.validity_begin = datetime.datetime.fromisoformat(varsom_report[current]['ValidFrom'])
@@ -68,7 +68,10 @@ def process_reports_no(region_id, today=datetime.datetime.today().date()):
 
     report.report_texts.append(pyAvaCore.ReportText('activity_hl', varsom_report[current]['MainText']))
     report.report_texts.append(pyAvaCore.ReportText('activity_com', varsom_report[current]['AvalancheDanger']))
-    report.report_texts.append(pyAvaCore.ReportText('snow_struct_com', varsom_report[current]['SnowSurface'] + '\n' + varsom_report[0]['CurrentWeaklayers']))
+    waek_layers = ''
+    if varsom_report[0]['CurrentWeaklayers'] != None:
+        waek_layers = '\n' + varsom_report[0]['CurrentWeaklayers']
+    report.report_texts.append(pyAvaCore.ReportText('snow_struct_com', varsom_report[current]['SnowSurface']  + waek_layers))
     report.report_texts.append(pyAvaCore.ReportText('tendency_com', varsom_report[current+1]['MainText']))
 
     reports.append(report)
