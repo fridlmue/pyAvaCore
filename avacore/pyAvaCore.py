@@ -23,6 +23,7 @@ import typing
 from avacore.processor_fr import process_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_it import process_reports_it
+from avacore.processor_norway import process_reports_no
 from avacore.processor_caaml import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
 ### XML-Helpers
@@ -63,6 +64,9 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith('IT-32-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
         reports = process_reports_it(region_id)
         provider = "AINEVA: aineva.it"
+    elif region_id.startswith("NO"):
+        reports = process_reports_no(region_id)
+        provider = "varsom.no"
     else:
         url, provider = get_report_url(region_id, local)
 
@@ -105,6 +109,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             url = "https://avalanche.report/albina_files/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://avalanche.report abgefragt. Diese wird "\
             "bereitgestellt von: Avalanche Warning Service Tirol, Avalanche Warning Service Südtirol, Avalanche Warning Service Trentino."
+        if "FR" in local.upper():
+            url = "https://avalanche.report/albina_files/latest/fr.xml"
+        provider = "The displayed information is provided by an open data API on https://avalanche.report by: "\
+            "Avalanche Warning Service Tirol, Avalanche Warning Service Südtirol, Avalanche Warning Service Trentino."
 
     # Kärnten
     if region_id.startswith("AT-02"):
@@ -173,6 +181,10 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             url = "http://statics.lauegi.report/albina_files_local/latest/de.xml"
             provider = "Die dargestellten Informationen werden über eine API auf https://lauegi.conselharan.org/ abgefragt. "\
                 "Diese wird bereitgestellt von Conselh Generau d'Aran (https://lauegi.conselharan.org/)."
+        if "FR" in local.upper():
+            url = "http://statics.lauegi.report/albina_files_local/latest/fr.xml"
+            provider = "The displayed ihe displayed information is provided by an open data API on https://lauegi.conselharan.org/ by: "\
+                "Conselh Generau d'Aran - https://lauegi.conselharan.org/"
 
     if region_id.startswith("SI"):
         url = "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"

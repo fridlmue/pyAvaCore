@@ -508,8 +508,37 @@
 
 ## Slovenia
 
-- (?)                                             RegionID: "SI1"
-- Julian Alps, South and West (?)                 RegionID: "SI2"
-- Julian Alps, Central and Karawanks, West (?)    RegionID: "SI3"
-- Kamnik-Savinja Alps and Karawanks, East (?)     RegionID: "SI4"
-- (?)                                             RegionID: "SI5"
+- Generalized Slovenia                            RegionID: "SI1"
+- Julian Alps, South and West                     RegionID: "SI2"
+- Julian Alps, Central and Karawanks, West        RegionID: "SI3"
+- Kamnik-Savinja Alps and Karawanks, East         RegionID: "SI4"
+- Other Areas (pre-Apline and Dinaric-Alps)       RegionID: "SI5" 
+
+
+## Norway
+
+- Nordenskiöld Land                               RegionID: "NO-3003"
+- Finnmarkskysten                                 RegionID: "NO-3006"
+- Vest-Finnmark                                   RegionID: "NO-3007"
+- Nord-Troms                                      RegionID: "NO-3009"
+- Lyngen                                          RegionID: "NO-3010"
+- Tromsø                                          RegionID: "NO-3011"
+- Sør-Troms                                       RegionID: "NO-3012"
+- Indre Troms                                     RegionID: "NO-3013"
+- Lofoten og Vesterålen                           RegionID: "NO-3014"
+- Ofoten                                          RegionID: "NO-3015"
+- Salten                                          RegionID: "NO-3016"
+- Svartisen                                       RegionID: "NO-3017"
+- Trollheimen                                     RegionID: "NO-3022"
+- Romsdal                                         RegionID: "NO-3023"
+- Sunnmøre                                        RegionID: "NO-3024"
+- Indre Fjordane                                  RegionID: "NO-3027"
+- Jotunheimen                                     RegionID: "NO-3028"
+- Indre Sogn                                      RegionID: "NO-3029"
+- Voss                                            RegionID: "NO-3031"
+- Hallingdal                                      RegionID: "NO-3032"
+- Hardanger                                       RegionID: "NO-3034"
+- Vest-Telemark                                   RegionID: "NO-3035"
+- Heiane                                          RegionID: "NO-3037"
+
+
