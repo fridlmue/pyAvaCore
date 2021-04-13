@@ -8,7 +8,7 @@ class TestFrance(unittest.TestCase):
 
     def test_france(self):
         # root = ET.parse(f'{__file__}.xml')
-        reports = pyAvaCore.get_reports_fr('FR-22', path=f'{__file__}.xml', cached=True)
+        reports = pyAvaCore.process_reports_fr('FR-22', path=f'{__file__}.xml', cached=True)
         self.assertEqual(len(reports), 2)
         report = reports[0]
         self.assertEqual(report.report_id, 'FR-22_2021-03-18T16:00:00_PM')

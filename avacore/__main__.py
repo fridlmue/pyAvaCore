@@ -10,7 +10,7 @@ import logging
 import logging.handlers
 import sys
 
-from .pyAvaCore import AvaReport, JSONEncoder, clean_elevation, get_report_url, get_reports, get_reports_ch
+from .pyAvaCore import AvaReport, JSONEncoder, get_report_url, get_reports
 
 Path('logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -25,10 +25,9 @@ def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
     if regionID == 'CH':
         url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
-        reports = get_reports_ch(str(Path('cache')))
+        reports, _, _ = get_reports(regionID, cache_path=str(Path('cache')))
     else:
-        url, _ = get_report_url(regionID)
-        reports = get_reports(url)
+        reports, _, url = get_reports(regionID)
     report: AvaReport
     for report in reports:
         if isinstance(report.validity_begin, datetime):
