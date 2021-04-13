@@ -23,6 +23,7 @@ import typing
 from avacore.processor_fr import process_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_norway import process_reports_no
+from avacore.processor_uk import process_reports_uk
 from avacore.processor_caaml import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
 ### XML-Helpers
@@ -63,6 +64,10 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("NO"):
         reports = process_reports_no(region_id)
         provider = "varsom.no"
+    elif region_id.startswith("UK"):
+        reports = process_reports_uk()
+        provider = "www.sais.gov.uk"
+        url = "https://www.sais.gov.uk/api?action=getForecast"
     else:
         url, provider = get_report_url(region_id, local)
 
