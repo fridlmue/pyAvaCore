@@ -61,7 +61,7 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("CH"):
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         provider = "WSL Institute for Snow and Avalanche Research SLF: www.slf.ch"
-    elif region_id.startswith('IT-32-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
+    elif region_id.startswith('IT-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
         reports = process_reports_it(region_id)
         provider = "AINEVA: aineva.it"
     elif region_id.startswith("NO"):
