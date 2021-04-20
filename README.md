@@ -31,6 +31,7 @@ At the moment the following regions are supported with the localization versions
 - IT Bolzano (https://avalanche.report) (EN/DE)
 - IT Trentino (https://avalanche.report) (EN/DE)
 - SI (http://meteo.arso.gov.si/) (SI)
+- NO (https://www.varsom.no) (NO/EN)
 
 ### RegionIDs
 
