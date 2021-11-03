@@ -89,6 +89,9 @@ One `tendency` in `bulletinmeasurements`
 ##### avactivityhighlights
 One `avactivityhighlights` in `bulletinmeasurements`
 
+##### avactivitycomment
+One `avactivitycomment` in `bulletinmeasurements`
+
 ##### snowpackstructurecomment
 One `snowpackstructurecomment` in `bulletinmeasurements`
 
