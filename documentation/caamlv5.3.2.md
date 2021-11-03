@@ -13,7 +13,7 @@ One `metadataproperty` block in `ObsCollection`
 One `Observations` block in `ObsCollection`
 
 ### bulletin
-Multible `bulletin` blocks in `Observations`
+Multiple `bulletin` blocks in `Observations`
 
 #### metadataproperty
 One `metadataproperty` block in `bulletin`
@@ -37,7 +37,7 @@ One `secref` with operation name in `bulletin`
 **duplicate**
 
 #### locref
-Multible `locref` in `bulletin` with @xlink:href containing the RegionID
+Multiple `locref` in `bulletin` with @xlink:href containing the RegionID
 
 #### bulletinresultsof 
 One `bulletinresultsof` with `bulletinmeasurements` in `bulletin`
@@ -46,7 +46,7 @@ One `bulletinresultsof` with `bulletinmeasurements` in `bulletin`
 One `dangerratings` in `bulletinmeasurements`
 
 ###### dangerrating
-Multible `dangerrating` in `dangerratings`
+Multiple `dangerrating` in `dangerratings`
 
 |NO     |Element CAAML V5   |Comment                   |
 | ----- | ----------------- | ------------------------ |
@@ -57,7 +57,7 @@ Multible `dangerrating` in `dangerratings`
 One `dangerpatterns` in `bulletinmeasurements`
 
 ###### dangerpattern
-Multible `dangerpattern` in `dangerpatterns`
+Multiple `dangerpattern` in `dangerpatterns`
 
 |NO     |Element CAAML V5   |Comment                   |
 | ----- | ----------------- | ------------------------ |
@@ -67,7 +67,7 @@ Multible `dangerpattern` in `dangerpatterns`
 One `avproblems` in `bulletinmeasurements`
 
 ###### avproblem
-Multible `avproblem` in `avproblems`
+Multiple `avproblem` in `avproblems`
 
 |NO     |Element CAAML V5   |Comment                   |
 | ----- | ----------------- | ------------------------ |
