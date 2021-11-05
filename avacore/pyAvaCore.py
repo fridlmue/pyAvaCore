@@ -5,7 +5,7 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    pyAvaCore is distributed in the hope that it will be useful,
+    pyAvaCore is distributed in the hope that it will be useful, 
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
@@ -20,10 +20,11 @@ import json
 import logging
 import typing
 
+from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_norway import process_reports_no
-from avacore.processor_caaml import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
+from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
 ### XML-Helpers
 
@@ -188,121 +189,6 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
 
     return url, provider
 
-### Data-Classes
-
-class Problem:
-    '''
-    Defines a avalanche problem with aspect and elevation
-    '''
-    problem_type: str
-    aspect: list
-    valid_elevation: str
-
-    def __init__(self, problem_type: str, aspect: list, validElev: str) -> None:
-        self.problem_type = problem_type
-        self.aspect = aspect
-        self.valid_elevation = clean_elevation(validElev)
-
-    def __str__(self):
-        return "{'problem_type':'" + self.problem_type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" \
-            + self.valid_elevation + "'}"
-
-    def __repr__(self):
-        return str(self)
-
-class DangerMain:
-    '''
-    Defines Danger-Level with elevation
-    '''
-    main_value: int
-    valid_elevation: str
-
-    def __init__(self, mainValue: int, validElev: str):
-        self.main_value = mainValue
-        self.valid_elevation = clean_elevation(validElev)
-
-class ReportText:
-    '''
-    Defines a report text with type.
-    '''
-    text_type: str
-    text_content: str
-
-    def __init__(self, text_type: str, text_content="") -> None:
-        self.text_type = text_type
-        self.text_content = text_content
-
-    def __str__(self):
-        return "{'text_type':'" + self.text_type + "', 'text_content':" + self.text_content + "'}"
-
-    def __repr__(self):
-        return str(self)
-
-class AvaReport:
-    '''
-    Class for the AvaReport
-    '''
-    report_id: str
-    '''ID of the Report'''
-    valid_regions: typing.List[str]
-    '''list of Regions'''
-    rep_date: datetime
-    '''Date of Report'''
-    validity_begin: datetime
-    '''valid time start'''
-    validity_end: datetime
-    '''valid time end'''
-    predecessor_id: str
-    '''ID of first report (AM) if Report is e. g. a PM-Report'''
-    danger_main: typing.List[DangerMain]
-    '''danger Value and elev'''
-    dangerpattern: typing.List[str]
-    '''list of Patterns'''
-    problem_list: typing.List[Problem]
-    '''list of Problems with Sublist of Aspect&Elevation'''
-    report_texts: typing.List[ReportText]
-    '''All textual elements of the Report'''
-
-    def __init__(self):
-        self.valid_regions = []
-        self.danger_main = []
-        self.dangerpattern = []
-        self.problem_list = []
-        self.report_texts = []
-
-    def cli_out(self):
-        print('╔═════ AvaReport ', self.report_id, ' ══════')
-        if hasattr(self, 'predecessor_id'):
-            print('║ This is PM-Report to: ', self.predecessor_id)
-        print('║ Report from:          ', self.rep_date)
-        print('║ Validity:             ', self.validity_begin, ' -> ', self.validity_end)
-        print('║ Valid for:')
-        for region in self.valid_regions:
-            print('║ |- ', region)
-
-        print('╟───── Danger Rating')
-        for danger_main in self.danger_main:
-            if danger_main.valid_elevation != None:
-                print('║ ', danger_main.valid_elevation, ' -> : ', danger_main.main_value)
-            else:
-                print('║ ', danger_main.main_value, ' in entire range')
-
-        print('╟───── Av Problems')
-        for problem in self.problem_list:
-            print('║ Problem: ', problem.problem_type, ' Elevation: ', problem.valid_elevation, ' Aspects: ', problem.aspect)
-
-        if len(self.dangerpattern)  > 0:
-            print('╟───── Danger Patterns')
-            for dangerpattern in self.dangerpattern:
-                print('║ ', dangerpattern)
-
-        print('╟───── Av Texts (if not html or img)')
-        for texts in self.report_texts:
-            if texts.text_type != 'html_report_local' and texts.text_type != 'prone_locations_img' and \
-                texts.text_type != 'html_weather_snow':
-                print('║ ', texts.text_type, ': ', texts.text_content)
-
-        print('╚══════════════════════════════════════════')
 
 
 class JSONEncoder(json.JSONEncoder):
@@ -315,14 +201,3 @@ class JSONEncoder(json.JSONEncoder):
         except: # pylint: disable=bare-except
             return obj.__dict__
 
-
-def clean_elevation(elev: str):
-    '''
-    Cleans up the elevation description. Should move to the XML-Parsers.
-    '''
-    if elev in ['', '-', 'ElevationRange_Keine H\u00f6hengrenzeHi']:
-        return None
-    elev = re.sub(r'ElevationRange_(.+)Hi', r'>\1', elev)
-    elev = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'<\1', elev)
-    elev = elev.replace('Forestline', 'Treeline')
-    return elev

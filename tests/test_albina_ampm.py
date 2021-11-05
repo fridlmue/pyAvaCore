@@ -11,7 +11,7 @@ class TestAlbinaAmPm(unittest.TestCase):
         self.assertEqual(len(reports), 6)
 
         report = reports[0]
-        self.assertEqual(report.report_id, '15b7b04b-5f3f-435c-a4f4-33a4eabeb965')
+        self.assertEqual(report.reportId, '15b7b04b-5f3f-435c-a4f4-33a4eabeb965')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-21T16:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-21T23:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-22T11:00:00+00:00')
@@ -28,7 +28,7 @@ class TestAlbinaAmPm(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
         report = reports[5]
-        self.assertEqual(report.report_id, '56410e01-259b-4b8e-a97b-f4628744b70e_PM')
+        self.assertEqual(report.reportId, '56410e01-259b-4b8e-a97b-f4628744b70e_PM')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-21T16:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-22T11:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-22T23:00:00+00:00')

@@ -8,7 +8,7 @@ from avacore import pyAvaCore
 def process_reports_no(region_id, today=datetime.datetime.today().date()):
     reports = []
 
-    report = pyAvaCore.AvaReport()
+    report = pyAvaCore.AvaBulletin()
 
     langkey = '2' # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
 
@@ -27,9 +27,9 @@ def process_reports_no(region_id, today=datetime.datetime.today().date()):
 
     current = 0 # Probably add one after 5 p.m.
 
-    report.valid_regions.append(region_id)
-    report.rep_date = datetime.datetime.fromisoformat(varsom_report[current]['PublishTime'].split('.')[0])
-    report.report_id = (region_id + "_" + str(report.rep_date))
+    report.region.append(region_id)
+    report.publicationTime = datetime.datetime.fromisoformat(varsom_report[current]['PublishTime'].split('.')[0])
+    report.reportId = (region_id + "_" + str(report.publicationTime))
 
     report.validity_begin = datetime.datetime.fromisoformat(varsom_report[current]['ValidFrom'])
     report.validity_end = datetime.datetime.fromisoformat(varsom_report[current]['ValidTo'])

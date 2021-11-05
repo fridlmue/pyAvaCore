@@ -86,14 +86,14 @@ def process_reports_ch(path, lang="en", cached=False):
 
         # region_id = region_id[-4:]
 
-        common_report = pyAvaCore.AvaReport()
+        common_report = pyAvaCore.AvaBulletin()
 
         begin, end = data['validity'].split('/')
 
         date_time_now = datetime.now()
 
-        common_report.rep_date = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
-        common_report.validity_begin = common_report.rep_date
+        common_report.publicationTime = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
+        common_report.validity_begin = common_report.publicationTime
         if common_report.validity_begin.hour == 17:
             common_report.validity_end = common_report.validity_begin + timedelta(days=1)
         elif common_report.validity_begin.hour == 8:

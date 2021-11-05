@@ -45,8 +45,8 @@ def parse_xml(root):
     reports = []
 
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
-        report = pyAvaCore.AvaReport()
-        report.report_id = bulletin.attrib.get('{http://www.opengis.net/gml}id')
+        report = pyAvaCore.AvaBulletin()
+        report.reportId = bulletin.attrib.get('{http://www.opengis.net/gml}id')
         pm_danger_ratings = []
 
         pm_available = False
@@ -59,10 +59,10 @@ def parse_xml(root):
             et_add_parent_info(observations)
             for locRef in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
                 loc_ref = observations.attrib.get('{http://www.w3.org/1999/xlink}href')
-                if loc_ref not in report.valid_regions:
-                    report.valid_regions.append(observations.attrib.get('{http://www.w3.org/1999/xlink}href'))
+                if loc_ref not in report.region:
+                    report.region.append(observations.attrib.get('{http://www.w3.org/1999/xlink}href'))
             for dateTimeReport in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                report.rep_date = pyAvaCore.try_parse_datetime(dateTimeReport.text).replace(tzinfo=timezone.utc)
+                report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text).replace(tzinfo=timezone.utc)
             for validTime in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                 if not et_get_parent(validTime):
                     for beginPosition in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
@@ -119,8 +119,8 @@ def parse_xml(root):
             reports.append(pm_report)
 
     for report in reports:
-        if report.report_id.endswith('_PM') and any(x.report_id == report.report_id[:-3] for x in reports):
-            report.predecessor_id = report.report_id[:-3]
+        if report.reportId.endswith('_PM') and any(x.reportId == report.reportId[:-3] for x in reports):
+            report.predecessor_id = report.reportId[:-3]
 
     return reports
 
@@ -129,7 +129,7 @@ def parse_xml_vorarlberg(root):
     '''parses Vorarlberg-Style CAAML-XML. root is a ElementTree'''
 
     reports = []
-    report = pyAvaCore.AvaReport()
+    report = pyAvaCore.AvaBulletin()
     comment_empty = 1
 
     # Common for every Report:
@@ -143,7 +143,7 @@ def parse_xml_vorarlberg(root):
         for detail in bulletin:
             for metaDataProperty in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
                 for dateTimeReport in metaDataProperty.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                    report.rep_date = pyAvaCore.try_parse_datetime(dateTimeReport.text)
+                    report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text)
             for bulletinResultsOf in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}bulletinResultsOf'):
                 for travelAdvisoryComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                     'travelAdvisoryComment'):
@@ -292,7 +292,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
     '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
 
     reports = []
-    report = pyAvaCore.AvaReport()
+    report = pyAvaCore.AvaBulletin()
 
     report_id = ''
     for bulletin in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}Bulletin'):
@@ -301,7 +301,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
     # Common for every Report:
     for metaData in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
         for dateTimeReport in metaData.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-            report.rep_date = pyAvaCore.try_parse_datetime(dateTimeReport.text)
+            report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text)
 
     activity_com = ''
 

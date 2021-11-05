@@ -11,7 +11,7 @@ class TestSalzburg(unittest.TestCase):
         reports = pyAvaCore.parse_xml(root)
         self.assertEqual(len(reports), 5)
         report = reports[0]
-        self.assertEqual(report.report_id, 'RID489RGR1')
+        self.assertEqual(report.reportId, 'RID489RGR1')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-25T17:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-25T23:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-26T23:00:00+00:00')
@@ -24,7 +24,7 @@ class TestSalzburg(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[1]
-        self.assertEqual(report.report_id, 'RID489RGR2')
+        self.assertEqual(report.reportId, 'RID489RGR2')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-25T17:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-25T23:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-26T11:00:00+00:00')
@@ -39,7 +39,7 @@ class TestSalzburg(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[2]
-        self.assertEqual(report.report_id, 'RID489RGR2_PM')
+        self.assertEqual(report.reportId, 'RID489RGR2_PM')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-25T17:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-26T11:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-26T23:00:00+00:00')
@@ -54,7 +54,7 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.predecessor_id, 'RID489RGR2')
         
         report = reports[3]
-        self.assertEqual(report.report_id, 'RID489RGR3')
+        self.assertEqual(report.reportId, 'RID489RGR3')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-25T17:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-25T23:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-26T11:00:00+00:00')
@@ -70,7 +70,7 @@ class TestSalzburg(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[4]
-        self.assertEqual(report.report_id, 'RID489RGR3_PM')
+        self.assertEqual(report.reportId, 'RID489RGR3_PM')
         self.assertEqual(report.rep_date.isoformat(), '2021-02-25T17:00:00+00:00')
         self.assertEqual(report.validity_begin.isoformat(), '2021-02-26T11:00:00+00:00')
         self.assertEqual(report.validity_end.isoformat(), '2021-02-26T23:00:00+00:00')

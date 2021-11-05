@@ -70,11 +70,11 @@ def process_reports_fr(region_id, path='', cached=False):
         for bulletins in m_root.iter(tag='BULLETINS_NEIGE_AVALANCHE'):
             root = bulletins
 
-    report = pyAvaCore.AvaReport()
+    report = pyAvaCore.AvaBulletin()
     reports = []
 
-    report.valid_regions.append('FR-' + root.attrib.get('ID').zfill(2))
-    report.rep_date = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
+    report.region.append('FR-' + root.attrib.get('ID').zfill(2))
+    report.publicationTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
     report.validity_begin = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
     report.validity_end = pyAvaCore.try_parse_datetime(root.attrib.get('DATEVALIDITE'))
 
@@ -135,7 +135,7 @@ def process_reports_fr(region_id, path='', cached=False):
             elif len(report.danger_main) > 1:
                 pm_danger_ratings.append(report.danger_main[1])
 
-    report.report_id = report.valid_regions[0] + '_' + str(report.rep_date.isoformat())
+    report.reportId = report.region[0] + '_' + str(report.publicationTime.isoformat())
 
     if pm_available:
         pm_report = copy.deepcopy(report)
