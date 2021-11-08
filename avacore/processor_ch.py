@@ -33,7 +33,11 @@ def fetch_files_ch(lang, path):
     url = 'https://www.slf.ch/avalanche/mobile/bulletin_'+lang+'.zip'
     urllib.request.urlretrieve(url, path + '/swiss/bulletin_'+lang+'.zip')
 
-    urllib.request.urlretrieve('https://www.slf.ch/avalanche/bulletin/'+lang+'/gk_region2pdf.txt', path + '/swiss/gk_region2pdf.txt')
+    try:
+        urllib.request.urlretrieve('https://www.slf.ch/avalanche/bulletin/'+lang+'/gk_region2pdf.txt', path + '/swiss/gk_region2pdf.txt')
+    except:
+        open(path + '/swiss/gk_region2pdf.txt', 'a').close()
+        
 
     with zipfile.ZipFile(path + '/swiss/bulletin_'+lang+'.zip', 'r') as zip_ref:
         zip_ref.extractall(path + '/swiss/')

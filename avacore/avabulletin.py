@@ -17,56 +17,6 @@ from datetime import datetime
 import re
 import typing
 
-class Problem:
-    '''
-    Defines a avalanche problem with aspect and elevation
-    '''
-    problem_type: str
-    aspect: list
-    valid_elevation: str
-
-    def __init__(self, problem_type: str, aspect: list, validElev: str) -> None:
-        self.problem_type = problem_type
-        self.aspect = aspect
-        self.valid_elevation = clean_elevation(validElev)
-
-    def __str__(self):
-        return "{'problem_type':'" + self.problem_type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" \
-            + self.valid_elevation + "'}"
-
-    def __repr__(self):
-        return str(self)
-
-class DangerMain:
-    '''
-    Defines Danger-Level with elevation
-    ToDo: Delete
-    '''
-    main_value: int
-    valid_elevation: str
-
-    def __init__(self, mainValue: int, validElev: str):
-        self.main_value = mainValue
-        self.valid_elevation = clean_elevation(validElev)
-
-class ReportText:
-    '''
-    Defines a report text with type.
-    ToDo: Delete
-    '''
-    text_type: str
-    text_content: str
-
-    def __init__(self, text_type: str, text_content="") -> None:
-        self.text_type = text_type
-        self.text_content = text_content
-
-    def __str__(self):
-        return "{'text_type':'" + self.text_type + "', 'text_content':" + self.text_content + "'}"
-
-    def __repr__(self):
-        return str(self)
-
 class ValidTimeType:
     '''
     Defines time intervall for the validity of a Bulletin
@@ -150,6 +100,61 @@ class TendencyType:
     '''Tendency comment'''
     #ToDo Add custom data
     
+'''
+--- To be removed ---
+'''
+class Problem:
+    '''
+    Defines a avalanche problem with aspect and elevation
+    '''
+    problem_type: str
+    aspect: list
+    valid_elevation: str
+
+    def __init__(self, problem_type: str, aspect: list, validElev: str) -> None:
+        self.problem_type = problem_type
+        self.aspect = aspect
+        self.valid_elevation = clean_elevation(validElev)
+
+    def __str__(self):
+        return "{'problem_type':'" + self.problem_type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" \
+            + self.valid_elevation + "'}"
+
+    def __repr__(self):
+        return str(self)
+
+class DangerMain:
+    '''
+    Defines Danger-Level with elevation
+    ToDo: Delete
+    '''
+    main_value: int
+    valid_elevation: str
+
+    def __init__(self, mainValue: int, validElev: str):
+        self.main_value = mainValue
+        self.valid_elevation = clean_elevation(validElev)
+
+class ReportText:
+    '''
+    Defines a report text with type.
+    ToDo: Delete
+    '''
+    text_type: str
+    text_content: str
+
+    def __init__(self, text_type: str, text_content="") -> None:
+        self.text_type = text_type
+        self.text_content = text_content
+
+    def __str__(self):
+        return "{'text_type':'" + self.text_type + "', 'text_content':" + self.text_content + "'}"
+
+    def __repr__(self):
+        return str(self)
+'''
+End Remove block
+'''
       
 class AvaBulletin:
     '''

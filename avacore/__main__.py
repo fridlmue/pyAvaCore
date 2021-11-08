@@ -10,7 +10,8 @@ import logging
 import logging.handlers
 import sys
 
-from .pyAvaCore import AvaReport, JSONEncoder, get_report_url, get_reports
+from .pyAvaCore import JSONEncoder, get_report_url, get_reports
+from .avabulletin import AvaBulletin
 
 Path('logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -20,7 +21,6 @@ logging.basicConfig(
         logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
         logging.StreamHandler()])
 
-
 def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
     if regionID == 'CH':
@@ -28,7 +28,7 @@ def download_region(regionID):
         reports, _, _ = get_reports(regionID, cache_path=str(Path('cache')))
     else:
         reports, _, url = get_reports(regionID)
-    report: AvaReport
+    report: AvaBulletin
     for report in reports:
         if isinstance(report.validity_begin, datetime):
             validityDate = report.validity_begin
