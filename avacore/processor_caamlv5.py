@@ -84,13 +84,10 @@ def parse_xml(root):
                         report.validTime.endTime = report.validity_end.replace(hour=11)
                 danger_rating = DangerRatingType()
                 danger_rating.set_mainValue_int(main_value)
-                #danger_rating.mainValue = main_value
                 danger_rating.elevation.auto_select(valid_elevation)
                 if am_rating:
-                    # report.danger_main.append(pyAvaCore.DangerMain(main_value, valid_elevation))
                     report.dangerRating.append(danger_rating)
                 else:
-                    # pm_danger_ratings.append(pyAvaCore.DangerMain(main_value, valid_elevation))
                     pm_danger_ratings.append(danger_rating)
             '''
             for DangerPattern in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
