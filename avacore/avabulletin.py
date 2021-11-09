@@ -25,7 +25,7 @@ class ValidTimeType:
     '''valid time start'''
     endTime: datetime
     '''valid time end'''
-    
+
 class SourceType:
     '''
     Describes the source of the Report
@@ -35,26 +35,35 @@ class SourceType:
     '''Bulletin Provider Information'''
     person: str
     '''Bulletin Author'''
-      
+
 class ElevationType:
     '''
     contains a elevation band
     '''
     lowerBound: str
     upperBound: str
-    
-    def __init__(self, lowerBound='', upperBound='') -> None:
+
+    def __init__(self, lowerBound='-', upperBound='-', auto_select='') -> None:
         self.lowerBound = lowerBound
         self.upperBound = upperBound
 
-      
+        if auto_select != '':
+            self.auto_select(auto_select)
+
+    def auto_select(self, auto_select):
+        auto_select = auto_select.replace('Forestline', 'Treeline') 
+        if 'Hi' in auto_select:
+            self.upperBound = re.sub(r'ElevationRange_(.+)Hi', r'\1', auto_select)
+        if 'Lo' in auto_select:
+            self.lowerBound = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'\1', auto_select)
+
 class DangerRatingType:
     '''
     Describes the Danger Ratings
     ToDo: Does not yet extend the whole CAAMLv6
     '''
     mainValue: str
-    '''mainValue as standardized descriptive text'''
+    '''main value as standardized descriptive text'''
     aspect: list
     '''list of valid aspects'''
     elevation: ElevationType
@@ -81,16 +90,38 @@ class DangerRatingType:
     
     # --- Values form EAWS Matrix ---
     
+    values = {
+        'low': 1,
+        'moderate': 2,
+        'considerable': 3,
+        'high': 4,
+        'very_high': 5
+    }
+    
+    def __init__(self, mainValue='', ) -> None:
+        self.elevation = ElevationType()
+    
     def get_mainValue_int(self):
-      values = {
-          'low': 1,
-          'moderate': 2,
-          'considerable': 3,
-          'high': 4,
-          'very_high': 5
-          }
-      return values.get(self.mainValue, 0)
-      
+
+      return self.values.get(self.mainValue, 0)
+  
+    def set_mainValue_int(self, value):
+        self.mainValue = next((level_text for level_text, level_int in self.values.items() if level_int == value), None)
+  
+class AvalancheProblemType:
+    problemType: str
+    '''problem type as standardized descriptive text'''
+    dangerRating: typing.List[DangerRatingType]
+    '''avalanche danger rating'''
+    comment: str
+
+    '''
+    ToDo: Addd custom data type
+    '''
+
+    def __init__(self) -> None:
+        self.dangerRating = []
+
 class TendencyType:
     tendencyType: str
     '''string contains decreasing, steady or increasing'''
@@ -99,6 +130,9 @@ class TendencyType:
     comment: str
     '''Tendency comment'''
     #ToDo Add custom data
+    
+    def __init__(self) -> None:
+        self.validTime = ValidTimeType()
     
 '''
 --- To be removed ---
@@ -177,9 +211,12 @@ class AvaBulletin:
     '''Valid TimeInterval of the Bulletin'''
     source: SourceType
     '''Details about the Bulletin Provider'''
-    dangerRating: DangerRatingType
+    dangerRating: typing.List[DangerRatingType]
     '''avalanche danger rating'''
+    avalancheProblem: typing.List[AvalancheProblemType]
+    '''avalanche problem'''
     tendency: TendencyType
+    '''tendency of the av situation'''
     
     highlights: str
 
@@ -205,7 +242,6 @@ class AvaBulletin:
     predecessor_id: str
     '''not part of CAAMLv6 (yet)'''
     
-    
     '''
     --- OLD PARTICULAR
     '''
@@ -230,6 +266,14 @@ class AvaBulletin:
 
     def __init__(self):
         self.region = []
+        self.validTime = ValidTimeType()
+        self.source = SourceType()
+        self.dangerRating = []
+        self.avalancheProblem = []
+        self.tendency = TendencyType()
+        '''
+        old
+        '''
         self.danger_main = []
         self.dangerpattern = []
         self.problem_list = []
