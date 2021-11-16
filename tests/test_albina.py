@@ -3,11 +3,12 @@ import unittest
 import xml.etree.ElementTree as ET
 
 
-'''
 # activate to export test json result
+'''
 import json
 from pathlib import Path
 from datetime import datetime
+'''
 
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization of datetime"""
@@ -18,7 +19,7 @@ class JSONEncoder(json.JSONEncoder):
             return obj.toJSON()
         except: # pylint: disable=bare-except
             return obj.__dict__
-'''
+
 
 class TestAlbina(unittest.TestCase):
 
@@ -39,16 +40,16 @@ class TestAlbina(unittest.TestCase):
         self.assertEqual(report.avalancheProblem[1].problemType, 'gliding snow')
         self.assertEqual(report.avalancheProblem[2].problemType, 'old snow')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
-        
-        '''
+
+'''        
         # activate to export test json result
         
         directory = Path('data')
         directory.mkdir(parents=True, exist_ok=True)
         
-        with open(f'{directory}/test-test.json', mode='w', encoding='utf-8') as f:
+        with open(f'{directory}/export-test-albina.json', mode='w', encoding='utf-8') as f:
             json.dump(reports, fp=f, cls=JSONEncoder, indent=2)
-        '''
+'''        
 
 if __name__ == '__main__':
     unittest.main()

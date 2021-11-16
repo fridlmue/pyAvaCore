@@ -43,9 +43,11 @@ class ElevationType:
     lowerBound: str
     upperBound: str
 
-    def __init__(self, lowerBound='-', upperBound='-', auto_select='') -> None:
-        self.lowerBound = lowerBound
-        self.upperBound = upperBound
+    def __init__(self, lowerBound='', upperBound='', auto_select='') -> None:
+        if lowerBound != '':
+            self.lowerBound = lowerBound
+        if upperBound != '':
+            self.upperBound = upperBound
 
         if auto_select != '':
             self.auto_select(auto_select)
@@ -56,6 +58,14 @@ class ElevationType:
             self.lowerBound = re.sub(r'ElevationRange_(.+)Hi', r'\1', auto_select)
         if 'Lo' in auto_select or 'Lw' in auto_select:
             self.upperBound = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'\1', auto_select)
+
+    def toString(self):
+        if hasattr(self,'lowerBound') and hasattr(self,'upperBound'):
+            return ">" + self.lowerBound + "<" + self.upperBound
+        if hasattr(self,'lowerBound'):
+            return ">"+ self.lowerBound
+        if hasattr(self,'upperBound'):
+            return "<"+ self.upperBound
 
 class DangerRatingType:
     '''
@@ -111,7 +121,7 @@ class DangerRatingType:
 class AvalancheProblemType:
     problemType: str
     '''problem type as standardized descriptive text'''
-    dangerRating: typing.List[DangerRatingType]
+    dangerRating: DangerRatingType
     '''avalanche danger rating'''
     comment: str
 
@@ -120,7 +130,7 @@ class AvalancheProblemType:
     '''
 
     def __init__(self) -> None:
-        self.dangerRating = []
+        self.dangerRating = DangerRatingType
 
 class TendencyType:
     tendencyType: str
@@ -196,11 +206,11 @@ class AvaBulletin:
     Follows partly CAAMLv6 caaml:BulletinType
     ToDo: MetaData type is generally missing
     '''
-    reportId: str
+    bulletinID: str
     '''ID of the Bulletin'''
     reportLang: str
     '''language of the Bulletin'''
-    region: typing.List[str]
+    region: typing.Dict[str, str]
     '''
     list of Regions, where this Report is valid
     ToDo: Does not yet extend the whole CAAMLv6
@@ -265,7 +275,7 @@ class AvaBulletin:
     '''All textual elements of the Report'''
 
     def __init__(self):
-        self.region = []
+        self.region = {}
         self.validTime = ValidTimeType()
         self.source = SourceType()
         self.dangerRating = []
