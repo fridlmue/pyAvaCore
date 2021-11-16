@@ -81,7 +81,7 @@ def parse_xml(root):
                 for beginPosition in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
                     if '11:00' in beginPosition.text:
                         am_rating = False
-                        report.validTime.endTime = report.validity_end.replace(hour=11)
+                        report.validTime.endTime = report.validTime.endTime.replace(hour=11)
                 danger_rating = DangerRatingType()
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
@@ -130,9 +130,9 @@ def parse_xml(root):
         if pm_available:
             pm_report = copy.deepcopy(report)
             pm_report.dangerRating = pm_danger_ratings
-            pm_report.report_id += '_PM'
-            pm_report.validity_begin = pm_report.validity_begin + timedelta(hours=12)
-            pm_report.validity_end = pm_report.validity_end + timedelta(hours=12)
+            pm_report.bulletinID += '_PM'
+            pm_report.validTime.startTime = pm_report.validTime.startTime + timedelta(hours=12)
+            pm_report.validTime.endTime = pm_report.validTime.endTime + timedelta(hours=12)
             reports.append(pm_report)
 
     for report in reports:
