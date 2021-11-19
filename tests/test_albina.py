@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 import json
 from pathlib import Path
 from datetime import datetime
-'''
+
 
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization of datetime"""
@@ -20,6 +20,7 @@ class JSONEncoder(json.JSONEncoder):
         except: # pylint: disable=bare-except
             return obj.__dict__
 
+'''
 
 class TestAlbina(unittest.TestCase):
 

@@ -23,6 +23,7 @@ import json
 
 from avacore import pyAvaCore
 from avacore.png import png
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType
 
 
 def fetch_files_ch(lang, path):
@@ -97,42 +98,42 @@ def process_reports_ch(path, lang="en", cached=False):
         date_time_now = datetime.now()
 
         common_report.publicationTime = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
-        common_report.validity_begin = common_report.publicationTime
-        if common_report.validity_begin.hour == 17:
-            common_report.validity_end = common_report.validity_begin + timedelta(days=1)
-        elif common_report.validity_begin.hour == 8:
-            common_report.validity_end = common_report.validity_begin + timedelta(hours=9)
+        common_report.validTime.startTime = common_report.publicationTime
+        if common_report.validTime.startTime.hour == 17:
+            common_report.validTime.endTime = common_report.validTime.startTime + timedelta(days=1)
+        elif common_report.validTime.startTime.hour == 8:
+            common_report.validTime.endTime = common_report.validTime.endTime + timedelta(hours=9)
         else: # Shourld not happen
-            common_report.validity_end = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
+            common_report.validTime.endTime = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
-        report_ids = []
+        bulletinIDs = []
         reports = []
 
         # Receives the ID of the report that matches the selected region_id
         with open(path + '/swiss/gk_region2pdf.txt') as fp:
             for line in fp:
-                report_id = line.split('_')[5][:-5]
-                report_id_pm = None
-                if len(report_id) > 7:
-                    report_id_pm = report_id[7:]
-                    report_id = report_id[:7]
-                if report_id not in report_ids:
-                    report_ids.append(report_id)
+                bulletinID = line.split('_')[5][:-5]
+                bulletinID_pm = None
+                if len(bulletinID) > 7:
+                    bulletinID_pm = bulletinID[7:]
+                    bulletinID = bulletinID[:7]
+                if bulletinID not in bulletinIDs:
+                    bulletinIDs.append(bulletinID)
                     new_report = copy.deepcopy(common_report)
-                    new_report.report_id = report_id
+                    new_report.bulletinID = bulletinID
                     reports.append(new_report)
-                if not report_id_pm is None and report_id_pm not in report_ids:
-                    report_ids.append(report_id_pm)
+                if not bulletinID_pm is None and bulletinID_pm not in bulletinIDs:
+                    bulletinIDs.append(bulletinID_pm)
                     new_report = copy.deepcopy(common_report)
-                    new_report.report_id = report_id_pm
-                    new_report.predecessor_id = report_id
+                    new_report.bulletinID = bulletinID_pm
+                    new_report.predecessor_id = bulletinID
                     reports.append(new_report)
-                elif not report_id_pm is None:
-                    if not report_id in reports[report_ids.index(report_id_pm)].predecessor_id:
-                        reports[report_ids.index(report_id_pm)].predecessor_id += ('_' + report_id)
-                reports[report_ids.index(report_id)].valid_regions.append("CH-" + line[:4])
-                if not report_id_pm is None:
-                    reports[report_ids.index(report_id_pm)].valid_regions.append("CH-" + line[:4])
+                elif not bulletinID_pm is None:
+                    if not bulletinID in reports[bulletinIDs.index(bulletinID_pm)].predecessor_id:
+                        reports[bulletinIDs.index(bulletinID_pm)].predecessor_id += ('_' + bulletinID)
+                reports[bulletinIDs.index(bulletinID)].region["CH-" + line[:4]] = ''
+                if not bulletinID_pm is None:
+                    reports[bulletinIDs.index(bulletinID_pm)].region["CH-" + line[:4]] = ''
 
         for report in reports:
             # Opens the matching Report-File
@@ -140,58 +141,64 @@ def process_reports_ch(path, lang="en", cached=False):
             if hasattr(report, 'predecessor_id'):
                 folder = '2'
 
-            with open(path + '/swiss/'+folder+'/dst' + report.report_id + '.html', encoding="utf-8") as f:
+            with open(path + '/swiss/'+folder+'/dst' + report.bulletinID + '.html', encoding="utf-8") as f:
                 text = f.read()
 
             # Isolates the relevant Danger Information
             text_pos = text.find('data-level=')+len('data-level=')+1
-            report.danger_main.append(pyAvaCore.DangerMain(int(text[text_pos:text_pos+1]), '-'))
+            
+            danger_rating = DangerRatingType()
+            danger_rating.set_mainValue_int(int(text[text_pos:text_pos+1]))
+            # danger_rating.elevation.auto_select(valid_elevation)
+            
+            report.dangerRating.append(danger_rating)
 
             # Isolates the prone location Image
             text_pos = text.find('src="data:image/png;base64,')+len('src="data:image/png;base64,')
             subtext = text[text_pos:]
-            prone_locations_img = pyAvaCore.ReportText('prone_locations_img')
-            prone_locations_img.text_content = subtext[:subtext.find('"')]
+            prone_locations_img = AvaCoreCustom('prone_locations_img')
+            prone_locations_img.content = subtext[:subtext.find('"')]
             general_problem_locations = ''
-            if len(prone_locations_img.text_content) < 1000: # Sometimes no Picture is attached
-                prone_locations_img.text_content = '-'
+            if len(prone_locations_img.content) < 1000: # Sometimes no Picture is attached
+                prone_locations_img.content = '-'
             else:
-                general_problem_locations = get_prone_locations(prone_locations_img.text_content)
-            report.report_texts.append(prone_locations_img)
+                general_problem_locations = get_prone_locations(prone_locations_img.content)
+            report.dangerRating[0].customData.append(prone_locations_img)
 
             # Isolates the prone location Text
             text_pos = subtext.find('alt="')+len('alt="')
             subtext = subtext[text_pos:]
-            prone_locations_text = pyAvaCore.ReportText('prone_locations_text')
-            prone_locations_text.text_content = subtext[:subtext.find('"')]
-            general_problem_valid_elevation = "-"
-            if prone_locations_text.text_content == 'Content-Type':
-                prone_locations_text.text_content = '-'
+            prone_locations_text = AvaCoreCustom('prone_locations_text')
+            prone_locations_text.content = subtext[:subtext.find('"')]
+            if prone_locations_text.content == 'Content-Type':
+                prone_locations_text.content = '-'
             else:
-                valid_elevation = ''.join(c for c in prone_locations_text.text_content if c.isdigit())
-                general_problem_valid_elevation = ">" + valid_elevation
+                valid_elevation = ''.join(c for c in prone_locations_text.content if c.isdigit())
+                report.dangerRating[0].elevation = ElevationType(valid_elevation)
 
-            report.report_texts.append(prone_locations_text)
-            report.problem_list.append(pyAvaCore.Problem("general", general_problem_locations, general_problem_valid_elevation))
+            report.dangerRating[0].customData.append(prone_locations_text)
+            report.dangerRating[0].aspect = general_problem_locations
+            
+            # report.dangerRating[0].customData.append(pyAvaCore.Problem("general", general_problem_locations, general_problem_valid_elevation))
 
             # Remove Image from html, sometimes no Picture is attached
-            html_report_local = pyAvaCore.ReportText('html_report_local')
+            html_report_local = AvaCoreCustom('html_report_local')
             try:
                 split1 = text.split('<img')
                 split2 = split1[1].split('">')
-                html_report_local.text_content = split1[0]+'"'.join(split2[1:])
+                html_report_local.content = split1[0]+'"'.join(split2[1:])
 
             except:
-                html_report_local.text_content = text
-            report.report_texts.append(html_report_local)
+                html_report_local.content = text
+            report.dangerRating[0].customData.append(html_report_local)
 
             # Retreives the Weather and Snow Information
             text = ""
             with open(path + '/swiss/sdwetter.html', encoding="utf-8") as f:
                 text = f.read()
 
-            html_weather_snow = pyAvaCore.ReportText('html_weather_snow')
-            html_weather_snow.text_content = text
-            report.report_texts.append(html_weather_snow)
+            html_weather_snow = AvaCoreCustom('html_weather_snow')
+            html_weather_snow.content = text
+            report.dangerRating[0].customData.append(html_weather_snow)
 
     return reports

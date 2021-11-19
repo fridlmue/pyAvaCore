@@ -66,6 +66,24 @@ class ElevationType:
             return ">"+ self.lowerBound
         if hasattr(self,'upperBound'):
             return "<"+ self.upperBound
+        
+class AvaCoreCustom:
+    '''
+    custom elements for special report content
+    '''
+    custom_type: str
+    content: str
+
+    def __init__(self, custom_type: str, content="") -> None:
+        self.custom_type = custom_type
+        self.content = content
+
+    def __str__(self):
+        return "{'custom_type':'" + self.custom_type + "', 'content':" + self.content + "'}"
+
+    def __repr__(self):
+        return str(self)
+
 
 class DangerRatingType:
     '''
@@ -97,6 +115,8 @@ class DangerRatingType:
     '''release probability from 1 to 4'''
     naturalHazardSiteDistribution: int
     '''natural hazard site distribution from 1 to 5'''
+    customData: typing.List[AvaCoreCustom]
+    '''Custom Data for special reports'''
     
     # --- Values form EAWS Matrix ---
     
@@ -110,6 +130,7 @@ class DangerRatingType:
     
     def __init__(self, mainValue='', ) -> None:
         self.elevation = ElevationType()
+        self.customData = []
     
     def get_mainValue_int(self):
 
@@ -178,7 +199,7 @@ class DangerMain:
     def __init__(self, mainValue: int, validElev: str):
         self.main_value = mainValue
         self.valid_elevation = clean_elevation(validElev)
-
+        
 class ReportText:
     '''
     Defines a report text with type.
