@@ -23,7 +23,7 @@ import json
 
 from avacore import pyAvaCore
 from avacore.png import png
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
 
 def fetch_files_ch(lang, path):
@@ -133,9 +133,9 @@ def process_reports_ch(path, lang="en", cached=False):
                 elif not bulletinID_pm is None:
                     if not bulletinID in reports[bulletinIDs.index(bulletinID_pm)].predecessor_id:
                         reports[bulletinIDs.index(bulletinID_pm)].predecessor_id += ('_' + bulletinID)
-                reports[bulletinIDs.index(bulletinID)].region["CH-" + line[:4]] = ''
+                reports[bulletinIDs.index(bulletinID)].region.append(RegionType("CH-" + line[:4]))
                 if not bulletinID_pm is None:
-                    reports[bulletinIDs.index(bulletinID_pm)].region["CH-" + line[:4]] = ''
+                    reports[bulletinIDs.index(bulletinID_pm)].region.append(RegionType("CH-" + line[:4]))
 
         for report in reports:
             # Opens the matching Report-File

@@ -19,7 +19,7 @@ from datetime import timedelta
 import copy
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
 
 def et_add_parent_info(element_tree):
 
@@ -61,7 +61,7 @@ def parse_xml(root):
             for locRef in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
                 loc_ref = observations.attrib.get('{http://www.w3.org/1999/xlink}href')
                 if loc_ref not in report.region:
-                    report.region[observations.attrib.get('{http://www.w3.org/1999/xlink}href')] = ''
+                    report.region.append(RegionType(observations.attrib.get('{http://www.w3.org/1999/xlink}href')))
             for dateTimeReport in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
                 report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text).replace(tzinfo=timezone.utc)
             for validTime in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
@@ -268,7 +268,7 @@ def parse_xml_vorarlberg(root):
         if loc_elem[1].time() == time(7, 30, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.region[loc_elem[0]] = ''
+                c_report.region.append(RegionType(loc_elem[0]))
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]
@@ -355,10 +355,12 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
             report.avalancheActivityHighlights = highlights.text
 
+        '''
         for DangerPattern in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
             for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                 report.dangerpattern.append(DangerPatternType.text)
-                
+        '''
+
         av_problem_tag = 'avProblem' if location == 'bavaria' else 'AvProblem'
 
         for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}' + av_problem_tag):
@@ -433,7 +435,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
         if loc_elem[1].time() == time(0, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.region[loc_elem[0]] = ''
+                c_report.region.append(RegionType(loc_elem[0]))
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]

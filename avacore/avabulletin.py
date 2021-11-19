@@ -169,61 +169,12 @@ class TendencyType:
     def __init__(self) -> None:
         self.validTime = ValidTimeType()
     
-'''
---- To be removed ---
-'''
-class Problem:
-    '''
-    Defines a avalanche problem with aspect and elevation
-    '''
-    problem_type: str
-    aspect: list
-    valid_elevation: str
-
-    def __init__(self, problem_type: str, aspect: list, validElev: str) -> None:
-        self.problem_type = problem_type
-        self.aspect = aspect
-        self.valid_elevation = clean_elevation(validElev)
-
-    def __str__(self):
-        return "{'problem_type':'" + self.problem_type + "', 'aspect':" + str(self.aspect) + ", 'valid_elevation':'" \
-            + self.valid_elevation + "'}"
-
-    def __repr__(self):
-        return str(self)
-
-class DangerMain:
-    '''
-    Defines Danger-Level with elevation
-    ToDo: Delete
-    '''
-    main_value: int
-    valid_elevation: str
-
-    def __init__(self, mainValue: int, validElev: str):
-        self.main_value = mainValue
-        self.valid_elevation = clean_elevation(validElev)
-        
-class ReportText:
-    '''
-    Defines a report text with type.
-    ToDo: Delete
-    '''
-    text_type: str
-    text_content: str
-
-    def __init__(self, text_type: str, text_content="") -> None:
-        self.text_type = text_type
-        self.text_content = text_content
-
-    def __str__(self):
-        return "{'text_type':'" + self.text_type + "', 'text_content':" + self.text_content + "'}"
-
-    def __repr__(self):
-        return str(self)
-'''
-End Remove block
-'''
+class RegionType:
+    name: str
+    regionID: str
+    
+    def __init__(self, regionID) -> None:
+        self.regionID = regionID
       
 class AvaBulletin:
     '''
@@ -235,11 +186,8 @@ class AvaBulletin:
     '''ID of the Bulletin'''
     reportLang: str
     '''language of the Bulletin'''
-    region: typing.Dict[str, str]
-    '''
-    list of Regions, where this Report is valid
-    ToDo: Does not yet extend the whole CAAMLv6
-    '''
+    region: typing.List[RegionType]
+    '''list of Regions, where this Report is valid'''
     publicationTime: datetime
     '''Date of Bulletin'''
     validTime: ValidTimeType
@@ -252,9 +200,8 @@ class AvaBulletin:
     '''avalanche problem'''
     tendency: TendencyType
     '''tendency of the av situation'''
-    
     highlights: str
-
+    '''very important note in the report'''
     wxSynopsisHighlights: str
     '''weather forecast highlights'''
     wxSynopsisComment: str
@@ -273,48 +220,28 @@ class AvaBulletin:
     '''travel advisory comment'''
     tendencyComment: str
     '''tendency comment'''
-    
+
     predecessor_id: str
     '''not part of CAAMLv6 (yet)'''
-    
-    '''
-    --- OLD PARTICULAR
-    '''
-    validity_begin: datetime
-    '''
-    valid time start
-    ToDo: To be removed
-    '''
-    validity_end: datetime
-    '''
-    valid time end
-    ToDo: To be removed
-    '''
-    danger_main: typing.List[DangerMain]
-    '''danger Value and elev'''
-    dangerpattern: typing.List[str]
-    '''list of Patterns'''
-    problem_list: typing.List[Problem]
-    '''list of Problems with Sublist of Aspect&Elevation'''
-    report_texts: typing.List[ReportText]
-    '''All textual elements of the Report'''
 
     def __init__(self):
-        self.region = {}
+        self.region = []
         self.validTime = ValidTimeType()
         self.source = SourceType()
         self.dangerRating = []
         self.avalancheProblem = []
         self.tendency = TendencyType()
-        '''
-        old
-        '''
-        self.danger_main = []
-        self.dangerpattern = []
-        self.problem_list = []
-        self.report_texts = []
+
+    def get_region_list(self):
+        region_list = []
+        for reg in self.region:
+            region_list.append(reg.regionID)
+        return region_list
 
     def cli_out(self):
+        '''
+        ToDo -- Not working at the moment
+        '''
         print('╔═════ AvaReport ', self.reportId, ' ══════')
         if hasattr(self, 'predecessor_id'):
             print('║ This is PM-Report to: ', self.predecessor_id)

@@ -19,7 +19,7 @@ import re
 import string
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
 
 def download_report_fr(region_id):
     try:
@@ -74,7 +74,7 @@ def process_reports_fr(region_id, path='', cached=False):
     report = AvaBulletin()
     reports = []
 
-    report.region[('FR-' + root.attrib.get('ID').zfill(2))] = ''
+    report.region.append(RegionType('FR-' + root.attrib.get('ID').zfill(2)))
     report.publicationTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
     report.validTime.startTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
     report.validTime.endTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEVALIDITE'))
@@ -181,7 +181,7 @@ def process_reports_fr(region_id, path='', cached=False):
             elif len(report.dangerRating) > 1:
                 pm_danger_ratings.append(report.dangerRating[1])
 
-    report.bulletinID = list(report.region.keys())[0] + '_' + str(report.publicationTime.isoformat())
+    report.bulletinID = report.region[0].regionID + '_' + str(report.publicationTime.isoformat())
 
     if pm_available:
         pm_report = copy.deepcopy(report)

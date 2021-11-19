@@ -15,9 +15,9 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-25T17:00:00+00:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-25T23:00:00+00:00')
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-26T23:00:00+00:00')
-        self.assertIn('AT-05-19', report.region)
-        self.assertIn('AT-05-20', report.region)
-        self.assertNotIn('AT-05-21', report.region)
+        self.assertIn('AT-05-19', report.get_region_list())
+        self.assertIn('AT-05-20', report.get_region_list())
+        self.assertNotIn('AT-05-21', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
@@ -34,15 +34,15 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual([
             'AT-05-18', 'AT-05-14', 'AT-05-15', 'AT-05-17',
             'AT-05-16', 'AT-05-12', 'AT-05-08', 'AT-05-13',
-            'AT-05-04', 'AT-05-21', 'AT-05-02', 'AT-05-03', 'AT-05-01'], report.region)
+            'AT-05-04', 'AT-05-21', 'AT-05-02', 'AT-05-03', 'AT-05-01'], report.get_region_list())
         '''
-        self.assertIn('AT-05-18', report.region)
-        self.assertIn('AT-05-14', report.region)
-        self.assertIn('AT-05-08', report.region)
-        self.assertIn('AT-05-18', report.region)
-        self.assertIn('AT-05-03', report.region)
-        self.assertIn('AT-05-01', report.region)
-        self.assertNotIn('AT-05-20', report.region)
+        self.assertIn('AT-05-18', report.get_region_list())
+        self.assertIn('AT-05-14', report.get_region_list())
+        self.assertIn('AT-05-08', report.get_region_list())
+        self.assertIn('AT-05-18', report.get_region_list())
+        self.assertIn('AT-05-03', report.get_region_list())
+        self.assertIn('AT-05-01', report.get_region_list())
+        self.assertNotIn('AT-05-20', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
@@ -59,15 +59,15 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual([
             'AT-05-18', 'AT-05-14', 'AT-05-15', 'AT-05-17',
             'AT-05-16', 'AT-05-12', 'AT-05-08', 'AT-05-13',
-            'AT-05-04', 'AT-05-21', 'AT-05-02', 'AT-05-03', 'AT-05-01'], report.region)
+            'AT-05-04', 'AT-05-21', 'AT-05-02', 'AT-05-03', 'AT-05-01'], report.get_region_list())
         '''
-        self.assertIn('AT-05-18', report.region)
-        self.assertIn('AT-05-14', report.region)
-        self.assertIn('AT-05-08', report.region)
-        self.assertIn('AT-05-18', report.region)
-        self.assertIn('AT-05-03', report.region)
-        self.assertIn('AT-05-01', report.region)
-        self.assertNotIn('AT-05-20', report.region)
+        self.assertIn('AT-05-18', report.get_region_list())
+        self.assertIn('AT-05-14', report.get_region_list())
+        self.assertIn('AT-05-08', report.get_region_list())
+        self.assertIn('AT-05-18', report.get_region_list())
+        self.assertIn('AT-05-03', report.get_region_list())
+        self.assertIn('AT-05-01', report.get_region_list())
+        self.assertNotIn('AT-05-20', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
@@ -83,15 +83,15 @@ class TestSalzburg(unittest.TestCase):
         '''
         self.assertEqual([
             'AT-05-10', 'AT-05-06', 'AT-05-09', 'AT-05-05',
-            'AT-05-11', 'AT-05-07'], report.region)
+            'AT-05-11', 'AT-05-07'], report.get_region_list())
         '''
-        self.assertIn('AT-05-10', report.region)
-        self.assertIn('AT-05-06', report.region)
-        self.assertIn('AT-05-09', report.region)
-        self.assertIn('AT-05-05', report.region)
-        self.assertIn('AT-05-11', report.region)
-        self.assertIn('AT-05-07', report.region)
-        self.assertNotIn('AT-05-18', report.region)
+        self.assertIn('AT-05-10', report.get_region_list())
+        self.assertIn('AT-05-06', report.get_region_list())
+        self.assertIn('AT-05-09', report.get_region_list())
+        self.assertIn('AT-05-05', report.get_region_list())
+        self.assertIn('AT-05-11', report.get_region_list())
+        self.assertIn('AT-05-07', report.get_region_list())
+        self.assertNotIn('AT-05-18', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
         # self.assertEqual(report.dangerRating[0].valid_elevation, '>2000')
         self.assertEqual(report.dangerRating[0].elevation.lowerBound, '2000')
@@ -110,15 +110,15 @@ class TestSalzburg(unittest.TestCase):
         '''
         self.assertEqual([
             'AT-05-10', 'AT-05-06', 'AT-05-09', 'AT-05-05',
-            'AT-05-11', 'AT-05-07'], report.region)
+            'AT-05-11', 'AT-05-07'], report.get_region_list())
         '''
-        self.assertIn('AT-05-10', report.region)
-        self.assertIn('AT-05-06', report.region)
-        self.assertIn('AT-05-09', report.region)
-        self.assertIn('AT-05-05', report.region)
-        self.assertIn('AT-05-11', report.region)
-        self.assertIn('AT-05-07', report.region)
-        self.assertNotIn('AT-05-18', report.region)
+        self.assertIn('AT-05-10', report.get_region_list())
+        self.assertIn('AT-05-06', report.get_region_list())
+        self.assertIn('AT-05-09', report.get_region_list())
+        self.assertIn('AT-05-05', report.get_region_list())
+        self.assertIn('AT-05-11', report.get_region_list())
+        self.assertIn('AT-05-07', report.get_region_list())
+        self.assertNotIn('AT-05-18', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
         # self.assertEqual(report.dangerRating[0].valid_elevation, '>2600')
         self.assertEqual(report.dangerRating[0].elevation.lowerBound, '2600')
