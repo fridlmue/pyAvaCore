@@ -80,6 +80,9 @@ def process_reports_ch(path, lang="en", cached=False):
     '''
     Download the reports for CH
     '''
+    
+    reports = []
+    
     if not cached:
         fetch_files_ch(lang, path)
 
@@ -107,7 +110,6 @@ def process_reports_ch(path, lang="en", cached=False):
             common_report.validTime.endTime = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
 
         bulletinIDs = []
-        reports = []
 
         # Receives the ID of the report that matches the selected region_id
         with open(path + '/swiss/gk_region2pdf.txt') as fp:
@@ -201,4 +203,5 @@ def process_reports_ch(path, lang="en", cached=False):
             html_weather_snow.content = text
             report.dangerRating[0].customData.append(html_weather_snow)
 
-    return reports
+        return reports
+    

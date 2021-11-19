@@ -200,9 +200,9 @@ def parse_xml_vorarlberg(root):
                         else:
                             for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS\
                                                                      beginPosition'):
-                                valid_elevation = ">" + beginPosition.text
+                                valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
                             for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                                valid_elevation = "<" + endPosition.text
+                                valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
                     #report.problem_list.append(pyAvaCore.Problem(type_r, aspect, valid_elevation))
                     problem_danger_rating = DangerRatingType()
                     problem_danger_rating.aspect = aspect
@@ -351,14 +351,14 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
                 + str(wxSynopsisComment.text)
         for snowpackStructureComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                   'snowpackStructureComment'):
-            report.report_texts.append(pyAvaCore.ReportText('snow_struct_com', snowpackStructureComment.text))
+            report.snowpackStructureComment = snowpackStructureComment.text
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
-            report.report_texts.append(pyAvaCore.ReportText('activity_hl', highlights.text))
+            report.avalancheActivityHighlights = highlights.text
 
         for DangerPattern in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
             for DangerPatternType in DangerPattern.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}type'):
                 report.dangerpattern.append(DangerPatternType.text)
-
+                
         av_problem_tag = 'avProblem' if location == 'bavaria' else 'AvProblem'
 
         for avProblem in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}' + av_problem_tag):
@@ -372,13 +372,20 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
             for validElevation in avProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
                     if not 'Keine' in beginPosition.text:
-                        valid_elevation = ">" + beginPosition.text
+                        valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     if not 'Keine' in endPosition.text:
-                        valid_elevation = "<" + endPosition.text
-            report.problem_list.append(pyAvaCore.Problem(type_r, aspect, valid_elevation))
+                        valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
+            # report.problem_list.append(pyAvaCore.Problem(type_r, aspect, valid_elevation))
+            problem_danger_rating = DangerRatingType()
+            problem_danger_rating.aspect = aspect
+            problem_danger_rating.elevation.auto_select(valid_elevation)
+            problem = AvalancheProblemType()
+            problem.problemType = type_r
+            problem.dangerRating = problem_danger_rating
+            report.avalancheProblem.append(problem)
 
-    report.report_texts.append(pyAvaCore.ReportText('activity_com', activity_com))
+    report.avalancheActivityComment = activity_com
 
     for bulletinResultOf in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}bulletinResultsOf'):
         et_add_parent_info(bulletinResultOf)
@@ -405,12 +412,16 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
             for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                 for beginPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
                     if not ('Keine' in beginPosition.text or beginPosition.text == '0'):
-                        valid_elevation = ">" + beginPosition.text
+                        valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
                 for endPosition in validElevation.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
                     if not ('Keine' in endPosition.text or endPosition.text == '3000'):
-                        valid_elevation = "<" + endPosition.text
+                        valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
 
-            loc_list.append([current_loc_ref, validity_begin, validity_end, pyAvaCore.DangerMain(main_value, valid_elevation)])
+            danger_rating = DangerRatingType()
+            danger_rating.set_mainValue_int(main_value)
+            danger_rating.elevation.auto_select(valid_elevation)
+            loc_list.append([current_loc_ref, validity_begin, validity_end, danger_rating])
+            # loc_list.append([current_loc_ref, validity_begin, validity_end, pyAvaCore.DangerMain(main_value, valid_elevation)])
 
     loc_ref_list = []
     del_index = []
@@ -422,11 +433,11 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
         if loc_elem[1].time() == time(0, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.valid_regions.append(loc_elem[0])
-                c_report.report_id = report_id + '-' + loc_elem[0]
-                c_report.validity_begin = loc_elem[1]
-                c_report.validity_end = loc_elem[2]
-                c_report.danger_main.append(loc_elem[3])
+                c_report.region[loc_elem[0]] = ''
+                c_report.bulletinID = report_id + '-' + loc_elem[0]
+                c_report.validTime.startTime = loc_elem[1]
+                c_report.validTime.endTime = loc_elem[2]
+                c_report.dangerRating.append(loc_elem[3])
                 loc_ref_list.append(loc_elem[0])
                 reports.append(c_report)
                 del_index.append(index)
@@ -437,11 +448,11 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
     for index, loc_elem in enumerate(loc_list):
         if loc_elem[1].time() == time(0, 0, 0):
             report_elem_number = loc_ref_list.index(loc_elem[0])
-            if reports[report_elem_number].validity_end > loc_elem[2]:
-                reports[report_elem_number].validity_end = loc_elem[2]
-            if not (reports[report_elem_number].danger_main[0].main_value == loc_elem[3].main_value and \
-                    reports[report_elem_number].danger_main[0].valid_elevation == loc_elem[3].valid_elevation):
-                reports[report_elem_number].danger_main.append(loc_elem[3])
+            if reports[report_elem_number].validTime.endTime > loc_elem[2]:
+                reports[report_elem_number].validTime.endTime = loc_elem[2]
+            if not (reports[report_elem_number].dangerRating[0].mainValue == loc_elem[3].mainValue and \
+                reports[report_elem_number].dangerRating[0].elevation.toString() == loc_elem[3].elevation.toString()): 
+                reports[report_elem_number].dangerRating.append(loc_elem[3])
             del_index.append(index)
 
     loc_list = [i for j, i in enumerate(loc_list) if j not in del_index]
@@ -453,13 +464,13 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
             c_report = copy.deepcopy(reports[report_elem_number])
             loc_ref_list.append(loc_elem[0] + '_PM')
 
-            c_report.report_id = report_id + '-' + loc_elem[0] + '_PM'
-            c_report.validity_begin = loc_elem[1]
-            c_report.validity_end = loc_elem[2]
+            c_report.bulletinID = report_id + '-' + loc_elem[0] + '_PM'
+            c_report.validTime.startTime = loc_elem[1]
+            c_report.validTime.endTime = loc_elem[2]
             c_report.predecessor_id = report_id + '-' + loc_elem[0]
-            for danger_main in c_report.danger_main:
-                if danger_main.valid_elevation == loc_elem[3].valid_elevation:
-                    danger_main.main_value = loc_elem[3].main_value
+            for dangerRating in c_report.dangerRating:
+                if dangerRating.elevation.toString() == loc_elem[3].elevation.toString():
+                    dangerRating.mainValue = loc_elem[3].mainValue
             reports.append(c_report)
             del_index.append(index)
 
@@ -468,8 +479,8 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
     for index, loc_elem in enumerate(loc_list):
         report_elem_number = loc_ref_list.index(loc_elem[0] + '_PM')
-        for danger_main in reports[report_elem_number].danger_main:
-            if danger_main.valid_elevation == loc_elem[3].valid_elevation:
-                danger_main.main_value = loc_elem[3].main_value
+        for danger_main in reports[report_elem_number].dangerRating:
+            if danger_main.elevation.toString() == loc_elem[3].elevation.toString():
+                danger_main.mainValue = loc_elem[3].mainValue
 
     return reports

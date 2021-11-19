@@ -16,7 +16,7 @@ class TestBavaria(unittest.TestCase):
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-01-27T23:59:59')
         self.assertIn('BYALL', report.region)
         self.assertNotIn('BYAMM', report.region)
-        self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
+        self.assertEqual(report.dangerRating[0].mainValue, 'considerable')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
         self.assertEqual(report.dangerRating[0].elevation.lowerBound, '1500')
         # self.assertEqual(report.danger_main[0].valid_elevation, '>1500')
