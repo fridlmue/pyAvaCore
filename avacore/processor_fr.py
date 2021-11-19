@@ -19,6 +19,7 @@ import re
 import string
 
 from avacore import pyAvaCore
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType
 
 def download_report_fr(region_id):
     try:
@@ -70,21 +71,19 @@ def process_reports_fr(region_id, path='', cached=False):
         for bulletins in m_root.iter(tag='BULLETINS_NEIGE_AVALANCHE'):
             root = bulletins
 
-    report = pyAvaCore.AvaBulletin()
+    report = AvaBulletin()
     reports = []
 
-    report.region.append('FR-' + root.attrib.get('ID').zfill(2))
+    report.region[('FR-' + root.attrib.get('ID').zfill(2))] = ''
     report.publicationTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
-    report.validity_begin = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
-    report.validity_end = pyAvaCore.try_parse_datetime(root.attrib.get('DATEVALIDITE'))
+    report.validTime.startTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
+    report.validTime.endTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEVALIDITE'))
+    
+    
 
     for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
-        for risque in cartoucherisque.iter(tag='RISQUE'):
-            report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE1')), risque.attrib.get('LOC1')))
-            if not risque.attrib.get('RISQUE2') == '':
-                report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE2')), risque.attrib.get('LOC2')))
-
-
+        
+        danger_rating_pre = DangerRatingType()
         aspects = []
         for pente in cartoucherisque.iter(tag='PENTE'):
 
@@ -105,45 +104,92 @@ def process_reports_fr(region_id, path='', cached=False):
             if pente.get('NW') == 'true':
                 aspects.append('NW')
 
-        general_problem_valid_elevation = '-'
-        report.problem_list.append(pyAvaCore.Problem("general", aspects, general_problem_valid_elevation))
+        # general_problem_valid_elevation = '-'
+        # report.problem_list.append(pyAvaCore.Problem("general", aspects, general_problem_valid_elevation))
+        danger_rating_pre.aspect = aspects
+
+        for risque in cartoucherisque.iter(tag='RISQUE'):
+            # report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE1')), risque.attrib.get('LOC1')))
+            danger_rating = copy.deepcopy(danger_rating_pre)
+            danger_rating.set_mainValue_int(int(risque.attrib.get('RISQUE1')))
+            danger_rating.elevation.auto_select(risque.attrib.get('LOC1'))
+            report.dangerRating.append(danger_rating)
+            if not risque.attrib.get('RISQUE2') == '':
+                #report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE2')), risque.attrib.get('LOC2')))
+                danger_rating2 = copy.deepcopy(danger_rating_pre)
+                danger_rating2.set_mainValue_int(int(risque.attrib.get('RISQUE2')))
+                danger_rating2.elevation.auto_select(risque.attrib.get('LOC2'))
+                report.dangerRating.append(danger_rating2)
 
         for resume in cartoucherisque.iter(tag='RESUME'):
-            report.report_texts.append(pyAvaCore.ReportText('activity_hl', resume.text))
+            report.avalancheActivityHighlights = resume.text
 
     for stabilite in root.iter(tag='STABILITE'):
         for texte in stabilite.iter(tag='TEXTE'):
-            report.report_texts.append(pyAvaCore.ReportText('activity_com', texte.text))
+            report.avalancheActivityComment = texte.text
 
     for qualite in root.iter(tag='QUALITE'):
         for texte in qualite.iter(tag='TEXTE'):
-            report.report_texts.append(pyAvaCore.ReportText('snow_struct_com', texte.text))
+            report.snowpackStructureComment = texte.text
 
     pm_danger_ratings = []
     pm_available = False
 
     for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
+        
+        danger_rating_pre = DangerRatingType()
+        aspects = []
+        for pente in cartoucherisque.iter(tag='PENTE'):
+
+            if pente.get('N') == 'true':
+                aspects.append('N')
+            if pente.get('NE') == 'true':
+                aspects.append('NE')
+            if pente.get('E') == 'true':
+                aspects.append('E')
+            if pente.get('SE') == 'true':
+                aspects.append('SE')
+            if pente.get('S') == 'true':
+                aspects.append('S')
+            if pente.get('SW') == 'true':
+                aspects.append('SW')
+            if pente.get('W') == 'true':
+                aspects.append('W')
+            if pente.get('NW') == 'true':
+                aspects.append('NW')
+
+        # general_problem_valid_elevation = '-'
+        # report.problem_list.append(pyAvaCore.Problem("general", aspects, general_problem_valid_elevation))
+        danger_rating_pre.aspect = aspects
+        
         for risque in cartoucherisque.iter(tag='RISQUE'):
             if not risque.attrib.get('EVOLURISQUE1') == '':
                 pm_available = True
-                pm_danger_ratings.append(pyAvaCore.DangerMain(int(risque.attrib.get('EVOLURISQUE1')), risque.attrib.get('LOC1')))
+                danger_rating_pm = copy.deepcopy(danger_rating_pre)
+                danger_rating_pm.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE1')))
+                danger_rating_pm.elevation.auto_select(risque.attrib.get('LOC1'))
+                pm_danger_ratings.append(danger_rating_pm)
+                # pm_danger_ratings.append(pyAvaCore.DangerMain(int(risque.attrib.get('EVOLURISQUE1')), risque.attrib.get('LOC1')))
             else:
-                pm_danger_ratings.append(report.danger_main[0])
+                pm_danger_ratings.append(report.dangerRating[0])
             if not risque.attrib.get('EVOLURISQUE2') == '':
                 pm_available = True
-                pm_danger_ratings.append(pyAvaCore.DangerMain(int(risque.attrib.get('EVOLURISQUE2')), risque.attrib.get('LOC2')))
-            elif len(report.danger_main) > 1:
-                pm_danger_ratings.append(report.danger_main[1])
+                danger_rating_pm2 = copy.deepcopy(danger_rating_pre)
+                danger_rating_pm2.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE2')))
+                danger_rating_pm2.elevation.auto_select(risque.attrib.get('LOC2'))
+                pm_danger_ratings.append(danger_rating_pm2)
+            elif len(report.dangerRating) > 1:
+                pm_danger_ratings.append(report.dangerRating[1])
 
-    report.reportId = report.region[0] + '_' + str(report.publicationTime.isoformat())
+    report.bulletinID = list(report.region.keys())[0] + '_' + str(report.publicationTime.isoformat())
 
     if pm_available:
         pm_report = copy.deepcopy(report)
-        pm_report.predecessor_id = pm_report.report_id
-        pm_report.report_id += '_PM'
-        report.validity_end = report.validity_end.replace(hour=12)
-        pm_report.validity_begin = report.validity_end.replace(hour=12)
-        pm_report.danger_main = pm_danger_ratings
+        pm_report.predecessor_id = pm_report.bulletinID
+        pm_report.bulletinID += '_PM'
+        report.validTime.endTime = report.validTime.endTime.replace(hour=12)
+        pm_report.validTime.startTime = report.validTime.endTime.replace(hour=12)
+        pm_report.dangerRating = pm_danger_ratings
 
         reports.append(pm_report)
 
