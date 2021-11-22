@@ -269,7 +269,7 @@ def parse_xml_vorarlberg(root):
     del_index = []
 
     for index, loc_elem in enumerate(loc_list):
-        if loc_elem[1].time() == time(7, 30, 0):
+        if loc_elem[1].time() < time(11, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
                 c_report.region.append(RegionType(loc_elem[0]))
@@ -285,7 +285,7 @@ def parse_xml_vorarlberg(root):
     del_index = []
 
     for index, loc_elem in enumerate(loc_list):
-        if loc_elem[1].time() == time(7, 30, 0):
+        if loc_elem[1].time() < time(11, 0, 0):
             report_elem_number = loc_ref_list.index(loc_elem[0])
             if reports[report_elem_number].validTime.startTime > loc_elem[2]:
                 reports[report_elem_number].validTime.endTime = loc_elem[2]

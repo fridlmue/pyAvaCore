@@ -37,7 +37,7 @@ def download_region(regionID):
             validityDate = validityDate.date().isoformat()
         for region in report.region:
             if 'AT8R' in region.regionID:
-                region.regionID.replace('AT8R', 'AT-08-0')
+                region.regionID = region.regionID.replace('AT8R', 'AT-08-0')
 
     directory = Path(sys.argv[1] if len(sys.argv) > 1 else 'data')
     directory.mkdir(parents=True, exist_ok=True)
