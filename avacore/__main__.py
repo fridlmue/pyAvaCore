@@ -30,13 +30,14 @@ def download_region(regionID):
         reports, _, url = get_reports(regionID)
     report: AvaBulletin
     for report in reports:
-        if isinstance(report.validity_begin, datetime):
-            validityDate = report.validity_begin
+        if isinstance(report.validTime.startTime, datetime):
+            validityDate = report.validTime.startTime
             if validityDate.hour > 15:
                 validityDate = validityDate + timedelta(days=1)
             validityDate = validityDate.date().isoformat()
-        report.report_texts = None
-        report.valid_regions = [r.replace('AT8R', 'AT-08-0') for r in report.valid_regions]
+        for region in report.region:
+            if 'AT8R' in region.regionID:
+                region.regionID.replace('AT8R', 'AT-08-0')
 
     directory = Path(sys.argv[1] if len(sys.argv) > 1 else 'data')
     directory.mkdir(parents=True, exist_ok=True)
