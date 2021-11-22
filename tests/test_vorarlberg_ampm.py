@@ -11,9 +11,9 @@ class TestVorarlberg(unittest.TestCase):
         self.assertEqual(len(reports), 12)
         report = reports[2]
         self.assertEqual(report.bulletinID, 'DibosBulletinDeID5946-AT8R3')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-23T07:30:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-23T07:30:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T12:00:00')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-23T07:30:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-23T07:30:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T12:00:00+01:00')
         self.assertIn('AT8R3', report.get_region_list())
         self.assertNotIn('AT8R1', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -27,9 +27,9 @@ class TestVorarlberg(unittest.TestCase):
         report = reports[10]
 
         self.assertEqual(report.bulletinID, 'DibosBulletinDeID5946-AT8R5_PM')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-23T07:30:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-23T12:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-24T07:30:00')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-23T07:30:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-23T12:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-24T07:30:00+01:00')
         self.assertIn('AT8R5', report.get_region_list())
         self.assertNotIn('AT8R1', report.get_region_list())
         self.assertEqual(len(report.dangerRating), 1)

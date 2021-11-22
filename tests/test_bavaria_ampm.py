@@ -11,9 +11,9 @@ class TestBavariaAmPm(unittest.TestCase):
         self.assertEqual(len(reports), 12)
         report = reports[0]
         self.assertEqual(report.bulletinID, 'BYCAAMLGenID3631-BYALL')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-19T17:24:15')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-20T00:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-20T11:59:59')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-19T17:24:15+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-20T00:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-20T11:59:59+01:00')
         self.assertIn('BYALL', report.get_region_list())
         self.assertNotIn('BYAMM', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -30,9 +30,9 @@ class TestBavariaAmPm(unittest.TestCase):
         
         report = reports[7]
         self.assertEqual(report.bulletinID, 'BYCAAMLGenID3631-BYAMM_PM')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-19T17:24:15')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-20T12:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-20T23:59:59')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-19T17:24:15+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-20T12:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-20T23:59:59+01:00')
         self.assertIn('BYAMM', report.get_region_list())
         self.assertNotIn('BYBGD', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -47,9 +47,9 @@ class TestBavariaAmPm(unittest.TestCase):
         
         report = reports[11]
         self.assertEqual(report.bulletinID, 'BYCAAMLGenID3631-BYBGD_PM')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-19T17:24:15')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-20T12:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-20T23:59:59')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-19T17:24:15+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-20T12:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-20T23:59:59+01:00')
         self.assertIn('BYBGD', report.get_region_list())
         self.assertNotIn('BYCHG', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')

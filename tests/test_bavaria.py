@@ -11,9 +11,9 @@ class TestBavaria(unittest.TestCase):
         self.assertEqual(len(reports), 6)
         report = reports[0]
         self.assertEqual(report.bulletinID, 'BYCAAMLGenID3577-BYALL')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-01-26T17:43:18')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-01-27T00:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-01-27T23:59:59')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-01-26T17:43:18+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-01-27T00:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-01-27T23:59:59+01:00')
         self.assertIn('BYALL', report.get_region_list())
         self.assertNotIn('BYAMM', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'considerable')

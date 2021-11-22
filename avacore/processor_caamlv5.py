@@ -16,6 +16,10 @@ from datetime import datetime
 from datetime import timezone
 from datetime import time
 from datetime import timedelta
+
+import pytz
+import dateutil.parser
+
 import copy
 
 from avacore import pyAvaCore
@@ -63,13 +67,13 @@ def parse_xml(root):
                 if loc_ref not in report.region:
                     report.region.append(RegionType(observations.attrib.get('{http://www.w3.org/1999/xlink}href')))
             for dateTimeReport in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text).replace(tzinfo=timezone.utc)
+                report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
             for validTime in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                 if not et_get_parent(validTime):
                     for beginPosition in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                        report.validTime.startTime = pyAvaCore.try_parse_datetime(beginPosition.text).replace(tzinfo=timezone.utc)
+                        report.validTime.startTime = dateutil.parser.parse(beginPosition.text)
                     for endPosition in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                        report.validTime.endTime = pyAvaCore.try_parse_datetime(endPosition.text).replace(tzinfo=timezone.utc)
+                        report.validTime.endTime = dateutil.parser.parse(endPosition.text)
             for DangerRating in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerRating'):
                 main_value = 0
                 am_rating = True
@@ -160,7 +164,7 @@ def parse_xml_vorarlberg(root):
         for detail in bulletin:
             for metaDataProperty in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
                 for dateTimeReport in metaDataProperty.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-                    report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text)
+                    report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
             for bulletinResultsOf in detail.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}bulletinResultsOf'):
                 for travelAdvisoryComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                     'travelAdvisoryComment'):
@@ -231,9 +235,9 @@ def parse_xml_vorarlberg(root):
 
             for validTime in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                 for beginPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    validity_begin = pyAvaCore.try_parse_datetime(beginPosition.text)
+                    validity_begin = dateutil.parser.parse(beginPosition.text)
                 for endPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    validity_end = pyAvaCore.try_parse_datetime(endPosition.text)
+                    validity_end = dateutil.parser.parse(endPosition.text)
             main_value = 0
             for main_value in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
                 main_value = int(main_value.text)
@@ -337,7 +341,12 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
     # Common for every Report:
     for metaData in root.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}metaDataProperty'):
         for dateTimeReport in metaData.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
-            report.publicationTime = pyAvaCore.try_parse_datetime(dateTimeReport.text)
+            if location == 'slovenia':
+                time_i = dateutil.parser.parse(dateTimeReport.text, ignoretz = True)
+                report.publicationTime =  pytz.timezone("Europe/Berlin").localize(time_i)
+            else:
+                report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
+
 
     activity_com = ''
 
@@ -405,9 +414,18 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
             for validTime in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
                 for beginPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    validity_begin = pyAvaCore.try_parse_datetime(beginPosition.text)
+                    # validity_begin = dateutil.parser.parse(beginPosition.text)
+                    if location == 'slovenia':
+                        time_i = dateutil.parser.parse(beginPosition.text, ignoretz = True)
+                        validity_begin =  pytz.timezone("Europe/Berlin").localize(time_i)
+                    else:
+                        validity_begin = dateutil.parser.parse(beginPosition.text)
                 for endPosition in validTime.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}endPosition'):
-                    validity_end = pyAvaCore.try_parse_datetime(endPosition.text)
+                    if location == 'slovenia':
+                        time_i = dateutil.parser.parse(endPosition.text, ignoretz = True)
+                        validity_end =  pytz.timezone("Europe/Berlin").localize(time_i)
+                    else:
+                        validity_end = dateutil.parser.parse(endPosition.text)
             main_value = 0
             for main_value in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}mainValue'):
                 main_value = int(main_value.text)
