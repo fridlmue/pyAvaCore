@@ -13,6 +13,8 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 from urllib.request import urlopen, Request
+import pytz
+import dateutil.parser
 import urllib.request
 import copy
 import re
@@ -75,9 +77,9 @@ def process_reports_fr(region_id, path='', cached=False):
     reports = []
 
     report.region.append(RegionType('FR-' + root.attrib.get('ID').zfill(2)))
-    report.publicationTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
-    report.validTime.startTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEBULLETIN'))
-    report.validTime.endTime = pyAvaCore.try_parse_datetime(root.attrib.get('DATEVALIDITE'))
+    report.publicationTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
+    report.validTime.startTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
+    report.validTime.endTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEVALIDITE')))
     
     
 

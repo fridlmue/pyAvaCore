@@ -15,6 +15,7 @@
 from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
+import pytz
 import urllib.request
 import zipfile
 import copy
@@ -100,14 +101,14 @@ def process_reports_ch(path, lang="en", cached=False):
 
         date_time_now = datetime.now()
 
-        common_report.publicationTime = datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M')
+        common_report.publicationTime = pytz.timezone("Europe/Zurich").localize(datetime.strptime(str(date_time_now.year) + '-' + begin[begin.find(':')+2:-1], '%Y-%d.%m., %H:%M'))
         common_report.validTime.startTime = common_report.publicationTime
         if common_report.validTime.startTime.hour == 17:
             common_report.validTime.endTime = common_report.validTime.startTime + timedelta(days=1)
         elif common_report.validTime.startTime.hour == 8:
             common_report.validTime.endTime = common_report.validTime.endTime + timedelta(hours=9)
         else: # Shourld not happen
-            common_report.validTime.endTime = datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M')
+            common_report.validTime.endTime = pytz.timezone("Europe/Zurich").localize(datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M'))
 
         bulletinIDs = []
 

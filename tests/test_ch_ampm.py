@@ -12,9 +12,9 @@ class TestCH(unittest.TestCase):
         self.assertEqual(len(reports), 9)
         report = reports[2]
         self.assertEqual(report.bulletinID, '8947715')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
         self.assertIn('CH-4224', report.get_region_list())
         self.assertNotIn('CH-7111', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -31,9 +31,9 @@ class TestCH(unittest.TestCase):
 
         report = reports[8]
         self.assertEqual(report.bulletinID, '8947712')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
         self.assertIn('CH-7231', report.get_region_list())
         self.assertNotIn('CH-4224', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -50,9 +50,9 @@ class TestCH(unittest.TestCase):
         
         report = reports[1]
         self.assertEqual(report.bulletinID, '8947717')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
         self.assertIn('CH-1233', report.get_region_list())
         self.assertNotIn('CH-4224', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')

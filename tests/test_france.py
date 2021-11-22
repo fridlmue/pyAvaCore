@@ -11,10 +11,10 @@ class TestFrance(unittest.TestCase):
         reports = pyAvaCore.process_reports_fr('FR-22', path=f'{__file__}.xml', cached=True)
         self.assertEqual(len(reports), 2)
         report = reports[0]
-        self.assertEqual(report.bulletinID, 'FR-22_2021-03-18T16:00:00_PM')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-03-18T16:00:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-03-19T12:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-03-19T18:00:00')
+        self.assertEqual(report.bulletinID, 'FR-22_2021-03-18T16:00:00+01:00_PM')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-03-18T16:00:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-03-19T12:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-03-19T18:00:00+01:00')
         self.assertIn('FR-22', report.get_region_list())
         self.assertNotIn('FR-10', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -28,13 +28,13 @@ class TestFrance(unittest.TestCase):
         self.assertIn('E', report.dangerRating[0].aspect)
         self.assertIn('SE', report.dangerRating[0].aspect)
 
-        self.assertEqual(report.predecessor_id, 'FR-22_2021-03-18T16:00:00')
+        self.assertEqual(report.predecessor_id, 'FR-22_2021-03-18T16:00:00+01:00')
 
         report = reports[1]
-        self.assertEqual(report.bulletinID, 'FR-22_2021-03-18T16:00:00')
-        self.assertEqual(report.publicationTime.isoformat(), '2021-03-18T16:00:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-03-18T16:00:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-03-19T12:00:00')
+        self.assertEqual(report.bulletinID, 'FR-22_2021-03-18T16:00:00+01:00')
+        self.assertEqual(report.publicationTime.isoformat(), '2021-03-18T16:00:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-03-18T16:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-03-19T12:00:00+01:00')
         self.assertIn('FR-22', report.get_region_list())
         self.assertNotIn('FR-10', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
