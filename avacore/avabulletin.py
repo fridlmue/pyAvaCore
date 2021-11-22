@@ -155,7 +155,7 @@ class AvalancheProblemType:
     '''
 
     def __init__(self) -> None:
-        self.dangerRating = DangerRatingType
+        self.dangerRating = DangerRatingType()
 
 class TendencyType:
     tendencyType: str
@@ -275,13 +275,3 @@ class AvaBulletin:
 
         print('╚══════════════════════════════════════════')
 
-def clean_elevation(elev: str):
-    '''
-    Cleans up the elevation description. Should move to the XML-Parsers.
-    '''
-    if elev in ['', '-', 'ElevationRange_Keine H\u00f6hengrenzeHi']:
-        return None
-    elev = re.sub(r'ElevationRange_(.+)Hi', r'>\1', elev)
-    elev = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'<\1', elev)
-    elev = elev.replace('Forestline', 'Treeline')
-    return elev
