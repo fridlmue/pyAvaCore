@@ -81,19 +81,6 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     return reports, provider, url
 
 
-def try_parse_datetime(datetime_string):
-
-    '''try to parse a datetime from string with matching format'''
-
-    try:
-        r_datetime = datetime.strptime(datetime_string, '%Y-%m-%dT%XZ')
-    except:
-        try:
-            r_datetime = datetime.strptime(datetime_string[:19], '%Y-%m-%dT%X') # 2019-04-30T15:55:29+01:00
-        except:
-            r_datetime = datetime.now()
-    return r_datetime
-
 def get_report_url(region_id, local=''): #You can ignore "provider" return value by url, _ = getReportsUrl
 
     '''returns the valid URL for requested region_id'''
