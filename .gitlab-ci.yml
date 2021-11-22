@@ -6,7 +6,7 @@ image: python:3.6
 unittest:
   script:
     - python -V
-    - pip install pytest pytest-cov pytz
+    - pip install pytest pytest-cov pytz python-dateutil
     - pytest --junitxml=report.xml --cov=avacore tests/
     - coverage xml
   artifacts:
