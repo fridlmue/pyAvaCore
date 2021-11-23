@@ -122,6 +122,9 @@ def parse_xml(root):
             for avActivityHighlights in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avActivityHighlights'):
                 # report.report_texts.append(pyAvaCore.ReportText('activity_hl', avActivityHighlights.text))
                 report.avalancheActivityHighlights = avActivityHighlights.text
+            for wxSynopsisComment in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}wxSynopsisComment'):
+                # report.report_texts.append(pyAvaCore.ReportText('activity_hl', avActivityHighlights.text))
+                report.wxSynopsisComment = wxSynopsisComment.text
             for avActivityComment in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avActivityComment'):
                 #report.report_texts.append(pyAvaCore.ReportText('activity_com', avActivityComment.text))
                 report.avalancheActivityComment = avActivityComment.text
@@ -182,8 +185,7 @@ def parse_xml_vorarlberg(root):
                         comment_empty = 0
                 for wxSynopsisComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                 'wxSynopsisComment'):
-                    activity_com = activity_com + ' <br />Alpinwetterbericht der ZAMG Tirol und Vorarlberg:<br /> ' \
-                        + str(wxSynopsisComment.text)
+                    report.wxSynopsisComment = wxSynopsisComment.text
                 for snowpackStructureComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                        'snowpackStructureComment'):
                     # report.report_texts.append(pyAvaCore.ReportText('snow_struct_com', snowpackStructureComment.text))
@@ -359,8 +361,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
             activity_com = travelAdvisoryComment.text
 
         for wxSynopsisComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}wxSynopsisComment'):
-            activity_com = activity_com + ' <br />Deutscher Wetterdienst - Regionale Wetterberatung München:<br /> ' \
-                + str(wxSynopsisComment.text)
+            report.wxSynopsisComment = wxSynopsisComment.text
         for snowpackStructureComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                   'snowpackStructureComment'):
             report.snowpackStructureComment = snowpackStructureComment.text
