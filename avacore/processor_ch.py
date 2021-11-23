@@ -106,7 +106,7 @@ def process_reports_ch(path, lang="en", cached=False):
         if common_report.validTime.startTime.hour == 17:
             common_report.validTime.endTime = common_report.validTime.startTime + timedelta(days=1)
         elif common_report.validTime.startTime.hour == 8:
-            common_report.validTime.endTime = common_report.validTime.endTime + timedelta(hours=9)
+            common_report.validTime.endTime = common_report.validTime.startTime + timedelta(hours=9)
         else: # Shourld not happen
             common_report.validTime.endTime = pytz.timezone("Europe/Zurich").localize(datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M'))
 
