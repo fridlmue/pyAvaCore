@@ -21,8 +21,8 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'wet snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wet_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding_snow')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[1]
@@ -46,8 +46,8 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.dangerRating[0].mainValue, 'low')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'wet snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wet_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding_snow')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[2]
@@ -71,8 +71,8 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'wet snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wet_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding_snow')
         self.assertEqual(report.predecessor_id, 'RID489RGR2')
         
         report = reports[3]
@@ -98,8 +98,8 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.dangerRating[1].mainValue, 'low')
         # self.assertEqual(report.dangerRating[1].valid_elevation, '<2000')
         self.assertEqual(report.dangerRating[1].elevation.upperBound, '2000')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'wet snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wet_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding_snow')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[4]
@@ -125,8 +125,8 @@ class TestSalzburg(unittest.TestCase):
         self.assertEqual(report.dangerRating[1].mainValue, 'moderate')
         # self.assertEqual(report.dangerRating[1].valid_elevation, '<2600')
         self.assertEqual(report.dangerRating[1].elevation.upperBound, '2600')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'wet snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wet_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'gliding_snow')
         self.assertEqual(report.predecessor_id, 'RID489RGR3')
 
     '''

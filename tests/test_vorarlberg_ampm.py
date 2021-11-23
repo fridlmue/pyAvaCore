@@ -20,8 +20,8 @@ class TestVorarlberg(unittest.TestCase):
         self.assertEqual(report.dangerRating[0].elevation.lowerBound, '2200')
         self.assertEqual(report.dangerRating[1].mainValue, 'low')
         self.assertEqual(report.dangerRating[1].elevation.upperBound, '2200')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'drifting snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'wet snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wind_drifted_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'wet_snow')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[10]
@@ -36,8 +36,8 @@ class TestVorarlberg(unittest.TestCase):
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
-        self.assertEqual(report.avalancheProblem[0].problemType, 'drifting snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'wet snow')
+        self.assertEqual(report.avalancheProblem[0].problemType, 'wind_drifted_snow')
+        self.assertEqual(report.avalancheProblem[1].problemType, 'wet_snow')
         self.assertEqual(report.predecessor_id, 'DibosBulletinDeID5946-AT8R5')
 
 if __name__ == '__main__':

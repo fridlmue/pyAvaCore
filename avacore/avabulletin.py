@@ -156,6 +156,27 @@ class AvalancheProblemType:
 
     def __init__(self) -> None:
         self.dangerRating = DangerRatingType()
+        
+    def add_problemType(self, problem_type_text):
+        '''
+        All problem type texts in pre CAAMLv6 need a post processing to match the new standard
+        All new problem texts contain a unterscore and can be differentiated by that
+        '''
+        if not '_' in problem_type_text:
+            if 'new' in problem_type_text:
+                problem_type_text = 'new_snow'
+            elif 'drifting'in problem_type_text:
+                problem_type_text = 'wind_drifted_snow'
+            elif 'old' in problem_type_text:
+                problem_type_text = 'persistent_weak_layers'
+            elif 'wet' in problem_type_text:
+                problem_type_text = 'wet_snow'
+            elif 'gliding' in problem_type_text:
+                problem_type_text = 'gliding_snow'
+            elif 'favourable' in problem_type_text:
+                problem_type_text = 'favourable_situation'
+        
+        self.problemType = problem_type_text
 
 class TendencyType:
     tendencyType: str

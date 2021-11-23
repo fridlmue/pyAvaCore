@@ -83,9 +83,10 @@ def parse_xml(root):
                 for validElevation in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                     valid_elevation = validElevation.attrib.get('{http://www.w3.org/1999/xlink}href')
                 for beginPosition in DangerRating.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}beginPosition'):
-                    if '11:00' in beginPosition.text:
+                    validity_begin = dateutil.parser.parse(beginPosition.text)
+                    if validity_begin.time() <= time(15, 0, 0):
                         am_rating = False
-                        report.validTime.endTime = report.validTime.endTime.replace(hour=11)
+                        report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
                 danger_rating = DangerRatingType()
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
@@ -112,7 +113,7 @@ def parse_xml(root):
                 problem_danger_rating.aspect = aspect
                 problem_danger_rating.elevation.auto_select(valid_elevation)
                 problem = AvalancheProblemType()
-                problem.problemType = type_r
+                problem.add_problemType(type_r)
                 problem.dangerRating = problem_danger_rating
                 report.avalancheProblem.append(problem)
                 # report.problem_list.append(pyAvaCore.Problem(type_r, aspect, valid_elevation))
@@ -212,7 +213,7 @@ def parse_xml_vorarlberg(root):
                     problem_danger_rating.aspect = aspect
                     problem_danger_rating.elevation.auto_select(valid_elevation)
                     problem = AvalancheProblemType()
-                    problem.problemType = type_r
+                    problem.add_problemType(type_r)
                     problem.dangerRating = problem_danger_rating
                     report.avalancheProblem.append(problem)
 
@@ -392,7 +393,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
             problem_danger_rating.aspect = aspect
             problem_danger_rating.elevation.auto_select(valid_elevation)
             problem = AvalancheProblemType()
-            problem.problemType = type_r
+            problem.add_problemType(type_r)
             problem.dangerRating = problem_danger_rating
             report.avalancheProblem.append(problem)
 
