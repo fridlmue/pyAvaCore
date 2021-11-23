@@ -45,6 +45,12 @@ def fetch_files_ch(lang, path):
         zip_ref.extractall(path + '/swiss/')
 
 
+def append_to_list(list_r, element):
+    if not element in list_r:
+        list_r.append(element)
+        return list_r
+    return list_r
+
 def get_prone_locations(img_text):
     '''
     Extract dangerous aspects from png
@@ -59,21 +65,37 @@ def get_prone_locations(img_text):
     aspects = []
 
     if px_list[20][129] == 0:
-        aspects.append('NNE')
+        # aspects.append('NNE')
+        aspects = append_to_list(aspects, 'N')
+        aspects = append_to_list(aspects, 'NE')
     if px_list[25][145] == 0:
-        aspects.append('ENE')
+        # aspects.append('ENE')
+        aspects = append_to_list(aspects, 'NE')
+        aspects = append_to_list(aspects, 'E')
     if px_list[31][145] == 0:
-        aspects.append('ESE')
+        # aspects.append('ESE')
+        aspects = append_to_list(aspects, 'E')
+        aspects = append_to_list(aspects, 'SE')
     if px_list[36][129] == 0:
-        aspects.append('SSE')
+        # aspects.append('SSE')
+        aspects = append_to_list(aspects, 'SE')
+        aspects = append_to_list(aspects, 'S')
     if px_list[36][101] == 0:
-        aspects.append('SSW')
+        # aspects.append('SSW')
+        aspects = append_to_list(aspects, 'S')
+        aspects = append_to_list(aspects, 'SW')
     if px_list[31][77] == 0:
-        aspects.append('WSW')
+        # aspects.append('WSW')
+        aspects = append_to_list(aspects, 'SW')
+        aspects = append_to_list(aspects, 'W')
     if px_list[25][77] == 0:
-        aspects.append('WNW')
+        # aspects.append('WNW')
+        aspects = append_to_list(aspects, 'W')
+        aspects = append_to_list(aspects, 'NW')
     if px_list[20][101] == 0:
-        aspects.append('NNW')
+        # aspects.append('NNW')
+        aspects = append_to_list(aspects, 'NW')
+        aspects = append_to_list(aspects, 'N')
 
     return aspects
 
