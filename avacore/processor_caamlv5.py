@@ -16,12 +16,9 @@ from datetime import datetime
 from datetime import timezone
 from datetime import time
 from datetime import timedelta
-
 import pytz
 import dateutil.parser
-
 import copy
-
 from avacore import pyAvaCore
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
 
@@ -109,12 +106,17 @@ def parse_xml(root):
                 valid_elevation = "-"
                 for validElevation in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validElevation'):
                     valid_elevation = validElevation.get('{http://www.w3.org/1999/xlink}href')
+                comment_r = ''
+                for comment in AvProblem.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
+                    comment_r = comment.text
                 problem_danger_rating = DangerRatingType()
                 problem_danger_rating.aspect = aspect
                 problem_danger_rating.elevation.auto_select(valid_elevation)
                 problem = AvalancheProblemType()
                 problem.add_problemType(type_r)
                 problem.dangerRating = problem_danger_rating
+                if comment_r != '':
+                    problem.comment = comment_r
                 report.avalancheProblem.append(problem)
                 # report.problem_list.append(pyAvaCore.Problem(type_r, aspect, valid_elevation))
             for avActivityHighlights in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}avActivityHighlights'):
@@ -129,7 +131,7 @@ def parse_xml(root):
                 report.snowpackStructureComment = snowpackStructureComment.text
             for tendencyComment in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}tendencyComment'):
                 # report.report_texts.append(pyAvaCore.ReportText('tendency_com', tendencyComment.text))
-                report.tendencyComment = tendencyComment.text
+                report.tendency.tendencyComment = tendencyComment.text
         reports.append(report)
 
         if pm_available:
@@ -176,7 +178,7 @@ def parse_xml_vorarlberg(root):
                 for comment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
                     if comment_empty:
                         # report.report_texts.append(pyAvaCore.ReportText('tendency_com', comment.text))
-                        report.tendencyComment = comment.text
+                        report.tendency.tendencyComment = comment.text
                         comment_empty = 0
                 for wxSynopsisComment in bulletinResultsOf.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                 'wxSynopsisComment'):

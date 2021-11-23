@@ -183,6 +183,8 @@ class TendencyType:
     '''string contains decreasing, steady or increasing'''
     validTime: ValidTimeType
     '''valid time interval for tendency'''
+    tendencyComment: str
+    '''tendency comment'''
     comment: str
     '''Tendency comment'''
     #ToDo Add custom data
@@ -239,8 +241,6 @@ class AvaBulletin:
     '''travel advisory highlights'''
     travelAdvisoryComment: str
     '''travel advisory comment'''
-    tendencyComment: str
-    '''tendency comment'''
 
     predecessor_id: str
     '''not part of CAAMLv6 (yet)'''

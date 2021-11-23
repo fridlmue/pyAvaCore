@@ -22,7 +22,9 @@ class TestSalzburg(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRating[0].elevation, 'upperBound')
         self.assertEqual(report.avalancheProblem[0].problemType, 'wet_snow')
+        self.assertEqual(report.avalancheProblem[0].comment, 'daytime cycle of naturally triggered avalanches')
         self.assertEqual(report.avalancheProblem[1].problemType, 'gliding_snow')
+        self.assertEqual(report.avalancheProblem[1].comment, 'in extremely steep grass-covered terrain')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[1]
