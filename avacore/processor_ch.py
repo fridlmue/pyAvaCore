@@ -244,17 +244,29 @@ def process_reports_ch(path, lang="en", cached=False):
             report.dangerRating[0].customData.append(prone_locations_text)
             report.dangerRating[0].aspect = general_problem_locations
             
-            if '<h5>Danger description</h5>' in text:
-                avalancheActivityComment = re.search('(?<=\<\/h5><p>)(.|\n)*?(?=\<\/p>)', text)
-                report.avalancheActivityComment = avalancheActivityComment.group(0)
-            elif 'No distinct avalanche problem</h4>' in text:
-                avalancheActivityComment = re.search('(?<=No distinct avalanche problem<\/h4><p>)(.|\n)*?(?=\<\/p>)', text)
-                report.avalancheActivityComment = avalancheActivityComment.group(0)
-            elif '</h4><p>' in text:
-                avalancheActivityComment = re.search('(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)', text)
-                report.avalancheActivityComment = avalancheActivityComment.group(0)
+            texts = []
+            
+            if 'div class="seperator"' in text:
+                texts = text.split('div class="seperator"')
             else:
-                print('Error parsing avActComment in:', report.bulletinID)
+                texts.append(text)
+            
+            report.avalancheActivityComment = ''
+            
+            for element in texts:
+                if '<h5>Danger description</h5>' in element:
+                    avalancheActivityComment = re.search('(?<=\<\/h5><p>)(.|\n)*?(?=\<\/p>)', element)
+                    report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
+                elif 'No distinct avalanche problem</h4>' in element:
+                    avalancheActivityComment = re.search('(?<=No distinct avalanche problem<\/h4><p>)(.|\n)*?(?=\<\/p>)', element)
+                    report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
+                elif '</h4><p>' in element:
+                    avalancheActivityComment = re.search('(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)', element)
+                    report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
+                else:
+                    print('Error parsing avActComment in:', report.bulletinID)
+            
+            report.avalancheActivityComment = clean_html_string(report.avalancheActivityComment)
             
             '''
             elif '<h4>Wet avalanches' in text:
@@ -266,8 +278,8 @@ def process_reports_ch(path, lang="en", cached=False):
             ToCheck:
             Possible to parse avProblem from <class="content">?
             '''
-            if 'class="content"' in text:
-                avProblem= re.search('(?<=class="content"><h4>)(.|\n)*?(?=<\/h4>)', text)
+            for element in texts:
+                avProblem= re.search('(?<=><h4>)(.|\n)*?(?=<\/h4>)', element)
                 # report.avalancheActivityComment = avProblem.group(0)
                 for word in avProblem.group(0).lower().split():
                     problem_type_text = ''
