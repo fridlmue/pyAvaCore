@@ -17,7 +17,7 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
 
     p_code, p_zona = it_region_ref[region_id]
 
-    url = "https://www.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='1'&pIdZona='" \
+    url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='1'&pIdZona='" \
         + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
 
     headers = {
@@ -38,7 +38,7 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
 
     if len(details_11) < 6:
         old = True
-        url = "https://www.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='-1'&pIdZona='" \
+        url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='-1'&pIdZona='" \
             + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
         req = urllib.request.Request(url, headers=headers)
 
