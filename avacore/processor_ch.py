@@ -101,13 +101,21 @@ def get_prone_locations(img_text):
     return aspects
 
 def clean_html_string(to_clean):
-    to_clean = re.sub('(\<div class="header-5-weather"\>.*\<\/div\>)', r'<br />\1:', to_clean)
+    to_clean = re.sub('(\<div class="header-5-weather"\>.*\<\/div\>)', r'\n\1:', to_clean)
     to_clean = re.sub('(?=\<div)(.|\n)*?(\>)', '', to_clean)
     to_clean = re.sub('">', '', to_clean)
     to_clean = re.sub('</div>', '', to_clean)
     to_clean = re.sub(' +', ' ', to_clean)
     to_clean = re.sub('(\n\s*)+\n', '', to_clean)
     to_clean = re.sub('\A\s+', '', to_clean)
+    to_clean = re.sub('\n', '', to_clean)
+    to_clean = re.sub('<br \/>', '\n', to_clean) 
+    to_clean = re.sub('<br>', '\n', to_clean)
+    to_clean = re.sub('<\/ul>', '\n', to_clean)
+    to_clean = re.sub('^(\n)', '', to_clean)
+    to_clean = re.sub('<ul class=\\"bullet-list-indent', '', to_clean)
+    to_clean = re.sub('<li class=\\"bullet-list-item', '- ', to_clean)
+    to_clean = re.sub('\\<\/li>', '\n', to_clean)
     return to_clean
 
 def process_reports_ch(path, lang="en", cached=False):
@@ -165,7 +173,7 @@ def process_reports_ch(path, lang="en", cached=False):
             if 'popover-actual-weather' in segment:
                 common_report.wxSynopsisComment = segment.split('popover-actual-weather ')[1]
             if 'popover-weather-forecast' in segment:
-                common_report.wxSynopsisComment += '<br />' + segment.split('popover-weather-forecast ')[1]
+                common_report.wxSynopsisComment += '\n' + segment.split('popover-weather-forecast ')[1]
             if outlook:
                 common_report.tendency.tendencyComment = clean_html_string(outlook.split('</span>')[1])
 
