@@ -328,20 +328,20 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                     if report.bulletinID in combination:
                         pm_idx = idx
                         print('am_idx', idx)
-                        
-            matched_regions = set(reports[am_idx].get_region_list()).intersection(set(reports[pm_idx].get_region_list()))
-            print(matched_regions)
-            report_am = copy.deepcopy(reports[am_idx])
-            report_am.bulletinID = combination
-            report_am.region = []
-            for region in matched_regions:
-                report_am.region.append(RegionType(region))
-            # Add PM Info to AM-Report?
-            
-            final_reports.append(report_am)
-            
-            if not pm_idx == '-':
-            
+            if pm_idx == '-':
+                final_reports.append(copy.deepcopy(reports[am_idx]))
+            else:
+                matched_regions = set(reports[am_idx].get_region_list()).intersection(set(reports[pm_idx].get_region_list()))
+                print(matched_regions)
+                report_am = copy.deepcopy(reports[am_idx])
+                report_am.bulletinID = combination
+                report_am.region = []
+                for region in matched_regions:
+                    report_am.region.append(RegionType(region))
+                # Add PM Info to AM-Report?
+                
+                final_reports.append(report_am)
+                
                 report_pm = copy.deepcopy(reports[pm_idx])
                 report_pm.bulletinID = combination + '_pm'
                 report_pm.predecessor_id = combination
