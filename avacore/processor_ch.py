@@ -120,7 +120,7 @@ def clean_html_string(to_clean):
     to_clean = to_clean.strip()
     return to_clean
 
-def process_reports_ch(path, lang="en", cached=False):
+def process_reports_ch(path, lang="en", cached=False, problems=False):
     '''
     Download the reports for CH
     '''
@@ -184,11 +184,12 @@ def process_reports_ch(path, lang="en", cached=False):
         # report.dangerRating[0].customData.append(html_weather_snow)      
         
         bulletinIDs = []
-
+        bulletin_combinations = set()
         # Receives the ID of the report that matches the selected region_id
         with open(path + '/swiss/gk_region2pdf.txt') as fp:
             for line in fp:
                 bulletinID = line.split('_')[5][:-5]
+                bulletin_combinations.add(bulletinID)
                 bulletinID_pm = None
                 if len(bulletinID) > 7:
                     bulletinID_pm = bulletinID[7:]
@@ -279,47 +280,83 @@ def process_reports_ch(path, lang="en", cached=False):
                     print('Error parsing avActComment in:', report.bulletinID)
             
             report.avalancheActivityComment = clean_html_string(report.avalancheActivityComment)
-            
-            '''
-            elif '<h4>Wet avalanches' in text:
-                # PM-Report indicator
-                print('pm report')
-            '''
                 
-            '''
-            ToCheck:
-            Possible to parse avProblem from <class="content">?
-            '''
-            for element in texts:
-                avProblem= re.search('(?<=><h4>)(.|\n)*?(?=<\/h4>)', element)
-                # report.avalancheActivityComment = avProblem.group(0)
-                for word in avProblem.group(0).lower().split():
-                    problem_type_text = ''
+            if problems:
+                '''Optional Feature to parse Problems from the swiss Reports'''
+                for element in texts:
+                    avProblem= re.search('(?<=><h4>)(.|\n)*?(?=<\/h4>)', element)
+                    # report.avalancheActivityComment = avProblem.group(0)
+                    for word in avProblem.group(0).lower().split():
+                        problem_type_text = ''
 
-                    
-                    if 'new' in word or 'neu' in word:
-                        problem_type_text = 'new_snow'
-                    elif 'drifting' in word or 'slabs' in word or 'trieb' in word:
-                        problem_type_text = 'wind_drifted_snow'
-                    elif 'old' in word or 'alt' in word:
-                        problem_type_text = 'persistent_weak_layers'
-                    elif 'wet' in word or 'nass' in word:
-                        problem_type_text = 'wet_snow'
-                    elif 'gliding' in word or 'gleit' in word:
-                        problem_type_text = 'gliding_snow'
-                    elif 'favourable' in word:
-                        problem_type_text = 'favourable_situation'
-                    
-                    if not problem_type_text == '':
-                        problem = AvalancheProblemType()
-                        problem.problemType = problem_type_text
-                        report.avalancheProblem.append(problem)
+                        
+                        if 'new' in word or 'neu' in word:
+                            problem_type_text = 'new_snow'
+                        elif 'drifting' in word or 'slabs' in word or 'trieb' in word:
+                            problem_type_text = 'wind_drifted_snow'
+                        elif 'old' in word or 'alt' in word:
+                            problem_type_text = 'persistent_weak_layers'
+                        elif 'wet' in word or 'nass' in word:
+                            problem_type_text = 'wet_snow'
+                        elif 'gliding' in word or 'gleit' in word:
+                            problem_type_text = 'gliding_snow'
+                        elif 'favourable' in word:
+                            problem_type_text = 'favourable_situation'
+                        
+                        if not problem_type_text == '':
+                            problem = AvalancheProblemType()
+                            problem.problemType = problem_type_text
+                            report.avalancheProblem.append(problem)
             
-            '''
-            /ToCheck
-            '''
+        
+        
+        print(bulletin_combinations)
+        
+        final_reports = []
+        
+        for combination in bulletin_combinations:
+            print('c', combination)
+            am_idx = '-'
+            pm_idx = '-'
             
-            # report.cli_out()
+            for idx, report in enumerate(reports):
+                if not hasattr(report, 'predecessor_id'):
+                    if report.bulletinID in combination:
+                        am_idx = idx
+                        print('am_idx', idx)
+                else:
+                    if report.bulletinID in combination:
+                        pm_idx = idx
+                        print('am_idx', idx)
+                        
+            matched_regions = set(reports[am_idx].get_region_list()).intersection(set(reports[pm_idx].get_region_list()))
+            print(matched_regions)
+            report_am = copy.deepcopy(reports[am_idx])
+            report_am.bulletinID = combination
+            report_am.region = []
+            for region in matched_regions:
+                report_am.region.append(RegionType(region))
+            # Add PM Info to AM-Report?
+            
+            final_reports.append(report_am)
+            
+            if not pm_idx == '-':
+            
+                report_pm = copy.deepcopy(reports[pm_idx])
+                report_pm.bulletinID = combination + '_pm'
+                report_pm.predecessor_id = combination
+                report_pm.region = []
+                for region in matched_regions:
+                    report_pm.region.append(RegionType(region))
+                
+                if problems:
+                    for problem in report_am.avalancheProblem:
+                        report_pm.avalancheProblem.append(problem)
+                        
+                report_pm.avalancheActivityComment = report_am.avalancheActivityComment + '\n' + report_pm.avalancheActivityComment
+                final_reports.append(report_pm)
+            
+            
 
         return reports
     
