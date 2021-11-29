@@ -332,9 +332,16 @@ def parse_xml_vorarlberg(root):
     return reports
 
 
-def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
+def parse_xml_bavaria(root, location='bavaria', today = ''):
 
     '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
+    
+    if today == '':
+        now = datetime.now(timezone('Europe/Ljubljana'))
+        if now.time() > time(17, 0, 1):
+            today = now.date() + timedelta(days=1)
+        else:
+            today = now.date()
 
     reports = []
     report = AvaBulletin()
