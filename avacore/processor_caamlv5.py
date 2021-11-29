@@ -13,7 +13,6 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 from datetime import datetime
-from datetime import timezone
 from datetime import time
 from datetime import timedelta
 import pytz
@@ -332,12 +331,12 @@ def parse_xml_vorarlberg(root):
     return reports
 
 
-def parse_xml_bavaria(root, location='bavaria', today = ''):
+def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 1)):
 
     '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
     
-    if today == '':
-        now = datetime.now(timezone('Europe/Ljubljana'))
+    if today == datetime(1, 1, 1, 1, 1, 1):
+        now = datetime.now(pytz.timezone('Europe/Ljubljana'))
         if now.time() > time(17, 0, 1):
             today = now.date() + timedelta(days=1)
         else:
