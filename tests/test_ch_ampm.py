@@ -9,9 +9,12 @@ class TestCH(unittest.TestCase):
     def test_ch(self):
         # root = ET.parse(f'{__file__}.xml')
         reports = pyAvaCore.process_reports_ch(str(pathlib.Path(__file__).parent.absolute()), cached=True)
-        self.assertEqual(len(reports), 9)
-        report = reports[2]
-        self.assertEqual(report.bulletinID, '8947715')
+        self.assertEqual(len(reports), 14)
+        for idx, report in enumerate(reports):
+            if report.bulletinID == '89477158947719':
+                report_idx = idx
+        report = reports[report_idx]
+        self.assertEqual(report.bulletinID, '89477158947719')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
@@ -34,8 +37,11 @@ class TestCH(unittest.TestCase):
         self.assertNotIn('SW', report.dangerRating[0].aspect)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
-        report = reports[8]
-        self.assertEqual(report.bulletinID, '8947712')
+        for idx, report in enumerate(reports):
+            if report.bulletinID == '89477128947719':
+                report_idx = idx
+        report = reports[report_idx]
+        self.assertEqual(report.bulletinID, '89477128947719')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
@@ -58,8 +64,11 @@ class TestCH(unittest.TestCase):
         self.assertNotIn('SW', report.dangerRating[0].aspect)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
-        report = reports[1]
-        self.assertEqual(report.bulletinID, '8947717')
+        for idx, report in enumerate(reports):
+            if report.bulletinID == '89477148947717_pm':
+                report_idx = idx
+        report = reports[report_idx]
+        self.assertEqual(report.bulletinID, '89477148947717_pm')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
@@ -75,6 +84,6 @@ class TestCH(unittest.TestCase):
         self.assertNotIn('SE', report.dangerRating[0].aspect)
         self.assertNotIn('S', report.dangerRating[0].aspect)
         self.assertNotIn('SW', report.dangerRating[0].aspect)
-        self.assertEqual(report.predecessor_id, '8947716_8947711_8947714')
+        self.assertEqual(report.predecessor_id, '89477148947717')
 if __name__ == '__main__':
     unittest.main()

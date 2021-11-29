@@ -345,10 +345,10 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                     for problem in report_am.avalancheProblem:
                         report_pm.avalancheProblem.append(problem)
                         
+                report_pm.dangerRating[0].elevation = report_am.dangerRating[0].elevation
+                report_pm.dangerRating[0].aspect = report_am.dangerRating[0].aspect
                 report_pm.avalancheActivityComment = report_am.avalancheActivityComment + '\n' + report_pm.avalancheActivityComment
                 final_reports.append(report_pm)
-            
-            
 
-        return reports
+        return final_reports
     
