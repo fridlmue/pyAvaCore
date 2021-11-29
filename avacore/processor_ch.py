@@ -101,7 +101,7 @@ def get_prone_locations(img_text):
     return aspects
 
 def clean_html_string(to_clean):
-    to_clean = re.sub('(\<div class="header-5-weather"\>.*\<\/div\>)', r'\n\1:', to_clean)
+    to_clean = re.sub('(\<div class="header-5-weather"\>.*\<\/div\>)', r'§newLine§\1:', to_clean)
     to_clean = re.sub('(?=\<div)(.|\n)*?(\>)', '', to_clean)
     to_clean = re.sub('">', '', to_clean)
     to_clean = re.sub('</div>', '', to_clean)
@@ -112,10 +112,12 @@ def clean_html_string(to_clean):
     to_clean = re.sub('<br \/>', '\n', to_clean) 
     to_clean = re.sub('<br>', '\n', to_clean)
     to_clean = re.sub('<\/ul>', '\n', to_clean)
-    to_clean = re.sub('^(\n)', '', to_clean)
+    # to_clean = re.sub('^(\n)', '', to_clean)
     to_clean = re.sub('<ul class=\\"bullet-list-indent', '', to_clean)
     to_clean = re.sub('<li class=\\"bullet-list-item', '- ', to_clean)
     to_clean = re.sub('\\<\/li>', '\n', to_clean)
+    to_clean = re.sub('§newLine§', '\n', to_clean)
+    to_clean = to_clean.strip()
     return to_clean
 
 def process_reports_ch(path, lang="en", cached=False):
@@ -229,27 +231,27 @@ def process_reports_ch(path, lang="en", cached=False):
             # Isolates the prone location Image
             text_pos = text.find('src="data:image/png;base64,') + len('src="data:image/png;base64,')
             subtext = text[text_pos:]
-            prone_locations_img = AvaCoreCustom('prone_locations_img')
-            prone_locations_img.content = subtext[:subtext.find('"')]
-            general_problem_locations = ''
-            if len(prone_locations_img.content) < 1000: # Sometimes no Picture is attached
-                prone_locations_img.content = '-'
+            # prone_locations_img = AvaCoreCustom('prone_locations_img')
+            prone_locations_height = subtext[:subtext.find('"')]
+            general_problem_locations = []
+            if len(prone_locations_height) < 1000: # Sometimes no Picture is attached
+                prone_locations_height = '-'
             else:
-                general_problem_locations = get_prone_locations(prone_locations_img.content)
-            report.dangerRating[0].customData.append(prone_locations_img)
+                general_problem_locations = get_prone_locations(prone_locations_height)
+            # report.dangerRating[0].customData.append(prone_locations_img)
 
             # Isolates the prone location Text
             text_pos = subtext.find('alt="') + len('alt="')
             subtext = subtext[text_pos:]
-            prone_locations_text = AvaCoreCustom('prone_locations_text')
-            prone_locations_text.content = subtext[:subtext.find('"')]
-            if prone_locations_text.content == 'Content-Type':
-                prone_locations_text.content = '-'
-            else:
-                valid_elevation = ''.join(c for c in prone_locations_text.content if c.isdigit())
+            # prone_locations_text = AvaCoreCustom('prone_locations_text')
+            prone_locations_text = subtext[:subtext.find('"')]
+            # if prone_locations_text.content == 'Content-Type':
+            #     prone_locations_text.content = '-'
+            if not prone_locations_text == 'Content-Type':
+                valid_elevation = ''.join(c for c in prone_locations_text if c.isdigit())
                 report.dangerRating[0].elevation = ElevationType(valid_elevation)
 
-            report.dangerRating[0].customData.append(prone_locations_text)
+            # report.dangerRating[0].customData.append(prone_locations_text)
             report.dangerRating[0].aspect = general_problem_locations
             
             texts = []
@@ -270,7 +272,9 @@ def process_reports_ch(path, lang="en", cached=False):
                     report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
                 elif '</h4><p>' in element:
                     avalancheActivityComment = re.search('(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)', element)
-                    report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
+                    comment = avalancheActivityComment.group(0)
+                    comment = re.sub('\(see.*map\)', '', comment)
+                    report.avalancheActivityComment += comment + " "
                 else:
                     print('Error parsing avActComment in:', report.bulletinID)
             
