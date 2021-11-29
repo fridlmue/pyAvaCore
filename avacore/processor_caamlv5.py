@@ -368,11 +368,17 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
 
         for wxSynopsisComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}wxSynopsisComment'):
             report.wxSynopsisComment = wxSynopsisComment.text
+            if type(report.wxSynopsisComment) == str:
+                report.wxSynopsisComment = report.wxSynopsisComment.strip()
         for snowpackStructureComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                   'snowpackStructureComment'):
             report.snowpackStructureComment = snowpackStructureComment.text
+            if type(report.snowpackStructureComment) == str:
+                report.snowpackStructureComment = report.snowpackStructureComment.strip()
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
             report.avalancheActivityHighlights = highlights.text
+            if type(report.avalancheActivityHighlights) == str:
+                report.avalancheActivityHighlights = report.avalancheActivityHighlights.strip()
 
         '''
         for DangerPattern in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
