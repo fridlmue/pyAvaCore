@@ -307,15 +307,10 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                             problem = AvalancheProblemType()
                             problem.problemType = problem_type_text
                             report.avalancheProblem.append(problem)
-            
-        
-        
-        print(bulletin_combinations)
         
         final_reports = []
         
         for combination in bulletin_combinations:
-            print('c', combination)
             am_idx = '-'
             pm_idx = '-'
             
@@ -323,16 +318,13 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 if not hasattr(report, 'predecessor_id'):
                     if report.bulletinID in combination:
                         am_idx = idx
-                        print('am_idx', idx)
                 else:
                     if report.bulletinID in combination:
                         pm_idx = idx
-                        print('am_idx', idx)
             if pm_idx == '-':
                 final_reports.append(copy.deepcopy(reports[am_idx]))
             else:
                 matched_regions = set(reports[am_idx].get_region_list()).intersection(set(reports[pm_idx].get_region_list()))
-                print(matched_regions)
                 report_am = copy.deepcopy(reports[am_idx])
                 report_am.bulletinID = combination
                 report_am.region = []
