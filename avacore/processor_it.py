@@ -17,11 +17,22 @@ import urllib.request
 from datetime import datetime
 from datetime import time
 from datetime import timedelta
+from pathlib import Path
 import pytz
 import dateutil.parser
+import logging
+import logging.handlers
 
 from avacore import pyAvaCore
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
+
+Path('logs').mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    format='[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s',
+    level=logging.INFO,
+    handlers=[
+        logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
+        logging.StreamHandler()])
 
 def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'))):
     
@@ -39,6 +50,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
 
     format = 0
     pm_available = False
+    valid_report = True
 
     old = False
 
@@ -86,28 +98,22 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     report.validTime.startTime = datetime.combine(today, time(0,0))
     report.validTime.endTime = datetime.combine(today, time(23,59))
     if old:
-        report.validTime.startTime = report.validTime.endTime - timedelta(hours = 24)
+        report.validTime.startTime = report.validTime.startTime - timedelta(hours = 24)
         report.validTime.endTime = report.validTime.endTime - timedelta(hours = 24)
-
-    danger_rating = DangerRatingType()
     
+    danger_rating = DangerRatingType()
+
     if int(details_10[0][3]) < 6:
         danger_rating.set_mainValue_int(int(details_10[0][3]))
         # danger_rating.elevation.auto_select(valid_elevation)
         # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
-    else:
-        pass
-    #     print('not handled yet:', details_10[0][3])
-        # ToDo Needs to check for overday change
-    # print(details_10[2][3])
+
     prefix_alti = ''
-    try:
-        if int(details_10[2][3]) in [1, 2, 3]:
-            prefix_alti = '>'
-        if int(details_10[2][3]) == 4:
-            prefix_alti = '<'
-    except:
-        pass
+
+    if int(details_10[2][3]) in [1, 2, 3]:
+        prefix_alti = '>'
+    if int(details_10[2][3]) == 4:
+        prefix_alti = '<'
     elev_data = details_11[2]
     if prefix_alti != '' and len(elev_data) < 20:
         aspects = []
@@ -115,7 +121,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         # ToDo Aspects are missing at the moment
         # report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
         danger_rating.elevation.auto_select(prefix_alti + general_problem_valid_elevation)
-
+        
     report.dangerRating.append(danger_rating)
 
     av_problem = details_10[3][5:-4].lower()
@@ -138,9 +144,14 @@ def date_from_report(date):
 def process_all_reports_it():
     all_reports = []
     for region in it_region_ref.keys():
-        m_reports = process_reports_it(region)
+        try:
+            m_reports = process_reports_it(region)
+        except Exception as e: # pylint: disable=broad-except
+            logging.error('Failed to download %s', region, exc_info=e)
+            
         for report in m_reports:
             all_reports.append(report)
+
     return all_reports
             
 
