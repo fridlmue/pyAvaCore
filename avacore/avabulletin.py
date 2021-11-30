@@ -263,36 +263,65 @@ class AvaBulletin:
         '''
         ToDo -- Not working at the moment
         '''
-        print('╔═════ AvaReport ', self.reportId, ' ══════')
+        print('╔═════ AvaReport ', self.bulletinID, ' ════════════════')
+        
         if hasattr(self, 'predecessor_id'):
             print('║ This is PM-Report to: ', self.predecessor_id)
         print('║ Report from:          ', self.publicationTime)
-        print('║ Validity:             ', self.validity_begin, ' -> ', self.validity_end)
+        print('║ Validity:             ', self.validTime.startTime, '➝', self.validTime.endTime)
         print('║ Valid for:')
         for region in self.region:
-            print('║ |- ', region)
+            print('║ ├─ ', region.regionID)
 
         print('╟───── Danger Rating')
-        for danger_main in self.danger_main:
-            if danger_main.valid_elevation != None:
-                print('║ ', danger_main.valid_elevation, ' -> : ', danger_main.main_value)
-            else:
-                print('║ ', danger_main.main_value, ' in entire range')
+        for dangerRating in self.dangerRating:
+            print('║ ', dangerRating.elevation.toString(), '➝ :', dangerRating.mainValue)
+
 
         print('╟───── Av Problems')
-        for problem in self.problem_list:
-            print('║ Problem: ', problem.problem_type, ' Elevation: ', problem.valid_elevation, ' Aspects: ', problem.aspect)
+        for problem in self.avalancheProblem:
+            try:
+                print('║ Problem: ', problem.problemType, ' Elevation: ', problem.dangerRating.elevation.toString(), ' Aspects: ', problem.dangerRating.aspect)
+            except:
+                print('║ Problem: ', problem.problemType)
 
+        '''
         if len(self.dangerpattern)  > 0:
             print('╟───── Danger Patterns')
             for dangerpattern in self.dangerpattern:
                 print('║ ', dangerpattern)
+        '''
 
-        print('╟───── Av Texts (if not html or img)')
-        for texts in self.report_texts:
-            if texts.text_type != 'html_report_local' and texts.text_type != 'prone_locations_img' and \
-                texts.text_type != 'html_weather_snow':
-                print('║ ', texts.text_type, ': ', texts.text_content)
+        print('╟───── Av Texts ─────')
+        if hasattr(self, 'highlights'):
+            print('║ ', 'Highlights:',  self.highlights)
+            
+        if hasattr(self, 'avalancheActivityHighlights'):
+            print('║ ', 'avalancheActivityHighlights:',  self.avalancheActivityHighlights)
+            
+        if hasattr(self, 'avalancheActivityComment'):
+            print('║ ', 'avalancheActivityComment:',  self.avalancheActivityComment)
+            
+        if hasattr(self, 'snowpackStructureHighlights'):
+            print('║ ', 'snowpackStructureHighlights:',  self.snowpackStructureHighlights)
+            
+        if hasattr(self, 'snowpackStructureComment'):
+            print('║ ', 'snowpackStructureComment:',  self.snowpackStructureComment)
+            
+        if hasattr(self, 'travelAdvisoryHighlights'):
+            print('║ ', 'travelAdvisoryHighlights:',  self.travelAdvisoryHighlights)
+            
+        if hasattr(self, 'travelAdvisoryComment'):
+            print('║ ', 'travelAdvisoryComment:',  self.travelAdvisoryComment)
+            
+        if hasattr(self, 'wxSynopsisHighlights'):
+            print('║ ', 'wxSynopsisHighlights:',  self.wxSynopsisHighlights)
+            
+        if hasattr(self, 'wxSynopsisComment'):
+            print('║ ', 'wxSynopsisComment:',  self.wxSynopsisComment)
+            
+        if hasattr(self.tendency, 'tendencyComment'):
+            print('║ ', 'tendencyComment:',  self.tendency.tendencyComment)
 
         print('╚══════════════════════════════════════════')
 

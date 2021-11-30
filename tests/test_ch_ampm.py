@@ -9,12 +9,15 @@ class TestCH(unittest.TestCase):
     def test_ch(self):
         # root = ET.parse(f'{__file__}.xml')
         reports = pyAvaCore.process_reports_ch(str(pathlib.Path(__file__).parent.absolute()), cached=True)
-        self.assertEqual(len(reports), 9)
-        report = reports[2]
-        self.assertEqual(report.bulletinID, '8947715')
+        self.assertEqual(len(reports), 14)
+        for idx, report in enumerate(reports):
+            if report.bulletinID == '89477158947719':
+                report_idx = idx
+        report = reports[report_idx]
+        self.assertEqual(report.bulletinID, '89477158947719')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T12:00:00+01:00')
         self.assertIn('CH-4224', report.get_region_list())
         self.assertNotIn('CH-7111', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -24,16 +27,24 @@ class TestCH(unittest.TestCase):
         # self.assertEqual(report.dangerpattern, [])
         # self.assertEqual(report.problem_list[0].problem_type, 'general')
         # self.assertEqual(report.problem_list[0].valid_elevation, '>2400')
-        self.assertIn('NNE', report.dangerRating[0].aspect)
-        self.assertIn('WNW', report.dangerRating[0].aspect)
-        self.assertNotIn('ESE', report.dangerRating[0].aspect)
+        self.assertIn('N', report.dangerRating[0].aspect)
+        self.assertIn('NE', report.dangerRating[0].aspect)
+        self.assertIn('W', report.dangerRating[0].aspect)
+        self.assertIn('NW', report.dangerRating[0].aspect)
+        self.assertIn('E', report.dangerRating[0].aspect)
+        self.assertNotIn('SE', report.dangerRating[0].aspect)
+        self.assertNotIn('S', report.dangerRating[0].aspect)
+        self.assertNotIn('SW', report.dangerRating[0].aspect)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
-        report = reports[8]
-        self.assertEqual(report.bulletinID, '8947712')
+        for idx, report in enumerate(reports):
+            if report.bulletinID == '89477128947719':
+                report_idx = idx
+        report = reports[report_idx]
+        self.assertEqual(report.bulletinID, '89477128947719')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
-        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
+        self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T12:00:00+01:00')
         self.assertIn('CH-7231', report.get_region_list())
         self.assertNotIn('CH-4224', report.get_region_list())
         self.assertEqual(report.dangerRating[0].mainValue, 'moderate')
@@ -43,15 +54,23 @@ class TestCH(unittest.TestCase):
         # self.assertEqual(report.dangerpattern, [])
         # self.assertEqual(report.problem_list[0].problem_type, 'general')
         # self.assertEqual(report.problem_list[0].valid_elevation, '>2200')
-        self.assertIn('NNE', report.dangerRating[0].aspect)
-        self.assertIn('WNW', report.dangerRating[0].aspect)
-        self.assertNotIn('SSW', report.dangerRating[0].aspect)
+        self.assertIn('N', report.dangerRating[0].aspect)
+        self.assertIn('NE', report.dangerRating[0].aspect)
+        self.assertIn('W', report.dangerRating[0].aspect)
+        self.assertIn('NW', report.dangerRating[0].aspect)
+        self.assertIn('E', report.dangerRating[0].aspect)
+        self.assertNotIn('SE', report.dangerRating[0].aspect)
+        self.assertNotIn('S', report.dangerRating[0].aspect)
+        self.assertNotIn('SW', report.dangerRating[0].aspect)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
-        report = reports[1]
-        self.assertEqual(report.bulletinID, '8947717')
+        for idx, report in enumerate(reports):
+            if report.bulletinID == '89477148947717_pm':
+                report_idx = idx
+        report = reports[report_idx]
+        self.assertEqual(report.bulletinID, '89477148947717_pm')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-22T17:00:00+01:00')
-        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T17:00:00+01:00')
+        self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-23T12:00:00+01:00')
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-23T17:00:00+01:00')
         self.assertIn('CH-1233', report.get_region_list())
         self.assertNotIn('CH-4224', report.get_region_list())
@@ -62,9 +81,9 @@ class TestCH(unittest.TestCase):
         # self.assertEqual(report.dangerpattern, [])
         # self.assertEqual(report.problem_list[0].problem_type, 'general')
         # self.assertEqual(report.problem_list[0].valid_elevation, None)
-        self.assertNotIn('NNE', report.dangerRating[0].aspect)
-        self.assertNotIn('WNW', report.dangerRating[0].aspect)
-        self.assertNotIn('SSW', report.dangerRating[0].aspect)
-        self.assertEqual(report.predecessor_id, '8947716_8947711_8947714')
+        self.assertNotIn('SE', report.dangerRating[0].aspect)
+        self.assertNotIn('S', report.dangerRating[0].aspect)
+        self.assertNotIn('SW', report.dangerRating[0].aspect)
+        self.assertEqual(report.predecessor_id, '89477148947717')
 if __name__ == '__main__':
     unittest.main()
