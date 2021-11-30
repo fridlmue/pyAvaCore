@@ -1,12 +1,39 @@
+"""
+    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    This file is part of pyAvaCore.
+    pyAvaCore is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    pyAvaCore is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
+"""
 import json
 import urllib.request
 import datetime
+from datetime import time
 from datetime import timedelta
+import pytz
+import dateutil.parser
 
 from avacore import pyAvaCore
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
-def process_reports_it(region_id, today=datetime.datetime.today().date()):
-
+def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'))):
+    
+    '''
+    if today == datetime(1, 1, 1, 1, 1, 1):
+        now = datetime.now(pytz.timezone('Europe/Rome'))
+        if now.time() > time(17, 0, 1):
+            today = now.date() + timedelta(days=1)
+        else:
+            today = now.date()
+    '''
+    
     reports = []
     report = pyAvaCore.AvaReport()
 
@@ -52,31 +79,22 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
         details_11 = details_1x[1].split('|')
         details_12 = details_1x[2].split('|')
 
+    report.publicationTime = date_from_report(details_1x[9])
+    report.region.append(RegionType(region_id))
 
-    '''
-    # print(len(response.text))
-    print(len(details_1x))
-    print(len(details_10))
-    print(len(details_11))
-    print(len(details_12))
-    # print(details_2[6])
-    print(details_10)
-    print(details_11)
-    print(details_12)
-    '''
-
-    report.rep_date = date_from_report(details_1x[9])
-
-    report.report_id = region_id + '_' + today.isoformat()
-    report.validity_begin = datetime.datetime.combine(today, datetime.time(0,0))
-    report.validity_end = datetime.datetime.combine(today, datetime.time(23,59))
+    report.bulletinID = region_id + '_' + today.isoformat()
+    report.report.validTime.startTime = datetime.datetime.combine(today, datetime.time(0,0))
+    report.report.validTime.endTime = datetime.datetime.combine(today, datetime.time(23,59))
     if old:
-        report.validity_begin = report.validity_begin - timedelta(hours = 24)
-        report.validity_end = report.validity_end - timedelta(hours = 24)
+        report.report.validTime.startTime = report.validTime.endTime - timedelta(hours = 24)
+        report.report.validTime.endTime = report.validTime.endTime - timedelta(hours = 24)
 
-
+    danger_rating = DangerRatingType()
+    
     if int(details_10[0][3]) < 6:
-        report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
+        danger_rating.set_mainValue_int(int(details_10[0][3]))
+        # danger_rating.elevation.auto_select(valid_elevation)
+        # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
     else:
         print('not handled yet!')
         # ToDo Needs to check for overday change
@@ -92,18 +110,25 @@ def process_reports_it(region_id, today=datetime.datetime.today().date()):
         aspects = []
         general_problem_valid_elevation = ''.join(c for c in elev_data.split('/')[0].split('-')[0] if c.isdigit())
         # ToDo Aspects are missing at the moment
-        report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
+        # report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
+        danger_rating.elevation.auto_select(prefix_alti + general_problem_valid_elevation)
 
-    av_problem = pyAvaCore.Problem(details_10[3][5:-4].lower(), [], "-")
-    if av_problem.problem_type != '':
-        report.problem_list.append(av_problem)
+    report.dangerRating.append(danger_rating)
+
+    av_problem = details_10[3][5:-4].lower()
+    if av_problem != '':
+        #report.problem_list.append(av_problem)
+        problem = AvalancheProblemType()
+        problem.add_problemType(av_problem)
+        report.avalancheProblem.append(problem)
 
     reports.append(report)
 
     return reports
 
 def date_from_report(date):
-    date = datetime.datetime.strptime(date, '%d/%m/%Y')
+    date = dateutil.parser.parse(date, dayfirst=True)
+    # date = datetime.datetime.strptime(date, '%d/%m/%Y')
     return date
 
 # Only temporary for debug
@@ -112,8 +137,6 @@ def process_all_reports_it():
         m_reports = process_reports_it(a)
         for report in m_reports:
             report.cli_out()
-
-
 
 it_region_ref = {
     'IT-21-VB-03': ['Piemonte', 1],
