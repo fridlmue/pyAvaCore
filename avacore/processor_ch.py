@@ -331,6 +331,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 for region in matched_regions:
                     report_am.region.append(RegionType(region))
                 # Add PM Info to AM-Report?
+                report_am.validTime.endTime = report_am.validTime.endTime.replace(hour=12)
                 
                 final_reports.append(report_am)
                 
@@ -348,6 +349,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 report_pm.dangerRating[0].elevation = report_am.dangerRating[0].elevation
                 report_pm.dangerRating[0].aspect = report_am.dangerRating[0].aspect
                 report_pm.avalancheActivityComment = report_am.avalancheActivityComment + '\n' + report_pm.avalancheActivityComment
+                report_pm.validTime.startTime = report_am.validTime.endTime
                 final_reports.append(report_pm)
 
         return final_reports
