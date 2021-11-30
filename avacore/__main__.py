@@ -43,7 +43,7 @@ def download_region(regionID):
             if validityDate.hour > 15:
                 validityDate = validityDate + timedelta(days=1)
             validityDate = validityDate.date().isoformat()
-        for region in report.region:
+        for region in report.regions:
             if 'AT8R' in region.regionID:
                 region.regionID = region.regionID.replace('AT8R', 'AT-08-0')
 
@@ -53,9 +53,10 @@ def download_region(regionID):
     directory = Path(sys.argv[1] if len(sys.argv) > 1 else 'data')
     directory.mkdir(parents=True, exist_ok=True)
     ext = 'zip' if url[-3:] == 'zip' else 'xml'
-    with urlopen(url) as http, open(f'{directory}/{validityDate}-{regionID}.{ext}', mode='wb') as f:
-        logging.info('Writing %s to %s', url, f.name)
-        f.write(http.read())
+    if url != '':
+        with urlopen(url) as http, open(f'{directory}/{validityDate}-{regionID}.{ext}', mode='wb') as f:
+            logging.info('Writing %s to %s', url, f.name)
+            f.write(http.read())
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
         json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)

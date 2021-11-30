@@ -67,7 +67,10 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         provider = "WSL Institute for Snow and Avalanche Research SLF: www.slf.ch"
     elif region_id.startswith('IT-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
-        reports = process_reports_it(region_id)
+        if region_id == 'IT-AINEVA':
+            reports = process_all_reports_it()
+        else:
+            reports = process_reports_it(region_id)
         provider = "AINEVA: aineva.it"
     elif region_id.startswith("NO"):
         reports = process_reports_no(region_id)

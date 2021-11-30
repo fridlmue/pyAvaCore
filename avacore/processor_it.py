@@ -35,7 +35,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     '''
     
     reports = []
-    report = pyAvaCore.AvaReport()
+    report = pyAvaCore.AvaBulletin()
 
     format = 0
     pm_available = False
@@ -83,11 +83,11 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     report.regions.append(RegionType(region_id))
 
     report.bulletinID = region_id + '_' + today.isoformat()
-    report.report.validTime.startTime = datetime.datetime.combine(today, datetime.time(0,0))
-    report.report.validTime.endTime = datetime.datetime.combine(today, datetime.time(23,59))
+    report.validTime.startTime = datetime.combine(today, time(0,0))
+    report.validTime.endTime = datetime.combine(today, time(23,59))
     if old:
-        report.report.validTime.startTime = report.validTime.endTime - timedelta(hours = 24)
-        report.report.validTime.endTime = report.validTime.endTime - timedelta(hours = 24)
+        report.validTime.startTime = report.validTime.endTime - timedelta(hours = 24)
+        report.validTime.endTime = report.validTime.endTime - timedelta(hours = 24)
 
     danger_rating = DangerRatingType()
     
@@ -96,15 +96,18 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         # danger_rating.elevation.auto_select(valid_elevation)
         # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
     else:
-        print('not handled yet!')
+        pass
+    #     print('not handled yet:', details_10[0][3])
         # ToDo Needs to check for overday change
-    print(details_10[2][3])
+    # print(details_10[2][3])
     prefix_alti = ''
-    if int(details_10[2][3]) in [1, 2, 3]:
-        prefix_alti = '>'
-    if int(details_10[2][3]) == 4:
-        prefix_alti = '<'
-
+    try:
+        if int(details_10[2][3]) in [1, 2, 3]:
+            prefix_alti = '>'
+        if int(details_10[2][3]) == 4:
+            prefix_alti = '<'
+    except:
+        pass
     elev_data = details_11[2]
     if prefix_alti != '' and len(elev_data) < 20:
         aspects = []
@@ -138,6 +141,7 @@ def process_all_reports_it():
         m_reports = process_reports_it(region)
         for report in m_reports:
             all_reports.append(report)
+    return all_reports
             
 
 it_region_ref = {

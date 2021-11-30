@@ -62,6 +62,7 @@ def process_all_reports_fr():
         reports = process_reports_fr(region)
         for report in reports:
             all_reports.append(report)
+    return all_reports
 
 def process_reports_fr(region_id, path='', cached=False):
     '''
