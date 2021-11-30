@@ -80,7 +80,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         details_12 = details_1x[2].split('|')
 
     report.publicationTime = date_from_report(details_1x[9])
-    report.region.append(RegionType(region_id))
+    report.regions.append(RegionType(region_id))
 
     report.bulletinID = region_id + '_' + today.isoformat()
     report.report.validTime.startTime = datetime.datetime.combine(today, datetime.time(0,0))
@@ -133,10 +133,12 @@ def date_from_report(date):
 
 # Only temporary for debug
 def process_all_reports_it():
-    for a in it_region_ref.keys():
-        m_reports = process_reports_it(a)
+    all_reports = []
+    for region in it_region_ref.keys():
+        m_reports = process_reports_it(region)
         for report in m_reports:
-            report.cli_out()
+            all_reports.append(report)
+            
 
 it_region_ref = {
     'IT-21-VB-03': ['Piemonte', 1],

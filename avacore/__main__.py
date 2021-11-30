@@ -62,7 +62,7 @@ def download_region(regionID):
 
 
 if __name__ == "__main__":
-    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY", "CH", "SI"]
+    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-08", "BY", "CH", "SI", "FR", "IT-AINEVA"]
     for region in regions:
         try:
             download_region(region)

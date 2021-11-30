@@ -22,9 +22,9 @@ import logging
 import typing
 
 from avacore.avabulletin import AvaBulletin
-from avacore.processor_fr import process_reports_fr
+from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
-from avacore.processor_it import process_reports_it
+from avacore.processor_it import process_reports_it, process_all_reports_it
 from avacore.processor_norway import process_reports_no
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
@@ -56,7 +56,10 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     url = ''
     if region_id.startswith("FR"):
         logging.info('Fetching %s', region_id)
-        reports = process_reports_fr(region_id)
+        if region_id == "FR":
+            reports = process_all_reports_fr()
+        else:
+            reports = process_reports_fr(region_id)
         provider = "Rédigé par Météo-France avec la contribution des observateurs du réseau nivo-météorologique. Partenariat : "\
             + "ANMSM (Maires de Stations de Montagne), DSF (Domaines Skiables de France), "\
             + "ADSP (Directeurs de Pistes et de la Sécurité des Stations de Sports d'Hiver) et autres acteurs de la montagne."

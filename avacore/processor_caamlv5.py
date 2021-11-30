@@ -60,8 +60,8 @@ def parse_xml(root):
             et_add_parent_info(observations)
             for locRef in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}locRef'):
                 loc_ref = observations.attrib.get('{http://www.w3.org/1999/xlink}href')
-                if loc_ref not in report.region:
-                    report.region.append(RegionType(observations.attrib.get('{http://www.w3.org/1999/xlink}href')))
+                if loc_ref not in report.regions:
+                    report.regions.append(RegionType(observations.attrib.get('{http://www.w3.org/1999/xlink}href')))
             for dateTimeReport in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}dateTimeReport'):
                 report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
             for validTime in observations.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}validTime'):
@@ -276,7 +276,7 @@ def parse_xml_vorarlberg(root):
         if loc_elem[1].time() < time(11, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.region.append(RegionType(loc_elem[0]))
+                c_report.regions.append(RegionType(loc_elem[0]))
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]
@@ -469,7 +469,7 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
         if loc_elem[1].time() == time(0, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.region.append(RegionType(loc_elem[0]))
+                c_report.regions.append(RegionType(loc_elem[0]))
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]

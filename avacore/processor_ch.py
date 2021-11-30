@@ -208,9 +208,9 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 elif not bulletinID_pm is None:
                     if not bulletinID in reports[bulletinIDs.index(bulletinID_pm)].predecessor_id:
                         reports[bulletinIDs.index(bulletinID_pm)].predecessor_id += ('_' + bulletinID)
-                reports[bulletinIDs.index(bulletinID)].region.append(RegionType("CH-" + line[:4]))
+                reports[bulletinIDs.index(bulletinID)].regions.append(RegionType("CH-" + line[:4]))
                 if not bulletinID_pm is None:
-                    reports[bulletinIDs.index(bulletinID_pm)].region.append(RegionType("CH-" + line[:4]))
+                    reports[bulletinIDs.index(bulletinID_pm)].regions.append(RegionType("CH-" + line[:4]))
 
         for report in reports:
             # Opens the matching Report-File
@@ -327,9 +327,9 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 matched_regions = set(reports[am_idx].get_region_list()).intersection(set(reports[pm_idx].get_region_list()))
                 report_am = copy.deepcopy(reports[am_idx])
                 report_am.bulletinID = combination
-                report_am.region = []
+                report_am.regions = []
                 for region in matched_regions:
-                    report_am.region.append(RegionType(region))
+                    report_am.regions.append(RegionType(region))
                 # Add PM Info to AM-Report?
                 report_am.validTime.endTime = report_am.validTime.endTime.replace(hour=12)
                 
@@ -338,9 +338,9 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 report_pm = copy.deepcopy(reports[pm_idx])
                 report_pm.bulletinID = combination + '_pm'
                 report_pm.predecessor_id = combination
-                report_pm.region = []
+                report_pm.regions = []
                 for region in matched_regions:
-                    report_pm.region.append(RegionType(region))
+                    report_pm.regions.append(RegionType(region))
                 
                 if problems:
                     for problem in report_am.avalancheProblem:

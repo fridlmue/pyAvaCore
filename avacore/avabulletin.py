@@ -209,7 +209,7 @@ class AvaBulletin:
     '''ID of the Bulletin'''
     reportLang: str
     '''language of the Bulletin'''
-    region: typing.List[RegionType]
+    regions: typing.List[RegionType]
     '''list of Regions, where this Report is valid'''
     publicationTime: datetime
     '''Date of Bulletin'''
@@ -246,7 +246,7 @@ class AvaBulletin:
     '''not part of CAAMLv6 (yet)'''
 
     def __init__(self):
-        self.region = []
+        self.regions = []
         self.validTime = ValidTimeType()
         self.source = SourceType()
         self.dangerRating = []
@@ -255,7 +255,7 @@ class AvaBulletin:
 
     def get_region_list(self):
         region_list = []
-        for reg in self.region:
+        for reg in self.regions:
             region_list.append(reg.regionID)
         return region_list
 
@@ -270,7 +270,7 @@ class AvaBulletin:
         print('║ Report from:          ', self.publicationTime)
         print('║ Validity:             ', self.validTime.startTime, '➝', self.validTime.endTime)
         print('║ Valid for:')
-        for region in self.region:
+        for region in self.regions:
             print('║ ├─ ', region.regionID)
 
         print('╟───── Danger Rating')

@@ -56,6 +56,13 @@ def download_report_fr(region_id):
 
     return root
 
+def process_all_reports_fr():
+    all_reports = []
+    for region in fr_regions:
+        reports = process_reports_fr(region)
+        for report in reports:
+            all_reports.append(report)
+
 def process_reports_fr(region_id, path='', cached=False):
     '''
     Download report for specified france region
@@ -76,7 +83,7 @@ def process_reports_fr(region_id, path='', cached=False):
     report = AvaBulletin()
     reports = []
 
-    report.region.append(RegionType('FR-' + root.attrib.get('ID').zfill(2)))
+    report.regions.append(RegionType('FR-' + root.attrib.get('ID').zfill(2)))
     report.publicationTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
     report.validTime.startTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
     report.validTime.endTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEVALIDITE')))
@@ -183,7 +190,7 @@ def process_reports_fr(region_id, path='', cached=False):
             elif len(report.dangerRating) > 1:
                 pm_danger_ratings.append(report.dangerRating[1])
 
-    report.bulletinID = report.region[0].regionID + '_' + str(report.publicationTime.isoformat())
+    report.bulletinID = report.regions[0].regionID + '_' + str(report.publicationTime.isoformat())
 
     if pm_available:
         pm_report = copy.deepcopy(report)
@@ -198,3 +205,42 @@ def process_reports_fr(region_id, path='', cached=False):
     reports.append(report)
 
     return reports
+
+fr_regions = [
+    "FR-01",
+    "FR-02",
+    "FR-03",
+    "FR-04",
+    "FR-05",
+    "FR-06",
+    "FR-09",
+    "FR-10",
+    "FR-11",
+    "FR-07",
+    "FR-08",
+    "FR-12",
+    "FR-14",
+    "FR-15",
+    "FR-13",
+    "FR-16",
+    "FR-17",
+    "FR-18",
+    "FR-19",
+    "FR-20",
+    "FR-21",
+    "FR-22",
+    "FR-23",
+    "FR-64",
+    "FR-65",
+    "FR-66",
+    "FR-67",
+    "FR-68",
+    "FR-69",
+    "FR-70",
+    "FR-72",
+    "FR-71",
+    "FR-73",
+    "FR-74",
+    "FR-40",
+    "FR-41",
+]
