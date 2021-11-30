@@ -13,7 +13,6 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 from datetime import datetime
-from datetime import timezone
 from datetime import time
 from datetime import timedelta
 import pytz
@@ -332,9 +331,16 @@ def parse_xml_vorarlberg(root):
     return reports
 
 
-def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
+def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 1)):
 
     '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
+    
+    if today == datetime(1, 1, 1, 1, 1, 1):
+        now = datetime.now(pytz.timezone('Europe/Ljubljana'))
+        if now.time() > time(17, 0, 1):
+            today = now.date() + timedelta(days=1)
+        else:
+            today = now.date()
 
     reports = []
     report = AvaBulletin()
@@ -362,11 +368,17 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime.today().date()):
 
         for wxSynopsisComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}wxSynopsisComment'):
             report.wxSynopsisComment = wxSynopsisComment.text
+            if type(report.wxSynopsisComment) == str:
+                report.wxSynopsisComment = report.wxSynopsisComment.strip()
         for snowpackStructureComment in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'\
                                                                   'snowpackStructureComment'):
             report.snowpackStructureComment = snowpackStructureComment.text
+            if type(report.snowpackStructureComment) == str:
+                report.snowpackStructureComment = report.snowpackStructureComment.strip()
         for highlights in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}comment'):
             report.avalancheActivityHighlights = highlights.text
+            if type(report.avalancheActivityHighlights) == str:
+                report.avalancheActivityHighlights = report.avalancheActivityHighlights.strip()
 
         '''
         for DangerPattern in bulletinMeasurements.iter(tag='{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}DangerPattern'):
