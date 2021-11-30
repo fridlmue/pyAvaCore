@@ -14,7 +14,7 @@
 """
 import json
 import urllib.request
-import datetime
+from datetime import datetime
 from datetime import time
 from datetime import timedelta
 import pytz
