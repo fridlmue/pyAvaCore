@@ -6,6 +6,7 @@ from datetime import timedelta
 from pathlib import Path
 from urllib.request import urlopen
 import json
+import typing
 import logging
 import logging.handlers
 import sys
@@ -20,6 +21,13 @@ logging.basicConfig(
     handlers=[
         logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
         logging.StreamHandler()])
+
+class Bulletins:
+    '''
+    Class for the AvaBulletin collection
+    Follows partly CAAMLv6 caaml:Bulletins
+    '''
+    bulletins: typing.List[AvaBulletin]
 
 def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
@@ -39,6 +47,9 @@ def download_region(regionID):
             if 'AT8R' in region.regionID:
                 region.regionID = region.regionID.replace('AT8R', 'AT-08-0')
 
+    bulletins = Bulletins()
+    bulletins.bulletins = reports
+
     directory = Path(sys.argv[1] if len(sys.argv) > 1 else 'data')
     directory.mkdir(parents=True, exist_ok=True)
     ext = 'zip' if url[-3:] == 'zip' else 'xml'
@@ -47,7 +58,7 @@ def download_region(regionID):
         f.write(http.read())
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
-        json.dump(reports, fp=f, cls=JSONEncoder, indent=2)
+        json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
 
 
 if __name__ == "__main__":
