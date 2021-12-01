@@ -217,9 +217,9 @@ class AvaBulletin:
     '''Valid TimeInterval of the Bulletin'''
     source: SourceType
     '''Details about the Bulletin Provider'''
-    dangerRating: typing.List[DangerRatingType]
+    dangerRatings: typing.List[DangerRatingType]
     '''avalanche danger rating'''
-    avalancheProblem: typing.List[AvalancheProblemType]
+    avalancheProblems: typing.List[AvalancheProblemType]
     '''avalanche problem'''
     tendency: TendencyType
     '''tendency of the av situation'''
@@ -249,8 +249,8 @@ class AvaBulletin:
         self.regions = []
         self.validTime = ValidTimeType()
         self.source = SourceType()
-        self.dangerRating = []
-        self.avalancheProblem = []
+        self.dangerRatings = []
+        self.avalancheProblems = []
         self.tendency = TendencyType()
 
     def get_region_list(self):
@@ -274,7 +274,7 @@ class AvaBulletin:
             print('║ ├─ ', region.regionID)
 
         print('╟───── Danger Rating')
-        for dangerRating in self.dangerRating:
+        for dangerRating in self.dangerRatings:
             print('║ ', dangerRating.elevation.toString(), '➝ :', dangerRating.mainValue)
 
 
