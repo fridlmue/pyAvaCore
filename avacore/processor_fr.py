@@ -123,13 +123,13 @@ def process_reports_fr(region_id, path='', cached=False):
             danger_rating = copy.deepcopy(danger_rating_pre)
             danger_rating.set_mainValue_int(int(risque.attrib.get('RISQUE1')))
             danger_rating.elevation.auto_select(risque.attrib.get('LOC1'))
-            report.dangerRating.append(danger_rating)
+            report.dangerRatings.append(danger_rating)
             if not risque.attrib.get('RISQUE2') == '':
                 #report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE2')), risque.attrib.get('LOC2')))
                 danger_rating2 = copy.deepcopy(danger_rating_pre)
                 danger_rating2.set_mainValue_int(int(risque.attrib.get('RISQUE2')))
                 danger_rating2.elevation.auto_select(risque.attrib.get('LOC2'))
-                report.dangerRating.append(danger_rating2)
+                report.dangerRatings.append(danger_rating2)
 
         for resume in cartoucherisque.iter(tag='RESUME'):
             report.avalancheActivityHighlights = resume.text
@@ -181,15 +181,15 @@ def process_reports_fr(region_id, path='', cached=False):
                 pm_danger_ratings.append(danger_rating_pm)
                 # pm_danger_ratings.append(pyAvaCore.DangerMain(int(risque.attrib.get('EVOLURISQUE1')), risque.attrib.get('LOC1')))
             else:
-                pm_danger_ratings.append(report.dangerRating[0])
+                pm_danger_ratings.append(report.dangerRatings[0])
             if not risque.attrib.get('EVOLURISQUE2') == '':
                 pm_available = True
                 danger_rating_pm2 = copy.deepcopy(danger_rating_pre)
                 danger_rating_pm2.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE2')))
                 danger_rating_pm2.elevation.auto_select(risque.attrib.get('LOC2'))
                 pm_danger_ratings.append(danger_rating_pm2)
-            elif len(report.dangerRating) > 1:
-                pm_danger_ratings.append(report.dangerRating[1])
+            elif len(report.dangerRatings) > 1:
+                pm_danger_ratings.append(report.dangerRatings[1])
 
     report.bulletinID = report.regions[0].regionID + '_' + str(report.publicationTime.isoformat())
 
@@ -199,7 +199,7 @@ def process_reports_fr(region_id, path='', cached=False):
         pm_report.bulletinID += '_PM'
         report.validTime.endTime = report.validTime.endTime.replace(hour=12)
         pm_report.validTime.startTime = report.validTime.endTime.replace(hour=12)
-        pm_report.dangerRating = pm_danger_ratings
+        pm_report.dangerRatings = pm_danger_ratings
 
         reports.append(pm_report)
 

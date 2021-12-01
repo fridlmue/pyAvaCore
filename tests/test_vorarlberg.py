@@ -15,11 +15,11 @@ class TestVorarlberg(unittest.TestCase):
         self.assertEqual(report.validTime.endTime.isoformat(), '2021-02-10T07:30:00+01:00')
         self.assertIn('AT8R3', report.get_region_list())
         self.assertNotIn('AT8R1', report.get_region_list())
-        self.assertEqual(report.dangerRating[0].mainValue, 'considerable')
-        self.assertEqual(report.dangerRating[0].elevation.lowerBound, '2200')
+        self.assertEqual(report.dangerRatings[0].mainValue, 'considerable')
+        self.assertEqual(report.dangerRatings[0].elevation.lowerBound, '2200')
         # self.assertEqual(report.dangerPattern, ['DP6', 'DP2'])
-        self.assertEqual(report.avalancheProblem[0].problemType, 'wind_drifted_snow')
-        self.assertEqual(report.avalancheProblem[1].problemType, 'persistent_weak_layers')
+        self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
+        self.assertEqual(report.avalancheProblems[1].problemType, 'persistent_weak_layers')
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
 if __name__ == '__main__':

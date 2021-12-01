@@ -181,7 +181,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
 
         # html_weather_snow = AvaCoreCustom('html_weather_snow')
         # html_weather_snow.content = text
-        # report.dangerRating[0].customData.append(html_weather_snow)      
+        # report.dangerRatings[0].customData.append(html_weather_snow)      
         
         bulletinIDs = []
         bulletin_combinations = set()
@@ -227,7 +227,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
             danger_rating = DangerRatingType()
             danger_rating.set_mainValue_int(int(text[text_pos:text_pos + 1]))
             
-            report.dangerRating.append(danger_rating)
+            report.dangerRatings.append(danger_rating)
 
             # Isolates the prone location Image
             text_pos = text.find('src="data:image/png;base64,') + len('src="data:image/png;base64,')
@@ -239,7 +239,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                 prone_locations_height = '-'
             else:
                 general_problem_locations = get_prone_locations(prone_locations_height)
-            # report.dangerRating[0].customData.append(prone_locations_img)
+            # report.dangerRatings[0].customData.append(prone_locations_img)
 
             # Isolates the prone location Text
             text_pos = subtext.find('alt="') + len('alt="')
@@ -250,10 +250,10 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
             #     prone_locations_text.content = '-'
             if not prone_locations_text == 'Content-Type':
                 valid_elevation = ''.join(c for c in prone_locations_text if c.isdigit())
-                report.dangerRating[0].elevation = ElevationType(valid_elevation)
+                report.dangerRatings[0].elevation = ElevationType(valid_elevation)
 
-            # report.dangerRating[0].customData.append(prone_locations_text)
-            report.dangerRating[0].aspect = general_problem_locations
+            # report.dangerRatings[0].customData.append(prone_locations_text)
+            report.dangerRatings[0].aspect = general_problem_locations
             
             texts = []
             
@@ -306,7 +306,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                         if not problem_type_text == '':
                             problem = AvalancheProblemType()
                             problem.problemType = problem_type_text
-                            report.avalancheProblem.append(problem)
+                            report.avalancheProblems.append(problem)
         
         final_reports = []
         
@@ -346,8 +346,8 @@ def process_reports_ch(path, lang="en", cached=False, problems=False):
                     for problem in report_am.avalancheProblem:
                         report_pm.avalancheProblem.append(problem)
                         
-                report_pm.dangerRating[0].elevation = report_am.dangerRating[0].elevation
-                report_pm.dangerRating[0].aspect = report_am.dangerRating[0].aspect
+                report_pm.dangerRatings[0].elevation = report_am.dangerRatings[0].elevation
+                report_pm.dangerRatings[0].aspect = report_am.dangerRatings[0].aspect
                 report_pm.avalancheActivityComment = report_am.avalancheActivityComment + '\n' + report_pm.avalancheActivityComment
                 report_pm.validTime.startTime = report_am.validTime.endTime
                 final_reports.append(report_pm)

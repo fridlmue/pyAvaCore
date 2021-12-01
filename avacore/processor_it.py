@@ -122,14 +122,14 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         # report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
         danger_rating.elevation.auto_select(prefix_alti + general_problem_valid_elevation)
         
-    report.dangerRating.append(danger_rating)
+    report.dangerRatings.append(danger_rating)
 
     av_problem = details_10[3][5:-4].lower()
     if av_problem != '':
         #report.problem_list.append(av_problem)
         problem = AvalancheProblemType()
         problem.add_problemType(av_problem)
-        report.avalancheProblem.append(problem)
+        report.avalancheProblems.append(problem)
 
     reports.append(report)
 

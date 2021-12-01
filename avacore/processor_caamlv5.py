@@ -89,7 +89,7 @@ def parse_xml(root):
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
                 if am_rating:
-                    report.dangerRating.append(danger_rating)
+                    report.dangerRatings.append(danger_rating)
                 else:
                     pm_danger_ratings.append(danger_rating)
             '''
@@ -118,7 +118,7 @@ def parse_xml(root):
                 problem.dangerRating = problem_danger_rating
                 if comment_r != '':
                     problem.comment = comment_r
-                report.avalancheProblem.append(problem)
+                report.avalancheProblems.append(problem)
                 # report.problem_list.append(pyAvaCore.Problem(type_r, aspect, valid_elevation))
             for avActivityHighlights in observations.iter(tag=CAAMLTAG + 'avActivityHighlights'):
                 # report.report_texts.append(pyAvaCore.ReportText('activity_hl', avActivityHighlights.text))
@@ -140,7 +140,7 @@ def parse_xml(root):
 
         if pm_available:
             pm_report = copy.deepcopy(report)
-            pm_report.dangerRating = pm_danger_ratings
+            pm_report.dangerRatings = pm_danger_ratings
             pm_report.bulletinID += '_PM'
             pm_report.validTime.startTime = pm_report.validTime.startTime + timedelta(hours=12)
             pm_report.validTime.endTime = pm_report.validTime.endTime + timedelta(hours=12)
@@ -220,7 +220,7 @@ def parse_xml_vorarlberg(root):
                     problem = AvalancheProblemType()
                     problem.add_problemType(type_r)
                     problem.dangerRating = problem_danger_rating
-                    report.avalancheProblem.append(problem)
+                    report.avalancheProblems.append(problem)
 
     # report.report_texts.append(pyAvaCore.ReportText('activity_com', activity_com))
     report.avalancheActivityComment = activity_com
@@ -282,7 +282,7 @@ def parse_xml_vorarlberg(root):
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]
-                c_report.dangerRating.append(loc_elem[3])
+                c_report.dangerRatings.append(loc_elem[3])
                 loc_ref_list.append(loc_elem[0])
                 reports.append(c_report)
                 del_index.append(index)
@@ -295,10 +295,10 @@ def parse_xml_vorarlberg(root):
             report_elem_number = loc_ref_list.index(loc_elem[0])
             if reports[report_elem_number].validTime.startTime > loc_elem[2]:
                 reports[report_elem_number].validTime.endTime = loc_elem[2]
-            if not (reports[report_elem_number].dangerRating[0].mainValue == loc_elem[3].mainValue and \
-                reports[report_elem_number].dangerRating[0].elevation.toString() == loc_elem[3].elevation.toString()): 
+            if not (reports[report_elem_number].dangerRatings[0].mainValue == loc_elem[3].mainValue and \
+                reports[report_elem_number].dangerRatings[0].elevation.toString() == loc_elem[3].elevation.toString()): 
                         
-                reports[report_elem_number].dangerRating.append(loc_elem[3])
+                reports[report_elem_number].dangerRatings.append(loc_elem[3])
             del_index.append(index)
 
     loc_list = [i for j, i in enumerate(loc_list) if j not in del_index]
@@ -315,9 +315,9 @@ def parse_xml_vorarlberg(root):
             c_report.validTime.endTime = loc_elem[2]
             c_report.predecessor_id = report_id + '-' + loc_elem[0]
 
-            c_report.dangerRating = []
-            c_report.dangerRating.append(loc_elem[3])
-
+            c_report.dangerRatings = []
+            c_report.dangerRatings.append(loc_elem[3])
+            
             reports.append(c_report)
             del_index.append(index)
 
@@ -412,7 +412,7 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
             problem = AvalancheProblemType()
             problem.add_problemType(type_r)
             problem.dangerRating = problem_danger_rating
-            report.avalancheProblem.append(problem)
+            report.avalancheProblems.append(problem)
 
     report.avalancheActivityComment = activity_com
 
@@ -475,7 +475,7 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]
-                c_report.dangerRating.append(loc_elem[3])
+                c_report.dangerRatings.append(loc_elem[3])
                 loc_ref_list.append(loc_elem[0])
                 reports.append(c_report)
                 del_index.append(index)
@@ -488,9 +488,9 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
             report_elem_number = loc_ref_list.index(loc_elem[0])
             if reports[report_elem_number].validTime.endTime > loc_elem[2]:
                 reports[report_elem_number].validTime.endTime = loc_elem[2]
-            if not (reports[report_elem_number].dangerRating[0].mainValue == loc_elem[3].mainValue and \
-                reports[report_elem_number].dangerRating[0].elevation.toString() == loc_elem[3].elevation.toString()): 
-                reports[report_elem_number].dangerRating.append(loc_elem[3])
+            if not (reports[report_elem_number].dangerRatings[0].mainValue == loc_elem[3].mainValue and \
+                reports[report_elem_number].dangerRatings[0].elevation.toString() == loc_elem[3].elevation.toString()): 
+                reports[report_elem_number].dangerRatings.append(loc_elem[3])
             del_index.append(index)
 
     loc_list = [i for j, i in enumerate(loc_list) if j not in del_index]
@@ -506,7 +506,7 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
             c_report.validTime.startTime = loc_elem[1]
             c_report.validTime.endTime = loc_elem[2]
             c_report.predecessor_id = report_id + '-' + loc_elem[0]
-            for dangerRating in c_report.dangerRating:
+            for dangerRating in c_report.dangerRatings:
                 if dangerRating.elevation.toString() == loc_elem[3].elevation.toString():
                     dangerRating.mainValue = loc_elem[3].mainValue
             reports.append(c_report)
@@ -517,7 +517,7 @@ def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 
 
     for index, loc_elem in enumerate(loc_list):
         report_elem_number = loc_ref_list.index(loc_elem[0] + '_PM')
-        for danger_main in reports[report_elem_number].dangerRating:
+        for danger_main in reports[report_elem_number].dangerRatings:
             if danger_main.elevation.toString() == loc_elem[3].elevation.toString():
                 danger_main.mainValue = loc_elem[3].mainValue
 
