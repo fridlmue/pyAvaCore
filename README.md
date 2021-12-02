@@ -13,7 +13,7 @@ It is also used as parser for the mobile app ["avaRisk"](https://github.com/frid
 
 ## Dependencies
 
-As on some target platforms the number of available Python dependecies is limited, the project aims to work with minimal external dependencies. Python 3.6 is the current Python target version.
+As on some target platforms the number of available Python dependecies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.6 is the current Python target version.
 
 ## Supported Regions
 At the moment the following regions are supported with the localization versions mentioned:
@@ -31,6 +31,7 @@ At the moment the following regions are supported with the localization versions
 - IT Bolzano (https://avalanche.report) (EN/DE)
 - IT Trentino (https://avalanche.report) (EN/DE)
 - SI (http://meteo.arso.gov.si/) (SI)
+- NO (https://www.varsom.no) (NO/EN)
 
 ### RegionIDs
 
