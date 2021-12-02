@@ -8,7 +8,7 @@ class TestSlovenia(unittest.TestCase):
 
     def test_slovenia(self):
         root = ET.parse(f'{__file__}.xml')
-        reports = pyAvaCore.parse_xml_bavaria(root, location = 'slovenia', today = datetime.date(2021,3,20))
+        reports = pyAvaCore.parse_xml_bavaria(root, location = 'slovenia', today = datetime.date(2021,3,20), fetch_time_dependant=False)
         self.assertEqual(len(reports), 10)
         report = reports[0]
         self.assertEqual(report.bulletinID, 'BulletinSiID-SI1')

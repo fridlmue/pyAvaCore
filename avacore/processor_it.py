@@ -34,6 +34,7 @@ logging.basicConfig(
         logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
         logging.StreamHandler()])
 
+
 def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'))):
     
     '''

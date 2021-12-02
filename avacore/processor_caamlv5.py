@@ -333,16 +333,13 @@ def parse_xml_vorarlberg(root):
     return reports
 
 
-def parse_xml_bavaria(root, location='bavaria', today = datetime(1, 1, 1, 1, 1, 1)):
+def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1), fetch_time_dependant=True):
 
     '''parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification'''
-    
-    if today == datetime(1, 1, 1, 1, 1, 1):
-        now = datetime.now(pytz.timezone('Europe/Ljubljana'))
-        if now.time() > time(17, 0, 1):
-            today = now.date() + timedelta(days=1)
-        else:
-            today = now.date()
+    now = datetime.now(pytz.timezone('Europe/Ljubljana'))
+    if fetch_time_dependant and today == datetime(1, 1, 1, 1, 1, 1) and now.time() > time(17, 0, 0):
+        today = now.date() + timedelta(days=1)
+                
 
     reports = []
     report = AvaBulletin()
