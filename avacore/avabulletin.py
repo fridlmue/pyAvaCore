@@ -279,7 +279,7 @@ class AvaBulletin:
 
 
         print('╟───── Av Problems')
-        for problem in self.avalancheProblem:
+        for problem in self.avalancheProblems:
             try:
                 print('║ Problem: ', problem.problemType, ' Elevation: ', problem.dangerRating.elevation.toString(), ' Aspects: ', problem.dangerRating.aspect)
             except:
