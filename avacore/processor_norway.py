@@ -1,15 +1,15 @@
 import json
 import urllib.request
-import datetime
+from datetime import datetime
 from datetime import timedelta
+from datetime import time
+import pytz
 import dateutil.parser
 
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
-def process_reports_no(region_id, today=datetime.datetime.today().date()):
-    reports = []
 
-    report = AvaBulletin()
+def process_reports_no(region_id):
 
     langkey = '2' # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
 
@@ -26,7 +26,19 @@ def process_reports_no(region_id, today=datetime.datetime.today().date()):
 
     varsom_report = json.loads(content)
 
-    current = 0 # Probably add one after 5 p.m.
+    reports = get_reports_fromjson(region_id, varsom_report)
+    
+    return reports
+
+
+def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
+    reports = []
+    report = AvaBulletin()
+    
+    current = 0
+    now = datetime.now(pytz.timezone('Europe/Oslo'))
+    if fetch_time_dependant and now.time() > time(17, 0, 0):
+        current = 1
 
     report.regions.append(RegionType(region_id))
     report.publicationTime = dateutil.parser.parse(varsom_report[current]['PublishTime'].split('.')[0])
@@ -88,4 +100,5 @@ def process_reports_no(region_id, today=datetime.datetime.today().date()):
     report.tendency.tendencyComment = varsom_report[current+1]['MainText']
 
     reports.append(report)
+
     return reports
