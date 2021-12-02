@@ -30,7 +30,7 @@ def process_reports_uk(today=datetime.today().date()):
 
         report.publicationTime = dateutil.parser.parse(sais_report['DatePublished']) # 18:00
         report.validTime.startTime = report.publicationTime.replace(hour=18)
-        report.validTime.endTime = report.validity_begin + timedelta(days=1)
+        report.validTime.endTime = report.validTime.startTime + timedelta(days=1)
         report.avalancheActivityHighlights = sais_report['Summary']
         report.avalancheActivityComment = 'Forecast Snow Stability: ' + sais_report['SnowStability']
         report.snowpackStructureComment = 'Forecast Weather Influences: ' + sais_report['WeatherInfluences'] +\
@@ -59,7 +59,7 @@ def process_reports_uk(today=datetime.today().date()):
             report.avalancheProblems.append(problem)
         if problems & (1<<5):
             problem = AvalancheProblemType()
-            #problem.problemType = 'cornice_failure'
+            problem.problemType = 'cornice_failure'
             report.avalancheProblems.append(problem)
         if problems & (1<<6):
             problem = AvalancheProblemType()
