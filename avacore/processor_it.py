@@ -87,9 +87,9 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     report.bulletinID = region_id + '_' + today.isoformat()
     
     if p_giorno == '1':
-        report.validTime.startTime = datetime.combine(today, time(16,0)) - timedelta(hours=24)
+        report.validTime.startTime = datetime.combine(today, time(17,0)) - timedelta(hours=24)
     else:
-        report.validTime.startTime = datetime.combine(today, time(16,0))
+        report.validTime.startTime = datetime.combine(today, time(17,0))
     report.validTime.endTime =  report.validTime.startTime + timedelta(hours=24)
     
     danger_rating = DangerRatingType()
