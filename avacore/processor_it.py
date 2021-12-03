@@ -56,8 +56,13 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     old = False
 
     p_code, p_zona = it_region_ref[region_id]
+    p_giorno = '1'
+    
+    now = datetime.now(pytz.timezone('Europe/Rome'))
+    if now.time() > time(16, 0, 0):
+        p_giorno = '3'
 
-    url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='1'&pIdZona='" \
+    url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='" + p_giorno + "'&pIdZona='" \
         + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
 
     headers = {
@@ -76,31 +81,16 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     details_11 = details_1x[1].split('|')
     details_12 = details_1x[2].split('|')
 
-    if len(details_11) < 6:
-        old = True
-        url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='-1'&pIdZona='" \
-            + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
-        req = urllib.request.Request(url, headers=headers)
-
-        with urllib.request.urlopen(req) as response:
-            content = response.read()
-
-        aineva_object = json.loads(content)
-        all_text = aineva_object['d']
-        details_1x = all_text.split('£')
-        details_10 = details_1x[0].split('|')
-        details_11 = details_1x[1].split('|')
-        details_12 = details_1x[2].split('|')
-
     report.publicationTime = date_from_report(details_1x[9])
     report.regions.append(RegionType(region_id))
 
     report.bulletinID = region_id + '_' + today.isoformat()
-    report.validTime.startTime = datetime.combine(today, time(0,0))
-    report.validTime.endTime = datetime.combine(today, time(23,59))
-    if old:
-        report.validTime.startTime = report.validTime.startTime - timedelta(hours = 24)
-        report.validTime.endTime = report.validTime.endTime - timedelta(hours = 24)
+    
+    if p_giorno == '1':
+        report.validTime.startTime = datetime.combine(today, time(16,0)) - timedelta(hours=24)
+    else:
+        report.validTime.startTime = datetime.combine(today, time(16,0))
+    report.validTime.endTime =  report.validTime.startTime + timedelta(hours=24)
     
     danger_rating = DangerRatingType()
 
