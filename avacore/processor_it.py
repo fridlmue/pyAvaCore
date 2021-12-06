@@ -75,7 +75,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         content = response.read()
 
     aineva_object = json.loads(content)
-    print(aineva_object)
+
     all_text = aineva_object['d']
     details_1x = all_text.split('£')
     details_10 = details_1x[0].split('|')
