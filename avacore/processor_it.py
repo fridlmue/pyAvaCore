@@ -75,6 +75,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         content = response.read()
 
     aineva_object = json.loads(content)
+    print(aineva_object)
     all_text = aineva_object['d']
     details_1x = all_text.split('£')
     details_10 = details_1x[0].split('|')
@@ -94,10 +95,19 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     
     danger_rating = DangerRatingType()
 
-    if int(details_10[0][3]) < 6:
-        danger_rating.set_mainValue_int(int(details_10[0][3]))
+    if (details_10[0][4].isnumeric()):
+        danger_img_value = int(details_10[0][3] + details_10[0][4])
+    else:
+        danger_img_value = int(details_10[0][3])
+    
+    if danger_img_value < 6:
+        danger_rating.set_mainValue_int(danger_img_value)
         # danger_rating.elevation.auto_select(valid_elevation)
         # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
+    else:
+        # More Values should follow here. I don't know all the possible combinations.
+        if danger_img_value == 14:
+            danger_rating.set_mainValue_int(3) # Tagesverläuflicher Anstieg von 2 auf 3
 
     prefix_alti = ''
 
