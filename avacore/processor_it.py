@@ -106,8 +106,12 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
     else:
         # More Values should follow here. I don't know all the possible combinations.
-        if danger_img_value == 14:
+        if danger_img_value == 12:
+            danger_rating.set_mainValue_int(2) # Tagesverläuflicher Anstieg von 1 auf 2
+        elif danger_img_value == 14:
             danger_rating.set_mainValue_int(3) # Tagesverläuflicher Anstieg von 2 auf 3
+        elif danger_img_value == 17:
+            danger_rating.set_mainValue_int(4) # Tagesverläuflicher Anstieg von 3 auf 4
 
     prefix_alti = ''
 
