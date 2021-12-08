@@ -44,6 +44,20 @@ class Bulletins:
     '''
     bulletins: typing.List[AvaBulletin]
 
+    def max_danger_ratings(self):
+        ratings = dict()
+        for bulletin in self.bulletins:
+            for region in bulletin.regions:
+                regionID = region.regionID
+                for danger in bulletin.dangerRatings:
+                    if Bulletins.region_without_elevation(regionID) or not danger.elevation or danger.elevation.toString().startswith('<'):
+                        key = f'{regionID}:low'
+                        ratings[key] = max(danger.get_mainValue_int(), ratings.get(key, 0))
+                    if Bulletins.region_without_elevation(regionID) or not danger.elevation or danger.elevation.toString().startswith('>'):
+                        key = f'{regionID}:high'
+                        ratings[key] = max(danger.get_mainValue_int(), ratings.get(key, 0))
+        return ratings
+
     def augment_geojson(self, geojson: FeatureCollection):
         for feature in geojson.features:
             self.augment_feature(feature)
@@ -54,7 +68,7 @@ class Bulletins:
         def affects_region(b: AvaBulletin):
             return id in [r.regionID for r in b.regions]
         def affects_danger(d: DangerRatingType):
-            if id.startswith('CH-') or id.startswith('IT-21-') or id.startswith('IT-23-') or id.startswith('IT-25-') or id.startswith('IT-25-') or id.startswith('IT-34-') or id.startswith('IT-36-') or id.startswith('IT-57-') or id.startswith('FR-'):
+            if Bulletins.region_without_elevation(id):
                 return True
             elif not d.elevation:
                 return True
@@ -71,6 +85,10 @@ class Bulletins:
         if not dangers:
             return
         feature.properties.max_danger_rating = max(dangers)
+
+    @staticmethod
+    def region_without_elevation(id: str):
+        return id.startswith('CH-') or id.startswith('IT-21-') or id.startswith('IT-23-') or id.startswith('IT-25-') or id.startswith('IT-25-') or id.startswith('IT-34-') or id.startswith('IT-36-') or id.startswith('IT-57-') or id.startswith('FR-')
 
 
 def download_region(regionID):
@@ -100,6 +118,10 @@ def download_region(regionID):
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
         json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
+    with open(f'{directory}/{validityDate}-{regionID}.ratings.json', mode='w', encoding='utf-8') as f:
+        obj = dict(maxDangerRatings=bulletins.max_danger_ratings())
+        logging.info('Writing %s', f.name)
+        json.dump(obj, fp=f, indent=2, sort_keys=True)
     if args.geojson:
         with open(f'{args.geojson}/{regionID}_micro-regions_elevation.geojson.json', encoding='utf-8') as f:
             geojson = FeatureCollection.from_dict(json.load(f))
