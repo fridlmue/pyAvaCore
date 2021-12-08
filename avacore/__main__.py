@@ -12,7 +12,8 @@ import logging
 import logging.handlers
 
 from .pyAvaCore import JSONEncoder, get_reports
-from .avabulletin import AvaBulletin
+from .avabulletin import AvaBulletin, DangerRatingType
+from .geojson import Feature, FeatureCollection, Style
 
 parser = argparse.ArgumentParser(description='Download and parse EAWS avalanche bulletins')
 parser.add_argument('--regions',
@@ -24,6 +25,8 @@ parser.add_argument('--output',
 parser.add_argument('--cache',
                     default='./cache',
                     help='cache directory')
+parser.add_argument('--geojson',
+                    help='eaws-regions directory containing *micro-regions_elevation.geojson.json of')
 args = parser.parse_args()
 
 Path('logs').mkdir(parents=True, exist_ok=True)
@@ -40,6 +43,41 @@ class Bulletins:
     Follows partly CAAMLv6 caaml:Bulletins
     '''
     bulletins: typing.List[AvaBulletin]
+
+    def augment_geojson(self, geojson: FeatureCollection):
+        for feature in geojson.features:
+            self.augment_feature(feature)
+            
+    def augment_feature(self, feature: Feature):
+        WARNLEVEL_COLORS = ['', '#ccff66', '#ffff00', '#ff9900', '#ff0000', '#000000']
+        id = feature.properties.id
+        elevation = feature.properties.elevation
+        def affects_region(b: AvaBulletin):
+            return id in [r.regionID for r in b.regions]
+        def affects_danger(d: DangerRatingType):
+            if id.startswith('CH-') or id.startswith('IT-21-') or id.startswith('IT-23-') or id.startswith('IT-25-') or id.startswith('IT-25-') or id.startswith('IT-34-') or id.startswith('IT-36-') or id.startswith('IT-57-') or id.startswith('FR-'):
+                return True
+            elif not d.elevation:
+                return True
+            elif not (hasattr(d.elevation, 'lowerBound') or hasattr(d.elevation, 'upperBound')):
+                return True
+            elif hasattr(d.elevation, 'upperBound') and elevation == 'low':
+                return True
+            elif hasattr(d.elevation, 'lowerBound') and elevation == 'high':
+                return True
+            else:
+                return False
+        bulletins = [b for b in self.bulletins if affects_region(b)]
+        dangers = [d.get_mainValue_int() for b in bulletins for d in b.dangerRatings if affects_danger(d)]
+        if not dangers:
+            return
+        feature.properties.style = Style(
+            stroke=False, 
+            fill_color=WARNLEVEL_COLORS[max(dangers)],
+            fill_opacity=0.5,
+            class_name='mix-blend-mode-multiply',
+        )
+
 
 def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
@@ -68,6 +106,13 @@ def download_region(regionID):
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
         json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
+    if args.geojson:
+        with open(f'{args.geojson}/{regionID}_micro-regions_elevation.geojson.json', encoding='utf-8') as f:
+            geojson = FeatureCollection.from_dict(json.load(f))
+        bulletins.augment_geojson(geojson)
+        with open(f'{directory}/{validityDate}-{regionID}.geojson', mode='w', encoding='utf-8') as f:
+            logging.info('Writing %s', f.name)
+            json.dump(geojson.to_dict(), fp=f)
 
 
 if __name__ == "__main__":
