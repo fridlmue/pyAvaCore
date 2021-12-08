@@ -17,7 +17,6 @@ import urllib.request
 from datetime import datetime
 from datetime import time
 from datetime import timedelta
-from pathlib import Path
 import pytz
 import dateutil.parser
 import logging
@@ -25,14 +24,6 @@ import logging.handlers
 
 from avacore import pyAvaCore
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
-
-Path('logs').mkdir(parents=True, exist_ok=True)
-logging.basicConfig(
-    format='[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s',
-    level=logging.INFO,
-    handlers=[
-        logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
-        logging.StreamHandler()])
 
 
 def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'))):
