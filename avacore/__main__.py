@@ -13,7 +13,7 @@ import logging.handlers
 
 from .pyAvaCore import JSONEncoder, get_reports
 from .avabulletin import AvaBulletin, DangerRatingType
-from .geojson import Feature, FeatureCollection, Style
+from .geojson import Feature, FeatureCollection
 
 parser = argparse.ArgumentParser(description='Download and parse EAWS avalanche bulletins')
 parser.add_argument('--regions',
@@ -49,7 +49,6 @@ class Bulletins:
             self.augment_feature(feature)
             
     def augment_feature(self, feature: Feature):
-        WARNLEVEL_COLORS = ['', '#ccff66', '#ffff00', '#ff9900', '#ff0000', '#000000']
         id = feature.properties.id
         elevation = feature.properties.elevation
         def affects_region(b: AvaBulletin):
@@ -71,12 +70,7 @@ class Bulletins:
         dangers = [d.get_mainValue_int() for b in bulletins for d in b.dangerRatings if affects_danger(d)]
         if not dangers:
             return
-        feature.properties.style = Style(
-            stroke=False, 
-            fill_color=WARNLEVEL_COLORS[max(dangers)],
-            fill_opacity=0.5,
-            class_name='mix-blend-mode-multiply',
-        )
+        feature.properties.max_danger_rating = max(dangers)
 
 
 def download_region(regionID):

@@ -50,6 +50,11 @@ def from_bool(x: Any) -> bool:
     return x
 
 
+def from_int(x: Any) -> int:
+    assert isinstance(x, int) and not isinstance(x, bool)
+    return x
+
+
 def to_class(c: Type[T], x: Any) -> dict:
     assert isinstance(x, c)
     return cast(Any, x).to_dict()
@@ -75,36 +80,11 @@ class Geometry:
 
 
 @dataclass
-class Style:
-    stroke: Optional[bool] = None
-    fill_color: Optional[str] = None
-    fill_opacity: Optional[float] = None
-    class_name: Optional[str] = None
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Style':
-        assert isinstance(obj, dict)
-        stroke = from_union([from_bool, from_none], obj.get("stroke"))
-        fill_color = from_union([from_str, from_none], obj.get("fillColor"))
-        fill_opacity = from_union([from_float, from_none], obj.get("fillOpacity"))
-        class_name = from_union([from_str, from_none], obj.get("className"))
-        return Style(stroke, fill_color, fill_opacity, class_name)
-
-    def to_dict(self) -> dict:
-        result: dict = {}
-        result["stroke"] = from_union([from_bool, from_none], self.stroke)
-        result["fillColor"] = from_union([from_str, from_none], self.fill_color)
-        result["fillOpacity"] = from_union([to_float, from_none], self.fill_opacity)
-        result["className"] = from_union([from_str, from_none], self.class_name)
-        return result
-
-
-@dataclass
 class Properties:
     threshold: None
     id: Optional[str] = None
     elevation: Optional[str] = None
-    style: Optional[Style] = None
+    max_danger_rating: Optional[int] = None
 
     @staticmethod
     def from_dict(obj: Any) -> 'Properties':
@@ -112,15 +92,15 @@ class Properties:
         threshold = from_none(obj.get("threshold"))
         id = from_union([from_str, from_none], obj.get("id"))
         elevation = from_union([from_str, from_none], obj.get("elevation"))
-        style = from_union([Style.from_dict, from_none], obj.get("style"))
-        return Properties(threshold, id, elevation, style)
+        max_danger_rating = from_union([from_int, from_none], obj.get("maxDangerRating"))
+        return Properties(threshold, id, elevation, max_danger_rating)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["threshold"] = from_none(self.threshold)
         result["id"] = from_union([from_str, from_none], self.id)
         result["elevation"] = from_union([from_str, from_none], self.elevation)
-        result["style"] = from_union([lambda x: to_class(Style, x), from_none], self.style)
+        result["maxDangerRating"] = from_union([from_int, from_none], self.max_danger_rating)
         return result
 
 
