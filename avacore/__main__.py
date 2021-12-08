@@ -5,14 +5,26 @@ from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
 from urllib.request import urlopen
+import argparse
 import json
 import typing
 import logging
 import logging.handlers
-import sys
 
-from .pyAvaCore import JSONEncoder, get_report_url, get_reports
+from .pyAvaCore import JSONEncoder, get_reports
 from .avabulletin import AvaBulletin
+
+parser = argparse.ArgumentParser(description='Download and parse EAWS avalanche bulletins')
+parser.add_argument('--regions',
+                    default="AT-02 AT-03 AT-04 AT-05 AT-06 AT-07 AT-08 DE-BY CH SI FR IT-AINEVA",
+                    help='avalanche region to download')
+parser.add_argument('--output',
+                    default='./data',
+                    help='output directory')
+parser.add_argument('--cache',
+                    default='./cache',
+                    help='cache directory')
+args = parser.parse_args()
 
 Path('logs').mkdir(parents=True, exist_ok=True)
 logging.basicConfig(
@@ -33,7 +45,7 @@ def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
     if regionID == 'CH':
         url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
-        reports, _, _ = get_reports(regionID, cache_path=str(Path('cache')))
+        reports, _, _ = get_reports(regionID, cache_path=args.cache)
     else:
         reports, _, url = get_reports(regionID)
     report: AvaBulletin
@@ -50,7 +62,7 @@ def download_region(regionID):
     bulletins = Bulletins()
     bulletins.bulletins = reports
 
-    directory = Path(sys.argv[1] if len(sys.argv) > 1 else 'data')
+    directory = Path(args.output)
     directory.mkdir(parents=True, exist_ok=True)
     ext = 'zip' if url[-3:] == 'zip' else 'xml'
     if url != '':
@@ -63,8 +75,7 @@ def download_region(regionID):
 
 
 if __name__ == "__main__":
-    regions = ["AT-02", "AT-03", "AT-04", "AT-05", "AT-06", "AT-07", "AT-08", "DE-BY", "CH", "SI", "FR", "IT-AINEVA"]
-    for region in regions:
+    for region in args.regions.split():
         try:
             download_region(region)
         except Exception as e: # pylint: disable=broad-except
