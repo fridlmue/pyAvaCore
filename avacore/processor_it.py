@@ -61,6 +61,7 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         }
 
     req = urllib.request.Request(url, headers=headers)
+    logging.info('Fetching %s', req.full_url)
 
     with urllib.request.urlopen(req) as response:
         content = response.read()

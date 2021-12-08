@@ -63,7 +63,6 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
 
     url = ''
     if region_id.startswith("FR"):
-        logging.info('Fetching %s', region_id)
         if region_id == "FR":
             reports = process_all_reports_fr()
         else:

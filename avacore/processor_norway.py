@@ -5,6 +5,7 @@ from datetime import timedelta
 from datetime import time
 import pytz
 import dateutil.parser
+import logging
 
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
@@ -21,6 +22,7 @@ def process_reports_no(region_id):
 
     req = urllib.request.Request(url, headers=headers)
 
+    logging.info('Fetching %s', req.full_url)
     with urllib.request.urlopen(req) as response:
         content = response.read()
 
