@@ -40,6 +40,11 @@ def to_float(x: Any) -> float:
     return x
 
 
+def to_float_coordinate(x: Any) -> float:
+    assert isinstance(x, float)
+    return round(x, 4)
+
+
 def from_bool(x: Any) -> bool:
     assert isinstance(x, bool)
     return x
@@ -65,7 +70,7 @@ class Geometry:
     def to_dict(self) -> dict:
         result: dict = {}
         result["type"] = from_union([from_str, from_none], self.type)
-        result["coordinates"] = from_union([lambda x: from_list(lambda x: from_list(lambda x: from_list(lambda x: from_list(to_float, x), x), x), x), from_none], self.coordinates)
+        result["coordinates"] = from_union([lambda x: from_list(lambda x: from_list(lambda x: from_list(lambda x: from_list(to_float_coordinate, x), x), x), x), from_none], self.coordinates)
         return result
 
 
