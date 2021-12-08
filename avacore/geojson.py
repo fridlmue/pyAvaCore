@@ -1,5 +1,4 @@
 # Generated using https://app.quicktype.io/
-from dataclasses import dataclass
 from typing import Optional, List, Any, TypeVar, Callable, Type, cast
 
 
@@ -45,11 +44,6 @@ def to_float_coordinate(x: Any) -> float:
     return round(x, 4)
 
 
-def from_bool(x: Any) -> bool:
-    assert isinstance(x, bool)
-    return x
-
-
 def from_int(x: Any) -> int:
     assert isinstance(x, int) and not isinstance(x, bool)
     return x
@@ -60,10 +54,13 @@ def to_class(c: Type[T], x: Any) -> dict:
     return cast(Any, x).to_dict()
 
 
-@dataclass
 class Geometry:
-    type: Optional[str] = None
-    coordinates: Optional[List[List[List[List[float]]]]] = None
+    type: Optional[str]
+    coordinates: Optional[List[List[List[List[float]]]]]
+
+    def __init__(self, type: Optional[str], coordinates: Optional[List[List[List[List[float]]]]]) -> None:
+        self.type = type
+        self.coordinates = coordinates
 
     @staticmethod
     def from_dict(obj: Any) -> 'Geometry':
@@ -79,12 +76,17 @@ class Geometry:
         return result
 
 
-@dataclass
 class Properties:
     threshold: None
-    id: Optional[str] = None
-    elevation: Optional[str] = None
-    max_danger_rating: Optional[int] = None
+    id: Optional[str]
+    elevation: Optional[str]
+    max_danger_rating: Optional[int]
+
+    def __init__(self, threshold: None, id: Optional[str], elevation: Optional[str], max_danger_rating: Optional[int]) -> None:
+        self.threshold = threshold
+        self.id = id
+        self.elevation = elevation
+        self.max_danger_rating = max_danger_rating
 
     @staticmethod
     def from_dict(obj: Any) -> 'Properties':
@@ -104,11 +106,15 @@ class Properties:
         return result
 
 
-@dataclass
 class Feature:
-    type: Optional[str] = None
-    properties: Optional[Properties] = None
-    geometry: Optional[Geometry] = None
+    type: Optional[str]
+    properties: Optional[Properties]
+    geometry: Optional[Geometry]
+
+    def __init__(self, type: Optional[str], properties: Optional[Properties], geometry: Optional[Geometry]) -> None:
+        self.type = type
+        self.properties = properties
+        self.geometry = geometry
 
     @staticmethod
     def from_dict(obj: Any) -> 'Feature':
@@ -126,10 +132,13 @@ class Feature:
         return result
 
 
-@dataclass
 class FeatureCollection:
-    type: Optional[str] = None
-    features: Optional[List[Feature]] = None
+    type: Optional[str]
+    features: Optional[List[Feature]]
+
+    def __init__(self, type: Optional[str], features: Optional[List[Feature]]) -> None:
+        self.type = type
+        self.features = features
 
     @staticmethod
     def from_dict(obj: Any) -> 'FeatureCollection':
