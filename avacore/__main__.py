@@ -43,11 +43,7 @@ class Bulletins:
 
 def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
-    if regionID == 'CH':
-        url = 'https://www.slf.ch/avalanche/mobile/bulletin_en.zip'
-        reports, _, _ = get_reports(regionID, cache_path=args.cache)
-    else:
-        reports, _, url = get_reports(regionID)
+    reports, _, url = get_reports(regionID)
     report: AvaBulletin
     for report in reports:
         if isinstance(report.validTime.startTime, datetime):
