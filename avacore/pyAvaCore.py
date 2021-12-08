@@ -76,6 +76,8 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith('IT-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
         if region_id == 'IT-AINEVA':
             reports = process_all_reports_it()
+        elif region_id == 'IT-21' or region_id == 'IT-23' or region_id == 'IT-25' or region_id == 'IT-34' or region_id == 'IT-36' or region_id == 'IT-57':
+            reports = process_all_reports_it(region_prefix=region_id)
         else:
             reports = process_reports_it(region_id)
         provider = "AINEVA: aineva.it"

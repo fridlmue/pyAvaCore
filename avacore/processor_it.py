@@ -138,9 +138,11 @@ def date_from_report(date):
     return date
 
 # Only temporary for debug
-def process_all_reports_it():
+def process_all_reports_it(region_prefix=''):
     all_reports = []
     for region in it_region_ref.keys():
+        if not region.startswith(region_prefix):
+            continue
         try:
             m_reports = process_reports_it(region)
         except Exception as e: # pylint: disable=broad-except
