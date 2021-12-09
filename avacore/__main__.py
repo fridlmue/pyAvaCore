@@ -50,10 +50,10 @@ class Bulletins:
             for region in bulletin.regions:
                 regionID = region.regionID
                 for danger in bulletin.dangerRatings:
-                    if Bulletins.region_without_elevation(regionID) or not danger.elevation or danger.elevation.toString().startswith('<'):
+                    if Bulletins.region_without_elevation(regionID) or not danger.elevation or danger.elevation.toString() == '' or danger.elevation.toString().startswith('<'):
                         key = f'{regionID}:low'
                         ratings[key] = max(danger.get_mainValue_int(), ratings.get(key, 0))
-                    if Bulletins.region_without_elevation(regionID) or not danger.elevation or danger.elevation.toString().startswith('>'):
+                    if Bulletins.region_without_elevation(regionID) or not danger.elevation or danger.elevation.toString() == '' or danger.elevation.toString().startswith('>'):
                         key = f'{regionID}:high'
                         ratings[key] = max(danger.get_mainValue_int(), ratings.get(key, 0))
         return ratings
