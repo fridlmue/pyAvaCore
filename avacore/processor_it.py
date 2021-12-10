@@ -110,8 +110,12 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
             danger_rating.set_mainValue_int(2) # Tagesverläuflicher Anstieg von 1 auf 2
         elif danger_img_value == 14:
             danger_rating.set_mainValue_int(3) # Tagesverläuflicher Anstieg von 2 auf 3
+        elif danger_img_value == 16:
+            danger_rating.set_mainValue_int(2) # Tagesverläuflicher Wechsel von 2 auf 1
         elif danger_img_value == 17:
             danger_rating.set_mainValue_int(4) # Tagesverläuflicher Anstieg von 3 auf 4
+        elif danger_img_value == 20:
+            danger_rating.set_mainValue_int(3) # Tagesverläuflicher Wechsel von 3 auf 2
 
     prefix_alti = ''
 
