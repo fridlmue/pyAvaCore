@@ -120,16 +120,16 @@ def parse_xml(root):
                     problem.comment = comment_r
                 report.avalancheProblems.append(problem)
             for avActivityHighlights in observations.iter(tag=CAAMLTAG + 'avActivityHighlights'):
-                report.avalancheActivityHighlights = avActivityHighlights.text
+                report.avalancheActivityHighlights = avActivityHighlights.text.replace('&nbsp;', '\n')
             for wxSynopsisComment in observations.iter(tag=CAAMLTAG + 'wxSynopsisComment'):
-                report.wxSynopsisComment = wxSynopsisComment.text
+                report.wxSynopsisComment = wxSynopsisComment.text.replace('&nbsp;', '\n')
             for avActivityComment in observations.iter(tag=CAAMLTAG + 'avActivityComment'):
-                report.avalancheActivityComment = avActivityComment.text
+                report.avalancheActivityComment = avActivityComment.text.replace('&nbsp;', '\n')
             for snowpackStructureComment in observations.iter(tag=CAAMLTAG + ''\
                                                               'snowpackStructureComment'):
-                report.snowpackStructureComment = snowpackStructureComment.text
+                report.snowpackStructureComment = snowpackStructureComment.text.replace('&nbsp;', '\n')
             for tendencyComment in observations.iter(tag=CAAMLTAG + 'tendencyComment'):
-                report.tendency.tendencyComment = tendencyComment.text
+                report.tendency.tendencyComment = tendencyComment.text.replace('&nbsp;', '\n')
         reports.append(report)
 
         if pm_available:
