@@ -84,7 +84,6 @@ class Bulletins:
             or id.startswith("IT-21-")
             or id.startswith("IT-23-")
             or id.startswith("IT-25-")
-            or id.startswith("IT-25-")
             or id.startswith("IT-34-")
             or id.startswith("IT-36-")
             or id.startswith("IT-57-")
