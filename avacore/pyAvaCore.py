@@ -48,10 +48,7 @@ def get_xml_as_et(url):
             import xml.etree.cElementTree as ET
         except ImportError:
             import xml.etree.ElementTree as ET
-        if "VORARLBERG" in url.upper():
-            root = ET.fromstring(response_content.decode('latin-1'))
-        else:
-            root = ET.fromstring(response_content.decode('utf-8'))
+        root = ET.fromstring(response_content.decode('utf-8'))
     except Exception as r_e:
         print('error parsing ElementTree: ' + str(r_e))
     return root
