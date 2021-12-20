@@ -321,6 +321,8 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
     now = datetime.now(pytz.timezone('Europe/Ljubljana'))
     if fetch_time_dependant and today == datetime(1, 1, 1, 1, 1, 1) and now.time() > time(17, 0, 0):
         today = now.date() + timedelta(days=1)
+    elif fetch_time_dependant and today == datetime(1, 1, 1, 1, 1, 1):
+        today = now.date()
 
     reports = []
     report = AvaBulletin()
@@ -334,7 +336,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
         for dateTimeReport in metaData.iter(tag=CAAMLTAG + 'dateTimeReport'):
             if location == 'slovenia':
                 time_i = dateutil.parser.parse(dateTimeReport.text, ignoretz = True)
-                report.publicationTime =  pytz.timezone("Europe/Berlin").localize(time_i)
+                report.publicationTime = pytz.timezone("Europe/Ljubljana").localize(time_i)
             else:
                 report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
 
