@@ -17,7 +17,6 @@ import urllib.request
 from datetime import datetime
 from datetime import time
 from datetime import timedelta
-from pathlib import Path
 import pytz
 import dateutil.parser
 import logging
@@ -25,14 +24,6 @@ import logging.handlers
 
 from avacore import pyAvaCore
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
-
-Path('logs').mkdir(parents=True, exist_ok=True)
-logging.basicConfig(
-    format='[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s',
-    level=logging.INFO,
-    handlers=[
-        logging.handlers.TimedRotatingFileHandler(filename='logs/pyAvaCore.log', when='midnight'),
-        logging.StreamHandler()])
 
 
 def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'))):
@@ -56,8 +47,13 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
     old = False
 
     p_code, p_zona = it_region_ref[region_id]
+    p_giorno = '1'
+    
+    now = datetime.now(pytz.timezone('Europe/Rome'))
+    if now.time() > time(16, 0, 0):
+        p_giorno = '3'
 
-    url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='1'&pIdZona='" \
+    url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='" + p_giorno + "'&pIdZona='" \
         + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
 
     headers = {
@@ -65,72 +61,79 @@ def process_reports_it(region_id, today=datetime.now(pytz.timezone('Europe/Rome'
         }
 
     req = urllib.request.Request(url, headers=headers)
+    logging.info('Fetching %s', req.full_url)
 
     with urllib.request.urlopen(req) as response:
         content = response.read()
 
     aineva_object = json.loads(content)
+
     all_text = aineva_object['d']
     details_1x = all_text.split('£')
     details_10 = details_1x[0].split('|')
     details_11 = details_1x[1].split('|')
     details_12 = details_1x[2].split('|')
 
-    if len(details_11) < 6:
-        old = True
-        url = "https://services.aineva.it/Aineva_bollettini/NivoMeteo/ServiziNivo.asmx/getZonePrevisioni?pGiorno='-1'&pIdZona='" \
-            + str(p_zona) + "'&pCode='" + p_code + "'&pIdBollettino=''"
-        req = urllib.request.Request(url, headers=headers)
-
-        with urllib.request.urlopen(req) as response:
-            content = response.read()
-
-        aineva_object = json.loads(content)
-        all_text = aineva_object['d']
-        details_1x = all_text.split('£')
-        details_10 = details_1x[0].split('|')
-        details_11 = details_1x[1].split('|')
-        details_12 = details_1x[2].split('|')
-
     report.publicationTime = date_from_report(details_1x[9])
     report.regions.append(RegionType(region_id))
 
     report.bulletinID = region_id + '_' + today.isoformat()
-    report.validTime.startTime = datetime.combine(today, time(0,0))
-    report.validTime.endTime = datetime.combine(today, time(23,59))
-    if old:
-        report.validTime.startTime = report.validTime.startTime - timedelta(hours = 24)
-        report.validTime.endTime = report.validTime.endTime - timedelta(hours = 24)
+    
+    if p_giorno == '1':
+        report.validTime.startTime = datetime.combine(today, time(17,0)) - timedelta(hours=24)
+    else:
+        report.validTime.startTime = datetime.combine(today, time(17,0))
+    report.validTime.endTime =  report.validTime.startTime + timedelta(hours=24)
     
     danger_rating = DangerRatingType()
 
-    if int(details_10[0][3]) < 6:
-        danger_rating.set_mainValue_int(int(details_10[0][3]))
-        # danger_rating.elevation.auto_select(valid_elevation)
-        # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
+    if (details_10[0][4].isnumeric()):
+        danger_img_value = int(details_10[0][3] + details_10[0][4])
+    elif (details_10[0][3].isnumeric()):
+        danger_img_value = int(details_10[0][3])
+    else:
+        danger_img_value = -1
+    
+    if danger_img_value != -1:    
+        if danger_img_value < 6:
+            danger_rating.set_mainValue_int(danger_img_value)
+            # danger_rating.elevation.auto_select(valid_elevation)
+            # report.danger_main.append(pyAvaCore.DangerMain(int(details_10[0][3]), '-'))
+        else:
+            # More Values should follow here. I don't know all the possible combinations.
+            if danger_img_value == 12:
+                danger_rating.set_mainValue_int(2) # Tagesverläuflicher Anstieg von 1 auf 2
+            elif danger_img_value == 14:
+                danger_rating.set_mainValue_int(3) # Tagesverläuflicher Anstieg von 2 auf 3
+            elif danger_img_value == 16:
+                danger_rating.set_mainValue_int(2) # Tagesverläuflicher Wechsel von 2 auf 1
+            elif danger_img_value == 17:
+                danger_rating.set_mainValue_int(4) # Tagesverläuflicher Anstieg von 3 auf 4
+            elif danger_img_value == 20:
+                danger_rating.set_mainValue_int(3) # Tagesverläuflicher Wechsel von 3 auf 2
 
-    prefix_alti = ''
+        prefix_alti = ''
 
-    if int(details_10[2][3]) in [1, 2, 3]:
-        prefix_alti = '>'
-    if int(details_10[2][3]) == 4:
-        prefix_alti = '<'
-    elev_data = details_11[2]
-    if prefix_alti != '' and len(elev_data) < 20:
-        aspects = []
-        general_problem_valid_elevation = ''.join(c for c in elev_data.split('/')[0].split('-')[0] if c.isdigit())
-        # ToDo Aspects are missing at the moment
-        # report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
-        danger_rating.elevation.auto_select(prefix_alti + general_problem_valid_elevation)
-        
-    report.dangerRatings.append(danger_rating)
+        if int(details_10[2][3]) in [1, 2, 3]:
+            prefix_alti = '>'
+        if int(details_10[2][3]) == 4:
+            prefix_alti = '<'
+        elev_data = details_11[2]
+        if prefix_alti != '' and len(elev_data) < 20:
+            aspects = []
+            general_problem_valid_elevation = ''.join(c for c in elev_data.split('/')[0].split('-')[0] if c.isdigit())
+            # ToDo Aspects are missing at the moment
+            # report.problem_list.append(pyAvaCore.Problem("general", aspects, prefix_alti + general_problem_valid_elevation))
+            danger_rating.elevation.auto_select(prefix_alti + general_problem_valid_elevation)
+            
+        report.dangerRatings.append(danger_rating)
 
-    av_problem = details_10[3][5:-4].lower()
-    if av_problem != '':
-        #report.problem_list.append(av_problem)
-        problem = AvalancheProblemType()
-        problem.add_problemType(av_problem)
-        report.avalancheProblems.append(problem)
+        av_problem = details_10[3][5:-4].lower()
+        if av_problem != '':
+            #report.problem_list.append(av_problem)
+            problem = AvalancheProblemType()
+            problem.add_problemType(av_problem)
+            report.avalancheProblems.append(problem)
 
     reports.append(report)
 
@@ -142,9 +145,11 @@ def date_from_report(date):
     return date
 
 # Only temporary for debug
-def process_all_reports_it():
+def process_all_reports_it(region_prefix=''):
     all_reports = []
     for region in it_region_ref.keys():
+        if not region.startswith(region_prefix):
+            continue
         try:
             m_reports = process_reports_it(region)
         except Exception as e: # pylint: disable=broad-except

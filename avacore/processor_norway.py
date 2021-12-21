@@ -1,3 +1,17 @@
+"""
+    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    This file is part of pyAvaCore.
+    pyAvaCore is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    pyAvaCore is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
+"""
 import json
 import urllib.request
 from datetime import datetime
@@ -5,6 +19,7 @@ from datetime import timedelta
 from datetime import time
 import pytz
 import dateutil.parser
+import logging
 
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
@@ -21,6 +36,7 @@ def process_reports_no(region_id):
 
     req = urllib.request.Request(url, headers=headers)
 
+    logging.info('Fetching %s', req.full_url)
     with urllib.request.urlopen(req) as response:
         content = response.read()
 
@@ -30,6 +46,18 @@ def process_reports_no(region_id):
     
     return reports
 
+def process_all_reports_no(region_prefix=''):
+    all_reports = []
+    for region in no_regions:
+        try:
+            m_reports = process_reports_no(region)
+        except Exception as e: # pylint: disable=broad-except
+            logging.error('Failed to download %s', region, exc_info=e)
+            
+        for report in m_reports:
+            all_reports.append(report)
+
+    return all_reports
 
 def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
     reports = []
@@ -102,3 +130,29 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
     reports.append(report)
 
     return reports
+
+no_regions = [
+    "NO-3003",
+    "NO-3006",
+    "NO-3007",
+    "NO-3009",
+    "NO-3010",
+    "NO-3011",
+    "NO-3012",
+    "NO-3013",
+    "NO-3014",
+    "NO-3015",
+    "NO-3016",
+    "NO-3017",
+    "NO-3022",
+    "NO-3023",
+    "NO-3024",
+    "NO-3027",
+    "NO-3028",
+    "NO-3029",
+    "NO-3031",
+    "NO-3032",
+    "NO-3034",
+    "NO-3035",
+    "NO-3037"
+    ]
