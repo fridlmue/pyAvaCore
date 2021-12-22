@@ -2,8 +2,11 @@ import json
 import urllib.request
 from datetime import datetime
 from datetime import timedelta
+from datetime import time
 import pytz
 import dateutil.parser
+import logging
+import re
 
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
@@ -71,8 +74,29 @@ def process_reports_uk(today=datetime.today().date()):
         danger_rating = DangerRatingType()
         danger_rating.set_mainValue_int(max(sais_report['CompassRose'][4:36]))
         report.dangerRatings.append(danger_rating)
+        
+        danger_ratings_raw = sais_report['CompassRose'][4:36]
 
+        boundary_group = re.search('(?<=txtm\=)(.)*?(?=\&txte)', sais_report['CompassRose'])
+        boundary = boundary_group.group(0) # No content if not different ratings for elevations
+
+        print(sais_report['CompassRose'])
+        print(boundary)
+        
+        filter_lw = [True, False, False, False] * 8
+        filter_hi = [False, True, False, False] * 8
+        
+        danger_ratings_hi = list(d for d, s in zip(danger_ratings_raw, filter_hi) if s)
+        
+
+        danger_ratings = danger_ratings_raw
+
+        print(danger_ratings_hi)
+
+        # print(sais_report)
         reports.append(report)
+        
+        
 
     '''
         aspects = ['N','NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
