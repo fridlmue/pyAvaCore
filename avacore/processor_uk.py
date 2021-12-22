@@ -13,9 +13,8 @@ from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemT
 def process_reports_uk(today=datetime.today().date()):
     reports = []
 
-    url = 'https://www.sais.gov.uk/api?action=getForecast' # &params=" + region_id[3:]
+    url = 'https://www.sais.gov.uk/api?action=getForecast'
 
-    # headers = {"Content-Type": "application/json; charset=utf-8"}
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
     req = urllib.request.Request(url, headers=headers)
@@ -68,75 +67,57 @@ def process_reports_uk(today=datetime.today().date()):
             problem.problemType = 'gliding_snow'
             report.avalancheProblems.append(problem)
 
-        # report.danger_main.append(pyAvaCore.DangerMain(max(sais_report['CompassRose'][4:36]), '-'))
-        
         danger_ratings_raw = sais_report['CompassRose'][4:36]
 
         boundary_group = re.search('(?<=txtm\=)(.)*?(?=\&txte)', sais_report['CompassRose'])
         boundary = boundary_group.group(0) # No content if not different ratings for elevations
 
-        print(sais_report['CompassRose'])
-        print(boundary)
-        
         filter_lw = [True, False, False, False] * 8
         filter_hi = [False, True, False, False] * 8
-        
+
         danger_ratings_hi = list(d for d, s in zip(danger_ratings_raw, filter_hi) if s)
         danger_ratings_lw = list(d for d, s in zip(danger_ratings_raw, filter_lw) if s)
-        
+
+        aspects = ['N','NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+
         if (
             max(danger_ratings_hi) == min(danger_ratings_hi)
             and max(danger_ratings_lw) == min(danger_ratings_lw)
             and max(danger_ratings_hi) == max(danger_ratings_lw)
         ):
+            print('if', max(danger_ratings_lw), danger_ratings_lw)
             danger_rating = DangerRatingType()
-            danger_rating.set_mainValue_int(max(danger_ratings_lw))
+            danger_rating.set_mainValue_int(int(max(danger_ratings_lw)))
             report.dangerRatings.append(danger_rating)
         else:
+            print('else')
             set_danger_ratings_hi = set(danger_ratings_hi)
             set_danger_ratings_lw = set(danger_ratings_lw)
-            
-            print(set_danger_ratings_hi)
-            
-            '''
-            danger_rating_lw = DangerRatingType()
-            danger_rating_lw.set_mainValue_int(max(danger_ratings_lw))
-            report.dangerRatings.append(danger_rating_lw)
-            
-            danger_rating_hi = DangerRatingType()
-            danger_rating_hi.set_mainValue_int(max(danger_ratings_lw))
-            report.dangerRatings.append(danger_rating_hi)
-            '''
-            
 
-        danger_ratings = danger_ratings_raw
-        
-        danger_rating = DangerRatingType()
-        danger_rating.set_mainValue_int(max(sais_report['CompassRose'][4:36]))
-        report.dangerRatings.append(danger_rating)
+            for rating in danger_ratings_hi:
+                aspect_list = []
+                for idx, aspect in enumerate(aspects):
+                    if (set_danger_ratings_hi == rating):
+                        aspect_list.append(aspect)
 
-        print(danger_ratings_hi)
+                danger_rating = DangerRatingType()
+                danger_rating.set_mainValue_int(int(rating))
+                danger_rating.elevation.lowerBound = boundary
+                danger_rating.aspect = aspect_list
+                report.dangerRatings.append(danger_rating)
 
-        # print(sais_report)
+            for rating in danger_ratings_lw:
+                aspect_list = []
+                for idx, aspect in enumerate(aspects):
+                    if (set_danger_ratings_hi == rating):
+                        aspect_list.append(aspect)
+
+                danger_rating = DangerRatingType()
+                danger_rating.set_mainValue_int(int(rating))
+                danger_rating.elevation.upperBound = boundary
+                danger_rating.aspect = aspect_list
+                report.dangerRatings.append(danger_rating)
+
         reports.append(report)
-        
-        
 
-    '''
-        aspects = ['N','NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
-        aspect_list = []
-
-        for i, c in enumerate(problem['ValidExpositions']):
-            if c == '1':
-                aspect_list.append(aspects[i])
-
-        elev_prefix = ''
-        if problem['ExposedHeightFill'] == 1:
-            elev_prefix = '>'
-        elif problem['ExposedHeightFill'] == 2:
-            elev_prefix = '<'
-
-        report.problem_list.append(pyAvaCore.Problem(problem_type, aspect_list, elev_prefix + str(problem['ExposedHeight1'])))
-
-    '''
     return reports
