@@ -27,9 +27,8 @@ def process_reports_uk(today=datetime.today().date()):
 
     for sais_report in sais_reports:
         report = AvaBulletin()
-        # report.valid_regions.append('UK-' + sais_report['Region'])
-        report.regions.append(RegionType('UK-' + sais_report['Region']))
-        report.bulletinID = 'UK-' + sais_report['ID']
+        report.regions.append(RegionType('GB-SCT-' + sais_report['Region']))
+        report.bulletinID = 'GB-SCT-' + sais_report['ID']
 
         report.publicationTime = dateutil.parser.parse(sais_report['DatePublished']) # 18:00
         report.validTime.startTime = report.publicationTime.replace(hour=18)
@@ -70,10 +69,6 @@ def process_reports_uk(today=datetime.today().date()):
             report.avalancheProblems.append(problem)
 
         # report.danger_main.append(pyAvaCore.DangerMain(max(sais_report['CompassRose'][4:36]), '-'))
-
-        danger_rating = DangerRatingType()
-        danger_rating.set_mainValue_int(max(sais_report['CompassRose'][4:36]))
-        report.dangerRatings.append(danger_rating)
         
         danger_ratings_raw = sais_report['CompassRose'][4:36]
 
@@ -87,9 +82,38 @@ def process_reports_uk(today=datetime.today().date()):
         filter_hi = [False, True, False, False] * 8
         
         danger_ratings_hi = list(d for d, s in zip(danger_ratings_raw, filter_hi) if s)
+        danger_ratings_lw = list(d for d, s in zip(danger_ratings_raw, filter_lw) if s)
         
+        if (
+            max(danger_ratings_hi) == min(danger_ratings_hi)
+            and max(danger_ratings_lw) == min(danger_ratings_lw)
+            and max(danger_ratings_hi) == max(danger_ratings_lw)
+        ):
+            danger_rating = DangerRatingType()
+            danger_rating.set_mainValue_int(max(danger_ratings_lw))
+            report.dangerRatings.append(danger_rating)
+        else:
+            set_danger_ratings_hi = set(danger_ratings_hi)
+            set_danger_ratings_lw = set(danger_ratings_lw)
+            
+            print(set_danger_ratings_hi)
+            
+            '''
+            danger_rating_lw = DangerRatingType()
+            danger_rating_lw.set_mainValue_int(max(danger_ratings_lw))
+            report.dangerRatings.append(danger_rating_lw)
+            
+            danger_rating_hi = DangerRatingType()
+            danger_rating_hi.set_mainValue_int(max(danger_ratings_lw))
+            report.dangerRatings.append(danger_rating_hi)
+            '''
+            
 
         danger_ratings = danger_ratings_raw
+        
+        danger_rating = DangerRatingType()
+        danger_rating.set_mainValue_int(max(sais_report['CompassRose'][4:36]))
+        report.dangerRatings.append(danger_rating)
 
         print(danger_ratings_hi)
 

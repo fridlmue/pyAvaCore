@@ -85,7 +85,7 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         else:
             reports = process_reports_no(region_id)
         provider = "varsom.no"
-    elif region_id.startswith("UK"):
+    elif region_id.startswith("GB"):
         reports = process_reports_uk()
         provider = "www.sais.gov.uk"
         url = "https://www.sais.gov.uk/api?action=getForecast"
