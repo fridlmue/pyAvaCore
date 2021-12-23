@@ -25,19 +25,8 @@ import re
 
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
 
-def process_reports_uk(today=datetime.today().date()):
+def get_reports_from_json(sais_reports):
     reports = []
-
-    url = 'https://www.sais.gov.uk/api?action=getForecast'
-
-    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-
-    req = urllib.request.Request(url, headers=headers)
-
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
-
-    sais_reports = json.loads(content)
 
     for sais_report in sais_reports:
         report = AvaBulletin()
@@ -132,5 +121,24 @@ def process_reports_uk(today=datetime.today().date()):
                 report.dangerRatings.append(danger_rating)
 
         reports.append(report)
+
+    return reports
+    
+
+def process_reports_uk():
+    reports = []
+
+    url = 'https://www.sais.gov.uk/api?action=getForecast'
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+
+    req = urllib.request.Request(url, headers=headers)
+
+    with urllib.request.urlopen(req) as response:
+        content = response.read()
+
+    sais_reports = json.loads(content)
+
+    reports = get_reports_from_json(sais_reports)
 
     return reports
