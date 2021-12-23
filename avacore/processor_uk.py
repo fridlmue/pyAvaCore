@@ -1,3 +1,18 @@
+"""
+    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    This file is part of pyAvaCore.
+    pyAvaCore is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    pyAvaCore is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
+"""
+
 import json
 import urllib.request
 from datetime import datetime
@@ -29,7 +44,7 @@ def process_reports_uk(today=datetime.today().date()):
         report.regions.append(RegionType('GB-SCT-' + sais_report['Region']))
         report.bulletinID = 'GB-SCT-' + sais_report['ID']
 
-        report.publicationTime = dateutil.parser.parse(sais_report['DatePublished']) # 18:00
+        report.publicationTime = dateutil.parser.parse(sais_report['DatePublished'])
         report.validTime.startTime = report.publicationTime.replace(hour=18)
         report.validTime.endTime = report.validTime.startTime + timedelta(days=1)
         report.avalancheActivityHighlights = sais_report['Summary']
@@ -70,7 +85,7 @@ def process_reports_uk(today=datetime.today().date()):
         danger_ratings_raw = sais_report['CompassRose'][4:36]
 
         boundary_group = re.search('(?<=txtm\=)(.)*?(?=\&txte)', sais_report['CompassRose'])
-        boundary = boundary_group.group(0) # No content if not different ratings for elevations
+        boundary = boundary_group.group(0) # No content if no different ratings for elevations
 
         filter_lw = [True, False, False, False] * 8
         filter_hi = [False, True, False, False] * 8
@@ -85,19 +100,17 @@ def process_reports_uk(today=datetime.today().date()):
             and max(danger_ratings_lw) == min(danger_ratings_lw)
             and max(danger_ratings_hi) == max(danger_ratings_lw)
         ):
-            print('if', max(danger_ratings_lw), danger_ratings_lw)
             danger_rating = DangerRatingType()
             danger_rating.set_mainValue_int(int(max(danger_ratings_lw)))
             report.dangerRatings.append(danger_rating)
         else:
-            print('else')
             set_danger_ratings_hi = set(danger_ratings_hi)
             set_danger_ratings_lw = set(danger_ratings_lw)
 
-            for rating in danger_ratings_hi:
+            for rating in set_danger_ratings_hi:
                 aspect_list = []
                 for idx, aspect in enumerate(aspects):
-                    if (set_danger_ratings_hi == rating):
+                    if (danger_ratings_hi[idx] == rating):
                         aspect_list.append(aspect)
 
                 danger_rating = DangerRatingType()
@@ -106,10 +119,10 @@ def process_reports_uk(today=datetime.today().date()):
                 danger_rating.aspect = aspect_list
                 report.dangerRatings.append(danger_rating)
 
-            for rating in danger_ratings_lw:
+            for rating in set_danger_ratings_lw:
                 aspect_list = []
                 for idx, aspect in enumerate(aspects):
-                    if (set_danger_ratings_hi == rating):
+                    if (danger_ratings_lw[idx] == rating):
                         aspect_list.append(aspect)
 
                 danger_rating = DangerRatingType()

@@ -87,8 +87,8 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         provider = "varsom.no"
     elif region_id.startswith("GB"):
         reports = process_reports_uk()
-        provider = "www.sais.gov.uk"
-        url = "https://www.sais.gov.uk/api?action=getForecast"
+        provider = "Scottish Avalanche Information Service"
+        # url = "https://www.sais.gov.uk/api?action=getForecast"
     else:
         url, provider = get_report_url(region_id, local)
 
