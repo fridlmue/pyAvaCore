@@ -28,6 +28,7 @@ from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_it import process_reports_it, process_all_reports_it
+from avacore.processor_uk import process_reports_uk
 from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
@@ -84,6 +85,10 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         else:
             reports = process_reports_no(region_id)
         provider = "varsom.no"
+    elif region_id.startswith("GB"):
+        reports = process_reports_uk()
+        provider = "Scottish Avalanche Information Service"
+        # url = "https://www.sais.gov.uk/api?action=getForecast"
     else:
         url, provider = get_report_url(region_id, local)
 
