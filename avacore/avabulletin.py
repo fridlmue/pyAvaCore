@@ -53,15 +53,16 @@ class ElevationType:
             self.auto_select(auto_select)
 
     def auto_select(self, auto_select):
-        auto_select = auto_select.replace('Forestline', 'Treeline')
-        if 'Hi' in auto_select:
-            self.lowerBound = re.sub(r'ElevationRange_(.+)Hi', r'\1', auto_select)
-        if 'Lo' in auto_select or 'Lw' in auto_select:
-            self.upperBound = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'\1', auto_select)
-        if '>' in auto_select:
-            self.lowerBound = re.sub(r'>(.+)', r'\1', auto_select)
-        if '<' in auto_select:
-            self.upperBound = re.sub(r'<(.+)', r'\1', auto_select)
+        if not auto_select is None:
+            auto_select = auto_select.replace('Forestline', 'Treeline')
+            if 'Hi' in auto_select:
+                self.lowerBound = re.sub(r'ElevationRange_(.+)Hi', r'\1', auto_select)
+            if 'Lo' in auto_select or 'Lw' in auto_select:
+                self.upperBound = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'\1', auto_select)
+            if '>' in auto_select:
+                self.lowerBound = re.sub(r'>(.+)', r'\1', auto_select)
+            if '<' in auto_select:
+                self.upperBound = re.sub(r'<(.+)', r'\1', auto_select)
 
     def toString(self):
         if hasattr(self,'lowerBound') and hasattr(self,'upperBound'):
