@@ -1,4 +1,5 @@
 from avacore import pyAvaCore
+from avacore.avabulletins import Bulletins
 import unittest
 import xml.etree.ElementTree as ET
 import pathlib
@@ -7,10 +8,11 @@ import pathlib
 class TestFrance(unittest.TestCase):
 
     def test_france(self):
-        # root = ET.parse(f'{__file__}.xml')
-        reports = pyAvaCore.process_reports_fr('FR-22', path=f'{__file__}.xml', cached=True)
-        self.assertEqual(len(reports), 2)
-        report = reports[0]
+        bulletins = Bulletins()
+        bulletins.bulletins = pyAvaCore.process_reports_fr('FR-22', path=f'{__file__}.xml', cached=True)
+        self.assertEqual(bulletins.main_date().isoformat(), "2021-03-19")
+        self.assertEqual(len(bulletins.bulletins), 2)
+        report = bulletins.bulletins[0]
         self.assertEqual(report.bulletinID, 'FR-22_2021-03-18T16:00:00+01:00_PM')
         self.assertEqual(report.publicationTime.isoformat(), '2021-03-18T16:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-03-19T12:00:00+01:00')
@@ -30,7 +32,7 @@ class TestFrance(unittest.TestCase):
 
         self.assertEqual(report.predecessor_id, 'FR-22_2021-03-18T16:00:00+01:00')
 
-        report = reports[1]
+        report = bulletins.bulletins[1]
         self.assertEqual(report.bulletinID, 'FR-22_2021-03-18T16:00:00+01:00')
         self.assertEqual(report.publicationTime.isoformat(), '2021-03-18T16:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-03-18T16:00:00+01:00')

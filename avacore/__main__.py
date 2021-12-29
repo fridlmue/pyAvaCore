@@ -57,17 +57,9 @@ logging.basicConfig(
 def download_region(regionID):
     """Downloads the given region and converts it to JSON"""
     reports, _, url = get_reports(regionID)
-    report: AvaBulletin
-    validityDate = None
-    for report in reports:
-        if isinstance(report.validTime.startTime, datetime) and not validityDate:
-            validityDate = report.validTime.startTime
-            if validityDate.hour > 15:
-                validityDate = validityDate + timedelta(days=1)
-            validityDate = validityDate.date().isoformat()
-
     bulletins = Bulletins()
     bulletins.bulletins = reports
+    validityDate = bulletins.main_date()
 
     directory = Path(args.output)
     directory.mkdir(parents=True, exist_ok=True)
