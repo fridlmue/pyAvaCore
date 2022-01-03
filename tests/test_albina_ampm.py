@@ -1,4 +1,5 @@
 from avacore import pyAvaCore
+from avacore.avabulletins import Bulletins
 import unittest
 import xml.etree.ElementTree as ET
 
@@ -7,10 +8,12 @@ class TestAlbinaAmPm(unittest.TestCase):
 
     def test_albina_ampm(self):
         root = ET.parse(f'{__file__}.xml')
-        reports = pyAvaCore.parse_xml(root)
-        self.assertEqual(len(reports), 6)
+        bulletins = Bulletins()
+        bulletins.bulletins = pyAvaCore.parse_xml(root)
+        self.assertEqual(bulletins.main_date().isoformat(), "2021-02-22")
+        self.assertEqual(len(bulletins.bulletins), 6)
 
-        report = reports[0]
+        report = bulletins.bulletins[0]
         self.assertEqual(report.bulletinID, '15b7b04b-5f3f-435c-a4f4-33a4eabeb965')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-21T16:00:00+00:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-21T23:00:00+00:00')
@@ -28,7 +31,7 @@ class TestAlbinaAmPm(unittest.TestCase):
         self.assertNotIn('N', report.avalancheProblems[1].dangerRating.aspect)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
-        report = reports[5]
+        report = bulletins.bulletins[5]
         self.assertEqual(report.bulletinID, '56410e01-259b-4b8e-a97b-f4628744b70e_PM')
         self.assertEqual(report.publicationTime.isoformat(), '2021-02-21T16:00:00+00:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2021-02-22T11:00:00+00:00')

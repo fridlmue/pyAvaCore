@@ -13,6 +13,7 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from datetime import date, datetime, timedelta
 import typing
 from .avabulletin import AvaBulletin, DangerRatingType
 from .geojson import Feature, FeatureCollection
@@ -25,6 +26,13 @@ class Bulletins:
     """
 
     bulletins: typing.List[AvaBulletin]
+
+    def main_date(self) -> date:
+        validityDate: datetime = self.bulletins[0].validTime.startTime
+        if validityDate.hour > 15:
+            validityDate = validityDate + timedelta(days=1)
+        return validityDate.date()
+
 
     def max_danger_ratings(self):
         ratings = dict()
