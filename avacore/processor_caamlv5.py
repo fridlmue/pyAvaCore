@@ -99,6 +99,7 @@ def parse_xml(root):
             '''
             for AvProblem in observations.iter(tag=CAAMLTAG + 'AvProblem'):
                 type_r = ""
+                problem_danger_rating = DangerRatingType()
                 for avProbType in AvProblem.iter(tag=CAAMLTAG + 'type'):
                     type_r = avProbType.text
                 aspect = []
@@ -106,13 +107,24 @@ def parse_xml(root):
                     aspect.append(validAspect.get('{http://www.w3.org/1999/xlink}href').upper().replace('ASPECTRANGE_', ''))
                 valid_elevation = "-"
                 for validElevation in AvProblem.iter(tag=CAAMLTAG + 'validElevation'):
-                    valid_elevation = validElevation.get('{http://www.w3.org/1999/xlink}href')
+                        if '{http://www.w3.org/1999/xlink}href' in validElevation.attrib:
+                            problem_danger_rating.elevation.auto_select(validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'))
+                        else:
+                            for beginPosition in validElevation.iter(tag=CAAMLTAG + 'beginPosition'):
+                                problem_danger_rating.elevation.auto_select("ElevationRange_" + beginPosition.text + "Hi")
+                            for endPosition in validElevation.iter(tag=CAAMLTAG + 'endPosition'):
+                                problem_danger_rating.elevation.auto_select("ElevationRange_" + endPosition.text + "Lw")
+                        '''
+                        valid_elevation = validElevation.get('{http://www.w3.org/1999/xlink}href')
+                        if not valid_elevation is None:
+                            problem_danger_rating.elevation.auto_select(valid_elevation)
+                        else:
+                        '''
+                        
                 comment_r = ''
                 for comment in AvProblem.iter(tag=CAAMLTAG + 'comment'):
                     comment_r = comment.text
-                problem_danger_rating = DangerRatingType()
                 problem_danger_rating.aspect = aspect
-                problem_danger_rating.elevation.auto_select(valid_elevation)
                 problem = AvalancheProblemType()
                 problem.add_problemType(type_r)
                 problem.dangerRating = problem_danger_rating
