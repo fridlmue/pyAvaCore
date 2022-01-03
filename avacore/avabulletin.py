@@ -128,6 +128,7 @@ class DangerRatingType:
     # --- Values form EAWS Matrix ---
     
     values = {
+        'no_rating': -1,
         'no_snow': 0,
         'low': 1,
         'moderate': 2,
