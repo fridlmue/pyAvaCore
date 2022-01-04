@@ -102,6 +102,11 @@ class Bulletins:
                 if not key in sel_keys:
                     ratings[key] = max(sel_ratings)
 
+        # return 0 independent of "no_snow" or "no_rating"
+        for key, value in ratings.items():
+            if value == -1:
+                ratings[key] = 0
+
         return ratings
 
     def augment_geojson(self, geojson: FeatureCollection):
