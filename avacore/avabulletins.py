@@ -39,8 +39,6 @@ class Bulletins:
         for bulletin in self.bulletins:
             for region in bulletin.regions:
                 regionID = region.regionID
-                # Check highest Rating AM and PM
-                # 
                 for danger in bulletin.dangerRatings:
                     if (
                         Bulletins.region_without_elevation(regionID)
@@ -49,7 +47,6 @@ class Bulletins:
                         or danger.elevation.toString().startswith("<")
                     ):
                         pm = ''
-                        # if PM -> Add pm-Tag and refactor am to have am tag.
                         if hasattr(bulletin, 'predecessor_id'):
                             pm = ':pm'
                             key = f"{regionID}:low"
