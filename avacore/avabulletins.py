@@ -46,7 +46,12 @@ class Bulletins:
                         or danger.elevation.toString() == ""
                         or danger.elevation.toString().startswith("<")
                     ):
-                        key = f"{regionID}:low"
+                        pm = ''
+                        if hasattr(bulletin, 'predecessor_id'):
+                            pm = ':pm'
+                            key = f"{regionID}:low"
+                            ratings[f"{key}:am"] = ratings.pop(key)
+                        key = f"{regionID}:low{pm}"
                         ratings[key] = max(
                             danger.get_mainValue_int(), ratings.get(key, 0)
                         )
@@ -56,10 +61,47 @@ class Bulletins:
                         or danger.elevation.toString() == ""
                         or danger.elevation.toString().startswith(">")
                     ):
-                        key = f"{regionID}:high"
+                        pm = ''
+                        if hasattr(bulletin, 'predecessor_id'):
+                            pm = ':pm'
+                            key = f"{regionID}:high"
+                            ratings[f"{key}:am"] = ratings.pop(key)
+                        key = f"{regionID}:high{pm}"
                         ratings[key] = max(
                             danger.get_mainValue_int(), ratings.get(key, 0)
                         )
+
+            for region in bulletin.regions:
+                regionID = region.regionID
+                sel_ratings = [value for key,value in ratings.items() if regionID in key]
+                sel_keys = [key for key,value in ratings.items() if regionID in key]
+
+                if not ('am' in sel_keys[0]) and not ('pm' in sel_keys[0]):
+                    key = f"{regionID}:high"
+                    ratings[f"{key}:am"] = ratings[key]
+                    ratings[f"{key}:pm"] = ratings[key]
+                    key = f"{regionID}:low"
+                    ratings[f"{key}:am"] = ratings[key]
+                    ratings[f"{key}:pm"] = ratings[key]
+                
+                key = f"{regionID}:high"
+                if not key in sel_keys:
+                    ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
+                
+                key = f"{regionID}:low"    
+                if not key in sel_keys:
+                    ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
+                    
+                key = regionID
+                if not f"{key}:am" in sel_keys:
+                    ratings[f"{key}:am"] = max(ratings[f"{key}:high:am"], ratings[f"{key}:low:am"])
+                    
+                if not f"{key}:pm" in sel_keys:
+                    ratings[f"{key}:pm"] = max(ratings[f"{key}:high:pm"], ratings[f"{key}:low:pm"])
+                    
+                if not key in sel_keys:
+                    ratings[key] = max(sel_ratings)
+
         return ratings
 
     def augment_geojson(self, geojson: FeatureCollection):
