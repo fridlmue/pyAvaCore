@@ -237,6 +237,3 @@ it_region_ref = {
     'IT-57-PU-01': ['Marche', 3],
     'IT-57-AP-02': ['Marche', 4],
     }
-
-
-
