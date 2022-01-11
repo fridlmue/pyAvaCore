@@ -40,7 +40,6 @@ class Bulletins:
             for region in bulletin.regions:
                 regionID = region.regionID
                 for danger in bulletin.dangerRatings:
-                    print(bulletin.bulletinID)
                     if (
                         Bulletins.region_without_elevation(regionID)
                         or not danger.elevation
@@ -57,11 +56,8 @@ class Bulletins:
                         ratings[key] = max(
                             danger.get_mainValue_int(), ratings.get(key, 0)
                         )
-                        print(ratings[key], key)
                         if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
-                            print("add am low", ratings[key], key)
                             ratings[f"{key}:am"] = ratings[key]
-                            print("added", ratings[f"{key}:am"], f"{key}:am")
                     if (
                         Bulletins.region_without_elevation(regionID)
                         or not danger.elevation
@@ -78,9 +74,7 @@ class Bulletins:
                         ratings[key] = max(
                             danger.get_mainValue_int(), ratings.get(key, 0)
                         )
-                        print(ratings[key], key)
                         if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
-                            print("add am high")
                             ratings[f"{key}:am"] = ratings[key]
 
             for region in bulletin.regions:
@@ -162,7 +156,7 @@ class Bulletins:
         if not dangers:
             return
         feature.properties.max_danger_rating = max(dangers)
-        
+
     def from_json(self, bulletins_json):
         self.bulletins = []
         for bulletin_json in bulletins_json['bulletins']:

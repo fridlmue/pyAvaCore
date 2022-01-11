@@ -5,16 +5,27 @@ import json
 import pathlib
 
 
-class TestFrance(unittest.TestCase):
+class TestFrance_dangerratings(unittest.TestCase):
 
-    def test_france(self):
+    def test_france_dangerratings(self):
         
         with open(f'{__file__}.json') as fp:
             data = json.load(fp)
-        bulletins = data
-        
-        # self.assertEqual(bulletins.main_date().isoformat(), "2022-01-10")
 
+        bulletins = Bulletins()
+        bulletins.from_json(data)
+        
+        ratings = bulletins.max_danger_ratings()
+        
+        self.assertEqual(ratings['FR-01'], 4)
+        self.assertEqual(ratings['FR-01:am'], 4)
+        self.assertEqual(ratings['FR-01:pm'], 3)
+        self.assertEqual(ratings['FR-01:low'], 3)
+        self.assertEqual(ratings['FR-01:high'], 4)
+        self.assertEqual(ratings['FR-01:low:pm'], 3)
+        self.assertEqual(ratings['FR-01:low:am'], 3)
+        self.assertEqual(ratings['FR-01:high:pm'], 3)
+        self.assertEqual(ratings['FR-01:high:am'], 4)
 
 if __name__ == '__main__':
     unittest.main()
