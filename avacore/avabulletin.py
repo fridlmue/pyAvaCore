@@ -25,6 +25,12 @@ class ValidTimeType:
     '''valid time start'''
     endTime: datetime
     '''valid time end'''
+    
+    def __init__(self, startTime=None, endTime=None):
+        if not startTime is None:
+            self.startTime = startTime
+        if not endTime is None:
+            self.endTime = endTime
 
 class SourceType:
     '''
@@ -35,6 +41,12 @@ class SourceType:
     '''Bulletin Provider Information'''
     person: str
     '''Bulletin Author'''
+    
+    def __init__(self, provider=None, person=None):
+        if not provider is None:
+            self.provider = provider
+        if not person is None:
+            self.persion = person
 
 class ElevationType:
     '''
@@ -73,7 +85,7 @@ class ElevationType:
             return "<"+ self.upperBound
         else:
             return ""
-        
+
 class AvaCoreCustom:
     '''
     custom elements for special report content
@@ -81,16 +93,18 @@ class AvaCoreCustom:
     custom_type: str
     content: str
 
-    def __init__(self, custom_type: str, content="") -> None:
+    def __init__(self, custom_type: str, content=None) -> None:
         self.custom_type = custom_type
-        self.content = content
+        if not content is None:
+            self.content = content
+        else:
+            self.content = ''
 
     def __str__(self):
         return "{'custom_type':'" + self.custom_type + "', 'content':" + self.content + "'}"
 
     def __repr__(self):
         return str(self)
-
 
 class DangerRatingType:
     '''
@@ -147,6 +161,17 @@ class DangerRatingType:
   
     def set_mainValue_int(self, value):
         self.mainValue = next((level_text for level_text, level_int in self.values.items() if level_int == value), None)
+        
+    def from_json(self, dangerRating_json):
+        attributes = DangerRatingType.__dict__['__annotations__']
+        for attribute in attributes:
+            if (not attribute.startswith('__')
+                and attribute in dangerRating_json):
+                if attributes[attribute] in {str, datetime, list, int}:
+                    setattr(self, attribute, dangerRating_json[attribute])
+                elif attribute is 'elevation':
+                    for elevation_attribute in dangerRating_json[attribute]:
+                        setattr(self.elevation, elevation_attribute, dangerRating_json[attribute][elevation_attribute])
   
 class AvalancheProblemType:
     problemType: str
@@ -158,9 +183,17 @@ class AvalancheProblemType:
     '''
     ToDo: Addd custom data type
     '''
-
-    def __init__(self) -> None:
+        
+    def __init__(self, problemType=None, comment=None, dangerRating_json=None, dangerRating=None) -> None:
         self.dangerRating = DangerRatingType()
+        if not problemType is None:
+            self.problemType = problemType
+        if not comment is None:
+            self.comment = comment
+        if not dangerRating is None:
+            self.dangerRating = dangerRating
+        if not dangerRating_json is None:
+            self.dangerRating.from_json(dangerRating_json)
         
     def add_problemType(self, problem_type_text):
         '''
@@ -190,19 +223,28 @@ class TendencyType:
     '''valid time interval for tendency'''
     tendencyComment: str
     '''tendency comment'''
-    comment: str
-    '''Tendency comment'''
     #ToDo Add custom data
     
     def __init__(self) -> None:
         self.validTime = ValidTimeType()
-    
+        
+    def __init__(self, tendencyType=None, validTime_json=None, tendencyComment=None) -> None:
+        self.validTime = ValidTimeType()
+        if not validTime_json is None and not len(validTime_json) is 0:
+            self.validTime = ValidTimeType(validTime_json['startTime'], validTime_json['endTime'])
+        if not tendencyType is None:
+            self.tendencyType = tendencyType
+        if not tendencyComment is None:
+            self.tendencyComment = tendencyComment
+
 class RegionType:
     name: str
     regionID: str
-    
-    def __init__(self, regionID) -> None:
+        
+    def __init__(self, regionID, name=None) -> None:
         self.regionID = regionID
+        if not name is None:
+            self.name = name
       
 class AvaBulletin:
     '''
@@ -263,6 +305,46 @@ class AvaBulletin:
         for reg in self.regions:
             region_list.append(reg.regionID)
         return region_list
+    
+    def from_json(self, bulletin_json):
+        attributes = AvaBulletin.__dict__['__annotations__']
+        for attribute in attributes:
+            if (not attribute.startswith('__')
+                and attribute in bulletin_json):
+                if attributes[attribute] in {str, datetime}:
+                    setattr(self, attribute, bulletin_json[attribute])
+
+                elif attribute is 'regions':
+                    for region in bulletin_json[attribute]:
+                        self.regions.append(RegionType(region.get('regionID'), region.get('name')))
+
+                elif attribute is 'dangerRatings':
+                    for dangerRating_json in bulletin_json[attribute]:
+                        dangerRating = DangerRatingType()
+                        dangerRating.from_json(dangerRating_json)
+                        self.dangerRatings.append(dangerRating)
+
+                elif attribute is 'avalancheProblems':
+                    for avalancheProblem_json in bulletin_json[attribute]:
+                        avalancheProblem = AvalancheProblemType(problemType=avalancheProblem_json.get('problemType'), comment=avalancheProblem_json.get('comment'), dangerRating_json=avalancheProblem_json.get('dangerRating'))
+                        self.avalancheProblems.append(avalancheProblem)
+
+                elif attribute is 'validTime':
+                    self.validTime = ValidTimeType(bulletin_json[attribute]['startTime'], bulletin_json[attribute]['endTime'])
+
+                elif attribute is 'tendency':
+                    self.tendency = TendencyType(bulletin_json[attribute].get('tendencyType'), bulletin_json[attribute].get('validTime'), bulletin_json[attribute].get('tendencyComment'))
+
+                elif attribute is 'source':
+                    self.source = SourceType(bulletin_json[attribute].get('provider'), bulletin_json[attribute].get('person'))
+
+                else:
+                    print('Not handled Attribute:', attribute, attributes[attribute], type(attributes[attribute]))                   
+
+    # def fill_std_attributes(self, to_fill, fill_with):
+        
+        # if 'predecessor_id' in bulletin_json:
+            
 
     def cli_out(self):
         '''
@@ -329,4 +411,3 @@ class AvaBulletin:
             print('║ ', 'tendencyComment:',  self.tendency.tendencyComment)
 
         print('╚══════════════════════════════════════════')
-

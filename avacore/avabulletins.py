@@ -162,6 +162,13 @@ class Bulletins:
         if not dangers:
             return
         feature.properties.max_danger_rating = max(dangers)
+        
+    def from_json(self, bulletins_json):
+        self.bulletins = []
+        for bulletin_json in bulletins_json['bulletins']:
+            bulletin = AvaBulletin()
+            bulletin.from_json(bulletin_json)
+            self.bulletins.append(bulletin)
 
     @staticmethod
     def region_without_elevation(id: str):

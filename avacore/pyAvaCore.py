@@ -65,9 +65,7 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
             reports = process_all_reports_fr()
         else:
             reports = process_reports_fr(region_id)
-        provider = "Rédigé par Météo-France avec la contribution des observateurs du réseau nivo-météorologique. Partenariat : "\
-            + "ANMSM (Maires de Stations de Montagne), DSF (Domaines Skiables de France), "\
-            + "ADSP (Directeurs de Pistes et de la Sécurité des Stations de Sports d'Hiver) et autres acteurs de la montagne."
+        _, provider = get_report_url(region_id, local)
     elif region_id.startswith("CH"):
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         url, provider = get_report_url(region_id, local)
@@ -84,10 +82,10 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
             reports = process_all_reports_no(region_id)
         else:
             reports = process_reports_no(region_id)
-        provider = "varsom.no"
+        _, provider = get_report_url(region_id, local)
     elif region_id.startswith("GB"):
         reports = process_reports_uk()
-        provider = "Scottish Avalanche Information Service"
+        _, provider = get_report_url(region_id, local)
         # url = "https://www.sais.gov.uk/api?action=getForecast"
     else:
         url, provider = get_report_url(region_id, local)
@@ -113,16 +111,16 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
             region_id_prefix = 'SI'
         else:
             region_id_prefix = '-'.join(region_id_prefix.split('-')[:-1])
-    
+
     name = config[region_id_prefix]['name']
     url = config[region_id_prefix]['url']
     if f'url.{local}' in config[region_id_prefix]:
         url = config[region_id_prefix][f'url.{local}']
     netloc = urlparse(url).netloc
     if "DE" == local.upper():
-        provider = f"Die dargestellten Informationen werden über eine API auf {netloc} abgefragt. Diese wird bereitgestellt von: {name}."
+        provider = f"Die dargestellten Informationen werden bereitgestellt von: {name}. ({netloc})"
     else:
-        provider = f"The displayed information is provided by an open data API on {netloc} by: {name}"
+        provider = f"The displayed information is provided by: {name}. ({netloc})"
     return url, provider
 
 
