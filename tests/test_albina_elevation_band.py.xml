@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="en" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <metaDataProperty>
+    <MetaData>
+      <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+    </MetaData>
+  </metaDataProperty>
+  <observations>
+    <Bulletin gml:id="178ed2f5-9e29-4495-b34b-3a355390895b" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-28T23:00:00Z</beginPosition>
+          <endPosition>2021-12-29T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="AT-07-20"/>
+      <locRef xlink:href="AT-07-10"/>
+      <locRef xlink:href="AT-07-21"/>
+      <locRef xlink:href="AT-07-22"/>
+      <locRef xlink:href="AT-07-11"/>
+      <locRef xlink:href="AT-07-23"/>
+      <locRef xlink:href="AT-07-01"/>
+      <locRef xlink:href="AT-07-12"/>
+      <locRef xlink:href="AT-07-24"/>
+      <locRef xlink:href="AT-07-13"/>
+      <locRef xlink:href="AT-07-02"/>
+      <locRef xlink:href="AT-07-14"/>
+      <locRef xlink:href="AT-07-03"/>
+      <locRef xlink:href="AT-07-15"/>
+      <locRef xlink:href="AT-07-04"/>
+      <locRef xlink:href="AT-07-16"/>
+      <locRef xlink:href="AT-07-07"/>
+      <locRef xlink:href="AT-07-08"/>
+      <locRef xlink:href="AT-07-19"/>
+      <locRef xlink:href="AT-07-09"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_TreelineHi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_TreelineLw"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_TreelineHi"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Significant increase in danger of dry and wet avalanches as the precipitation becomes more intense. Dry avalanches above approximately 2400 m. Wet and gliding avalanches below approximately 2400 m. Danger level 4 (high) will be reached during the night probably.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. Caution is to be exercised above the tree line. Fresh wind slabs are mostly small but can in some cases be released easily, in particular in the west and in the north. &lt;br/&gt; Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. Wet avalanches can release the saturated snowpack and reach large size. This applies in all aspects between approximately 1900 and 2400 m. Below the tree line a little snow is lying. Slides are to be expected on cut slopes. The peak danger point will be reached during the night. &lt;br/&gt; As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. This applies above approximately 2400 m. Such avalanche prone locations are sometimes covered with new snow and are therefore difficult to recognise. Single winter sport participants can release avalanches easily, including large ones. At elevated altitudes these avalanche prone locations are more prevalent and larger. Medium-sized and, in isolated cases, large natural avalanches are to be expected as the snowfall becomes more intense.</avActivityComment>
+          <snowpackStructureComment>Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night. &lt;br/&gt; Over a wide area 40 to 60 cm of snow, and even more in some localities, will fall above approximately 2400 m. This applies in particular in the Verwall Mountains and in the Deferegger Alps. As a consequence of heavy snowfall and the storm force westerly wind, fresh snow drift accumulations will form from the middle of the day.</snowpackStructureComment>
+          <tendencyComment>Up to 2400 m rain will fall on Thursday in some regions, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-07-20"/>
+      <locRef xlink:href="AT-07-10"/>
+      <locRef xlink:href="AT-07-21"/>
+      <locRef xlink:href="AT-07-22"/>
+      <locRef xlink:href="AT-07-11"/>
+      <locRef xlink:href="AT-07-23"/>
+      <locRef xlink:href="AT-07-01"/>
+      <locRef xlink:href="AT-07-12"/>
+      <locRef xlink:href="AT-07-24"/>
+      <locRef xlink:href="AT-07-13"/>
+      <locRef xlink:href="AT-07-02"/>
+      <locRef xlink:href="AT-07-14"/>
+      <locRef xlink:href="AT-07-03"/>
+      <locRef xlink:href="AT-07-15"/>
+      <locRef xlink:href="AT-07-04"/>
+      <locRef xlink:href="AT-07-16"/>
+      <locRef xlink:href="AT-07-07"/>
+      <locRef xlink:href="AT-07-08"/>
+      <locRef xlink:href="AT-07-19"/>
+      <locRef xlink:href="AT-07-09"/>
+    </Bulletin>
+    <Bulletin gml:id="178ed2f5-9e29-4495-b34b-3a355390895b_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T11:00:00Z</beginPosition>
+          <endPosition>2021-12-29T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="AT-07-20"/>
+      <locRef xlink:href="AT-07-10"/>
+      <locRef xlink:href="AT-07-21"/>
+      <locRef xlink:href="AT-07-22"/>
+      <locRef xlink:href="AT-07-11"/>
+      <locRef xlink:href="AT-07-23"/>
+      <locRef xlink:href="AT-07-01"/>
+      <locRef xlink:href="AT-07-12"/>
+      <locRef xlink:href="AT-07-24"/>
+      <locRef xlink:href="AT-07-13"/>
+      <locRef xlink:href="AT-07-02"/>
+      <locRef xlink:href="AT-07-14"/>
+      <locRef xlink:href="AT-07-03"/>
+      <locRef xlink:href="AT-07-15"/>
+      <locRef xlink:href="AT-07-04"/>
+      <locRef xlink:href="AT-07-16"/>
+      <locRef xlink:href="AT-07-07"/>
+      <locRef xlink:href="AT-07-08"/>
+      <locRef xlink:href="AT-07-19"/>
+      <locRef xlink:href="AT-07-09"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_1900Hi"/>
+              <mainValue>4</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_1900Lw"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation>
+                <elevationRange uom="m">
+                  <beginPosition>1900</beginPosition>
+                  <endPosition>2400</endPosition>
+                </elevationRange>
+              </validElevation>
+            </AvProblem>
+            <AvProblem>
+              <type>new snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+            </AvProblem>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validElevation xlink:href="ElevationRange_TreelineLw"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Significant increase in danger of dry and wet avalanches as the precipitation becomes more intense. Dry avalanches above approximately 2400 m. Wet and gliding avalanches below approximately 2400 m. Danger level 4 (high) will be reached during the night probably.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. Caution is to be exercised above the tree line. Fresh wind slabs are mostly small but can in some cases be released easily, in particular in the west and in the north. &lt;br/&gt; Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. Wet avalanches can release the saturated snowpack and reach large size. This applies in all aspects between approximately 1900 and 2400 m. Below the tree line a little snow is lying. Slides are to be expected on cut slopes. The peak danger point will be reached during the night. &lt;br/&gt; As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. This applies above approximately 2400 m. Such avalanche prone locations are sometimes covered with new snow and are therefore difficult to recognise. Single winter sport participants can release avalanches easily, including large ones. At elevated altitudes these avalanche prone locations are more prevalent and larger. Medium-sized and, in isolated cases, large natural avalanches are to be expected as the snowfall becomes more intense.</avActivityComment>
+          <snowpackStructureComment>Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night. &lt;br/&gt; Over a wide area 40 to 60 cm of snow, and even more in some localities, will fall above approximately 2400 m. This applies in particular in the Verwall Mountains and in the Deferegger Alps. As a consequence of heavy snowfall and the storm force westerly wind, fresh snow drift accumulations will form from the middle of the day.</snowpackStructureComment>
+          <tendencyComment>Up to 2400 m rain will fall on Thursday in some regions, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-07-20"/>
+      <locRef xlink:href="AT-07-10"/>
+      <locRef xlink:href="AT-07-21"/>
+      <locRef xlink:href="AT-07-22"/>
+      <locRef xlink:href="AT-07-11"/>
+      <locRef xlink:href="AT-07-23"/>
+      <locRef xlink:href="AT-07-01"/>
+      <locRef xlink:href="AT-07-12"/>
+      <locRef xlink:href="AT-07-24"/>
+      <locRef xlink:href="AT-07-13"/>
+      <locRef xlink:href="AT-07-02"/>
+      <locRef xlink:href="AT-07-14"/>
+      <locRef xlink:href="AT-07-03"/>
+      <locRef xlink:href="AT-07-15"/>
+      <locRef xlink:href="AT-07-04"/>
+      <locRef xlink:href="AT-07-16"/>
+      <locRef xlink:href="AT-07-07"/>
+      <locRef xlink:href="AT-07-08"/>
+      <locRef xlink:href="AT-07-19"/>
+      <locRef xlink:href="AT-07-09"/>
+    </Bulletin>
+    <Bulletin gml:id="ccb43d8b-3121-4857-9dd1-85a78ba6cd41" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-28T23:00:00Z</beginPosition>
+          <endPosition>2021-12-29T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-10"/>
+      <locRef xlink:href="IT-32-BZ-11"/>
+      <locRef xlink:href="IT-32-BZ-12"/>
+      <locRef xlink:href="IT-32-BZ-01"/>
+      <locRef xlink:href="IT-32-BZ-13"/>
+      <locRef xlink:href="IT-32-BZ-02"/>
+      <locRef xlink:href="IT-32-BZ-14"/>
+      <locRef xlink:href="IT-32-BZ-03"/>
+      <locRef xlink:href="IT-32-BZ-04"/>
+      <locRef xlink:href="IT-32-BZ-05"/>
+      <locRef xlink:href="IT-32-BZ-06"/>
+      <locRef xlink:href="AT-07-25"/>
+      <locRef xlink:href="IT-32-BZ-07"/>
+      <locRef xlink:href="AT-07-26"/>
+      <locRef xlink:href="AT-07-27"/>
+      <locRef xlink:href="IT-32-BZ-09"/>
+      <locRef xlink:href="AT-07-28"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Lw"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Significant increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; Significant increase in avalanche danger as the precipitation becomes more intense. As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. Single winter sport participants can release avalanches easily, including large ones. The avalanche-prone wind slabs will be covered with new snow in some cases and therefore difficult to recognise. At elevated altitudes these avalanche prone locations are more prevalent and larger. &lt;br/&gt; As the snowfall level rises wet and gliding avalanches are to be expected, in particular on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach quite a large size. The peak danger point is expected during the night probably. In the regions where rain falls the avalanche danger is greater. &lt;br/&gt;</avActivityComment>
+          <snowpackStructureComment>As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. In the regions neighbouring those that are subject to danger level 4 (high) 20 to 40 cm of snow will fall. In the other regions 15 to 30 cm of snow will fall. The fresh wind slabs are prone to triggering. &lt;br/&gt; The rain will give rise in the afternoon to increasing and thorough wetting of the old snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night.</snowpackStructureComment>
+          <tendencyComment>Up to 2200 m and above rain will fall on Thursday in the north and in the northeast, this applies in particular until the early morning. As a consequence of the ceasing of precipitation there will be a decrease in the danger of wet and gliding avalanches. As a consequence of solar radiation loose snow avalanches are to be expected. The danger of dry avalanches will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-BZ-10"/>
+      <locRef xlink:href="IT-32-BZ-11"/>
+      <locRef xlink:href="IT-32-BZ-12"/>
+      <locRef xlink:href="IT-32-BZ-01"/>
+      <locRef xlink:href="IT-32-BZ-13"/>
+      <locRef xlink:href="IT-32-BZ-02"/>
+      <locRef xlink:href="IT-32-BZ-14"/>
+      <locRef xlink:href="IT-32-BZ-03"/>
+      <locRef xlink:href="IT-32-BZ-04"/>
+      <locRef xlink:href="IT-32-BZ-05"/>
+      <locRef xlink:href="IT-32-BZ-06"/>
+      <locRef xlink:href="AT-07-25"/>
+      <locRef xlink:href="IT-32-BZ-07"/>
+      <locRef xlink:href="AT-07-26"/>
+      <locRef xlink:href="AT-07-27"/>
+      <locRef xlink:href="IT-32-BZ-09"/>
+      <locRef xlink:href="AT-07-28"/>
+    </Bulletin>
+    <Bulletin gml:id="ccb43d8b-3121-4857-9dd1-85a78ba6cd41_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T11:00:00Z</beginPosition>
+          <endPosition>2021-12-29T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-10"/>
+      <locRef xlink:href="IT-32-BZ-11"/>
+      <locRef xlink:href="IT-32-BZ-12"/>
+      <locRef xlink:href="IT-32-BZ-01"/>
+      <locRef xlink:href="IT-32-BZ-13"/>
+      <locRef xlink:href="IT-32-BZ-02"/>
+      <locRef xlink:href="IT-32-BZ-14"/>
+      <locRef xlink:href="IT-32-BZ-03"/>
+      <locRef xlink:href="IT-32-BZ-04"/>
+      <locRef xlink:href="IT-32-BZ-05"/>
+      <locRef xlink:href="IT-32-BZ-06"/>
+      <locRef xlink:href="AT-07-25"/>
+      <locRef xlink:href="IT-32-BZ-07"/>
+      <locRef xlink:href="AT-07-26"/>
+      <locRef xlink:href="AT-07-27"/>
+      <locRef xlink:href="IT-32-BZ-09"/>
+      <locRef xlink:href="AT-07-28"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Lw"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+            </AvProblem>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validElevation xlink:href="ElevationRange_2400Lw"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Significant increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; Significant increase in avalanche danger as the precipitation becomes more intense. As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. Single winter sport participants can release avalanches easily, including large ones. The avalanche-prone wind slabs will be covered with new snow in some cases and therefore difficult to recognise. At elevated altitudes these avalanche prone locations are more prevalent and larger. &lt;br/&gt; As the snowfall level rises wet and gliding avalanches are to be expected, in particular on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach quite a large size. The peak danger point is expected during the night probably. In the regions where rain falls the avalanche danger is greater. &lt;br/&gt;</avActivityComment>
+          <snowpackStructureComment>As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. In the regions neighbouring those that are subject to danger level 4 (high) 20 to 40 cm of snow will fall. In the other regions 15 to 30 cm of snow will fall. The fresh wind slabs are prone to triggering. &lt;br/&gt; The rain will give rise in the afternoon to increasing and thorough wetting of the old snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night.</snowpackStructureComment>
+          <tendencyComment>Up to 2200 m and above rain will fall on Thursday in the north and in the northeast, this applies in particular until the early morning. As a consequence of the ceasing of precipitation there will be a decrease in the danger of wet and gliding avalanches. As a consequence of solar radiation loose snow avalanches are to be expected. The danger of dry avalanches will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-BZ-10"/>
+      <locRef xlink:href="IT-32-BZ-11"/>
+      <locRef xlink:href="IT-32-BZ-12"/>
+      <locRef xlink:href="IT-32-BZ-01"/>
+      <locRef xlink:href="IT-32-BZ-13"/>
+      <locRef xlink:href="IT-32-BZ-02"/>
+      <locRef xlink:href="IT-32-BZ-14"/>
+      <locRef xlink:href="IT-32-BZ-03"/>
+      <locRef xlink:href="IT-32-BZ-04"/>
+      <locRef xlink:href="IT-32-BZ-05"/>
+      <locRef xlink:href="IT-32-BZ-06"/>
+      <locRef xlink:href="AT-07-25"/>
+      <locRef xlink:href="IT-32-BZ-07"/>
+      <locRef xlink:href="AT-07-26"/>
+      <locRef xlink:href="AT-07-27"/>
+      <locRef xlink:href="IT-32-BZ-09"/>
+      <locRef xlink:href="AT-07-28"/>
+    </Bulletin>
+    <Bulletin gml:id="35239130-9e33-4b3c-a168-5cfc6d5796c1" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-28T23:00:00Z</beginPosition>
+          <endPosition>2021-12-29T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="AT-07-05"/>
+      <locRef xlink:href="AT-07-17"/>
+      <locRef xlink:href="AT-07-06"/>
+      <locRef xlink:href="AT-07-18"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP2</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems/>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Rapid increase in danger of dry and wet avalanches as a consequence of the precipitation. Wet and gliding avalanches below approximately 2400 m.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. This applies in all aspects below approximately 2400 m. Slides are to be expected on cut slopes. The peak danger point will be reached during the night.</avActivityComment>
+          <snowpackStructureComment>Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the snowpack during the course of the night.</snowpackStructureComment>
+          <tendencyComment>Up to 2400 m rain will fall on Thursday, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-07-05"/>
+      <locRef xlink:href="AT-07-17"/>
+      <locRef xlink:href="AT-07-06"/>
+      <locRef xlink:href="AT-07-18"/>
+    </Bulletin>
+    <Bulletin gml:id="35239130-9e33-4b3c-a168-5cfc6d5796c1_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T11:00:00Z</beginPosition>
+          <endPosition>2021-12-29T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="AT-07-05"/>
+      <locRef xlink:href="AT-07-17"/>
+      <locRef xlink:href="AT-07-06"/>
+      <locRef xlink:href="AT-07-18"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>3</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP2</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Rapid increase in danger of dry and wet avalanches as a consequence of the precipitation. Wet and gliding avalanches below approximately 2400 m.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. This applies in all aspects below approximately 2400 m. Slides are to be expected on cut slopes. The peak danger point will be reached during the night.</avActivityComment>
+          <snowpackStructureComment>Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the snowpack during the course of the night.</snowpackStructureComment>
+          <tendencyComment>Up to 2400 m rain will fall on Thursday, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-07-05"/>
+      <locRef xlink:href="AT-07-17"/>
+      <locRef xlink:href="AT-07-06"/>
+      <locRef xlink:href="AT-07-18"/>
+    </Bulletin>
+    <Bulletin gml:id="df0c4d83-e5c4-470e-8ec0-3d80741125cc" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-28T16:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-28T23:00:00Z</beginPosition>
+          <endPosition>2021-12-29T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-08"/>
+      <locRef xlink:href="IT-32-TN-19"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <locRef xlink:href="IT-32-BZ-15"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Lw"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>In some regions increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. As a consequence of new snow and wind the prevalence and size of such avalanche prone locations will increase from midday. &lt;br/&gt; As the snowfall level rises wet and gliding avalanches are to be expected during the course of the night, especially on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach medium size.</avActivityComment>
+          <snowpackStructureComment>As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. The sometimes storm force wind will transport the new snow and, in some cases, old snow as well. The new snow and wind slabs are in some cases prone to triggering. &lt;br/&gt; The rain will give rise in the afternoon to increasing and thorough wetting of the snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night, in particular on west, north and east facing slopes. On sunny slopes below approximately 2200 m only a little snow is lying.</snowpackStructureComment>
+          <tendencyComment>The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-BZ-08"/>
+      <locRef xlink:href="IT-32-TN-19"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <locRef xlink:href="IT-32-BZ-15"/>
+    </Bulletin>
+    <Bulletin gml:id="df0c4d83-e5c4-470e-8ec0-3d80741125cc_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-28T16:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T11:00:00Z</beginPosition>
+          <endPosition>2021-12-29T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-08"/>
+      <locRef xlink:href="IT-32-TN-19"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <locRef xlink:href="IT-32-BZ-15"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2400Lw"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2400Hi"/>
+            </AvProblem>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validElevation xlink:href="ElevationRange_2400Lw"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>In some regions increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. As a consequence of new snow and wind the prevalence and size of such avalanche prone locations will increase from midday. &lt;br/&gt; As the snowfall level rises wet and gliding avalanches are to be expected during the course of the night, especially on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach medium size.</avActivityComment>
+          <snowpackStructureComment>As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. The sometimes storm force wind will transport the new snow and, in some cases, old snow as well. The new snow and wind slabs are in some cases prone to triggering. &lt;br/&gt; The rain will give rise in the afternoon to increasing and thorough wetting of the snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night, in particular on west, north and east facing slopes. On sunny slopes below approximately 2200 m only a little snow is lying.</snowpackStructureComment>
+          <tendencyComment>The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-BZ-08"/>
+      <locRef xlink:href="IT-32-TN-19"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <locRef xlink:href="IT-32-BZ-15"/>
+    </Bulletin>
+    <Bulletin gml:id="d3eabfc0-ee67-44e0-8729-d254b33e0acb" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-28T23:00:00Z</beginPosition>
+          <endPosition>2021-12-29T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-20"/>
+      <locRef xlink:href="IT-32-TN-09"/>
+      <locRef xlink:href="IT-32-BZ-16"/>
+      <locRef xlink:href="IT-32-BZ-17"/>
+      <locRef xlink:href="IT-32-BZ-18"/>
+      <locRef xlink:href="IT-32-TN-02"/>
+      <locRef xlink:href="IT-32-TN-13"/>
+      <locRef xlink:href="IT-32-BZ-19"/>
+      <locRef xlink:href="IT-32-TN-01"/>
+      <locRef xlink:href="IT-32-TN-04"/>
+      <locRef xlink:href="AT-07-29"/>
+      <locRef xlink:href="IT-32-TN-17"/>
+      <locRef xlink:href="IT-32-TN-05"/>
+      <locRef xlink:href="IT-32-TN-16"/>
+      <locRef xlink:href="IT-32-TN-07"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2200Lw"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Fresh wind slabs require caution.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. &lt;br/&gt; During the course of the night as a consequence of warming there will be only a slight increase in the danger of wet and gliding avalanches, especially on west, north and east facing slopes below approximately 2200 m.</avActivityComment>
+          <snowpackStructureComment>Some new snow above approximately 2200 m. As a consequence of snowfall and the storm force westerly wind, fresh snow drift accumulations will form. The fresh wind slabs are in some cases prone to triggering. &lt;br/&gt; The rain will give rise in the afternoon to increasing softening of the snowpack below approximately 2200 m, in particular on west, north and east facing slopes. On sunny slopes below approximately 2200 m only a little snow is now lying.</snowpackStructureComment>
+          <tendencyComment>The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-BZ-20"/>
+      <locRef xlink:href="IT-32-TN-09"/>
+      <locRef xlink:href="IT-32-BZ-16"/>
+      <locRef xlink:href="IT-32-BZ-17"/>
+      <locRef xlink:href="IT-32-BZ-18"/>
+      <locRef xlink:href="IT-32-TN-02"/>
+      <locRef xlink:href="IT-32-TN-13"/>
+      <locRef xlink:href="IT-32-BZ-19"/>
+      <locRef xlink:href="IT-32-TN-01"/>
+      <locRef xlink:href="IT-32-TN-04"/>
+      <locRef xlink:href="AT-07-29"/>
+      <locRef xlink:href="IT-32-TN-17"/>
+      <locRef xlink:href="IT-32-TN-05"/>
+      <locRef xlink:href="IT-32-TN-16"/>
+      <locRef xlink:href="IT-32-TN-07"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+    </Bulletin>
+    <Bulletin gml:id="d3eabfc0-ee67-44e0-8729-d254b33e0acb_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T07:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T11:00:00Z</beginPosition>
+          <endPosition>2021-12-29T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-20"/>
+      <locRef xlink:href="IT-32-TN-09"/>
+      <locRef xlink:href="IT-32-BZ-16"/>
+      <locRef xlink:href="IT-32-BZ-17"/>
+      <locRef xlink:href="IT-32-BZ-18"/>
+      <locRef xlink:href="IT-32-TN-02"/>
+      <locRef xlink:href="IT-32-TN-13"/>
+      <locRef xlink:href="IT-32-BZ-19"/>
+      <locRef xlink:href="IT-32-TN-01"/>
+      <locRef xlink:href="IT-32-TN-04"/>
+      <locRef xlink:href="AT-07-29"/>
+      <locRef xlink:href="IT-32-TN-17"/>
+      <locRef xlink:href="IT-32-TN-05"/>
+      <locRef xlink:href="IT-32-TN-16"/>
+      <locRef xlink:href="IT-32-TN-07"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2200Lw"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP6</type>
+            </DangerPattern>
+            <DangerPattern>
+              <type>DP3</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+            </AvProblem>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validElevation xlink:href="ElevationRange_2200Lw"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Fresh wind slabs require caution.</avActivityHighlights>
+          <avActivityComment>In the late morning a quite favourable avalanche situation will still be encountered. &lt;br/&gt; In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. &lt;br/&gt; During the course of the night as a consequence of warming there will be only a slight increase in the danger of wet and gliding avalanches, especially on west, north and east facing slopes below approximately 2200 m.</avActivityComment>
+          <snowpackStructureComment>Some new snow above approximately 2200 m. As a consequence of snowfall and the storm force westerly wind, fresh snow drift accumulations will form. The fresh wind slabs are in some cases prone to triggering. &lt;br/&gt; The rain will give rise in the afternoon to increasing softening of the snowpack below approximately 2200 m, in particular on west, north and east facing slopes. On sunny slopes below approximately 2200 m only a little snow is now lying.</snowpackStructureComment>
+          <tendencyComment>The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-BZ-20"/>
+      <locRef xlink:href="IT-32-TN-09"/>
+      <locRef xlink:href="IT-32-BZ-16"/>
+      <locRef xlink:href="IT-32-BZ-17"/>
+      <locRef xlink:href="IT-32-BZ-18"/>
+      <locRef xlink:href="IT-32-TN-02"/>
+      <locRef xlink:href="IT-32-TN-13"/>
+      <locRef xlink:href="IT-32-BZ-19"/>
+      <locRef xlink:href="IT-32-TN-01"/>
+      <locRef xlink:href="IT-32-TN-04"/>
+      <locRef xlink:href="AT-07-29"/>
+      <locRef xlink:href="IT-32-TN-17"/>
+      <locRef xlink:href="IT-32-TN-05"/>
+      <locRef xlink:href="IT-32-TN-16"/>
+      <locRef xlink:href="IT-32-TN-07"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+    </Bulletin>
+    <Bulletin gml:id="3c30d092-4b12-4e5f-8292-dcc41953c9ce" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-28T16:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-28T23:00:00Z</beginPosition>
+          <endPosition>2021-12-29T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-TN-12"/>
+      <locRef xlink:href="IT-32-TN-15"/>
+      <locRef xlink:href="IT-32-TN-03"/>
+      <locRef xlink:href="IT-32-TN-14"/>
+      <locRef xlink:href="IT-32-TN-06"/>
+      <locRef xlink:href="IT-32-TN-08"/>
+      <locRef xlink:href="IT-32-TN-18"/>
+      <locRef xlink:href="IT-32-TN-11"/>
+      <locRef xlink:href="IT-32-TN-10"/>
+      <locRef xlink:href="IT-32-TN-21"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2200Lw"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>increasing</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>A generally favourable avalanche situation will prevail. Weakly bonded old snow requires caution. Slight increase in danger of wet and gliding avalanches as a consequence of warming.</avActivityHighlights>
+          <avActivityComment>Avalanches can in very isolated cases be released in the weakly bonded old snow, mostly by large additional loads, especially on very steep shady slopes above approximately 2200 m, as well as in gullies and bowls at elevated altitudes. In particular transitions from a shallow to a deep snowpack are unfavourable. The avalanche prone locations are rare but are barely recognisable, even to the trained eye. Snow slides and moist small and medium sized avalanches are possible from the afternoon.</avActivityComment>
+          <snowpackStructureComment>Faceted weak layers exist in the centre of the snowpack, in particular on shady slopes above approximately 2200 m. &lt;br/&gt; The snowpack will be generally subject to considerable local variations. Above the tree line snow depths vary greatly, depending on the infuence of the wind. The old snowpack consists of faceted crystals; its surface is loosely bonded and consists of surface hoar and faceted crystals. This applies in particular on shady slopes above the tree line. As a consequence of mild temperatures and solar radiation a crust formed on the surface. &lt;br/&gt; On sunny slopes below approximately 2000 m only a little snow is now lying.</snowpackStructureComment>
+          <tendencyComment>Over a wide area further warming: Gradual increase in danger of wet and gliding avalanches in particular on shady slopes.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-TN-12"/>
+      <locRef xlink:href="IT-32-TN-15"/>
+      <locRef xlink:href="IT-32-TN-03"/>
+      <locRef xlink:href="IT-32-TN-14"/>
+      <locRef xlink:href="IT-32-TN-06"/>
+      <locRef xlink:href="IT-32-TN-08"/>
+      <locRef xlink:href="IT-32-TN-18"/>
+      <locRef xlink:href="IT-32-TN-11"/>
+      <locRef xlink:href="IT-32-TN-10"/>
+      <locRef xlink:href="IT-32-TN-21"/>
+    </Bulletin>
+    <Bulletin gml:id="3c30d092-4b12-4e5f-8292-dcc41953c9ce_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-28T16:00:00Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T11:00:00Z</beginPosition>
+          <endPosition>2021-12-29T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-TN-12"/>
+      <locRef xlink:href="IT-32-TN-15"/>
+      <locRef xlink:href="IT-32-TN-03"/>
+      <locRef xlink:href="IT-32-TN-14"/>
+      <locRef xlink:href="IT-32-TN-06"/>
+      <locRef xlink:href="IT-32-TN-08"/>
+      <locRef xlink:href="IT-32-TN-18"/>
+      <locRef xlink:href="IT-32-TN-11"/>
+      <locRef xlink:href="IT-32-TN-10"/>
+      <locRef xlink:href="IT-32-TN-21"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+            </AvProblem>
+            <AvProblem>
+              <type>old snow</type>
+              <validAspect xlink:href="AspectRange_ne"/>
+              <validAspect xlink:href="AspectRange_nw"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validAspect xlink:href="AspectRange_n"/>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validElevation xlink:href="ElevationRange_2200Hi"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>increasing</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2021-12-29T23:00:00Z</beginPosition>
+                <endPosition>2021-12-30T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>A generally favourable avalanche situation will prevail. Weakly bonded old snow requires caution. Slight increase in danger of wet and gliding avalanches as a consequence of warming.</avActivityHighlights>
+          <avActivityComment>Avalanches can in very isolated cases be released in the weakly bonded old snow, mostly by large additional loads, especially on very steep shady slopes above approximately 2200 m, as well as in gullies and bowls at elevated altitudes. In particular transitions from a shallow to a deep snowpack are unfavourable. The avalanche prone locations are rare but are barely recognisable, even to the trained eye. Snow slides and moist small and medium sized avalanches are possible from the afternoon.</avActivityComment>
+          <snowpackStructureComment>Faceted weak layers exist in the centre of the snowpack, in particular on shady slopes above approximately 2200 m. &lt;br/&gt; The snowpack will be generally subject to considerable local variations. Above the tree line snow depths vary greatly, depending on the infuence of the wind. The old snowpack consists of faceted crystals; its surface is loosely bonded and consists of surface hoar and faceted crystals. This applies in particular on shady slopes above the tree line. As a consequence of mild temperatures and solar radiation a crust formed on the surface. &lt;br/&gt; On sunny slopes below approximately 2000 m only a little snow is now lying.</snowpackStructureComment>
+          <tendencyComment>Over a wide area further warming: Gradual increase in danger of wet and gliding avalanches in particular on shady slopes.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="IT-32-TN-12"/>
+      <locRef xlink:href="IT-32-TN-15"/>
+      <locRef xlink:href="IT-32-TN-03"/>
+      <locRef xlink:href="IT-32-TN-14"/>
+      <locRef xlink:href="IT-32-TN-06"/>
+      <locRef xlink:href="IT-32-TN-08"/>
+      <locRef xlink:href="IT-32-TN-18"/>
+      <locRef xlink:href="IT-32-TN-11"/>
+      <locRef xlink:href="IT-32-TN-10"/>
+      <locRef xlink:href="IT-32-TN-21"/>
+    </Bulletin>
+  </observations>
+</ObsCollection>
