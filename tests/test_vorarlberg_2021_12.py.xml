@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <observations>
+    <Bulletin gml:id="RID1242RGR1">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2021-12-29T06:30:52+00:00</dateTimeReport>
+          <srcRef>
+            <Operation gml:id="BID1242RGR1">
+              <name>avalanche-warnings.eu</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2021-12-29T06:30:52+00:00</beginPosition>
+          <endPosition>2021-12-30T07:00:00+00:00</endPosition>
+        </TimePeriod>
+      </validTime>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validTime>
+                <TimePeriod>
+                  <beginPosition>2021-12-29T23:00:00+00:00</beginPosition>
+                  <endPosition>2021-12-30T11:00:00+00:00</endPosition>
+                </TimePeriod>
+              </validTime>
+              <validElevation xlink:href="ElevationRange_1800Hi"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validTime>
+                <TimePeriod>
+                  <beginPosition>2021-12-30T11:00:00+00:00</beginPosition>
+                  <endPosition>2021-12-30T23:00:00+00:00</endPosition>
+                </TimePeriod>
+              </validTime>
+              <validElevation xlink:href="ElevationRange_2000Hi"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validTime>
+                <TimePeriod>
+                  <beginPosition>2021-12-29T23:00:00+00:00</beginPosition>
+                  <endPosition>2021-12-30T11:00:00+00:00</endPosition>
+                </TimePeriod>
+              </validTime>
+              <validElevation xlink:href="ElevationRange_1800Lo"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validTime>
+                <TimePeriod>
+                  <beginPosition>2021-12-30T11:00:00+00:00</beginPosition>
+                  <endPosition>2021-12-30T23:00:00+00:00</endPosition>
+                </TimePeriod>
+              </validTime>
+              <validElevation xlink:href="ElevationRange_2000Lo"/>
+              <mainValue>3</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <avProblems>
+            <AvProblem>
+              <type>drifting snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>Neu- und Triebschnee sind störanfällig. Steilgelände, hinter Geländekanten und eingewehte Rinnen und Mulden</comment>
+            </AvProblem>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_N"/>
+              <validAspect xlink:href="AspectRange_NE"/>
+              <validAspect xlink:href="AspectRange_E"/>
+              <validAspect xlink:href="AspectRange_SE"/>
+              <validAspect xlink:href="AspectRange_S"/>
+              <validAspect xlink:href="AspectRange_SW"/>
+              <validAspect xlink:href="AspectRange_W"/>
+              <validAspect xlink:href="AspectRange_NW"/>
+              <comment>mit milden Temperaturen und Regeneintrag nimmt die Gefahr von Gleit- und Nassschneelawinen im Tagesverlauf zu.</comment>
+            </AvProblem>
+          </avProblems>
+          <avActivityHighlights>mit Neuschnee und Sturm in höheren Lagen frischer Triebschnee. Intensiver Regen am Nachmittag führt zu einem Anstieg der Nass- und Gleitschneelawinengefahr.</avActivityHighlights>
+          <avActivityComment>Der Neuschnee und frische Triebschneeansammlungen sind störanfällig und können bereits bei geringer Zusatzbelastung leicht ausgelöst werden. Gefahrenstellen befinden sich im Steilgelände aller Expositionen, hinter Geländekanten und in eingewehten Rinnen und Mulden. Der Umfang und die Anzahl der Gefahrenstellen nehmen mit der Höhe und im Tagesverlauf zu. In höhergelegenen, sehr steilen Schattenhängen und im extremen Steilgelände können vereinzelt noch kleine Schneebrettlawinen mit großer Zusatzbelastung an Übergängen von wenig zu viel Schnee, wie z.B. bei Einfahrten in Rinnen und Mulden, oder an schneearmen Stellen ausgelöst werden. Spontane Lawinenabgänge sind vor allem ab Nachmittag möglich.&amp;nbsp;Mit den milden Temperaturen und dem intensiven Regeneintrag am Nachmittag nimmt die Gefahr von Gleit- und Nassschneelawinen in allen Expositionen unterhalb etwa 2200m im Tagesverlauf zu.</avActivityComment>
+          <snowpackStructureComment>In den letzten 24 Stunden gab es oberhalb etwa 1600m 10 bis 15cm Neuschnee. Bis morgen Früh kommt oberhalb etwa 2000 bis 2200m 10 bis 30cm Neuschnee dazu. Mit starkem bis stürmischem West- bis Nordwestwind wird der Neuschnee in der Höhe intensiv verfrachtet und es entstehen große, kammferne Triebschneeansammlungen. Der Neu- und Triebschnee kommt auf Wind- oder Schmelzharsch, auf Triebschneeschichten von Dienstag, in hochgelegenen Schattenhängen auf teilweise noch lockeren und pulvrigen Schichten zu liegen und ist störanfällig. In mittleren Lagen und an Südhängen ist die Verbindung zur Altschneeoberfläche besser. Zudem sind in höhergelegenen, sehr steilen Schattenhängen teilweise noch Schwachschichten im Mittelteil der Schneedecke oder ältere Triebschneepakete störbar. In tieferen und mittleren Lagen wurde die Schneedecke durch milde Temperaturen und Regeneinfluss weiter geschwächt. Ab Nachmittag wird mit intensivem Regen bis 2200m hinauf die Schneedecke durchnässt.</snowpackStructureComment>
+          <wxSynopsisComment>Vormittags vorübergehend trocken, aber nur wenige Auflockerungen. Ab Mittag wieder Eintrübung, zunehmend neblig, es kommt langsam ergiebiger Niederschlag auf. Dabei schneit es im Hochgebirge, bis etwa 2000m hinauf ist es aber Regen. Temperatur in 2000 m: von -3 auf +3 Grad steigend, Höhenwind: stark bis stürmisch erst aus West, später aus Nordwest.</wxSynopsisComment>
+          <tendencyComment>Mit der Warmfront steigt die Schneefallgrenze in der Nacht auf Donnerstag bis auf 2500m, somit ist nur in Hochlagen mit ergiebigeren Neuschneemengen zu rechnen. Die Lawinensituation bleibt weiter angespannt.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+      <locRef xlink:href="AT-08-06"/>
+      <locRef xlink:href="AT-08-05-01"/>
+      <locRef xlink:href="AT-08-05-02"/>
+      <locRef xlink:href="AT-08-04"/>
+      <locRef xlink:href="AT-08-03-01"/>
+      <locRef xlink:href="AT-08-03-02"/>
+      <locRef xlink:href="AT-08-01"/>
+      <locRef xlink:href="AT-08-02"/>
+    </Bulletin>
+  </observations>
+</ObsCollection>
