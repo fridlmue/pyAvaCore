@@ -203,7 +203,7 @@ class AvalancheProblemType:
                 problem_type_text = 'new_snow'
             elif 'drifting'in problem_type_text or 'drifted' in problem_type_text:
                 problem_type_text = 'wind_drifted_snow'
-            elif 'old' in problem_type_text or 'persistent':
+            elif 'old' in problem_type_text or 'persistent' in problem_type_text:
                 problem_type_text = 'persistent_weak_layers'
             elif 'wet' in problem_type_text:
                 problem_type_text = 'wet_snow'
