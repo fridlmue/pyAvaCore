@@ -41,8 +41,7 @@ class Bulletins:
                 regionID = region.regionID
                 for danger in bulletin.dangerRatings:
                     if (
-                        Bulletins.region_without_elevation(regionID)
-                        or not danger.elevation
+                        not danger.elevation
                         or danger.elevation.toString() == ""
                         or danger.elevation.toString().startswith("<")
                     ):
@@ -59,8 +58,7 @@ class Bulletins:
                         if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
                             ratings[f"{key}:am"] = ratings[key]
                     if (
-                        Bulletins.region_without_elevation(regionID)
-                        or not danger.elevation
+                        not danger.elevation
                         or danger.elevation.toString() == ""
                         or danger.elevation.toString().startswith(">")
                     ):
@@ -163,16 +161,3 @@ class Bulletins:
             bulletin = AvaBulletin()
             bulletin.from_json(bulletin_json)
             self.bulletins.append(bulletin)
-
-    @staticmethod
-    def region_without_elevation(id: str):
-        return (
-            id.startswith("CH-")
-            or id.startswith("IT-21-")
-            or id.startswith("IT-23-")
-            or id.startswith("IT-25-")
-            or id.startswith("IT-34-")
-            or id.startswith("IT-36-")
-            or id.startswith("IT-57-")
-            # or id.startswith("FR-")
-        )
