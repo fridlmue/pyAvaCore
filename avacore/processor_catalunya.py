@@ -1,21 +1,39 @@
+"""
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
+    This file is part of pyAvaCore.
+    pyAvaCore is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    pyAvaCore is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
+"""
+
 import json
 import urllib.request
 import datetime
 from datetime import timedelta
+import pytz
+import dateutil.parser
 
 from avacore import pyAvaCore
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
 
-def process_reports_cat(today=datetime.datetime.today().date()):
+def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
 
     reports = []
 
-    lang = {
+    lang_dir = {
         'en':3,
         'ca':1,
         'es':2
     }
 
-    url = "https://bpa.icgc.cat/api/query?id=512&values="+str(today)+";"+str(lang['es'])
+    url = "https://bpa.icgc.cat/api/query?id=512&values="+str(today)+";"+str(lang_dir[lang])
 
     headers = {
         "Content-Type": "application/json; charset=utf-8"
@@ -29,9 +47,9 @@ def process_reports_cat(today=datetime.datetime.today().date()):
     icgc_reports = json.loads(content)
 
     for icgc_report in icgc_reports:
-        report = pyAvaCore.AvaReport()
+        report = AvaBulletin()
 
-        report.rep_date = datetime.datetime.strptime(icgc_report['databutlleti'], '%Y-%m-%d')
+        report.publicationTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['databutlleti']))
         report.report_id = 'ES-CT-ICGC-'+ icgc_report['id_zona'] + '_' + str(report.rep_date)
         report.valid_regions.append('ES-CT-ICGC-'+ icgc_report['id_zona'])
         report.validity_begin = datetime.datetime.combine( \
