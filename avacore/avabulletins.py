@@ -80,6 +80,12 @@ class Bulletins:
                 sel_ratings = [value for key,value in ratings.items() if regionID in key]
                 sel_keys = [key for key,value in ratings.items() if regionID in key]
 
+                if not f"{regionID}:low" in ratings:
+                    ratings[f"{regionID}:low"] = ratings[f"{regionID}:high"]
+                    
+                if not f"{regionID}:high" in ratings:
+                    ratings[f"{regionID}:high"] = ratings[f"{regionID}:low"]
+
                 if not ('am' in sel_keys[0]) and not ('pm' in sel_keys[0]):
                     key = f"{regionID}:high"
                     ratings[f"{key}:am"] = ratings[key]
