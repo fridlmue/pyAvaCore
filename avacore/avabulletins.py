@@ -79,23 +79,29 @@ class Bulletins:
                 regionID = region.regionID
                 sel_ratings = [value for key,value in ratings.items() if regionID in key]
                 sel_keys = [key for key,value in ratings.items() if regionID in key]
-
-                if not f"{regionID}:low" in ratings:
-                    ratings[f"{regionID}:low"] = ratings[f"{regionID}:high"]
-                    
-                if not f"{regionID}:high" in ratings:
-                    ratings[f"{regionID}:high"] = ratings[f"{regionID}:low"]
-
-                if not ('am' in sel_keys[0]) and not ('pm' in sel_keys[0]):
-                    key = f"{regionID}:high"
-                    ratings[f"{key}:am"] = ratings[key]
-                    ratings[f"{key}:pm"] = ratings[key]
-                    key = f"{regionID}:low"
-                    ratings[f"{key}:am"] = ratings[key]
-                    ratings[f"{key}:pm"] = ratings[key]
-                
-                key = f"{regionID}:high"
+                                
                 try:
+                    if not f"{regionID}:low" in ratings:
+                        ratings[f"{regionID}:low"] = ratings[f"{regionID}:high"]
+                        
+                    if not f"{regionID}:high" in ratings:
+                        ratings[f"{regionID}:high"] = ratings[f"{regionID}:low"]
+                except:
+                    pass
+                
+                try:
+                    if not ('am' in sel_keys[0]) and not ('pm' in sel_keys[0]):
+                        key = f"{regionID}:high"
+                        ratings[f"{key}:am"] = ratings[key]
+                        ratings[f"{key}:pm"] = ratings[key]
+                        key = f"{regionID}:low"
+                        ratings[f"{key}:am"] = ratings[key]
+                        ratings[f"{key}:pm"] = ratings[key]
+                except:
+                    pass
+
+                try:
+                    key = f"{regionID}:high"
                     if not key in sel_keys:
                         ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
                     
@@ -115,6 +121,7 @@ class Bulletins:
                 except:
                     # Probably PM report was before AM report in JSON
                     pass
+
 
         # return 0 independent of "no_snow" or "no_rating"
         for key, value in ratings.items():
