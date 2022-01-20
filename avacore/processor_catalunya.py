@@ -53,21 +53,23 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
         report = AvaBulletin()
 
         report.publicationTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['databutlleti']))
-        report.report_id = 'ES-CT-ICGC-'+ icgc_report['id_zona'] + '_' + str(report.rep_date)
-        report.valid_regions.append('ES-CT-ICGC-'+ icgc_report['id_zona'])
-        report.validity_begin = datetime.datetime.combine( \
-            datetime.datetime.strptime(icgc_report['datavalidesabutlleti'], '%Y-%m-%d'), datetime.time(0,0))
-        report.validity_end = datetime.datetime.combine( \
-            datetime.datetime.strptime(icgc_report['datavalidesabutlleti'], '%Y-%m-%d'), datetime.time(23,59))
+        report.bulletinID = 'ES-CT-ICGC-'+ icgc_report['id_zona'] + '_' + str(report.publicationTime)
+        report.regions.append(RegionType('ES-CT-ICGC-'+ icgc_report['id_zona'])) # Region ID check with regions shape
+        report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T00:00'))
+        report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T23:59'))
 
-        report.report_texts.append(pyAvaCore.ReportText('activity_hl', icgc_report['perill_text']))
-        report.report_texts.append(pyAvaCore.ReportText('activity_com', icgc_report['text_estat_mantell']))
-        report.report_texts.append(pyAvaCore.ReportText('snow_struct_com', icgc_report['text_distribucio']))
-        report.report_texts.append(pyAvaCore.ReportText('tendency_com', icgc_report['text_tendencia']))
+        report.avalancheActivityHighlights = icgc_report['perill_text']
+        report.avalancheActivityComment =  icgc_report['text_estat_mantell']
+        report.snowpackStructureComment = icgc_report['text_distribucio']
+        report.tendency.tendencyComment = icgc_report['text_tendencia']
 
-        report.danger_main.append(pyAvaCore.DangerMain(int(icgc_report['grau_perill_primari']), '-'))
+        danger_rating = DangerRatingType()
+        danger_rating.set_mainValue_int(int(icgc_report['grau_perill_primari']))
+        report.dangerRatings.append(danger_rating)
         if not icgc_report['grau_perill_secundari'] == None:
-            report.danger_main.append(pyAvaCore.DangerMain(int(icgc_report['grau_perill_secundari']), '-'))
+            danger_rating_2 = DangerRatingType()
+            danger_rating_2.set_mainValue_int(int(icgc_report['grau_perill_secundari']))
+            report.dangerRatings.append(danger_rating_2)
 
         for problem in icgc_report['problems']:
             problem_type = ''
@@ -83,7 +85,10 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
                 problem_type = 'gliding snow'
             elif problem['id_tipus_situacio'] == '6':
                 problem_type = 'favourable situation'
-            report.problem_list.append(pyAvaCore.Problem(problem_type, [], '-'))
+                
+            problem = AvalancheProblemType()
+            problem.problemType = problem_type
+            report.avalancheProblems.append(problem)
 
         reports.append(report)
 
