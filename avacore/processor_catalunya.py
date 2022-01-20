@@ -48,6 +48,15 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
         content = response.read()
 
     icgc_reports = json.loads(content)
+    
+    reports = get_reports_fromjson(icgc_reports)
+    
+    return reports
+
+
+def get_reports_fromjson(icgc_reports):
+    reports = []
+    report = AvaBulletin()
 
     for icgc_report in icgc_reports:
         report = AvaBulletin()
@@ -87,7 +96,7 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
                 problem_type = 'favourable situation'
                 
             problem = AvalancheProblemType()
-            problem.problemType = problem_type
+            problem.add_problemType(problem_type)
             report.avalancheProblems.append(problem)
 
         reports.append(report)
