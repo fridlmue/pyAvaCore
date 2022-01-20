@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="viewport" content="width=device-width" /><title>https://xmlweather.vedur.is/avalanche?op=xml&amp;type=status&amp;lang=en</title><link rel="stylesheet" type="text/css" href="resource://content-accessible/viewsource.css" /></head><body id="viewsource" class="highlight" style="tab-size: 4"><pre id="line1"><span></span><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><span>
+<span id="line2"></span>
+<span id="line3"></span></span><span>&lt;<span class="start-tag">avalanche</span>&gt;</span><span>
+<span id="line4"></span></span><span>&lt;<span class="start-tag">conditions</span>&gt;</span><span>
+<span id="line5"></span>
+<span id="line6"></span>	</span><span>&lt;<span class="start-tag">short_description</span>&gt;</span><span>Most snow has accumulated in N- and E-Iceland. New snow expected in most parts except NE- and E- parts, during SW snowshowers next few days.</span><span>&lt;/<span class="end-tag">short_description</span>&gt;</span><span>
+<span id="line7"></span>	</span><span>&lt;<span class="start-tag">full_description</span>&gt;</span><span><span class="entity"><span>&amp;</span>lt;</span>p class=<span class="entity"><span>&amp;</span>quot;</span>MsoNormal<span class="entity"><span>&amp;</span>quot;</span><span class="entity"><span>&amp;</span>gt;</span><span class="entity"><span>&amp;</span>lt;</span>span style=<span class="entity"><span>&amp;</span>quot;</span>font-size: 9.0pt; line-height: 107%; font-family: <span class="entity"><span>&amp;</span>quot;</span>Arial<span class="entity"><span>&amp;</span>quot;</span>,sans-serif; color: #333333; background: white; mso-ansi-language: EN-US;<span class="entity"><span>&amp;</span>quot;</span> lang=<span class="entity"><span>&amp;</span>quot;</span>EN-US<span class="entity"><span>&amp;</span>quot;</span><span class="entity"><span>&amp;</span>gt;</span>Considerable snow in N- and E-Iceland. New snow in the mountains in most parts of the country but rain in lowlands. SW snowshowers expected next several days and new windslabs likely to form in N-E aspects. Little precipitation in N- and E-Iceland.<span class="entity"><span>&amp;</span>lt;</span>/span<span class="entity"><span>&amp;</span>gt;</span></span><span>&lt;/<span class="end-tag">full_description</span>&gt;</span><span>
+<span id="line8"></span>	</span><span>&lt;<span class="start-tag">update_time</span>&gt;</span><span>2022-01-11T16:12:51</span><span>&lt;/<span class="end-tag">update_time</span>&gt;</span><span>
+<span id="line9"></span>
+<span id="line10"></span></span><span>&lt;/<span class="end-tag">conditions</span>&gt;</span><span>
+<span id="line11"></span></span><span>&lt;<span class="start-tag">area_forecasts</span>&gt;</span><span>
+<span id="line12"></span>			
+<span id="line13"></span>	</span><span>&lt;<span class="start-tag">area_forecast</span>&gt;</span><span>
+<span id="line14"></span>		</span><span>&lt;<span class="start-tag">region</span>&gt;</span><span>Southwest corner (experimental) </span><span>&lt;/<span class="end-tag">region</span>&gt;</span><span>
+<span id="line15"></span>		</span><span>&lt;<span class="start-tag">region_code</span>&gt;</span><span>sv</span><span>&lt;/<span class="end-tag">region_code</span>&gt;</span><span>
+<span id="line16"></span>		</span><span>&lt;<span class="start-tag">valid_from</span>&gt;</span><span>2022-01-11T19:00:00</span><span>&lt;/<span class="end-tag">valid_from</span>&gt;</span><span>
+<span id="line17"></span>		</span><span>&lt;<span class="start-tag">valid_until</span>&gt;</span><span>2022-01-12T19:00:00</span><span>&lt;/<span class="end-tag">valid_until</span>&gt;</span><span>
+<span id="line18"></span>		</span><span>&lt;<span class="start-tag">updated</span>&gt;</span><span>2022-01-11T16:32:17</span><span>&lt;/<span class="end-tag">updated</span>&gt;</span><span>
+<span id="line19"></span>		</span><span>&lt;<span class="start-tag">forecast</span>&gt;</span><span>Old windslabs in W-aspects and new windslabs forming in N- to E-aspects. Old firn or crust at many places that is stable.</span><span>&lt;/<span class="end-tag">forecast</span>&gt;</span><span>
+<span id="line20"></span>		</span><span>&lt;<span class="start-tag">recent_avalances</span>&gt;</span><span>No reports of recent avalanches.</span><span>&lt;/<span class="end-tag">recent_avalances</span>&gt;</span><span>
+<span id="line21"></span>		</span><span>&lt;<span class="start-tag">snow_condition</span>&gt;</span><span>Recent wind slabs above 500 m after strong SE and E winds but rain in lower part of mountains early on Monday. Older snow is hard and considered stable after melt-freeze cycles. South and southwest winds and considerable snow showers in mountains the next few days. New windslabs will form in N- to E-aspects that might be unstable.</span><span>&lt;/<span class="end-tag">snow_condition</span>&gt;</span><span>
+<span id="line22"></span>		</span><span>&lt;<span class="start-tag">weather</span>&gt;</span><span>Su<span class="entity"><span>&amp;</span>#240;</span>vestan<span class="entity"><span>&amp;</span>#225;</span>tt og gengur <span class="entity"><span>&amp;</span>#225;</span> me<span class="entity"><span>&amp;</span>#240;</span> <span class="entity"><span>&amp;</span>#233;</span>ljum <span class="entity"><span>&amp;</span>#225;</span> mi<span class="entity"><span>&amp;</span>#240;</span>vikudag og fyrripart fimmtudags en dregur <span class="entity"><span>&amp;</span>#250;</span>r vindi og <span class="entity"><span>&amp;</span>#250;</span>rkomu seinnipartinn. Talsver<span class="entity"><span>&amp;</span>#240;</span> <span class="entity"><span>&amp;</span>#243;</span>vissa <span class="entity"><span>&amp;</span>#237;</span> sp<span class="entity"><span>&amp;</span>#225;</span>nni <span class="entity"><span>&amp;</span>#225;</span> f<span class="entity"><span>&amp;</span>#246;</span>studag en g<span class="entity"><span>&amp;</span>#230;</span>ti b<span class="entity"><span>&amp;</span>#230;</span>tt aftur <span class="entity"><span>&amp;</span>#225;</span> snj<span class="entity"><span>&amp;</span>#243;</span>. H<span class="entity"><span>&amp;</span>#230;</span>gt k<span class="entity"><span>&amp;</span>#243;</span>lnandi ve<span class="entity"><span>&amp;</span>#240;</span>ur.</span><span>&lt;/<span class="end-tag">weather</span>&gt;</span><span>
+<span id="line23"></span>
+<span id="line24"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1</span>&gt;</span><span>Considerable danger</span><span>&lt;/<span class="end-tag">danger_level_day1</span>&gt;</span><span>
+<span id="line25"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_code</span>&gt;</span><span>3</span><span>&lt;/<span class="end-tag">danger_level_day1_code</span>&gt;</span><span>
+<span id="line26"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color</span>&gt;</span><span>Orange</span><span>&lt;/<span class="end-tag">danger_level_day1_color</span>&gt;</span><span>
+<span id="line27"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color_rgb</span>&gt;</span><span>#F5B800</span><span>&lt;/<span class="end-tag">danger_level_day1_color_rgb</span>&gt;</span><span>
+<span id="line28"></span>
+<span id="line29"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2</span>&gt;</span><span>Considerable danger</span><span>&lt;/<span class="end-tag">danger_level_day2</span>&gt;</span><span>
+<span id="line30"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_code</span>&gt;</span><span>3</span><span>&lt;/<span class="end-tag">danger_level_day2_code</span>&gt;</span><span>
+<span id="line31"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color</span>&gt;</span><span>Orange</span><span>&lt;/<span class="end-tag">danger_level_day2_color</span>&gt;</span><span>
+<span id="line32"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color_rgb</span>&gt;</span><span>#F5B800</span><span>&lt;/<span class="end-tag">danger_level_day2_color_rgb</span>&gt;</span><span>
+<span id="line33"></span>
+<span id="line34"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day3</span>&gt;</span><span>
+<span id="line35"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day3_code</span>&gt;</span><span>
+<span id="line36"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day3_color</span>&gt;</span><span>
+<span id="line37"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day3_color_rgb</span>&gt;</span><span>
+<span id="line38"></span>
+<span id="line39"></span>		</span><span>&lt;<span class="start-tag">snow_problems</span>&gt;</span><span>
+<span id="line40"></span>
+<span id="line41"></span>				</span><span>&lt;<span class="start-tag">snow_problem</span>&gt;</span><span>
+<span id="line42"></span>					</span><span>&lt;<span class="start-tag">importance</span>&gt;</span><span>1</span><span>&lt;/<span class="end-tag">importance</span>&gt;</span><span>
+<span id="line43"></span>					</span><span>&lt;<span class="start-tag">size</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">size</span>&gt;</span><span>
+<span id="line44"></span>					</span><span>&lt;<span class="start-tag">type</span>&gt;</span><span>Wind-drifted snow</span><span>&lt;/<span class="end-tag">type</span>&gt;</span><span>
+<span id="line45"></span>					</span><span>&lt;<span class="start-tag">aspect_from</span>&gt;</span><span>N</span><span>&lt;/<span class="end-tag">aspect_from</span>&gt;</span><span>
+<span id="line46"></span>					</span><span>&lt;<span class="start-tag">aspect_from_deg</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">aspect_from_deg</span>&gt;</span><span>
+<span id="line47"></span>					</span><span>&lt;<span class="start-tag">aspect_to</span>&gt;</span><span>E</span><span>&lt;/<span class="end-tag">aspect_to</span>&gt;</span><span>
+<span id="line48"></span>					</span><span>&lt;<span class="start-tag">aspect_to_deg</span>&gt;</span><span>90</span><span>&lt;/<span class="end-tag">aspect_to_deg</span>&gt;</span><span>
+<span id="line49"></span>					</span><span>&lt;<span class="start-tag">probability</span>&gt;</span><span>Likely</span><span>&lt;/<span class="end-tag">probability</span>&gt;</span><span>
+<span id="line50"></span>					</span><span>&lt;<span class="start-tag">height</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">height</span>&gt;</span><span>
+<span id="line51"></span>					</span><span>&lt;<span class="start-tag">height_ref</span>&gt;</span><span>Above</span><span>&lt;/<span class="end-tag">height_ref</span>&gt;</span><span>
+<span id="line52"></span>				</span><span>&lt;/<span class="end-tag">snow_problem</span>&gt;</span><span>
+<span id="line53"></span>
+<span id="line54"></span>				</span><span>&lt;<span class="start-tag">snow_problem</span>&gt;</span><span>
+<span id="line55"></span>					</span><span>&lt;<span class="start-tag">importance</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">importance</span>&gt;</span><span>
+<span id="line56"></span>					</span><span>&lt;<span class="start-tag">size</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">size</span>&gt;</span><span>
+<span id="line57"></span>					</span><span>&lt;<span class="start-tag">type</span>&gt;</span><span>Wind-drifted snow</span><span>&lt;/<span class="end-tag">type</span>&gt;</span><span>
+<span id="line58"></span>					</span><span>&lt;<span class="start-tag">aspect_from</span>&gt;</span><span>SW</span><span>&lt;/<span class="end-tag">aspect_from</span>&gt;</span><span>
+<span id="line59"></span>					</span><span>&lt;<span class="start-tag">aspect_from_deg</span>&gt;</span><span>225</span><span>&lt;/<span class="end-tag">aspect_from_deg</span>&gt;</span><span>
+<span id="line60"></span>					</span><span>&lt;<span class="start-tag">aspect_to</span>&gt;</span><span>NW</span><span>&lt;/<span class="end-tag">aspect_to</span>&gt;</span><span>
+<span id="line61"></span>					</span><span>&lt;<span class="start-tag">aspect_to_deg</span>&gt;</span><span>315</span><span>&lt;/<span class="end-tag">aspect_to_deg</span>&gt;</span><span>
+<span id="line62"></span>					</span><span>&lt;<span class="start-tag">probability</span>&gt;</span><span>Possible</span><span>&lt;/<span class="end-tag">probability</span>&gt;</span><span>
+<span id="line63"></span>					</span><span>&lt;<span class="start-tag">height</span>&gt;</span><span>400</span><span>&lt;/<span class="end-tag">height</span>&gt;</span><span>
+<span id="line64"></span>					</span><span>&lt;<span class="start-tag">height_ref</span>&gt;</span><span>Above</span><span>&lt;/<span class="end-tag">height_ref</span>&gt;</span><span>
+<span id="line65"></span>				</span><span>&lt;/<span class="end-tag">snow_problem</span>&gt;</span><span>
+<span id="line66"></span>
+<span id="line67"></span>		</span><span>&lt;/<span class="end-tag">snow_problems</span>&gt;</span><span>
+<span id="line68"></span>	</span><span>&lt;/<span class="end-tag">area_forecast</span>&gt;</span><span>
+<span id="line69"></span>			
+<span id="line70"></span>	</span><span>&lt;<span class="start-tag">area_forecast</span>&gt;</span><span>
+<span id="line71"></span>		</span><span>&lt;<span class="start-tag">region</span>&gt;</span><span>Northern Westfjords </span><span>&lt;/<span class="end-tag">region</span>&gt;</span><span>
+<span id="line72"></span>		</span><span>&lt;<span class="start-tag">region_code</span>&gt;</span><span>vn</span><span>&lt;/<span class="end-tag">region_code</span>&gt;</span><span>
+<span id="line73"></span>		</span><span>&lt;<span class="start-tag">valid_from</span>&gt;</span><span>2022-01-11T19:00:00</span><span>&lt;/<span class="end-tag">valid_from</span>&gt;</span><span>
+<span id="line74"></span>		</span><span>&lt;<span class="start-tag">valid_until</span>&gt;</span><span>2022-01-12T19:00:00</span><span>&lt;/<span class="end-tag">valid_until</span>&gt;</span><span>
+<span id="line75"></span>		</span><span>&lt;<span class="start-tag">updated</span>&gt;</span><span>2022-01-11T16:35:12</span><span>&lt;/<span class="end-tag">updated</span>&gt;</span><span>
+<span id="line76"></span>		</span><span>&lt;<span class="start-tag">forecast</span>&gt;</span><span>New snow being added the next few days in SW-winds. Older snow is hardpacked drift snow, and below 500 m it has gone through a melt-freeze cycle.</span><span>&lt;/<span class="end-tag">forecast</span>&gt;</span><span>
+<span id="line77"></span>		</span><span>&lt;<span class="start-tag">recent_avalances</span>&gt;</span><span>No reports of recent avalanches.</span><span>&lt;/<span class="end-tag">recent_avalances</span>&gt;</span><span>
+<span id="line78"></span>		</span><span>&lt;<span class="start-tag">snow_condition</span>&gt;</span><span>Relatively warm south and easterly winds have been the last few days with intermittent rain high up in mountains. Unstable windslabs could still be found in many aspects above 500 m, but older snow below that is considered stable. S- and SW winds are forecast the next days with showers of snow and new windslabs will form in northerly aspects, which might be unstable.</span><span>&lt;/<span class="end-tag">snow_condition</span>&gt;</span><span>
+<span id="line79"></span>		</span><span>&lt;<span class="start-tag">weather</span>&gt;</span><span>Hv<span class="entity"><span>&amp;</span>#246;</span>ss su<span class="entity"><span>&amp;</span>#240;</span>vestan<span class="entity"><span>&amp;</span>#225;</span>tt me<span class="entity"><span>&amp;</span>#240;</span> <span class="entity"><span>&amp;</span>#233;</span>ljagangi <span class="entity"><span>&amp;</span>#225;</span> mi<span class="entity"><span>&amp;</span>#240;</span>vikudag og fimmtudag. H<span class="entity"><span>&amp;</span>#230;</span>gt k<span class="entity"><span>&amp;</span>#243;</span>lnandi ve<span class="entity"><span>&amp;</span>#240;</span>ur. L<span class="entity"><span>&amp;</span>#237;</span>kur <span class="entity"><span>&amp;</span>#225;</span> snj<span class="entity"><span>&amp;</span>#243;</span>komu <span class="entity"><span>&amp;</span>#237;</span> austl<span class="entity"><span>&amp;</span>#230;</span>gri <span class="entity"><span>&amp;</span>#225;</span>tt <span class="entity"><span>&amp;</span>#225;</span> f<span class="entity"><span>&amp;</span>#246;</span>studag.</span><span>&lt;/<span class="end-tag">weather</span>&gt;</span><span>
+<span id="line80"></span>
+<span id="line81"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1</span>&gt;</span><span>Considerable danger</span><span>&lt;/<span class="end-tag">danger_level_day1</span>&gt;</span><span>
+<span id="line82"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_code</span>&gt;</span><span>3</span><span>&lt;/<span class="end-tag">danger_level_day1_code</span>&gt;</span><span>
+<span id="line83"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color</span>&gt;</span><span>Orange</span><span>&lt;/<span class="end-tag">danger_level_day1_color</span>&gt;</span><span>
+<span id="line84"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color_rgb</span>&gt;</span><span>#F5B800</span><span>&lt;/<span class="end-tag">danger_level_day1_color_rgb</span>&gt;</span><span>
+<span id="line85"></span>
+<span id="line86"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2</span>&gt;</span><span>Considerable danger</span><span>&lt;/<span class="end-tag">danger_level_day2</span>&gt;</span><span>
+<span id="line87"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_code</span>&gt;</span><span>3</span><span>&lt;/<span class="end-tag">danger_level_day2_code</span>&gt;</span><span>
+<span id="line88"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color</span>&gt;</span><span>Orange</span><span>&lt;/<span class="end-tag">danger_level_day2_color</span>&gt;</span><span>
+<span id="line89"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color_rgb</span>&gt;</span><span>#F5B800</span><span>&lt;/<span class="end-tag">danger_level_day2_color_rgb</span>&gt;</span><span>
+<span id="line90"></span>
+<span id="line91"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day3</span>&gt;</span><span>
+<span id="line92"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day3_code</span>&gt;</span><span>
+<span id="line93"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day3_color</span>&gt;</span><span>
+<span id="line94"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day3_color_rgb</span>&gt;</span><span>
+<span id="line95"></span>
+<span id="line96"></span>		</span><span>&lt;<span class="start-tag">snow_problems</span>&gt;</span><span>
+<span id="line97"></span>
+<span id="line98"></span>				</span><span>&lt;<span class="start-tag">snow_problem</span>&gt;</span><span>
+<span id="line99"></span>					</span><span>&lt;<span class="start-tag">importance</span>&gt;</span><span>1</span><span>&lt;/<span class="end-tag">importance</span>&gt;</span><span>
+<span id="line100"></span>					</span><span>&lt;<span class="start-tag">size</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">size</span>&gt;</span><span>
+<span id="line101"></span>					</span><span>&lt;<span class="start-tag">type</span>&gt;</span><span>Wind-drifted snow</span><span>&lt;/<span class="end-tag">type</span>&gt;</span><span>
+<span id="line102"></span>					</span><span>&lt;<span class="start-tag">aspect_from</span>&gt;</span><span>N</span><span>&lt;/<span class="end-tag">aspect_from</span>&gt;</span><span>
+<span id="line103"></span>					</span><span>&lt;<span class="start-tag">aspect_from_deg</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">aspect_from_deg</span>&gt;</span><span>
+<span id="line104"></span>					</span><span>&lt;<span class="start-tag">aspect_to</span>&gt;</span><span>W</span><span>&lt;/<span class="end-tag">aspect_to</span>&gt;</span><span>
+<span id="line105"></span>					</span><span>&lt;<span class="start-tag">aspect_to_deg</span>&gt;</span><span>270</span><span>&lt;/<span class="end-tag">aspect_to_deg</span>&gt;</span><span>
+<span id="line106"></span>					</span><span>&lt;<span class="start-tag">probability</span>&gt;</span><span>Likely</span><span>&lt;/<span class="end-tag">probability</span>&gt;</span><span>
+<span id="line107"></span>					</span><span>&lt;<span class="start-tag">height</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">height</span>&gt;</span><span>
+<span id="line108"></span>					</span><span>&lt;<span class="start-tag">height_ref</span>&gt;</span><span>Above</span><span>&lt;/<span class="end-tag">height_ref</span>&gt;</span><span>
+<span id="line109"></span>				</span><span>&lt;/<span class="end-tag">snow_problem</span>&gt;</span><span>
+<span id="line110"></span>
+<span id="line111"></span>		</span><span>&lt;/<span class="end-tag">snow_problems</span>&gt;</span><span>
+<span id="line112"></span>	</span><span>&lt;/<span class="end-tag">area_forecast</span>&gt;</span><span>
+<span id="line113"></span>			
+<span id="line114"></span>	</span><span>&lt;<span class="start-tag">area_forecast</span>&gt;</span><span>
+<span id="line115"></span>		</span><span>&lt;<span class="start-tag">region</span>&gt;</span><span>Tröllaskagi </span><span>&lt;/<span class="end-tag">region</span>&gt;</span><span>
+<span id="line116"></span>		</span><span>&lt;<span class="start-tag">region_code</span>&gt;</span><span>tn</span><span>&lt;/<span class="end-tag">region_code</span>&gt;</span><span>
+<span id="line117"></span>		</span><span>&lt;<span class="start-tag">valid_from</span>&gt;</span><span>2022-01-11T19:00:00</span><span>&lt;/<span class="end-tag">valid_from</span>&gt;</span><span>
+<span id="line118"></span>		</span><span>&lt;<span class="start-tag">valid_until</span>&gt;</span><span>2022-01-12T19:00:00</span><span>&lt;/<span class="end-tag">valid_until</span>&gt;</span><span>
+<span id="line119"></span>		</span><span>&lt;<span class="start-tag">updated</span>&gt;</span><span>2022-01-11T16:27:11</span><span>&lt;/<span class="end-tag">updated</span>&gt;</span><span>
+<span id="line120"></span>		</span><span>&lt;<span class="start-tag">forecast</span>&gt;</span><span>Southwesterly winds and showers of snow the next few days and unstable windslabs might form in northeasterly aspects. A persistent weak layer may be underneath in some places.</span><span>&lt;/<span class="end-tag">forecast</span>&gt;</span><span>
+<span id="line121"></span>		</span><span>&lt;<span class="start-tag">recent_avalances</span>&gt;</span><span>A dry slab released in Brimnesdalur 6.1. and a small avalanche fell above <span class="entity"><span>&amp;</span>#211;</span>lafsfjar<span class="entity"><span>&amp;</span>#240;</span>arvegur.</span><span>&lt;/<span class="end-tag">recent_avalances</span>&gt;</span><span>
+<span id="line122"></span>		</span><span>&lt;<span class="start-tag">snow_condition</span>&gt;</span><span>Windslabs formed in northeasterly on Tuesday. Earlier windslabs had formed in most aspects but it became warm up to 600 m and snow below that is considered stable. A persistent weak layer may be underneath some places, where surface hoar got buried in snow that fell in calm wind. This weak layer was found in a snow pit on <span class="entity"><span>&amp;</span>#214;</span>xnadalshei<span class="entity"><span>&amp;</span>#240;</span>i 8.1. but has not been confirmed in Tr<span class="entity"><span>&amp;</span>#246;</span>llaskagi. If a persistent weak layer is present, the likelihood of human triggered avalanches increases. Showers of snow in strong SW winds the next few days and unstable windslabs might form in northeasterly aspects.</span><span>&lt;/<span class="end-tag">snow_condition</span>&gt;</span><span>
+<span id="line123"></span>		</span><span>&lt;<span class="start-tag">weather</span>&gt;</span><span>Hv<span class="entity"><span>&amp;</span>#246;</span>ss SV <span class="entity"><span>&amp;</span>#225;</span>tt og <span class="entity"><span>&amp;</span>#233;</span>ljagangur <span class="entity"><span>&amp;</span>#225;</span> mi<span class="entity"><span>&amp;</span>#240;</span>vikudag og fimmtudag. H<span class="entity"><span>&amp;</span>#230;</span>gari og <span class="entity"><span>&amp;</span>#254;</span>urrt <span class="entity"><span>&amp;</span>#225;</span> f<span class="entity"><span>&amp;</span>#246;</span>studag en d<span class="entity"><span>&amp;</span>#225;</span>l<span class="entity"><span>&amp;</span>#237;</span>til snj<span class="entity"><span>&amp;</span>#243;</span>koma <span class="entity"><span>&amp;</span>#237;</span> austl<span class="entity"><span>&amp;</span>#230;</span>gri <span class="entity"><span>&amp;</span>#225;</span>tt um kv<span class="entity"><span>&amp;</span>#246;</span>ldi<span class="entity"><span>&amp;</span>#240;</span>. Kalt <span class="entity"><span>&amp;</span>#237;</span> ve<span class="entity"><span>&amp;</span>#240;</span>ri.</span><span>&lt;/<span class="end-tag">weather</span>&gt;</span><span>
+<span id="line124"></span>
+<span id="line125"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day1</span>&gt;</span><span>
+<span id="line126"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day1_code</span>&gt;</span><span>
+<span id="line127"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day1_color</span>&gt;</span><span>
+<span id="line128"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day1_color_rgb</span>&gt;</span><span>
+<span id="line129"></span>
+<span id="line130"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day2</span>&gt;</span><span>
+<span id="line131"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day2_code</span>&gt;</span><span>
+<span id="line132"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day2_color</span>&gt;</span><span>
+<span id="line133"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day2_color_rgb</span>&gt;</span><span>
+<span id="line134"></span>
+<span id="line135"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day3</span>&gt;</span><span>
+<span id="line136"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day3_code</span>&gt;</span><span>
+<span id="line137"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day3_color</span>&gt;</span><span>
+<span id="line138"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day3_color_rgb</span>&gt;</span><span>
+<span id="line139"></span>
+<span id="line140"></span>		</span><span>&lt;<span class="start-tag">snow_problems</span>&gt;</span><span>
+<span id="line141"></span>
+<span id="line142"></span>				</span><span>&lt;<span class="start-tag">snow_problem</span>&gt;</span><span>
+<span id="line143"></span>					</span><span>&lt;<span class="start-tag">importance</span>&gt;</span><span>1</span><span>&lt;/<span class="end-tag">importance</span>&gt;</span><span>
+<span id="line144"></span>					</span><span>&lt;<span class="start-tag">size</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">size</span>&gt;</span><span>
+<span id="line145"></span>					</span><span>&lt;<span class="start-tag">type</span>&gt;</span><span>Wind-drifted snow</span><span>&lt;/<span class="end-tag">type</span>&gt;</span><span>
+<span id="line146"></span>					</span><span>&lt;<span class="start-tag">aspect_from</span>&gt;</span><span>N</span><span>&lt;/<span class="end-tag">aspect_from</span>&gt;</span><span>
+<span id="line147"></span>					</span><span>&lt;<span class="start-tag">aspect_from_deg</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">aspect_from_deg</span>&gt;</span><span>
+<span id="line148"></span>					</span><span>&lt;<span class="start-tag">aspect_to</span>&gt;</span><span>E</span><span>&lt;/<span class="end-tag">aspect_to</span>&gt;</span><span>
+<span id="line149"></span>					</span><span>&lt;<span class="start-tag">aspect_to_deg</span>&gt;</span><span>90</span><span>&lt;/<span class="end-tag">aspect_to_deg</span>&gt;</span><span>
+<span id="line150"></span>					</span><span>&lt;<span class="start-tag">probability</span>&gt;</span><span>Possible</span><span>&lt;/<span class="end-tag">probability</span>&gt;</span><span>
+<span id="line151"></span>					</span><span>&lt;<span class="start-tag">height</span>&gt;</span><span>300</span><span>&lt;/<span class="end-tag">height</span>&gt;</span><span>
+<span id="line152"></span>					</span><span>&lt;<span class="start-tag">height_ref</span>&gt;</span><span>Above</span><span>&lt;/<span class="end-tag">height_ref</span>&gt;</span><span>
+<span id="line153"></span>				</span><span>&lt;/<span class="end-tag">snow_problem</span>&gt;</span><span>
+<span id="line154"></span>
+<span id="line155"></span>				</span><span>&lt;<span class="start-tag">snow_problem</span>&gt;</span><span>
+<span id="line156"></span>					</span><span>&lt;<span class="start-tag">importance</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">importance</span>&gt;</span><span>
+<span id="line157"></span>					</span><span>&lt;<span class="start-tag">size</span>&gt;</span><span>3</span><span>&lt;/<span class="end-tag">size</span>&gt;</span><span>
+<span id="line158"></span>					</span><span>&lt;<span class="start-tag">type</span>&gt;</span><span>Persistent weak layer</span><span>&lt;/<span class="end-tag">type</span>&gt;</span><span>
+<span id="line159"></span>					</span><span>&lt;<span class="start-tag">aspect_from</span>&gt;</span><span>N</span><span>&lt;/<span class="end-tag">aspect_from</span>&gt;</span><span>
+<span id="line160"></span>					</span><span>&lt;<span class="start-tag">aspect_from_deg</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">aspect_from_deg</span>&gt;</span><span>
+<span id="line161"></span>					</span><span>&lt;<span class="start-tag">aspect_to</span>&gt;</span><span>NW</span><span>&lt;/<span class="end-tag">aspect_to</span>&gt;</span><span>
+<span id="line162"></span>					</span><span>&lt;<span class="start-tag">aspect_to_deg</span>&gt;</span><span>315</span><span>&lt;/<span class="end-tag">aspect_to_deg</span>&gt;</span><span>
+<span id="line163"></span>					</span><span>&lt;<span class="start-tag">probability</span>&gt;</span><span>Unlikely</span><span>&lt;/<span class="end-tag">probability</span>&gt;</span><span>
+<span id="line164"></span>					</span><span>&lt;<span class="start-tag">height</span>&gt;</span><span>400</span><span>&lt;/<span class="end-tag">height</span>&gt;</span><span>
+<span id="line165"></span>					</span><span>&lt;<span class="start-tag">height_ref</span>&gt;</span><span>Above</span><span>&lt;/<span class="end-tag">height_ref</span>&gt;</span><span>
+<span id="line166"></span>				</span><span>&lt;/<span class="end-tag">snow_problem</span>&gt;</span><span>
+<span id="line167"></span>
+<span id="line168"></span>		</span><span>&lt;/<span class="end-tag">snow_problems</span>&gt;</span><span>
+<span id="line169"></span>	</span><span>&lt;/<span class="end-tag">area_forecast</span>&gt;</span><span>
+<span id="line170"></span>			
+<span id="line171"></span>	</span><span>&lt;<span class="start-tag">area_forecast</span>&gt;</span><span>
+<span id="line172"></span>		</span><span>&lt;<span class="start-tag">region</span>&gt;</span><span>East fjords </span><span>&lt;/<span class="end-tag">region</span>&gt;</span><span>
+<span id="line173"></span>		</span><span>&lt;<span class="start-tag">region_code</span>&gt;</span><span>af</span><span>&lt;/<span class="end-tag">region_code</span>&gt;</span><span>
+<span id="line174"></span>		</span><span>&lt;<span class="start-tag">valid_from</span>&gt;</span><span>2022-01-11T19:00:00</span><span>&lt;/<span class="end-tag">valid_from</span>&gt;</span><span>
+<span id="line175"></span>		</span><span>&lt;<span class="start-tag">valid_until</span>&gt;</span><span>2022-01-12T19:00:00</span><span>&lt;/<span class="end-tag">valid_until</span>&gt;</span><span>
+<span id="line176"></span>		</span><span>&lt;<span class="start-tag">updated</span>&gt;</span><span>2022-01-11T15:27:45</span><span>&lt;/<span class="end-tag">updated</span>&gt;</span><span>
+<span id="line177"></span>		</span><span>&lt;<span class="start-tag">forecast</span>&gt;</span><span>Light showers of snow in westerly winds the next few days and new unstable windslabs might form. Windslabs formed high in mountains on Monday and might be unstable, but further down it rained.</span><span>&lt;/<span class="end-tag">forecast</span>&gt;</span><span>
+<span id="line178"></span>		</span><span>&lt;<span class="start-tag">recent_avalances</span>&gt;</span><span>No reports of recent avalanches.</span><span>&lt;/<span class="end-tag">recent_avalances</span>&gt;</span><span>
+<span id="line179"></span>		</span><span>&lt;<span class="start-tag">snow_condition</span>&gt;</span><span>There were light showers of snow on Tuesday and windslabs unstable windslabs might have formed in NE aspects. It became warm and rained below 700 m on Monday, but above that snow has accumulated in strong easterly wind and before there was snow from northerly wind. Snow has drifted and accumulated in most aspects with less snow in between and this older snow is considered mostly stable. Light showers of snow the next days and windslabs in NE aspects might grow.</span><span>&lt;/<span class="end-tag">snow_condition</span>&gt;</span><span>
+<span id="line180"></span>		</span><span>&lt;<span class="start-tag">weather</span>&gt;</span><span>Su<span class="entity"><span>&amp;</span>#240;</span>vestl<span class="entity"><span>&amp;</span>#230;</span>g <span class="entity"><span>&amp;</span>#225;</span>tt n<span class="entity"><span>&amp;</span>#230;</span>stu daga og <span class="entity"><span>&amp;</span>#250;</span>rkomulaust a<span class="entity"><span>&amp;</span>#240;</span> kalla. <span class="entity"><span>&amp;</span>#222;</span>urrt <span class="entity"><span>&amp;</span>#225;</span> f<span class="entity"><span>&amp;</span>#246;</span>studag en snj<span class="entity"><span>&amp;</span>#243;</span>koma <span class="entity"><span>&amp;</span>#237;</span> austl<span class="entity"><span>&amp;</span>#230;</span>gri <span class="entity"><span>&amp;</span>#225;</span>tt um kv<span class="entity"><span>&amp;</span>#246;</span>ldi<span class="entity"><span>&amp;</span>#240;</span>. Svalt <span class="entity"><span>&amp;</span>#237;</span> ver<span class="entity"><span>&amp;</span>#240;</span>i.</span><span>&lt;/<span class="end-tag">weather</span>&gt;</span><span>
+<span id="line181"></span>
+<span id="line182"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day1</span>&gt;</span><span>
+<span id="line183"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day1_code</span>&gt;</span><span>
+<span id="line184"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day1_color</span>&gt;</span><span>
+<span id="line185"></span>		</span><span>&lt;<span class="start-tag">danger_level_day1_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day1_color_rgb</span>&gt;</span><span>
+<span id="line186"></span>
+<span id="line187"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day2</span>&gt;</span><span>
+<span id="line188"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day2_code</span>&gt;</span><span>
+<span id="line189"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day2_color</span>&gt;</span><span>
+<span id="line190"></span>		</span><span>&lt;<span class="start-tag">danger_level_day2_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day2_color_rgb</span>&gt;</span><span>
+<span id="line191"></span>
+<span id="line192"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3</span>&gt;</span><span>Moderate danger</span><span>&lt;/<span class="end-tag">danger_level_day3</span>&gt;</span><span>
+<span id="line193"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_code</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">danger_level_day3_code</span>&gt;</span><span>
+<span id="line194"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color</span>&gt;</span><span>Yellow</span><span>&lt;/<span class="end-tag">danger_level_day3_color</span>&gt;</span><span>
+<span id="line195"></span>		</span><span>&lt;<span class="start-tag">danger_level_day3_color_rgb</span>&gt;</span><span>#FFFF00</span><span>&lt;/<span class="end-tag">danger_level_day3_color_rgb</span>&gt;</span><span>
+<span id="line196"></span>
+<span id="line197"></span>		</span><span>&lt;<span class="start-tag">snow_problems</span>&gt;</span><span>
+<span id="line198"></span>
+<span id="line199"></span>				</span><span>&lt;<span class="start-tag">snow_problem</span>&gt;</span><span>
+<span id="line200"></span>					</span><span>&lt;<span class="start-tag">importance</span>&gt;</span><span>1</span><span>&lt;/<span class="end-tag">importance</span>&gt;</span><span>
+<span id="line201"></span>					</span><span>&lt;<span class="start-tag">size</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">size</span>&gt;</span><span>
+<span id="line202"></span>					</span><span>&lt;<span class="start-tag">type</span>&gt;</span><span>Wind-drifted snow</span><span>&lt;/<span class="end-tag">type</span>&gt;</span><span>
+<span id="line203"></span>					</span><span>&lt;<span class="start-tag">aspect_from</span>&gt;</span><span>N</span><span>&lt;/<span class="end-tag">aspect_from</span>&gt;</span><span>
+<span id="line204"></span>					</span><span>&lt;<span class="start-tag">aspect_from_deg</span>&gt;</span><span>0</span><span>&lt;/<span class="end-tag">aspect_from_deg</span>&gt;</span><span>
+<span id="line205"></span>					</span><span>&lt;<span class="start-tag">aspect_to</span>&gt;</span><span>NE</span><span>&lt;/<span class="end-tag">aspect_to</span>&gt;</span><span>
+<span id="line206"></span>					</span><span>&lt;<span class="start-tag">aspect_to_deg</span>&gt;</span><span>45</span><span>&lt;/<span class="end-tag">aspect_to_deg</span>&gt;</span><span>
+<span id="line207"></span>					</span><span>&lt;<span class="start-tag">probability</span>&gt;</span><span>Possible</span><span>&lt;/<span class="end-tag">probability</span>&gt;</span><span>
+<span id="line208"></span>					</span><span>&lt;<span class="start-tag">height</span>&gt;</span><span>300</span><span>&lt;/<span class="end-tag">height</span>&gt;</span><span>
+<span id="line209"></span>					</span><span>&lt;<span class="start-tag">height_ref</span>&gt;</span><span>Above</span><span>&lt;/<span class="end-tag">height_ref</span>&gt;</span><span>
+<span id="line210"></span>				</span><span>&lt;/<span class="end-tag">snow_problem</span>&gt;</span><span>
+<span id="line211"></span>
+<span id="line212"></span>		</span><span>&lt;/<span class="end-tag">snow_problems</span>&gt;</span><span>
+<span id="line213"></span>	</span><span>&lt;/<span class="end-tag">area_forecast</span>&gt;</span><span>
+<span id="line214"></span>
+<span id="line215"></span></span><span>&lt;/<span class="end-tag">area_forecasts</span>&gt;</span><span>
+<span id="line216"></span></span><span>&lt;<span class="start-tag">weather_forecast</span>&gt;</span><span>
+<span id="line217"></span>
+<span id="line218"></span>	</span><span>&lt;<span class="start-tag">forecast</span>&gt;</span><span>SW-snowshowers and strong winds at times the next days. Little precipitation expected in E-Iceland. Cool temperatures. New snow in easterly or variable winds on Friday evening.</span><span>&lt;/<span class="end-tag">forecast</span>&gt;</span><span>		
+<span id="line219"></span>	</span><span>&lt;<span class="start-tag">update_time</span>&gt;</span><span>2022-01-11T16:13:08</span><span>&lt;/<span class="end-tag">update_time</span>&gt;</span><span>
+<span id="line220"></span>
+<span id="line221"></span></span><span>&lt;/<span class="end-tag">weather_forecast</span>&gt;</span><span>
+<span id="line222"></span></span><span>&lt;/<span class="end-tag">avalanche</span>&gt;</span><span>
+<span id="line223"></span>
+<span id="line224"></span>
+<span id="line225"></span></span></pre></body></html>
