@@ -74,7 +74,7 @@ def process_reports_is(path='', cached=False, lang='en'):
         report.publicationTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('updated').text))
         report.validTime.startTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('valid_from').text))
         report.validTime.endTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('valid_until').text))
-        report.regions.append(RegionType(area_forcast.find('region_code').text, area_forcast.find('region').text))
+        report.regions.append(RegionType("IS-"+area_forcast.find('region_code').text.upper()))
         
         report.bulletinID = report.regions[0].regionID + '-' + report.publicationTime.isoformat()
         
