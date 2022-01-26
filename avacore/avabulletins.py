@@ -41,25 +41,93 @@ class Bulletins:
                 regionID = region.regionID
                 for danger in bulletin.dangerRatings:
                     if (
-                        Bulletins.region_without_elevation(regionID)
-                        or not danger.elevation
+                        not danger.elevation
                         or danger.elevation.toString() == ""
                         or danger.elevation.toString().startswith("<")
                     ):
-                        key = f"{regionID}:low"
+                        pm = ''
+                        if hasattr(bulletin, 'predecessor_id'):
+                            pm = ':pm'
+                            key = f"{regionID}:low"
+                            if key in ratings:
+                                ratings[f"{key}:am"] = ratings.pop(key)
+                        key = f"{regionID}:low{pm}"
                         ratings[key] = max(
                             danger.get_mainValue_int(), ratings.get(key, 0)
                         )
+                        if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
+                            ratings[f"{key}:am"] = ratings[key]
                     if (
-                        Bulletins.region_without_elevation(regionID)
-                        or not danger.elevation
+                        not danger.elevation
                         or danger.elevation.toString() == ""
                         or danger.elevation.toString().startswith(">")
                     ):
-                        key = f"{regionID}:high"
+                        pm = ''
+                        if hasattr(bulletin, 'predecessor_id'):
+                            pm = ':pm'
+                            key = f"{regionID}:high"
+                            if key in ratings:
+                                ratings[f"{key}:am"] = ratings.pop(key)
+                        key = f"{regionID}:high{pm}"
                         ratings[key] = max(
                             danger.get_mainValue_int(), ratings.get(key, 0)
                         )
+                        if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
+                            ratings[f"{key}:am"] = ratings[key]
+
+            for region in bulletin.regions:
+                regionID = region.regionID
+                sel_ratings = [value for key,value in ratings.items() if regionID in key]
+                sel_keys = [key for key,value in ratings.items() if regionID in key]
+                                
+                try:
+                    if not f"{regionID}:low" in ratings:
+                        ratings[f"{regionID}:low"] = ratings[f"{regionID}:high"]
+                        
+                    if not f"{regionID}:high" in ratings:
+                        ratings[f"{regionID}:high"] = ratings[f"{regionID}:low"]
+                except:
+                    pass
+                
+                try:
+                    if not ('am' in sel_keys[0]) and not ('pm' in sel_keys[0]):
+                        key = f"{regionID}:high"
+                        ratings[f"{key}:am"] = ratings[key]
+                        ratings[f"{key}:pm"] = ratings[key]
+                        key = f"{regionID}:low"
+                        ratings[f"{key}:am"] = ratings[key]
+                        ratings[f"{key}:pm"] = ratings[key]
+                except:
+                    pass
+
+                try:
+                    key = f"{regionID}:high"
+                    if not key in sel_keys:
+                        ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
+                    
+                    key = f"{regionID}:low"    
+                    if not key in sel_keys:
+                        ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
+                        
+                    key = regionID
+                    if not f"{key}:am" in sel_keys:
+                        ratings[f"{key}:am"] = max(ratings[f"{key}:high:am"], ratings[f"{key}:low:am"])
+                        
+                    if not f"{key}:pm" in sel_keys:
+                        ratings[f"{key}:pm"] = max(ratings[f"{key}:high:pm"], ratings[f"{key}:low:pm"])
+                        
+                    if not key in sel_keys:
+                        ratings[key] = max(sel_ratings)
+                except:
+                    # Probably PM report was before AM report in JSON
+                    pass
+
+
+        # return 0 independent of "no_snow" or "no_rating"
+        for key, value in ratings.items():
+            if value == -1:
+                ratings[key] = 0
+
         return ratings
 
     def augment_geojson(self, geojson: FeatureCollection):
@@ -99,23 +167,10 @@ class Bulletins:
         if not dangers:
             return
         feature.properties.max_danger_rating = max(dangers)
-        
+
     def from_json(self, bulletins_json):
         self.bulletins = []
         for bulletin_json in bulletins_json['bulletins']:
             bulletin = AvaBulletin()
             bulletin.from_json(bulletin_json)
             self.bulletins.append(bulletin)
-
-    @staticmethod
-    def region_without_elevation(id: str):
-        return (
-            id.startswith("CH-")
-            or id.startswith("IT-21-")
-            or id.startswith("IT-23-")
-            or id.startswith("IT-25-")
-            or id.startswith("IT-34-")
-            or id.startswith("IT-36-")
-            or id.startswith("IT-57-")
-            or id.startswith("FR-")
-        )
