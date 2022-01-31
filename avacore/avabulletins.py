@@ -101,13 +101,12 @@ class Bulletins:
                     pass
 
                 try:
+                    sel_ratings = [value for key,value in ratings.items() if regionID in key]
                     key = f"{regionID}:high"
-                    if not key in sel_keys:
-                        ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
+                    ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
                     
                     key = f"{regionID}:low"    
-                    if not key in sel_keys:
-                        ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
+                    ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
                         
                     key = regionID
                     sel_ratings = [value for key,value in ratings.items() if regionID in key]
