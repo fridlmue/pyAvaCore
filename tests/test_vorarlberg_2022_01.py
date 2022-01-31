@@ -13,11 +13,12 @@ class TestVorarlberg2022(unittest.TestCase):
         # self.assertEqual(len(bulletins.bulletins), 1)
         ratings = bulletins.max_danger_ratings()
         
+        '''
         with open(f'tests/test/{bulletins.main_date().isoformat()}-vorarlberg_comp.ratings.json', mode='w', encoding='utf-8') as f:
             import json
             obj = dict(maxDangerRatings=bulletins.max_danger_ratings())
             json.dump(obj, fp=f, indent=2, sort_keys=True)
-        
+        '''
 
         self.assertEqual(
             ratings,
