@@ -110,14 +110,16 @@ class Bulletins:
                         ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
                         
                     key = regionID
-                    if not f"{key}:am" in sel_keys:
-                        ratings[f"{key}:am"] = max(ratings[f"{key}:high:am"], ratings[f"{key}:low:am"])
+                    sel_ratings = [value for key,value in ratings.items() if regionID in key]
+                    # if not f"{key}:am" in sel_keys:
+                    ratings[f"{key}:am"] = max(ratings[f"{key}:high:am"], ratings[f"{key}:low:am"])
                         
-                    if not f"{key}:pm" in sel_keys:
-                        ratings[f"{key}:pm"] = max(ratings[f"{key}:high:pm"], ratings[f"{key}:low:pm"])
-                        
-                    if not key in sel_keys:
-                        ratings[key] = max(sel_ratings)
+                    # if not f"{key}:pm" in sel_keys:
+                    ratings[f"{key}:pm"] = max(ratings[f"{key}:high:pm"], ratings[f"{key}:low:pm"])
+                    
+                    sel_ratings = [value for key,value in ratings.items() if regionID in key]
+                    # if not key in sel_keys:
+                    ratings[key] = max(sel_ratings)
                 except:
                     # Probably PM report was before AM report in JSON
                     pass

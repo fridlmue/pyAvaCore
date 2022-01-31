@@ -82,7 +82,7 @@ def parse_xml(root):
                     valid_elevation = validElevation.attrib.get('{http://www.w3.org/1999/xlink}href')
                 for beginPosition in DangerRating.iter(tag=CAAMLTAG + 'beginPosition'):
                     validity_begin = dateutil.parser.parse(beginPosition.text)
-                    if validity_begin.time() <= time(15, 0, 0):
+                    if validity_begin.time() <= time(15, 0, 0) and validity_begin.time() >= time(8, 0, 0):
                         am_rating = False
                         report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
                 danger_rating = DangerRatingType()
