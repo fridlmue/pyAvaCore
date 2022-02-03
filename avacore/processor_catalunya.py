@@ -75,7 +75,7 @@ def get_reports_fromjson(icgc_reports):
 
         report.publicationTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['databutlleti']))
         report.bulletinID = region_id + '_' + str(report.publicationTime)
-        report.regions.append(RegionType(region_id)) # Region ID check with regions shape
+        report.regions.append(RegionType(region_id))
         report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T00:00'))
         report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T23:59'))
 

@@ -16,12 +16,12 @@ class TestCtIcgc(unittest.TestCase):
         self.assertEqual(len(reports), 7)
 
         report = reports[0]
-        self.assertEqual(report.bulletinID, 'ES-CT-ICGC-1_2022-01-19 00:00:00+01:00')
+        self.assertEqual(report.bulletinID, 'ES-CT-L-04_2022-01-19 00:00:00+01:00')
         self.assertEqual(report.publicationTime.isoformat(), '2022-01-19T00:00:00+01:00')
         self.assertEqual(report.validTime.startTime.isoformat(), '2022-01-20T00:00:00+01:00')
         self.assertEqual(report.validTime.endTime.isoformat(), '2022-01-20T23:59:00+01:00')
-        self.assertIn('ES-CT-ICGC-1', report.get_region_list())
-        self.assertNotIn('ES-CT-ICGC-2', report.get_region_list())
+        self.assertIn('ES-CT-L-04', report.get_region_list())
+        self.assertNotIn('ES-CT-RF', report.get_region_list())
         self.assertEqual(len(report.dangerRatings), 2)
         self.assertEqual(report.dangerRatings[0].mainValue, 'low')
         self.assertEqual(report.dangerRatings[0].get_mainValue_int(),  1)
