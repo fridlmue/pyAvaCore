@@ -1,0 +1,2564 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "FR-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches un peu humides au soleil +qq plaques l'apr\u00e8s-midi.\nD\u00e9clenchements skieurs : plaques friables,avalanches un peu humides au Sud",
+      "avalancheActivityComment": "-Belle couche de neige r\u00e9cente et fra\u00eeche, plus ou moins souffl\u00e9e en altitude, mais pas encore stabilis\u00e9e. \n\n-D\u00e9parts spontan\u00e9s : en milieu de journ\u00e9e et l'apr\u00e8s-midi, quelques avalanches de neige poudreuse un peu humide en surface, se d\u00e9clencheront dans les pentes raides au soleil jusque vers 2000 m. En cours d'apr\u00e8s-midi, possibles ruptures de plaques isol\u00e9es sous le vent des cr\u00eates, compte tenu des transports de neige fra\u00eeche par des vents assez forts de nord-est.\n \n-D\u00e9clenchement par skieurs : dans les versants raides, attention aux fr\u00e9quentes plaques friables dans la poudreuse de 30/70 cm selon l'altitude, \u00e0 fortiori dans les parages des cols et des cr\u00eates.  \n-Par ailleurs, en mi-journ\u00e9e et l'apr\u00e8s-midi, dans les pentes raides au soleil, des coul\u00e9es et avalanches de neige fra\u00eeche un peu humide, se produiront assez facilement sous les skis.",
+      "snowpackStructureComment": "-L'enneigement sera excellent lundi, y compris dans le fond des hautes vall\u00e9es \u00e0 plus de 1000 m d'altitude. Jusqu'en milieu de nuit de dimanche \u00e0 lundi, il tombera encore 10/15 cm de neige fra\u00eeche en suppl\u00e9ment, peu souffl\u00e9e.\n-Cette belle couche de neige r\u00e9cente et fra\u00eeche, d'une \u00e9paisseur moyenne de 30 \u00e0 60 cm selon les vall\u00e9es et l'altitude, reposera sur un vieux manteau neigeux compacte et bien regel\u00e9 en profondeur. \n-L\u00e9g\u00e8re humidification au soleil l'apr\u00e8s-midi jusque vers 2000 m.\n-Lundi apr\u00e8s-midi pr\u00e8s des cols et des cr\u00eates, cette neige poudreuse sera souvent souffl\u00e9e en surface et plus ou moins compact\u00e9e, sous l'action d'un renforcement des vents de nord-est.",
+      "bulletinID": "FR-01_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-01_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches un peu humides au soleil +qq plaques l'apr\u00e8s-midi.\nD\u00e9clenchements skieurs : plaques friables,avalanches un peu humides au Sud",
+      "avalancheActivityComment": "-Belle couche de neige r\u00e9cente et fra\u00eeche, plus ou moins souffl\u00e9e en altitude, mais pas encore stabilis\u00e9e. \n\n-D\u00e9parts spontan\u00e9s : en milieu de journ\u00e9e et l'apr\u00e8s-midi, quelques avalanches de neige poudreuse un peu humide en surface, se d\u00e9clencheront dans les pentes raides au soleil jusque vers 2000 m. En cours d'apr\u00e8s-midi, possibles ruptures de plaques isol\u00e9es sous le vent des cr\u00eates, compte tenu des transports de neige fra\u00eeche par des vents assez forts de nord-est.\n \n-D\u00e9clenchement par skieurs : dans les versants raides, attention aux fr\u00e9quentes plaques friables dans la poudreuse de 30/70 cm selon l'altitude, \u00e0 fortiori dans les parages des cols et des cr\u00eates.  \n-Par ailleurs, en mi-journ\u00e9e et l'apr\u00e8s-midi, dans les pentes raides au soleil, des coul\u00e9es et avalanches de neige fra\u00eeche un peu humide, se produiront assez facilement sous les skis.",
+      "snowpackStructureComment": "-L'enneigement sera excellent lundi, y compris dans le fond des hautes vall\u00e9es \u00e0 plus de 1000 m d'altitude. Jusqu'en milieu de nuit de dimanche \u00e0 lundi, il tombera encore 10/15 cm de neige fra\u00eeche en suppl\u00e9ment, peu souffl\u00e9e.\n-Cette belle couche de neige r\u00e9cente et fra\u00eeche, d'une \u00e9paisseur moyenne de 30 \u00e0 60 cm selon les vall\u00e9es et l'altitude, reposera sur un vieux manteau neigeux compacte et bien regel\u00e9 en profondeur. \n-L\u00e9g\u00e8re humidification au soleil l'apr\u00e8s-midi jusque vers 2000 m.\n-Lundi apr\u00e8s-midi pr\u00e8s des cols et des cr\u00eates, cette neige poudreuse sera souvent souffl\u00e9e en surface et plus ou moins compact\u00e9e, sous l'action d'un renforcement des vents de nord-est.",
+      "bulletinID": "FR-01_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches un peu humides au soleil +qq plaques l'apr\u00e8s-midi.\nD\u00e9clenchements skieurs : plaques friables,avalanches un peu humides au Sud",
+      "avalancheActivityComment": "-Belle couche de neige r\u00e9cente et fra\u00eeche, plus ou moins souffl\u00e9e en altitude, mais pas encore stabilis\u00e9e. \n\n-D\u00e9parts spontan\u00e9s : en milieu de journ\u00e9e et l'apr\u00e8s-midi, quelques avalanches de neige poudreuse un peu humide en surface, se d\u00e9clencheront dans les pentes raides au soleil jusque vers 2000 m. En cours d'apr\u00e8s-midi, possibles ruptures de plaques isol\u00e9es sous le vent des cr\u00eates, compte tenu des transports de neige fra\u00eeche par des vents assez forts de nord-est.\n \n-D\u00e9clenchement par skieurs : dans les versants raides, attention aux fr\u00e9quentes plaques friables dans la poudreuse de 30/70 cm selon l'altitude, \u00e0 fortiori dans les parages des cols et des cr\u00eates.  \n-Par ailleurs, en mi-journ\u00e9e et l'apr\u00e8s-midi, dans les pentes raides au soleil, des coul\u00e9es et avalanches de neige fra\u00eeche un peu humide, se produiront assez facilement sous les skis.",
+      "snowpackStructureComment": "-L'enneigement sera excellent lundi, y compris dans le fond des hautes vall\u00e9es \u00e0 plus de 1000 m d'altitude. Jusqu'en milieu de nuit de dimanche \u00e0 lundi, il tombera encore 10/15 cm de neige fra\u00eeche en suppl\u00e9ment, peu souffl\u00e9e.\n-Cette belle couche de neige r\u00e9cente et fra\u00eeche, d'une \u00e9paisseur moyenne de 30 \u00e0 60 cm selon les vall\u00e9es et l'altitude, reposera sur un vieux manteau neigeux compacte et bien regel\u00e9 en profondeur. \n-L\u00e9g\u00e8re humidification au soleil l'apr\u00e8s-midi jusque vers 2000 m.\n-Lundi apr\u00e8s-midi pr\u00e8s des cols et des cr\u00eates, cette neige poudreuse sera souvent souffl\u00e9e en surface et plus ou moins compact\u00e9e, sous l'action d'un renforcement des vents de nord-est.",
+      "bulletinID": "FR-02_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-02_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches un peu humides au soleil +qq plaques l'apr\u00e8s-midi.\nD\u00e9clenchements skieurs : plaques friables,avalanches un peu humides au Sud",
+      "avalancheActivityComment": "-Belle couche de neige r\u00e9cente et fra\u00eeche, plus ou moins souffl\u00e9e en altitude, mais pas encore stabilis\u00e9e. \n\n-D\u00e9parts spontan\u00e9s : en milieu de journ\u00e9e et l'apr\u00e8s-midi, quelques avalanches de neige poudreuse un peu humide en surface, se d\u00e9clencheront dans les pentes raides au soleil jusque vers 2000 m. En cours d'apr\u00e8s-midi, possibles ruptures de plaques isol\u00e9es sous le vent des cr\u00eates, compte tenu des transports de neige fra\u00eeche par des vents assez forts de nord-est.\n \n-D\u00e9clenchement par skieurs : dans les versants raides, attention aux fr\u00e9quentes plaques friables dans la poudreuse de 30/70 cm selon l'altitude, \u00e0 fortiori dans les parages des cols et des cr\u00eates.  \n-Par ailleurs, en mi-journ\u00e9e et l'apr\u00e8s-midi, dans les pentes raides au soleil, des coul\u00e9es et avalanches de neige fra\u00eeche un peu humide, se produiront assez facilement sous les skis.",
+      "snowpackStructureComment": "-L'enneigement sera excellent lundi, y compris dans le fond des hautes vall\u00e9es \u00e0 plus de 1000 m d'altitude. Jusqu'en milieu de nuit de dimanche \u00e0 lundi, il tombera encore 10/15 cm de neige fra\u00eeche en suppl\u00e9ment, peu souffl\u00e9e.\n-Cette belle couche de neige r\u00e9cente et fra\u00eeche, d'une \u00e9paisseur moyenne de 30 \u00e0 60 cm selon les vall\u00e9es et l'altitude, reposera sur un vieux manteau neigeux compacte et bien regel\u00e9 en profondeur. \n-L\u00e9g\u00e8re humidification au soleil l'apr\u00e8s-midi jusque vers 2000 m.\n-Lundi apr\u00e8s-midi pr\u00e8s des cols et des cr\u00eates, cette neige poudreuse sera souvent souffl\u00e9e en surface et plus ou moins compact\u00e9e, sous l'action d'un renforcement des vents de nord-est.",
+      "bulletinID": "FR-02_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches un peu humides au soleil +qq plaques l'apr\u00e8s-midi.\nD\u00e9clenchements skieurs : plaques friables,avalanches un peu humides au Sud",
+      "avalancheActivityComment": "-Belle couche de neige r\u00e9cente et fra\u00eeche, plus ou moins souffl\u00e9e en altitude, mais pas encore stabilis\u00e9e. \n\n-D\u00e9parts spontan\u00e9s : en milieu de journ\u00e9e et l'apr\u00e8s-midi, quelques avalanches de neige poudreuse un peu humide en surface, se d\u00e9clencheront dans les pentes raides au soleil jusque vers 2000 m. En cours d'apr\u00e8s-midi, possibles ruptures de plaques isol\u00e9es sous le vent des cr\u00eates, compte tenu des transports de neige fra\u00eeche par des vents assez forts de nord-est.\n \n-D\u00e9clenchement par skieurs : dans les versants raides, attention aux fr\u00e9quentes plaques friables dans la poudreuse de 30/70 cm selon l'altitude, \u00e0 fortiori dans les parages des cols et des cr\u00eates.  \n-Par ailleurs, en mi-journ\u00e9e et l'apr\u00e8s-midi, dans les pentes raides au soleil en moyenne montagne, des coul\u00e9es et avalanches de neige fra\u00eeche un peu humide, se produiront assez facilement sous les skis.",
+      "snowpackStructureComment": "-L'enneigement sera excellent lundi, y compris dans le fond des hautes vall\u00e9es \u00e0 plus de 1000 m d'altitude. Jusqu'en milieu de nuit de dimanche \u00e0 lundi, il tombera encore 10/15 cm de neige fra\u00eeche en suppl\u00e9ment, peu souffl\u00e9e.\n-Cette belle couche de neige r\u00e9cente et fra\u00eeche, d'une \u00e9paisseur moyenne de 30 \u00e0 60 cm selon les vall\u00e9es et l'altitude, reposera sur un vieux manteau neigeux compacte et bien regel\u00e9 en profondeur jusqu'\u00e0 2800 m. \n-L\u00e9g\u00e8re humidification au soleil l'apr\u00e8s-midi jusque vers 2000 m.\n-Lundi apr\u00e8s-midi pr\u00e8s des cols et des cr\u00eates, cette neige poudreuse sera souvent souffl\u00e9e en surface et plus ou moins compact\u00e9e, sous l'action d'un renforcement des vents de nord-est.",
+      "bulletinID": "FR-03_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-03_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches un peu humides au soleil +qq plaques l'apr\u00e8s-midi.\nD\u00e9clenchements skieurs : plaques friables,avalanches un peu humides au Sud",
+      "avalancheActivityComment": "-Belle couche de neige r\u00e9cente et fra\u00eeche, plus ou moins souffl\u00e9e en altitude, mais pas encore stabilis\u00e9e. \n\n-D\u00e9parts spontan\u00e9s : en milieu de journ\u00e9e et l'apr\u00e8s-midi, quelques avalanches de neige poudreuse un peu humide en surface, se d\u00e9clencheront dans les pentes raides au soleil jusque vers 2000 m. En cours d'apr\u00e8s-midi, possibles ruptures de plaques isol\u00e9es sous le vent des cr\u00eates, compte tenu des transports de neige fra\u00eeche par des vents assez forts de nord-est.\n \n-D\u00e9clenchement par skieurs : dans les versants raides, attention aux fr\u00e9quentes plaques friables dans la poudreuse de 30/70 cm selon l'altitude, \u00e0 fortiori dans les parages des cols et des cr\u00eates.  \n-Par ailleurs, en mi-journ\u00e9e et l'apr\u00e8s-midi, dans les pentes raides au soleil en moyenne montagne, des coul\u00e9es et avalanches de neige fra\u00eeche un peu humide, se produiront assez facilement sous les skis.",
+      "snowpackStructureComment": "-L'enneigement sera excellent lundi, y compris dans le fond des hautes vall\u00e9es \u00e0 plus de 1000 m d'altitude. Jusqu'en milieu de nuit de dimanche \u00e0 lundi, il tombera encore 10/15 cm de neige fra\u00eeche en suppl\u00e9ment, peu souffl\u00e9e.\n-Cette belle couche de neige r\u00e9cente et fra\u00eeche, d'une \u00e9paisseur moyenne de 30 \u00e0 60 cm selon les vall\u00e9es et l'altitude, reposera sur un vieux manteau neigeux compacte et bien regel\u00e9 en profondeur jusqu'\u00e0 2800 m. \n-L\u00e9g\u00e8re humidification au soleil l'apr\u00e8s-midi jusque vers 2000 m.\n-Lundi apr\u00e8s-midi pr\u00e8s des cols et des cr\u00eates, cette neige poudreuse sera souvent souffl\u00e9e en surface et plus ou moins compact\u00e9e, sous l'action d'un renforcement des vents de nord-est.",
+      "bulletinID": "FR-03_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rochers, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition au vent, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes en pentes sous le vent de ces jours ci.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode on a des cumules de 20 \u00e0 30 cm de neige fra\u00eeche, souvent durcie par le vent pr\u00e8s des sommets, plus poudreuses en aval.",
+      "bulletinID": "FR-04_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-05"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rochers, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 60 cm de neige fra\u00eeche poudreuse aux altitudes basses \u00e0 moyennes, parfois fritt\u00e9e un peu plus haut et souvent durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-05_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-05_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-05"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rochers, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 60 cm de neige fra\u00eeche poudreuse aux altitudes basses \u00e0 moyennes, parfois fritt\u00e9e un peu plus haut et souvent durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-05_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-06"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 60 cm de neige fra\u00eeche poudreuse en dessous de 1800m \u00e0 2200m, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-06_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-06_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-06"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 60 cm de neige fra\u00eeche poudreuse en dessous de 1800m \u00e0 2200m, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-06_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-09"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 30 \u00e0 60 cm de neige fra\u00eeche poudreuse en dessous de 1800m \u00e0 2000m, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-09_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-09_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-09"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 30 \u00e0 60 cm de neige fra\u00eeche poudreuse en dessous de 1800m \u00e0 2000m, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-09_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-10"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 60 cm de neige fra\u00eeche poudreuse en dessous de 1800m \u00e0 2200m, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-10_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-10_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-10"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 60 cm de neige fra\u00eeche poudreuse en dessous de 1800m \u00e0 2200m, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies ou presque.",
+      "bulletinID": "FR-10_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-11"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 50 cm de neige fra\u00eeche poudreuse en dessous de 1800 / 2200, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies, ou presque.",
+      "bulletinID": "FR-11_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-11_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-11"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Avalanche de surface surtout l'apr\u00e8s-midi sur les pentes ensoleill\u00e9es\nD\u00e9clenchements skieurs : Nombreuses plaques de surface.",
+      "avalancheActivityComment": "NEIGE FRAICHE - NEIGE VENTEE.\nChutes mod\u00e9r\u00e9s depuis vendredi soir avec du vent de nord-ouest puis nord.\nDEPARTS NATURELS : rares avalanches de neige fra\u00eeche et r\u00e9cente en pente raides le matin. Vers la mi-journ\u00e9e et d\u00e9but d'apr\u00e8s-midi, malgr\u00e9 le froid, dans les pentes raides et au soleil des avalanches vont se produire. Elles auront souvent des d\u00e9parts ponctuels pr\u00e8s de rocher, pouvant d\u00e9clencher en cascade des plaques situ\u00e9es en aval. En fonction de la topographie, elles pourront localement \u00eatre de grande taille.\nDECLENCHEMENTS ACCIDENTELS : les nombreuses plaques de surface, friables ou plus dures selon l'exposition et l'altitude, peuvent \u00eatre d\u00e9clench\u00e9es par un seul skieur, en avalanches parfois grandes g\u00e9n\u00e9ralement en pentes sous le vent de ces jours ci. Ces plaques friables reposent en g\u00e9n\u00e9ral sur une couche fragile temporaire datant de samedi, on peut estimer que le risque va baisser dans la journ\u00e9e, tout en restant MARQUE.",
+      "snowpackStructureComment": "Sur l'\u00e9pisode depuis vendredi soir, on a des cumules de 40 \u00e0 50 cm de neige fra\u00eeche poudreuse en dessous de 1800 / 2200, souvent fritt\u00e9e un peu plus haut et durcie par le vent pr\u00e8s des hauts sommets, avec de fortes accumulations et des zones d\u00e9garnies, ou presque.",
+      "bulletinID": "FR-11_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-07"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes vers les plus haut sommets.\nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles, lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-07_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-08"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes et \u00e9paisses en altitude au-dessus de 1800 m environ. \nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-08_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-08_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-08"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes et \u00e9paisses en altitude au-dessus de 1800 m environ. \nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-08_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-12"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes et \u00e9paisses en altitude au-dessus de 1800 m environ. \nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-12_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-12_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-12"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes et \u00e9paisses en altitude au-dessus de 1800 m environ. \nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-12_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-14"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes vers les plus haut sommets.\nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles, lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-14_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-15"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes et \u00e9paisses en altitude au-dessus de 1800 m environ. \nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-15_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-15_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-15"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Quelques avalanches moyennes de neige r\u00e9cente.\nD\u00e9clenchements skieurs : Plaques friables ou dures.",
+      "avalancheActivityComment": "PLAQUES ET COUL\u00c9ES DE NEIGE R\u00c9CENTE.\nSituation typique : neige vent\u00e9e, neige fra\u00eeche. \n\nD\u00c9PARTS SPONTAN\u00c9S : des coul\u00e9es de neige r\u00e9cente en pentes raides pendant les \u00e9claircies lundi, au soleil, pr\u00e8s des rochers. De plus, le transport de neige par le vent de Nord \u00e0 Nord-Est peut surcharger certaines pentes et causer des ruptures de plaques notamment en altitude.\n     \nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : pr\u00e9sence de plaques en surface, friables ou dures selon les secteurs, susceptibles de se rompre au passage d'un seul skieur/randonneur dans des pentes suffisamment raides, probablement plus fr\u00e9quentes et \u00e9paisses en altitude au-dessus de 1800 m environ. \nEn pentes bien ensoleill\u00e9es, des petites coul\u00e9es sous les skis sont possibles lundi.",
+      "snowpackStructureComment": "L'enneigement s'est am\u00e9lior\u00e9 avec les derni\u00e8res chutes de neige. Neige froide mais parfois souffl\u00e9e par le vent pr\u00e8s des cr\u00eates et pentes expos\u00e9es, faisant ressortir l'ancien manteau.\nPetite humidification de surface dans les pentes raides ensoleill\u00e9es lundi.",
+      "bulletinID": "FR-15_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-13"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 20 \u00e0 40 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-13_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-13_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-13"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 20 \u00e0 40 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-13_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-16"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 20 \u00e0 40 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-16_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-16_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-16"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 20 \u00e0 40 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-16_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-17"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes.\nD\u00e9clenchements skieurs : plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\n\nSituation avalancheuse typique : neige vent\u00e9e, sous-couche fragile persistante.\n\nD\u00e9parts spontan\u00e9s : avalanches de neige r\u00e9cente de taille moyenne. En journ\u00e9e dans les secteurs non encore purg\u00e9s :  d\u00e9parts \u00e0 la faveur des \u00e9claircies, ou en cas de rupture de plaque \u00e0 vent.\n\nD\u00e9clenchements provoqu\u00e9s : plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et encore en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  g\u00e9n\u00e9ralement peu \u00e9paisses, et pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re.",
+      "snowpackStructureComment": "L'enneigement, encore faible pour la p\u00e9riode, s'est l\u00e9g\u00e8rement am\u00e9lior\u00e9 ces derniers jours.\nOn peut chausser les skis vers 1400/1500m en ubac, bien plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLa couche de neige r\u00e9cente est l\u00e9g\u00e8re en secteurs abrit\u00e9s, mais souvent travaill\u00e9e par le vent en altitude ou dans les zones expos\u00e9es.  Elle repose sur un manteau neigeux durci par le vent et le regel. Accumulations en altitude, alternant avec des zones en neige dure, glac\u00e9e ou pel\u00e9es.",
+      "bulletinID": "FR-17_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-18"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, bien plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 15 \u00e0 30 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-18_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-18_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-18"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, bien plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 15 \u00e0 30 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-18_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-19"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-10T12:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 20 \u00e0 40 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-19_2022-01-09T16:00:00+01:00_PM",
+      "predecessor_id": "FR-19_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-19"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T12:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : rares grandes avalanches.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. En journ\u00e9e, d\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent, en particulier au nord du massif.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et nouvelles en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout au nord du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 20 \u00e0 40 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-19_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-20"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : avalanches moyennes, rares grandes.\nD\u00e9clenchements skieurs : nombreuses plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s :  avalanches de neige r\u00e9cente de taille moyenne, rares grandes. D\u00e9parts dans les secteurs non encore purg\u00e9s, ou en cas de rupture de plaque \u00e0 vent.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et encore en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re. Les volumes de neige mobilisable associ\u00e9s sont localement importants, surtout sur l'ouest du massif.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis  vers 1300/1400m en ubac, bien plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nOn trouve lundi matin 10 \u00e0 20 cm de neige r\u00e9cente et l\u00e9g\u00e8re en secteurs abrit\u00e9s, mais souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-20_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-21"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques avalanches moyennes.\nD\u00e9clenchements skieurs : plaques dures ou friables.",
+      "avalancheActivityComment": "PLAQUES INSTABLES\n\nSituation avalancheuse typique : neige vent\u00e9e, sous-couche fragile persistante.\n\nD\u00e9parts spontan\u00e9s : avalanches de neige r\u00e9cente de taille moyenne. En journ\u00e9e dans les secteurs non encore purg\u00e9s :  d\u00e9parts \u00e0 la faveur des \u00e9claircies, ou en cas de rupture de plaque \u00e0 vent.\n\nD\u00e9clenchements provoqu\u00e9s : nombreuses plaques form\u00e9es lors des chutes de neige vent\u00e9es de ces derniers jours, et encore en formation sous l\u2019effet du vent toujours pr\u00e9sent en altitude. Plaques dures ou friables pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente,  pouvant \u00eatre facilement d\u00e9clench\u00e9es par un seul skieur ou randonneur. Elles sont plus nombreuses en altitude, et reposent parfois sur une couche fragile irr\u00e9guli\u00e8re.",
+      "snowpackStructureComment": "L'enneigement s'est nettement am\u00e9lior\u00e9 ces derniers jours, et le massif est enti\u00e8rement enneig\u00e9.\nOn peut chausser les skis d\u00e8s le fond de vall\u00e9e en ubac, bien plus haut en adret o\u00f9 la neige r\u00e9cente s'est d\u00e9pos\u00e9e sans sous-couche.\nLundi matin, on trouve 10 \u00e0 20 cm de neige r\u00e9cente, l\u00e9g\u00e8re dans les zones abrit\u00e9es, mais le plus souvent travaill\u00e9e par le vent en altitude. Elle repose sur un manteau neigeux plus ancient, durci par le vent et le regel. Formation de corniches en altitude, alternant avec des zones en neige dure, ou pel\u00e9es.",
+      "bulletinID": "FR-21_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-22"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "low"
+        },
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : quelques coul\u00e9es au soleil.\nD\u00e9clenchements skieurs : nouvelles plaques faciles \u00e0 d\u00e9clencher en Ht Verdon.",
+      "avalancheActivityComment": "NOUVELLES PLAQUES SURTOUT EN HAUT VERDON\nSituation avalancheuse typique : neige vent\u00e9e \n\nD\u00e9parts spontan\u00e9s : quelques coul\u00e9es de neige fra\u00eeche humidifi\u00e9e en pentes raides ensoleill\u00e9es c\u00f4t\u00e9 Haut Verdon, peu probables en Haut Var. \n\nD\u00e9clenchements provoqu\u00e9s : sur le Haut Var, le manteau neigeux est maigre et souvent bien stabilis\u00e9, de rares plaques dures, difficiles \u00e0 solliciter, peuvent persister en altitude. Sur le Haut Verdon : nouvelles plaques form\u00e9es lors des derni\u00e8res chutes de neige vent\u00e9es. Pr\u00e9sentes en toute orientation, m\u00eame loin des cr\u00eates et ruptures de pente, ces instabilit\u00e9s sont g\u00e9n\u00e9ralement minces mais peuvent \u00eatre facilement d\u00e9clench\u00e9es par un skieur ou randonneur.",
+      "snowpackStructureComment": "L'enneigement reste tr\u00e8s faible pour la saison, en particulier dans le Haut Var.\nOn peut chausser les skis vers 1600/1800m dans les orientations peu ensoleill\u00e9es, mais les rochers sont souvent peu enfouis.\nLundi matin, on trouve quelques cm de neige r\u00e9cente dans le Haut Verdon, rest\u00e9e l\u00e9g\u00e8re en secteurs abrit\u00e9s, mais souvent travaill\u00e9e par le vent en altitude, rien ou un simple saupoudrage en Haut Var.\nManteau neigeux dur et cro\u00fbt\u00e9. Dans les versants froids de haute altitude, neige travaill\u00e9e par le vent ou poudre dense dans les zones abrit\u00e9es.\nLes cr\u00eates et sommets sont souvent pel\u00e9s.",
+      "bulletinID": "FR-22_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-23"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : peu probables.\nD\u00e9clenchements skieurs : peu probables.",
+      "avalancheActivityComment": "RARES PLAQUES DURES EN ALTITUDE\n\nD\u00e9parts spontan\u00e9s : peu probables.\n\nD\u00e9clenchements provoqu\u00e9s : le manteau neigeux est maigre et souvent bien stabilis\u00e9. De rares plaques peuvent persister dans les versants froids au-dessus de 2300/2500m environ. Elles sont peu \u00e9paisses et difficiles \u00e0 solliciter.",
+      "snowpackStructureComment": "L'enneigement est tr\u00e8s faible pour la saison, la derni\u00e8re perturbation remonte au jour de No\u00ebl.\nOn peut chausser les skis vers 1600/1800m dans les orientations peu ensoleill\u00e9es, mais les rochers sont souvent peu enfouis.\n\nManteau neigeux souvent dur, cro\u00fbt\u00e9.  Dans les versants froids de haute altitude, neige travaill\u00e9e par le vent ou poudre dense dans les zones abrit\u00e9es.\nLes cr\u00eates et sommets sont souvent pel\u00e9s.",
+      "bulletinID": "FR-23_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-64"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Crue avalancheuse.\nD\u00e9clenchements skieurs : Neige humide",
+      "avalancheActivityComment": "Situation avalancheuse typique: Neige humide\nHumidification du manteau neigeux avec des pluies souvent fortes.\nD\u00e9parts spontan\u00e9s : Pour la nuit de dimanche \u00e0 lundi de nombreuses avalanches de neige humide de taille moyenne \u00e0 grande vont se produire, elles mobilisent surtout la neige r\u00e9cente. Lundi La persistance des pluies peut engendrer de grandes avalanches qui emportent tout le manteau neigeux.\nD\u00e9clenchements provoqu\u00e9s: Les plaques qui se sont form\u00e9es ces derniers jours se d\u00e9clenchent spontan\u00e9ment avec la pluie.",
+      "snowpackStructureComment": "Neige humide et molle lundi matin apr\u00e8s les pluies de la nuit, neige portante \u00e0 ski. La neige va fondre dans les basses altitudes, la limite de l'enneigement va remonter vers 1300 \u00e0 1500 m vers les pentes Nord.",
+      "bulletinID": "FR-64_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-65"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Crue avalancheuse\nD\u00e9clenchements skieurs : Plaque dure en haute montagne",
+      "avalancheActivityComment": "Situations avalancheuses typiques : En dessous de 2300 \u00e0 2400 m : Neige humide; Plus haut que 2400 m : Neige r\u00e9cente et neige vent\u00e9e.\nDes pluies assez fortes vont humidifier le manteau neigeux en dessous de 2300 \u00e0 2400 m, cumul de neige cons\u00e9quent  avec des accumulations plus haut.\nD\u00e9parts spontan\u00e9s : De nombreuses avalanches de taille moyenne \u00e0 grande vont se produire dans la nuit de dimanche \u00e0 lundi, elles emportent la neige r\u00e9cente en dessous de 2400 m, et peuvent toucher les routes d'altitudes. Lundi, de grandes rarement tr\u00e8s grandes avalanches peuvent encore se produire avec des d\u00e9parts en haute montagne dans les zones d'accumulations, plus bas des avalanches de fond sont possibles avec la persistance des pluies.\nD\u00e9clenchements skieurs : En dessous de 2400 m la plupart des plaques vont se d\u00e9clencher avec la pluie, plus haut les plaques peuvent se d\u00e9clencher \u00e0 ski.",
+      "snowpackStructureComment": "Changement de qualit\u00e9 de neige lundi, la limite de l'enneigement va remonter vers 1300 \u00e0 1400 m, la neige sera humide et molle en dessous de 2400 m. Plus haut le manteau neigeux est tr\u00e8s irr\u00e9gulier, la neige est  souvent travaill\u00e9e par le vent, neige dure ou d\u00e9garnie sur les croupes vent\u00e9es.",
+      "bulletinID": "FR-65_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-66"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Crue avalancheuse\nD\u00e9clenchements skieurs : Plaque dure en haute montagne",
+      "avalancheActivityComment": "Situations avalancheuses typiques : En dessous de 2300 \u00e0 2400 m : Neige humide; Plus haut que 2400 m : Neige r\u00e9cente et neige vent\u00e9e.\nDes pluies assez fortes vont humidifier le manteau neigeux en dessous de 2300 \u00e0 2400 m, cumul de neige cons\u00e9quent  avec des accumulations plus haut.\nD\u00e9parts spontan\u00e9s : De nombreuses avalanches de taille moyenne \u00e0 grande vont se produire dans la nuit de dimanche \u00e0 lundi, elles emportent la neige r\u00e9cente en dessous de 2400 m, et peuvent toucher les routes d'altitudes. Lundi, de grandes rarement tr\u00e8s grandes avalanches peuvent encore se produire avec des d\u00e9parts en haute montagne dans les zones d'accumulations, plus bas des avalanches de fond sont possibles avec la persistance des pluies.\nD\u00e9clenchements skieurs : En dessous de 2400 m la plupart des plaques vont se d\u00e9clencher avec la pluie, plus haut les plaques peuvent se d\u00e9clencher \u00e0 ski.",
+      "snowpackStructureComment": "Changement de qualit\u00e9 de neige lundi, la limite de l'enneigement va remonter vers 1300 \u00e0 1400 m, la neige sera humide et molle en dessous de 2400 m. Plus haut le manteau neigeux est tr\u00e8s irr\u00e9gulier, la neige est  souvent travaill\u00e9e par le vent, neige dure ou d\u00e9garnie sur les croupes vent\u00e9es.",
+      "bulletinID": "FR-66_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-67"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Crue avalancheuse\nD\u00e9clenchements skieurs : Plaque dure en haute montagne",
+      "avalancheActivityComment": "Situations avalancheuses typiques : En dessous de 2300 \u00e0 2400 m : Neige humide; Plus haut que 2400 m : Neige r\u00e9cente et neige vent\u00e9e.\nDes pluies assez fortes vont humidifier le manteau neigeux en dessous de 2300 \u00e0 2400 m, cumul de neige cons\u00e9quent  avec des accumulations plus haut.\nD\u00e9parts spontan\u00e9s : De nombreuses avalanches de taille moyenne \u00e0 grande vont se produire dans la nuit de dimanche \u00e0 lundi, elles emportent la neige r\u00e9cente en dessous de 2400 m, et peuvent toucher les routes d'altitudes. Lundi, de grandes rarement tr\u00e8s grandes avalanches peuvent encore se produire avec des d\u00e9parts en haute montagne dans les zones d'accumulations, plus bas des avalanches de fond sont possibles avec la persistance des pluies.\nD\u00e9clenchements skieurs : En dessous de 2400 m la plupart des plaques vont se d\u00e9clencher avec la pluie, plus haut les plaques peuvent se d\u00e9clencher \u00e0 ski.",
+      "snowpackStructureComment": "Changement de qualit\u00e9 de neige lundi, la limite de l'enneigement va remonter vers 1300 \u00e0 1400 m, la neige sera humide et molle en dessous de 2400 m. Plus haut le manteau neigeux est tr\u00e8s irr\u00e9gulier, la neige est  souvent travaill\u00e9e par le vent, neige dure ou d\u00e9garnie sur les croupes vent\u00e9es.",
+      "bulletinID": "FR-67_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-68"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Crue avalancheuse\nD\u00e9clenchements skieurs : Plaque dure en haute montagne",
+      "avalancheActivityComment": "Situations avalancheuses typiques : En dessous de 2300 \u00e0 2400 m : Neige humide; Plus haut que 2400 m : Neige r\u00e9cente et neige vent\u00e9e.\nDes pluies assez fortes vont humidifier le manteau neigeux en dessous de 2300 \u00e0 2400 m, cumul de neige cons\u00e9quent  avec des accumulations plus haut.\nD\u00e9parts spontan\u00e9s : De nombreuses avalanches de taille moyenne \u00e0 grande vont se produire dans la nuit de dimanche \u00e0 lundi, elles emportent la neige r\u00e9cente en dessous de 2400 m, et peuvent toucher les routes d'altitudes. Lundi, de grandes rarement tr\u00e8s grandes avalanches peuvent encore se produire avec des d\u00e9parts en haute montagne dans les zones d'accumulations, plus bas des avalanches de fond sont possibles avec la persistance des pluies.\nD\u00e9clenchements skieurs : En dessous de 2400 m la plupart des plaques vont se d\u00e9clencher avec la pluie, plus haut les plaques peuvent se d\u00e9clencher \u00e0 ski.",
+      "snowpackStructureComment": "Changement de qualit\u00e9 de neige lundi, la limite de l'enneigement va remonter vers 1300 \u00e0 1400 m, la neige sera humide et molle en dessous de 2400 m. Plus haut le manteau neigeux est tr\u00e8s irr\u00e9gulier, la neige est  souvent travaill\u00e9e par le vent, neige dure ou d\u00e9garnie sur les croupes vent\u00e9es.",
+      "bulletinID": "FR-68_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-69"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Neige fra\u00eeche, avalanches de fond\nD\u00e9clenchements skieurs : Plaques instables.",
+      "avalancheActivityComment": "Situation avalancheuse typique : Neige fra\u00eeche/Neige vent\u00e9e\nChutes de neige abondantes suivies d'un net redoux pluvieux cette nuit.\nD\u00e9parts spontan\u00e9s: de nombreuses avalanches, parfois de grande taille, peuvent se d\u00e9clencher en cours de nuit avec l'arriv\u00e9e d'air doux et pluvieux jusqu'\u00e0 2200m d'altitude. Elles peuvent atteindre des routes de montagne emportant tout le manteau neigeux entre 1300 et 1800m d'altitude environ. En Haute montagne, les cumuls de neige fra\u00eeche peuvent d\u00e9passer 1 m\u00e8tre vers 2300m, de grosses avalanches de neige poudreuse peuvent partir en tout versant dans les pentes suffisamment raides. \nD\u00e9clenchements provoqu\u00e9s : formation de nombreuses plaques, avec les chutes de neige en cours, accompagn\u00e9es d'un vent fort de nord-ouest. Le passage d'un simple randonneur pourrait suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "Fortes chutes de neige en cours d\u00e8s 1000m d'altitude jusqu'\u00e0 ce soir mais suivies rapidement de pluie abondante jusqu'\u00e0 2000 voire 2200m d'altitude transformant cette neige fra\u00eeche en neige souvent lourde et collante...\nLe vent parfois violent en altitude maintient des cols et cr\u00eates d\u00e9garnis ou avec des cong\u00e8res importantes.",
+      "bulletinID": "FR-69_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-70"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Neige fra\u00eeche, avalanches de fond\nD\u00e9clenchements skieurs : Plaques instables.",
+      "avalancheActivityComment": "Situation avalancheuse typique : Neige fra\u00eeche/Neige vent\u00e9e\nChutes de neige abondantes suivies d'un net redoux pluvieux cette nuit.\nD\u00e9parts spontan\u00e9s: de nombreuses avalanches, parfois de grande taille, peuvent se d\u00e9clencher en cours de nuit avec l'arriv\u00e9e d'air doux et pluvieux jusqu'\u00e0 2200m d'altitude. Elles peuvent atteindre des routes de montagne emportant tout le manteau neigeux entre 1300 et 1800m d'altitude environ. En Haute montagne, les cumuls de neige fra\u00eeche peuvent d\u00e9passer 1 m\u00e8tre vers 2300m, de grosses avalanches de neige poudreuse peuvent partir en tout versant dans les pentes suffisamment raides. \nD\u00e9clenchements provoqu\u00e9s : formation de nombreuses plaques, avec les chutes de neige en cours, accompagn\u00e9es d'un vent fort de nord-ouest. Le passage d'un simple randonneur pourrait suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "Fortes chutes de neige en cours d\u00e8s 1000m d'altitude jusqu'\u00e0 ce soir mais suivies rapidement de pluie abondante jusqu'\u00e0 2000 voire 2200m d'altitude transformant cette neige fra\u00eeche en neige souvent lourde et collante...\nLe vent parfois violent en altitude maintient des cols et cr\u00eates d\u00e9garnis ou avec des cong\u00e8res importantes.",
+      "bulletinID": "FR-70_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-72"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Neige fra\u00eeche, avalanches de fond\nD\u00e9clenchements skieurs : Plaques instables.",
+      "avalancheActivityComment": "Situation avalancheuse typique : Neige fra\u00eeche/Neige vent\u00e9e\nChutes de neige abondantes suivies d'un net redoux pluvieux cette nuit.\nD\u00e9parts spontan\u00e9s: de nombreuses avalanches, parfois de grande taille, peuvent se d\u00e9clencher en cours de nuit avec l'arriv\u00e9e d'air doux et pluvieux jusqu'\u00e0 2200m d'altitude. Elles peuvent atteindre des routes de montagne emportant tout le manteau neigeux entre 1300 et 1800m d'altitude environ. En Haute montagne, les cumuls de neige fra\u00eeche peuvent d\u00e9passer 1 m\u00e8tre vers 2300m, de grosses avalanches de neige poudreuse peuvent partir en tout versant dans les pentes suffisamment raides. \nD\u00e9clenchements provoqu\u00e9s : formation de nombreuses plaques, avec les chutes de neige en cours, accompagn\u00e9es d'un vent fort de nord-ouest. Le passage d'un simple randonneur pourrait suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "Fortes chutes de neige en cours d\u00e8s 1000m d'altitude jusqu'\u00e0 ce soir mais suivies rapidement de pluie abondante jusqu'\u00e0 2000 voire 2200m d'altitude transformant cette neige fra\u00eeche en neige souvent lourde et collante...\nLe vent parfois violent en altitude maintient des cols et cr\u00eates d\u00e9garnis ou avec des cong\u00e8res importantes.",
+      "bulletinID": "FR-72_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-71"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Neige fra\u00eeche, avalanches de fond\nD\u00e9clenchements skieurs : Plaques instables.",
+      "avalancheActivityComment": "Situation avalancheuse typique : Neige fra\u00eeche/Neige vent\u00e9e\nChutes de neige abondantes suivies d'un net redoux pluvieux cette nuit.\nD\u00e9parts spontan\u00e9s: de nombreuses avalanches, parfois de grande taille, peuvent se d\u00e9clencher en cours de nuit avec l'arriv\u00e9e d'air doux et pluvieux jusqu'\u00e0 2200m d'altitude. Elles peuvent atteindre des routes de montagne emportant tout le manteau neigeux entre 1300 et 1800m d'altitude environ. En Haute montagne, aux fronti\u00e8res nord du Pays, les cumuls de neige fra\u00eeche peuvent atteindre voire d\u00e9passer 1 m\u00e8tre vers 2300m ; de grosses avalanches de neige poudreuse peuvent alors partir en tout versant dans les pentes suffisamment raides. \nD\u00e9clenchements provoqu\u00e9s : formation de nombreuses plaques, avec les chutes de neige en cours, accompagn\u00e9es d'un vent fort de nord-ouest. Le passage d'un simple randonneur pourrait suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "Fortes chutes de neige en cours d\u00e8s 1200m d'altitude jusqu'\u00e0 ce soir mais suivies rapidement de pluie abondante aux fronti\u00e8res Nord du Pays jusqu'\u00e0 2000 voire 2200m d'altitude transformant cette neige fra\u00eeche en neige souvent lourde et collante...\nLe vent parfois violent en altitude maintient des cols et cr\u00eates d\u00e9garnis ou avec des cong\u00e8res importantes.",
+      "bulletinID": "FR-71_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-73"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Neige fra\u00eeche, avalanches de fond\nD\u00e9clenchements skieurs : Plaques instables.",
+      "avalancheActivityComment": "Situation avalancheuse typique : Neige fra\u00eeche/Neige vent\u00e9e\nChutes de neige abondantes suivies d'un net redoux pluvieux cette nuit.\nD\u00e9parts spontan\u00e9s: de nombreuses avalanches, parfois de grande taille, peuvent se d\u00e9clencher en cours de nuit avec l'arriv\u00e9e d'air doux et pluvieux jusqu'\u00e0 2200m d'altitude. Elles peuvent atteindre des routes de montagne emportant tout le manteau neigeux entre 1300 et 1800m d'altitude environ. En Haute montagne, les cumuls de neige fra\u00eeche peuvent atteindre 1 m\u00e8tre vers 2300m, de grosses avalanches de neige poudreuse peuvent partir en tout versant dans les pentes suffisamment raides. \nD\u00e9clenchements provoqu\u00e9s : formation de nombreuses plaques, avec les chutes de neige en cours, accompagn\u00e9es d'un vent fort de nord-ouest. Le passage d'un simple randonneur pourrait suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "Fortes chutes de neige en cours d\u00e8s 1000m d'altitude jusqu'\u00e0 ce soir mais suivies rapidement de pluie abondante jusqu'\u00e0 2000 voire 2200m d'altitude transformant cette neige fra\u00eeche en neige souvent lourde et collante...\nLe vent parfois violent en altitude maintient des cols et cr\u00eates d\u00e9garnis ou avec des cong\u00e8res importantes.",
+      "bulletinID": "FR-73_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-74"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {},
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Neige fra\u00eeche, avalanches de fond\nD\u00e9clenchements skieurs : Plaques instables.",
+      "avalancheActivityComment": "Situation avalancheuse typique : Neige fra\u00eeche/Neige vent\u00e9e\nChutes de neige suivies d'un net redoux pluvieux cette nuit.\nD\u00e9parts spontan\u00e9s: de nombreuses avalanches, peuvent se d\u00e9clencher en cours de nuit avec l'arriv\u00e9e d'air doux et pluvieux jusqu'\u00e0 2400m d'altitude. En Haute montagne, les cumuls de neige fra\u00eeche sont cons\u00e9quents, une grosse avalanche de neige poudreuse peut partir en tout versant dans les pentes suffisamment raides. \nD\u00e9clenchements provoqu\u00e9s : formation de nombreuses plaques, avec les chutes de neige en cours, accompagn\u00e9es d'un vent fort de nord-ouest. Le passage d'un simple randonneur pourrait suffire \u00e0 les d\u00e9clencher.",
+      "snowpackStructureComment": "Fortes chutes de neige en cours d\u00e8s 1300m d'altitude jusqu'\u00e0 ce soir mais suivies rapidement de pluie jusqu'\u00e0 2200 voire 2400m d'altitude transformant cette neige fra\u00eeche en neige souvent lourde et collante...\nLe vent parfois violent en altitude maintient des cols et cr\u00eates d\u00e9garnis et verglac\u00e9s ou avec des cong\u00e8res importantes suivant l'orientation.",
+      "bulletinID": "FR-74_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-40"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Coul\u00e9es de neige r\u00e9cente\nD\u00e9clenchements skieurs : Plaques \u00e0 vent en altitude",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nNEIGE ET VENT.\nSituations avalancheuses typiques : neige vent\u00e9e / neige fra\u00eeche.\n\nUne perturbation a apport\u00e9 de nouvelles chutes de neige, accompagn\u00e9es par un fort vent de secteur Ouest.\n\nD\u00e9parts spontan\u00e9s : des coul\u00e9es ou avalanches de neige fra\u00eeche de taille moyenne peuvent se produire, surtout dans les pentes raides. En altitude, une avalanche de grande taille est possible.\nD\u00e9clenchements provoqu\u00e9s : au-dessus de 1800 m, de nombreuses plaques \u00e0 vent sont pr\u00e9sentes. Ces plaques sont sensibles aux faibles surcharges et, dans les zones d'accumulations, elles peuvent mobiliser d\u2019importants volumes de neige. Le fort vent a pu \u00e9galement favoriser la formation de plaques loin des cr\u00eates et en contrebas.",
+      "snowpackStructureComment": "De la neige fra\u00eeche s'est d\u00e9pos\u00e9e sur un sol in\u00e9galement enneig\u00e9, avec des accumulations par endroits. De plus, cette neige a \u00e9t\u00e9 travaill\u00e9e par le vent d'Ouest, puis de Nord-est. La pratique du ski de randonn\u00e9e reste donc tr\u00e8s localis\u00e9e avec un enneigement toujours d\u00e9ficitaire pour la saison.\nLe net refroidissement permet une consolidation par regel des couches de neige humide. Les surfaces dures et glac\u00e9es sont parfois recouvertes de quelques cm de neige r\u00e9cente. Les cr\u00eates et sommets sont souvent d\u00e9garnis ou glac\u00e9s.",
+      "bulletinID": "FR-40_2022-01-09T16:00:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "FR-41"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-09T16:00:00+01:00",
+        "endTime": "2022-01-10T18:00:00+01:00"
+      },
+      "source": {},
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "customData": [],
+          "aspect": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [],
+      "tendency": {
+        "validTime": {}
+      },
+      "publicationTime": "2022-01-09T16:00:00+01:00",
+      "avalancheActivityHighlights": "D\u00e9parts spontan\u00e9s : Coul\u00e9es ou avalanches de neige fra\u00eeche.\nD\u00e9clenchements skieurs : Plaques \u00e0 vent en altitude",
+      "avalancheActivityComment": "Bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites.\nNEIGE ET VENT.\nSituations avalancheuses typiques : neige vent\u00e9e / neige fra\u00eeche.\n\nUne perturbation a apport\u00e9 de nouvelles chutes de neige, accompagn\u00e9es par un fort vent de secteur Ouest.\n\nD\u00e9parts spontan\u00e9s : des coul\u00e9es ou avalanches de neige fra\u00eeche de taille moyenne peuvent se produire, surtout dans les pentes raides. En altitude, une avalanche de grande taille est possible.\nD\u00e9clenchements provoqu\u00e9s : au-dessus de 1800 m, de nombreuses plaques \u00e0 vent sont pr\u00e9sentes. Ces plaques sont sensibles aux faibles surcharges et, dans les zones d'accumulations, elles peuvent mobiliser d\u2019importants volumes de neige. Le fort vent a pu \u00e9galement favoriser la formation de plaques loin des cr\u00eates et en contrebas.",
+      "snowpackStructureComment": "De la neige fra\u00eeche s'est d\u00e9pos\u00e9e sur un sol in\u00e9galement enneig\u00e9, avec des accumulations par endroits. De plus, cette neige a \u00e9t\u00e9 travaill\u00e9e par le vent d'Ouest, puis de Nord-est. La pratique du ski de randonn\u00e9e reste donc tr\u00e8s localis\u00e9e avec un enneigement toujours d\u00e9ficitaire pour la saison.\nLe net refroidissement permet une consolidation par regel des couches de neige humide. Les surfaces dures et glac\u00e9es sont parfois recouvertes de quelques cm de neige r\u00e9cente. Les cr\u00eates et sommets sont souvent d\u00e9garnis ou glac\u00e9s.",
+      "bulletinID": "FR-41_2022-01-09T16:00:00+01:00"
+    }
+  ]
+}
