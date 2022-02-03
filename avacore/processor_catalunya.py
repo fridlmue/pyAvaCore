@@ -23,14 +23,24 @@ import dateutil.parser
 from avacore import pyAvaCore
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
 
+code_dir = {
+    '1': 'ES-CT-L-04',
+    '2': 'ES-CT-RF',
+    '3': 'ES-CT-PA',
+    '4': 'ES-CT-PP',
+    '5': 'ES-CT-VN',
+    '6': 'ES-CT-PR',
+    '7': 'ES-CT-TF'
+}
+
 def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
 
     reports = []
 
     lang_dir = {
-        'en':3,
-        'ca':1,
-        'es':2
+        'en': 3,
+        'ca': 1,
+        'es': 2
     }
     
     if lang not in lang_dir:
@@ -59,11 +69,13 @@ def get_reports_fromjson(icgc_reports):
     report = AvaBulletin()
 
     for icgc_report in icgc_reports:
+        region_id = code_dir[icgc_report['id_zona']]
+        
         report = AvaBulletin()
 
         report.publicationTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['databutlleti']))
-        report.bulletinID = 'ES-CT-ICGC-'+ icgc_report['id_zona'] + '_' + str(report.publicationTime)
-        report.regions.append(RegionType('ES-CT-ICGC-'+ icgc_report['id_zona'])) # Region ID check with regions shape
+        report.bulletinID = region_id + '_' + str(report.publicationTime)
+        report.regions.append(RegionType(region_id)) # Region ID check with regions shape
         report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T00:00'))
         report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T23:59'))
 
