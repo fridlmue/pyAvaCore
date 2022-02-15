@@ -29,6 +29,7 @@ from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_it import process_reports_it, process_all_reports_it
 from avacore.processor_uk import process_reports_uk
+from avacore.processor_cz import process_reports_cz
 from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
@@ -85,6 +86,10 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("GB"):
         reports = process_reports_uk()
+        _, provider = get_report_url(region_id, local)
+        # url = "https://www.sais.gov.uk/api?action=getForecast"
+    elif region_id.startswith("CZ"):
+        reports = process_reports_cz()
         _, provider = get_report_url(region_id, local)
         # url = "https://www.sais.gov.uk/api?action=getForecast"
     else:
