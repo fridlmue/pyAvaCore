@@ -17,7 +17,7 @@ import json
 import datetime
 from datetime import timedelta
 from datetime import datetime
-import requests
+import urllib.request
 import pytz
 import dateutil.parser
 import re
@@ -36,13 +36,13 @@ code_dir = {
 
 def process_reports_es(today=datetime.today().date(), lang='es'):
     url = 'http://www.aemet.es/xml/montana/p18tarn1.xml'
-    headers = {'Accept': 'application/json'}
+    
+    req = urllib.request.Request(url)
 
-    req = requests.get(url)
+    with urllib.request.urlopen(req) as response:
+        bulletin_raw = response.read()
     
-    bulletin_raw = req.text
-    
-    reports = get_reports_from_file(bulletin_raw)
+    reports = get_reports_from_file(bulletin_raw.decode("ISO-8859-1"))
     
     return reports
 
