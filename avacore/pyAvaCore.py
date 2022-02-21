@@ -30,6 +30,7 @@ from avacore.processor_ch import process_reports_ch
 from avacore.processor_it import process_reports_it, process_all_reports_it
 from avacore.processor_uk import process_reports_uk
 from avacore.processor_norway import process_reports_no, process_all_reports_no
+from avacore.processor_es import process_reports_es
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
 config = configparser.ConfigParser()
@@ -77,6 +78,9 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         else:
             reports = process_reports_it(region_id)
         provider = "AINEVA: aineva.it"
+    elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
+        reports = process_reports_es()
+        url, provider = get_report_url(region_id, local)
     elif region_id.startswith("NO"):
         if region_id == 'NO':
             reports = process_all_reports_no(region_id)
