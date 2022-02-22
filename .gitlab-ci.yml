@@ -4,6 +4,7 @@
 image: python:3.6
 
 unittest:
+  stage: test
   script:
     - python -V
     - pip install pytest pytest-cov
@@ -17,8 +18,21 @@ unittest:
       cobertura: coverage.xml
 
 pylint:
+  stage: test
   allow_failure: true
   script:
     - python -V
     - pip install pylint
     - pylint avacore --disable=invalid-name --max-line-length=140
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - apk add openssh-client rsync
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh && chmod 700 ~/.ssh
+    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+    - rsync --recursive --verbose --compress --delete --exclude=logs --exclude=tests -e 'ssh -p2201' ./ $SFTP_SERVER
+  when: manual
