@@ -54,6 +54,7 @@ def process_reports_is(path='', cached=False, lang='en'):
         root = download_report_is(lang)
         
     else:
+        import xml.etree.ElementTree as ET
         root = ET.parse(path)
 
     common_report = AvaBulletin()
@@ -94,7 +95,7 @@ def process_reports_is(path='', cached=False, lang='en'):
             index_from = '0'
             index_to = '0'
             index_from = aspects_list.index(snow_problem.find('aspect_from').text)
-            index_to = aspects_list.index(snow_problem.find('aspect_to').text)
+            index_to = aspects_list.index(snow_problem.find('aspect_to').text, index_from)
             problem_danger_rating.aspect = aspects_list[index_from:index_to+1]
             
             if snow_problem.find('height').text != '0':
@@ -104,7 +105,7 @@ def process_reports_is(path='', cached=False, lang='en'):
                 problem_danger_rating.elevation.auto_select(up_down + snow_problem.find('height').text)
             
             problem = AvalancheProblemType()
-            problem.add_problemType(snow_problem.find('type').text)
+            problem.add_problemType(snow_problem.find('type').text.lower())
             problem.dangerRating = problem_danger_rating
             report.avalancheProblems.append(problem)
         
