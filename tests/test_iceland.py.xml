@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<avalanche>
+<conditions>
+
+	<short_description>Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords.</short_description>
+	<full_description>&lt;span style=&quot;color: #373737; font-family: Arial, sans-serif; font-size: 12px;&quot;&gt;Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse.&lt;/span&gt;</full_description>
+	<update_time>2022-02-21T16:52:57</update_time>
+
+</conditions>
+<area_forecasts>
+			
+	<area_forecast>
+		<region>Southwest corner (experimental) </region>
+		<region_code>sv</region_code>
+		<valid_from>2022-02-21T19:00:00</valid_from>
+		<valid_until>2022-02-22T19:00:00</valid_until>
+		<updated>2022-02-21T16:40:51</updated>
+		<forecast>Severe blizzard in mountains on Monday evening will form windslabs in northwesterly aspects, and earlier much snow is had drifted in E-winds. Weak layers increase the likelihood of human triggered avalanches. Snowstorm on Tuesday will probably maintain instabilities.</forecast>
+		<recent_avalances>A child was buried 19.2. when snow collapsed on it from Hamarinn above Hverager&#240;i. Another human triggered avalanche 19.2. in a small steep slope south of &#222;ingvallavatn. A naturally triggered avalanche released in Reykjafell in Mosfellsb&#230;r on 20.02.</recent_avalances>
+		<snow_condition>Considerable new snow in very strong southeast winds on Monday evening, and earlier much snow had accumulated in west facing slopes due to prevailing easterly winds. Weak layers have been found in the area, differently deeply buried. This increases the likelihood of human triggered avalanches. Instabilities are expected to be maintained in strong southwest winds with snow on Tuesday.</snow_condition>
+		<weather>Su&#240;austan&#225;tt &#225; m&#225;nudagskv&#246;ld, 23-28 m/s, mikil snj&#243;koma til fjalla og hl&#253;nandi ve&#240;ur. Su&#240;vestan stormur e&#240;a rok fram eftir degi &#225; &#254;ri&#240;judag, gengur &#225; me&#240; &#233;ljum og k&#243;lnar aftur. Heldur h&#230;gari breytileg &#225;tt um kv&#246;ldi&#240;, og d&#225;l&#237;til snj&#243;koma. H&#230;g nor&#240;l&#230;g e&#240;a breytileg &#225;tt &#225; mi&#240;vikudag og fimmtudag, &#254;urrt og kalt &#237; ve&#240;ri.</weather>
+
+		<danger_level_day1>High danger</danger_level_day1>
+		<danger_level_day1_code>4</danger_level_day1_code>
+		<danger_level_day1_color>Red</danger_level_day1_color>
+		<danger_level_day1_color_rgb>#FF0000</danger_level_day1_color_rgb>
+
+		<danger_level_day2>Considerable danger</danger_level_day2>
+		<danger_level_day2_code>3</danger_level_day2_code>
+		<danger_level_day2_color>Orange</danger_level_day2_color>
+		<danger_level_day2_color_rgb>#F5B800</danger_level_day2_color_rgb>
+
+		<danger_level_day3>Considerable danger</danger_level_day3>
+		<danger_level_day3_code>3</danger_level_day3_code>
+		<danger_level_day3_color>Orange</danger_level_day3_color>
+		<danger_level_day3_color_rgb>#F5B800</danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+				<snow_problem>
+					<importance>1</importance>
+					<size>3</size>
+					<type>Wind-drifted snow</type>
+					<aspect_from>SW</aspect_from>
+					<aspect_from_deg>225</aspect_from_deg>
+					<aspect_to>NE</aspect_to>
+					<aspect_to_deg>45</aspect_to_deg>
+					<probability>Very likely</probability>
+					<height>0</height>
+					<height_ref>Above</height_ref>
+				</snow_problem>
+
+				<snow_problem>
+					<importance>2</importance>
+					<size>3</size>
+					<type>Persistent weak layer</type>
+					<aspect_from>N</aspect_from>
+					<aspect_from_deg>0</aspect_from_deg>
+					<aspect_to>NW</aspect_to>
+					<aspect_to_deg>315</aspect_to_deg>
+					<probability>Likely</probability>
+					<height>0</height>
+					<height_ref>Above</height_ref>
+				</snow_problem>
+
+		</snow_problems>
+	</area_forecast>
+			
+	<area_forecast>
+		<region>Northern Westfjords </region>
+		<region_code>vn</region_code>
+		<valid_from>2022-02-21T19:00:00</valid_from>
+		<valid_until>2022-02-22T19:00:00</valid_until>
+		<updated>2022-02-21T15:49:01</updated>
+		<forecast>Unstable windslabs in westerly aspects and increasing after ENE storm night to Tuesday. Windslabs expected in easterly aspects after strong SW on Tuesday. NE storm and snowfall on Wednesday that can create high avalanche danger in mountains.</forecast>
+		<recent_avalances>Cornices collapsed in Skutulsfj&#246;r&#240;ur 19.2. and triggered avalanches.</recent_avalances>
+		<snow_condition>Much snow has been added in easterly winds. Most snow is therefore expected to have accumulated in W-facing slopes. Cornices have collapsed and triggered avalanches. Snow is thought mostly wind packed and stiff. Increased instability expected after ENE storm night to Tuesday and higher instability in NE storm on Wednesday.</snow_condition>
+		<weather>A-NA 20-25 m/s og hr&#237;&#240;arve&#240;ur a&#240;faran&#243;tt &#254;ri&#240;judags. Breytilegur vindur &#225; &#254;ri&#240;judag, hv&#246;ss SV-&#225;tt me&#240; snj&#243;komu um t&#237;ma seinnipartinn. NA stormur me&#240; snj&#243;komu &#225; mi&#240;vikudag. Dregur &#250;r vind og snj&#243;komu &#225; fimmtudagsmorgun, h&#230;gar &#225;ttir yfir daginn og her&#240;ir &#225; frosti.</weather>
+
+		<danger_level_day1>Considerable danger</danger_level_day1>
+		<danger_level_day1_code>3</danger_level_day1_code>
+		<danger_level_day1_color>Orange</danger_level_day1_color>
+		<danger_level_day1_color_rgb>#F5B800</danger_level_day1_color_rgb>
+
+		<danger_level_day2>High danger</danger_level_day2>
+		<danger_level_day2_code>4</danger_level_day2_code>
+		<danger_level_day2_color>Red</danger_level_day2_color>
+		<danger_level_day2_color_rgb>#FF0000</danger_level_day2_color_rgb>
+
+		<danger_level_day3>Considerable danger</danger_level_day3>
+		<danger_level_day3_code>3</danger_level_day3_code>
+		<danger_level_day3_color>Orange</danger_level_day3_color>
+		<danger_level_day3_color_rgb>#F5B800</danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+				<snow_problem>
+					<importance>1</importance>
+					<size>3</size>
+					<type>Wind-drifted snow</type>
+					<aspect_from>SW</aspect_from>
+					<aspect_from_deg>225</aspect_from_deg>
+					<aspect_to>NE</aspect_to>
+					<aspect_to_deg>45</aspect_to_deg>
+					<probability>Very likely</probability>
+					<height>0</height>
+					<height_ref>Above</height_ref>
+				</snow_problem>
+
+		</snow_problems>
+	</area_forecast>
+			
+	<area_forecast>
+		<region>Tröllaskagi </region>
+		<region_code>tn</region_code>
+		<valid_from>2022-02-21T19:00:00</valid_from>
+		<valid_until>2022-02-22T19:00:00</valid_until>
+		<updated>2022-02-21T19:27:54</updated>
+		<forecast>There have been very strong E-winds last two days with wild snowdrift on ridges. Tonight the SE-winds will be picking up, turning to E with snowfall for a while and SW-winds tomorrow.</forecast>
+		<recent_avalances>Minor avalanches fell in &#211;lafsfj&#246;r&#240;ur during the weekend in wild E-wind. Avalanche fell the night to Friday in Kerahnj&#250;kur&quot;s S-face. Two slabs were remotely triggered 12.2. (300-500 m) by a snowmobile in Burstabrekkudalur, SW-W aspect, 30-60 cm fracture line sliding on blue ice.</recent_avalances>
+		<snow_condition>New windslabs have formed in westerly aspects showing activity. Older windslabs are possible in most aspects due to variable wind directions lately and they can be unstable with icy firn surface below the slabs. Snowpit from Illvi&#240;rishjn&#250;kur 19.2. showed a firm windslab on top of weaker layers. Stability tests gave medium results. Snowpit from Burstabrekkudalur 19.2. showed new snow on top of windslabs and stable firn underneath. Stability test gave medium results in the windslabs at 63 cm.</snow_condition>
+		<weather>Mj&#246;g hv&#246;ss SA-l&#230;g &#225;tt &#237; n&#243;tt me&#240; snj&#243;komu um t&#237;ma en sn&#253;st &#237; ekki s&#237;&#240;ur hvassa SV-&#225;tt &#225; morgun &#254;ri me&#240; snj&#243;komu um t&#237;ma &#237; vesturfj&#246;llum.</weather>
+
+		<danger_level_day1>Considerable danger</danger_level_day1>
+		<danger_level_day1_code>3</danger_level_day1_code>
+		<danger_level_day1_color>Orange</danger_level_day1_color>
+		<danger_level_day1_color_rgb>#F5B800</danger_level_day1_color_rgb>
+
+		<danger_level_day2>Considerable danger</danger_level_day2>
+		<danger_level_day2_code>3</danger_level_day2_code>
+		<danger_level_day2_color>Orange</danger_level_day2_color>
+		<danger_level_day2_color_rgb>#F5B800</danger_level_day2_color_rgb>
+
+		<danger_level_day3>Considerable danger</danger_level_day3>
+		<danger_level_day3_code>3</danger_level_day3_code>
+		<danger_level_day3_color>Orange</danger_level_day3_color>
+		<danger_level_day3_color_rgb>#F5B800</danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+				<snow_problem>
+					<importance>1</importance>
+					<size>3</size>
+					<type>Wind-drifted snow</type>
+					<aspect_from>N</aspect_from>
+					<aspect_from_deg>0</aspect_from_deg>
+					<aspect_to>NW</aspect_to>
+					<aspect_to_deg>315</aspect_to_deg>
+					<probability>Possible</probability>
+					<height>0</height>
+					<height_ref>Above</height_ref>
+				</snow_problem>
+
+				<snow_problem>
+					<importance>2</importance>
+					<size>3</size>
+					<type>Persistent weak layer</type>
+					<aspect_from>N</aspect_from>
+					<aspect_from_deg>0</aspect_from_deg>
+					<aspect_to>NW</aspect_to>
+					<aspect_to_deg>315</aspect_to_deg>
+					<probability>Possible</probability>
+					<height>0</height>
+					<height_ref>Above</height_ref>
+				</snow_problem>
+
+		</snow_problems>
+	</area_forecast>
+			
+	<area_forecast>
+		<region>East fjords </region>
+		<region_code>af</region_code>
+		<valid_from>2022-02-21T19:00:00</valid_from>
+		<valid_until>2022-02-22T19:00:00</valid_until>
+		<updated>2022-02-21T16:23:51</updated>
+		<forecast>Unstable wind slabs possible in various aspects, especially though west facing. SE-E storm with heavy snowfall night to Tuesday and increased avalanche danger expected because of that.</forecast>
+		<recent_avalances>No recent avalanches reported.</recent_avalances>
+		<snow_condition>New wind slabs, that can be unstable, have formed in west facing slopes. Older windslabs exist in most aspects after variable winds but are considered rather local. A snow pit from Oddskar&#240; 19.2. showed loose snow on top of wind packed snow and hard crust underneath. A stiff layer was 27-30 cm deep, and a compression test showed a fracture after heavy force where this layer meets the loose snow on top. The temperature gradient was also high over this intersection which can lead to crystallization and the formation of weak layers. SE and E storm with heavy snowfall the night to Tuesday is expected to lead to the formation of new unstable wind slabs in W and NW aspects. On Thursday snow is expected to accumulate in S facing slopes.</snow_condition>
+		<weather>&#193;k&#246;f snj&#243;koma og skafrenningur &#237; SA- og A-stormi e&#240;a -roki a&#240;faran&#243;tt &#254;ri&#240;judags. Sn&#253;st &#237; sunnan&#225;tt &#225; &#254;ri&#240;judagsmorgun og styttir upp. Fremur h&#230;g breytileg &#225;tt &#225; &#254;ri&#240;judag og mi&#240;vikudag, l&#237;tilsh&#225;ttar ofankoma &#237; h&#230;gum vindi a&#240;faran&#243;tt mi&#240;vikudags. Hvassar nor&#240;l&#230;gar &#225;ttir &#225; fimmtudag me&#240; snj&#243;komu.</weather>
+
+		<danger_level_day1>Considerable danger</danger_level_day1>
+		<danger_level_day1_code>3</danger_level_day1_code>
+		<danger_level_day1_color>Orange</danger_level_day1_color>
+		<danger_level_day1_color_rgb>#F5B800</danger_level_day1_color_rgb>
+
+		<danger_level_day2>Moderate danger</danger_level_day2>
+		<danger_level_day2_code>2</danger_level_day2_code>
+		<danger_level_day2_color>Yellow</danger_level_day2_color>
+		<danger_level_day2_color_rgb>#FFFF00</danger_level_day2_color_rgb>
+
+		<danger_level_day3>Considerable danger</danger_level_day3>
+		<danger_level_day3_code>3</danger_level_day3_code>
+		<danger_level_day3_color>Orange</danger_level_day3_color>
+		<danger_level_day3_color_rgb>#F5B800</danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+				<snow_problem>
+					<importance>1</importance>
+					<size>3</size>
+					<type>Wind-drifted snow</type>
+					<aspect_from>S</aspect_from>
+					<aspect_from_deg>180</aspect_from_deg>
+					<aspect_to>N</aspect_to>
+					<aspect_to_deg>0</aspect_to_deg>
+					<probability>Likely</probability>
+					<height>0</height>
+					<height_ref>Above</height_ref>
+				</snow_problem>
+
+		</snow_problems>
+	</area_forecast>
+
+</area_forecasts>
+<weather_forecast>
+
+	<forecast>Southeast severe blizzard in mountains on Monday evening. Strong southwest winds and considerable showers of snow in the south- and west parts on Tuesday. Northerly winds and blizzard conditions in the north on Wednesday, but dry in the south. Winds moderating on Thursday. ri og miklum vindi.</forecast>		
+	<update_time>2022-02-21T16:55:53</update_time>
+
+</weather_forecast>
+</avalanche>
+
+
