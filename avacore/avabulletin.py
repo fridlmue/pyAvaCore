@@ -105,6 +105,16 @@ class AvaCoreCustom:
 
     def __repr__(self):
         return str(self)
+    
+class MetaDataType:
+    '''
+    MetaData for Report
+    '''
+    customData: typing.List[AvaCoreCustom]
+    
+    def __init__(self):
+        self.customData = []
+
 
 class DangerRatingType:
     '''
@@ -288,6 +298,7 @@ class AvaBulletin:
     '''travel advisory highlights'''
     travelAdvisoryComment: str
     '''travel advisory comment'''
+    metaData: MetaDataType
 
     predecessor_id: str
     '''not part of CAAMLv6 (yet)'''
