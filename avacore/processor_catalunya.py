@@ -46,7 +46,7 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang='es'):
     if lang not in lang_dir:
         lang = 'es'
 
-    url = "https://bpa.icgc.cat/api/query?id=512&values="+str(today)+";"+str(lang_dir[lang])
+    url= "https://bpa.icgc.cat/api/apiext/butlletiglobal?values="+str(today)+";"+str(lang_dir[lang])
 
     headers = {
         "Content-Type": "application/json; charset=utf-8"
