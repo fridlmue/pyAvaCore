@@ -22,8 +22,6 @@ import pytz
 import dateutil.parser
 import re
 import copy
-import calendar
-import locale
 
 from avacore import pyAvaCore
 from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
