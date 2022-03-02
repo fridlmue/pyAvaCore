@@ -38,10 +38,8 @@ code_dir = {
 
 # https://stackoverflow.com/questions/19927654/using-dateutil-parser-to-parse-a-date-in-another-language/62581811#62581811
 class LocaleParserInfo(dateutil.parser.parserinfo):
-    locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
-    WEEKDAYS = zip(calendar.day_abbr, calendar.day_name)
-    MONTHS = list(zip(calendar.month_abbr, calendar.month_name))[1:]
-    locale.setlocale(locale.LC_ALL, locale.getdefaultlocale())
+    WEEKDAYS = [('Mon', 'Monday'), ('Tue', 'Tuesday'), ('Wed', 'Wednesday'), ('Thu', 'Thursday'), ('Fri', 'Friday'), ('Sat', 'Saturday'), ('Sun', 'Sunday')]
+    MONTHS = [('ene', 'enero'), ('feb', 'febrero'), ('mar', 'marzo'), ('abr', 'abril'), ('may', 'mayo'), ('jun', 'junio'), ('jul', 'julio'), ('ago', 'agosto'), ('sep', 'septiembre'), ('oct', 'octubre'), ('nov', 'noviembre'), ('dic', 'diciembre')]
 
 def process_reports_es(today=datetime.today().date(), lang='es'):
     url = 'http://www.aemet.es/xml/montana/p18tarn1.xml'
