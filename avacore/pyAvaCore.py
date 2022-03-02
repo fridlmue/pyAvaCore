@@ -27,7 +27,6 @@ import typing
 from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
-from avacore.processor_it import process_reports_it, process_all_reports_it
 from avacore.processor_uk import process_reports_uk
 from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_is import process_reports_is
@@ -70,14 +69,6 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("CH"):
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         url, provider = get_report_url(region_id, local)
-    elif region_id.startswith('IT-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
-        if region_id == 'IT-AINEVA':
-            reports = process_all_reports_it()
-        elif region_id == 'IT-21' or region_id == 'IT-23' or region_id == 'IT-25' or region_id == 'IT-34' or region_id == 'IT-36' or region_id == 'IT-57':
-            reports = process_all_reports_it(region_prefix=region_id)
-        else:
-            reports = process_reports_it(region_id)
-        provider = "AINEVA: aineva.it"
     elif region_id.startswith("NO"):
         if region_id == 'NO':
             reports = process_all_reports_no(region_id)
