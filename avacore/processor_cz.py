@@ -48,7 +48,7 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
 
     for bulletin in cz_report:
         report = AvaBulletin()
-        report.regions.append(RegionType('CZ' + bulletin['region_abbr'].split('CZ')[1]))
+        report.regions.append(RegionType('CZ-' + bulletin['region_id']))
         report.publicationTime = dateutil.parser.parse(bulletin['date_time'])
         report.bulletinID = (bulletin['id'])
         
