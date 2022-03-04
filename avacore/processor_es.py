@@ -105,23 +105,25 @@ def get_reports_from_file(aemet_reports):
                 danger_rating = DangerRatingType()
                 danger_rating2 = None
                 levels = re.findall(r"\((.)\)", sentence)
-                if len(levels) > 1 and not (('por debajo' in sentence) and ('por encima' in sentence)):
+                if len(levels) > 1 and ('evolucionando' in sentence):
                     pm_sent = True
                     pm = True
-                if 'por debajo' in sentence:
+                if 'pordebajo' in sentence.replace(" ", ""):
                     danger_rating.elevation.upperBound = re.findall(r"(\d+) m", sentence)[0]
                     if pm_sent:
                         pm_ratings_lw = int(levels[1])
-                    if 'por encima' in sentence:
+                    if 'porencima' in sentence.replace(" ", ""):
                         danger_rating2 = DangerRatingType()
                         danger_rating2.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                         '''
                         if pm_sent:
                             pm_ratings_hi = int(levels[1])
                         '''
-                elif 'por encimade' in sentence:
+                elif 'porencima' in sentence.replace(" ", ""):
                     danger_rating.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                     if pm_sent:
+                        # danger_rating2 = DangerRatingType()
+                        # danger_rating2.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                         pm_ratings_hi = int(levels[1])
                 elif pm:
                     pm_ge = int(levels[1])
