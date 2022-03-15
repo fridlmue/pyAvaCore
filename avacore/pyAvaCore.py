@@ -27,10 +27,12 @@ import typing
 from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
-from avacore.processor_it import process_reports_it, process_all_reports_it
+from avacore.processor_catalunya import process_reports_cat
 from avacore.processor_uk import process_reports_uk
 from avacore.processor_cz import process_reports_cz
 from avacore.processor_norway import process_reports_no, process_all_reports_no
+from avacore.processor_es import process_reports_es
+from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
 config = configparser.ConfigParser()
@@ -70,14 +72,6 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("CH"):
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         url, provider = get_report_url(region_id, local)
-    elif region_id.startswith('IT-') and not region_id.startswith('IT-32-BZ') and not region_id.startswith('IT-32-TN'):
-        if region_id == 'IT-AINEVA':
-            reports = process_all_reports_it()
-        elif region_id == 'IT-21' or region_id == 'IT-23' or region_id == 'IT-25' or region_id == 'IT-34' or region_id == 'IT-36' or region_id == 'IT-57':
-            reports = process_all_reports_it(region_prefix=region_id)
-        else:
-            reports = process_reports_it(region_id)
-        provider = "AINEVA: aineva.it"
     elif region_id.startswith("NO"):
         if region_id == 'NO':
             reports = process_all_reports_no(region_id)
@@ -87,11 +81,20 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("GB"):
         reports = process_reports_uk()
         _, provider = get_report_url(region_id, local)
+    elif region_id.startswith("IS"):
+        reports = process_reports_is()
+        _, provider = get_report_url(region_id, local)
         # url = "https://www.sais.gov.uk/api?action=getForecast"
     elif region_id.startswith("CZ"):
         reports = process_reports_cz()
         _, provider = get_report_url(region_id, local)
         # url = "https://www.sais.gov.uk/api?action=getForecast"
+    elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
+        reports = process_reports_es()
+        url, provider = get_report_url(region_id, local)
+    elif region_id.startswith("ES-CT") and not region_id.startswith("ES-CT-L") or region_id.startswith('ES-CT-L-04'):
+        reports = process_reports_cat()
+        url, provider = get_report_url(region_id, local)
     else:
         url, provider = get_report_url(region_id, local)
 
