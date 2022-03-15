@@ -274,6 +274,15 @@
 - Aran límite sur                                  RegionID: "ES-CT-L-02"
 - Aran vertiente sur                               RegionID: "ES-CT-L-03"
 
+### Catalunya (ex Val d'Aran)
+- Aran - Franja Nord Pallaresa                     RegionID: "ES-CT-ICGC-1"
+- Ribagorçana - Vall Fosca                         RegionID: "ES-CT-ICGC-2"
+- Pallaresa                                        RegionID: "ES-CT-ICGC-3"
+- Perafita-Puigpedrós                              RegionID: "ES-CT-ICGC-4"
+- Vessant Nord Cadí-Moixeró                        RegionID: "ES-CT-ICGC-5"
+- Prepirineu                                       RegionID: "ES-CT-ICGC-6"
+- Ter-Freser                                       RegionID: "ES-CT-ICGC-7"
+
 
 ## Switzerland
 

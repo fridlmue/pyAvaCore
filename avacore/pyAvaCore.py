@@ -27,6 +27,7 @@ import typing
 from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
+from avacore.processor_catalunya import process_reports_cat
 from avacore.processor_uk import process_reports_uk
 from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_es import process_reports_es
