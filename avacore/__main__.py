@@ -33,7 +33,7 @@ from .geojson import FeatureCollection
 
 parser = argparse.ArgumentParser(description='Download and parse EAWS avalanche bulletins')
 parser.add_argument('--regions',
-                    default="AT-02 AT-03 AT-04 AT-05 AT-06 AT-07 AT-08 DE-BY CH SI FR IT-21 IT-23 IT-25 IT-34 IT-36 IT-57 NO ES-CT-L GB IS ES-CT",
+                    default="AT-02 AT-03 AT-04 AT-05 AT-06 AT-07 AT-08 DE-BY CH SI FR IT-21 IT-23 IT-25 IT-34 IT-36 IT-57 NO ES-CT-L GB IS ES-CT CZ",
                     help='avalanche region to download')
 parser.add_argument('--output',
                     default='./data',
