@@ -84,6 +84,12 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         reports = process_reports_is()
         _, provider = get_report_url(region_id, local)
         # url = "https://www.sais.gov.uk/api?action=getForecast"
+    elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
+        reports = process_reports_es()
+        url, provider = get_report_url(region_id, local)
+    elif region_id.startswith("ES-CT") and not region_id.startswith("ES-CT-L") or region_id.startswith('ES-CT-L-04'):
+        reports = process_reports_cat()
+        url, provider = get_report_url(region_id, local)
     else:
         url, provider = get_report_url(region_id, local)
 

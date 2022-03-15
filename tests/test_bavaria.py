@@ -19,8 +19,6 @@ class TestBavaria(unittest.TestCase):
         self.assertEqual(report.dangerRatings[0].mainValue, 'considerable')
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
         self.assertEqual(report.dangerRatings[0].elevation.lowerBound, '1500')
-        # self.assertEqual(report.danger_main[0].valid_elevation, '>1500')
-        # self.assertEqual(report.dangerpattern, [])
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
         self.assertIn('E', report.avalancheProblems[0].dangerRating.aspect)
         self.assertIn('NW', report.avalancheProblems[0].dangerRating.aspect)
