@@ -19,7 +19,7 @@ import pytz
 import dateutil.parser
 import copy
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType, MetaDataType, AvaCoreCustom
 
 CAAMLTAG = '{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'
 
@@ -92,11 +92,15 @@ def parse_xml(root):
                     report.dangerRatings.append(danger_rating)
                 else:
                     pm_danger_ratings.append(danger_rating)
-            '''
+            
+            meta_data = MetaDataType()
             for DangerPattern in observations.iter(tag=CAAMLTAG + 'DangerPattern'):
                 for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + 'type'):
-                    report.dangerpattern.append(DangerPatternType.text)
-            '''
+                    dp = AvaCoreCustom(custom_type='dangerPattern', content=DangerPatternType.text)
+                    meta_data.customData.append(dp)
+                    # report.dangerpattern.append(DangerPatternType.text)
+            report.metaData = meta_data
+            
             for AvProblem in observations.iter(tag=CAAMLTAG + 'AvProblem'):
                 type_r = ""
                 problem_danger_rating = DangerRatingType()
