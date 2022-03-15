@@ -16,6 +16,7 @@
 from datetime import datetime
 import re
 import typing
+import textwrap
 
 class ValidTimeType:
     '''
@@ -105,6 +106,16 @@ class AvaCoreCustom:
 
     def __repr__(self):
         return str(self)
+    
+class MetaDataType:
+    '''
+    MetaData for Report
+    '''
+    customData: typing.List[AvaCoreCustom]
+    
+    def __init__(self):
+        self.customData = []
+
 
 class DangerRatingType:
     '''
@@ -288,6 +299,7 @@ class AvaBulletin:
     '''travel advisory highlights'''
     travelAdvisoryComment: str
     '''travel advisory comment'''
+    metaData: MetaDataType
 
     predecessor_id: str
     '''not part of CAAMLv6 (yet)'''
@@ -344,18 +356,22 @@ class AvaBulletin:
     # def fill_std_attributes(self, to_fill, fill_with):
         
         # if 'predecessor_id' in bulletin_json:
-            
+    
+    def prettify_out(self, text):
+        print("\n".join(textwrap.wrap(text, width=60, initial_indent='╟─ ', subsequent_indent='║  ')))
+        
 
     def cli_out(self):
         '''
         ToDo -- Not working at the moment
         '''
-        print('╔═════ AvaReport ', self.bulletinID, ' ════════════════')
-        
+        print('╔═════ AvaReport ══════════════════════════════════════════')
+        print('║ Bulletin:            ', self.bulletinID)
         if hasattr(self, 'predecessor_id'):
-            print('║ This is PM-Report to: ', self.predecessor_id)
-        print('║ Report from:          ', self.publicationTime)
-        print('║ Validity:             ', self.validTime.startTime, '➝', self.validTime.endTime)
+            print('║ This is PM-Report to:', self.predecessor_id)
+        print('║ Report from:         ', self.publicationTime)
+        print('║ Valid from:          ', self.validTime.startTime)
+        print('║ Valid to:            ', self.validTime.endTime)
         print('║ Valid for:')
         for region in self.regions:
             print('║ ├─ ', region.regionID)
@@ -379,35 +395,35 @@ class AvaBulletin:
                 print('║ ', dangerpattern)
         '''
 
-        print('╟───── Av Texts ─────')
+        print('╟───── Bulletin Texts ─────')
         if hasattr(self, 'highlights'):
-            print('║ ', 'Highlights:',  self.highlights)
+            self.prettify_out('Highlights: ' +  self.highlights)
             
         if hasattr(self, 'avalancheActivityHighlights'):
-            print('║ ', 'avalancheActivityHighlights:',  self.avalancheActivityHighlights)
+            self.prettify_out('avalancheActivityHighlights: ' +  self.avalancheActivityHighlights)
             
         if hasattr(self, 'avalancheActivityComment'):
-            print('║ ', 'avalancheActivityComment:',  self.avalancheActivityComment)
+            self.prettify_out('avalancheActivityComment: ' +  self.avalancheActivityComment)
             
         if hasattr(self, 'snowpackStructureHighlights'):
-            print('║ ', 'snowpackStructureHighlights:',  self.snowpackStructureHighlights)
+            self.prettify_out('snowpackStructureHighlights: ' +  self.snowpackStructureHighlights)
             
         if hasattr(self, 'snowpackStructureComment'):
-            print('║ ', 'snowpackStructureComment:',  self.snowpackStructureComment)
+            self.prettify_out('snowpackStructureComment: ' +  self.snowpackStructureComment)
             
         if hasattr(self, 'travelAdvisoryHighlights'):
-            print('║ ', 'travelAdvisoryHighlights:',  self.travelAdvisoryHighlights)
+            self.prettify_out('travelAdvisoryHighlights: ' +  self.travelAdvisoryHighlights)
             
         if hasattr(self, 'travelAdvisoryComment'):
-            print('║ ', 'travelAdvisoryComment:',  self.travelAdvisoryComment)
+            self.prettify_out('travelAdvisoryComment: ' +  self.travelAdvisoryComment)
             
         if hasattr(self, 'wxSynopsisHighlights'):
-            print('║ ', 'wxSynopsisHighlights:',  self.wxSynopsisHighlights)
+            self.prettify_out('wxSynopsisHighlights: ' +  self.wxSynopsisHighlights)
             
         if hasattr(self, 'wxSynopsisComment'):
-            print('║ ', 'wxSynopsisComment:',  self.wxSynopsisComment)
+            self.prettify_out('wxSynopsisComment: ' +  self.wxSynopsisComment)
             
         if hasattr(self.tendency, 'tendencyComment'):
-            print('║ ', 'tendencyComment:',  self.tendency.tendencyComment)
+            self.prettify_out('tendencyComment: ' +  self.tendency.tendencyComment)
 
-        print('╚══════════════════════════════════════════')
+        print('╚═══════════════════════════════════════════════════════════\n')
