@@ -105,7 +105,19 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
             reports = parse_xml_bavaria(root, "slovenia")
         else:
             reports = parse_xml(root)
-    return reports, provider, url
+            
+    relevant_reports = []
+            
+    for report in reports:
+        found_one = False
+        for region in report.get_region_list():
+            if region.startswith(region_id):
+                found_one = True
+                break
+        if found_one:
+            relevant_reports.append(report)
+    
+    return relevant_reports, provider, url
 
 
 def get_report_url(region_id, local=''): #You can ignore "provider" return value by url, _ = getReportsUrl
