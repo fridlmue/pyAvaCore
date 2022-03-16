@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
