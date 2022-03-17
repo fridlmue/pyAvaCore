@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -384,7 +384,7 @@ class AvaBulletin:
         print('╟───── Av Problems')
         for problem in self.avalancheProblems:
             try:
-                print('║ Problem: ', problem.problemType, ' Elevation: ', problem.dangerRating.elevation.toString(), ' Aspects: ', problem.dangerRating.aspect)
+                print('║ Problem: ', problem.problemType, '\n║    Elevation: ', problem.dangerRating.elevation.toString(), '\n║    Aspects: ', problem.dangerRating.aspect)
             except:
                 print('║ Problem: ', problem.problemType)
 

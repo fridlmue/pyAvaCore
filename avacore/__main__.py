@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -72,9 +72,13 @@ def download_region(regionID):
         logging.info('Writing %s', f.name)
         json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
     with open(f'{directory}/{validityDate}-{regionID}.ratings.json', mode='w', encoding='utf-8') as f:
-        obj = dict(maxDangerRatings=bulletins.max_danger_ratings())
+        ratings = bulletins.max_danger_ratings()
+        relevant_ratings = {}
+        for key in ratings:
+            if key.startswith(regionID):
+                relevant_ratings[key] = ratings[key]
         logging.info('Writing %s', f.name)
-        json.dump(obj, fp=f, indent=2, sort_keys=True)
+        json.dump(relevant_ratings, fp=f, indent=2, sort_keys=True)
     if args.geojson:
         with open(f'{args.geojson}/{regionID}_micro-regions_elevation.geojson.json', encoding='utf-8') as f:
             geojson = FeatureCollection.from_dict(json.load(f))
