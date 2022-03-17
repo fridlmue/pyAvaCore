@@ -24,7 +24,7 @@ import re
 import copy
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
 
 code_dir = {
     'SOBRARBE' : 'ES-SO',
@@ -92,7 +92,7 @@ def get_reports_from_file(aemet_reports):
 
     for elem in region_lines:
         current_report = copy.deepcopy(report)
-        current_report.regions.append(RegionType(code_dir[elem.upper()]))
+        current_report.regions.append(Region(code_dir[elem.upper()]))
         current_report.bulletinID = current_report.regions[0].regionID + '_' + str(report.publicationTime)
         sentences = region_lines[elem].split('.')
         pm_ratings_hi = 0
@@ -102,7 +102,7 @@ def get_reports_from_file(aemet_reports):
         for sentence in sentences:
             pm_sent = False
             if len(sentence) > 1:
-                danger_rating = DangerRatingType()
+                danger_rating = DangerRating()
                 danger_rating2 = None
                 levels = re.findall(r"\((.)\)", sentence)
                 if len(levels) > 1 and ('evolucionando' in sentence):
@@ -113,7 +113,7 @@ def get_reports_from_file(aemet_reports):
                     if pm_sent:
                         pm_ratings_lw = int(levels[1])
                     if 'porencima' in sentence.replace(" ", ""):
-                        danger_rating2 = DangerRatingType()
+                        danger_rating2 = DangerRating()
                         danger_rating2.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                         '''
                         if pm_sent:
@@ -122,7 +122,7 @@ def get_reports_from_file(aemet_reports):
                 elif 'porencima' in sentence.replace(" ", ""):
                     danger_rating.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                     if pm_sent:
-                        # danger_rating2 = DangerRatingType()
+                        # danger_rating2 = DangerRating()
                         # danger_rating2.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                         pm_ratings_hi = int(levels[1])
                 elif pm:

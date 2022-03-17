@@ -25,7 +25,7 @@ import dateutil.parser
 from urllib.request import urlopen, Request
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
 
 def download_report_is(lang):
     try:
@@ -75,7 +75,7 @@ def process_reports_is(path='', cached=False, lang='en'):
         report.publicationTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('updated').text))
         report.validTime.startTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('valid_from').text))
         report.validTime.endTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('valid_until').text))
-        report.regions.append(RegionType("IS-"+area_forcast.find('region_code').text.upper()))
+        report.regions.append(Region("IS-"+area_forcast.find('region_code').text.upper()))
         
         report.bulletinID = report.regions[0].regionID + '-' + report.publicationTime.isoformat()
         
@@ -84,12 +84,12 @@ def process_reports_is(path='', cached=False, lang='en'):
         report.snowpackStructureHighlights = area_forcast.find('snow_condition').text
         report.wxSynopsisHighlights = area_forcast.find('weather').text
         
-        danger_rating = DangerRatingType()
+        danger_rating = DangerRating()
         danger_rating.set_mainValue_int(int(area_forcast.find('danger_level_day1_code').text))
         report.dangerRatings.append(danger_rating)
         
         for snow_problem in area_forcast.iter(tag='snow_problem'):
-            problem_danger_rating = DangerRatingType()
+            problem_danger_rating = DangerRating()
             
             aspects_list = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']*2
             index_from = '0'
@@ -104,7 +104,7 @@ def process_reports_is(path='', cached=False, lang='en'):
                     up_down = '<'
                 problem_danger_rating.elevation.auto_select(up_down + snow_problem.find('height').text)
             
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.add_problemType(snow_problem.find('type').text.lower())
             problem.dangerRating = problem_danger_rating
             report.avalancheProblems.append(problem)

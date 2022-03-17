@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ import pytz
 import dateutil.parser
 import logging
 
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
 
 
 def process_reports_no(region_id):
@@ -68,7 +68,7 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
     if fetch_time_dependant and now.time() > time(17, 0, 0):
         current = 1
 
-    report.regions.append(RegionType(region_id))
+    report.regions.append(Region(region_id))
     report.publicationTime = dateutil.parser.parse(varsom_report[current]['PublishTime'].split('.')[0])
     report.bulletinID = (region_id + "_" + str(report.publicationTime))
 
@@ -77,7 +77,7 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
 
     # report.danger_main.append(pyAvaCore.DangerMain(int(varsom_report[current]['DangerLevel']), '-'))
     
-    danger_rating = DangerRatingType()
+    danger_rating = DangerRating()
     danger_rating.set_mainValue_int(int(varsom_report[current]['DangerLevel']))
     
     report.dangerRatings.append(danger_rating)
@@ -111,10 +111,10 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
             elev_prefix = '<'
         
         if not problem_type == '':
-            problem_danger_rating = DangerRatingType()
+            problem_danger_rating = DangerRating()
             problem_danger_rating.aspect = aspect_list
             problem_danger_rating.elevation.auto_select(elev_prefix + str(problem['ExposedHeight1']))
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.dangerRating = problem_danger_rating
             problem.problemType = problem_type
             report.avalancheProblems.append(problem)

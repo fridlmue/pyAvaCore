@@ -21,7 +21,7 @@ import pytz
 import dateutil.parser
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
 
 code_dir = {
     '1': 'ES-CT-L-04',
@@ -75,7 +75,7 @@ def get_reports_fromjson(icgc_reports):
 
         report.publicationTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['databutlleti']))
         report.bulletinID = region_id + '_' + str(report.publicationTime)
-        report.regions.append(RegionType(region_id))
+        report.regions.append(Region(region_id))
         report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T00:00'))
         report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T23:59'))
 
@@ -84,11 +84,11 @@ def get_reports_fromjson(icgc_reports):
         report.snowpackStructureComment = icgc_report['text_distribucio']
         report.tendency.tendencyComment = icgc_report['text_tendencia']
 
-        danger_rating = DangerRatingType()
+        danger_rating = DangerRating()
         danger_rating.set_mainValue_int(int(icgc_report['grau_perill_primari']))
         report.dangerRatings.append(danger_rating)
         if not icgc_report['grau_perill_secundari'] == None:
-            danger_rating_2 = DangerRatingType()
+            danger_rating_2 = DangerRating()
             danger_rating_2.set_mainValue_int(int(icgc_report['grau_perill_secundari']))
             report.dangerRatings.append(danger_rating_2)
 
@@ -107,7 +107,7 @@ def get_reports_fromjson(icgc_reports):
             elif problem['id_tipus_situacio'] == '6':
                 problem_type = 'favourable situation'
                 
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.add_problemType(problem_type)
             report.avalancheProblems.append(problem)
 

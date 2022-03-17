@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@ import pytz
 import dateutil.parser
 import copy
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType, MetaDataType, AvaCoreCustom
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, AvaCoreCustom, Elevation
 
 CAAMLTAG = '{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'
 
@@ -53,8 +53,8 @@ def parse_xml(root):
         pm_danger_ratings = []
 
         pm_available = False
-        for DangerRating in bulletin.iter(tag=CAAMLTAG + 'DangerRating'):
-            for validTime in DangerRating.iter(tag=CAAMLTAG + 'validTime'):
+        for nDangerRating in bulletin.iter(tag=CAAMLTAG + 'DangerRating'):
+            for validTime in nDangerRating.iter(tag=CAAMLTAG + 'validTime'):
                 pm_available = True
                 break
 
@@ -63,7 +63,7 @@ def parse_xml(root):
             for locRef in observations.iter(tag=CAAMLTAG + 'locRef'):
                 loc_ref = observations.attrib.get('{http://www.w3.org/1999/xlink}href')
                 if loc_ref not in report.regions:
-                    report.regions.append(RegionType(observations.attrib.get('{http://www.w3.org/1999/xlink}href')))
+                    report.regions.append(Region(observations.attrib.get('{http://www.w3.org/1999/xlink}href')))
             for dateTimeReport in observations.iter(tag=CAAMLTAG + 'dateTimeReport'):
                 report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
             for validTime in observations.iter(tag=CAAMLTAG + 'validTime'):
@@ -72,20 +72,20 @@ def parse_xml(root):
                         report.validTime.startTime = dateutil.parser.parse(beginPosition.text)
                     for endPosition in observations.iter(tag=CAAMLTAG + 'endPosition'):
                         report.validTime.endTime = dateutil.parser.parse(endPosition.text)
-            for DangerRating in observations.iter(tag=CAAMLTAG + 'DangerRating'):
+            for nDangerRating in observations.iter(tag=CAAMLTAG + 'DangerRating'):
                 main_value = 0
                 am_rating = True
-                for mainValue in DangerRating.iter(tag=CAAMLTAG + 'mainValue'):
+                for mainValue in nDangerRating.iter(tag=CAAMLTAG + 'mainValue'):
                     main_value = int(mainValue.text)
                 valid_elevation = "-"
-                for validElevation in DangerRating.iter(tag=CAAMLTAG + 'validElevation'):
+                for validElevation in nDangerRating.iter(tag=CAAMLTAG + 'validElevation'):
                     valid_elevation = validElevation.attrib.get('{http://www.w3.org/1999/xlink}href')
-                for beginPosition in DangerRating.iter(tag=CAAMLTAG + 'beginPosition'):
+                for beginPosition in nDangerRating.iter(tag=CAAMLTAG + 'beginPosition'):
                     validity_begin = dateutil.parser.parse(beginPosition.text)
                     if validity_begin.time() <= time(15, 0, 0) and validity_begin.time() >= time(8, 0, 0):
                         am_rating = False
                         report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
-                danger_rating = DangerRatingType()
+                danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
                 if am_rating:
@@ -93,17 +93,18 @@ def parse_xml(root):
                 else:
                     pm_danger_ratings.append(danger_rating)
             
-            meta_data = MetaDataType()
+            customData = []
             for DangerPattern in observations.iter(tag=CAAMLTAG + 'DangerPattern'):
                 for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + 'type'):
                     dp = AvaCoreCustom(custom_type='dangerPattern', content=DangerPatternType.text)
-                    meta_data.customData.append(dp)
+                    customData.append(dp)
                     # report.dangerpattern.append(DangerPatternType.text)
-            report.metaData = meta_data
+                    report.customData.append(customData)
             
             for AvProblem in observations.iter(tag=CAAMLTAG + 'AvProblem'):
                 type_r = ""
-                problem_danger_rating = DangerRatingType()
+                # problem_danger_rating = DangerRating()
+                elevation = Elevation()
                 for avProbType in AvProblem.iter(tag=CAAMLTAG + 'type'):
                     type_r = avProbType.text
                 aspect = []
@@ -112,12 +113,12 @@ def parse_xml(root):
                 valid_elevation = "-"
                 for validElevation in AvProblem.iter(tag=CAAMLTAG + 'validElevation'):
                         if '{http://www.w3.org/1999/xlink}href' in validElevation.attrib:
-                            problem_danger_rating.elevation.auto_select(validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'))
+                            elevation.auto_select(validElevation.attrib.get('{http://www.w3.org/1999/xlink}href'))
                         else:
                             for beginPosition in validElevation.iter(tag=CAAMLTAG + 'beginPosition'):
-                                problem_danger_rating.elevation.auto_select("ElevationRange_" + beginPosition.text + "Hi")
+                                elevation.auto_select("ElevationRange_" + beginPosition.text + "Hi")
                             for endPosition in validElevation.iter(tag=CAAMLTAG + 'endPosition'):
-                                problem_danger_rating.elevation.auto_select("ElevationRange_" + endPosition.text + "Lw")
+                                elevation.auto_select("ElevationRange_" + endPosition.text + "Lw")
                         '''
                         valid_elevation = validElevation.get('{http://www.w3.org/1999/xlink}href')
                         if not valid_elevation is None:
@@ -128,10 +129,11 @@ def parse_xml(root):
                 comment_r = ''
                 for comment in AvProblem.iter(tag=CAAMLTAG + 'comment'):
                     comment_r = comment.text
-                problem_danger_rating.aspect = aspect
-                problem = AvalancheProblemType()
+                # problem_danger_rating.aspects = aspect
+                problem = AvalancheProblem()
                 problem.add_problemType(type_r)
-                problem.dangerRating = problem_danger_rating
+                problem.elevation = elevation
+                problem.aspects = aspect
                 if comment_r != '':
                     problem.comment = comment_r
                 report.avalancheProblems.append(problem)
@@ -224,12 +226,14 @@ def parse_xml_vorarlberg(root):
                                 valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
                             for endPosition in validElevation.iter(tag=CAAMLTAG + 'endPosition'):
                                 valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
-                    problem_danger_rating = DangerRatingType()
-                    problem_danger_rating.aspect = aspect
-                    problem_danger_rating.elevation.auto_select(valid_elevation)
-                    problem = AvalancheProblemType()
+                    # problem_danger_rating = DangerRating()
+                    # problem_danger_rating.aspects = aspect
+                    # problem_danger_rating.elevation.auto_select(valid_elevation)
+                    problem = AvalancheProblem()
+                    problem.aspects = aspect
+                    problem.elevation.auto_select(valid_elevation)
                     problem.add_problemType(type_r)
-                    problem.dangerRating = problem_danger_rating
+                    # problem.dangerRating = problem_danger_rating
                     report.avalancheProblems.append(problem)
 
     report.avalancheActivityComment = activity_com
@@ -242,21 +246,21 @@ def parse_xml_vorarlberg(root):
         for locRef in bulletinResultOf.iter(tag=CAAMLTAG + 'locRef'):
             current_loc_ref = locRef.attrib.get('{http://www.w3.org/1999/xlink}href')
 
-            DangerRating = et_get_parent(locRef)
+            nDangerRating = et_get_parent(locRef)
             validity_begin = ""
             validity_end = ""
             main_value = 0
             valid_elevation = "-"
 
-            for validTime in DangerRating.iter(tag=CAAMLTAG + 'validTime'):
+            for validTime in nDangerRating.iter(tag=CAAMLTAG + 'validTime'):
                 for beginPosition in validTime.iter(tag=CAAMLTAG + 'beginPosition'):
                     validity_begin = dateutil.parser.parse(beginPosition.text)
                 for endPosition in validTime.iter(tag=CAAMLTAG + 'endPosition'):
                     validity_end = dateutil.parser.parse(endPosition.text)
             main_value = 0
-            for main_value in DangerRating.iter(tag=CAAMLTAG + 'mainValue'):
+            for main_value in nDangerRating.iter(tag=CAAMLTAG + 'mainValue'):
                 main_value = int(main_value.text)
-            for validElevation in DangerRating.iter(tag=CAAMLTAG + 'validElevation'):
+            for validElevation in nDangerRating.iter(tag=CAAMLTAG + 'validElevation'):
                 if '{http://www.w3.org/1999/xlink}href' in validElevation.attrib:
                     valid_elevation = validElevation.attrib.get('{http://www.w3.org/1999/xlink}href')
                 else:
@@ -267,7 +271,7 @@ def parse_xml_vorarlberg(root):
                         if not 'Keine' in endPosition.text:
                             valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
 
-            danger_rating = DangerRatingType()
+            danger_rating = DangerRating()
             danger_rating.set_mainValue_int(main_value)
             danger_rating.elevation.auto_select(valid_elevation)
 
@@ -280,7 +284,7 @@ def parse_xml_vorarlberg(root):
         if loc_elem[1].time() < time(11, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.regions.append(RegionType(loc_elem[0]))
+                c_report.regions.append(Region(loc_elem[0]))
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]
@@ -404,12 +408,14 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
                 for endPosition in validElevation.iter(tag=CAAMLTAG + 'endPosition'):
                     if not 'Keine' in endPosition.text:
                         valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
-            problem_danger_rating = DangerRatingType()
-            problem_danger_rating.aspect = aspect
-            problem_danger_rating.elevation.auto_select(valid_elevation)
-            problem = AvalancheProblemType()
+            # problem_danger_rating = DangerRating()
+            # problem_danger_rating.aspects = aspect
+            # problem_danger_rating.elevation.auto_select(valid_elevation)
+            problem = AvalancheProblem()
             problem.add_problemType(type_r)
-            problem.dangerRating = problem_danger_rating
+            problem.aspects = aspect
+            problem.elevation.auto_select(valid_elevation)
+            # problem.dangerRating = problem_danger_rating
             report.avalancheProblems.append(problem)
 
     report.avalancheActivityComment = activity_com
@@ -422,13 +428,13 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
         for locRef in bulletinResultOf.iter(tag=CAAMLTAG + 'locRef'):
             current_loc_ref = locRef.attrib.get('{http://www.w3.org/1999/xlink}href')
 
-            DangerRating = et_get_parent(locRef)
+            nDangerRating = et_get_parent(locRef)
             validity_begin = ""
             validity_end = ""
             main_value = 0
             valid_elevation = "-"
 
-            for validTime in DangerRating.iter(tag=CAAMLTAG + 'validTime'):
+            for validTime in nDangerRating.iter(tag=CAAMLTAG + 'validTime'):
                 for beginPosition in validTime.iter(tag=CAAMLTAG + 'beginPosition'):
                     if location == 'slovenia':
                         time_i = dateutil.parser.parse(beginPosition.text, ignoretz = True)
@@ -442,9 +448,9 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
                     else:
                         validity_end = dateutil.parser.parse(endPosition.text)
             main_value = 0
-            for main_value in DangerRating.iter(tag=CAAMLTAG + 'mainValue'):
+            for main_value in nDangerRating.iter(tag=CAAMLTAG + 'mainValue'):
                 main_value = int(main_value.text)
-            for validElevation in DangerRating.iter(tag=CAAMLTAG + 'validElevation'):
+            for validElevation in nDangerRating.iter(tag=CAAMLTAG + 'validElevation'):
                 for beginPosition in validElevation.iter(tag=CAAMLTAG + 'beginPosition'):
                     if not ('Keine' in beginPosition.text or beginPosition.text == '0'):
                         valid_elevation = "ElevationRange_" + beginPosition.text + "Hi"
@@ -452,7 +458,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
                     if not ('Keine' in endPosition.text or endPosition.text == '3000'):
                         valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
 
-            danger_rating = DangerRatingType()
+            danger_rating = DangerRating()
             danger_rating.set_mainValue_int(main_value)
             danger_rating.elevation.auto_select(valid_elevation)
             loc_list.append([current_loc_ref, validity_begin, validity_end, danger_rating])
@@ -467,7 +473,7 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
         if loc_elem[1].time() == time(0, 0, 0):
             if not any(loc_elem[0] in loc_ref for loc_ref in loc_ref_list):
                 c_report = copy.deepcopy(report)
-                c_report.regions.append(RegionType(loc_elem[0]))
+                c_report.regions.append(Region(loc_elem[0]))
                 c_report.bulletinID = report_id + '-' + loc_elem[0]
                 c_report.validTime.startTime = loc_elem[1]
                 c_report.validTime.endTime = loc_elem[2]

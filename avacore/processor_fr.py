@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import re
 import string
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
 
 def download_report_fr(region_id):
     try:
@@ -86,7 +86,7 @@ def process_reports_fr(region_id, path='', cached=False):
     report = AvaBulletin()
     reports = []
 
-    report.regions.append(RegionType('FR-' + root.attrib.get('ID').zfill(2)))
+    report.regions.append(Region('FR-' + root.attrib.get('ID').zfill(2)))
     report.publicationTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
     report.validTime.startTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
     report.validTime.endTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEVALIDITE')))
@@ -95,7 +95,7 @@ def process_reports_fr(region_id, path='', cached=False):
 
     for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
         
-        danger_rating_pre = DangerRatingType()
+        danger_rating_pre = DangerRating()
         aspects = []
         for pente in cartoucherisque.iter(tag='PENTE'):
 
@@ -149,7 +149,7 @@ def process_reports_fr(region_id, path='', cached=False):
 
     for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
         
-        danger_rating_pre = DangerRatingType()
+        danger_rating_pre = DangerRating()
         aspects = []
         for pente in cartoucherisque.iter(tag='PENTE'):
 

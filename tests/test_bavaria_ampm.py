@@ -24,8 +24,8 @@ class TestBavariaAmPm(unittest.TestCase):
         self.assertEqual(report.dangerRatings[1].elevation.upperBound, '2000')
         #self.assertEqual(report.dangerpattern, [])
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
-        self.assertIn('E', report.avalancheProblems[0].dangerRating.aspect)
-        self.assertIn('NW', report.avalancheProblems[0].dangerRating.aspect)
+        self.assertIn('E', report.avalancheProblems[0].aspects)
+        self.assertIn('NW', report.avalancheProblems[0].aspects)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
         
         report = reports[7]
@@ -41,8 +41,8 @@ class TestBavariaAmPm(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
         # self.assertEqual(report.dangerpattern, [])
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
-        self.assertIn('E', report.avalancheProblems[0].dangerRating.aspect)
-        self.assertIn('NW', report.avalancheProblems[0].dangerRating.aspect)
+        self.assertIn('E', report.avalancheProblems[0].aspects)
+        self.assertIn('NW', report.avalancheProblems[0].aspects)
         self.assertEqual(report.predecessor_id, 'BYCAAMLGenID3631-BYAMM')
         
         report = reports[11]
@@ -60,8 +60,8 @@ class TestBavariaAmPm(unittest.TestCase):
         self.assertEqual(report.dangerRatings[1].elevation.upperBound, '2000')
         # self.assertEqual(report.dangerpattern, [])
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
-        self.assertIn('E', report.avalancheProblems[0].dangerRating.aspect)
-        self.assertIn('NW', report.avalancheProblems[0].dangerRating.aspect)
+        self.assertIn('E', report.avalancheProblems[0].aspects)
+        self.assertIn('NW', report.avalancheProblems[0].aspects)
 
 if __name__ == '__main__':
     unittest.main()

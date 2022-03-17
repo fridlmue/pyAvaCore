@@ -20,8 +20,8 @@ class TestBavaria(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
         self.assertEqual(report.dangerRatings[0].elevation.lowerBound, '1500')
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
-        self.assertIn('E', report.avalancheProblems[0].dangerRating.aspect)
-        self.assertIn('NW', report.avalancheProblems[0].dangerRating.aspect)
+        self.assertIn('E', report.avalancheProblems[0].aspects)
+        self.assertIn('NW', report.avalancheProblems[0].aspects)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
 if __name__ == '__main__':

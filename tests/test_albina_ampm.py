@@ -25,10 +25,10 @@ class TestAlbinaAmPm(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'lowerBound')
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
         self.assertEqual(report.avalancheProblems[0].problemType, 'wet_snow')
-        self.assertIn('S', report.avalancheProblems[0].dangerRating.aspect)
+        self.assertIn('S', report.avalancheProblems[0].aspects)
         self.assertEqual(report.avalancheProblems[1].problemType, 'gliding_snow')
-        self.assertIn('SW', report.avalancheProblems[1].dangerRating.aspect)
-        self.assertNotIn('N', report.avalancheProblems[1].dangerRating.aspect)
+        self.assertIn('SW', report.avalancheProblems[1].aspects)
+        self.assertNotIn('N', report.avalancheProblems[1].aspects)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
         report = bulletins.bulletins[5]
@@ -44,12 +44,12 @@ class TestAlbinaAmPm(unittest.TestCase):
         self.assertEqual(report.dangerRatings[0].elevation.lowerBound, '2600')
         # self.assertEqual(report.dangerpattern, ['DP10', 'DP6'])
         self.assertEqual(report.avalancheProblems[0].problemType, 'wet_snow')
-        self.assertIn('W', report.avalancheProblems[0].dangerRating.aspect)
-        self.assertEqual(report.avalancheProblems[0].dangerRating.elevation.upperBound, '2600')
+        self.assertIn('W', report.avalancheProblems[0].aspects)
+        self.assertEqual(report.avalancheProblems[0].elevation.upperBound, '2600')
         self.assertEqual(report.avalancheProblems[1].problemType, 'wind_drifted_snow')
-        self.assertIn('NE', report.avalancheProblems[1].dangerRating.aspect)
-        self.assertNotIn('S', report.avalancheProblems[1].dangerRating.aspect)
-        self.assertEqual(report.avalancheProblems[1].dangerRating.elevation.lowerBound, '2400')
+        self.assertIn('NE', report.avalancheProblems[1].aspects)
+        self.assertNotIn('S', report.avalancheProblems[1].aspects)
+        self.assertEqual(report.avalancheProblems[1].elevation.lowerBound, '2400')
         self.assertEqual(report.predecessor_id, '56410e01-259b-4b8e-a97b-f4628744b70e')
 
 

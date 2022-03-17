@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import dateutil.parser
 import logging
 
 
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
 
 def process_reports_cz():
     url = "https://www.horskasluzba.cz/cz/avalanche-json"
@@ -48,14 +48,14 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
 
     for bulletin in cz_report:
         report = AvaBulletin()
-        report.regions.append(RegionType('CZ-' + bulletin['region_id']))
+        report.regions.append(Region('CZ-' + bulletin['region_id']))
         report.publicationTime = dateutil.parser.parse(bulletin['date_time'])
         report.bulletinID = (bulletin['id'])
         
         report.validTime.startTime = report.publicationTime
         report.validTime.endTime = report.publicationTime + timedelta(hours=24)
         
-        danger_rating = DangerRatingType()
+        danger_rating = DangerRating()
         danger_rating.set_mainValue_int(int(bulletin['warning_level']))
     
         report.dangerRatings.append(danger_rating)
@@ -66,10 +66,10 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
                 for exposition in warning['exposition'].split(','):
                     aspect_list.append(exposition)
             
-            problem_danger_rating = DangerRatingType()
+            problem_danger_rating = DangerRating()
             problem_danger_rating.aspect = aspect_list
-            problem_danger_rating.elevation = ElevationType(lowerBound=warning['altitude_from'], upperBound=warning['altitude_to'])
-            problem = AvalancheProblemType()
+            problem_danger_rating.elevation = Elevation(lowerBound=warning['altitude_from'], upperBound=warning['altitude_to'])
+            problem = AvalancheProblem()
             problem.dangerRating = problem_danger_rating
             problem.add_problemType(warning['type'])
             report.avalancheProblems.append(problem)

@@ -15,7 +15,7 @@
 
 from datetime import date, datetime, timedelta
 import typing
-from .avabulletin import AvaBulletin, DangerRatingType
+from .avabulletin import AvaBulletin, DangerRating
 from .geojson import Feature, FeatureCollection
 
 
@@ -142,7 +142,7 @@ class Bulletins:
         def affects_region(b: AvaBulletin):
             return id in [r.regionID for r in b.regions]
 
-        def affects_danger(d: DangerRatingType):
+        def affects_danger(d: DangerRating):
             if Bulletins.region_without_elevation(id):
                 return True
             elif not d.elevation:

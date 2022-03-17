@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -23,14 +23,14 @@ import dateutil.parser
 import logging
 import re
 
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
 
 def get_reports_from_json(sais_reports):
     reports = []
 
     for sais_report in sais_reports:
         report = AvaBulletin()
-        report.regions.append(RegionType('GB-SCT-' + sais_report['Region']))
+        report.regions.append(Region('GB-SCT-' + sais_report['Region']))
         report.bulletinID = 'GB-SCT-' + sais_report['ID']
 
         report.publicationTime = dateutil.parser.parse(sais_report['DatePublished'])
@@ -44,30 +44,30 @@ def get_reports_from_json(sais_reports):
 
         problems = int(sais_report['KeyIcons'])
 
-        problem = AvalancheProblemType()
+        problem = AvalancheProblem()
 
         if problems & (1<<1):
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.problemType = 'wind_drifted_snow'
             report.avalancheProblems.append(problem)
         if problems & (1<<2):
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.problemType = 'persistent_weak_layers'
             report.avalancheProblems.append(problem)
         if problems & (1<<3):
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.problemType = 'new_snow'
             report.avalancheProblems.append(problem)
         if problems & (1<<4):
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.problemType = 'wet_snow'
             report.avalancheProblems.append(problem)
         if problems & (1<<5):
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.problemType = 'cornice_failure'
             report.avalancheProblems.append(problem)
         if problems & (1<<6):
-            problem = AvalancheProblemType()
+            problem = AvalancheProblem()
             problem.problemType = 'gliding_snow'
             report.avalancheProblems.append(problem)
 
@@ -89,7 +89,7 @@ def get_reports_from_json(sais_reports):
             and max(danger_ratings_lw) == min(danger_ratings_lw)
             and max(danger_ratings_hi) == max(danger_ratings_lw)
         ):
-            danger_rating = DangerRatingType()
+            danger_rating = DangerRating()
             danger_rating.set_mainValue_int(int(max(danger_ratings_lw)))
             report.dangerRatings.append(danger_rating)
         else:
@@ -102,7 +102,7 @@ def get_reports_from_json(sais_reports):
                     if (danger_ratings_hi[idx] == rating):
                         aspect_list.append(aspect)
 
-                danger_rating = DangerRatingType()
+                danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(int(rating))
                 danger_rating.elevation.lowerBound = boundary
                 danger_rating.aspect = aspect_list
@@ -114,7 +114,7 @@ def get_reports_from_json(sais_reports):
                     if (danger_ratings_lw[idx] == rating):
                         aspect_list.append(aspect)
 
-                danger_rating = DangerRatingType()
+                danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(int(rating))
                 danger_rating.elevation.upperBound = boundary
                 danger_rating.aspect = aspect_list

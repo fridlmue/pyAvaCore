@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,7 +26,7 @@ import re
 
 from avacore import pyAvaCore
 from avacore.png import png
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
 
 
 def fetch_files_ch(lang, path):
@@ -213,9 +213,9 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                 elif not bulletinID_pm is None:
                     if not bulletinID in reports[bulletinIDs.index(bulletinID_pm)].predecessor_id:
                         reports[bulletinIDs.index(bulletinID_pm)].predecessor_id += ('_' + bulletinID)
-                reports[bulletinIDs.index(bulletinID)].regions.append(RegionType("CH-" + line[:4]))
+                reports[bulletinIDs.index(bulletinID)].regions.append(Region("CH-" + line[:4]))
                 if not bulletinID_pm is None:
-                    reports[bulletinIDs.index(bulletinID_pm)].regions.append(RegionType("CH-" + line[:4]))
+                    reports[bulletinIDs.index(bulletinID_pm)].regions.append(Region("CH-" + line[:4]))
 
         for report in reports:
             # Opens the matching Report-File
@@ -229,7 +229,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
             # Isolates the relevant Danger Information
             text_pos = text.find('data-level=') + len('data-level=') + 1
             
-            danger_rating = DangerRatingType()
+            danger_rating = DangerRating()
             danger_rating.set_mainValue_int(int(text[text_pos:text_pos + 1]))
             
             report.dangerRatings.append(danger_rating)
@@ -255,7 +255,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
             #     prone_locations_text.content = '-'
             if not prone_locations_text == 'Content-Type':
                 valid_elevation = ''.join(c for c in prone_locations_text if c.isdigit())
-                report.dangerRatings[0].elevation = ElevationType(valid_elevation)
+                report.dangerRatings[0].elevation = Elevation(valid_elevation)
 
             # report.dangerRatings[0].customData.append(prone_locations_text)
             report.dangerRatings[0].aspect = general_problem_locations
@@ -309,7 +309,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                             problem_type_text = 'favourable_situation'
                         
                         if not problem_type_text == '':
-                            problem = AvalancheProblemType()
+                            problem = AvalancheProblem()
                             problem.problemType = problem_type_text
                             report.avalancheProblems.append(problem)
         
@@ -334,7 +334,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                 report_am.bulletinID = combination
                 report_am.regions = []
                 for region in matched_regions:
-                    report_am.regions.append(RegionType(region))
+                    report_am.regions.append(Region(region))
                 # Add PM Info to AM-Report?
                 report_am.validTime.endTime = report_am.validTime.endTime.replace(hour=12)
                 
@@ -345,7 +345,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                 report_pm.predecessor_id = combination
                 report_pm.regions = []
                 for region in matched_regions:
-                    report_pm.regions.append(RegionType(region))
+                    report_pm.regions.append(Region(region))
                 
                 if problems:
                     for problem in report_am.avalancheProblem:
