@@ -19,7 +19,7 @@ import pytz
 import dateutil.parser
 import copy
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, AvaCoreCustom, Elevation
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, AvaCoreCustom, Elevation, Source, Texts
 
 CAAMLTAG = '{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}'
 
@@ -99,7 +99,7 @@ def parse_xml(root):
                     dp = AvaCoreCustom(custom_type='dangerPattern', content=DangerPatternType.text)
                     customData.append(dp)
                     # report.dangerpattern.append(DangerPatternType.text)
-                    report.customData.append(customData)
+            report.customData = customData
             
             for AvProblem in observations.iter(tag=CAAMLTAG + 'AvProblem'):
                 type_r = ""
@@ -137,21 +137,40 @@ def parse_xml(root):
                 if comment_r != '':
                     problem.comment = comment_r
                 report.avalancheProblems.append(problem)
+                
+            wxSynopsis = Texts()
+            avalancheActivity = Texts()
+            snowpackStructure = Texts()
+
             for avActivityHighlights in observations.iter(tag=CAAMLTAG + 'avActivityHighlights'):
                 if not avActivityHighlights.text is None:
-                    report.avalancheActivityHighlights = avActivityHighlights.text.replace('&nbsp;', '\n')
+                    avalancheActivity.highlights = avActivityHighlights.text.replace('&nbsp;', '\n')
             for wxSynopsisComment in observations.iter(tag=CAAMLTAG + 'wxSynopsisComment'):
-                report.wxSynopsisComment = wxSynopsisComment.text.replace('&nbsp;', '\n')
+                wxSynopsis.comment = wxSynopsisComment.text.replace('&nbsp;', '\n')
             for avActivityComment in observations.iter(tag=CAAMLTAG + 'avActivityComment'):
                 if not avActivityHighlights.text is None:
-                    report.avalancheActivityComment = avActivityComment.text.replace('&nbsp;', '\n')
+                    avalancheActivity.comment = avActivityComment.text.replace('&nbsp;', '\n')
             for snowpackStructureComment in observations.iter(tag=CAAMLTAG + ''\
                                                               'snowpackStructureComment'):
                 if not snowpackStructureComment.text is None:
-                    report.snowpackStructureComment = snowpackStructureComment.text.replace('&nbsp;', '\n')
+                    snowpackStructure.comment = snowpackStructureComment.text.replace('&nbsp;', '\n')
             for tendencyComment in observations.iter(tag=CAAMLTAG + 'tendencyComment'):
                 if not tendencyComment.text is None:
                     report.tendency.tendencyComment = tendencyComment.text.replace('&nbsp;', '\n')
+                    
+            for source in observations.iter(tag=CAAMLTAG + 'Operation'):
+                for source_name in source.iter(tag=CAAMLTAG + 'name'):
+                    report.source = Source(provider_name=source_name.text, provider_website=str('https://' + source_name.text))
+                    
+            if not wxSynopsis.highlights is None and not wxSynopsis.comment is None:
+                report.wxSynopsis = wxSynopsis
+            
+            if not avalancheActivity.highlights is None and not avalancheActivity.comment is None:
+                report.avalancheActivity = avalancheActivity
+                
+            if not snowpackStructure.highlights is None and not snowpackStructure.comment is None:
+                report.snowpackStructure = snowpackStructure
+                    
         reports.append(report)
 
         if pm_available:
