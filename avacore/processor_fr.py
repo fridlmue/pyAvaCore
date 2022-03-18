@@ -166,7 +166,7 @@ def process_reports_fr(region_id, path='', cached=False):
             if pente.get('NW') == 'true':
                 aspects.append('NW')
 
-        danger_rating_pre.aspect = aspects
+        danger_rating_pre.aspects = aspects
         
         for risque in cartoucherisque.iter(tag='RISQUE'):
             if not risque.attrib.get('EVOLURISQUE1') == '':
