@@ -22,7 +22,7 @@ import re
 import string
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts
 
 def download_report_fr(region_id):
     try:
@@ -116,33 +116,29 @@ def process_reports_fr(region_id, path='', cached=False):
             if pente.get('NW') == 'true':
                 aspects.append('NW')
 
-        # general_problem_valid_elevation = '-'
-        # report.problem_list.append(pyAvaCore.Problem("general", aspects, general_problem_valid_elevation))
-        danger_rating_pre.aspect = aspects
+        danger_rating_pre.aspects = aspects
 
         for risque in cartoucherisque.iter(tag='RISQUE'):
-            # report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE1')), risque.attrib.get('LOC1')))
             danger_rating = copy.deepcopy(danger_rating_pre)
             danger_rating.set_mainValue_int(int(risque.attrib.get('RISQUE1')))
             danger_rating.elevation.auto_select(risque.attrib.get('LOC1'))
             report.dangerRatings.append(danger_rating)
             if not risque.attrib.get('RISQUE2') == '':
-                #report.danger_main.append(pyAvaCore.DangerMain(int(risque.attrib.get('RISQUE2')), risque.attrib.get('LOC2')))
                 danger_rating2 = copy.deepcopy(danger_rating_pre)
                 danger_rating2.set_mainValue_int(int(risque.attrib.get('RISQUE2')))
                 danger_rating2.elevation.auto_select(risque.attrib.get('LOC2'))
                 report.dangerRatings.append(danger_rating2)
 
         for resume in cartoucherisque.iter(tag='RESUME'):
-            report.avalancheActivityHighlights = resume.text
+            report.avalancheActivity = Texts(highlights=resume.text)
 
     for stabilite in root.iter(tag='STABILITE'):
         for texte in stabilite.iter(tag='TEXTE'):
-            report.avalancheActivityComment = texte.text
+            report.avalancheActivity = Texts(comment=texte.text)
 
     for qualite in root.iter(tag='QUALITE'):
         for texte in qualite.iter(tag='TEXTE'):
-            report.snowpackStructureComment = texte.text
+            report.snowpackStructure = Texts(comment=texte.text)
 
     pm_danger_ratings = []
     pm_available = False
@@ -170,8 +166,6 @@ def process_reports_fr(region_id, path='', cached=False):
             if pente.get('NW') == 'true':
                 aspects.append('NW')
 
-        # general_problem_valid_elevation = '-'
-        # report.problem_list.append(pyAvaCore.Problem("general", aspects, general_problem_valid_elevation))
         danger_rating_pre.aspect = aspects
         
         for risque in cartoucherisque.iter(tag='RISQUE'):
@@ -181,7 +175,6 @@ def process_reports_fr(region_id, path='', cached=False):
                 danger_rating_pm.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE1')))
                 danger_rating_pm.elevation.auto_select(risque.attrib.get('LOC1'))
                 pm_danger_ratings.append(danger_rating_pm)
-                # pm_danger_ratings.append(pyAvaCore.DangerMain(int(risque.attrib.get('EVOLURISQUE1')), risque.attrib.get('LOC1')))
             else:
                 pm_danger_ratings.append(report.dangerRatings[0])
             if not risque.attrib.get('EVOLURISQUE2') == '':
