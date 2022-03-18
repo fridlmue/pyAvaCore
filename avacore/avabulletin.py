@@ -240,10 +240,10 @@ class AvalancheProblem:
         All problem type texts in pre CAAMLv6 need a post processing to match the new standard
         All new problem texts contain a unterscore and can be differentiated by that
         '''
-        if not '_' in problem_type_text:
+        if not '_' in problem_type_text or 'drifting_snow' in problem_type_text:
             if 'new' in problem_type_text:
                 problem_type_text = 'new_snow'
-            elif 'drifting'in problem_type_text or 'drifted' in problem_type_text:
+            elif 'drifting' in problem_type_text or 'drifted' in problem_type_text:
                 problem_type_text = 'wind_drifted_snow'
             elif 'old' in problem_type_text or 'persistent' in problem_type_text:
                 problem_type_text = 'persistent_weak_layers'

@@ -22,7 +22,7 @@ import dateutil.parser
 import logging
 
 
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region, Texts
 
 def process_reports_cz():
     url = "https://www.horskasluzba.cz/cz/avalanche-json"
@@ -49,7 +49,7 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
     for bulletin in cz_report:
         report = AvaBulletin()
         report.regions.append(Region('CZ-' + bulletin['region_id']))
-        report.publicationTime = dateutil.parser.parse(bulletin['date_time'])
+        report.publicationTime = pytz.timezone("Europe/Prague").localize(dateutil.parser.parse(bulletin['date_time']))
         report.bulletinID = (bulletin['id'])
         
         report.validTime.startTime = report.publicationTime
@@ -63,18 +63,16 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
         for warning in bulletin['warnings']:
             aspect_list = []
             if warning['exposition'] != 'NONE':
-                for exposition in warning['exposition'].split(','):
+                for exposition in warning['exposition'].replace(' ', '').split(','):
                     aspect_list.append(exposition)
             
-            problem_danger_rating = DangerRating()
-            problem_danger_rating.aspect = aspect_list
-            problem_danger_rating.elevation = Elevation(lowerBound=warning['altitude_from'], upperBound=warning['altitude_to'])
             problem = AvalancheProblem()
-            problem.dangerRating = problem_danger_rating
+            problem.aspects = aspect_list
+            problem.elevation = Elevation(lowerBound=warning['altitude_from'], upperBound=warning['altitude_to'])
             problem.add_problemType(warning['type'])
             report.avalancheProblems.append(problem)
         
-        report.avalancheActivityComment = bulletin['description']
+        report.avalancheActivity = Texts(comment=bulletin['description'])
     
         reports.append(report)
 

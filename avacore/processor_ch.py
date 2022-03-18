@@ -26,7 +26,7 @@ import re
 
 from avacore import pyAvaCore
 from avacore.png import png
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region, Texts
 
 
 def fetch_files_ch(lang, path):
@@ -158,7 +158,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
         else: # Shourld not happen
             common_report.validTime.endTime = pytz.timezone("Europe/Zurich").localize(datetime.strptime(str(date_time_now.year) + '-' + end[end.find(':')+2:], '%Y-%d.%m., %H:%M'))
             
-        common_report.avalancheActivityHighlights = data['flash']
+        common_report.avalancheActivity = Texts(highlights=data['flash'])
         
         text = ""
         with open(path + '/swiss/sdwetter.html', encoding="utf-8") as f:
@@ -167,6 +167,8 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
         text = text.split('<div class="footer-meteo-mobile')[0]
         segments = text.split('popover-flag')
         
+        wxSynopsis = Texts()
+        
         for segment in segments[1:]:
             outlook = None
             if 'Outlook' in segment or 'Tendenz' in segment:
@@ -174,19 +176,16 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
             segment = segment.split('<div class="snow-and-weather-block">')[0]
             segment = clean_html_string(segment)
 
-            # segment = segment.split
             if 'popover-snowpack' in segment:
-                common_report.snowpackStructureComment = segment.split('popover-snowpack ')[1]
+                common_report.snowpackStructure = Texts(comment=segment.split('popover-snowpack ')[1])
             if 'popover-actual-weather' in segment:
-                common_report.wxSynopsisComment = segment.split('popover-actual-weather ')[1]
+                wxSynopsis.comment = segment.split('popover-actual-weather ')[1]
             if 'popover-weather-forecast' in segment:
-                common_report.wxSynopsisComment += '\n' + segment.split('popover-weather-forecast ')[1]
+                wxSynopsis.comment += '\n' + segment.split('popover-weather-forecast ')[1]
             if outlook:
                 common_report.tendency.tendencyComment = clean_html_string(outlook.split('</span>')[1])
-
-        # html_weather_snow = AvaCoreCustom('html_weather_snow')
-        # html_weather_snow.content = text
-        # report.dangerRatings[0].customData.append(html_weather_snow)      
+                
+        common_report.wxSynopsis = wxSynopsis
         
         bulletinIDs = []
         bulletin_combinations = set()
@@ -237,27 +236,21 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
             # Isolates the prone location Image
             text_pos = text.find('src="data:image/png;base64,') + len('src="data:image/png;base64,')
             subtext = text[text_pos:]
-            # prone_locations_img = AvaCoreCustom('prone_locations_img')
             prone_locations_height = subtext[:subtext.find('"')]
             general_problem_locations = []
             if len(prone_locations_height) < 1000: # Sometimes no Picture is attached
                 prone_locations_height = '-'
             else:
                 general_problem_locations = get_prone_locations(prone_locations_height)
-            # report.dangerRatings[0].customData.append(prone_locations_img)
 
             # Isolates the prone location Text
             text_pos = subtext.find('alt="') + len('alt="')
             subtext = subtext[text_pos:]
-            # prone_locations_text = AvaCoreCustom('prone_locations_text')
             prone_locations_text = subtext[:subtext.find('"')]
-            # if prone_locations_text.content == 'Content-Type':
-            #     prone_locations_text.content = '-'
             if not prone_locations_text == 'Content-Type':
                 valid_elevation = ''.join(c for c in prone_locations_text if c.isdigit())
                 report.dangerRatings[0].elevation = Elevation(valid_elevation)
 
-            # report.dangerRatings[0].customData.append(prone_locations_text)
             report.dangerRatings[0].aspect = general_problem_locations
             
             texts = []
@@ -267,24 +260,25 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
             else:
                 texts.append(text)
             
-            report.avalancheActivityComment = ''
+            avalancheActivity = Texts(comment='')
             
             for element in texts:
                 if '<h5>Danger description</h5>' in element:
                     avalancheActivityComment = re.search('(?<=\<\/h5><p>)(.|\n)*?(?=\<\/p>)', element)
-                    report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
+                    avalancheActivity.comment += avalancheActivityComment.group(0) + " "
                 elif 'No distinct avalanche problem</h4>' in element:
                     avalancheActivityComment = re.search('(?<=No distinct avalanche problem<\/h4><p>)(.|\n)*?(?=\<\/p>)', element)
-                    report.avalancheActivityComment += avalancheActivityComment.group(0) + " "
+                    avalancheActivity.comment += avalancheActivityComment.group(0) + " "
                 elif '</h4><p>' in element:
                     avalancheActivityComment = re.search('(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)', element)
                     comment = avalancheActivityComment.group(0)
                     comment = re.sub('\(see.*map\)', '', comment)
-                    report.avalancheActivityComment += comment + " "
+                    avalancheActivity.comment += comment + " "
                 else:
                     print('Error parsing avActComment in:', report.bulletinID)
             
-            report.avalancheActivityComment = clean_html_string(report.avalancheActivityComment)
+            avalancheActivity.comment = clean_html_string(avalancheActivity.comment)
+            report.avalancheActivity = avalancheActivity
                 
             if problems:
                 '''Optional Feature to parse Problems from the swiss Reports'''
@@ -353,7 +347,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                         
                 report_pm.dangerRatings[0].elevation = report_am.dangerRatings[0].elevation
                 report_pm.dangerRatings[0].aspect = report_am.dangerRatings[0].aspect
-                report_pm.avalancheActivityComment = report_am.avalancheActivityComment + '\n' + report_pm.avalancheActivityComment
+                report_pm.avalancheActivity.comment = report_am.avalancheActivity.comment + '\n' + report_pm.avalancheActivity.comment
                 report_pm.validTime.startTime = report_am.validTime.endTime
                 final_reports.append(report_pm)
 
