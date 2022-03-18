@@ -291,8 +291,6 @@ class Texts:
     comment: str
 
     def __init__(self, highlights=None, comment=None) -> None:
-        self.highlights = None
-        self.comment = None
         if not highlights is None:
             self.highlights = highlights
         if not comment is None:

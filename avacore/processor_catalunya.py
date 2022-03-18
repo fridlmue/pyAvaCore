@@ -21,7 +21,7 @@ import pytz
 import dateutil.parser
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts
 
 code_dir = {
     '1': 'ES-CT-L-04',
@@ -70,7 +70,7 @@ def get_reports_fromjson(icgc_reports):
 
     for icgc_report in icgc_reports:
         region_id = code_dir[icgc_report['id_zona']]
-        
+
         report = AvaBulletin()
 
         report.publicationTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['databutlleti']))
@@ -79,9 +79,8 @@ def get_reports_fromjson(icgc_reports):
         report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T00:00'))
         report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(dateutil.parser.parse(icgc_report['datavalidesabutlleti']+'T23:59'))
 
-        report.avalancheActivityHighlights = icgc_report['perill_text']
-        report.avalancheActivityComment =  icgc_report['text_estat_mantell']
-        report.snowpackStructureComment = icgc_report['text_distribucio']
+        report.avalancheActivity = Texts(highlights=icgc_report['perill_text'], comment=icgc_report['text_estat_mantell'])
+        report.snowpackStructure = Texts(comment=icgc_report['text_distribucio'])
         report.tendency.tendencyComment = icgc_report['text_tendencia']
 
         danger_rating = DangerRating()

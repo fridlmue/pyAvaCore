@@ -70,7 +70,9 @@ def download_region(regionID):
             f.write(http.read())
     with open(f'{directory}/{validityDate}-{regionID}.json', mode='w', encoding='utf-8') as f:
         logging.info('Writing %s', f.name)
-        json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
+        bulletins_generic = json.loads(json.dumps(bulletins, cls=JSONEncoder, indent=2)) #ToDo find better way. Probably with JSONEncoder directly
+        bulletins_generic = remove_empty_elements(bulletins_generic)
+        json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
     with open(f'{directory}/{validityDate}-{regionID}.ratings.json', mode='w', encoding='utf-8') as f:
         ratings = bulletins.max_danger_ratings()
         relevant_ratings = {}
@@ -87,6 +89,22 @@ def download_region(regionID):
             # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
             logging.info('Writing %s', f.name)
             json.dump(geojson.to_dict(), fp=f)
+
+''' 
+Source: https://gist.github.com/nlohmann/c899442d8126917946580e7f84bf7ee7 
+'''
+def remove_empty_elements(d):
+    """recursively remove empty lists, empty dicts, or None elements from a dictionary"""
+
+    def empty(x):
+        return x is None or x == {} or x == []
+
+    if not isinstance(d, (dict, list)):
+        return d
+    elif isinstance(d, list):
+        return [v for v in (remove_empty_elements(v) for v in d) if not empty(v)]
+    else:
+        return {k: v for k, v in ((k, remove_empty_elements(v)) for k, v in d.items()) if not empty(v)}
 
 
 if __name__ == "__main__":

@@ -148,7 +148,7 @@ def parse_xml(root):
             for wxSynopsisComment in observations.iter(tag=CAAMLTAG + 'wxSynopsisComment'):
                 wxSynopsis.comment = wxSynopsisComment.text.replace('&nbsp;', '\n')
             for avActivityComment in observations.iter(tag=CAAMLTAG + 'avActivityComment'):
-                if not avActivityHighlights.text is None:
+                if not avActivityComment.text is None:
                     avalancheActivity.comment = avActivityComment.text.replace('&nbsp;', '\n')
             for snowpackStructureComment in observations.iter(tag=CAAMLTAG + ''\
                                                               'snowpackStructureComment'):
@@ -162,14 +162,9 @@ def parse_xml(root):
                 for source_name in source.iter(tag=CAAMLTAG + 'name'):
                     report.source = Source(provider_name=source_name.text, provider_website=str('https://' + source_name.text))
                     
-            if not wxSynopsis.highlights is None and not wxSynopsis.comment is None:
-                report.wxSynopsis = wxSynopsis
-            
-            if not avalancheActivity.highlights is None and not avalancheActivity.comment is None:
-                report.avalancheActivity = avalancheActivity
-                
-            if not snowpackStructure.highlights is None and not snowpackStructure.comment is None:
-                report.snowpackStructure = snowpackStructure
+            report.wxSynopsis = wxSynopsis
+            report.avalancheActivity = avalancheActivity
+            report.snowpackStructure = snowpackStructure
                     
         reports.append(report)
 
