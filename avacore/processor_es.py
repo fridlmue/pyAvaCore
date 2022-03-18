@@ -88,7 +88,7 @@ def get_reports_from_file(aemet_reports):
                 region_lines[content[0]] = content[1].strip()
                 last_region = content[0]
             else:
-                region_lines[last_region] = region_lines[last_region] + line
+                region_lines[last_region] = region_lines[last_region] + " " + line
 
     for elem in region_lines:
         current_report = copy.deepcopy(report)
