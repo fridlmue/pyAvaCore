@@ -24,7 +24,7 @@ import re
 import copy
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts
 
 code_dir = {
     'SOBRARBE' : 'ES-SO',
@@ -65,13 +65,13 @@ def get_reports_from_file(aemet_reports):
     t_spain = pytz.timezone("Europe/Madrid").localize(t_spain)
 
     re_result = re.search('(?<=2\.- Estado del manto y observaciones recientes:)(?s:.*)(?=3\.- Evolución del manto)', aemet_reports)
-    report.snowpackStructureComment = ' '.join(re_result.group(0).splitlines()[1:])
+    report.snowpackStructure = Texts(comment=' '.join(re_result.group(0).splitlines()[1:]))
 
     re_result = re.search('(?<=3\.- Evolución del manto y peligro)(?s:.*)(?=4.- Predicción meteorológica)', aemet_reports)
-    report.avalancheActivityComment = ' '.join(re_result.group(0).splitlines()[2:])
+    report.avalancheActivity = Texts(comment=' '.join(re_result.group(0).splitlines()[2:]))
 
     re_result = re.search('(?<=4\.- Predicción meteorológica)(?s:.*)(?=5\.- Avance para)', aemet_reports)
-    report.wxSynopsisComment = ' '.join(re_result.group(0).splitlines()[1:])
+    report.wxSynopsis = Texts(comment=' '.join(re_result.group(0).splitlines()[1:]))
 
     re_result = re.search('(?<=5\.- Avance para el)(?s:.*)(?=</TXT_PREDICCION>)', aemet_reports)
     report.tendency.tendencyComment = ' '.join(re_result.group(0).splitlines()[1:])
@@ -88,7 +88,7 @@ def get_reports_from_file(aemet_reports):
                 region_lines[content[0]] = content[1].strip()
                 last_region = content[0]
             else:
-                region_lines[last_region] = region_lines[last_region] + line
+                region_lines[last_region] = region_lines[last_region] + " " + line
 
     for elem in region_lines:
         current_report = copy.deepcopy(report)
