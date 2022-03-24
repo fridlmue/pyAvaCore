@@ -79,8 +79,9 @@ def download_region(regionID):
         for key in ratings:
             if key.startswith(regionID):
                 relevant_ratings[key] = ratings[key]
+        maxDangerRatings = {"maxDangerRatings": relevant_ratings}
         logging.info('Writing %s', f.name)
-        json.dump(relevant_ratings, fp=f, indent=2, sort_keys=True)
+        json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
     if args.geojson:
         with open(f'{args.geojson}/{regionID}_micro-regions_elevation.geojson.json', encoding='utf-8') as f:
             geojson = FeatureCollection.from_dict(json.load(f))
