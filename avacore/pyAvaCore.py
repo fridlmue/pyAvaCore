@@ -144,7 +144,6 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
     return url, provider
 
 
-
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization of datetime"""
     def default(self, obj):
@@ -154,4 +153,3 @@ class JSONEncoder(json.JSONEncoder):
             return obj.toJSON()
         except: # pylint: disable=bare-except
             return obj.__dict__
-

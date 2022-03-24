@@ -135,7 +135,7 @@ def parse_xml(root):
                 problem.elevation = elevation
                 problem.aspects = aspect
                 if comment_r != '':
-                    problem.comment = comment_r
+                    problem.terrainFeature = comment_r
                 report.avalancheProblems.append(problem)
                 
             wxSynopsis = Texts()
@@ -165,20 +165,45 @@ def parse_xml(root):
             report.wxSynopsis = wxSynopsis
             report.avalancheActivity = avalancheActivity
             report.snowpackStructure = snowpackStructure
-                    
-        reports.append(report)
-
+        
         if pm_available:
-            pm_report = copy.deepcopy(report)
-            pm_report.dangerRatings = pm_danger_ratings
-            pm_report.bulletinID += '_PM'
-            pm_report.validTime.startTime = pm_report.validTime.startTime + timedelta(hours=12)
-            pm_report.validTime.endTime = pm_report.validTime.endTime + timedelta(hours=12)
-            reports.append(pm_report)
+            for idx, danger_rating in enumerate(report.dangerRatings):
+                report.dangerRatings[idx].validTimePeriod = 'earlier'
+            for idx, danger_rating in enumerate(pm_danger_ratings):
+                pm_danger_ratings[idx].validTimePeriod = 'later'
+                report.dangerRatings.append(pm_danger_ratings[idx])
+                
+        if report.bulletinID.endswith('_PM'):
+            for bulletin in reports:
+                if bulletin.bulletinID == report.bulletinID[:-3]:
+                    father_bulletin = bulletin
+                    father_bulletin.validTime.endTime = report.validTime.endTime
+                    for idx, danger_rating in enumerate(father_bulletin.dangerRatings):
+                        father_bulletin.dangerRatings[idx].validTimePeriod = 'earlier'
+                    for danger_rating in report.dangerRatings:
+                        danger_rating.validTimePeriod = 'later'
+                        father_bulletin.dangerRatings.append(danger_rating)
+                    for idx, avalanche_problem in enumerate(father_bulletin.avalancheProblems):
+                        father_bulletin.avalancheProblems[idx].validTimePeriod = 'earlier'
+                    for avalanche_problem in report.avalancheProblems:
+                        avalanche_problem.validTimePeriod = 'later'
+                        father_bulletin.avalancheProblems.append(avalanche_problem)
+        else:
+            reports.append(report)
 
+        """   
+        pm_report = copy.deepcopy(report)
+        pm_report.dangerRatings = pm_danger_ratings
+        pm_report.bulletinID += '_PM'
+        pm_report.validTime.startTime = pm_report.validTime.startTime + timedelta(hours=12)
+        pm_report.validTime.endTime = pm_report.validTime.endTime + timedelta(hours=12)
+        reports.append(pm_report)
+        """
+    '''
     for report in reports:
         if report.bulletinID.endswith('_PM') and any(x.bulletinID == report.bulletinID[:-3] for x in reports):
             report.predecessor_id = report.bulletinID[:-3]
+    '''
 
     return reports
 

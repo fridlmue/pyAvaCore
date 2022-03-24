@@ -186,7 +186,7 @@ def process_reports_fr(region_id, path='', cached=False):
             elif len(report.dangerRatings) > 1:
                 pm_danger_ratings.append(report.dangerRatings[1])
 
-    report.bulletinID = report.regions[0].regionID + '_' + str(report.publicationTime.isoformat())
+    report.bulletinID = report.regions[0].regionId + '_' + str(report.publicationTime.isoformat())
 
     if pm_available:
         pm_report = copy.deepcopy(report)

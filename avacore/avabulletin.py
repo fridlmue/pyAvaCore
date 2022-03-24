@@ -180,6 +180,7 @@ class DangerRating:
     def __init__(self, mainValue='', ) -> None:
         self.elevation = Elevation()
         self.customData = []
+        self.validTimePeriod = 'all_day'
     
     def get_mainValue_int(self):
 
@@ -202,13 +203,11 @@ class DangerRating:
 class AvalancheProblem:
     problemType: str
     '''problem type as standardized descriptive text'''
-    # dangerRating: DangerRating
-    # '''avalanche danger rating'''
-    comment: str
+    # comment: str
 
     elevation: Elevation
     aspects: list
-    terrainFeature: str # ToDo: Crosscheck with comment
+    terrainFeature: str
 
     validTimePeriod: str # Should be 'all_day', 'earlier' and 'later'
 
@@ -279,10 +278,10 @@ class Tendency:
 
 class Region:
     name: str
-    regionID: str
+    regionId: str
         
-    def __init__(self, regionID, name=None) -> None:
-        self.regionID = regionID
+    def __init__(self, regionId, name=None) -> None:
+        self.regionId = regionId
         if not name is None:
             self.name = name
 
@@ -350,7 +349,7 @@ class AvaBulletin:
     def get_region_list(self):
         region_list = []
         for reg in self.regions:
-            region_list.append(reg.regionID)
+            region_list.append(reg.regionId)
         return region_list
     
     def from_json(self, bulletin_json):
@@ -363,7 +362,7 @@ class AvaBulletin:
 
                 elif attribute is 'regions':
                     for region in bulletin_json[attribute]:
-                        self.regions.append(Region(region.get('regionID'), region.get('name')))
+                        self.regions.append(Region(region.get('regionId'), region.get('name')))
 
                 elif attribute is 'dangerRatings':
                     for dangerRating_json in bulletin_json[attribute]:
@@ -396,6 +395,11 @@ class AvaBulletin:
     def prettify_out(self, text):
         print("\n".join(textwrap.wrap(text, width=60, initial_indent='╟─ ', subsequent_indent='║  ')))
         
+    def print_if_attr_exists(self, element, attribute):
+        if hasattr(self, 'element'):
+            if hasattr(self['element'], attribute):
+                self.prettify_out(element + ' ' + attribute.capitalize() + ': ' +  self['element']['attribute'])
+        
 
     def cli_out(self):
         '''
@@ -410,17 +414,17 @@ class AvaBulletin:
         print('║ Valid to:            ', self.validTime.endTime)
         print('║ Valid for:')
         for region in self.regions:
-            print('║ ├─ ', region.regionID)
+            print('║ ├─ ', region.regionId)
 
         print('╟───── Danger Rating')
         for dangerRating in self.dangerRatings:
-            print('║ ', dangerRating.elevation.toString(), '➝ :', dangerRating.mainValue)
+            print('║ ', dangerRating.validTimePeriod, dangerRating.elevation.toString(), '➝ :', dangerRating.mainValue)
 
 
         print('╟───── Av Problems')
         for problem in self.avalancheProblems:
             try:
-                print('║ Problem: ', problem.problemType, '\n║    Elevation: ', problem.elevation.toString(), '\n║    Aspects: ', problem.aspects)
+                print('║ Problem: ', problem.validTimePeriod, problem.problemType, '\n║    Elevation: ', problem.elevation.toString(), '\n║    Aspects: ', problem.aspects)
             except:
                 print('║ Problem: ', problem.problemType)
 
@@ -435,6 +439,22 @@ class AvaBulletin:
         if hasattr(self, 'highlights'):
             self.prettify_out('Highlights: ' +  self.highlights)
             
+        self.print_if_attr_exists('avalancheActivity', 'highlights')
+        self.print_if_attr_exists('avalancheActivity', 'comment')
+        
+        self.print_if_attr_exists('snowpackStructure', 'highlights')
+        self.print_if_attr_exists('snowpackStructure', 'comment')
+        
+        self.print_if_attr_exists('travelAdvisory', 'highlights')
+        self.print_if_attr_exists('travelAdvisory', 'comment')
+        
+        self.print_if_attr_exists('wxSynopsis', 'highlights')
+        self.print_if_attr_exists('wxSynopsis', 'comment')
+        
+        if hasattr(self.tendency, 'tendencyComment'):
+            self.prettify_out('tendencyComment: ' +  self.tendency.tendencyComment)
+        
+        '''
         if hasattr(self.avalancheActivity, 'highlights'):
             self.prettify_out('avalancheActivityHighlights: ' +  self.avalancheActivity.highlights)
             
@@ -446,7 +466,7 @@ class AvaBulletin:
             
         if hasattr(self.snowpackStructure, 'comment'):
             self.prettify_out('snowpackStructureComment: ' +  self.snowpackStructure.comment)
-            
+        
         if hasattr(self.travelAdvisory, 'highlights'):
             self.prettify_out('travelAdvisoryHighlights: ' +  self.travelAdvisory.highlights)
             
@@ -458,8 +478,6 @@ class AvaBulletin:
             
         if hasattr(self.wxSynopsis, 'comment'):
             self.prettify_out('wxSynopsisComment: ' +  self.wxSynopsis.comment)
-            
-        if hasattr(self.tendency, 'tendencyComment'):
-            self.prettify_out('tendencyComment: ' +  self.tendency.tendencyComment)
+        '''
 
         print('╚═══════════════════════════════════════════════════════════\n')

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ObsCollection xmlns="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS" xmlns:gml="http://www.opengis.net/gml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:lang="en" xsi:schemaLocation="http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS/CAAMLv5_BulletinEAWS.xsd">
+  <metaDataProperty>
+    <MetaData>
+      <dateTimeReport>2022-03-21T16:00:00.002475Z</dateTimeReport>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+    </MetaData>
+  </metaDataProperty>
+  <observations>
+    <Bulletin gml:id="da6a2ab6-93c0-492f-abc5-957427ae0974" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2022-03-21T16:00:00.002475Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2022-03-21T23:00:00Z</beginPosition>
+          <endPosition>2022-03-22T11:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-20"/>
+      <locRef xlink:href="IT-32-TN-09"/>
+      <locRef xlink:href="IT-32-TN-02"/>
+      <locRef xlink:href="IT-32-TN-01"/>
+      <locRef xlink:href="IT-32-TN-04"/>
+      <locRef xlink:href="IT-32-TN-05"/>
+      <locRef xlink:href="IT-32-TN-08"/>
+      <locRef xlink:href="IT-32-TN-07"/>
+      <locRef xlink:href="AT-07-01"/>
+      <locRef xlink:href="AT-07-02"/>
+      <locRef xlink:href="AT-07-03"/>
+      <locRef xlink:href="AT-07-04"/>
+      <locRef xlink:href="AT-07-05"/>
+      <locRef xlink:href="AT-07-06"/>
+      <locRef xlink:href="AT-07-07"/>
+      <locRef xlink:href="AT-07-08"/>
+      <locRef xlink:href="AT-07-09"/>
+      <locRef xlink:href="IT-32-BZ-01"/>
+      <locRef xlink:href="AT-07-10"/>
+      <locRef xlink:href="IT-32-BZ-02"/>
+      <locRef xlink:href="AT-07-11"/>
+      <locRef xlink:href="IT-32-BZ-03"/>
+      <locRef xlink:href="AT-07-12"/>
+      <locRef xlink:href="IT-32-BZ-04"/>
+      <locRef xlink:href="AT-07-13"/>
+      <locRef xlink:href="IT-32-BZ-05"/>
+      <locRef xlink:href="AT-07-14"/>
+      <locRef xlink:href="IT-32-BZ-06"/>
+      <locRef xlink:href="AT-07-15"/>
+      <locRef xlink:href="IT-32-BZ-07"/>
+      <locRef xlink:href="AT-07-16"/>
+      <locRef xlink:href="IT-32-BZ-08"/>
+      <locRef xlink:href="AT-07-17"/>
+      <locRef xlink:href="IT-32-BZ-09"/>
+      <locRef xlink:href="AT-07-18"/>
+      <locRef xlink:href="AT-07-19"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <locRef xlink:href="IT-32-BZ-10"/>
+      <locRef xlink:href="IT-32-BZ-11"/>
+      <locRef xlink:href="AT-07-20"/>
+      <locRef xlink:href="IT-32-BZ-12"/>
+      <locRef xlink:href="AT-07-21"/>
+      <locRef xlink:href="IT-32-BZ-13"/>
+      <locRef xlink:href="AT-07-22"/>
+      <locRef xlink:href="IT-32-BZ-14"/>
+      <locRef xlink:href="AT-07-23"/>
+      <locRef xlink:href="IT-32-BZ-15"/>
+      <locRef xlink:href="AT-07-24"/>
+      <locRef xlink:href="AT-07-25"/>
+      <locRef xlink:href="AT-07-26"/>
+      <locRef xlink:href="IT-32-BZ-18"/>
+      <locRef xlink:href="IT-32-TN-13"/>
+      <locRef xlink:href="AT-07-27"/>
+      <locRef xlink:href="IT-32-BZ-19"/>
+      <locRef xlink:href="AT-07-28"/>
+      <locRef xlink:href="AT-07-29"/>
+      <locRef xlink:href="IT-32-TN-16"/>
+      <locRef xlink:href="IT-32-TN-19"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP10</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems/>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2022-03-22T23:00:00Z</beginPosition>
+                <endPosition>2022-03-23T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>The conditions are spring-like.</avActivityHighlights>
+          <avActivityComment>A clear night will be followed in the early morning by favourable conditions generally. As the day progresses as a consequence of warming during the day and solar radiation there will be an increase in the avalanche danger. Small to medium-sized wet and gliding avalanches are possible, especially on steep east, south and west facing slopes below approximately 2600 m, as well as in all aspects at intermediate altitudes. Wet avalanches can in some places be released by people. Avalanches can release the wet old snow as well and reach quite a large size, especially in the regions with a lot of snow in the north. &lt;br/&gt; Backcountry tours should be started early and concluded timely.</avActivityComment>
+          <snowpackStructureComment>Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften during the day. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes below approximately 2600 m. &lt;br/&gt; In particular in the south less snow than usual is lying.</snowpackStructureComment>
+          <tendencyComment>The conditions remain spring-like. Increase in danger of wet avalanches in the course of the day.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+    </Bulletin>
+    <Bulletin gml:id="da6a2ab6-93c0-492f-abc5-957427ae0974_PM" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2022-03-21T16:00:00.002475Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2022-03-22T11:00:00Z</beginPosition>
+          <endPosition>2022-03-22T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-BZ-20"/>
+      <locRef xlink:href="IT-32-TN-09"/>
+      <locRef xlink:href="IT-32-TN-02"/>
+      <locRef xlink:href="IT-32-TN-01"/>
+      <locRef xlink:href="IT-32-TN-04"/>
+      <locRef xlink:href="IT-32-TN-05"/>
+      <locRef xlink:href="IT-32-TN-08"/>
+      <locRef xlink:href="IT-32-TN-07"/>
+      <locRef xlink:href="AT-07-01"/>
+      <locRef xlink:href="AT-07-02"/>
+      <locRef xlink:href="AT-07-03"/>
+      <locRef xlink:href="AT-07-04"/>
+      <locRef xlink:href="AT-07-05"/>
+      <locRef xlink:href="AT-07-06"/>
+      <locRef xlink:href="AT-07-07"/>
+      <locRef xlink:href="AT-07-08"/>
+      <locRef xlink:href="AT-07-09"/>
+      <locRef xlink:href="IT-32-BZ-01"/>
+      <locRef xlink:href="AT-07-10"/>
+      <locRef xlink:href="IT-32-BZ-02"/>
+      <locRef xlink:href="AT-07-11"/>
+      <locRef xlink:href="IT-32-BZ-03"/>
+      <locRef xlink:href="AT-07-12"/>
+      <locRef xlink:href="IT-32-BZ-04"/>
+      <locRef xlink:href="AT-07-13"/>
+      <locRef xlink:href="IT-32-BZ-05"/>
+      <locRef xlink:href="AT-07-14"/>
+      <locRef xlink:href="IT-32-BZ-06"/>
+      <locRef xlink:href="AT-07-15"/>
+      <locRef xlink:href="IT-32-BZ-07"/>
+      <locRef xlink:href="AT-07-16"/>
+      <locRef xlink:href="IT-32-BZ-08"/>
+      <locRef xlink:href="AT-07-17"/>
+      <locRef xlink:href="IT-32-BZ-09"/>
+      <locRef xlink:href="AT-07-18"/>
+      <locRef xlink:href="AT-07-19"/>
+      <locRef xlink:href="IT-32-TN-20"/>
+      <locRef xlink:href="IT-32-BZ-10"/>
+      <locRef xlink:href="IT-32-BZ-11"/>
+      <locRef xlink:href="AT-07-20"/>
+      <locRef xlink:href="IT-32-BZ-12"/>
+      <locRef xlink:href="AT-07-21"/>
+      <locRef xlink:href="IT-32-BZ-13"/>
+      <locRef xlink:href="AT-07-22"/>
+      <locRef xlink:href="IT-32-BZ-14"/>
+      <locRef xlink:href="AT-07-23"/>
+      <locRef xlink:href="IT-32-BZ-15"/>
+      <locRef xlink:href="AT-07-24"/>
+      <locRef xlink:href="AT-07-25"/>
+      <locRef xlink:href="AT-07-26"/>
+      <locRef xlink:href="IT-32-BZ-18"/>
+      <locRef xlink:href="IT-32-TN-13"/>
+      <locRef xlink:href="AT-07-27"/>
+      <locRef xlink:href="IT-32-BZ-19"/>
+      <locRef xlink:href="AT-07-28"/>
+      <locRef xlink:href="AT-07-29"/>
+      <locRef xlink:href="IT-32-TN-16"/>
+      <locRef xlink:href="IT-32-TN-19"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2600Hi"/>
+              <mainValue>1</mainValue>
+            </DangerRating>
+            <DangerRating>
+              <validElevation xlink:href="ElevationRange_2600Lw"/>
+              <mainValue>2</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP10</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems>
+            <AvProblem>
+              <type>wet snow</type>
+              <validAspect xlink:href="AspectRange_e"/>
+              <validAspect xlink:href="AspectRange_sw"/>
+              <validAspect xlink:href="AspectRange_se"/>
+              <validAspect xlink:href="AspectRange_s"/>
+              <validAspect xlink:href="AspectRange_w"/>
+              <validElevation xlink:href="ElevationRange_2600Lw"/>
+            </AvProblem>
+          </avProblems>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2022-03-22T23:00:00Z</beginPosition>
+                <endPosition>2022-03-23T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>The conditions are spring-like.</avActivityHighlights>
+          <avActivityComment>A clear night will be followed in the early morning by favourable conditions generally. As the day progresses as a consequence of warming during the day and solar radiation there will be an increase in the avalanche danger. Small to medium-sized wet and gliding avalanches are possible, especially on steep east, south and west facing slopes below approximately 2600 m, as well as in all aspects at intermediate altitudes. Wet avalanches can in some places be released by people. Avalanches can release the wet old snow as well and reach quite a large size, especially in the regions with a lot of snow in the north. &lt;br/&gt; Backcountry tours should be started early and concluded timely.</avActivityComment>
+          <snowpackStructureComment>Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften during the day. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes below approximately 2600 m. &lt;br/&gt; In particular in the south less snow than usual is lying.</snowpackStructureComment>
+          <tendencyComment>The conditions remain spring-like. Increase in danger of wet avalanches in the course of the day.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+    </Bulletin>
+    <Bulletin gml:id="0eaf7a51-8dc1-42e4-8359-7027b3601a4a" xml:lang="en">
+      <metaDataProperty>
+        <MetaData>
+          <dateTimeReport>2022-03-21T16:00:00.002475Z</dateTimeReport>
+          <srcRef>
+            <Operation>
+              <name>Avalanche.report</name>
+            </Operation>
+          </srcRef>
+        </MetaData>
+      </metaDataProperty>
+      <validTime>
+        <TimePeriod>
+          <beginPosition>2022-03-21T23:00:00Z</beginPosition>
+          <endPosition>2022-03-22T23:00:00Z</endPosition>
+        </TimePeriod>
+      </validTime>
+      <srcRef>
+        <Operation>
+          <name>Avalanche.report</name>
+        </Operation>
+      </srcRef>
+      <locRef xlink:href="IT-32-TN-12"/>
+      <locRef xlink:href="IT-32-TN-15"/>
+      <locRef xlink:href="IT-32-TN-03"/>
+      <locRef xlink:href="IT-32-TN-14"/>
+      <locRef xlink:href="IT-32-TN-17"/>
+      <locRef xlink:href="IT-32-TN-06"/>
+      <locRef xlink:href="IT-32-TN-18"/>
+      <locRef xlink:href="IT-32-BZ-16"/>
+      <locRef xlink:href="IT-32-TN-11"/>
+      <locRef xlink:href="IT-32-BZ-17"/>
+      <locRef xlink:href="IT-32-TN-10"/>
+      <locRef xlink:href="IT-32-TN-21"/>
+      <bulletinResultsOf>
+        <BulletinMeasurements>
+          <dangerRatings>
+            <DangerRating>
+              <mainValue>1</mainValue>
+            </DangerRating>
+          </dangerRatings>
+          <dangerPatterns>
+            <DangerPattern>
+              <type>DP10</type>
+            </DangerPattern>
+          </dangerPatterns>
+          <avProblems/>
+          <tendency>
+            <type>steady</type>
+            <validTime>
+              <TimePeriod>
+                <beginPosition>2022-03-22T23:00:00Z</beginPosition>
+                <endPosition>2022-03-23T23:00:00Z</endPosition>
+              </TimePeriod>
+            </validTime>
+          </tendency>
+          <avActivityHighlights>Over a wide area from a snow sport perspective, insufficient snow is lying. Wet snow requires caution.</avActivityHighlights>
+          <avActivityComment>A clear night will be followed in the early morning by favourable conditions over a wide area. The danger of wet and gliding avalanches will increase a little during the day. On steep slopes individual mostly small wet avalanches are possible. In the north the avalanche prone locations are more prevalent.</avActivityComment>
+          <snowpackStructureComment>Only a little snow is now lying. &lt;br/&gt; Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes.</snowpackStructureComment>
+          <tendencyComment>The conditions remain spring-like.</tendencyComment>
+        </BulletinMeasurements>
+      </bulletinResultsOf>
+    </Bulletin>
+  </observations>
+</ObsCollection>

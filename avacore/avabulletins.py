@@ -37,8 +37,6 @@ class Bulletins:
     def max_danger_ratings(self):
         ratings = dict()
         for bulletin in self.bulletins:
-            
-            bulletin.cli_out()
 
             for region in bulletin.regions:
                 local_ratings = dict()
@@ -46,33 +44,35 @@ class Bulletins:
                 # Check for available information in Bulletin
                 
                 for danger in bulletin.dangerRatings:
-                    if (danger.elevation.toString().startswith("<")):
-                        key = f"{regionId}:high"
-                    elif (danger.elevation.toString().startswith(">")):
-                        key = f"{regionId}:low"
-                    else:
-                        key = f"{regionId}"
+
+                    key_elev = ""
+                    key_time = ""
+
+                    if (danger.elevation.toString().startswith(">")):
+                        key_elev = ":high"
+                    elif (danger.elevation.toString().startswith("<")):
+                        key_elev = ":low"
                     
                     if (danger.validTimePeriod == 'earlier'):
-                        key = key + ':am'
+                        key_time = ":am"
                     elif (danger.validTimePeriod == 'later'):
-                        key = key + ':pm'
+                        key_time = ":pm"
                     
-                    local_ratings[key] = danger.get_mainValue_int()
+                    local_ratings[f"{regionId}{key_elev}{key_time}"] = danger.get_mainValue_int()
                     
-                    if not 'high' in key and not 'low' in key:
-                        local_ratings[key + ':high'] = danger.get_mainValue_int()
-                        local_ratings[key + ':low'] = danger.get_mainValue_int()
+                    if key_elev == "":
+                        local_ratings[f"{regionId}:high{key_time}"] = danger.get_mainValue_int()
+                        local_ratings[f"{regionId}:low{key_time}"] = danger.get_mainValue_int()
                     
-                    if 'all_day' in danger.validTimePeriod:
-                        if not 'high' in key and not 'low' in key:
-                            local_ratings[key + ':high:am'] = danger.get_mainValue_int()
-                            local_ratings[key + ':low:am'] = danger.get_mainValue_int()
-                            local_ratings[key + ':high:pm'] = danger.get_mainValue_int()
-                            local_ratings[key + ':low:pm'] = danger.get_mainValue_int()
+                    if key_time == "":
+                        if key_elev == "":
+                            local_ratings[f"{regionId}:high:am"] = danger.get_mainValue_int()
+                            local_ratings[f"{regionId}:high:pm"] = danger.get_mainValue_int()
+                            local_ratings[f"{regionId}:low:am"] = danger.get_mainValue_int()
+                            local_ratings[f"{regionId}:low:pm"] = danger.get_mainValue_int()
                         else:
-                            local_ratings[key + ':am'] = danger.get_mainValue_int()
-                            local_ratings[key + ':pm'] = danger.get_mainValue_int()
+                            local_ratings[f"{regionId}{key_elev}:am"] = danger.get_mainValue_int()
+                            local_ratings[f"{regionId}{key_elev}:pm"] = danger.get_mainValue_int()
                     
                 # Fill missing ratings for the current Region
                 if not f"{regionId}:low" in local_ratings:
@@ -101,14 +101,6 @@ class Bulletins:
                 if not f"{regionId}:low:am" in local_ratings and not not f"{regionId}:low:pm" in local_ratings:
                     local_ratings[f"{regionId}:low:am"] = local_ratings[f"{regionId}:low:pm"] = local_ratings[f"{regionId}:low"]
                 
-                '''
-                if not f"{regionId}:high" in local_ratings:
-                    if f"{regionId}:low" in local_ratings.keys():
-                        local_ratings[f"{regionId}:high"] = local_ratings[f"{regionId}:low"]
-                    else:
-                        local_ratings[f"{regionId}:low"] = max(local_ratings[f"{regionId}:low:am"], local_ratings[f"{regionId}:low:pm"])
-                '''
-                
                 key = f"{regionId}:high"
                 if not key in local_ratings.keys():
                     local_ratings[key] = max(local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"])
@@ -125,95 +117,6 @@ class Bulletins:
                 local_ratings[key] = max(local_ratings.values())
                 
                 ratings.update(local_ratings)
-            
-            '''
-            for region in bulletin.regions:
-                regionId = region.regionId
-                for danger in bulletin.dangerRatings:
-                    if (
-                        not danger.elevation
-                        or danger.elevation.toString() == ""
-                        or danger.elevation.toString().startswith("<")
-                    ):
-                        pm = ''
-                        if hasattr(bulletin, 'predecessor_id'):
-                            pm = ':pm'
-                            key = f"{regionId}:low"
-                            if key in ratings:
-                                ratings[f"{key}:am"] = ratings.pop(key)
-                        key = f"{regionId}:low{pm}"
-                        ratings[key] = max(
-                            danger.get_mainValue_int(), ratings.get(key, 0)
-                        )
-                        if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
-                            ratings[f"{key}:am"] = ratings[key]
-                    if (
-                        not danger.elevation
-                        or danger.elevation.toString() == ""
-                        or danger.elevation.toString().startswith(">")
-                    ):
-                        pm = ''
-                        if hasattr(bulletin, 'predecessor_id'):
-                            pm = ':pm'
-                            key = f"{regionId}:high"
-                            if key in ratings:
-                                ratings[f"{key}:am"] = ratings.pop(key)
-                        key = f"{regionId}:high{pm}"
-                        ratings[key] = max(
-                            danger.get_mainValue_int(), ratings.get(key, 0)
-                        )
-                        if pm == '' and key+':pm' in ratings and not key+':am' in ratings:
-                            ratings[f"{key}:am"] = ratings[key]
-
-            for region in bulletin.regions:
-                regionId = region.regionId
-                sel_ratings = [value for key,value in ratings.items() if regionId in key]
-                sel_keys = [key for key,value in ratings.items() if regionId in key]
-                                
-                try:
-                    if not f"{regionId}:low" in ratings:
-                        ratings[f"{regionId}:low"] = ratings[f"{regionId}:high"]
-                        
-                    if not f"{regionId}:high" in ratings:
-                        ratings[f"{regionId}:high"] = ratings[f"{regionId}:low"]
-                except:
-                    pass
-                
-                try:
-                    if not ('am' in sel_keys[0]) and not ('pm' in sel_keys[0]):
-                        key = f"{regionId}:high"
-                        ratings[f"{key}:am"] = ratings[key]
-                        ratings[f"{key}:pm"] = ratings[key]
-                        key = f"{regionId}:low"
-                        ratings[f"{key}:am"] = ratings[key]
-                        ratings[f"{key}:pm"] = ratings[key]
-                except:
-                    pass
-
-                try:
-                    sel_ratings = [value for key,value in ratings.items() if regionId in key]
-                    key = f"{regionId}:high"
-                    ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
-                    
-                    key = f"{regionId}:low"    
-                    ratings[key] = max(ratings[f"{key}:am"], ratings[f"{key}:pm"])
-                        
-                    key = regionId
-                    sel_ratings = [value for key,value in ratings.items() if regionId in key]
-                    # if not f"{key}:am" in sel_keys:
-                    ratings[f"{key}:am"] = max(ratings[f"{key}:high:am"], ratings[f"{key}:low:am"])
-                        
-                    # if not f"{key}:pm" in sel_keys:
-                    ratings[f"{key}:pm"] = max(ratings[f"{key}:high:pm"], ratings[f"{key}:low:pm"])
-                    
-                    sel_ratings = [value for key,value in ratings.items() if regionId in key]
-                    # if not key in sel_keys:
-                    ratings[key] = max(sel_ratings)
-                except:
-                    # Probably PM report was before AM report in JSON
-                    pass
-            '''
-
 
         # return 0 independent of "no_snow" or "no_rating"
         for key, value in ratings.items():

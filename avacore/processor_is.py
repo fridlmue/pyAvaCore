@@ -25,7 +25,7 @@ import dateutil.parser
 from urllib.request import urlopen, Request
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts
 
 def download_report_is(lang):
     try:
@@ -60,12 +60,14 @@ def process_reports_is(path='', cached=False, lang='en'):
     common_report = AvaBulletin()
     
     conditions = root.find('conditions')
-    common_report.travelAdvisoryHighlights = conditions.find('short_description').text
-    common_report.travelAdvisoryComment = re.sub('(\<.*?\>)', '', conditions.find('full_description').text)
+    common_report.travelAdvisory = Texts(
+        highlights=conditions.find('short_description').text, 
+        comment=re.sub('(\<.*?\>)', '', conditions.find('full_description').text)
+    )
     common_report.publicationTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(conditions.find('update_time').text))
     
     weather_forecast = root.find('weather_forecast')
-    common_report.wxSynopsisComment = weather_forecast.find('forecast').text
+    common_report.wxSynopsis = Texts(comment=weather_forecast.find('forecast').text)
     
     reports = []
     
@@ -77,7 +79,7 @@ def process_reports_is(path='', cached=False, lang='en'):
         report.validTime.endTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('valid_until').text))
         report.regions.append(Region("IS-"+area_forcast.find('region_code').text.upper()))
         
-        report.bulletinID = report.regions[0].regionID + '-' + report.publicationTime.isoformat()
+        report.bulletinID = report.regions[0].regionId + '-' + report.publicationTime.isoformat()
         
         report.avalancheActivityHighlights = area_forcast.find('forecast').text
         report.avalancheActivityComment = area_forcast.find('recent_avalances').text
