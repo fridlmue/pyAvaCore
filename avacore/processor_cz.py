@@ -22,7 +22,7 @@ import dateutil.parser
 import logging
 
 
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region, Texts
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region, Texts
 
 def process_reports_cz():
     url = "https://www.horskasluzba.cz/cz/avalanche-json"

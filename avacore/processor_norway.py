@@ -21,7 +21,7 @@ import pytz
 import dateutil.parser
 import logging
 
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region
 
 
 def process_reports_no(region_id):

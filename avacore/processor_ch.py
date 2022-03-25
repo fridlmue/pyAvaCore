@@ -26,7 +26,7 @@ import re
 
 from avacore import pyAvaCore
 from avacore.png import png
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region, Texts
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region, Texts
 
 
 def fetch_files_ch(lang, path):
@@ -247,11 +247,12 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
             text_pos = subtext.find('alt="') + len('alt="')
             subtext = subtext[text_pos:]
             prone_locations_text = subtext[:subtext.find('"')]
+            valid_elevation = ''
             if not prone_locations_text == 'Content-Type':
                 valid_elevation = ''.join(c for c in prone_locations_text if c.isdigit())
-                report.dangerRatings[0].elevation = Elevation(valid_elevation)
+                # report.dangerRatings[0].elevation = Elevation(valid_elevation)
 
-            report.dangerRatings[0].aspect = general_problem_locations
+            report.customData = {'SLF': {'avalancheProneLocation': {'aspects': general_problem_locations, 'elevation': valid_elevation}}}
             
             texts = []
             
@@ -324,32 +325,29 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                 final_reports.append(copy.deepcopy(reports[am_idx]))
             else:
                 matched_regions = set(reports[am_idx].get_region_list()).intersection(set(reports[pm_idx].get_region_list()))
-                report_am = copy.deepcopy(reports[am_idx])
-                report_am.bulletinID = combination
-                report_am.regions = []
+                combined_report = copy.deepcopy(reports[am_idx])
+
+                combined_report.bulletinID = combination
+                combined_report.regions = []
+
                 for region in matched_regions:
-                    report_am.regions.append(Region(region))
-                # Add PM Info to AM-Report?
-                report_am.validTime.endTime = report_am.validTime.endTime.replace(hour=12)
-                
-                final_reports.append(report_am)
-                
-                report_pm = copy.deepcopy(reports[pm_idx])
-                report_pm.bulletinID = combination + '_pm'
-                report_pm.predecessor_id = combination
-                report_pm.regions = []
-                for region in matched_regions:
-                    report_pm.regions.append(Region(region))
-                
-                if problems:
-                    for problem in report_am.avalancheProblem:
-                        report_pm.avalancheProblem.append(problem)
-                        
-                report_pm.dangerRatings[0].elevation = report_am.dangerRatings[0].elevation
-                report_pm.dangerRatings[0].aspect = report_am.dangerRatings[0].aspect
-                report_pm.avalancheActivity.comment = report_am.avalancheActivity.comment + '\n' + report_pm.avalancheActivity.comment
-                report_pm.validTime.startTime = report_am.validTime.endTime
-                final_reports.append(report_pm)
+                    combined_report.regions.append(Region(region))
+
+                combined_report.dangerRatings = []
+                for dangerRating in reports[am_idx].dangerRatings:
+                    adjusted_danger_rating = DangerRating()
+                    adjusted_danger_rating.mainValue = dangerRating.mainValue
+                    adjusted_danger_rating.validTimePeriod = 'earlier'
+                    combined_report.dangerRatings.append(adjusted_danger_rating)
+
+                for dangerRating in reports[pm_idx].dangerRatings:
+                    adjusted_danger_rating = DangerRating()
+                    adjusted_danger_rating.mainValue = dangerRating.mainValue
+                    adjusted_danger_rating.validTimePeriod = 'later'
+                    combined_report.dangerRatings.append(adjusted_danger_rating)
+
+                combined_report.avalancheActivity.comment = reports[am_idx].avalancheActivity.comment + '\n' + reports[pm_idx].avalancheActivity.comment
+                final_reports.append(combined_report)
 
         return final_reports
     

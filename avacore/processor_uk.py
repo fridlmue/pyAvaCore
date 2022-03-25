@@ -23,7 +23,7 @@ import dateutil.parser
 import logging
 import re
 
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, AvaCoreCustom, Elevation, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region
 
 def get_reports_from_json(sais_reports):
     reports = []

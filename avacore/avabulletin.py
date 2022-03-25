@@ -101,12 +101,11 @@ class Elevation:
         else:
             return ""
 
+'''
 class AvaCoreCustom:
-    '''
-    custom elements for special report content
-    '''
-    custom_type: str
-    content: str
+    # custom elements for special report content
+    namespace: str
+    content: typing.Dict
 
     def __init__(self, custom_type: str, content=None) -> None:
         self.custom_type = custom_type
@@ -116,16 +115,17 @@ class AvaCoreCustom:
             self.content = ''
 
     def __str__(self):
-        return "{'custom_type':'" + self.custom_type + "', 'content':" + self.content + "'}"
+        return "{'namespace':'" + self.namespace + "', 'content':" + self.content + "'}"
 
     def __repr__(self):
         return str(self)
-    
+'''
+
 class MetaData:
     '''
     MetaData for Report
     '''
-    customData: typing.List[AvaCoreCustom]
+    customData: typing.Dict
     
     def __init__(self):
         self.customData = []
@@ -162,7 +162,7 @@ class DangerRating:
     '''release probability from 1 to 4'''
     naturalHazardSiteDistribution: int
     '''natural hazard site distribution from 1 to 5'''
-    customData: typing.List[AvaCoreCustom]
+    customData: typing.Dict
     '''Custom Data for special reports'''
     
     # --- Values form EAWS Matrix ---
@@ -177,10 +177,10 @@ class DangerRating:
         'very_high': 5
     }
     
-    def __init__(self, mainValue='', ) -> None:
+    def __init__(self, mainValue='', validTimePeriod='all_day') -> None:
         self.elevation = Elevation()
         self.customData = []
-        self.validTimePeriod = 'all_day'
+        self.validTimePeriod = validTimePeriod
     
     def get_mainValue_int(self):
 
@@ -332,7 +332,7 @@ class AvaBulletin:
     '''travel advisory'''
     metaData: MetaData
 
-    customData: typing.List[AvaCoreCustom]
+    customData: typing.Dict
 
     predecessor_id: str
     '''not part of CAAMLv6 (yet)'''
@@ -396,9 +396,9 @@ class AvaBulletin:
         print("\n".join(textwrap.wrap(text, width=60, initial_indent='╟─ ', subsequent_indent='║  ')))
         
     def print_if_attr_exists(self, element, attribute):
-        if hasattr(self, 'element'):
-            if hasattr(self['element'], attribute):
-                self.prettify_out(element + ' ' + attribute.capitalize() + ': ' +  self['element']['attribute'])
+        if hasattr(self, element):
+            if hasattr(getattr(self, element), attribute):
+                self.prettify_out(element + ' ' + attribute.capitalize() + ': ' +  getattr(getattr(self, element), attribute))
         
 
     def cli_out(self):
