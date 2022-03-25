@@ -406,26 +406,28 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
             else:
                 report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
 
-    activity_com = ''
+    wxSynopsis = Texts()
+    avalancheActivity = Texts()
+    snowpackStructure = Texts()
 
     for bulletinMeasurements in root.iter(tag=CAAMLTAG + 'BulletinMeasurements'):
         for travelAdvisoryComment in bulletinMeasurements.iter(tag=CAAMLTAG + ''\
                                                                'travelAdvisoryComment'):
-            activity_com = travelAdvisoryComment.text.strip()
+            avalancheActivity.comment = travelAdvisoryComment.text.strip()
 
         for wxSynopsisComment in bulletinMeasurements.iter(tag=CAAMLTAG + 'wxSynopsisComment'):
-            report.wxSynopsisComment = wxSynopsisComment.text
-            if type(report.wxSynopsisComment) == str:
-                report.wxSynopsisComment = report.wxSynopsisComment.strip()
+            wxSynopsis.comment = wxSynopsisComment.text
+            if type(wxSynopsis.comment) == str:
+                wxSynopsis.comment = wxSynopsis.comment.strip()
         for snowpackStructureComment in bulletinMeasurements.iter(tag=CAAMLTAG + ''\
                                                                   'snowpackStructureComment'):
-            report.snowpackStructureComment = snowpackStructureComment.text
-            if type(report.snowpackStructureComment) == str:
-                report.snowpackStructureComment = report.snowpackStructureComment.strip()
+            snowpackStructure.comment = snowpackStructureComment.text
+            if type(snowpackStructure.comment) == str:
+                snowpackStructure.comment = snowpackStructure.comment.strip()
         for highlights in bulletinMeasurements.iter(tag=CAAMLTAG + 'comment'):
-            report.avalancheActivityHighlights = highlights.text
-            if type(report.avalancheActivityHighlights) == str:
-                report.avalancheActivityHighlights = report.avalancheActivityHighlights.strip()
+            avalancheActivity.highlights = highlights.text
+            if type(avalancheActivity.highlights) == str:
+                avalancheActivity.highlights = avalancheActivity.highlights.strip()
 
         '''
         for DangerPattern in bulletinMeasurements.iter(tag=CAAMLTAG + 'DangerPattern'):
@@ -460,7 +462,9 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
             # problem.dangerRating = problem_danger_rating
             report.avalancheProblems.append(problem)
 
-    report.avalancheActivityComment = activity_com
+    report.avalancheActivity = avalancheActivity
+    report.snowpackStructure = snowpackStructure
+    report.wxSynopsis = wxSynopsis
 
     for bulletinResultOf in root.iter(tag=CAAMLTAG + 'bulletinResultsOf'):
         et_add_parent_info(bulletinResultOf)

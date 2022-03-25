@@ -91,7 +91,7 @@ def process_reports_fr(region_id, path='', cached=False):
     report.validTime.startTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
     report.validTime.endTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEVALIDITE')))
     
-    
+    am_danger_ratings = []
 
     for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
         
@@ -116,18 +116,19 @@ def process_reports_fr(region_id, path='', cached=False):
             if pente.get('NW') == 'true':
                 aspects.append('NW')
 
-        danger_rating_pre.aspects = aspects
+        report.customData = {'MeteoFrance': {'avalancheProneLocation': {'aspects': aspects}}}
+
 
         for risque in cartoucherisque.iter(tag='RISQUE'):
             danger_rating = copy.deepcopy(danger_rating_pre)
             danger_rating.set_mainValue_int(int(risque.attrib.get('RISQUE1')))
             danger_rating.elevation.auto_select(risque.attrib.get('LOC1'))
-            report.dangerRatings.append(danger_rating)
+            am_danger_ratings.append(danger_rating)
             if not risque.attrib.get('RISQUE2') == '':
                 danger_rating2 = copy.deepcopy(danger_rating_pre)
                 danger_rating2.set_mainValue_int(int(risque.attrib.get('RISQUE2')))
                 danger_rating2.elevation.auto_select(risque.attrib.get('LOC2'))
-                report.dangerRatings.append(danger_rating2)
+                am_danger_ratings.append(danger_rating2)
 
         for resume in cartoucherisque.iter(tag='RESUME'):
             report.avalancheActivity = Texts(highlights=resume.text)
@@ -166,7 +167,7 @@ def process_reports_fr(region_id, path='', cached=False):
             if pente.get('NW') == 'true':
                 aspects.append('NW')
 
-        danger_rating_pre.aspects = aspects
+        report.customData = {'MeteoFrance': {'avalancheProneLocation': {'aspects': aspects}}}
         
         for risque in cartoucherisque.iter(tag='RISQUE'):
             if not risque.attrib.get('EVOLURISQUE1') == '':
@@ -176,19 +177,33 @@ def process_reports_fr(region_id, path='', cached=False):
                 danger_rating_pm.elevation.auto_select(risque.attrib.get('LOC1'))
                 pm_danger_ratings.append(danger_rating_pm)
             else:
-                pm_danger_ratings.append(report.dangerRatings[0])
+                pm_danger_ratings.append(am_danger_ratings[0])
             if not risque.attrib.get('EVOLURISQUE2') == '':
                 pm_available = True
                 danger_rating_pm2 = copy.deepcopy(danger_rating_pre)
                 danger_rating_pm2.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE2')))
                 danger_rating_pm2.elevation.auto_select(risque.attrib.get('LOC2'))
                 pm_danger_ratings.append(danger_rating_pm2)
-            elif len(report.dangerRatings) > 1:
-                pm_danger_ratings.append(report.dangerRatings[1])
+            elif len(am_danger_ratings) > 1:
+                pm_danger_ratings.append(am_danger_ratings[1])
 
     report.bulletinID = report.regions[0].regionId + '_' + str(report.publicationTime.isoformat())
 
+    for dangerRating in am_danger_ratings:
+        if pm_available:
+            validTimePeriod = 'earlier'
+        else:
+            validTimePeriod = 'all_day'
+        dangerRating.validTimePeriod = validTimePeriod
+        report.dangerRatings.append(dangerRating)
+
     if pm_available:
+        for dangerRating in pm_danger_ratings:
+            validTimePeriod = 'later'
+            dangerRating.validTimePeriod = validTimePeriod
+            report.dangerRatings.append(dangerRating)
+
+        '''
         pm_report = copy.deepcopy(report)
         pm_report.predecessor_id = pm_report.bulletinID
         pm_report.bulletinID += '_PM'
@@ -197,7 +212,7 @@ def process_reports_fr(region_id, path='', cached=False):
         pm_report.dangerRatings = pm_danger_ratings
 
         reports.append(pm_report)
-
+        '''
     reports.append(report)
 
     return reports

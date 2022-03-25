@@ -25,7 +25,7 @@ import dateutil.parser
 from urllib.request import urlopen, Request
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts, Elevation
 
 def download_report_is(lang):
     try:
@@ -58,7 +58,7 @@ def process_reports_is(path='', cached=False, lang='en'):
         root = ET.parse(path)
 
     common_report = AvaBulletin()
-    
+
     conditions = root.find('conditions')
     common_report.travelAdvisory = Texts(
         highlights=conditions.find('short_description').text, 
@@ -73,6 +73,9 @@ def process_reports_is(path='', cached=False, lang='en'):
     
     area_forecasts = root.find('area_forecasts')
     for area_forcast in area_forecasts.iter(tag='area_forecast'):
+        wxSynopsis = Texts()
+        avalancheActivity = Texts()
+        snowpackStructure = Texts()
         report = copy.deepcopy(common_report)
         report.publicationTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('updated').text))
         report.validTime.startTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(area_forcast.find('valid_from').text))
@@ -81,34 +84,41 @@ def process_reports_is(path='', cached=False, lang='en'):
         
         report.bulletinID = report.regions[0].regionId + '-' + report.publicationTime.isoformat()
         
-        report.avalancheActivityHighlights = area_forcast.find('forecast').text
-        report.avalancheActivityComment = area_forcast.find('recent_avalances').text
-        report.snowpackStructureHighlights = area_forcast.find('snow_condition').text
-        report.wxSynopsisHighlights = area_forcast.find('weather').text
+        avalancheActivity.highlights = area_forcast.find('forecast').text
+        avalancheActivity.comment = area_forcast.find('recent_avalances').text
+        snowpackStructure.highlights = area_forcast.find('snow_condition').text
+        wxSynopsis.highlights = area_forcast.find('weather').text
         
         danger_rating = DangerRating()
         danger_rating.set_mainValue_int(int(area_forcast.find('danger_level_day1_code').text))
         report.dangerRatings.append(danger_rating)
+
+        report.wxSynopsis = wxSynopsis
+        report.avalancheActivity = avalancheActivity
+        report.snowpackStructure = snowpackStructure
         
         for snow_problem in area_forcast.iter(tag='snow_problem'):
-            problem_danger_rating = DangerRating()
+            # problem_danger_rating = DangerRating()
             
             aspects_list = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']*2
             index_from = '0'
             index_to = '0'
             index_from = aspects_list.index(snow_problem.find('aspect_from').text)
             index_to = aspects_list.index(snow_problem.find('aspect_to').text, index_from)
-            problem_danger_rating.aspect = aspects_list[index_from:index_to+1]
+            # problem_danger_rating.aspect = aspects_list[index_from:index_to+1]
+            elevation = Elevation()
             
             if snow_problem.find('height').text != '0':
                 up_down = '>'
                 if 'Above' in snow_problem.find('height').text:
                     up_down = '<'
-                problem_danger_rating.elevation.auto_select(up_down + snow_problem.find('height').text)
+                elevation.auto_select(up_down + snow_problem.find('height').text)
             
             problem = AvalancheProblem()
             problem.add_problemType(snow_problem.find('type').text.lower())
-            problem.dangerRating = problem_danger_rating
+            problem.aspects = aspects_list[index_from:index_to+1]
+            problem.elevation = elevation
+            # problem.dangerRating = problem_danger_rating
             report.avalancheProblems.append(problem)
         
         reports.append(report)

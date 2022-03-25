@@ -23,7 +23,7 @@ import dateutil.parser
 import logging
 import re
 
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region, Texts
 
 def get_reports_from_json(sais_reports):
     reports = []
@@ -36,11 +36,17 @@ def get_reports_from_json(sais_reports):
         report.publicationTime = dateutil.parser.parse(sais_report['DatePublished'])
         report.validTime.startTime = report.publicationTime.replace(hour=18)
         report.validTime.endTime = report.validTime.startTime + timedelta(days=1)
-        report.avalancheActivityHighlights = sais_report['Summary']
-        report.avalancheActivityComment = 'Forecast Snow Stability: ' + sais_report['SnowStability']
-        report.snowpackStructureComment = 'Forecast Weather Influences: ' + sais_report['WeatherInfluences'] +\
+
+        avalancheActivity = Texts()
+        snowpackStructure = Texts()
+        avalancheActivity.highlights = sais_report['Summary']
+        avalancheActivity.comment = 'Forecast Snow Stability: ' + sais_report['SnowStability']
+        snowpackStructure.comment = 'Forecast Weather Influences: ' + sais_report['WeatherInfluences'] +\
             '\n' + 'Observed Weather Influences: ' + sais_report['ObservedWeatherInfluences'] +\
             '\n' + 'ObservedSnowStability: ' + sais_report['ObservedSnowStability']
+
+        report.avalancheActivity = avalancheActivity
+        report.snowpackStructure = snowpackStructure
 
         problems = int(sais_report['KeyIcons'])
 

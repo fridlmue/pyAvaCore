@@ -7,7 +7,6 @@ import pathlib
 class TestCH(unittest.TestCase):
 
     def test_ch(self):
-        # root = ET.parse(f'{__file__}.xml')
         reports = pyAvaCore.process_reports_ch(str(pathlib.Path(__file__).parent.absolute()), cached=True, year = '2021')
         self.assertEqual(len(reports), 7)
         for idx, report in enumerate(reports):
@@ -21,13 +20,9 @@ class TestCH(unittest.TestCase):
         self.assertIn('CH-4224', report.get_region_list())
         self.assertNotIn('CH-7111', report.get_region_list())
         self.assertEqual(report.dangerRatings[0].mainValue, 'moderate')
-        # self.assertEqual(report.dangerRatings[0].elevation, None)
         self.assertEqual(report.customData['SLF']['avalancheProneLocation']['elevation'], '2400')
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'lowerBound')
-        # self.assertEqual(report.dangerpattern, [])
-        # self.assertEqual(report.problem_list[0].problem_type, 'general')
-        # self.assertEqual(report.problem_list[0].valid_elevation, '>2400')
         self.assertIn('N', report.customData['SLF']['avalancheProneLocation']['aspects'])
         self.assertIn('NE', report.customData['SLF']['avalancheProneLocation']['aspects'])
         self.assertIn('W', report.customData['SLF']['avalancheProneLocation']['aspects'])
@@ -77,7 +72,6 @@ class TestCH(unittest.TestCase):
         self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
         self.assertNotIn('E', report.customData['SLF']['avalancheProneLocation']['aspects'])
         self.assertNotIn('SE', report.customData['SLF']['avalancheProneLocation']['aspects'])
-        # self.assertEqual(report.predecessor_id, '89477148947717')
 
 if __name__ == '__main__':
     unittest.main()

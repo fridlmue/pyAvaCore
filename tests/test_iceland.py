@@ -6,7 +6,6 @@ import xml.etree.ElementTree as ET
 class TestIceland(unittest.TestCase):
 
     def test_iceland(self):
-        # root = ET.parse(f'{__file__}.xml')
         reports = pyAvaCore.process_reports_is(path=f'{__file__}.xml', cached=True)
         self.assertEqual(len(reports), 4)
         report = reports[0]
@@ -17,10 +16,6 @@ class TestIceland(unittest.TestCase):
         self.assertIn('IS-SV', report.get_region_list())
         self.assertNotIn('BYAMM', report.get_region_list())
         self.assertEqual(report.dangerRatings[0].mainValue, 'high')
-        # self.assertRaises(AttributeError, getattr, report.dangerRatings[0].elevation, 'upperBound')
-        # self.assertEqual(report.dangerRatings[0].elevation.lowerBound, '1500')
-        # self.assertEqual(report.danger_main[0].valid_elevation, '>1500')
-        # self.assertEqual(report.dangerpattern, [])
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
         self.assertEqual(report.avalancheProblems[1].problemType, 'persistent_weak_layers')
         self.assertEqual(len(report.avalancheProblems), 2)

@@ -21,7 +21,7 @@ import pytz
 import dateutil.parser
 import logging
 
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region
+from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region, Texts
 
 
 def process_reports_no(region_id):
@@ -74,8 +74,6 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
 
     report.validTime.startTime = dateutil.parser.parse(varsom_report[current]['ValidFrom'])
     report.validTime.endTime = dateutil.parser.parse(varsom_report[current]['ValidTo'])
-
-    # report.danger_main.append(pyAvaCore.DangerMain(int(varsom_report[current]['DangerLevel']), '-'))
     
     danger_rating = DangerRating()
     danger_rating.set_mainValue_int(int(varsom_report[current]['DangerLevel']))
@@ -111,21 +109,29 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
             elev_prefix = '<'
         
         if not problem_type == '':
-            problem_danger_rating = DangerRating()
-            problem_danger_rating.aspect = aspect_list
-            problem_danger_rating.elevation.auto_select(elev_prefix + str(problem['ExposedHeight1']))
+            elevation = Elevation()
+            elevation.auto_select(elev_prefix + str(problem['ExposedHeight1']))
             problem = AvalancheProblem()
-            problem.dangerRating = problem_danger_rating
+            problem.aspects = aspect_list
+            problem.elevation = elevation
             problem.problemType = problem_type
             report.avalancheProblems.append(problem)
 
-    report.avalancheActivityHighlights = varsom_report[current]['MainText']
-    report.avalancheActivityComment = varsom_report[current]['AvalancheDanger']
+    wxSynopsis = Texts()
+    avalancheActivity = Texts()
+    snowpackStructure = Texts()
+
+    avalancheActivity.highlights = varsom_report[current]['MainText']
+    avalancheActivity.comment = varsom_report[current]['AvalancheDanger']
     waek_layers = ''
     if varsom_report[0]['CurrentWeaklayers'] != None:
         waek_layers = '\n' + varsom_report[0]['CurrentWeaklayers']
-    report.snowpackStructureComment = varsom_report[current]['SnowSurface']  + waek_layers
+    snowpackStructure.comment = varsom_report[current]['SnowSurface']  + waek_layers
     report.tendency.tendencyComment = varsom_report[current+1]['MainText']
+
+    report.wxSynopsis = wxSynopsis
+    report.avalancheActivity = avalancheActivity
+    report.snowpackStructure = snowpackStructure
 
     reports.append(report)
 
