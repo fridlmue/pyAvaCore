@@ -398,7 +398,8 @@ class AvaBulletin:
     def print_if_attr_exists(self, element, attribute):
         if hasattr(self, element):
             if hasattr(getattr(self, element), attribute):
-                self.prettify_out(element + ' ' + attribute.capitalize() + ': ' +  getattr(getattr(self, element), attribute))
+                if not getattr(getattr(self, element), attribute) is None:
+                    self.prettify_out(element + ' ' + attribute.capitalize() + ': ' +  getattr(getattr(self, element), attribute))
         
 
     def cli_out(self):

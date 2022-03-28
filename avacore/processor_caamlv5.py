@@ -406,11 +406,11 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
             if type(avalancheActivity.highlights) == str:
                 avalancheActivity.highlights = avalancheActivity.highlights.strip()
 
-        '''
+
         for DangerPattern in bulletinMeasurements.iter(tag=CAAMLTAG + 'DangerPattern'):
+            dp = []
             for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + 'type'):
-                report.dangerpattern.append(DangerPatternType.text)
-        '''
+                report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
 
         av_problem_tag = 'avProblem' if location == 'bavaria' else 'AvProblem'
 
@@ -429,14 +429,12 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
                 for endPosition in validElevation.iter(tag=CAAMLTAG + 'endPosition'):
                     if not 'Keine' in endPosition.text:
                         valid_elevation = "ElevationRange_" + endPosition.text + "Lw"
-            # problem_danger_rating = DangerRating()
-            # problem_danger_rating.aspects = aspect
-            # problem_danger_rating.elevation.auto_select(valid_elevation)
+
             problem = AvalancheProblem()
             problem.add_problemType(type_r)
             problem.aspects = aspect
             problem.elevation.auto_select(valid_elevation)
-            # problem.dangerRating = problem_danger_rating
+
             report.avalancheProblems.append(problem)
 
     report.avalancheActivity = avalancheActivity
@@ -546,4 +544,25 @@ def parse_xml_bavaria(root, location='bavaria', today=datetime(1, 1, 1, 1, 1, 1)
             if danger_main.elevation.toString() == loc_elem[3].elevation.toString():
                 danger_main.mainValue = loc_elem[3].mainValue
 
-    return reports
+    final_reports = []
+
+    for report in reports:
+        if report.bulletinID.endswith('_PM'):
+            for bulletin in reports:
+                if bulletin.bulletinID == report.bulletinID[:-3]:
+                    father_bulletin = bulletin
+                    father_bulletin.validTime.endTime = report.validTime.endTime
+                    for idx, danger_rating in enumerate(father_bulletin.dangerRatings):
+                        father_bulletin.dangerRatings[idx].validTimePeriod = 'earlier'
+                    for danger_rating in report.dangerRatings:
+                        danger_rating.validTimePeriod = 'later'
+                        father_bulletin.dangerRatings.append(danger_rating)
+                    for idx, avalanche_problem in enumerate(father_bulletin.avalancheProblems):
+                        father_bulletin.avalancheProblems[idx].validTimePeriod = 'earlier'
+                    for avalanche_problem in report.avalancheProblems:
+                        avalanche_problem.validTimePeriod = 'later'
+                        father_bulletin.avalancheProblems.append(avalanche_problem)
+        else:
+            final_reports.append(report)
+
+    return final_reports
