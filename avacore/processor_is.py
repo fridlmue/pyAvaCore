@@ -62,7 +62,7 @@ def process_reports_is(path='', cached=False, lang='en'):
     conditions = root.find('conditions')
     common_report.travelAdvisory = Texts(
         highlights=conditions.find('short_description').text, 
-        comment=re.sub('(\<.*?\>)', '', conditions.find('full_description').text)
+        comment=re.sub(r'(\<.*?\>)', '', conditions.find('full_description').text)
     )
     common_report.publicationTime = pytz.timezone("Iceland").localize(dateutil.parser.parse(conditions.find('update_time').text))
     

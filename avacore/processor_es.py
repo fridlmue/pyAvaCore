@@ -55,7 +55,7 @@ def get_reports_from_file(aemet_reports):
     reports = []
     report = AvaBulletin()
 
-    re_result = re.search('(?<=Día)(.*)(?=hora oficial)', aemet_reports)
+    re_result = re.search(r'(?<=Día)(.*)(?=hora oficial)', aemet_reports)
 
     t_spain = dateutil.parser.parse(re_result.group(0)[1:-1], fuzzy=True, parserinfo=LocaleParserInfo())
     report.publicationTime = pytz.timezone("Europe/Madrid").localize(t_spain)
@@ -64,19 +64,19 @@ def get_reports_from_file(aemet_reports):
     t_spain = dateutil.parser.parse(re_result.group(0)[1:-1], fuzzy=True)
     t_spain = pytz.timezone("Europe/Madrid").localize(t_spain)
 
-    re_result = re.search('(?<=2\.- Estado del manto y observaciones recientes:)(?s:.*)(?=3\.- Evolución del manto)', aemet_reports)
+    re_result = re.search(r'(?<=2\.- Estado del manto y observaciones recientes:)(?s:.*)(?=3\.- Evolución del manto)', aemet_reports)
     report.snowpackStructure = Texts(comment=' '.join(re_result.group(0).splitlines()[1:]))
 
-    re_result = re.search('(?<=3\.- Evolución del manto y peligro)(?s:.*)(?=4.- Predicción meteorológica)', aemet_reports)
+    re_result = re.search(r'(?<=3\.- Evolución del manto y peligro)(?s:.*)(?=4.- Predicción meteorológica)', aemet_reports)
     report.avalancheActivity = Texts(comment=' '.join(re_result.group(0).splitlines()[2:]))
 
-    re_result = re.search('(?<=4\.- Predicción meteorológica)(?s:.*)(?=5\.- Avance para)', aemet_reports)
+    re_result = re.search(r'(?<=4\.- Predicción meteorológica)(?s:.*)(?=5\.- Avance para)', aemet_reports)
     report.wxSynopsis = Texts(comment=' '.join(re_result.group(0).splitlines()[1:]))
 
-    re_result = re.search('(?<=5\.- Avance para el)(?s:.*)(?=</TXT_PREDICCION>)', aemet_reports)
+    re_result = re.search(r'(?<=5\.- Avance para el)(?s:.*)(?=</TXT_PREDICCION>)', aemet_reports)
     report.tendency.tendencyComment = ' '.join(re_result.group(0).splitlines()[1:])
 
-    re_result = re.search('(?<=1\.- Estimación del nivel de peligro:)(?s:.*)(?=2\.- Estado del manto y observaciones recientes)', aemet_reports)
+    re_result = re.search(r'(?<=1\.- Estimación del nivel de peligro:)(?s:.*)(?=2\.- Estado del manto y observaciones recientes)', aemet_reports)
     levels = re_result.group(0).splitlines()
 
     last_region = ''

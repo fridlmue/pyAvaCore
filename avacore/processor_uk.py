@@ -79,7 +79,7 @@ def get_reports_from_json(sais_reports):
 
         danger_ratings_raw = sais_report['CompassRose'][4:36]
 
-        boundary_group = re.search('(?<=txtm\=)(.)*?(?=\&txte)', sais_report['CompassRose'])
+        boundary_group = re.search(r'(?<=txtm\=)(.)*?(?=\&txte)', sais_report['CompassRose'])
         boundary = boundary_group.group(0) # No content if no different ratings for elevations
 
         filter_lw = [True, False, False, False] * 8
