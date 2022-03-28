@@ -19,8 +19,8 @@ class TestIceland(unittest.TestCase):
         self.assertEqual(report.avalancheProblems[0].problemType, 'wind_drifted_snow')
         self.assertEqual(report.avalancheProblems[1].problemType, 'persistent_weak_layers')
         self.assertEqual(len(report.avalancheProblems), 2)
-        self.assertIn('N', report.avalancheProblems[0].dangerRating.aspect)
-        self.assertIn('W', report.avalancheProblems[0].dangerRating.aspect)
+        self.assertIn('N', report.avalancheProblems[0].aspects)
+        self.assertIn('W', report.avalancheProblems[0].aspects)
         self.assertRaises(AttributeError, getattr, report, "predecessor_id")
 
 if __name__ == '__main__':

@@ -58,6 +58,10 @@ def parse_xml(root):
                 pm_available = True
                 break
 
+        wxSynopsis = Texts()
+        avalancheActivity = Texts()
+        snowpackStructure = Texts()
+
         for observations in bulletin:
             et_add_parent_info(observations)
             for locRef in observations.iter(tag=CAAMLTAG + 'locRef'):
@@ -84,7 +88,7 @@ def parse_xml(root):
                     validity_begin = dateutil.parser.parse(beginPosition.text)
                     if validity_begin.time() <= time(15, 0, 0) and validity_begin.time() >= time(8, 0, 0):
                         am_rating = False
-                        report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
+                        # report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
                 danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
@@ -140,10 +144,6 @@ def parse_xml(root):
                 if comment_r != '':
                     problem.terrainFeature = comment_r
                 report.avalancheProblems.append(problem)
-                
-            wxSynopsis = Texts()
-            avalancheActivity = Texts()
-            snowpackStructure = Texts()
 
             for avActivityHighlights in observations.iter(tag=CAAMLTAG + 'avActivityHighlights'):
                 if not avActivityHighlights.text is None:
@@ -165,9 +165,9 @@ def parse_xml(root):
                 for source_name in source.iter(tag=CAAMLTAG + 'name'):
                     report.source = Source(provider_name=source_name.text, provider_website=str('https://' + source_name.text))
                     
-            report.wxSynopsis = wxSynopsis
-            report.avalancheActivity = avalancheActivity
-            report.snowpackStructure = snowpackStructure
+        report.wxSynopsis = wxSynopsis
+        report.avalancheActivity = avalancheActivity
+        report.snowpackStructure = snowpackStructure
         
         if pm_available:
             for idx, danger_rating in enumerate(report.dangerRatings):
