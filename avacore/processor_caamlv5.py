@@ -100,10 +100,7 @@ def parse_xml(root):
             for DangerPattern in observations.iter(tag=CAAMLTAG + 'DangerPattern'):
                 dp = []
                 for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + 'type'):
-                    '''
-                    dp = AvaCoreCustom(custom_type='dangerPattern', content=DangerPatternType.text)
-                    customData.append(dp)
-                    '''
+
                     dp.append(DangerPatternType.text)
 
                 report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
@@ -126,12 +123,6 @@ def parse_xml(root):
                                 elevation.auto_select("ElevationRange_" + beginPosition.text + "Hi")
                             for endPosition in validElevation.iter(tag=CAAMLTAG + 'endPosition'):
                                 elevation.auto_select("ElevationRange_" + endPosition.text + "Lw")
-                        '''
-                        valid_elevation = validElevation.get('{http://www.w3.org/1999/xlink}href')
-                        if not valid_elevation is None:
-                            problem_danger_rating.elevation.auto_select(valid_elevation)
-                        else:
-                        '''
                         
                 comment_r = ''
                 for comment in AvProblem.iter(tag=CAAMLTAG + 'comment'):
@@ -193,20 +184,6 @@ def parse_xml(root):
                         father_bulletin.avalancheProblems.append(avalanche_problem)
         else:
             reports.append(report)
-
-        """   
-        pm_report = copy.deepcopy(report)
-        pm_report.dangerRatings = pm_danger_ratings
-        pm_report.bulletinID += '_PM'
-        pm_report.validTime.startTime = pm_report.validTime.startTime + timedelta(hours=12)
-        pm_report.validTime.endTime = pm_report.validTime.endTime + timedelta(hours=12)
-        reports.append(pm_report)
-        """
-    '''
-    for report in reports:
-        if report.bulletinID.endswith('_PM') and any(x.bulletinID == report.bulletinID[:-3] for x in reports):
-            report.predecessor_id = report.bulletinID[:-3]
-    '''
 
     return reports
 

@@ -273,7 +273,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=''):
                 elif '</h4><p>' in element:
                     avalancheActivityComment = re.search(r'(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)', element)
                     comment = avalancheActivityComment.group(0)
-                    comment = re.sub('\(see.*map\)', '', comment)
+                    comment = re.sub(r'\(see.*map\)', '', comment)
                     avalancheActivity.comment += comment + " "
                 else:
                     print('Error parsing avActComment in:', report.bulletinID)
