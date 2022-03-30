@@ -67,7 +67,8 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
                     aspect_list.append(exposition)
             
             problem = AvalancheProblem()
-            problem.aspects = aspect_list
+            if not "ALL" in aspect_list:
+                problem.aspects = aspect_list
             problem.elevation = Elevation(lowerBound=warning['altitude_from'], upperBound=warning['altitude_to'])
             problem.add_problemType(warning['type'])
             report.avalancheProblems.append(problem)
