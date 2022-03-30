@@ -13,9 +13,6 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-"""
-CLI for pyAvaCore
-"""
 from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
@@ -61,7 +58,9 @@ logging.basicConfig(
 
 
 def download_region(regionID):
-    """Downloads the given region and converts it to JSON"""
+    """
+    Downloads the given region and converts it to JSON
+    """
     reports, _, url = get_reports(regionID)
     bulletins = Bulletins()
     bulletins.bulletins = reports

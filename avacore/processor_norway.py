@@ -15,11 +15,11 @@
 import json
 import urllib.request
 from datetime import datetime
-from datetime import timedelta
 from datetime import time
+import logging
+
 import pytz
 import dateutil.parser
-import logging
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -32,6 +32,9 @@ from avacore.avabulletin import (
 
 
 def process_reports_no(region_id):
+    '''
+    Downloads and returns requested Avalanche Bulletins
+    '''
 
     langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
 
@@ -58,7 +61,10 @@ def process_reports_no(region_id):
     return reports
 
 
-def process_all_reports_no(region_prefix=""):
+def process_all_reports_no():
+    '''
+    Downloads and returns all norwegian avalanche reports
+    '''
     all_reports = []
     for region in no_regions:
         try:
@@ -73,6 +79,13 @@ def process_all_reports_no(region_prefix=""):
 
 
 def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
+    '''
+    Builds the CAAML JSONs form the norwegian JSON formats.
+    '''
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-branches
+    # pylint: disable=too-many-statements
+
     reports = []
     report = AvaBulletin()
 
@@ -141,7 +154,7 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
     avalancheActivity.highlights = varsom_report[current]["MainText"]
     avalancheActivity.comment = varsom_report[current]["AvalancheDanger"]
     waek_layers = ""
-    if varsom_report[0]["CurrentWeaklayers"] != None:
+    if varsom_report[0]["CurrentWeaklayers"] is not None:
         waek_layers = "\n" + varsom_report[0]["CurrentWeaklayers"]
     snowpackStructure.comment = varsom_report[current]["SnowSurface"] + waek_layers
     report.tendency.tendencyComment = varsom_report[current + 1]["MainText"]

@@ -15,6 +15,7 @@
 
 from datetime import date, datetime, timedelta
 import typing
+
 from .avabulletin import AvaBulletin, DangerRating
 from .geojson import Feature, FeatureCollection
 
@@ -28,20 +29,28 @@ class Bulletins:
     bulletins: typing.List[AvaBulletin]
 
     def main_date(self) -> date:
+        """
+        Returns Main validity date of Report
+        """
         validityDate: datetime = self.bulletins[0].validTime.startTime
         if validityDate.hour > 15:
             validityDate = validityDate + timedelta(days=1)
         return validityDate.date()
 
     def max_danger_ratings(self):
+        # pylint: disable=too-many-branches
+        # pylint: disable=too-many-statements
+        """
+        Returns a Dict containing the main danger ratings (total, high, low, am, pm)
+        """
         ratings = dict()
         for bulletin in self.bulletins:
 
             for region in bulletin.regions:
                 local_ratings = dict()
                 regionId = region.regionId
-                # Check for available information in Bulletin
 
+                # Check for available information in Bulletin
                 for danger in bulletin.dangerRatings:
 
                     key_elev = ""
@@ -138,7 +147,7 @@ class Bulletins:
 
                 if (
                     not f"{regionId}:high:am" in local_ratings
-                    and not not f"{regionId}:high:pm" in local_ratings
+                    and not f"{regionId}:high:pm" in local_ratings
                 ):
                     local_ratings[f"{regionId}:high:am"] = local_ratings[
                         f"{regionId}:high:pm"
@@ -146,7 +155,7 @@ class Bulletins:
 
                 if (
                     not f"{regionId}:low:am" in local_ratings
-                    and not not f"{regionId}:low:pm" in local_ratings
+                    and not f"{regionId}:low:pm" in local_ratings
                 ):
                     local_ratings[f"{regionId}:low:am"] = local_ratings[
                         f"{regionId}:low:pm"
@@ -185,20 +194,24 @@ class Bulletins:
         return ratings
 
     def augment_geojson(self, geojson: FeatureCollection):
+        """
+        Augment geojson with features.
+        """
         for feature in geojson.features:
             self.augment_feature(feature)
 
     def augment_feature(self, feature: Feature):
-        id = feature.properties.id
+        """
+        Augment features with danger rating in information
+        """
+        idx = feature.properties.id
         elevation = feature.properties.elevation
 
         def affects_region(b: AvaBulletin):
-            return id in [r.regionId for r in b.regions]
+            return idx in [r.regionId for r in b.regions]
 
         def affects_danger(d: DangerRating):
-            if Bulletins.region_without_elevation(id):
-                return True
-            elif not d.elevation:
+            if not d.elevation:
                 return True
             elif not (
                 hasattr(d.elevation, "lowerBound") or hasattr(d.elevation, "upperBound")
@@ -208,8 +221,8 @@ class Bulletins:
                 return True
             elif hasattr(d.elevation, "lowerBound") and elevation == "high":
                 return True
-            else:
-                return False
+
+            return False
 
         bulletins = [b for b in self.bulletins if affects_region(b)]
         dangers = [
@@ -223,6 +236,9 @@ class Bulletins:
         feature.properties.max_danger_rating = max(dangers)
 
     def from_json(self, bulletins_json):
+        """
+        read bulletions from CAAMLv6 JSON
+        """
         self.bulletins = []
         for bulletin_json in bulletins_json["bulletins"]:
             bulletin = AvaBulletin()

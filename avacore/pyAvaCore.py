@@ -76,7 +76,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         url, provider = get_report_url(region_id, local)
     elif region_id.startswith("NO"):
         if region_id == "NO":
-            reports = process_all_reports_no(region_id)
+            reports = process_all_reports_no()
         else:
             reports = process_reports_no(region_id)
         _, provider = get_report_url(region_id, local)
@@ -86,11 +86,9 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
     elif region_id.startswith("IS"):
         reports = process_reports_is()
         _, provider = get_report_url(region_id, local)
-        # url = "https://www.sais.gov.uk/api?action=getForecast"
     elif region_id.startswith("CZ"):
         reports = process_reports_cz()
         _, provider = get_report_url(region_id, local)
-        # url = "https://www.sais.gov.uk/api?action=getForecast"
     elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
         reports = process_reports_es()
         url, provider = get_report_url(region_id, local)
@@ -128,7 +126,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
 
 def get_report_url(
     region_id, local=""
-):  # You can ignore "provider" return value by url, _ = getReportsUrl
+):
     """
     returns the valid URL for requested region_id
     """

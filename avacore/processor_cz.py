@@ -14,13 +14,11 @@
 """
 import json
 import urllib.request
-from datetime import datetime
 from datetime import timedelta
-from datetime import time
-import pytz
-import dateutil.parser
 import logging
 
+import pytz
+import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -33,6 +31,9 @@ from avacore.avabulletin import (
 
 
 def process_reports_cz():
+    '''
+    Downloads and returns requested Avalanche Bulletins
+    '''
     url = "https://www.horskasluzba.cz/cz/avalanche-json"
 
     headers = {"Content-Type": "application/json; charset=utf-8"}
@@ -50,7 +51,11 @@ def process_reports_cz():
     return reports
 
 
-def get_reports_fromjson(cz_report, fetch_time_dependant=True):
+def get_reports_fromjson(cz_report):
+    '''
+    Builds the CAAML JSONs form the original JSON formats.
+    '''
+
     reports = []
 
     for bulletin in cz_report:
@@ -76,7 +81,7 @@ def get_reports_fromjson(cz_report, fetch_time_dependant=True):
                     aspect_list.append(exposition)
 
             problem = AvalancheProblem()
-            if not "ALL" in aspect_list:
+            if "ALL" not in aspect_list:
                 problem.aspects = aspect_list
             problem.elevation = Elevation(
                 lowerBound=warning["altitude_from"], upperBound=warning["altitude_to"]

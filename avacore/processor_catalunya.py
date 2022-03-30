@@ -16,11 +16,9 @@
 import json
 import urllib.request
 import datetime
-from datetime import timedelta
 import pytz
 import dateutil.parser
 
-from avacore import pyAvaCore
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -41,6 +39,9 @@ code_dir = {
 
 
 def process_reports_cat(today=datetime.datetime.today().date(), lang="es"):
+    '''
+    Downloads and returns requested Catalanian (ICGC) avalanche bulletins
+    '''
 
     reports = []
 
@@ -71,6 +72,9 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang="es"):
 
 
 def get_reports_fromjson(icgc_reports):
+    '''
+    Builds the CAAML JSONs form the ICGC JSON formats.
+    '''
     reports = []
     report = AvaBulletin()
 
@@ -101,7 +105,7 @@ def get_reports_fromjson(icgc_reports):
         danger_rating = DangerRating()
         danger_rating.set_mainValue_int(int(icgc_report["grau_perill_primari"]))
         report.dangerRatings.append(danger_rating)
-        if not icgc_report["grau_perill_secundari"] == None:
+        if not icgc_report["grau_perill_secundari"] is None:
             danger_rating_2 = DangerRating()
             danger_rating_2.set_mainValue_int(int(icgc_report["grau_perill_secundari"]))
             report.dangerRatings.append(danger_rating_2)

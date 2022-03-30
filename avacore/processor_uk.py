@@ -15,26 +15,28 @@
 
 import json
 import urllib.request
-from datetime import datetime
 from datetime import timedelta
-from datetime import time
-import pytz
-import dateutil.parser
-import logging
 import re
-import itertools
+
+import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
     AvalancheProblem,
-    Elevation,
     Region,
     Texts,
 )
 
 
 def get_reports_from_json(sais_reports):
+    '''
+    Builds the CAAML JSONs form the original JSON formats.
+    '''
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-branches
+    # pylint: disable=too-many-statements
+
     reports = []
 
     for sais_report in sais_reports:
@@ -156,6 +158,10 @@ def get_reports_from_json(sais_reports):
 
 
 def process_reports_uk():
+    '''
+    Downloads and returns requested Avalanche Bulletins
+    '''
+
     reports = []
 
     url = "https://www.sais.gov.uk/api?action=getForecast"

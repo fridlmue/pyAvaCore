@@ -5,13 +5,14 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    pyAvaCore is distributed in the hope that it will be useful, 
+    pyAvaCore is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+# pylint: disable=too-few-public-methods
 
 from datetime import datetime
 import re
@@ -39,7 +40,6 @@ class ValidTime:
 class Provider:
     """
     Describes the provider given in the source
-    ToDo: Does not yet extend the whole CAAMLv6
     """
 
     name: str
@@ -55,7 +55,6 @@ class Provider:
 class Source:
     """
     Describes the source of the Report
-    ToDo: Does not yet extend the whole CAAMLv6
     """
 
     provider: Provider
@@ -88,6 +87,9 @@ class Elevation:
             self.auto_select(auto_select)
 
     def auto_select(self, auto_select):
+        """
+        Auto-Selct from different possible ways of elevation description if it is lower or upper bound.
+        """
         if not auto_select is None:
             auto_select = auto_select.replace("Forestline", "Treeline")
             if "Hi" in auto_select:
@@ -102,35 +104,17 @@ class Elevation:
                 self.upperBound = re.sub(r"<(.+)", r"\1", auto_select)
 
     def toString(self):
+        """
+        Return a elevation as string.
+        """
         if hasattr(self, "lowerBound") and hasattr(self, "upperBound"):
             return ">" + self.lowerBound + "<" + self.upperBound
         if hasattr(self, "lowerBound"):
             return ">" + self.lowerBound
         if hasattr(self, "upperBound"):
             return "<" + self.upperBound
-        else:
-            return ""
 
-
-"""
-class AvaCoreCustom:
-    # custom elements for special report content
-    namespace: str
-    content: typing.Dict
-
-    def __init__(self, custom_type: str, content=None) -> None:
-        self.custom_type = custom_type
-        if not content is None:
-            self.content = content
-        else:
-            self.content = ''
-
-    def __str__(self):
-        return "{'namespace':'" + self.namespace + "', 'content':" + self.content + "'}"
-
-    def __repr__(self):
-        return str(self)
-"""
+        return ""
 
 
 class MetaData:
@@ -147,7 +131,6 @@ class MetaData:
 class DangerRating:
     """
     Describes the Danger Ratings
-    ToDo: Does not yet extend the whole CAAMLv6
     """
 
     mainValue: str
@@ -195,12 +178,18 @@ class DangerRating:
         self.elevation = Elevation()
         self.customData = []
         self.validTimePeriod = validTimePeriod
+        self.mainValue = mainValue
 
     def get_mainValue_int(self):
-
+        """
+        Returns danger main as int value
+        """
         return self.values.get(self.mainValue, 0)
 
     def set_mainValue_int(self, value):
+        """
+        Sets danger main from int
+        """
         self.mainValue = next(
             (
                 level_text
@@ -211,12 +200,15 @@ class DangerRating:
         )
 
     def from_json(self, dangerRating_json):
+        """
+        get danger rating from JSON
+        """
         attributes = DangerRating.__dict__["__annotations__"]
         for attribute in attributes:
             if not attribute.startswith("__") and attribute in dangerRating_json:
                 if attributes[attribute] in {str, datetime, list, int}:
                     setattr(self, attribute, dangerRating_json[attribute])
-                elif attribute is "elevation":
+                elif attribute == "elevation":
                     for elevation_attribute in dangerRating_json[attribute]:
                         setattr(
                             self.elevation,
@@ -226,21 +218,18 @@ class DangerRating:
 
 
 class AvalancheProblem:
+    """
+    Describes the Avalanche Problem
+    """
     problemType: str
     """problem type as standardized descriptive text"""
-    # comment: str
-
     elevation: Elevation
     aspects: list
     terrainFeature: str
-
     validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
 
-    """
-    ToDo: Addd custom data type
-    """
-
     def __init__(
+        # pylint: disable=too-many-arguments
         self,
         problemType=None,
         comment=None,
@@ -248,13 +237,16 @@ class AvalancheProblem:
         dangerRating=None,
         aspects=None,
         elevation=None,
+        terrainFeature = None
     ) -> None:
         self.aspects = []
         self.elevation = Elevation()
         if not problemType is None:
             self.problemType = problemType
         if not comment is None:
-            self.comment = comment
+            self.terrainFeature = comment
+        if not terrainFeature is None:
+            self.terrainFeature = terrainFeature
         if not dangerRating is None:  # Compatibility with older parsers, deprecated
             self.elevation = dangerRating.elevation
             self.aspects = dangerRating.aspect
@@ -292,22 +284,21 @@ class AvalancheProblem:
 
 
 class Tendency:
+    """
+    Describes the Tendency
+    """
     tendencyType: str
     """string contains decreasing, steady or increasing"""
     validTime: ValidTime
     """valid time interval for tendency"""
     tendencyComment: str
     """tendency comment"""
-    # ToDo Add custom data
-
-    def __init__(self) -> None:
-        self.validTime = ValidTime()
 
     def __init__(
         self, tendencyType=None, validTime_json=None, tendencyComment=None
     ) -> None:
         self.validTime = ValidTime()
-        if not validTime_json is None and not len(validTime_json) is 0:
+        if not validTime_json is None and not len(validTime_json) == 0:
             self.validTime = ValidTime(
                 validTime_json["startTime"], validTime_json["endTime"]
             )
@@ -318,6 +309,9 @@ class Tendency:
 
 
 class Region:
+    """
+    Describes a Region
+    """
     name: str
     regionId: str
 
@@ -328,6 +322,9 @@ class Region:
 
 
 class Texts:
+    """
+    Describes Texts in the Bulletion with highlights and coomment
+    """
     highlights: str
     comment: str
 
@@ -339,10 +336,10 @@ class Texts:
 
 
 class AvaBulletin:
+    # pylint: disable=too-many-instance-attributes
     """
     Class for the AvaBulletin
     Follows partly CAAMLv6 caaml:BulletinType
-    ToDo: MetaData type is generally missing
     """
 
     bulletinID: str
@@ -391,31 +388,37 @@ class AvaBulletin:
         self.customData = []
 
     def get_region_list(self):
+        """
+        returns valif region IDs as list.
+        """
         region_list = []
         for reg in self.regions:
             region_list.append(reg.regionId)
         return region_list
 
     def from_json(self, bulletin_json):
+        """
+        convert to avaBulletin from JSON
+        """
         attributes = AvaBulletin.__dict__["__annotations__"]
         for attribute in attributes:
             if not attribute.startswith("__") and attribute in bulletin_json:
                 if attributes[attribute] in {str, datetime}:
                     setattr(self, attribute, bulletin_json[attribute])
 
-                elif attribute is "regions":
+                elif attribute == "regions":
                     for region in bulletin_json[attribute]:
                         self.regions.append(
                             Region(region.get("regionId"), region.get("name"))
                         )
 
-                elif attribute is "dangerRatings":
+                elif attribute == "dangerRatings":
                     for dangerRating_json in bulletin_json[attribute]:
                         dangerRating = DangerRating()
                         dangerRating.from_json(dangerRating_json)
                         self.dangerRatings.append(dangerRating)
 
-                elif attribute is "avalancheProblems":
+                elif attribute == "avalancheProblems":
                     for avalancheProblem_json in bulletin_json[attribute]:
                         avalancheProblem = AvalancheProblem(
                             problemType=avalancheProblem_json.get("problemType"),
@@ -424,24 +427,17 @@ class AvaBulletin:
                         )
                         self.avalancheProblems.append(avalancheProblem)
 
-                elif attribute is "validTime":
+                elif attribute == "validTime":
                     self.validTime = ValidTime(
                         bulletin_json[attribute]["startTime"],
                         bulletin_json[attribute]["endTime"],
                     )
 
-                elif attribute is "tendency":
+                elif attribute == "tendency":
                     self.tendency = Tendency(
                         bulletin_json[attribute].get("tendencyType"),
                         bulletin_json[attribute].get("validTime"),
                         bulletin_json[attribute].get("tendencyComment"),
-                    )
-
-                elif attribute is "source":
-                    self.source = Source
-                    (
-                        bulletin_json[attribute].get("provider"),
-                        bulletin_json[attribute].get("person"),
                     )
 
                 else:
@@ -452,11 +448,11 @@ class AvaBulletin:
                         type(attributes[attribute]),
                     )
 
-    # def fill_std_attributes(self, to_fill, fill_with):
-
-    # if 'predecessor_id' in bulletin_json:
-
-    def prettify_out(self, text):
+    @staticmethod
+    def prettify_out(text):
+        """
+        Prettified output for text elements
+        """
         print(
             "\n".join(
                 textwrap.wrap(
@@ -466,6 +462,9 @@ class AvaBulletin:
         )
 
     def print_if_attr_exists(self, element, attribute):
+        """
+        Print text element if Attribute exists
+        """
         if hasattr(self, element):
             if hasattr(getattr(self, element), attribute):
                 if not getattr(getattr(self, element), attribute) is None:
@@ -479,7 +478,7 @@ class AvaBulletin:
 
     def cli_out(self):
         """
-        ToDo -- Not working at the moment
+        Terminal output on CLI
         """
         print("╔═════ AvaReport ══════════════════════════════════════════")
         print("║ Bulletin:            ", self.bulletinID)
@@ -514,15 +513,8 @@ class AvaBulletin:
                     "\n║    Aspects: ",
                     problem.aspects,
                 )
-            except:
+            except: # pylint: disable=bare-except
                 print("║ Problem: ", problem.problemType)
-
-        """
-        if len(self.dangerpattern)  > 0:
-            print('╟───── Danger Patterns')
-            for dangerpattern in self.dangerpattern:
-                print('║ ', dangerpattern)
-        """
 
         print("╟───── Bulletin Texts ─────")
         if hasattr(self, "highlights"):
@@ -542,31 +534,5 @@ class AvaBulletin:
 
         if hasattr(self.tendency, "tendencyComment"):
             self.prettify_out("tendencyComment: " + self.tendency.tendencyComment)
-
-        """
-        if hasattr(self.avalancheActivity, 'highlights'):
-            self.prettify_out('avalancheActivityHighlights: ' +  self.avalancheActivity.highlights)
-            
-        if hasattr(self.avalancheActivity, 'comment'):
-            self.prettify_out('avalancheActivityComment: ' +  self.avalancheActivity.comment)
-            
-        if hasattr(self.snowpackStructure, 'highlights'):
-            self.prettify_out('snowpackStructureHighlights: ' +  self.snowpackStructure.highlights)
-            
-        if hasattr(self.snowpackStructure, 'comment'):
-            self.prettify_out('snowpackStructureComment: ' +  self.snowpackStructure.comment)
-        
-        if hasattr(self.travelAdvisory, 'highlights'):
-            self.prettify_out('travelAdvisoryHighlights: ' +  self.travelAdvisory.highlights)
-            
-        if hasattr(self.travelAdvisory, 'comment'):
-            self.prettify_out('travelAdvisoryComment: ' +  self.travelAdvisory.comment)
-            
-        if hasattr(self.wxSynopsis, 'highlights'):
-            self.prettify_out('wxSynopsisHighlights: ' +  self.wxSynopsis.highlights)
-            
-        if hasattr(self.wxSynopsis, 'comment'):
-            self.prettify_out('wxSynopsisComment: ' +  self.wxSynopsis.comment)
-        """
 
         print("╚═══════════════════════════════════════════════════════════\n")

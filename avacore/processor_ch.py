@@ -15,7 +15,6 @@
 from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
-import pytz
 import urllib.request
 import zipfile
 import copy
@@ -24,13 +23,13 @@ import json
 import logging
 import re
 
+import pytz
+
 from avacore import pyAvaCore
 from avacore.png import png
 from avacore.avabulletin import (
-    AvaBulletin,
     DangerRating,
     AvalancheProblem,
-    Elevation,
     Region,
     Texts,
 )
@@ -50,14 +49,17 @@ def fetch_files_ch(lang, path):
             "https://www.slf.ch/avalanche/bulletin/" + lang + "/gk_region2pdf.txt",
             path + "/swiss/gk_region2pdf.txt",
         )
-    except:
-        open(path + "/swiss/gk_region2pdf.txt", "a").close()
+    except: # pylint: disable=bare-except
+        logging.warning("Could not locate gk_regions2pdf.txt")
 
     with zipfile.ZipFile(path + "/swiss/bulletin_" + lang + ".zip", "r") as zip_ref:
         zip_ref.extractall(path + "/swiss/")
 
 
 def append_to_list(list_r, element):
+    """
+    Append Element to List, if element is not yet there
+    """
     if not element in list_r:
         list_r.append(element)
         return list_r
@@ -114,6 +116,9 @@ def get_prone_locations(img_text):
 
 
 def clean_html_string(to_clean):
+    """
+    Removes or replaces unwanted (HTML control) sequences from String
+    """
     to_clean = re.sub(
         r'(\<div class="header-5-weather"\>.*\<\/div\>)', r"§newLine§\1:", to_clean
     )
@@ -127,21 +132,23 @@ def clean_html_string(to_clean):
     to_clean = re.sub(r"<br \/>", "\n", to_clean)
     to_clean = re.sub(r"<br>", "\n", to_clean)
     to_clean = re.sub(r"<\/ul>", "\n", to_clean)
-    # to_clean = re.sub('^(\n)', '', to_clean)
     to_clean = re.sub(r'<ul class=\\"bullet-list-indent', "", to_clean)
     to_clean = re.sub(r'<li class=\\"bullet-list-item', "- ", to_clean)
     to_clean = re.sub(r"\\<\/li>", "\n", to_clean)
     to_clean = re.sub(r"§newLine§", "\n", to_clean)
-    to_clean = to_clean.strip()
-    return to_clean
+    return to_clean.strip()
 
 
 def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
     """
     Download the reports for CH
     """
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-branches
+    # pylint: disable=too-many-statements
 
     reports = []
+    final_reports = []
 
     if not cached:
         fetch_files_ch(lang, path)
@@ -339,16 +346,15 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
                     comment = re.sub(r"\(see.*map\)", "", comment)
                     avalancheActivity.comment += comment + " "
                 else:
-                    print("Error parsing avActComment in:", report.bulletinID)
+                    logging.warning("Error parsing avActComment in: %s", report.bulletinID)
 
             avalancheActivity.comment = clean_html_string(avalancheActivity.comment)
             report.avalancheActivity = avalancheActivity
 
             if problems:
-                """Optional Feature to parse Problems from the swiss Reports"""
+                # Optional Feature to parse Problems from the swiss Reports
                 for element in texts:
                     avProblem = re.search(r"(?<=><h4>)(.|\n)*?(?=<\/h4>)", element)
-                    # report.avalancheActivityComment = avProblem.group(0)
                     for word in avProblem.group(0).lower().split():
                         problem_type_text = ""
 
@@ -369,8 +375,6 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
                             problem = AvalancheProblem()
                             problem.problemType = problem_type_text
                             report.avalancheProblems.append(problem)
-
-        final_reports = []
 
         for combination in bulletin_combinations:
             am_idx = "-"
@@ -417,4 +421,4 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
                 )
                 final_reports.append(combined_report)
 
-        return final_reports
+    return final_reports
