@@ -22,6 +22,7 @@ pylint:
   allow_failure: true
   script:
     - python -V
+    - pip install --requirement requirements.txt
     - pip install pylint
     - pylint avacore --disable=invalid-name --max-line-length=140
 
