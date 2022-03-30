@@ -22,6 +22,7 @@ import pytz
 import dateutil.parser
 import logging
 import re
+import itertools
 
 from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Elevation, Region, Texts
 
@@ -111,7 +112,8 @@ def get_reports_from_json(sais_reports):
                 danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(int(rating))
                 danger_rating.elevation.lowerBound = boundary
-                danger_rating.aspect = aspect_list
+                danger_rating.customData =  {"SAIS": {"aspects": aspect_list}}
+                # danger_rating.aspect = aspect_list
                 report.dangerRatings.append(danger_rating)
 
             for rating in set_danger_ratings_lw:
@@ -123,7 +125,8 @@ def get_reports_from_json(sais_reports):
                 danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(int(rating))
                 danger_rating.elevation.upperBound = boundary
-                danger_rating.aspect = aspect_list
+                danger_rating.customData =  {"SAIS": {"aspects": aspect_list}}
+                # danger_rating.aspect = aspect_list
                 report.dangerRatings.append(danger_rating)
 
         reports.append(report)
