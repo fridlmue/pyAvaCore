@@ -22,7 +22,14 @@ import re
 import string
 
 from avacore import pyAvaCore
-from avacore.avabulletin import AvaBulletin, DangerRating, AvalancheProblem, Region, Texts
+from avacore.avabulletin import (
+    AvaBulletin,
+    DangerRating,
+    AvalancheProblem,
+    Region,
+    Texts,
+)
+
 
 def download_report_fr(region_id):
     try:
@@ -30,33 +37,37 @@ def download_report_fr(region_id):
     except ImportError:
         import xml.etree.ElementTree as ET
 
-    response = urllib.request.urlopen('https://meteofrance.com/')
+    response = urllib.request.urlopen("https://meteofrance.com/")
     headers = response.getheaders()
-    session_cookie_raw = response.getheader('Set-Cookie')
-    session_cookie = re.sub('mfsession=', '', session_cookie_raw.split(';')[0])
+    session_cookie_raw = response.getheader("Set-Cookie")
+    session_cookie = re.sub("mfsession=", "", session_cookie_raw.split(";")[0])
 
-    access_token = ''
+    access_token = ""
     shift_by = 13
     for c in session_cookie:
         if c.isdigit() or c in string.punctuation:
             access_token += c
         else:
-            c_a = 'A' if c.isupper() else 'a'
+            c_a = "A" if c.isupper() else "a"
             index = ord(c) - ord(c_a)
-            access_token += (chr(ord(c_a) + (index + shift_by) % 26))
+            access_token += chr(ord(c_a) + (index + shift_by) % 26)
 
-    req = Request('https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain=' + re.sub('FR-', '', region_id) +  \
-                '&report_type=Forecast&report_subtype=BRA')
-    req.add_header('Authorization', 'Bearer ' + access_token)
-    logging.info('Fetching %s', req.full_url)
+    req = Request(
+        "https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain="
+        + re.sub("FR-", "", region_id)
+        + "&report_type=Forecast&report_subtype=BRA"
+    )
+    req.add_header("Authorization", "Bearer " + access_token)
+    logging.info("Fetching %s", req.full_url)
     response_content = urlopen(req).read()
 
     try:
-        root = ET.fromstring(response_content.decode('utf-8'))
+        root = ET.fromstring(response_content.decode("utf-8"))
     except Exception as r_e:
-        print('error parsing ElementTree: ' + str(r_e))
+        print("error parsing ElementTree: " + str(r_e))
 
     return root
+
 
 def process_all_reports_fr():
     all_reports = []
@@ -66,10 +77,11 @@ def process_all_reports_fr():
             all_reports.append(report)
     return all_reports
 
-def process_reports_fr(region_id, path='', cached=False):
-    '''
+
+def process_reports_fr(region_id, path="", cached=False):
+    """
     Download report for specified france region
-    '''
+    """
     try:
         import xml.etree.cElementTree as ET
     except ImportError:
@@ -80,130 +92,145 @@ def process_reports_fr(region_id, path='', cached=False):
 
     else:
         m_root = ET.parse(path)
-        for bulletins in m_root.iter(tag='BULLETINS_NEIGE_AVALANCHE'):
+        for bulletins in m_root.iter(tag="BULLETINS_NEIGE_AVALANCHE"):
             root = bulletins
 
     report = AvaBulletin()
     reports = []
 
-    report.regions.append(Region('FR-' + root.attrib.get('ID').zfill(2)))
-    report.publicationTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
-    report.validTime.startTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEBULLETIN')))
-    report.validTime.endTime = pytz.timezone("Europe/Paris").localize(dateutil.parser.parse(root.attrib.get('DATEVALIDITE')))
-    
+    report.regions.append(Region("FR-" + root.attrib.get("ID").zfill(2)))
+    report.publicationTime = pytz.timezone("Europe/Paris").localize(
+        dateutil.parser.parse(root.attrib.get("DATEBULLETIN"))
+    )
+    report.validTime.startTime = pytz.timezone("Europe/Paris").localize(
+        dateutil.parser.parse(root.attrib.get("DATEBULLETIN"))
+    )
+    report.validTime.endTime = pytz.timezone("Europe/Paris").localize(
+        dateutil.parser.parse(root.attrib.get("DATEVALIDITE"))
+    )
+
     am_danger_ratings = []
 
-    for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
-        
+    for cartoucherisque in root.iter(tag="CARTOUCHERISQUE"):
+
         danger_rating_pre = DangerRating()
         aspects = []
-        for pente in cartoucherisque.iter(tag='PENTE'):
+        for pente in cartoucherisque.iter(tag="PENTE"):
 
-            if pente.get('N') == 'true':
-                aspects.append('N')
-            if pente.get('NE') == 'true':
-                aspects.append('NE')
-            if pente.get('E') == 'true':
-                aspects.append('E')
-            if pente.get('SE') == 'true':
-                aspects.append('SE')
-            if pente.get('S') == 'true':
-                aspects.append('S')
-            if pente.get('SW') == 'true':
-                aspects.append('SW')
-            if pente.get('W') == 'true':
-                aspects.append('W')
-            if pente.get('NW') == 'true':
-                aspects.append('NW')
+            if pente.get("N") == "true":
+                aspects.append("N")
+            if pente.get("NE") == "true":
+                aspects.append("NE")
+            if pente.get("E") == "true":
+                aspects.append("E")
+            if pente.get("SE") == "true":
+                aspects.append("SE")
+            if pente.get("S") == "true":
+                aspects.append("S")
+            if pente.get("SW") == "true":
+                aspects.append("SW")
+            if pente.get("W") == "true":
+                aspects.append("W")
+            if pente.get("NW") == "true":
+                aspects.append("NW")
 
-        report.customData = {'MeteoFrance': {'avalancheProneLocation': {'aspects': aspects}}}
+        report.customData = {
+            "MeteoFrance": {"avalancheProneLocation": {"aspects": aspects}}
+        }
 
-
-        for risque in cartoucherisque.iter(tag='RISQUE'):
+        for risque in cartoucherisque.iter(tag="RISQUE"):
             danger_rating = copy.deepcopy(danger_rating_pre)
-            danger_rating.set_mainValue_int(int(risque.attrib.get('RISQUE1')))
-            danger_rating.elevation.auto_select(risque.attrib.get('LOC1'))
+            danger_rating.set_mainValue_int(int(risque.attrib.get("RISQUE1")))
+            danger_rating.elevation.auto_select(risque.attrib.get("LOC1"))
             am_danger_ratings.append(danger_rating)
-            if not risque.attrib.get('RISQUE2') == '':
+            if not risque.attrib.get("RISQUE2") == "":
                 danger_rating2 = copy.deepcopy(danger_rating_pre)
-                danger_rating2.set_mainValue_int(int(risque.attrib.get('RISQUE2')))
-                danger_rating2.elevation.auto_select(risque.attrib.get('LOC2'))
+                danger_rating2.set_mainValue_int(int(risque.attrib.get("RISQUE2")))
+                danger_rating2.elevation.auto_select(risque.attrib.get("LOC2"))
                 am_danger_ratings.append(danger_rating2)
 
-        for resume in cartoucherisque.iter(tag='RESUME'):
+        for resume in cartoucherisque.iter(tag="RESUME"):
             report.avalancheActivity = Texts(highlights=resume.text)
 
-    for stabilite in root.iter(tag='STABILITE'):
-        for texte in stabilite.iter(tag='TEXTE'):
+    for stabilite in root.iter(tag="STABILITE"):
+        for texte in stabilite.iter(tag="TEXTE"):
             report.avalancheActivity = Texts(comment=texte.text)
 
-    for qualite in root.iter(tag='QUALITE'):
-        for texte in qualite.iter(tag='TEXTE'):
+    for qualite in root.iter(tag="QUALITE"):
+        for texte in qualite.iter(tag="TEXTE"):
             report.snowpackStructure = Texts(comment=texte.text)
 
     pm_danger_ratings = []
     pm_available = False
 
-    for cartoucherisque in root.iter(tag='CARTOUCHERISQUE'):
-        
+    for cartoucherisque in root.iter(tag="CARTOUCHERISQUE"):
+
         danger_rating_pre = DangerRating()
         aspects = []
-        for pente in cartoucherisque.iter(tag='PENTE'):
+        for pente in cartoucherisque.iter(tag="PENTE"):
 
-            if pente.get('N') == 'true':
-                aspects.append('N')
-            if pente.get('NE') == 'true':
-                aspects.append('NE')
-            if pente.get('E') == 'true':
-                aspects.append('E')
-            if pente.get('SE') == 'true':
-                aspects.append('SE')
-            if pente.get('S') == 'true':
-                aspects.append('S')
-            if pente.get('SW') == 'true':
-                aspects.append('SW')
-            if pente.get('W') == 'true':
-                aspects.append('W')
-            if pente.get('NW') == 'true':
-                aspects.append('NW')
+            if pente.get("N") == "true":
+                aspects.append("N")
+            if pente.get("NE") == "true":
+                aspects.append("NE")
+            if pente.get("E") == "true":
+                aspects.append("E")
+            if pente.get("SE") == "true":
+                aspects.append("SE")
+            if pente.get("S") == "true":
+                aspects.append("S")
+            if pente.get("SW") == "true":
+                aspects.append("SW")
+            if pente.get("W") == "true":
+                aspects.append("W")
+            if pente.get("NW") == "true":
+                aspects.append("NW")
 
-        report.customData = {'MeteoFrance': {'avalancheProneLocation': {'aspects': aspects}}}
-        
-        for risque in cartoucherisque.iter(tag='RISQUE'):
-            if not risque.attrib.get('EVOLURISQUE1') == '':
+        report.customData = {
+            "MeteoFrance": {"avalancheProneLocation": {"aspects": aspects}}
+        }
+
+        for risque in cartoucherisque.iter(tag="RISQUE"):
+            if not risque.attrib.get("EVOLURISQUE1") == "":
                 pm_available = True
                 danger_rating_pm = copy.deepcopy(danger_rating_pre)
-                danger_rating_pm.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE1')))
-                danger_rating_pm.elevation.auto_select(risque.attrib.get('LOC1'))
+                danger_rating_pm.set_mainValue_int(
+                    int(risque.attrib.get("EVOLURISQUE1"))
+                )
+                danger_rating_pm.elevation.auto_select(risque.attrib.get("LOC1"))
                 pm_danger_ratings.append(danger_rating_pm)
             else:
                 pm_danger_ratings.append(am_danger_ratings[0])
-            if not risque.attrib.get('EVOLURISQUE2') == '':
+            if not risque.attrib.get("EVOLURISQUE2") == "":
                 pm_available = True
                 danger_rating_pm2 = copy.deepcopy(danger_rating_pre)
-                danger_rating_pm2.set_mainValue_int(int(risque.attrib.get('EVOLURISQUE2')))
-                danger_rating_pm2.elevation.auto_select(risque.attrib.get('LOC2'))
+                danger_rating_pm2.set_mainValue_int(
+                    int(risque.attrib.get("EVOLURISQUE2"))
+                )
+                danger_rating_pm2.elevation.auto_select(risque.attrib.get("LOC2"))
                 pm_danger_ratings.append(danger_rating_pm2)
             elif len(am_danger_ratings) > 1:
                 pm_danger_ratings.append(am_danger_ratings[1])
 
-    report.bulletinID = report.regions[0].regionId + '_' + str(report.publicationTime.isoformat())
+    report.bulletinID = (
+        report.regions[0].regionId + "_" + str(report.publicationTime.isoformat())
+    )
 
     for dangerRating in am_danger_ratings:
         if pm_available:
-            validTimePeriod = 'earlier'
+            validTimePeriod = "earlier"
         else:
-            validTimePeriod = 'all_day'
+            validTimePeriod = "all_day"
         dangerRating.validTimePeriod = validTimePeriod
         report.dangerRatings.append(dangerRating)
 
     if pm_available:
         for dangerRating in pm_danger_ratings:
-            validTimePeriod = 'later'
+            validTimePeriod = "later"
             dangerRating.validTimePeriod = validTimePeriod
             report.dangerRatings.append(dangerRating)
 
-        '''
+        """
         pm_report = copy.deepcopy(report)
         pm_report.predecessor_id = pm_report.bulletinID
         pm_report.bulletinID += '_PM'
@@ -212,10 +239,11 @@ def process_reports_fr(region_id, path='', cached=False):
         pm_report.dangerRatings = pm_danger_ratings
 
         reports.append(pm_report)
-        '''
+        """
     reports.append(report)
 
     return reports
+
 
 fr_regions = [
     "FR-01",

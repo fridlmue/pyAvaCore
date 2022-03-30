@@ -1,17 +1,17 @@
-'''
+"""
 this python-file demonstrates the basic usage of the pyAvaCore module
-'''
+"""
 
 from avacore import pyAvaCore
 
-print ('Enter region ID to print report:')
+print("Enter region ID to print report:")
 region_id = input("(e.g. 'FR-01' or 'AT-07-05'): ")
 
 # Suported region ID's are listed in the REGIONS.md file
-if region_id == '':
-    region_id = 'AT-07-01'
+if region_id == "":
+    region_id = "AT-07-01"
 
-print('Download Report for:', region_id)
+print("Download Report for:", region_id)
 reports, provider, url = pyAvaCore.get_reports(region_id)
 
 # reports contains all reports, that are delivered in a common provided file. Often this is all the reports of one state.

@@ -12,13 +12,13 @@ class TestVorarlberg2022(unittest.TestCase):
         self.assertEqual(bulletins.main_date().isoformat(), "2022-01-31")
         # self.assertEqual(len(bulletins.bulletins), 1)
         ratings = bulletins.max_danger_ratings()
-        
-        '''
+
+        """
         with open(f'tests/test/{bulletins.main_date().isoformat()}-vorarlberg_comp.ratings.json', mode='w', encoding='utf-8') as f:
             import json
             obj = dict(maxDangerRatings=bulletins.max_danger_ratings())
             json.dump(obj, fp=f, indent=2, sort_keys=True)
-        '''
+        """
 
         self.assertEqual(
             ratings,
@@ -94,7 +94,7 @@ class TestVorarlberg2022(unittest.TestCase):
                 "AT-08-06:low": 2,
                 "AT-08-06:low:am": 1,
                 "AT-08-06:low:pm": 2,
-                "AT-08-06:pm": 3
+                "AT-08-06:pm": 3,
             },
         )
 

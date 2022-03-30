@@ -33,7 +33,6 @@ class Bulletins:
             validityDate = validityDate + timedelta(days=1)
         return validityDate.date()
 
-
     def max_danger_ratings(self):
         ratings = dict()
         for bulletin in self.bulletins:
@@ -42,80 +41,140 @@ class Bulletins:
                 local_ratings = dict()
                 regionId = region.regionId
                 # Check for available information in Bulletin
-                
+
                 for danger in bulletin.dangerRatings:
 
                     key_elev = ""
                     key_time = ""
 
-                    if (danger.elevation.toString().startswith(">")):
+                    if danger.elevation.toString().startswith(">"):
                         key_elev = ":high"
-                    elif (danger.elevation.toString().startswith("<")):
+                    elif danger.elevation.toString().startswith("<"):
                         key_elev = ":low"
-                    
-                    if (danger.validTimePeriod == 'earlier'):
+
+                    if danger.validTimePeriod == "earlier":
                         key_time = ":am"
-                    elif (danger.validTimePeriod == 'later'):
+                    elif danger.validTimePeriod == "later":
                         key_time = ":pm"
-                    
-                    local_ratings[f"{regionId}{key_elev}{key_time}"] = danger.get_mainValue_int()
-                    
+
+                    local_ratings[
+                        f"{regionId}{key_elev}{key_time}"
+                    ] = danger.get_mainValue_int()
+
                     if key_elev == "":
-                        local_ratings[f"{regionId}:high{key_time}"] = danger.get_mainValue_int()
-                        local_ratings[f"{regionId}:low{key_time}"] = danger.get_mainValue_int()
-                    
+                        local_ratings[
+                            f"{regionId}:high{key_time}"
+                        ] = danger.get_mainValue_int()
+                        local_ratings[
+                            f"{regionId}:low{key_time}"
+                        ] = danger.get_mainValue_int()
+
                     if key_time == "":
                         if key_elev == "":
-                            local_ratings[f"{regionId}:high:am"] = danger.get_mainValue_int()
-                            local_ratings[f"{regionId}:high:pm"] = danger.get_mainValue_int()
-                            local_ratings[f"{regionId}:low:am"] = danger.get_mainValue_int()
-                            local_ratings[f"{regionId}:low:pm"] = danger.get_mainValue_int()
+                            local_ratings[
+                                f"{regionId}:high:am"
+                            ] = danger.get_mainValue_int()
+                            local_ratings[
+                                f"{regionId}:high:pm"
+                            ] = danger.get_mainValue_int()
+                            local_ratings[
+                                f"{regionId}:low:am"
+                            ] = danger.get_mainValue_int()
+                            local_ratings[
+                                f"{regionId}:low:pm"
+                            ] = danger.get_mainValue_int()
                         else:
-                            local_ratings[f"{regionId}{key_elev}:am"] = danger.get_mainValue_int()
-                            local_ratings[f"{regionId}{key_elev}:pm"] = danger.get_mainValue_int()
-                    
+                            local_ratings[
+                                f"{regionId}{key_elev}:am"
+                            ] = danger.get_mainValue_int()
+                            local_ratings[
+                                f"{regionId}{key_elev}:pm"
+                            ] = danger.get_mainValue_int()
+
                 # Fill missing ratings for the current Region
                 if not f"{regionId}:low" in local_ratings:
-                    if f"{regionId}:low:am" in local_ratings.keys() and f"{regionId}:low:pm" in local_ratings.keys():
-                        local_ratings[f"{regionId}:low"] = max(local_ratings[f"{regionId}:low:am"], local_ratings[f"{regionId}:low:pm"])
+                    if (
+                        f"{regionId}:low:am" in local_ratings.keys()
+                        and f"{regionId}:low:pm" in local_ratings.keys()
+                    ):
+                        local_ratings[f"{regionId}:low"] = max(
+                            local_ratings[f"{regionId}:low:am"],
+                            local_ratings[f"{regionId}:low:pm"],
+                        )
                     elif f"{regionId}:low:am" in local_ratings.keys():
-                        local_ratings[f"{regionId}:low"] = local_ratings[f"{regionId}:low:am"]
+                        local_ratings[f"{regionId}:low"] = local_ratings[
+                            f"{regionId}:low:am"
+                        ]
                     elif f"{regionId}:low:pm" in local_ratings.keys():
-                        local_ratings[f"{regionId}:low"] = local_ratings[f"{regionId}:low:pm"]
+                        local_ratings[f"{regionId}:low"] = local_ratings[
+                            f"{regionId}:low:pm"
+                        ]
                     elif f"{regionId}:high" in local_ratings.keys():
-                        local_ratings[f"{regionId}:low"] = local_ratings[f"{regionId}:high"]
-                        
+                        local_ratings[f"{regionId}:low"] = local_ratings[
+                            f"{regionId}:high"
+                        ]
+
                 if not f"{regionId}:high" in local_ratings:
-                    if f"{regionId}:high:am" in local_ratings.keys() and f"{regionId}:high:pm" in local_ratings.keys():
-                        local_ratings[f"{regionId}:high"] = max(local_ratings[f"{regionId}:high:am"], local_ratings[f"{regionId}:high:pm"])
+                    if (
+                        f"{regionId}:high:am" in local_ratings.keys()
+                        and f"{regionId}:high:pm" in local_ratings.keys()
+                    ):
+                        local_ratings[f"{regionId}:high"] = max(
+                            local_ratings[f"{regionId}:high:am"],
+                            local_ratings[f"{regionId}:high:pm"],
+                        )
                     elif f"{regionId}:high:am" in local_ratings.keys():
-                        local_ratings[f"{regionId}:high"] = local_ratings[f"{regionId}:high:am"]
+                        local_ratings[f"{regionId}:high"] = local_ratings[
+                            f"{regionId}:high:am"
+                        ]
                     elif f"{regionId}:high:pm" in local_ratings.keys():
-                        local_ratings[f"{regionId}:high"] = local_ratings[f"{regionId}:high:pm"]
+                        local_ratings[f"{regionId}:high"] = local_ratings[
+                            f"{regionId}:high:pm"
+                        ]
                     elif f"{regionId}:low" in local_ratings.keys():
-                        local_ratings[f"{regionId}:high"] = local_ratings[f"{regionId}:low"]
-                
-                if not f"{regionId}:high:am" in local_ratings and not not f"{regionId}:high:pm" in local_ratings:
-                    local_ratings[f"{regionId}:high:am"] = local_ratings[f"{regionId}:high:pm"] = local_ratings[f"{regionId}:high"]
-                    
-                if not f"{regionId}:low:am" in local_ratings and not not f"{regionId}:low:pm" in local_ratings:
-                    local_ratings[f"{regionId}:low:am"] = local_ratings[f"{regionId}:low:pm"] = local_ratings[f"{regionId}:low"]
-                
+                        local_ratings[f"{regionId}:high"] = local_ratings[
+                            f"{regionId}:low"
+                        ]
+
+                if (
+                    not f"{regionId}:high:am" in local_ratings
+                    and not not f"{regionId}:high:pm" in local_ratings
+                ):
+                    local_ratings[f"{regionId}:high:am"] = local_ratings[
+                        f"{regionId}:high:pm"
+                    ] = local_ratings[f"{regionId}:high"]
+
+                if (
+                    not f"{regionId}:low:am" in local_ratings
+                    and not not f"{regionId}:low:pm" in local_ratings
+                ):
+                    local_ratings[f"{regionId}:low:am"] = local_ratings[
+                        f"{regionId}:low:pm"
+                    ] = local_ratings[f"{regionId}:low"]
+
                 key = f"{regionId}:high"
                 if not key in local_ratings.keys():
-                    local_ratings[key] = max(local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"])
-                
+                    local_ratings[key] = max(
+                        local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
+                    )
+
                 key = f"{regionId}:low"
                 if not key in local_ratings.keys():
-                    local_ratings[key] = max(local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"])
-                    
+                    local_ratings[key] = max(
+                        local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
+                    )
+
                 key = regionId
-                local_ratings[f"{key}:am"] = max(local_ratings[f"{key}:high:am"], local_ratings[f"{key}:low:am"])
-                    
-                local_ratings[f"{key}:pm"] = max(local_ratings[f"{key}:high:pm"], local_ratings[f"{key}:low:pm"])
+                local_ratings[f"{key}:am"] = max(
+                    local_ratings[f"{key}:high:am"], local_ratings[f"{key}:low:am"]
+                )
+
+                local_ratings[f"{key}:pm"] = max(
+                    local_ratings[f"{key}:high:pm"], local_ratings[f"{key}:low:pm"]
+                )
 
                 local_ratings[key] = max(local_ratings.values())
-                
+
                 ratings.update(local_ratings)
 
         # return 0 independent of "no_snow" or "no_rating"
@@ -165,7 +224,7 @@ class Bulletins:
 
     def from_json(self, bulletins_json):
         self.bulletins = []
-        for bulletin_json in bulletins_json['bulletins']:
+        for bulletin_json in bulletins_json["bulletins"]:
             bulletin = AvaBulletin()
             bulletin.from_json(bulletin_json)
             self.bulletins.append(bulletin)

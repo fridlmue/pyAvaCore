@@ -36,14 +36,15 @@ from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
 
 config = configparser.ConfigParser()
-config.read(f'{__file__}.ini')
+config.read(f"{__file__}.ini")
 
 ### XML-Helpers
 
+
 def get_xml_as_et(url):
-    '''
+    """
     returns the xml-file from url as ElementTree
-    '''
+    """
 
     with urlopen(url) as response:
         response_content = response.read()
@@ -52,17 +53,18 @@ def get_xml_as_et(url):
             import xml.etree.cElementTree as ET
         except ImportError:
             import xml.etree.ElementTree as ET
-        root = ET.fromstring(response_content.decode('utf-8'))
+        root = ET.fromstring(response_content.decode("utf-8"))
     except Exception as r_e:
-        print('error parsing ElementTree: ' + str(r_e))
+        print("error parsing ElementTree: " + str(r_e))
     return root
 
-def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache=False):
-    '''
-    returns array of AvaReports for requested region_id and provider information
-    '''
 
-    url = ''
+def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache=False):
+    """
+    returns array of AvaReports for requested region_id and provider information
+    """
+
+    url = ""
     if region_id.startswith("FR"):
         if region_id == "FR":
             reports = process_all_reports_fr()
@@ -73,7 +75,7 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         url, provider = get_report_url(region_id, local)
     elif region_id.startswith("NO"):
-        if region_id == 'NO':
+        if region_id == "NO":
             reports = process_all_reports_no(region_id)
         else:
             reports = process_reports_no(region_id)
@@ -92,22 +94,26 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
         reports = process_reports_es()
         url, provider = get_report_url(region_id, local)
-    elif region_id.startswith("ES-CT") and not region_id.startswith("ES-CT-L") or region_id.startswith('ES-CT-L-04'):
+    elif (
+        region_id.startswith("ES-CT")
+        and not region_id.startswith("ES-CT-L")
+        or region_id.startswith("ES-CT-L-04")
+    ):
         reports = process_reports_cat()
         url, provider = get_report_url(region_id, local)
     else:
         url, provider = get_report_url(region_id, local)
 
-        logging.info('Fetching %s', url)
+        logging.info("Fetching %s", url)
         root = get_xml_as_et(url)
 
         if region_id.startswith("SI"):
             reports = parse_xml_bavaria(root, "slovenia")
         else:
             reports = parse_xml(root)
-            
+
     relevant_reports = []
-            
+
     for report in reports:
         found_one = False
         for region in report.get_region_list():
@@ -116,26 +122,28 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
                 break
         if found_one:
             relevant_reports.append(report)
-    
+
     return relevant_reports, provider, url
 
 
-def get_report_url(region_id, local=''): #You can ignore "provider" return value by url, _ = getReportsUrl
-    '''
+def get_report_url(
+    region_id, local=""
+):  # You can ignore "provider" return value by url, _ = getReportsUrl
+    """
     returns the valid URL for requested region_id
-    '''
-    
+    """
+
     region_id_prefix = region_id
     while not region_id_prefix in config.keys():
-        if region_id_prefix.startswith('SI'):
-            region_id_prefix = 'SI'
+        if region_id_prefix.startswith("SI"):
+            region_id_prefix = "SI"
         else:
-            region_id_prefix = '-'.join(region_id_prefix.split('-')[:-1])
+            region_id_prefix = "-".join(region_id_prefix.split("-")[:-1])
 
-    name = config[region_id_prefix]['name']
-    url = config[region_id_prefix]['url']
-    if f'url.{local}' in config[region_id_prefix]:
-        url = config[region_id_prefix][f'url.{local}']
+    name = config[region_id_prefix]["name"]
+    url = config[region_id_prefix]["url"]
+    if f"url.{local}" in config[region_id_prefix]:
+        url = config[region_id_prefix][f"url.{local}"]
     netloc = urlparse(url).netloc
     if "DE" == local.upper():
         provider = f"Die dargestellten Informationen werden bereitgestellt von: {name}. ({netloc})"
@@ -146,10 +154,11 @@ def get_report_url(region_id, local=''): #You can ignore "provider" return value
 
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization of datetime"""
+
     def default(self, obj):
         if isinstance(obj, datetime):
             return obj.isoformat()
         try:
             return obj.toJSON()
-        except: # pylint: disable=bare-except
+        except:  # pylint: disable=bare-except
             return obj.__dict__
