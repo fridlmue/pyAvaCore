@@ -34,6 +34,7 @@ from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_es import process_reports_es
 from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
+from avacore.processor_ad import parse_xml as parse_xml_ad
 
 config = configparser.ConfigParser()
 config.read(f'{__file__}.ini')
@@ -95,6 +96,11 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
     elif region_id.startswith("ES-CT") and not region_id.startswith("ES-CT-L") or region_id.startswith('ES-CT-L-04'):
         reports = process_reports_cat()
         url, provider = get_report_url(region_id, local)
+    elif region_id.startswith("AD"):
+        logging.info('Fetching %s', url)
+        url, provider = get_report_url(region_id, local)
+        root = get_xml_as_et(url)
+        reports = parse_xml_ad(root)
     else:
         url, provider = get_report_url(region_id, local)
 
