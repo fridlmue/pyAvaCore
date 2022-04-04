@@ -95,7 +95,7 @@ def get_reports(region_id, local='en', cache_path=str(Path('cache')), from_cache
         url, provider = get_report_url(region_id, local)
     elif region_id.startswith("ES-CT") and not region_id.startswith("ES-CT-L") or region_id.startswith('ES-CT-L-04'):
         reports = process_reports_cat()
-        url, provider = get_report_url(region_id, local)
+        _, provider = get_report_url(region_id, local)
     elif region_id.startswith("AD"):
         logging.info('Fetching %s', url)
         url, provider = get_report_url(region_id, local)
