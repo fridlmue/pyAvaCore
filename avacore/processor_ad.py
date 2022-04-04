@@ -69,6 +69,4 @@ def parse_xml(root):
 
         bulletins.append(local_bulletin)
 
-        local_bulletin.cli_out()
-
     return bulletins
