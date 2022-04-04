@@ -29,7 +29,7 @@ class Bulletins:
 
     def main_date(self) -> date:
         validityDate: datetime = self.bulletins[0].validTime.startTime
-        if validityDate.hour > 15:
+        if validityDate.hour >= 15:
             validityDate = validityDate + timedelta(days=1)
         return validityDate.date()
 
