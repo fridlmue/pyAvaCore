@@ -46,7 +46,7 @@ class TestAlbina(unittest.TestCase):
         self.assertNotIn("AT-07-01", report.get_region_list())
         self.assertEqual(report.dangerRatings[0].mainValue, "considerable")
         self.assertEqual(report.dangerRatings[0].get_mainValue_int(), 3)
-        self.assertEqual(report.dangerRatings[0].elevation.lowerBound, "Treeline")
+        self.assertEqual(report.dangerRatings[0].elevation.lowerBound, "treeline")
         self.assertEqual(report.avalancheProblems[0].problemType, "wind_drifted_snow")
         self.assertEqual(report.avalancheProblems[1].problemType, "gliding_snow")
         self.assertEqual(

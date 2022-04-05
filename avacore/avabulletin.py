@@ -91,7 +91,8 @@ class Elevation:
         Auto-Selct from different possible ways of elevation description if it is lower or upper bound.
         """
         if not auto_select is None:
-            auto_select = auto_select.replace("Forestline", "Treeline")
+            auto_select = auto_select.replace('Forestline', 'treeline')
+            auto_select = auto_select.replace('Treeline', 'treeline')
             if "Hi" in auto_select:
                 self.lowerBound = re.sub(r"ElevationRange_(.+)Hi", r"\1", auto_select)
             if "Lo" in auto_select or "Lw" in auto_select:

@@ -24,14 +24,14 @@ class TestAlbinaElevationBand(unittest.TestCase):
         self.assertNotIn("IT-32-BZ-01", report.get_region_list())
         self.assertEqual(report.dangerRatings[0].mainValue, "moderate")
         self.assertEqual(report.dangerRatings[0].get_mainValue_int(), 2)
-        self.assertEqual(report.dangerRatings[0].elevation.lowerBound, "Treeline")
+        self.assertEqual(report.dangerRatings[0].elevation.lowerBound, "treeline")
         self.assertEqual(report.dangerRatings[0].validTimePeriod, "earlier")
         self.assertRaises(
             AttributeError, getattr, report.dangerRatings[0].elevation, "upperBound"
         )
         self.assertEqual(report.dangerRatings[1].mainValue, "low")
         self.assertEqual(report.dangerRatings[1].get_mainValue_int(), 1)
-        self.assertEqual(report.dangerRatings[1].elevation.upperBound, "Treeline")
+        self.assertEqual(report.dangerRatings[1].elevation.upperBound, "treeline")
         self.assertEqual(report.dangerRatings[1].validTimePeriod, "earlier")
         self.assertRaises(
             AttributeError, getattr, report.dangerRatings[1].elevation, "lowerBound"
@@ -53,7 +53,7 @@ class TestAlbinaElevationBand(unittest.TestCase):
 
         self.assertEqual(report.avalancheProblems[0].problemType, "wind_drifted_snow")
         self.assertIn("N", report.avalancheProblems[0].aspects)
-        self.assertEqual(report.avalancheProblems[0].elevation.lowerBound, "Treeline")
+        self.assertEqual(report.avalancheProblems[0].elevation.lowerBound, "treeline")
         self.assertEqual(report.avalancheProblems[0].validTimePeriod, "earlier")
 
         self.assertEqual(report.avalancheProblems[1].problemType, "wet_snow")
@@ -70,7 +70,7 @@ class TestAlbinaElevationBand(unittest.TestCase):
         self.assertEqual(report.avalancheProblems[3].problemType, "wet_snow")
         self.assertIn("N", report.avalancheProblems[3].aspects)
         self.assertNotIn("S", report.avalancheProblems[3].aspects)
-        self.assertEqual(report.avalancheProblems[3].elevation.upperBound, "Treeline")
+        self.assertEqual(report.avalancheProblems[3].elevation.upperBound, "treeline")
         self.assertEqual(report.avalancheProblems[3].validTimePeriod, "later")
 
 
