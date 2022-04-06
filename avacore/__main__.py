@@ -78,7 +78,7 @@ def download_region(regionID):
         logging.info("Writing %s", f.name)
         bulletins_generic = json.loads(
             json.dumps(bulletins, cls=JSONEncoder, indent=2)
-        )  # ToDo find better way. Probably with JSONEncoder directly
+        )  # find better way. Probably with JSONEncoder directly
         bulletins_generic = remove_empty_elements(bulletins_generic)
         json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
     with open(

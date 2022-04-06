@@ -27,6 +27,7 @@ from avacore.avabulletin import (
     Elevation,
     Source,
     Texts,
+    Provider
 )
 
 CAAMLTAG = "{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}"
@@ -213,8 +214,10 @@ def parse_xml(root):
             for source in observations.iter(tag=CAAMLTAG + "Operation"):
                 for source_name in source.iter(tag=CAAMLTAG + "name"):
                     report.source = Source(
-                        provider_name=source_name.text,
-                        provider_website=str("https://" + source_name.text),
+                        provider = Provider(
+                            name=source_name.text,
+                            website=str("https://" + source_name.text),
+                        )
                     )
 
         report.wxSynopsis = wxSynopsis

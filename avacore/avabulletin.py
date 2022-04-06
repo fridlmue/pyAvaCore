@@ -62,12 +62,11 @@ class Source:
     person: str
     """Bulletin Author DEVIATES FROM CAAMLv6"""
 
-    def __init__(self, provider_website=None, provider_name=None, person=None):
-        if not provider_website is None:
-            self.provider = Provider(name=provider_name, website=provider_website)
+    def __init__(self, provider=None, person=None):
+        if not provider is None:
+            self.provider = provider
         if not person is None:
-            self.persion = person
-
+            self.person = person
 
 class Elevation:
     """
@@ -402,14 +401,28 @@ class AvaBulletin:
         return region_list
 
     def from_json(self, bulletin_json):
+        # pylint: disable=too-many-branches
         """
         convert to avaBulletin from JSON
         """
         attributes = AvaBulletin.__dict__["__annotations__"]
         for attribute in attributes:
             if not attribute.startswith("__") and attribute in bulletin_json:
-                if attributes[attribute] in {str, datetime}:
+                if attributes[attribute] in {str, datetime, dict}:
                     setattr(self, attribute, bulletin_json[attribute])
+
+                elif str(attributes[attribute]) == "<class 'avacore.avabulletin.Texts'>":
+                    highlights = None
+                    comments = None
+                    if hasattr(bulletin_json[attribute], "highlights"):
+                        highlights = bulletin_json[attribute]["highlights"]
+                    if hasattr(bulletin_json[attribute], "comment"):
+                        highlights = bulletin_json[attribute]["comment"]
+                    setattr(self, attribute, Texts(
+                            highlights,
+                            comments
+                        )
+                    )
 
                 elif attribute == "regions":
                     for region in bulletin_json[attribute]:
@@ -444,6 +457,15 @@ class AvaBulletin:
                         bulletin_json[attribute].get("validTime"),
                         bulletin_json[attribute].get("tendencyComment"),
                     )
+
+                elif attribute == "source":
+                    if hasattr(bulletin_json[attribute], "provider"):
+                        self.source = Source(provider=bulletin_json[attribute]["provider"])
+                    elif hasattr(bulletin_json[attribute], "person"):
+                        self.source = Source(person=bulletin_json[attribute]["website"])
+
+                elif attribute == "customData":
+                    self.customData = bulletin_json[attribute]
 
                 else:
                     print(
