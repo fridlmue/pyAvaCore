@@ -14,6 +14,8 @@
 """
 
 # Generated using https://app.quicktype.io/
+# pylint: skip-file
+
 from typing import Optional, List, Any, TypeVar, Callable, Type, cast
 
 
@@ -73,21 +75,48 @@ class Geometry:
     type: Optional[str]
     coordinates: Optional[List[List[List[List[float]]]]]
 
-    def __init__(self, type: Optional[str], coordinates: Optional[List[List[List[List[float]]]]]) -> None:
+    def __init__(
+        self, type: Optional[str], coordinates: Optional[List[List[List[List[float]]]]]
+    ) -> None:
         self.type = type
         self.coordinates = coordinates
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Geometry':
+    def from_dict(obj: Any) -> "Geometry":
         assert isinstance(obj, dict)
         type = from_union([from_str, from_none], obj.get("type"))
-        coordinates = from_union([lambda x: from_list(lambda x: from_list(lambda x: from_list(lambda x: from_list(from_float, x), x), x), x), from_none], obj.get("coordinates"))
+        coordinates = from_union(
+            [
+                lambda x: from_list(
+                    lambda x: from_list(
+                        lambda x: from_list(lambda x: from_list(from_float, x), x), x
+                    ),
+                    x,
+                ),
+                from_none,
+            ],
+            obj.get("coordinates"),
+        )
         return Geometry(type, coordinates)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["type"] = from_union([from_str, from_none], self.type)
-        result["coordinates"] = from_union([lambda x: from_list(lambda x: from_list(lambda x: from_list(lambda x: from_list(to_float_coordinate, x), x), x), x), from_none], self.coordinates)
+        result["coordinates"] = from_union(
+            [
+                lambda x: from_list(
+                    lambda x: from_list(
+                        lambda x: from_list(
+                            lambda x: from_list(to_float_coordinate, x), x
+                        ),
+                        x,
+                    ),
+                    x,
+                ),
+                from_none,
+            ],
+            self.coordinates,
+        )
         return result
 
 
@@ -97,19 +126,27 @@ class Properties:
     elevation: Optional[str]
     max_danger_rating: Optional[int]
 
-    def __init__(self, threshold: None, id: Optional[str], elevation: Optional[str], max_danger_rating: Optional[int]) -> None:
+    def __init__(
+        self,
+        threshold: None,
+        id: Optional[str],
+        elevation: Optional[str],
+        max_danger_rating: Optional[int],
+    ) -> None:
         self.threshold = threshold
         self.id = id
         self.elevation = elevation
         self.max_danger_rating = max_danger_rating
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Properties':
+    def from_dict(obj: Any) -> "Properties":
         assert isinstance(obj, dict)
         threshold = from_none(obj.get("threshold"))
         id = from_union([from_str, from_none], obj.get("id"))
         elevation = from_union([from_str, from_none], obj.get("elevation"))
-        max_danger_rating = from_union([from_int, from_none], obj.get("maxDangerRating"))
+        max_danger_rating = from_union(
+            [from_int, from_none], obj.get("maxDangerRating")
+        )
         return Properties(threshold, id, elevation, max_danger_rating)
 
     def to_dict(self) -> dict:
@@ -117,7 +154,9 @@ class Properties:
         result["threshold"] = from_none(self.threshold)
         result["id"] = from_union([from_str, from_none], self.id)
         result["elevation"] = from_union([from_str, from_none], self.elevation)
-        result["maxDangerRating"] = from_union([from_int, from_none], self.max_danger_rating)
+        result["maxDangerRating"] = from_union(
+            [from_int, from_none], self.max_danger_rating
+        )
         return result
 
 
@@ -126,24 +165,35 @@ class Feature:
     properties: Optional[Properties]
     geometry: Optional[Geometry]
 
-    def __init__(self, type: Optional[str], properties: Optional[Properties], geometry: Optional[Geometry]) -> None:
+    def __init__(
+        self,
+        type: Optional[str],
+        properties: Optional[Properties],
+        geometry: Optional[Geometry],
+    ) -> None:
         self.type = type
         self.properties = properties
         self.geometry = geometry
 
     @staticmethod
-    def from_dict(obj: Any) -> 'Feature':
+    def from_dict(obj: Any) -> "Feature":
         assert isinstance(obj, dict)
         type = from_union([from_str, from_none], obj.get("type"))
-        properties = from_union([Properties.from_dict, from_none], obj.get("properties"))
+        properties = from_union(
+            [Properties.from_dict, from_none], obj.get("properties")
+        )
         geometry = from_union([Geometry.from_dict, from_none], obj.get("geometry"))
         return Feature(type, properties, geometry)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["type"] = from_union([from_str, from_none], self.type)
-        result["properties"] = from_union([lambda x: to_class(Properties, x), from_none], self.properties)
-        result["geometry"] = from_union([lambda x: to_class(Geometry, x), from_none], self.geometry)
+        result["properties"] = from_union(
+            [lambda x: to_class(Properties, x), from_none], self.properties
+        )
+        result["geometry"] = from_union(
+            [lambda x: to_class(Geometry, x), from_none], self.geometry
+        )
         return result
 
 
@@ -156,14 +206,19 @@ class FeatureCollection:
         self.features = features
 
     @staticmethod
-    def from_dict(obj: Any) -> 'FeatureCollection':
+    def from_dict(obj: Any) -> "FeatureCollection":
         assert isinstance(obj, dict)
         type = from_union([from_str, from_none], obj.get("type"))
-        features = from_union([lambda x: from_list(Feature.from_dict, x), from_none], obj.get("features"))
+        features = from_union(
+            [lambda x: from_list(Feature.from_dict, x), from_none], obj.get("features")
+        )
         return FeatureCollection(type, features)
 
     def to_dict(self) -> dict:
         result: dict = {}
         result["type"] = from_union([from_str, from_none], self.type)
-        result["features"] = from_union([lambda x: from_list(lambda x: to_class(Feature, x), x), from_none], self.features)
+        result["features"] = from_union(
+            [lambda x: from_list(lambda x: to_class(Feature, x), x), from_none],
+            self.features,
+        )
         return result
