@@ -25,9 +25,9 @@ import re
 
 import pytz
 
-from avacore import pyAvaCore
 from avacore.png import png
 from avacore.avabulletin import (
+    AvaBulletin,
     DangerRating,
     AvalancheProblem,
     Region,
@@ -49,7 +49,7 @@ def fetch_files_ch(lang, path):
             "https://www.slf.ch/avalanche/bulletin/" + lang + "/gk_region2pdf.txt",
             path + "/swiss/gk_region2pdf.txt",
         )
-    except: # pylint: disable=bare-except
+    except:  # pylint: disable=bare-except
         logging.warning("Could not locate gk_regions2pdf.txt")
 
     with zipfile.ZipFile(path + "/swiss/bulletin_" + lang + ".zip", "r") as zip_ref:
@@ -161,7 +161,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
 
         # region_id = region_id[-4:]
 
-        common_report = pyAvaCore.AvaBulletin()
+        common_report = AvaBulletin()
 
         begin, end = data["validity"].split("/")
 
@@ -346,7 +346,9 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
                     comment = re.sub(r"\(see.*map\)", "", comment)
                     avalancheActivity.comment += comment + " "
                 else:
-                    logging.warning("Error parsing avActComment in: %s", report.bulletinID)
+                    logging.warning(
+                        "Error parsing avActComment in: %s", report.bulletinID
+                    )
 
             avalancheActivity.comment = clean_html_string(avalancheActivity.comment)
             report.avalancheActivity = avalancheActivity

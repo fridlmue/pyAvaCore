@@ -213,13 +213,13 @@ class Bulletins:
         def affects_danger(d: DangerRating):
             if not d.elevation:
                 return True
-            elif not (
+            if not (
                 hasattr(d.elevation, "lowerBound") or hasattr(d.elevation, "upperBound")
             ):
                 return True
-            elif hasattr(d.elevation, "upperBound") and elevation == "low":
+            if hasattr(d.elevation, "upperBound") and elevation == "low":
                 return True
-            elif hasattr(d.elevation, "lowerBound") and elevation == "high":
+            if hasattr(d.elevation, "lowerBound") and elevation == "high":
                 return True
 
             return False

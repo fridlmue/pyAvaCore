@@ -13,21 +13,17 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-import json
-import datetime
 from datetime import timedelta
-from datetime import datetime
 import urllib.request
-import pytz
-import dateutil.parser
 import re
 import copy
 
-from avacore import pyAvaCore
+import pytz
+import dateutil.parser
+
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
-    AvalancheProblem,
     Region,
     Texts,
 )
@@ -40,8 +36,13 @@ code_dir = {
     "NAVARRA": "ES-NA",
 }
 
-# https://stackoverflow.com/questions/19927654/using-dateutil-parser-to-parse-a-date-in-another-language/62581811#62581811
+
 class LocaleParserInfo(dateutil.parser.parserinfo):
+    """
+    Provide local parser info for ES
+    https://stackoverflow.com/questions/19927654/using-dateutil-parser-to-parse-a-date-in-another-language/62581811#62581811
+    """
+
     WEEKDAYS = [
         ("Mon", "Monday"),
         ("Tue", "Tuesday"),
@@ -67,7 +68,10 @@ class LocaleParserInfo(dateutil.parser.parserinfo):
     ]
 
 
-def process_reports_es(today=datetime.today().date(), lang="es"):
+def process_reports_es():
+    """
+    Downloads and returns requested Avalanche Bulletins
+    """
     url = "http://www.aemet.es/xml/montana/p18tarn1.xml"
 
     req = urllib.request.Request(url)
@@ -81,6 +85,12 @@ def process_reports_es(today=datetime.today().date(), lang="es"):
 
 
 def get_reports_from_file(aemet_reports):
+    # pylint: disable=too-many-statements
+    # pylint: disable=too-many-branches
+    # pylint: disable=too-many-locals
+    """
+    Processes downloaded report from file
+    """
     reports = []
     report = AvaBulletin()
 
@@ -138,13 +148,13 @@ def get_reports_from_file(aemet_reports):
             else:
                 region_lines[last_region] = region_lines[last_region] + " " + line
 
-    for elem in region_lines:
+    for elem, item in region_lines.items():
         current_report = copy.deepcopy(report)
         current_report.regions.append(Region(code_dir[elem.upper()]))
         current_report.bulletinID = (
             current_report.regions[0].regionId + "_" + str(report.publicationTime)
         )
-        sentences = region_lines[elem].split(".")
+        sentences = item.split(".")
         pm_ratings_hi = 0
         pm_ratings_lw = 0
         pm_ge = 0
@@ -169,17 +179,11 @@ def get_reports_from_file(aemet_reports):
                         danger_rating2.elevation.lowerBound = re.findall(
                             r"(\d+) m", sentence
                         )[0]
-                        """
-                        if pm_sent:
-                            pm_ratings_hi = int(levels[1])
-                        """
                 elif "porencima" in sentence.replace(" ", ""):
                     danger_rating.elevation.lowerBound = re.findall(
                         r"(\d+) m", sentence
                     )[0]
                     if pm_sent:
-                        # danger_rating2 = DangerRating()
-                        # danger_rating2.elevation.lowerBound = re.findall(r"(\d+) m", sentence)[0]
                         pm_ratings_hi = int(levels[1])
                 elif pm:
                     pm_ge = int(levels[1])
@@ -198,7 +202,7 @@ def get_reports_from_file(aemet_reports):
             )
             pm_report.validTime.startTime = current_report.validTime.endTime
 
-            set = False
+            rating_set = False
 
             for danger_rating in pm_report.dangerRatings:
                 if (
@@ -206,15 +210,15 @@ def get_reports_from_file(aemet_reports):
                     and pm_ratings_lw != 0
                 ):
                     danger_rating.set_mainValue_int(pm_ratings_lw)
-                    set = True
+                    rating_set = True
                 if (
                     hasattr(danger_rating.elevation, "lowerBound")
                     and pm_ratings_hi != 0
                 ):
                     danger_rating.set_mainValue_int(pm_ratings_hi)
-                    set = True
+                    rating_set = True
 
-            if not set:
+            if not rating_set:
                 pm_report.dangerRatings[0].set_mainValue_int(pm_ge)
 
             reports.append(pm_report)

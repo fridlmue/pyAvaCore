@@ -12,19 +12,16 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+# pylint: disable=too-many-locals
 
-from datetime import datetime
-from datetime import timedelta
 from pathlib import Path
 from urllib.request import urlopen
 import argparse
 import json
-import typing
 import logging
 import logging.handlers
 
 from .pyAvaCore import JSONEncoder, get_reports
-from .avabulletin import AvaBulletin
 from .avabulletins import Bulletins
 from .geojson import FeatureCollection
 
@@ -91,9 +88,9 @@ def download_region(regionID):
     ) as f:
         ratings = bulletins.max_danger_ratings()
         relevant_ratings = {}
-        for key in ratings:
+        for key, value in ratings.items():
             if key.startswith(regionID):
-                relevant_ratings[key] = ratings[key]
+                relevant_ratings[key] = value
         maxDangerRatings = {"maxDangerRatings": relevant_ratings}
         logging.info("Writing %s", f.name)
         json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
@@ -112,27 +109,24 @@ def download_region(regionID):
             json.dump(geojson.to_dict(), fp=f)
 
 
-""" 
-Source: https://gist.github.com/nlohmann/c899442d8126917946580e7f84bf7ee7 
-"""
-
-
 def remove_empty_elements(d):
-    """recursively remove empty lists, empty dicts, or None elements from a dictionary"""
+    """
+    # Source: https://gist.github.com/nlohmann/c899442d8126917946580e7f84bf7ee7
+    recursively remove empty lists, empty dicts, or None elements from a dictionary
+    """
 
     def empty(x):
         return x is None or x == {} or x == []
 
     if not isinstance(d, (dict, list)):
         return d
-    elif isinstance(d, list):
+    if isinstance(d, list):
         return [v for v in (remove_empty_elements(v) for v in d) if not empty(v)]
-    else:
-        return {
-            k: v
-            for k, v in ((k, remove_empty_elements(v)) for k, v in d.items())
-            if not empty(v)
-        }
+    return {
+        k: v
+        for k, v in ((k, remove_empty_elements(v)) for k, v in d.items())
+        if not empty(v)
+    }
 
 
 if __name__ == "__main__":

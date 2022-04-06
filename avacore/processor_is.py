@@ -12,19 +12,15 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-from datetime import datetime
-from datetime import timezone
-from datetime import time
-from datetime import timedelta
-import pytz
 import logging
-import typing
 import copy
 import re
-import dateutil.parser
+import xml.etree.ElementTree as ET
 from urllib.request import urlopen, Request
 
-from avacore import pyAvaCore
+import dateutil.parser
+import pytz
+
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -36,37 +32,30 @@ from avacore.avabulletin import (
 
 
 def download_report_is(lang):
-    try:
-        import xml.etree.cElementTree as ET
-    except ImportError:
-        import xml.etree.ElementTree as ET
-
+    """
+    Download reports
+    """
     req = Request(
         "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=" + lang
     )  # lang can only be `is` or `en`
     logging.info("Fetching %s", req.full_url)
-    response_content = urlopen(req).read()
 
-    try:
-        root = ET.fromstring(response_content.decode("utf-8"))
-    except Exception as r_e:
-        print("error parsing ElementTree: " + str(r_e))
-
+    with urlopen(req) as response_content:
+        try:
+            root = ET.fromstring(response_content.read().decode("utf-8"))
+        except Exception as r_e:  # pylint: disable=broad-except
+            print("error parsing ElementTree: " + str(r_e))
     return root
 
 
 def process_reports_is(path="", cached=False, lang="en"):
-    try:
-        import xml.etree.cElementTree as ET
-    except ImportError:
-        import xml.etree.ElementTree as ET
-
+    # pylint: disable=too-many-locals
+    """
+    Processes downloaded report
+    """
     if not cached:
         root = download_report_is(lang)
-
     else:
-        import xml.etree.ElementTree as ET
-
         root = ET.parse(path)
 
     common_report = AvaBulletin()

@@ -1,4 +1,5 @@
 from avacore import pyAvaCore
+from avacore.processor_caamlv5 import parse_xml_vorarlberg
 import unittest
 import xml.etree.ElementTree as ET
 
@@ -6,7 +7,7 @@ import xml.etree.ElementTree as ET
 class TestVorarlberg(unittest.TestCase):
     def test_vorarlberg(self):
         root = ET.parse(f"{__file__}.xml")
-        reports = pyAvaCore.parse_xml_vorarlberg(root)
+        reports = parse_xml_vorarlberg(root)
         self.assertEqual(len(reports), 6)
         report = reports[2]
         self.assertEqual(

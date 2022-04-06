@@ -30,9 +30,9 @@ from avacore.avabulletin import (
 
 
 def get_reports_from_json(sais_reports):
-    '''
+    """
     Builds the CAAML JSONs form the original JSON formats.
-    '''
+    """
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
@@ -158,16 +158,17 @@ def get_reports_from_json(sais_reports):
 
 
 def process_reports_uk():
-    '''
+    """
     Downloads and returns requested Avalanche Bulletins
-    '''
+    """
 
     reports = []
 
     url = "https://www.sais.gov.uk/api?action=getForecast"
 
     headers = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+        "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
     }
 
     req = urllib.request.Request(url, headers=headers)

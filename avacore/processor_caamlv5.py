@@ -12,13 +12,13 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+
 from datetime import datetime
 from datetime import time
 from datetime import timedelta
+import copy
 import pytz
 import dateutil.parser
-import copy
-from avacore import pyAvaCore
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -54,7 +54,10 @@ def et_get_parent(element_tree):
 
 
 def parse_xml(root):
-
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-nested-blocks
+    # pylint: disable=too-many-statements
+    # pylint: disable=too-many-branches
     """parses ALBINA-Style CAAML-XML. root is a ElementTree"""
 
     reports = []
@@ -77,15 +80,9 @@ def parse_xml(root):
         for observations in bulletin:
             et_add_parent_info(observations)
             for locRef in observations.iter(tag=CAAMLTAG + "locRef"):
-                loc_ref = observations.attrib.get("{http://www.w3.org/1999/xlink}href")
+                loc_ref = locRef.attrib.get("{http://www.w3.org/1999/xlink}href")
                 if loc_ref not in report.regions:
-                    report.regions.append(
-                        Region(
-                            observations.attrib.get(
-                                "{http://www.w3.org/1999/xlink}href"
-                            )
-                        )
-                    )
+                    report.regions.append(Region(loc_ref))
             for dateTimeReport in observations.iter(tag=CAAMLTAG + "dateTimeReport"):
                 report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
             for validTime in observations.iter(tag=CAAMLTAG + "validTime"):
@@ -232,9 +229,9 @@ def parse_xml(root):
                 report.dangerRatings.append(pm_danger_ratings[idx])
 
         if report.bulletinID.endswith("_PM"):
-            for bulletin in reports:
-                if bulletin.bulletinID == report.bulletinID[:-3]:
-                    father_bulletin = bulletin
+            for pm_bulletin in reports:
+                if pm_bulletin.bulletinID == report.bulletinID[:-3]:
+                    father_bulletin = pm_bulletin
                     father_bulletin.validTime.endTime = report.validTime.endTime
                     for idx, danger_rating in enumerate(father_bulletin.dangerRatings):
                         father_bulletin.dangerRatings[idx].validTimePeriod = "earlier"
@@ -257,11 +254,14 @@ def parse_xml(root):
 
 
 def parse_xml_vorarlberg(root):
-
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-nested-blocks
+    # pylint: disable=too-many-statements
+    # pylint: disable=too-many-branches
     """parses Vorarlberg-Style CAAML-XML. root is a ElementTree"""
 
     reports = []
-    report = pyAvaCore.AvaBulletin()
+    report = AvaBulletin()
     comment_empty = 1
 
     # Common for every Report:
@@ -472,6 +472,10 @@ def parse_xml_vorarlberg(root):
 
 
 def parse_xml_bavaria(
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-nested-blocks
+    # pylint: disable=too-many-statements
+    # pylint: disable=too-many-branches
     root,
     location="bavaria",
     today=datetime(1, 1, 1, 1, 1, 1),
@@ -521,23 +525,24 @@ def parse_xml_bavaria(
             tag=CAAMLTAG + "wxSynopsisComment"
         ):
             wxSynopsis.comment = wxSynopsisComment.text
-            if type(wxSynopsis.comment) == str:
+            if isinstance(wxSynopsis.comment, str):
                 wxSynopsis.comment = wxSynopsis.comment.strip()
         for snowpackStructureComment in bulletinMeasurements.iter(
             tag=CAAMLTAG + "" "snowpackStructureComment"
         ):
             snowpackStructure.comment = snowpackStructureComment.text
-            if type(snowpackStructure.comment) == str:
+            if isinstance(snowpackStructure.comment, str):
                 snowpackStructure.comment = snowpackStructure.comment.strip()
         for highlights in bulletinMeasurements.iter(tag=CAAMLTAG + "comment"):
             avalancheActivity.highlights = highlights.text
-            if type(avalancheActivity.highlights) == str:
+            if isinstance(avalancheActivity.highlights, str):
                 avalancheActivity.highlights = avalancheActivity.highlights.strip()
 
         for DangerPattern in bulletinMeasurements.iter(tag=CAAMLTAG + "DangerPattern"):
             dp = []
             for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + "type"):
-                report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
+                dp.append(DangerPatternType.text)
+            report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
 
         av_problem_tag = "avProblem" if location == "bavaria" else "AvProblem"
 

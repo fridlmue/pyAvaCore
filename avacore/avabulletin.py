@@ -91,8 +91,8 @@ class Elevation:
         Auto-Selct from different possible ways of elevation description if it is lower or upper bound.
         """
         if not auto_select is None:
-            auto_select = auto_select.replace('Forestline', 'treeline')
-            auto_select = auto_select.replace('Treeline', 'treeline')
+            auto_select = auto_select.replace("Forestline", "treeline")
+            auto_select = auto_select.replace("Treeline", "treeline")
             if "Hi" in auto_select:
                 self.lowerBound = re.sub(r"ElevationRange_(.+)Hi", r"\1", auto_select)
             if "Lo" in auto_select or "Lw" in auto_select:
@@ -222,6 +222,7 @@ class AvalancheProblem:
     """
     Describes the Avalanche Problem
     """
+
     problemType: str
     """problem type as standardized descriptive text"""
     elevation: Elevation
@@ -238,7 +239,7 @@ class AvalancheProblem:
         dangerRating=None,
         aspects=None,
         elevation=None,
-        terrainFeature = None
+        terrainFeature=None,
     ) -> None:
         self.aspects = []
         self.elevation = Elevation()
@@ -288,6 +289,7 @@ class Tendency:
     """
     Describes the Tendency
     """
+
     tendencyType: str
     """string contains decreasing, steady or increasing"""
     validTime: ValidTime
@@ -313,6 +315,7 @@ class Region:
     """
     Describes a Region
     """
+
     name: str
     regionId: str
 
@@ -326,6 +329,7 @@ class Texts:
     """
     Describes Texts in the Bulletion with highlights and coomment
     """
+
     highlights: str
     comment: str
 
@@ -514,7 +518,7 @@ class AvaBulletin:
                     "\n║    Aspects: ",
                     problem.aspects,
                 )
-            except: # pylint: disable=bare-except
+            except:  # pylint: disable=bare-except
                 print("║ Problem: ", problem.problemType)
 
         print("╟───── Bulletin Texts ─────")

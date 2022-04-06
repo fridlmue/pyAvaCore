@@ -31,9 +31,9 @@ from avacore.avabulletin import (
 
 
 def process_reports_cz():
-    '''
+    """
     Downloads and returns requested Avalanche Bulletins
-    '''
+    """
     url = "https://www.horskasluzba.cz/cz/avalanche-json"
 
     headers = {"Content-Type": "application/json; charset=utf-8"}
@@ -52,9 +52,9 @@ def process_reports_cz():
 
 
 def get_reports_fromjson(cz_report):
-    '''
+    """
     Builds the CAAML JSONs form the original JSON formats.
-    '''
+    """
 
     reports = []
 

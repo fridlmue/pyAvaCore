@@ -39,9 +39,9 @@ code_dir = {
 
 
 def process_reports_cat(today=datetime.datetime.today().date(), lang="es"):
-    '''
+    """
     Downloads and returns requested Catalanian (ICGC) avalanche bulletins
-    '''
+    """
 
     reports = []
 
@@ -72,9 +72,9 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang="es"):
 
 
 def get_reports_fromjson(icgc_reports):
-    '''
+    """
     Builds the CAAML JSONs form the ICGC JSON formats.
-    '''
+    """
     reports = []
     report = AvaBulletin()
 

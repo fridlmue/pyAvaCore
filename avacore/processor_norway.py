@@ -32,9 +32,9 @@ from avacore.avabulletin import (
 
 
 def process_reports_no(region_id):
-    '''
+    """
     Downloads and returns requested Avalanche Bulletins
-    '''
+    """
 
     langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
 
@@ -62,9 +62,9 @@ def process_reports_no(region_id):
 
 
 def process_all_reports_no():
-    '''
+    """
     Downloads and returns all norwegian avalanche reports
-    '''
+    """
     all_reports = []
     for region in no_regions:
         try:
@@ -79,9 +79,9 @@ def process_all_reports_no():
 
 
 def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
-    '''
+    """
     Builds the CAAML JSONs form the norwegian JSON formats.
-    '''
+    """
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements

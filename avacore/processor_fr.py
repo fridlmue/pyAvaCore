@@ -13,33 +13,31 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 from urllib.request import urlopen, Request
-import pytz
-import dateutil.parser
-import urllib.request
 import copy
 import logging
 import re
 import string
+import xml.etree.ElementTree as ET
 
-from avacore import pyAvaCore
+import pytz
+import dateutil.parser
+
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
-    AvalancheProblem,
     Region,
     Texts,
 )
 
 
 def download_report_fr(region_id):
-    try:
-        import xml.etree.cElementTree as ET
-    except ImportError:
-        import xml.etree.ElementTree as ET
+    # pylint: disable=import-outside-toplevel
+    """
+    Downloads and returns requested Avalanche Bulletins
+    """
 
-    response = urllib.request.urlopen("https://meteofrance.com/")
-    headers = response.getheaders()
-    session_cookie_raw = response.getheader("Set-Cookie")
+    with urlopen("https://meteofrance.com/") as response:
+        session_cookie_raw = response.getheader("Set-Cookie")
     session_cookie = re.sub("mfsession=", "", session_cookie_raw.split(";")[0])
 
     access_token = ""
@@ -59,17 +57,19 @@ def download_report_fr(region_id):
     )
     req.add_header("Authorization", "Bearer " + access_token)
     logging.info("Fetching %s", req.full_url)
-    response_content = urlopen(req).read()
-
-    try:
-        root = ET.fromstring(response_content.decode("utf-8"))
-    except Exception as r_e:
-        print("error parsing ElementTree: " + str(r_e))
+    with urlopen(req) as response_content:
+        try:
+            root = ET.fromstring(response_content.read().decode("utf-8"))
+        except Exception as r_e:  # pylint: disable=broad-except
+            print("error parsing ElementTree: " + str(r_e))
 
     return root
 
 
 def process_all_reports_fr():
+    """
+    Downloads and returns all Reports for FR (itterating threw region IDs)
+    """
     all_reports = []
     for region in fr_regions:
         reports = process_reports_fr(region)
@@ -79,13 +79,12 @@ def process_all_reports_fr():
 
 
 def process_reports_fr(region_id, path="", cached=False):
+    # pylint: disable=too-many-statements
+    # pylint: disable=too-many-branches
+    # pylint: disable=too-many-locals
     """
-    Download report for specified france region
+    Process XML file for a region
     """
-    try:
-        import xml.etree.cElementTree as ET
-    except ImportError:
-        import xml.etree.ElementTree as ET
 
     if not cached:
         root = download_report_fr(region_id)
@@ -222,7 +221,7 @@ def process_reports_fr(region_id, path="", cached=False):
         else:
             validTimePeriod = "all_day"
         dangerRating.validTimePeriod = validTimePeriod
-        report.dangerRatings.append(dangerRating)
+        report.dangerRatings.append(copy.deepcopy(dangerRating))
 
     if pm_available:
         for dangerRating in pm_danger_ratings:
@@ -230,16 +229,6 @@ def process_reports_fr(region_id, path="", cached=False):
             dangerRating.validTimePeriod = validTimePeriod
             report.dangerRatings.append(dangerRating)
 
-        """
-        pm_report = copy.deepcopy(report)
-        pm_report.predecessor_id = pm_report.bulletinID
-        pm_report.bulletinID += '_PM'
-        report.validTime.endTime = report.validTime.endTime.replace(hour=12)
-        pm_report.validTime.startTime = report.validTime.endTime.replace(hour=12)
-        pm_report.dangerRatings = pm_danger_ratings
-
-        reports.append(pm_report)
-        """
     reports.append(report)
 
     return reports

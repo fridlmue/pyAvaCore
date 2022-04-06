@@ -5,7 +5,7 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    pyAvaCore is distributed in the hope that it will be useful, 
+    pyAvaCore is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
@@ -15,16 +15,13 @@
 
 import configparser
 from datetime import datetime
-from urllib import parse
 from urllib.parse import urlparse
 from urllib.request import urlopen
 from pathlib import Path
-import re
+import xml.etree.cElementTree as ET
 import json
 import logging
-import typing
 
-from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_catalunya import process_reports_cat
@@ -33,7 +30,7 @@ from avacore.processor_cz import process_reports_cz
 from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_es import process_reports_es
 from avacore.processor_is import process_reports_is
-from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria, parse_xml_vorarlberg
+from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
 
 config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
@@ -49,22 +46,20 @@ def get_xml_as_et(url):
     with urlopen(url) as response:
         response_content = response.read()
     try:
-        try:
-            import xml.etree.cElementTree as ET
-        except ImportError:
-            import xml.etree.ElementTree as ET
         root = ET.fromstring(response_content.decode("utf-8"))
-    except Exception as r_e:
+    except Exception as r_e:  # pylint: disable=broad-except
         print("error parsing ElementTree: " + str(r_e))
     return root
 
 
 def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache=False):
+    # pylint: disable=too-many-branches
     """
     returns array of AvaReports for requested region_id and provider information
     """
 
     url = ""
+    region_id = region_id.upper()
     if region_id.startswith("FR"):
         if region_id == "FR":
             reports = process_all_reports_fr()
@@ -124,9 +119,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
     return relevant_reports, provider, url
 
 
-def get_report_url(
-    region_id, local=""
-):
+def get_report_url(region_id, local=""):
     """
     returns the valid URL for requested region_id
     """
@@ -143,7 +136,7 @@ def get_report_url(
     if f"url.{local}" in config[region_id_prefix]:
         url = config[region_id_prefix][f"url.{local}"]
     netloc = urlparse(url).netloc
-    if "DE" == local.upper():
+    if local.upper() == "DE":
         provider = f"Die dargestellten Informationen werden bereitgestellt von: {name}. ({netloc})"
     else:
         provider = f"The displayed information is provided by: {name}. ({netloc})"
@@ -153,10 +146,10 @@ def get_report_url(
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization of datetime"""
 
-    def default(self, obj):
-        if isinstance(obj, datetime):
-            return obj.isoformat()
+    def default(self, o):
+        if isinstance(o, datetime):
+            return o.isoformat()
         try:
-            return obj.toJSON()
+            return o.toJSON()
         except:  # pylint: disable=bare-except
-            return obj.__dict__
+            return o.__dict__
