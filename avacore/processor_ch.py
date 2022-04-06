@@ -156,7 +156,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
     if Path(path + "/swiss/gk_region2pdf.txt").is_file():
 
         # Receives validity information from text.json
-        with open(path + "/swiss/text.json") as fp:
+        with open(path + "/swiss/text.json", encoding="utf8") as fp:
             data = json.load(fp)
 
         # region_id = region_id[-4:]
@@ -230,7 +230,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
         bulletinIDs = []
         bulletin_combinations = set()
         # Receives the ID of the report that matches the selected region_id
-        with open(path + "/swiss/gk_region2pdf.txt") as fp:
+        with open(path + "/swiss/gk_region2pdf.txt", encoding="utf8") as fp:
             for line in fp:
                 bulletinID = line.split("_")[5][:-5]
                 bulletin_combinations.add(bulletinID)

@@ -43,11 +43,11 @@ class Bulletins:
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
-        ratings = dict()
+        ratings = {}
         for bulletin in self.bulletins:
 
             for region in bulletin.regions:
-                local_ratings = dict()
+                local_ratings = {}
                 regionId = region.regionId
 
                 # Check for available information in Bulletin
@@ -103,44 +103,44 @@ class Bulletins:
                 # Fill missing ratings for the current Region
                 if not f"{regionId}:low" in local_ratings:
                     if (
-                        f"{regionId}:low:am" in local_ratings.keys()
-                        and f"{regionId}:low:pm" in local_ratings.keys()
+                        f"{regionId}:low:am" in local_ratings
+                        and f"{regionId}:low:pm" in local_ratings
                     ):
                         local_ratings[f"{regionId}:low"] = max(
                             local_ratings[f"{regionId}:low:am"],
                             local_ratings[f"{regionId}:low:pm"],
                         )
-                    elif f"{regionId}:low:am" in local_ratings.keys():
+                    elif f"{regionId}:low:am" in local_ratings:
                         local_ratings[f"{regionId}:low"] = local_ratings[
                             f"{regionId}:low:am"
                         ]
-                    elif f"{regionId}:low:pm" in local_ratings.keys():
+                    elif f"{regionId}:low:pm" in local_ratings:
                         local_ratings[f"{regionId}:low"] = local_ratings[
                             f"{regionId}:low:pm"
                         ]
-                    elif f"{regionId}:high" in local_ratings.keys():
+                    elif f"{regionId}:high" in local_ratings:
                         local_ratings[f"{regionId}:low"] = local_ratings[
                             f"{regionId}:high"
                         ]
 
                 if not f"{regionId}:high" in local_ratings:
                     if (
-                        f"{regionId}:high:am" in local_ratings.keys()
-                        and f"{regionId}:high:pm" in local_ratings.keys()
+                        f"{regionId}:high:am" in local_ratings
+                        and f"{regionId}:high:pm" in local_ratings
                     ):
                         local_ratings[f"{regionId}:high"] = max(
                             local_ratings[f"{regionId}:high:am"],
                             local_ratings[f"{regionId}:high:pm"],
                         )
-                    elif f"{regionId}:high:am" in local_ratings.keys():
+                    elif f"{regionId}:high:am" in local_ratings:
                         local_ratings[f"{regionId}:high"] = local_ratings[
                             f"{regionId}:high:am"
                         ]
-                    elif f"{regionId}:high:pm" in local_ratings.keys():
+                    elif f"{regionId}:high:pm" in local_ratings:
                         local_ratings[f"{regionId}:high"] = local_ratings[
                             f"{regionId}:high:pm"
                         ]
-                    elif f"{regionId}:low" in local_ratings.keys():
+                    elif f"{regionId}:low" in local_ratings:
                         local_ratings[f"{regionId}:high"] = local_ratings[
                             f"{regionId}:low"
                         ]
@@ -162,13 +162,13 @@ class Bulletins:
                     ] = local_ratings[f"{regionId}:low"]
 
                 key = f"{regionId}:high"
-                if not key in local_ratings.keys():
+                if not key in local_ratings:
                     local_ratings[key] = max(
                         local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
                     )
 
                 key = f"{regionId}:low"
-                if not key in local_ratings.keys():
+                if not key in local_ratings:
                     local_ratings[key] = max(
                         local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
                     )

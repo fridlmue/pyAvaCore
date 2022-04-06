@@ -18,7 +18,7 @@ from datetime import datetime
 from urllib.parse import urlparse
 from urllib.request import urlopen
 from pathlib import Path
-import xml.etree.cElementTree as ET
+import xml.etree.ElementTree as ET
 import json
 import logging
 
