@@ -33,7 +33,7 @@ class Bulletins:
         Returns Main validity date of Report
         """
         validityDate: datetime = self.bulletins[0].validTime.startTime
-        if validityDate.hour > 15:
+        if validityDate.hour >= 15:
             validityDate = validityDate + timedelta(days=1)
         return validityDate.date()
 
