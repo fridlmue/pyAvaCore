@@ -39,6 +39,10 @@ parser.add_argument(
     "--geojson",
     help="eaws-regions directory containing *micro-regions_elevation.geojson.json of",
 )
+parser.add_argument(
+    "--cli", default="n",
+    help="print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)"
+)
 args = parser.parse_args()
 
 Path("logs").mkdir(parents=True, exist_ok=True)
@@ -63,37 +67,41 @@ def download_region(regionID):
     bulletins.bulletins = reports
     validityDate = bulletins.main_date()
 
-    directory = Path(args.output)
-    directory.mkdir(parents=True, exist_ok=True)
-    ext = "zip" if url[-3:] == "zip" else "xml"
-    if url != "":
-        with urlopen(url) as http, open(
-            f"{directory}/{validityDate}-{regionID}.{ext}", mode="wb"
+    if args.cli != "o":
+        directory = Path(args.output)
+        directory.mkdir(parents=True, exist_ok=True)
+        ext = "zip" if url[-3:] == "zip" else "xml"
+        if url != "":
+            with urlopen(url) as http, open(
+                f"{directory}/{validityDate}-{regionID}.{ext}", mode="wb"
+            ) as f:
+                logging.info("Writing %s to %s", url, f.name)
+                f.write(http.read())
+        with open(
+            f"{directory}/{validityDate}-{regionID}.json", mode="w", encoding="utf-8"
         ) as f:
-            logging.info("Writing %s to %s", url, f.name)
-            f.write(http.read())
-    with open(
-        f"{directory}/{validityDate}-{regionID}.json", mode="w", encoding="utf-8"
-    ) as f:
-        logging.info("Writing %s", f.name)
-        bulletins_generic = json.loads(
-            json.dumps(bulletins, cls=JSONEncoder, indent=2)
-        )  # find better way. Probably with JSONEncoder directly
-        bulletins_generic = remove_empty_elements(bulletins_generic)
-        json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
-    with open(
-        f"{directory}/{validityDate}-{regionID}.ratings.json",
-        mode="w",
-        encoding="utf-8",
-    ) as f:
-        ratings = bulletins.max_danger_ratings()
-        relevant_ratings = {}
-        for key, value in ratings.items():
-            if key.startswith(regionID):
-                relevant_ratings[key] = value
-        maxDangerRatings = {"maxDangerRatings": relevant_ratings}
-        logging.info("Writing %s", f.name)
-        json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+            logging.info("Writing %s", f.name)
+            bulletins_generic = json.loads(
+                json.dumps(bulletins, cls=JSONEncoder, indent=2)
+            )  # find better way. Probably with JSONEncoder directly
+            bulletins_generic = remove_empty_elements(bulletins_generic)
+            json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
+        with open(
+            f"{directory}/{validityDate}-{regionID}.ratings.json",
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            ratings = bulletins.max_danger_ratings()
+            relevant_ratings = {}
+            for key, value in ratings.items():
+                if key.startswith(regionID):
+                    relevant_ratings[key] = value
+            maxDangerRatings = {"maxDangerRatings": relevant_ratings}
+            logging.info("Writing %s", f.name)
+            json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+    if args.cli == 'o' or args.cli == 'y':
+        for bulletin in bulletins.bulletins:
+            bulletin.cli_out()
     if args.geojson:
         with open(
             f"{args.geojson}/{regionID}_micro-regions_elevation.geojson.json",
