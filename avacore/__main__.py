@@ -40,8 +40,9 @@ parser.add_argument(
     help="eaws-regions directory containing *micro-regions_elevation.geojson.json of",
 )
 parser.add_argument(
-    "--cli", default="n",
-    help="print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)"
+    "--cli",
+    default="n",
+    help="print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)",
 )
 args = parser.parse_args()
 
@@ -99,7 +100,7 @@ def download_region(regionID):
             maxDangerRatings = {"maxDangerRatings": relevant_ratings}
             logging.info("Writing %s", f.name)
             json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
-    if args.cli in ('o', 'y'):
+    if args.cli in ("o", "y"):
         for bulletin in bulletins.bulletins:
             bulletin.cli_out()
     if args.geojson:

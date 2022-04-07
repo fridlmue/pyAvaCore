@@ -55,6 +55,7 @@ def get_xml_as_et(url):
 
 def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache=False):
     # pylint: disable=too-many-branches
+    # pylint: disable=too-many-statements
     """
     returns array of AvaReports for requested region_id and provider information
     """
@@ -96,7 +97,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         reports = process_reports_cat()
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("AD"):
-        logging.info('Fetching %s', url)
+        logging.info("Fetching %s", url)
         url, provider = get_report_url(region_id, local)
         root = get_xml_as_et(url)
         reports = parse_xml_ad(root)

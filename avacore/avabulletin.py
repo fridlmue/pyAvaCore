@@ -68,6 +68,7 @@ class Source:
         if not person is None:
             self.person = person
 
+
 class Elevation:
     """
     contains a elevation band
@@ -411,18 +412,16 @@ class AvaBulletin:
                 if attributes[attribute] in {str, datetime, dict}:
                     setattr(self, attribute, bulletin_json[attribute])
 
-                elif str(attributes[attribute]) == "<class 'avacore.avabulletin.Texts'>":
+                elif (
+                    str(attributes[attribute]) == "<class 'avacore.avabulletin.Texts'>"
+                ):
                     highlights = None
                     comments = None
                     if hasattr(bulletin_json[attribute], "highlights"):
                         highlights = bulletin_json[attribute]["highlights"]
                     if hasattr(bulletin_json[attribute], "comment"):
                         highlights = bulletin_json[attribute]["comment"]
-                    setattr(self, attribute, Texts(
-                            highlights,
-                            comments
-                        )
-                    )
+                    setattr(self, attribute, Texts(highlights, comments))
 
                 elif attribute == "regions":
                     for region in bulletin_json[attribute]:
@@ -460,7 +459,9 @@ class AvaBulletin:
 
                 elif attribute == "source":
                     if hasattr(bulletin_json[attribute], "provider"):
-                        self.source = Source(provider=bulletin_json[attribute]["provider"])
+                        self.source = Source(
+                            provider=bulletin_json[attribute]["provider"]
+                        )
                     elif hasattr(bulletin_json[attribute], "person"):
                         self.source = Source(person=bulletin_json[attribute]["website"])
 
