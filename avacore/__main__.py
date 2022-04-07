@@ -99,7 +99,7 @@ def download_region(regionID):
             maxDangerRatings = {"maxDangerRatings": relevant_ratings}
             logging.info("Writing %s", f.name)
             json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
-    if args.cli == 'o' or args.cli == 'y':
+    if args.cli in ('o', 'y'):
         for bulletin in bulletins.bulletins:
             bulletin.cli_out()
     if args.geojson:
