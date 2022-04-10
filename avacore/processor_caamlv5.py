@@ -141,7 +141,7 @@ def parse_xml(root):
             for wxSynopsisComment in observations.iter(tag=CAAMLTAG + 'wxSynopsisComment'):
                 report.wxSynopsisComment = wxSynopsisComment.text.replace('&nbsp;', '\n')
             for avActivityComment in observations.iter(tag=CAAMLTAG + 'avActivityComment'):
-                if not avActivityHighlights.text is None:
+                if not avActivityComment.text is None:
                     report.avalancheActivityComment = avActivityComment.text.replace('&nbsp;', '\n')
             for snowpackStructureComment in observations.iter(tag=CAAMLTAG + ''\
                                                               'snowpackStructureComment'):
