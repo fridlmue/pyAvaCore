@@ -27,7 +27,8 @@ ad_ids = {"nord": "AD-01", "centre": "AD-02", "sud": "AD-03"}
 
 
 def parse_xml(root):
-
+    # pylint: disable=too-many-locals
+    # pylint: disable=too-many-nested-blocks
     """parses Andora Danger Ratgin XML"""
 
     bulletins = []
@@ -77,7 +78,6 @@ def parse_xml(root):
                             ratings.append(result)
 
                 elif '-' in idstate:
-                    levels = idstate.split('-')
                     ratings = idstate.split('-')
                     elevation = ['', '']
                     validity = ['earlier', 'later']
