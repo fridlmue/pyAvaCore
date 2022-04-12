@@ -13,6 +13,7 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 from datetime import timedelta
+import re
 import copy
 import pytz
 import dateutil.parser
@@ -50,14 +51,37 @@ def parse_xml(root):
         for neige in geopos.iter("neige"):
             if "risc" in neige.attrib["data"]:
                 idstate = neige.attrib["idstate"]
+
                 if "damunt" in idstate:
                     ratings = idstate.split("damunt")
                     validity = ["all_day", "all_day"]
                     elevation = [">", "<"]
 
-                elif "-" in idstate:
-                    ratings = idstate.split["-"]
-                    elevation = ["", ""]
+                elif 'escala-allau' in idstate:
+                    results = re.findall(r"\d*(\d-\d|\d)", idstate)
+                    ratings = []
+                    loc_validity = ['earlier', 'later']
+                    validity = []
+                    loc_elevation = ["<", ">"]
+                    elevation = []
+                    for idx, result in enumerate(results):
+                        if '-' in result:
+                            loc_ratings = result.split('-')
+                            for idy, loc_rating in enumerate(loc_ratings):
+                                validity.append(loc_validity[idy])
+                                elevation.append(loc_elevation[idx])
+                                ratings.append(loc_rating)
+                        else:
+                            validity.append('all_day')
+                            elevation.append(loc_elevation[idx])
+                            ratings.append(result)
+
+                elif '-' in idstate:
+                    levels = idstate.split('-')
+                    ratings = idstate.split('-')
+                    elevation = ['', '']
+                    validity = ['earlier', 'later']
+
                 else:
                     ratings = [idstate]
                     validity = ["all_day"]
@@ -66,7 +90,7 @@ def parse_xml(root):
                 for idx, rating in enumerate(ratings):
                     dangerRating = DangerRating()
                     dangerRating.set_mainValue_int(int(rating))
-                    dangerRating.elevation.validTimeInterval = validity[idx]
+                    dangerRating.validTimePeriod = validity[idx]
                     dangerRating.elevation.auto_select(elevation[idx])
                     local_bulletin.dangerRatings.append(dangerRating)
 
