@@ -5,425 +5,578 @@
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
-    pyAvaCore is distributed in the hope that it will be useful, 
+    pyAvaCore is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
     GNU General Public License for more details.
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+# pylint: disable=too-few-public-methods
 
-from datetime import datetime
+from datetime import datetime, timedelta, date
 import re
 import typing
 import textwrap
 
-class ValidTimeType:
-    '''
+import dateutil.parser
+
+
+class ValidTime:
+    """
     Defines time intervall for the validity of a Bulletin
-    '''
+    """
+
     startTime: datetime
-    '''valid time start'''
+    """valid time start"""
     endTime: datetime
-    '''valid time end'''
-    
+    """valid time end"""
+
     def __init__(self, startTime=None, endTime=None):
+
         if not startTime is None:
+            if not isinstance(startTime, datetime):
+                startTime = dateutil.parser.parse(startTime)
             self.startTime = startTime
         if not endTime is None:
+            if not isinstance(endTime, datetime):
+                endTime = dateutil.parser.parse(endTime)
             self.endTime = endTime
 
-class SourceType:
-    '''
+
+class Provider:
+    """
+    Describes the provider given in the source
+    """
+
+    name: str
+    website: str  # Should be URL
+
+    def __init__(self, name=None, website=None):
+        if not name is None:
+            self.name = name
+        if not website is None:
+            self.website = website
+
+
+class Source:
+    """
     Describes the source of the Report
-    ToDo: Does not yet extend the whole CAAMLv6
-    '''
-    provider: str
-    '''Bulletin Provider Information'''
+    """
+
+    provider: Provider
+    """Bulletin Provider Information"""
     person: str
-    '''Bulletin Author'''
-    
+    """Bulletin Author DEVIATES FROM CAAMLv6"""
+
     def __init__(self, provider=None, person=None):
         if not provider is None:
             self.provider = provider
         if not person is None:
-            self.persion = person
+            self.person = person
 
-class ElevationType:
-    '''
+
+class Elevation:
+    """
     contains a elevation band
-    '''
+    """
+
     lowerBound: str
     upperBound: str
 
-    def __init__(self, lowerBound='', upperBound='', auto_select='') -> None:
-        if lowerBound != '':
+    def __init__(self, lowerBound="", upperBound="", auto_select="") -> None:
+        if lowerBound != "":
             self.lowerBound = lowerBound
-        if upperBound != '':
+        if upperBound != "":
             self.upperBound = upperBound
 
-        if auto_select != '':
+        if auto_select != "":
             self.auto_select(auto_select)
 
     def auto_select(self, auto_select):
+        """
+        Auto-Selct from different possible ways of elevation description if it is lower or upper bound.
+        """
         if not auto_select is None:
-            auto_select = auto_select.replace('Forestline', 'Treeline')
-            if 'Hi' in auto_select:
-                self.lowerBound = re.sub(r'ElevationRange_(.+)Hi', r'\1', auto_select)
-            if 'Lo' in auto_select or 'Lw' in auto_select:
-                self.upperBound = re.sub(r'ElevationRange_(.+)(Lo|Lw)', r'\1', auto_select)
-            if '>' in auto_select:
-                self.lowerBound = re.sub(r'>(.+)', r'\1', auto_select)
-            if '<' in auto_select:
-                self.upperBound = re.sub(r'<(.+)', r'\1', auto_select)
+            auto_select = auto_select.replace("Forestline", "treeline")
+            auto_select = auto_select.replace("Treeline", "treeline")
+            if "Hi" in auto_select:
+                self.lowerBound = re.sub(r"ElevationRange_(.+)Hi", r"\1", auto_select)
+            if "Lo" in auto_select or "Lw" in auto_select:
+                self.upperBound = re.sub(
+                    r"ElevationRange_(.+)(Lo|Lw)", r"\1", auto_select
+                )
+            if ">" in auto_select:
+                self.lowerBound = re.sub(r">(.+)", r"\1", auto_select)
+            if "<" in auto_select:
+                self.upperBound = re.sub(r"<(.+)", r"\1", auto_select)
 
     def toString(self):
-        if hasattr(self,'lowerBound') and hasattr(self,'upperBound'):
+        """
+        Return a elevation as string.
+        """
+        if hasattr(self, "lowerBound") and hasattr(self, "upperBound"):
             return ">" + self.lowerBound + "<" + self.upperBound
-        if hasattr(self,'lowerBound'):
-            return ">"+ self.lowerBound
-        if hasattr(self,'upperBound'):
-            return "<"+ self.upperBound
-        else:
-            return ""
+        if hasattr(self, "lowerBound"):
+            return ">" + self.lowerBound
+        if hasattr(self, "upperBound"):
+            return "<" + self.upperBound
 
-class AvaCoreCustom:
-    '''
-    custom elements for special report content
-    '''
-    custom_type: str
-    content: str
+        return ""
 
-    def __init__(self, custom_type: str, content=None) -> None:
-        self.custom_type = custom_type
-        if not content is None:
-            self.content = content
-        else:
-            self.content = ''
 
-    def __str__(self):
-        return "{'custom_type':'" + self.custom_type + "', 'content':" + self.content + "'}"
-
-    def __repr__(self):
-        return str(self)
-    
-class MetaDataType:
-    '''
+class MetaData:
+    """
     MetaData for Report
-    '''
-    customData: typing.List[AvaCoreCustom]
-    
+    """
+
+    customData: typing.Dict
+
     def __init__(self):
         self.customData = []
 
 
-class DangerRatingType:
-    '''
+class DangerRating:
+    """
     Describes the Danger Ratings
-    ToDo: Does not yet extend the whole CAAMLv6
-    '''
-    mainValue: str
-    '''main value as standardized descriptive text'''
-    aspect: list
-    '''list of valid aspects'''
-    elevation: ElevationType
-    '''valid elevation for DangerRating'''
-    terrainFeature: str
-    '''textual description of terrain, where this danger rating is applicable'''
-    
-    # --- Values form EAWS Matrix ---
-    
-    artificialDangerRating: str
-    '''artificial danger rating from matrix as standardized descriptive text'''
-    artificialAvalancheSize: int
-    '''size as value from 1 to 5'''
-    artificialAvalancheReleaseProbability: int
-    '''release probability from 1 to 4'''
-    artificialHazardSiteDistribution: int
-    '''hazard site distribution from 1 to 5'''
-    naturalDangerRating: str
-    '''natural danger rating from matrix as standardized descriptive text'''
-    naturalAvalancheReleaseProbability: int
-    '''release probability from 1 to 4'''
-    naturalHazardSiteDistribution: int
-    '''natural hazard site distribution from 1 to 5'''
-    customData: typing.List[AvaCoreCustom]
-    '''Custom Data for special reports'''
-    
-    # --- Values form EAWS Matrix ---
-    
-    values = {
-        'no_rating': -1,
-        'no_snow': 0,
-        'low': 1,
-        'moderate': 2,
-        'considerable': 3,
-        'high': 4,
-        'very_high': 5
-    }
-    
-    def __init__(self, mainValue='', ) -> None:
-        self.elevation = ElevationType()
-        self.customData = []
-    
-    def get_mainValue_int(self):
+    """
 
-      return self.values.get(self.mainValue, 0)
-  
+    mainValue: str
+    """main value as standardized descriptive text"""
+    aspects: list
+    """list of valid aspects"""
+    elevation: Elevation
+    """valid elevation for DangerRating"""
+    terrainFeature: str
+    """textual description of terrain, where this danger rating is applicable"""
+    validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
+
+    # --- Values form EAWS Matrix ---
+
+    artificialDangerRating: str
+    """artificial danger rating from matrix as standardized descriptive text"""
+    artificialAvalancheSize: int
+    """size as value from 1 to 5"""
+    artificialAvalancheReleaseProbability: int
+    """release probability from 1 to 4"""
+    artificialHazardSiteDistribution: int
+    """hazard site distribution from 1 to 5"""
+    naturalDangerRating: str
+    """natural danger rating from matrix as standardized descriptive text"""
+    naturalAvalancheReleaseProbability: int
+    """release probability from 1 to 4"""
+    naturalHazardSiteDistribution: int
+    """natural hazard site distribution from 1 to 5"""
+    customData: typing.Dict
+    """Custom Data for special reports"""
+
+    # --- Values form EAWS Matrix ---
+
+    values = {
+        "no_rating": -1,
+        "no_snow": 0,
+        "low": 1,
+        "moderate": 2,
+        "considerable": 3,
+        "high": 4,
+        "very_high": 5,
+    }
+
+    def __init__(self, mainValue="", validTimePeriod="all_day") -> None:
+        self.elevation = Elevation()
+        self.customData = []
+        self.validTimePeriod = validTimePeriod
+        self.mainValue = mainValue
+
+    def get_mainValue_int(self):
+        """
+        Returns danger main as int value
+        """
+        return self.values.get(self.mainValue, 0)
+
     def set_mainValue_int(self, value):
-        self.mainValue = next((level_text for level_text, level_int in self.values.items() if level_int == value), None)
-        
+        """
+        Sets danger main from int
+        """
+        self.mainValue = next(
+            (
+                level_text
+                for level_text, level_int in self.values.items()
+                if level_int == value
+            ),
+            None,
+        )
+
     def from_json(self, dangerRating_json):
-        attributes = DangerRatingType.__dict__['__annotations__']
+        """
+        get danger rating from JSON
+        """
+        attributes = DangerRating.__dict__["__annotations__"]
         for attribute in attributes:
-            if (not attribute.startswith('__')
-                and attribute in dangerRating_json):
+            if not attribute.startswith("__") and attribute in dangerRating_json:
                 if attributes[attribute] in {str, datetime, list, int}:
                     setattr(self, attribute, dangerRating_json[attribute])
-                elif attribute is 'elevation':
+                elif attribute == "elevation":
                     for elevation_attribute in dangerRating_json[attribute]:
-                        setattr(self.elevation, elevation_attribute, dangerRating_json[attribute][elevation_attribute])
-  
-class AvalancheProblemType:
-    problemType: str
-    '''problem type as standardized descriptive text'''
-    dangerRating: DangerRatingType
-    '''avalanche danger rating'''
-    comment: str
+                        setattr(
+                            self.elevation,
+                            elevation_attribute,
+                            dangerRating_json[attribute][elevation_attribute],
+                        )
 
-    '''
-    ToDo: Addd custom data type
-    '''
-        
-    def __init__(self, problemType=None, comment=None, dangerRating_json=None, dangerRating=None) -> None:
-        self.dangerRating = DangerRatingType()
+
+class AvalancheProblem:
+    """
+    Describes the Avalanche Problem
+    """
+
+    problemType: str
+    """problem type as standardized descriptive text"""
+    elevation: Elevation
+    aspects: list
+    terrainFeature: str
+    validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
+
+    def __init__(
+        # pylint: disable=too-many-arguments
+        self,
+        problemType=None,
+        comment=None,
+        dangerRating_json=None,
+        dangerRating=None,
+        aspects=None,
+        elevation=None,
+        terrainFeature=None,
+    ) -> None:
+        self.aspects = []
+        self.elevation = Elevation()
         if not problemType is None:
             self.problemType = problemType
         if not comment is None:
-            self.comment = comment
-        if not dangerRating is None:
-            self.dangerRating = dangerRating
-        if not dangerRating_json is None:
-            self.dangerRating.from_json(dangerRating_json)
-        
+            self.terrainFeature = comment
+        if not terrainFeature is None:
+            self.terrainFeature = terrainFeature
+        if not dangerRating is None:  # Compatibility with older parsers, deprecated
+            self.elevation = dangerRating.elevation
+            self.aspects = dangerRating.aspect
+        if (
+            not dangerRating_json is None
+        ):  # Compatibility with older parsers, deprecated
+            dangerRating = dangerRating.from_json(dangerRating_json)
+            self.elevation = dangerRating.elevation
+            self.aspects = dangerRating.aspect
+        if not aspects is None:
+            self.aspects = aspects
+        if not elevation is None:
+            self.elevation = elevation
+
     def add_problemType(self, problem_type_text):
-        '''
+        """
         All problem type texts in pre CAAMLv6 need a post processing to match the new standard
         All new problem texts contain a unterscore and can be differentiated by that
-        '''
-        if not '_' in problem_type_text:
-            if 'new' in problem_type_text:
-                problem_type_text = 'new_snow'
-            elif 'drifting'in problem_type_text or 'drifted' in problem_type_text:
-                problem_type_text = 'wind_drifted_snow'
-            elif 'old' in problem_type_text or 'persistent' in problem_type_text:
-                problem_type_text = 'persistent_weak_layers'
-            elif 'wet' in problem_type_text:
-                problem_type_text = 'wet_snow'
-            elif 'gliding' in problem_type_text:
-                problem_type_text = 'gliding_snow'
-            elif 'favourable' in problem_type_text:
-                problem_type_text = 'favourable_situation'
-        
+        """
+        if not "_" in problem_type_text or "drifting_snow" in problem_type_text:
+            if "new" in problem_type_text:
+                problem_type_text = "new_snow"
+            elif "drifting" in problem_type_text or "drifted" in problem_type_text:
+                problem_type_text = "wind_drifted_snow"
+            elif "old" in problem_type_text or "persistent" in problem_type_text:
+                problem_type_text = "persistent_weak_layers"
+            elif "wet" in problem_type_text:
+                problem_type_text = "wet_snow"
+            elif "gliding" in problem_type_text:
+                problem_type_text = "gliding_snow"
+            elif "favourable" in problem_type_text:
+                problem_type_text = "favourable_situation"
+
         self.problemType = problem_type_text
 
-class TendencyType:
+
+class Tendency:
+    """
+    Describes the Tendency
+    """
+
     tendencyType: str
-    '''string contains decreasing, steady or increasing'''
-    validTime: ValidTimeType
-    '''valid time interval for tendency'''
+    """string contains decreasing, steady or increasing"""
+    validTime: ValidTime
+    """valid time interval for tendency"""
     tendencyComment: str
-    '''tendency comment'''
-    #ToDo Add custom data
-    
-    def __init__(self) -> None:
-        self.validTime = ValidTimeType()
-        
-    def __init__(self, tendencyType=None, validTime_json=None, tendencyComment=None) -> None:
-        self.validTime = ValidTimeType()
-        if not validTime_json is None and not len(validTime_json) is 0:
-            self.validTime = ValidTimeType(validTime_json['startTime'], validTime_json['endTime'])
+    """tendency comment"""
+
+    def __init__(
+        self, tendencyType=None, validTime_json=None, tendencyComment=None
+    ) -> None:
+        self.validTime = ValidTime()
+        if not validTime_json is None and not len(validTime_json) == 0:
+            self.validTime = ValidTime(
+                validTime_json["startTime"], validTime_json["endTime"]
+            )
         if not tendencyType is None:
             self.tendencyType = tendencyType
         if not tendencyComment is None:
             self.tendencyComment = tendencyComment
 
-class RegionType:
+
+class Region:
+    """
+    Describes a Region
+    """
+
     name: str
-    regionID: str
-        
-    def __init__(self, regionID, name=None) -> None:
-        self.regionID = regionID
+    regionId: str
+
+    def __init__(self, regionId, name=None) -> None:
+        self.regionId = regionId
         if not name is None:
             self.name = name
-      
+
+
+class Texts:
+    """
+    Describes Texts in the Bulletion with highlights and coomment
+    """
+
+    highlights: str
+    comment: str
+
+    def __init__(self, highlights=None, comment=None) -> None:
+        if not highlights is None:
+            self.highlights = highlights
+        if not comment is None:
+            self.comment = comment
+
+
 class AvaBulletin:
-    '''
+    # pylint: disable=too-many-instance-attributes
+    """
     Class for the AvaBulletin
     Follows partly CAAMLv6 caaml:BulletinType
-    ToDo: MetaData type is generally missing
-    '''
+    """
+
     bulletinID: str
-    '''ID of the Bulletin'''
+    """ID of the Bulletin"""
     reportLang: str
-    '''language of the Bulletin'''
-    regions: typing.List[RegionType]
-    '''list of Regions, where this Report is valid'''
+    """language of the Bulletin"""
+    regions: typing.List[Region]
+    """list of Regions, where this Report is valid"""
     publicationTime: datetime
-    '''Date of Bulletin'''
-    validTime: ValidTimeType
-    '''Valid TimeInterval of the Bulletin'''
-    source: SourceType
-    '''Details about the Bulletin Provider'''
-    dangerRatings: typing.List[DangerRatingType]
-    '''avalanche danger rating'''
-    avalancheProblems: typing.List[AvalancheProblemType]
-    '''avalanche problem'''
-    tendency: TendencyType
-    '''tendency of the av situation'''
+    """Date of Bulletin"""
+    validTime: ValidTime
+    """Valid TimeInterval of the Bulletin"""
+    source: Source
+
+    """Details about the Bulletin Provider"""
+    dangerRatings: typing.List[DangerRating]
+    """avalanche danger rating"""
+    avalancheProblems: typing.List[AvalancheProblem]
+    """avalanche problem"""
+    tendency: Tendency
+    """tendency of the av situation"""
     highlights: str
-    '''very important note in the report'''
-    wxSynopsisHighlights: str
-    '''weather forecast highlights'''
-    wxSynopsisComment: str
-    '''Weather forecast comment'''
-    avalancheActivityHighlights: str
-    '''avalanche activity highlights'''
-    avalancheActivityComment: str
-    '''avalanche activity comment'''
-    snowpackStructureHighlights: str
-    '''avalanche structure highlights'''
-    snowpackStructureComment: str
-    '''snowpack structure comment'''
-    travelAdvisoryHighlights: str
-    '''travel advisory highlights'''
-    travelAdvisoryComment: str
-    '''travel advisory comment'''
-    metaData: MetaDataType
+    """very important note in the report"""
+    wxSynopsis: Texts
+    """weather forecast"""
+    avalancheActivity: Texts
+    """avalanche activity"""
+    snowpackStructure: Texts
+    """avalanche structure """
+    travelAdvisory: Texts
+    """travel advisory"""
+    metaData: MetaData
+
+    customData: typing.Dict
 
     predecessor_id: str
-    '''not part of CAAMLv6 (yet)'''
+    """not part of CAAMLv6 (yet)"""
 
     def __init__(self):
         self.regions = []
-        self.validTime = ValidTimeType()
-        self.source = SourceType()
+        self.validTime = ValidTime()
+        self.source = Source()
         self.dangerRatings = []
         self.avalancheProblems = []
-        self.tendency = TendencyType()
+        self.tendency = Tendency()
+        self.customData = []
 
     def get_region_list(self):
+        """
+        returns valif region IDs as list.
+        """
         region_list = []
         for reg in self.regions:
-            region_list.append(reg.regionID)
+            region_list.append(reg.regionId)
         return region_list
-    
+
     def from_json(self, bulletin_json):
-        attributes = AvaBulletin.__dict__['__annotations__']
+        # pylint: disable=too-many-branches
+        """
+        convert to avaBulletin from JSON
+        """
+        attributes = AvaBulletin.__dict__["__annotations__"]
         for attribute in attributes:
-            if (not attribute.startswith('__')
-                and attribute in bulletin_json):
-                if attributes[attribute] in {str, datetime}:
+            if not attribute.startswith("__") and attribute in bulletin_json:
+                if attributes[attribute] in {str, datetime, dict}:
                     setattr(self, attribute, bulletin_json[attribute])
 
-                elif attribute is 'regions':
-                    for region in bulletin_json[attribute]:
-                        self.regions.append(RegionType(region.get('regionID'), region.get('name')))
+                elif (
+                    str(attributes[attribute]) == "<class 'avacore.avabulletin.Texts'>"
+                ):
+                    highlights = None
+                    comments = None
+                    if hasattr(bulletin_json[attribute], "highlights"):
+                        highlights = bulletin_json[attribute]["highlights"]
+                    if hasattr(bulletin_json[attribute], "comment"):
+                        highlights = bulletin_json[attribute]["comment"]
+                    setattr(self, attribute, Texts(highlights, comments))
 
-                elif attribute is 'dangerRatings':
+                elif attribute == "regions":
+                    for region in bulletin_json[attribute]:
+                        self.regions.append(
+                            Region(region.get("regionId"), region.get("name"))
+                        )
+
+                elif attribute == "dangerRatings":
                     for dangerRating_json in bulletin_json[attribute]:
-                        dangerRating = DangerRatingType()
+                        dangerRating = DangerRating()
                         dangerRating.from_json(dangerRating_json)
                         self.dangerRatings.append(dangerRating)
 
-                elif attribute is 'avalancheProblems':
+                elif attribute == "avalancheProblems":
                     for avalancheProblem_json in bulletin_json[attribute]:
-                        avalancheProblem = AvalancheProblemType(problemType=avalancheProblem_json.get('problemType'), comment=avalancheProblem_json.get('comment'), dangerRating_json=avalancheProblem_json.get('dangerRating'))
+                        avalancheProblem = AvalancheProblem(
+                            problemType=avalancheProblem_json.get("problemType"),
+                            comment=avalancheProblem_json.get("comment"),
+                            dangerRating_json=avalancheProblem_json.get("dangerRating"),
+                        )
                         self.avalancheProblems.append(avalancheProblem)
 
-                elif attribute is 'validTime':
-                    self.validTime = ValidTimeType(bulletin_json[attribute]['startTime'], bulletin_json[attribute]['endTime'])
+                elif attribute == "validTime":
+                    self.validTime = ValidTime(
+                        bulletin_json[attribute]["startTime"],
+                        bulletin_json[attribute]["endTime"],
+                    )
 
-                elif attribute is 'tendency':
-                    self.tendency = TendencyType(bulletin_json[attribute].get('tendencyType'), bulletin_json[attribute].get('validTime'), bulletin_json[attribute].get('tendencyComment'))
+                elif attribute == "tendency":
+                    self.tendency = Tendency(
+                        bulletin_json[attribute].get("tendencyType"),
+                        bulletin_json[attribute].get("validTime"),
+                        bulletin_json[attribute].get("tendencyComment"),
+                    )
 
-                elif attribute is 'source':
-                    self.source = SourceType(bulletin_json[attribute].get('provider'), bulletin_json[attribute].get('person'))
+                elif attribute == "source":
+                    if hasattr(bulletin_json[attribute], "provider"):
+                        self.source = Source(
+                            provider=bulletin_json[attribute]["provider"]
+                        )
+                    elif hasattr(bulletin_json[attribute], "person"):
+                        self.source = Source(person=bulletin_json[attribute]["website"])
+
+                elif attribute == "customData":
+                    self.customData = bulletin_json[attribute]
 
                 else:
-                    print('Not handled Attribute:', attribute, attributes[attribute], type(attributes[attribute]))                   
+                    print(
+                        "Not handled Attribute:",
+                        attribute,
+                        attributes[attribute],
+                        type(attributes[attribute]),
+                    )
 
-    # def fill_std_attributes(self, to_fill, fill_with):
-        
-        # if 'predecessor_id' in bulletin_json:
-    
-    def prettify_out(self, text):
-        print("\n".join(textwrap.wrap(text, width=60, initial_indent='╟─ ', subsequent_indent='║  ')))
-        
+    def main_date(self) -> date:
+        """
+        Returns Main validity date of Report
+        """
+        validityDate: datetime = self.validTime.startTime
+        if validityDate.hour >= 15:
+            validityDate = validityDate + timedelta(days=1)
+        return validityDate.date()
+
+    @staticmethod
+    def prettify_out(text):
+        """
+        Prettified output for text elements
+        """
+        print(
+            "\n".join(
+                textwrap.wrap(
+                    text, width=60, initial_indent="╟─ ", subsequent_indent="║  "
+                )
+            )
+        )
+
+    def print_if_attr_exists(self, element, attribute):
+        """
+        Print text element if Attribute exists
+        """
+        if hasattr(self, element):
+            if hasattr(getattr(self, element), attribute):
+                if not getattr(getattr(self, element), attribute) is None:
+                    self.prettify_out(
+                        element
+                        + " "
+                        + attribute.capitalize()
+                        + ": "
+                        + getattr(getattr(self, element), attribute)
+                    )
 
     def cli_out(self):
-        '''
-        ToDo -- Not working at the moment
-        '''
-        print('╔═════ AvaReport ══════════════════════════════════════════')
-        print('║ Bulletin:            ', self.bulletinID)
-        if hasattr(self, 'predecessor_id'):
-            print('║ This is PM-Report to:', self.predecessor_id)
-        print('║ Report from:         ', self.publicationTime)
-        print('║ Valid from:          ', self.validTime.startTime)
-        print('║ Valid to:            ', self.validTime.endTime)
-        print('║ Valid for:')
+        """
+        Terminal output on CLI
+        """
+        print("╔═════ AvaReport ══════════════════════════════════════════")
+        print("║ Bulletin:            ", self.bulletinID)
+        if hasattr(self, "predecessor_id"):
+            print("║ This is PM-Report to:", self.predecessor_id)
+        print("║ Report from:         ", self.publicationTime)
+        print("║ Valid from:          ", self.validTime.startTime)
+        print("║ Valid to:            ", self.validTime.endTime)
+        print("║ Valid for:")
         for region in self.regions:
-            print('║ ├─ ', region.regionID)
+            print("║ ├─ ", region.regionId)
 
-        print('╟───── Danger Rating')
+        print("╟───── Danger Rating")
         for dangerRating in self.dangerRatings:
-            print('║ ', dangerRating.elevation.toString(), '➝ :', dangerRating.mainValue)
+            print(
+                "║ ",
+                dangerRating.validTimePeriod,
+                dangerRating.elevation.toString(),
+                "➝ :",
+                dangerRating.mainValue,
+            )
 
-
-        print('╟───── Av Problems')
+        print("╟───── Av Problems")
         for problem in self.avalancheProblems:
             try:
-                print('║ Problem: ', problem.problemType, '\n║    Elevation: ', problem.dangerRating.elevation.toString(), '\n║    Aspects: ', problem.dangerRating.aspect)
-            except:
-                print('║ Problem: ', problem.problemType)
+                print(
+                    "║ Problem: ",
+                    problem.validTimePeriod,
+                    problem.problemType,
+                    "\n║    Elevation: ",
+                    problem.elevation.toString(),
+                    "\n║    Aspects: ",
+                    problem.aspects,
+                )
+            except:  # pylint: disable=bare-except
+                print("║ Problem: ", problem.problemType)
 
-        '''
-        if len(self.dangerpattern)  > 0:
-            print('╟───── Danger Patterns')
-            for dangerpattern in self.dangerpattern:
-                print('║ ', dangerpattern)
-        '''
+        print("╟───── Bulletin Texts ─────")
+        if hasattr(self, "highlights"):
+            self.prettify_out("Highlights: " + self.highlights)
 
-        print('╟───── Bulletin Texts ─────')
-        if hasattr(self, 'highlights'):
-            self.prettify_out('Highlights: ' +  self.highlights)
-            
-        if hasattr(self, 'avalancheActivityHighlights'):
-            self.prettify_out('avalancheActivityHighlights: ' +  self.avalancheActivityHighlights)
-            
-        if hasattr(self, 'avalancheActivityComment'):
-            self.prettify_out('avalancheActivityComment: ' +  self.avalancheActivityComment)
-            
-        if hasattr(self, 'snowpackStructureHighlights'):
-            self.prettify_out('snowpackStructureHighlights: ' +  self.snowpackStructureHighlights)
-            
-        if hasattr(self, 'snowpackStructureComment'):
-            self.prettify_out('snowpackStructureComment: ' +  self.snowpackStructureComment)
-            
-        if hasattr(self, 'travelAdvisoryHighlights'):
-            self.prettify_out('travelAdvisoryHighlights: ' +  self.travelAdvisoryHighlights)
-            
-        if hasattr(self, 'travelAdvisoryComment'):
-            self.prettify_out('travelAdvisoryComment: ' +  self.travelAdvisoryComment)
-            
-        if hasattr(self, 'wxSynopsisHighlights'):
-            self.prettify_out('wxSynopsisHighlights: ' +  self.wxSynopsisHighlights)
-            
-        if hasattr(self, 'wxSynopsisComment'):
-            self.prettify_out('wxSynopsisComment: ' +  self.wxSynopsisComment)
-            
-        if hasattr(self.tendency, 'tendencyComment'):
-            self.prettify_out('tendencyComment: ' +  self.tendency.tendencyComment)
+        self.print_if_attr_exists("avalancheActivity", "highlights")
+        self.print_if_attr_exists("avalancheActivity", "comment")
 
-        print('╚═══════════════════════════════════════════════════════════\n')
+        self.print_if_attr_exists("snowpackStructure", "highlights")
+        self.print_if_attr_exists("snowpackStructure", "comment")
+
+        self.print_if_attr_exists("travelAdvisory", "highlights")
+        self.print_if_attr_exists("travelAdvisory", "comment")
+
+        self.print_if_attr_exists("wxSynopsis", "highlights")
+        self.print_if_attr_exists("wxSynopsis", "comment")
+
+        if hasattr(self.tendency, "tendencyComment"):
+            self.prettify_out("tendencyComment: " + self.tendency.tendencyComment)
+
+        print("╚═══════════════════════════════════════════════════════════\n")

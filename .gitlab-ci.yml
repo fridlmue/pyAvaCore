@@ -7,7 +7,7 @@ unittest:
   stage: test
   script:
     - python -V
-    - pip install pytest pytest-cov
+    - pip install pytest pytest-cov jsonschema
     - pip install --requirement requirements.txt
     - pytest --junitxml=report.xml --cov=avacore tests/
     - coverage xml
@@ -22,8 +22,9 @@ pylint:
   allow_failure: true
   script:
     - python -V
+    - pip install --requirement requirements.txt
     - pip install pylint
-    - pylint avacore --disable=invalid-name --max-line-length=140
+    - pylint avacore --disable=invalid-name --disable=duplicate-code --max-line-length=140
 
 deploy:
   stage: deploy

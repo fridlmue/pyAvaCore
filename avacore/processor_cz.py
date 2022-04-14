@@ -1,5 +1,5 @@
 """
-    Copyright (C) 2021 Friedrich Mütschele and other contributors
+    Copyright (C) 2022 Friedrich Mütschele and other contributors
     This file is part of pyAvaCore.
     pyAvaCore is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -14,68 +14,83 @@
 """
 import json
 import urllib.request
-from datetime import datetime
 from datetime import timedelta
-from datetime import time
-import pytz
-import dateutil.parser
 import logging
 
+import pytz
+import dateutil.parser
 
-from avacore.avabulletin import AvaBulletin, DangerRatingType, AvalancheProblemType, AvaCoreCustom, ElevationType, RegionType
+from avacore.avabulletin import (
+    AvaBulletin,
+    DangerRating,
+    AvalancheProblem,
+    Elevation,
+    Region,
+    Texts,
+)
+
 
 def process_reports_cz():
+    """
+    Downloads and returns requested Avalanche Bulletins
+    """
     url = "https://www.horskasluzba.cz/cz/avalanche-json"
 
-    headers = {
-        "Content-Type": "application/json; charset=utf-8"
-        }
+    headers = {"Content-Type": "application/json; charset=utf-8"}
 
     req = urllib.request.Request(url, headers=headers)
 
-    logging.info('Fetching %s', req.full_url)
+    logging.info("Fetching %s", req.full_url)
     with urllib.request.urlopen(req) as response:
         content = response.read()
 
     horskasluzba_report = json.loads(content)
 
     reports = get_reports_fromjson(horskasluzba_report)
-    
+
     return reports
 
-def get_reports_fromjson(cz_report, fetch_time_dependant=True):
+
+def get_reports_fromjson(cz_report):
+    """
+    Builds the CAAML JSONs form the original JSON formats.
+    """
+
     reports = []
 
     for bulletin in cz_report:
         report = AvaBulletin()
-        report.regions.append(RegionType('CZ-' + bulletin['region_id']))
-        report.publicationTime = dateutil.parser.parse(bulletin['date_time'])
-        report.bulletinID = (bulletin['id'])
-        
+        report.regions.append(Region("CZ-" + bulletin["region_id"]))
+        report.publicationTime = pytz.timezone("Europe/Prague").localize(
+            dateutil.parser.parse(bulletin["date_time"])
+        )
+        report.bulletinID = bulletin["id"]
+
         report.validTime.startTime = report.publicationTime
         report.validTime.endTime = report.publicationTime + timedelta(hours=24)
-        
-        danger_rating = DangerRatingType()
-        danger_rating.set_mainValue_int(int(bulletin['warning_level']))
-    
+
+        danger_rating = DangerRating()
+        danger_rating.set_mainValue_int(int(bulletin["warning_level"]))
+
         report.dangerRatings.append(danger_rating)
-        
-        for warning in bulletin['warnings']:
+
+        for warning in bulletin["warnings"]:
             aspect_list = []
-            if warning['exposition'] != 'NONE':
-                for exposition in warning['exposition'].split(','):
+            if warning["exposition"] != "NONE":
+                for exposition in warning["exposition"].replace(" ", "").split(","):
                     aspect_list.append(exposition)
-            
-            problem_danger_rating = DangerRatingType()
-            problem_danger_rating.aspect = aspect_list
-            problem_danger_rating.elevation = ElevationType(lowerBound=warning['altitude_from'], upperBound=warning['altitude_to'])
-            problem = AvalancheProblemType()
-            problem.dangerRating = problem_danger_rating
-            problem.add_problemType(warning['type'])
+
+            problem = AvalancheProblem()
+            if "ALL" not in aspect_list:
+                problem.aspects = aspect_list
+            problem.elevation = Elevation(
+                lowerBound=warning["altitude_from"], upperBound=warning["altitude_to"]
+            )
+            problem.add_problemType(warning["type"])
             report.avalancheProblems.append(problem)
-        
-        report.avalancheActivityComment = bulletin['description']
-    
+
+        report.avalancheActivity = Texts(comment=bulletin["description"])
+
         reports.append(report)
 
     return reports
