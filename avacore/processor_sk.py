@@ -14,13 +14,8 @@
 """
 import logging
 import copy
-import re
 import json
 from urllib.request import urlopen, Request
-
-import dateutil.parser
-import pytz
-
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -31,8 +26,7 @@ from avacore.avabulletin import (
     Source,
     Tendency,
     Texts,
-    Elevation,
-    ValidTime
+    ValidTime,
 )
 
 
@@ -59,65 +53,62 @@ def get_reports_fromjson(sk_report):
     common_bulletin = AvaBulletin()
 
     common_bulletin.source = Source(
-                        provider=Provider(
-                            name=sk_report['author'],
-                            website=str("https://www.hzs.sk"),
-                        )
-                    )
-    common_bulletin.validTime = ValidTime(
-        startTime=sk_report['validFrom'],
-        endTime=sk_report['validTill']
+        provider=Provider(
+            name=sk_report["author"],
+            website=str("https://www.hzs.sk"),
         )
-    common_bulletin.publicationTime = sk_report['published']
+    )
+    common_bulletin.validTime = ValidTime(
+        startTime=sk_report["validFrom"], endTime=sk_report["validTill"]
+    )
+    common_bulletin.publicationTime = sk_report["published"]
 
-    common_bulletin.bulletinID = "SK" + sk_report['published']
+    common_bulletin.bulletinID = "SK" + sk_report["published"]
 
     avalancheActivity = Texts()
     snowpackStructure = Texts()
 
-    avalancheActivity.highlights = sk_report['headline']
+    avalancheActivity.highlights = sk_report["headline"]
 
-    for description in sk_report['descriptions']:
-        if 'Lavínová situácia' in description['heading']:
-            avalancheActivity.comment = description['text']
-        elif 'Snehová pokrývka' in description['heading']:
-            snowpackStructure.comment = description['text']
-        elif 'Krátkodobý vývoj' in description['heading']:
-            common_bulletin.tendency = Tendency(tendencyComment=description['text'])
+    for description in sk_report["descriptions"]:
+        if "Lavínová situácia" in description["heading"]:
+            avalancheActivity.comment = description["text"]
+        elif "Snehová pokrývka" in description["heading"]:
+            snowpackStructure.comment = description["text"]
+        elif "Krátkodobý vývoj" in description["heading"]:
+            common_bulletin.tendency = Tendency(tendencyComment=description["text"])
 
     common_bulletin.avalancheActivity = avalancheActivity
     common_bulletin.snowpackStructure = snowpackStructure
 
     bulletins = []
 
-    for region_id, region in sk_report['regions'].items():
+    for region_id, region in sk_report["regions"].items():
         bulletin = AvaBulletin()
         bulletin = copy.deepcopy(common_bulletin)
         bulletin.regions.append(Region(region_id.replace("SK0R", "SK-0")))
 
-        keys = ['am']
-        if 'pm' in region:
-            keys.append('pm')
-        valid_time = {'am': 'earlier', 'pm': 'later'}
+        keys = ["am"]
+        if "pm" in region:
+            keys.append("pm")
+        valid_time = {"am": "earlier", "pm": "later"}
 
         for key in keys:
-            elevations = ['lower']
-            if len(region[key][f'{elevations[0]}Text']) > 4:
-                elevations.append('upper')
+            elevations = ["lower"]
+            if len(region[key][f"{elevations[0]}Text"]) > 4:
+                elevations.append("upper")
             for elevation in elevations:
                 danger_rating = DangerRating()
-                danger_rating.set_mainValue_int(
-                    int(region[key][f'{elevation}Level'])
-                )
+                danger_rating.set_mainValue_int(int(region[key][f"{elevation}Level"]))
                 if len(elevations) > 1:
-                    height = region[key][f'{elevation}Text']
-                    height = height.replace('nad ', '>')
-                    height = height.replace('pod ', '<')
+                    height = region[key][f"{elevation}Text"]
+                    height = height.replace("nad ", ">")
+                    height = height.replace("pod ", "<")
                     danger_rating.elevation.auto_select(height)
                 if len(keys) > 1:
                     danger_rating.validTimePeriod = valid_time[key]
                 else:
-                    danger_rating.validTimePeriod = 'all_day'
+                    danger_rating.validTimePeriod = "all_day"
                 bulletin.dangerRatings.append(danger_rating)
 
         bulletins.append(bulletin)

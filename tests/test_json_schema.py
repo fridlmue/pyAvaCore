@@ -59,7 +59,9 @@ class TestJsonSchema(unittest.TestCase):
                 bulletins_generic_compare = json.loads(
                     json.dumps(bulletins, cls=pyAvaCore.JSONEncoder, indent=2)
                 )  # ToDo find better way. Probably with JSONEncoder directly
-                bulletins_generic_compare = remove_empty_elements(bulletins_generic_compare)
+                bulletins_generic_compare = remove_empty_elements(
+                    bulletins_generic_compare
+                )
 
                 self.assertEqual(bulletins_generic, bulletins_generic_compare)
             except:
