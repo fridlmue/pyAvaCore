@@ -14,10 +14,12 @@
 """
 # pylint: disable=too-few-public-methods
 
-from datetime import datetime
+from datetime import datetime, timedelta, date
 import re
 import typing
 import textwrap
+
+import dateutil.parser
 
 
 class ValidTime:
@@ -31,9 +33,14 @@ class ValidTime:
     """valid time end"""
 
     def __init__(self, startTime=None, endTime=None):
+
         if not startTime is None:
+            if not isinstance(startTime, datetime):
+                startTime = dateutil.parser.parse(startTime)
             self.startTime = startTime
         if not endTime is None:
+            if not isinstance(endTime, datetime):
+                endTime = dateutil.parser.parse(endTime)
             self.endTime = endTime
 
 
@@ -475,6 +482,15 @@ class AvaBulletin:
                         attributes[attribute],
                         type(attributes[attribute]),
                     )
+
+    def main_date(self) -> date:
+        """
+        Returns Main validity date of Report
+        """
+        validityDate: datetime = self.validTime.startTime
+        if validityDate.hour >= 15:
+            validityDate = validityDate + timedelta(days=1)
+        return validityDate.date()
 
     @staticmethod
     def prettify_out(text):

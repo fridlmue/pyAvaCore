@@ -13,7 +13,7 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-from datetime import date, datetime, timedelta
+from datetime import date
 import typing
 
 from .avabulletin import AvaBulletin, DangerRating
@@ -30,12 +30,27 @@ class Bulletins:
 
     def main_date(self) -> date:
         """
-        Returns Main validity date of Report
+        Returns Main validity date of Reports
         """
-        validityDate: datetime = self.bulletins[0].validTime.startTime
-        if validityDate.hour >= 15:
-            validityDate = validityDate + timedelta(days=1)
-        return validityDate.date()
+        return self.bulletins[0].main_date()
+
+    def strip_wrong_day_reports(self):
+        """
+        Returns only Bulletins of newest main date
+        """
+        newest = date(1900, 1, 1)
+        for bulletin in self.bulletins:
+            if newest < bulletin.main_date():
+                newest = bulletin.main_date()
+
+        rel_bulletins = []
+
+        for bulletin in self.bulletins:
+            if (not bulletin.main_date() != newest
+                or bulletin.validTime.endTime > newest):
+                rel_bulletins.append(bulletin)
+
+        return rel_bulletins
 
     def max_danger_ratings(self):
         # pylint: disable=too-many-branches
@@ -44,7 +59,7 @@ class Bulletins:
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
         ratings = {}
-        for bulletin in self.bulletins:
+        for bulletin in self.strip_wrong_day_reports():
 
             for region in bulletin.regions:
                 local_ratings = {}
