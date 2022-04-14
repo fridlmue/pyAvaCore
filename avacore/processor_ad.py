@@ -29,6 +29,8 @@ ad_ids = {"nord": "AD-01", "centre": "AD-02", "sud": "AD-03"}
 def parse_xml(root):
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-nested-blocks
+    # pylint: disable=too-many-branches
+    # pylint: disable=too-many-statements
     """parses Andora Danger Ratgin XML"""
 
     bulletins = []
