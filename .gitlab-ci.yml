@@ -19,7 +19,6 @@ unittest:
 
 pylint:
   stage: test
-  allow_failure: true
   script:
     - python -V
     - pip install --requirement requirements.txt
