@@ -20,7 +20,6 @@ from urllib.request import urlopen, Request
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
-    AvalancheProblem,
     Region,
     Provider,
     Source,
