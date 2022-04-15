@@ -60,48 +60,48 @@ def parse_xml(root):
                     validity = ["all_day", "all_day"]
                     elevation = [">", "<"]
 
-                elif 'escala-allau' in idstate:
+                elif "escala-allau" in idstate:
                     results = re.findall(r"\d*(\d-\d|\d)", idstate)
                     ratings = []
-                    loc_validity = ['earlier', 'later']
+                    loc_validity = ["earlier", "later"]
                     validity = []
                     loc_elevation = ["<", ">"]
                     elevation = []
                     for idx, result in enumerate(results):
-                        if '-' in result:
-                            loc_ratings = result.split('-')
+                        if "-" in result:
+                            loc_ratings = result.split("-")
                             for idy, loc_rating in enumerate(loc_ratings):
                                 validity.append(loc_validity[idy])
                                 elevation.append(loc_elevation[idx])
                                 ratings.append(loc_rating)
                         else:
-                            validity.append('all_day')
+                            validity.append("all_day")
                             elevation.append(loc_elevation[idx])
                             ratings.append(result)
 
-                elif 'escala-allau' in idstate:
+                elif "escala-allau" in idstate:
                     results = re.findall(r"\d*(\d-\d|\d)", idstate)
                     ratings = []
-                    loc_validity = ['earlier', 'later']
+                    loc_validity = ["earlier", "later"]
                     validity = []
                     loc_elevation = ["<", ">"]
                     elevation = []
                     for idx, result in enumerate(results):
-                        if '-' in result:
-                            loc_ratings = result.split('-')
+                        if "-" in result:
+                            loc_ratings = result.split("-")
                             for idy, loc_rating in enumerate(loc_ratings):
                                 validity.append(loc_validity[idy])
                                 elevation.append(loc_elevation[idx])
                                 ratings.append(loc_rating)
                         else:
-                            validity.append('all_day')
+                            validity.append("all_day")
                             elevation.append(loc_elevation[idx])
                             ratings.append(result)
 
-                elif '-' in idstate:
-                    ratings = idstate.split('-')
-                    elevation = ['', '']
-                    validity = ['earlier', 'later']
+                elif "-" in idstate:
+                    ratings = idstate.split("-")
+                    elevation = ["", ""]
+                    validity = ["earlier", "later"]
 
                 else:
                     ratings = [idstate]
