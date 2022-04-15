@@ -46,8 +46,10 @@ class Bulletins:
         rel_bulletins = []
 
         for bulletin in self.bulletins:
-            if (not bulletin.main_date() != newest
-                or bulletin.validTime.endTime.date() > newest):
+            if (
+                not bulletin.main_date() != newest
+                or bulletin.validTime.endTime.date() > newest
+            ):
                 rel_bulletins.append(bulletin)
 
         return rel_bulletins

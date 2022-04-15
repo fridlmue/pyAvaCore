@@ -32,6 +32,7 @@ from avacore.processor_es import process_reports_es
 from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
 from avacore.processor_ad import parse_xml as parse_xml_ad
+from avacore.processor_sk import process_reports_sk
 
 config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
@@ -101,6 +102,10 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         url, provider = get_report_url(region_id, local)
         root = get_xml_as_et(url)
         reports = parse_xml_ad(root)
+    elif region_id.startswith("SK"):
+        logging.info("Fetching %s", url)
+        url, provider = get_report_url(region_id, local)
+        reports = process_reports_sk()
     else:
         url, provider = get_report_url(region_id, local)
 

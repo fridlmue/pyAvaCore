@@ -54,6 +54,7 @@ At the moment the following regions are supported with the localization versions
 - IT Friuli – Venezia Giulia (https://bollettini.aineva.it/) (EN/DE/FR)
 - IT Marche (https://bollettini.aineva.it/) (EN/DE/FR)
 - SI (http://meteo.arso.gov.si/) (SI)
+- SK (http://www.laviny.sk/) (SK)
 - NO (https://www.varsom.no) (NO/EN)
 
 ### RegionIDs
