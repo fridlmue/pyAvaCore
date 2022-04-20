@@ -504,7 +504,7 @@ class AvaBulletin:
         if validityDate.hour >= 15:
             validityDate = validityDate + timedelta(days=1)
 
-        while(more_days):
+        while more_days:
             validDates.append(validityDate.date())
 
             distance = self.validTime.endTime - validityDate

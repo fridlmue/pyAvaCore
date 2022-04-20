@@ -41,9 +41,9 @@ class Bulletins:
         main_dates = []
 
         for bulletin in self.bulletins:
-            for date in bulletin.main_dates():
-                if date not in main_dates:
-                    main_dates.append(date)
+            for validityDate in bulletin.main_dates():
+                if validityDate not in main_dates:
+                    main_dates.append(validityDate)
 
         return main_dates
 

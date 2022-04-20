@@ -68,6 +68,7 @@ def download_region(regionID):
     bulletins = Bulletins()
     bulletins.bulletins = reports
     validityDates = bulletins.main_dates()
+    validityDate = None
 
     if args.cli != "o":
         directory = Path(args.output)
