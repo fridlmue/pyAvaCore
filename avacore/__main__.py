@@ -67,56 +67,58 @@ def download_region(regionID):
     reports, _, url = get_reports(regionID)
     bulletins = Bulletins()
     bulletins.bulletins = reports
-    validityDate = bulletins.main_date()
+    validityDates = bulletins.main_dates()
+    validityDate = None
 
     if args.cli != "o":
         directory = Path(args.output)
         directory.mkdir(parents=True, exist_ok=True)
         ext = "zip" if url[-3:] == "zip" else "xml"
-        if url != "":
-            with urlopen(url) as http, open(
-                f"{directory}/{validityDate}-{regionID}.{ext}", mode="wb"
+        for validityDate in validityDates:
+            if url != "":
+                with urlopen(url) as http, open(
+                    f"{directory}/{validityDate}-{regionID}.{ext}", mode="wb"
+                ) as f:
+                    logging.info("Writing %s to %s", url, f.name)
+                    f.write(http.read())
+            with open(
+                f"{directory}/{validityDate}-{regionID}.json", mode="w", encoding="utf-8"
             ) as f:
-                logging.info("Writing %s to %s", url, f.name)
-                f.write(http.read())
-        with open(
-            f"{directory}/{validityDate}-{regionID}.json", mode="w", encoding="utf-8"
-        ) as f:
-            logging.info("Writing %s", f.name)
-            bulletins_generic = json.loads(
-                json.dumps(bulletins, cls=JSONEncoder, indent=2)
-            )  # find better way. Probably with JSONEncoder directly
-            bulletins_generic = remove_empty_elements(bulletins_generic)
-            json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
-        with open(
-            f"{directory}/{validityDate}-{regionID}.ratings.json",
-            mode="w",
-            encoding="utf-8",
-        ) as f:
-            ratings = bulletins.max_danger_ratings()
-            relevant_ratings = {}
-            for key, value in ratings.items():
-                if key.startswith(regionID):
-                    relevant_ratings[key] = value
-            maxDangerRatings = {"maxDangerRatings": relevant_ratings}
-            logging.info("Writing %s", f.name)
-            json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
-    if args.cli in ("o", "y"):
-        for bulletin in bulletins.bulletins:
-            bulletin.cli_out()
-    if args.geojson:
-        with open(
-            f"{args.geojson}/{regionID}_micro-regions_elevation.geojson.json",
-            encoding="utf-8",
-        ) as f:
-            geojson = FeatureCollection.from_dict(json.load(f))
-        bulletins.augment_geojson(geojson)
-        with open(
-            f"{directory}/{validityDate}-{regionID}.geojson", mode="w", encoding="utf-8"
-        ) as f:
-            # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
-            logging.info("Writing %s", f.name)
-            json.dump(geojson.to_dict(), fp=f)
+                logging.info("Writing %s", f.name)
+                bulletins_generic = json.loads(
+                    json.dumps(bulletins, cls=JSONEncoder, indent=2)
+                )  # find better way. Probably with JSONEncoder directly
+                bulletins_generic = remove_empty_elements(bulletins_generic)
+                json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
+            with open(
+                f"{directory}/{validityDate}-{regionID}.ratings.json",
+                mode="w",
+                encoding="utf-8",
+            ) as f:
+                ratings = bulletins.max_danger_ratings()
+                relevant_ratings = {}
+                for key, value in ratings.items():
+                    if key.startswith(regionID):
+                        relevant_ratings[key] = value
+                maxDangerRatings = {"maxDangerRatings": relevant_ratings}
+                logging.info("Writing %s", f.name)
+                json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+        if args.cli in ("o", "y"):
+            for bulletin in bulletins.bulletins:
+                bulletin.cli_out()
+        if args.geojson:
+            with open(
+                f"{args.geojson}/{regionID}_micro-regions_elevation.geojson.json",
+                encoding="utf-8",
+            ) as f:
+                geojson = FeatureCollection.from_dict(json.load(f))
+            bulletins.augment_geojson(geojson)
+            with open(
+                f"{directory}/{validityDate}-{regionID}.geojson", mode="w", encoding="utf-8"
+            ) as f:
+                # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
+                logging.info("Writing %s", f.name)
+                json.dump(geojson.to_dict(), fp=f)
 
 
 def remove_empty_elements(d):

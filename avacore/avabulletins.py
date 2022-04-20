@@ -34,6 +34,19 @@ class Bulletins:
         """
         return self.bulletins[0].main_date()
 
+    def main_dates(self) -> []:
+        """
+        Returns Main validity dates of Reports
+        """
+        main_dates = []
+
+        for bulletin in self.bulletins:
+            for validityDate in bulletin.main_dates():
+                if validityDate not in main_dates:
+                    main_dates.append(validityDate)
+
+        return main_dates
+
     def strip_wrong_day_reports(self):
         """
         Returns only Bulletins of newest main date
