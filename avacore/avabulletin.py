@@ -493,29 +493,23 @@ class AvaBulletin:
 
         return validityDate.date()
 
-    def main_dates(self) -> []:
+    def main_dates(self) -> typing.Generator[date, typing.Any, typing.Any]:
         """
         Returns Main validity dates of Report
         """
-        validDates = []
-        more_days = True
         validityDate: datetime = self.validTime.startTime
 
         if validityDate.hour >= 15:
             validityDate = validityDate + timedelta(days=1)
 
-        while more_days:
-            validDates.append(validityDate.date())
-
+        while True:
+            yield validityDate.date()
             distance = self.validTime.endTime - validityDate
             validityDate = validityDate + timedelta(days=1)
-            if (distance < timedelta(days=1)
-                or (distance < timedelta(days=2)
-                    and validityDate.hour <= 12)
-                ):
-                more_days = False
-
-        return validDates
+            if distance < timedelta(days=1):
+                break
+            if distance < timedelta(days=2) and validityDate.hour <= 12:
+                break
 
     @staticmethod
     def prettify_out(text):
