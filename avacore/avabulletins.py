@@ -38,7 +38,7 @@ class Bulletins:
         """
         Returns Main validity dates of Reports
         """
-        return set([d for bulletin in self.bulletins for d in bulletin.main_dates()])
+        return {d for bulletin in self.bulletins for d in bulletin.main_dates()}
 
     def strip_wrong_day_reports(self, validityDate):
         """

@@ -18,9 +18,12 @@ class TestFrance_diff_dates(unittest.TestCase):
         ratings = bulletins.max_danger_ratings(datetime.datetime(2022, 4, 20).date())
 
         self.assertIn("FR-01", ratings)
+        self.assertNotIn("FR-04", ratings)
 
         ratings = bulletins.max_danger_ratings(datetime.datetime(2022, 4, 21).date())
         self.assertIn("FR-04", ratings)
+        self.assertNotIn("FR-02", ratings)
+
 
 if __name__ == "__main__":
     unittest.main()
