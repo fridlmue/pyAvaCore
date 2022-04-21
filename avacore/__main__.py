@@ -20,6 +20,7 @@ import argparse
 import json
 import logging
 import logging.handlers
+from datetime import date, datetime
 
 from .pyAvaCore import JSONEncoder, get_reports
 from .avabulletins import Bulletins
@@ -74,6 +75,14 @@ def download_region(regionID):
         directory = Path(args.output)
         directory.mkdir(parents=True, exist_ok=True)
         ext = "zip" if url[-3:] == "zip" else "xml"
+
+        for validityDate in validityDates:
+            if validityDate < date.today():
+                validityDates.remove(validityDate)
+
+        if len(validityDates) > 1 and min(validityDates) == date.today() and datetime.now().hours > 14:
+            validityDates.remove(min(validityDates))
+
         for validityDate in validityDates:
             if url != "":
                 with urlopen(url) as http, open(
