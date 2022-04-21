@@ -95,7 +95,7 @@ def download_region(regionID):
                 mode="w",
                 encoding="utf-8",
             ) as f:
-                ratings = bulletins.max_danger_ratings()
+                ratings = bulletins.max_danger_ratings(validityDate)
                 relevant_ratings = {}
                 for key, value in ratings.items():
                     if key.startswith(regionID):

@@ -47,34 +47,25 @@ class Bulletins:
 
         return main_dates
 
-    def strip_wrong_day_reports(self):
+    def strip_wrong_day_reports(self, validityDate):
         """
-        Returns only Bulletins of newest main date
+        Returns only Bulletins of validityDate in main_dates
         """
-        newest = date(1900, 1, 1)
-        for bulletin in self.bulletins:
-            if newest < bulletin.main_date():
-                newest = bulletin.main_date()
-
         rel_bulletins = []
 
         for bulletin in self.bulletins:
-            if (
-                not bulletin.main_date() != newest
-                or bulletin.validTime.endTime.date() > newest
-            ):
+            if validityDate in bulletin.main_dates():
                 rel_bulletins.append(bulletin)
-
         return rel_bulletins
 
-    def max_danger_ratings(self):
+    def max_danger_ratings(self, validityDate):
         # pylint: disable=too-many-branches
         # pylint: disable=too-many-statements
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
         ratings = {}
-        for bulletin in self.strip_wrong_day_reports():
+        for bulletin in self.strip_wrong_day_reports(validityDate):
 
             for region in bulletin.regions:
                 local_ratings = {}

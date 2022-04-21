@@ -2,6 +2,7 @@ from avacore import pyAvaCore
 from avacore.avabulletins import Bulletins
 import unittest
 import xml.etree.ElementTree as ET
+import datetime
 
 
 class TestBavaria2021(unittest.TestCase):
@@ -11,7 +12,7 @@ class TestBavaria2021(unittest.TestCase):
         bulletins.bulletins = pyAvaCore.parse_xml(root)
         self.assertEqual(bulletins.main_date().isoformat(), "2021-12-10")
         self.assertEqual(len(bulletins.bulletins), 3)
-        ratings = bulletins.max_danger_ratings()
+        ratings = bulletins.max_danger_ratings(datetime.datetime(2021, 12, 10).date())
         """
         with open(f'tests/test/{bulletins.main_date().isoformat()}-bavaria.ratings.json', mode='w', encoding='utf-8') as f:
             import json

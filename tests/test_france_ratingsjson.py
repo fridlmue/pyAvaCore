@@ -3,6 +3,7 @@ from avacore.avabulletins import Bulletins
 import unittest
 import json
 import pathlib
+import datetime
 
 
 class TestFrance_dangerratings(unittest.TestCase):
@@ -14,7 +15,7 @@ class TestFrance_dangerratings(unittest.TestCase):
         bulletins = Bulletins()
         bulletins.from_json(data)
 
-        ratings = bulletins.max_danger_ratings()
+        ratings = bulletins.max_danger_ratings(datetime.datetime(2022, 1, 10).date())
 
         self.assertEqual(ratings["FR-01"], 4)
         self.assertEqual(ratings["FR-01:am"], 4)

@@ -1,0 +1,1585 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionId": "FR-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Conditions de neige de printemps, avec un bon regel nocturne se poursuivant une partie de la matin\u00e9e, puis la neige s'humidifie et se ramollit plus ou moins vite selon la course du soleil.\n\nAvalanches spontan\u00e9es : Apr\u00e8s disparition du regel nocturne, des avalanches de neige humide de surface ou de fond sont possibles, parfois dans les adrets d\u00e9j\u00e0 bien purg\u00e9s, mais aussi maintenant dans les ubacs en-dessous de 2500 m.  Avalanches g\u00e9n\u00e9ralement de taille moyenne (2), plus rarement de grande taille (3). \nRisques de ruptures de corniches aux heures chaudes notamment\n\nD\u00e9clenchements skieurs : Apr\u00e8s disparition du regel nocturne, possibilit\u00e9 dans les pentes raides, de provoquer une coul\u00e9e de neige humide, qui dans une grande pente peut prendre un peu de volume. Dans les ubacs, dans la tranche 2000/2500 m, un d\u00e9part lin\u00e9aire sous forme d'une plaque humide, n'est pas exclu."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement d\u00e9ficitaire. On peut encore chausser les skis vers 1400/1500 m en versant Nord, mais plus difficilement cot\u00e9 Sud, o\u00f9 les pentes sont compl\u00e8tement d\u00e9neig\u00e9es jusqu'\u00e0 2000/2500 m selon la raideur des pentes. \n\nQualit\u00e9 : Neige de printemps, dure et regel\u00e9e le matin, puis humide et vite ramollit au soleil."
+      },
+      "bulletinID": "FR-01_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Conditions de neige de printemps, avec un bon regel nocturne se poursuivant une partie de la matin\u00e9e, puis la neige s'humidifie et se ramollit plus ou moins vite selon la course du soleil.\n\nAvalanches spontan\u00e9es : Apr\u00e8s disparition du regel nocturne, des avalanches de neige humide de surface ou de fond sont possibles, parfois dans les adrets d\u00e9j\u00e0 bien purg\u00e9s, mais aussi maintenant dans les ubacs en-dessous de 2500 m.  Avalanches g\u00e9n\u00e9ralement de taille moyenne (2), plus rarement de grande taille (3). \nRisques de ruptures de corniches aux heures chaudes notamment\n\nD\u00e9clenchements skieurs : Apr\u00e8s disparition du regel nocturne, possibilit\u00e9 dans les pentes raides, de provoquer une coul\u00e9e de neige humide, qui dans une grande pente peut prendre un peu de volume. Dans les ubacs, dans la tranche 2000/2500 m, un d\u00e9part lin\u00e9aire sous forme d'une plaque humide, n'est pas exclu."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement d\u00e9ficitaire. On peut encore chausser les skis vers 1400/1500 m en versant Nord, mais plus difficilement cot\u00e9 Sud, o\u00f9 les pentes sont compl\u00e8tement d\u00e9neig\u00e9es jusqu'\u00e0 2000/2500 m selon la raideur des pentes. \n\nQualit\u00e9 : Neige de printemps, dure et regel\u00e9e le matin, puis humide et vite ramollit au soleil."
+      },
+      "bulletinID": "FR-02_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Conditions de neige de printemps, avec un bon regel nocturne se poursuivant une partie de la matin\u00e9e, puis la neige s'humidifie et se ramollit plus ou moins vite selon la course du soleil.\n\nAvalanches spontan\u00e9es : Apr\u00e8s disparition du regel nocturne, des avalanches de neige humide de surface ou de fond sont possibles, parfois dans les adrets d\u00e9j\u00e0 bien purg\u00e9s, mais aussi maintenant dans les ubacs en-dessous de 2500 m.  Avalanches g\u00e9n\u00e9ralement de taille moyenne (2), plus rarement de grande taille (3). \nRisques de ruptures de corniches aux heures chaudes notamment\n\nD\u00e9clenchements skieurs : Apr\u00e8s disparition du regel nocturne, possibilit\u00e9 dans les pentes raides, de provoquer une coul\u00e9e de neige humide, qui dans une grande pente peut prendre un peu de volume. Dans les ubacs, dans la tranche 2000/2500 m, un d\u00e9part lin\u00e9aire sous forme d'une plaque humide, n'est pas exclu. En haute montagne, dans les ubacs \u00e0 plus de 3000 m, l\u00e0 o\u00f9 la neige est encore froide, peut-\u00eatre quelques plaques diss\u00e9min\u00e9es form\u00e9es par le vent de Nord samedi dernier."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement d\u00e9ficitaire. On peut encore chausser les skis vers 1400/1500 m en versant Nord, mais plus difficilement cot\u00e9 Sud, o\u00f9 les pentes sont compl\u00e8tement d\u00e9neig\u00e9es jusqu'\u00e0 2000/2500 m selon la raideur des pentes. \n\nQualit\u00e9 : Neige de printemps, dure et regel\u00e9e le matin, puis humide et vite ramollit au soleil. En haute montagne, dans les ubacs, au-dessus de 3000 m, encore de la neige froide, cartonn\u00e9e ou parfois encore en poudreuse dense."
+      },
+      "bulletinID": "FR-03_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "(r\u00e9dig\u00e9e \u00e0 partir d\u2019information r\u00e9duite)\nNEIGE HUMIDE, AVALANCHES DE FOND.\n\nConditions printani\u00e8res avec une instabilit\u00e9 de fonte au fil des heures mais il n'y a plus beaucoup de neige....\n\nD\u00e9parts Naturels : apr\u00e8s un regel moyen, une ou deux avalanches de neige humide de surface ou sur toute l'\u00e9paisseur restante (plaques de fond) peuvent encore se produire dans les quelques pentes encore enneig\u00e9es.\n   \nD\u00e9clenchement Accidentels : ils sont peu probables sinon de favoriser l'\u00e9coulement de la neige devenue humide \u00e0 pourrie et en coupant une pente suffisamment raide."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement dispara\u00eet peu \u00e0 peu sur le massif.\n\nCycle printanier gel/d\u00e9gel avec une neige rapidement pourrie."
+      },
+      "bulletinID": "FR-04_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-05"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "(r\u00e9dig\u00e9e \u00e0 partir d\u2019information r\u00e9duite)\nNEIGE HUMIDE, AVALANCHES DE FOND.\n\nConditions printani\u00e8res avec une instabilit\u00e9 de fonte au fil des heures.\n\nD\u00e9parts Naturels : apr\u00e8s un regel moyen sous 2500 m environ, quelques avalanches de neige humide de surface ou de fond sont envisag\u00e9es au fil du r\u00e9chauffement, une grande n'\u00e9tant pas totalement impossible en zones non encore purg\u00e9es.\nD\u00e9clenchements Accidentels : ils sont peu probables sinon de favoriser l'\u00e9coulement de la neige devenue humide \u00e0 pourrie en coupant ou \u00e9voluant dans une pente suffisamment raide."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse jour apr\u00e8s jour avec une s\u00e9cheresse et une douceur qui durent depuis le 11 avril.\n\nCycle printanier gel/d\u00e9gel avec une neige souvent pourrie au-dessous de 2500 m aux heures les plus chaudes. On trouve parfois une neige plus s\u00e8che mais compacte ou tass\u00e9e en Nord au-dessus de 2800/3000 m."
+      },
+      "bulletinID": "FR-05_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-06"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "(r\u00e9dig\u00e9e \u00e0 partir d\u2019information r\u00e9duite)\nNEIGE HUMIDE, AVALANCHES DE FOND.\n\nConditions printani\u00e8res avec une instabilit\u00e9 de fonte au fil des heures.\n\nD\u00e9parts Naturels : apr\u00e8s un regel moyen sous 2500 m environ, quelques avalanches de neige humide de surface ou de fond (humidification sur toute l'\u00e9paisseur) sont attendues au fil du r\u00e9chauffement, une rare grande pouvant se produire en zones non encore purg\u00e9es.\nD\u00e9clenchements Accidentels : ils sont peu probables sinon de favoriser l'\u00e9coulement de la neige devenue humide \u00e0 pourrie, en coupant ou \u00e9voluant dans une pente suffisamment raide."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse jour apr\u00e8s jour avec une s\u00e9cheresse et une douceur qui durent depuis le 11 avril.\n\nCycle printanier gel/d\u00e9gel avec une neige souvent pourrie au-dessous de 2500 m aux heures les plus chaudes. On trouve parfois une neige plus s\u00e8che mais compacte ou tass\u00e9e en Nord au-dessus de 2800/3000 m."
+      },
+      "bulletinID": "FR-06_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-09"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "(r\u00e9dig\u00e9e \u00e0 partir d\u2019information r\u00e9duite)\nNEIGE HUMIDE, AVALANCHES DE FOND.\n\nConditions printani\u00e8res avec une instabilit\u00e9 de fonte au fil des heures.\n\nD\u00e9parts Naturels : apr\u00e8s un regel moyen sous 2500 m environ, quelques avalanches de neige humide de surface ou de fond sont attendues au fil du r\u00e9chauffement, une grande n'\u00e9tant pas totalement impossible en zones non encore purg\u00e9es.\nD\u00e9clenchements Accidentels : ils sont peu probables sinon de favoriser l'\u00e9coulement de la neige devenue humide \u00e0 pourrie en coupant ou \u00e9voluant dans une pente suffisamment raide."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse jour apr\u00e8s jour avec une s\u00e9cheresse et une douceur qui durent depuis le 11 avril.\n\nCycle printanier gel/d\u00e9gel avec une neige souvent pourrie au-dessous de 2500 m aux heures les plus chaudes. On trouve parfois une neige plus s\u00e8che mais compacte ou tass\u00e9e en versants ombrag\u00e9s au-dessus de 2800/3000 m."
+      },
+      "bulletinID": "FR-09_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-10"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "(r\u00e9dig\u00e9e \u00e0 partir d\u2019information r\u00e9duite)\nNEIGE HUMIDE, AVALANCHES DE FOND.\n\nConditions printani\u00e8res avec une instabilit\u00e9 de fonte au fil des heures.\n\nD\u00e9parts Naturels : apr\u00e8s un regel moyen sous 2500 m environ, quelques avalanches de neige humide de surface ou de fond (humidification sur toute l'\u00e9paisseur) sont attendues au fil du r\u00e9chauffement, une rare grande pouvant se produire en zones non encore purg\u00e9es.\nD\u00e9clenchements Accidentels : ils sont peu probables sinon de favoriser l'\u00e9coulement de la neige devenue humide \u00e0 pourrie, en coupant ou \u00e9voluant dans une pente suffisamment raide."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse jour apr\u00e8s jour avec une s\u00e9cheresse et une douceur qui durent depuis le 11 avril.\n\nCycle printanier gel/d\u00e9gel avec une neige souvent pourrie au-dessous de 2500 m aux heures les plus chaudes. On trouve parfois une neige plus s\u00e8che mais compacte ou tass\u00e9e en Nord au-dessus de 2800/3000 m."
+      },
+      "bulletinID": "FR-10_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-11"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "(r\u00e9dig\u00e9e \u00e0 partir d\u2019information r\u00e9duite)\nNEIGE HUMIDE, AVALANCHES DE FOND.\n\nConditions printani\u00e8res avec une instabilit\u00e9 de fonte au fil des heures.\n\nD\u00e9parts Naturels : apr\u00e8s un regel moyen sous 2300 / 2500 m environ, quelques avalanches de neige humide de surface ou de fond (humidification sur toute l'\u00e9paisseur) sont envisag\u00e9es au fil de la journ\u00e9e, une rare grande pouvant se produire en zones non encore purg\u00e9es.\nD\u00e9clenchements Accidentels : ils sont peu probables sinon de favoriser l'\u00e9coulement de la neige devenue humide \u00e0 lourde, en coupant ou \u00e9voluant dans une pente suffisamment raide. Des petites plaques vont se former dans la neige fra\u00eeche en cours d'apr\u00e8s-midi ou soir\u00e9e (de jeudi \u00e0 vendredi), elles seront alors faciles \u00e0 mobiliser."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse jour apr\u00e8s jour avec une s\u00e9cheresse et une douceur qui durent depuis le 11 avril.\n\nLa neige est souvent pourrie au-dessous de 2500 m. On trouve parfois une neige plus s\u00e8che mais compacte ou tass\u00e9e en Nord au-dessus de 2800/3000 m. Quelques petits centim\u00e8tres, vont tomber en cours d'apr\u00e8s-midi avec la formation de petites plaques dues \u00e0 la lombarde. En dessous de 2400m, cette neige r\u00e9cente s'humidifiera au contacte de l'ancienne neige pourrie et sera donc collante."
+      },
+      "bulletinID": "FR-11_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-07"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "NEIGE DE PRINTEMPS, RARES AVALANCHES DE NEIGE HUMIDE.\nSituations typiques : neige humide, avalanches de fond.\n\nD\u00c9PARTS SPONTAN\u00c9S : malgr\u00e9 un enneigement de plus en plus r\u00e9duit en Chartreuse, de rares avalanches de neige humide et de fond en pentes raides d'altitude (suffisamment enneig\u00e9es) sont encore possibles jeudi. \n\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : assez peu probables, toutefois dans une pente suffisamment raide et enneig\u00e9e,  un glissement ponctuel de neige humide/ lourde peut survenir au passage de skieurs/ randonneurs."
+      },
+      "snowpackStructure": {
+        "comment": "La fin de saison ski approche en Chartreuse, la fonte s'acc\u00e9l\u00e8re depuis plusieurs jours...Limites skiables au Nord vers 1300/1600m environ, hors sapins. Pentes Sud souvent s\u00e8ches.\nQualit\u00e9 de neige jeudi : manteau neigeux printanier assez dense, neige plus ou moins regel\u00e9e au petit matin devenant tr\u00e8s humide \u00e0 \"pourrie\"...Quelques zones plus dures."
+      },
+      "bulletinID": "FR-07_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-08"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER.\nSituations typiques : neige humide, avalanches de fond.\n\nD\u00c9PARTS SPONTAN\u00c9S : quelques avalanches moyennes de neige humide et de fond restent possibles ce jeudi, g\u00e9n\u00e9ralement en terrain raide.\n\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : en pentes suffisamment raides et humidifi\u00e9es, risque de d\u00e9parts ponctuels en neige humide au passage de skieurs/ randonneurs dans diff\u00e9rentes orientations (sous 2500 m environ en versants Nord). Si d\u00e9parts, les volumes de neige mobilisables en neige lourde peuvent \u00eatre cons\u00e9quents par endroits."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse en moyenne montagne et au Sud, il reste encore assez bon dans les combes d'altitude. Limites skiables situ\u00e9es vers 1500/2100 m selon les orientations.\n\nQualit\u00e9 de neige jeudi : manteau neigeux printanier. Au lever du jour, regel plus ou moins prononc\u00e9 selon les secteurs et l'altitude puis humidification au fil des heures. En journ\u00e9e, neige transform\u00e9e, lourde /pourrie sur le bas."
+      },
+      "bulletinID": "FR-08_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-12"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER.\nSituations typiques : neige humide, avalanches de fond.\n\nD\u00c9PARTS SPONTAN\u00c9S : quelques avalanches moyennes de neige humide et de fond restent possibles ce jeudi, g\u00e9n\u00e9ralement en terrain raide.\n\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : en pentes suffisamment raides et humidifi\u00e9es, risque de d\u00e9parts ponctuels en neige humide au passage de skieurs/ randonneurs dans diff\u00e9rentes orientations (sous 2500 m environ en versants Nord). Si d\u00e9parts, les volumes de neige mobilisables en neige lourde peuvent \u00eatre cons\u00e9quents par endroits.\nLe risque de plaque semble limit\u00e9, cantonn\u00e9 \u00e0 de rares pentes Nord raides de haute altitude."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse en moyenne montagne et au Sud. Il reste encore satisfaisant \u00e0 haute altitude. Limites skiables vers 1700/2300 m selon les orientations.\nQualit\u00e9 de neige jeudi : manteau neigeux printanier. Au lever du jour, regel plus ou moins prononc\u00e9 selon les secteurs et l'altitude puis humidification au fil des heures. En journ\u00e9e, neige transform\u00e9e, lourde /pourrie sur le bas."
+      },
+      "bulletinID": "FR-12_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-14"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "NEIGE DE PRINTEMPS, AVALANCHES DE NEIGE HUMIDE.\nSituations typiques : neige humide, avalanches de fond.\n\nD\u00c9PARTS SPONTAN\u00c9S : activit\u00e9 printani\u00e8re locale en pentes raides avec de possibles avalanches de neige humide et de fond, g\u00e9n\u00e9ralement de taille moyenne. \n\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : le passage de skieurs/ randonneurs peut favoriser un glissement ponctuel de neige humide en terrain raide r\u00e9chauff\u00e9, y compris en versants ombrag\u00e9s. Sinon peu probables."
+      },
+      "snowpackStructure": {
+        "comment": "La fin de saison ski approche, la fonte s'acc\u00e9l\u00e8re depuis quelques jours...Limites skiables au Nord vers 1300/1500m environ, hors sapins. Pentes Sud souvent s\u00e8ches.\nQualit\u00e9 de neige mercredi : manteau neigeux printanier assez dense, neige regel\u00e9e devenant tr\u00e8s humide \u00e0 \"pourrie\" en matin\u00e9e...quelques zones plus dures."
+      },
+      "bulletinID": "FR-14_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-15"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER.\nSituations typiques : neige humide, avalanches de fond.\n\nD\u00c9PARTS SPONTAN\u00c9S : Quelques avalanches moyennes de neige humide en terrain raide peuvent se produire, voire une grande. Des avalanches de fond sont \u00e9galement possibles en alpages/pentes lisses. \n\nD\u00c9CLENCHEMENTS PROVOQU\u00c9S : risque de glissement ponctuel de neige humide au passage de skieurs/ randonneurs en pentes suffisamment raides et bien r\u00e9chauff\u00e9es, y compris en versants Nord. Localement, les volumes de neige mobilisables en neige lourde peuvent \u00eatre cons\u00e9quents.\nLe risque de plaque semble limit\u00e9, cantonn\u00e9 \u00e0 de rares pentes Nord raides de haute altitude."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement r\u00e9gresse en moyenne montagne et au Sud et reste correct dans les combes d'altitude. Limites skiables vers 1800/2400 m.\nQualit\u00e9 de neige mercredi : manteau neigeux printanier. Regel  puis humidification rapide en matin\u00e9e."
+      },
+      "bulletinID": "FR-15_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-13"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, avalanches moyennes non exclues, voire grandes aux altitudes moyennes. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Localement, les volumes de neige mobilisable peuvent \u00eatre cons\u00e9quents. Par ailleurs, de rares plaques persistent localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord. D\u2019autres instabilit\u00e9s rares et minces en formation en fin de journ\u00e9e de jeudi."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. On ne peut chausser les skis qu'\u00e0 partir de 2000/2100 m en versants nord.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement humide.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-13_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-16"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, avalanches moyennes non exclues, voire grandes aux altitudes moyennes. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Localement, les volumes de neige mobilisable peuvent \u00eatre cons\u00e9quents. Par ailleurs, de rares plaques persistent localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. On ne peut chausser les skis qu'\u00e0 partir de 1900/2100 m en versants nord.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement ou s\u00e8che au dessus de 3000m.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-16_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-17"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER MAIS D\u00c9GRADATION SUR LE HAUT GUIL  (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, neige vent\u00e9e.\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, coul\u00e9es ou avalanches moyennes non exclues. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : sur le Haut Guil, possibles plaques en formation au-dessus de 2000/2200m en versants ombrag\u00e9s enneig\u00e9s avec les faibles chutes de neige vent\u00e9e. G\u00e9n\u00e9ralement minces, ces instabilit\u00e9es sont toutefois facilement d\u00e9clenchables. Par ailleurs sur l'ensemble du massif, des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. De rares plaques persistent aussi localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. La pratique du ski hors domaines est limit\u00e9e \u00e0 de rares itin\u00e9raires d'altitude.\n\nNeige de printemps, souvent absente ou int\u00e9gralement humidifi\u00e9e en versants ensoleill\u00e9s jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement humide ou s\u00e8che au dessus de 3000m.\nCe jeudi matin, localement au-dessus de 1800/2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-17_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-18"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, avalanches moyennes non exclues, voire grandes aux altitudes moyennes. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Localement, les volumes de neige mobilisable peuvent \u00eatre cons\u00e9quents. Par ailleurs, de tr\u00e8s rares plaques une plaque persistent \u00e0 l\u2019approche des plus hauts sommets d'orientation nord. D\u2019autres instabilit\u00e9s rares et minces en formation en seconde partie de journ\u00e9e de jeudi."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. La pratique du ski hors domaines est limit\u00e9e \u00e0 de rares itin\u00e9raires d'altitude.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement humide.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-18_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-19"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, avalanches moyennes non exclues, voire grandes aux altitudes moyennes. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Localement, les volumes de neige mobilisable peuvent \u00eatre cons\u00e9quents. Par ailleurs, de rares plaques persistent localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. On ne peut chausser les skis qu'\u00e0 partir de 1900/2100 m en versants nord.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement ou s\u00e8che au dessus de 3000m.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-19_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-20"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, coul\u00e9es ou avalanches moyennes non exclues. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Par ailleurs, de tr\u00e8s rares plaques persistent localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. La pratique du ski hors domaines est limit\u00e9e \u00e0 de rares itin\u00e9raires d'altitude.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement humide.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-20_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-21"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, coul\u00e9es ou avalanches moyennes non exclues. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Par ailleurs, de tr\u00e8s rares plaques persistent localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord.  En haute Ubaye, d'autres instabilit\u00e9s rares et minces en formation avec les faibles chutes de neige vent\u00e9e."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. La pratique du ski hors domaines est limit\u00e9e \u00e0 de rares itin\u00e9raires d'altitude.\n\nNeige de printemps, souvent absente ou int\u00e9gralement humidifi\u00e9e en versants ensoleill\u00e9s, en versants nord d'altitude encore partiellement humide ou s\u00e8che au dessus de 3000m.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-21_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-22"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, sous couche fragile persistante (versants nord d\u2019altitude).\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, coul\u00e9es ou avalanches moyennes non exclues. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. Par ailleurs, de tr\u00e8s rares plaques persistent localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. La pratique du ski hors domaines est limit\u00e9e \u00e0 de rares itin\u00e9raires d'altitude.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement humide.\nCe jeudi matin, localement au-dessus de 2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-22_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-23"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "MANTEAU PRINTANIER MAIS D\u00c9GRADATION SUR LE CHAINON FRONTALIER (bulletin r\u00e9dig\u00e9 \u00e0 partir d'informations r\u00e9duites)\nSituation avalancheuse typique : neige humide, neige vent\u00e9e.\n\nD\u00e9parts spontan\u00e9s : dans les pentes et couloirs raides non encore purg\u00e9s et suffisamment enneig\u00e9s, coul\u00e9es ou avalanches moyennes non exclues. En effet, l\u2019humidification du manteau neigeux reste d\u2019actualit\u00e9 avec un regel nocturne m\u00e9diocre \u00e0 correct. \n\nD\u00e9clenchements provoqu\u00e9s : sur le chainon frontalier, possibles plaques en formation au-dessus de 2000/2200m en versants ombrag\u00e9s enneig\u00e9s avec les faibles chutes de neige vent\u00e9e. G\u00e9n\u00e9ralement minces, ces instabilit\u00e9es sont toutefois facilement d\u00e9clenchables. Par ailleurs sur l'ensemble du massif, des d\u00e9parts de neige lourde peuvent \u00eatre d\u00e9clench\u00e9s au passage de skieurs/randonneurs en pente raide. De tr\u00e8s rares plaques persistent aussi localement \u00e0 l\u2019approche des cr\u00eates et sommets de haute altitude d'orientation nord."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement tr\u00e8s d\u00e9ficitaire. La pratique du ski hors domaines est limit\u00e9e \u00e0 de rares itin\u00e9raires d'altitude.\n\nNeige de printemps, en versants ensoleill\u00e9s souvent absente ou int\u00e9gralement humidifi\u00e9e jusqu'\u00e0 haute altitude, en versants nord d'altitude encore partiellement humide.\nCe jeudi matin, localement au-dessus de 1800/2200m, quelques cm de neige fraiche."
+      },
+      "bulletinID": "FR-23_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-64"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "INSTABILIT\u00c9 EN NEIGE R\u00c9CENTE.\nSituations avalancheuses typiques: Neige r\u00e9cente/Neige humide\nL'\u00e9pisode neigeux en cours a apport\u00e9 un cumul important de neige fra\u00eeche peu stabilis\u00e9e. Cet \u00e9pisode se poursuit demain jeudi en s'att\u00e9nuant.\nD\u00e9parts spontan\u00e9s: Au cours des chutes, des avalanches de neige r\u00e9cente vont se produire dans les pentes raides, \nla plupart de taille moyenne, mais certaines pourront \u00eatre de grande taille au vu de la quantit\u00e9 de neige mobilisable.\nDurant les p\u00e9riodes d'\u00e9claircies, des avalanches de surface en neige r\u00e9cente humidifi\u00e9es pourront se produire, surtout \u00e0 proximit\u00e9 des rochers et dans des pentes suffisamment raides. Coul\u00e9es de talus pendant les pluies de l'apr\u00e8s midi.\nD\u00e9clenchements provoqu\u00e9s: Des plaques et accumulations, facilement d\u00e9clenchables se sont certainement form\u00e9es dans des combes et zones abrit\u00e9es. D'aspect poudreux, le passage d'un seul skieur pourra provoquer leur d\u00e9stabilisation dans des pentes suffisamment raides."
+      },
+      "snowpackStructure": {
+        "comment": "La montagne retrouve un aspect hivernal avec une pellicule de neige fra\u00eeche qui recouvre les sols \u00e0 partir de 1100m environ, et une \u00e9paisseur importante de neige fra\u00eeche d\u00e9s  1800 \u00e0 1900m, altitude o\u00f9 d\u00e9bute la sous couche . Cette couche d'aspect poudreux au moment des chutes, \u00e9volue rapidement au moindre rayonnement, elle va s'humidifier en profondeur en dessous de 2000m avec le radoucissement et les pluies attendues."
+      },
+      "bulletinID": "FR-64_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-65"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "INSTABILIT\u00c9 EN NEIGE R\u00c9CENTE : AVALANCHES DE NEIGE FRA\u00ceCHE ET FORMATION DE PLAQUES.\n\nSituation avalancheuse typique : neige fra\u00eeche/neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s : Des avalanches de neige fra\u00eeche sont attendues \u00e0 partir de la nuit de mardi \u00e0 mercredi. Dans la journ\u00e9e de mercredi, les accumulations deviennent importantes par endroits, et quelques avalanches pourront \u00eatre de grande taille.\n\nD\u00e9clenchements skieurs : Quelques plaques, facilement d\u00e9clenchables, seront form\u00e9es par le vent faible et variable. Elles seront localis\u00e9es dans des expositions vari\u00e9es, plut\u00f4t \u00e0 proximit\u00e9 des cr\u00eates et pourront avoir un aspect poudreux. Elles seront un peu plus fr\u00e9quentes en fin de journ\u00e9e, avec le renforcement du vent et la persistance des chutes de neige."
+      },
+      "snowpackStructure": {
+        "comment": "Le manteau neigeux est d\u00e9ficitaire en dessous 2000 m, il reste bon plus haut. \nMardi il neige de nouveau vers la moyenne montagne, le vieux manteau se recouvre de neige r\u00e9cente peu vent\u00e9e dans un premier temps. Gr\u00e2ce \u00e0 ces chutes de neige, l'enneigement continu s'abaisse vers 1500 m mercredi."
+      },
+      "bulletinID": "FR-65_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-66"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "INSTABILIT\u00c9 EN NEIGE R\u00c9CENTE.\nSituations avalancheuses typiques: Neige r\u00e9cente/Neige humide\nL'\u00e9pisode neigeux en cours a apport\u00e9 un cumul important de neige fra\u00eeche peu stabilis\u00e9e. Cet \u00e9pisode se poursuit demain jeudi en s'att\u00e9nuant.\nD\u00e9parts spontan\u00e9s: Au cours des chutes, des avalanches de neige r\u00e9cente vont se produire dans les pentes raides, \nla plupart de taille moyenne, mais certaines pourront \u00eatre de grande taille au vu de la quantit\u00e9 de neige mobilisable.\nDurant les p\u00e9riodes d'\u00e9claircies, des avalanches de surface en neige r\u00e9cente humidifi\u00e9es pourront se produire, surtout \u00e0 proximit\u00e9 des rochers et dans des pentes suffisamment raides. Coul\u00e9es de talus pendant les pluies de l'apr\u00e8s midi.\nD\u00e9clenchements provoqu\u00e9s: Des plaques et accumulations, facilement d\u00e9clenchables se sont certainement form\u00e9es dans des combes et zones abrit\u00e9es. D'aspect poudreux, le passage d'un seul skieur pourra provoquer leur d\u00e9stabilisation dans des pentes suffisamment raides."
+      },
+      "snowpackStructure": {
+        "comment": "La montagne retrouve un aspect hivernal avec une pellicule de neige fra\u00eeche qui recouvre les sols \u00e0 partir de 1100m environ, et une \u00e9paisseur importante de neige fra\u00eeche d\u00e9s  1800 \u00e0 1900m, altitude o\u00f9 d\u00e9bute la sous couche . Cette couche d'aspect poudreux au moment des chutes, \u00e9volue rapidement au moindre rayonnement, elle va s'humidifier en profondeur en dessous de 2000m avec le radoucissement attendu.\nElle reste froide et s\u00e8che \u00e0 partir de 2000m d'altitude environ et peu impact\u00e9e par le vent.\nL'enneigement est exc\u00e9dentaire au dessus de 2000m environ."
+      },
+      "bulletinID": "FR-66_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-67"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "INSTABILIT\u00c9 EN NEIGE R\u00c9CENTE.\nSituations avalancheuses typiques: Neige r\u00e9cente/Neige humide\nL'\u00e9pisode neigeux en cours a apport\u00e9 un cumul important de neige fra\u00eeche peu stabilis\u00e9e. Cet \u00e9pisode se poursuit demain jeudi en s'att\u00e9nuant.\nD\u00e9parts spontan\u00e9s: Au cours des chutes, des avalanches de neige r\u00e9cente vont se produire dans les pentes raides, \nla plupart de taille moyenne, mais certaines pourront \u00eatre de grande taille au vu de la quantit\u00e9 de neige mobilisable.\nDurant les p\u00e9riodes d'\u00e9claircies, des avalanches de surface en neige r\u00e9cente humidifi\u00e9es pourront se produire, surtout \u00e0 proximit\u00e9 des rochers et dans des pentes suffisamment raides. Coul\u00e9es de talus pendant les pluies de l'apr\u00e8s midi.\nD\u00e9clenchements provoqu\u00e9s: Des plaques et accumulations, facilement d\u00e9clenchables se sont certainement form\u00e9es dans des combes et zones abrit\u00e9es. D'aspect poudreux, le passage d'un seul skieur pourra provoquer leur d\u00e9stabilisation dans des pentes suffisamment raides."
+      },
+      "snowpackStructure": {
+        "comment": "La montagne retrouve un aspect hivernal avec une pellicule de neige fra\u00eeche qui recouvre les sols \u00e0 partir de 1100m environ, et une \u00e9paisseur importante de neige fra\u00eeche d\u00e9s  1800 \u00e0 1900m, altitude o\u00f9 d\u00e9bute la sous couche . Cette couche d'aspect poudreux au moment des chutes, \u00e9volue rapidement au moindre rayonnement, elle va s'humidifier en profondeur en dessous de 2000m avec le radoucissement attendu.\nElle reste froide et s\u00e8che \u00e0 partir de 2000m d'altitude environ et peu impact\u00e9e par le vent.\nL'enneigement est exc\u00e9dentaire au dessus de 2000m environ."
+      },
+      "bulletinID": "FR-67_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-68"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "INSTABILIT\u00c9 EN NEIGE R\u00c9CENTE : AVALANCHES DE NEIGE FRA\u00ceCHE ET FORMATION DE PLAQUES.\n\nSituation avalancheuse typique : neige fra\u00eeche/neige vent\u00e9e\n\nD\u00e9parts spontan\u00e9s : Des avalanches de neige fra\u00eeche sont attendues \u00e0 partir de la nuit de mardi \u00e0 mercredi. Dans la journ\u00e9e de mercredi, les accumulations deviennent importantes par endroits, et quelques avalanches pourront \u00eatre de grande taille.\n\nD\u00e9clenchements skieurs : Quelques plaques, facilement d\u00e9clenchables, seront form\u00e9es par le vent faible et variable. Elles seront localis\u00e9es dans des expositions vari\u00e9es, plut\u00f4t \u00e0 proximit\u00e9 des cr\u00eates et pourront avoir un aspect poudreux. Elles seront un peu plus fr\u00e9quentes en fin de journ\u00e9e, avec le renforcement du vent et la persistance des chutes de neige."
+      },
+      "snowpackStructure": {
+        "comment": "Le manteau neigeux est d\u00e9ficitaire en dessous 2000 m, il reste bon plus haut. \nMardi il neige de nouveau vers la moyenne montagne, le vieux manteau se recouvre de neige r\u00e9cente peu vent\u00e9e dans un premier temps. Gr\u00e2ce \u00e0 ces chutes de neige, l'enneigement continu s'abaisse vers 1500 m mercredi."
+      },
+      "bulletinID": "FR-68_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-69"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Situation avalancheuse typique: Neige fra\u00eeche\nD\u00e9parts spontan\u00e9s.  Les prochaines chutes de neige se d\u00e9posent sur un manteau printanier et dense. Pas mal d\u2019avalanches de fontes se sont d\u00e9j\u00e0 produites ces derniers jours mais le refroidissement en cours va ralentir ce ph\u00e9nom\u00e8ne. Avec les chutes attendues la nuit prochaine et demain et au fur et \u00e0 mesure que les cumuls augmenteront de nouvelles avalanches naturelles vont se produire. Elles ne concernent en g\u00e9n\u00e9ral que la neige fra\u00eeche , mais parfois lors de leurs \u00e9coulements elles peuvent encore emporter une partie de l\u2019ancien manteau et devenir plus volumineuses. Ces chutes l\u00e9g\u00e8rement vent\u00e9es favoriseront \u00e9galement la formation de quelques plaques et accumulations qui elles aussi pourront d\u00e9crocher spontan\u00e9ment.\nD\u00e9clenchements provoqu\u00e9s\u00a0: Quelques plaques et accumulations se forment donc avec les prochaines chutes qui sont accompagn\u00e9es par un l\u00e9ger vent de sud. Peu \u00e9paisses dans un premier temps elles pourront c\u00e9der au passage d\u2019un randonneur d\u00e8s que la pente sera suffisamment raide.La neige fra\u00eeche de ce d\u00e9but d\u2019\u00e9pisode ainsi que la neige roul\u00e9e attendue sous les averses pourront faire office de couche fragile."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement  tr\u00e8s correct pour la saison . Limite skiable vers 1800/2000 m au mieux  en choisissant judicieusement son itin\u00e9raire.  Avec les prochaines chutes attendues on trouvera de la neige fra\u00eeche se d\u00e9posant sur l'ancien manteau printanier."
+      },
+      "bulletinID": "FR-69_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-70"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Situation avalancheuse typique: Neige fra\u00eeche\nD\u00e9parts spontan\u00e9s.  Les prochaines chutes de neige se d\u00e9posent sur un manteau printanier et dense. Pas mal d\u2019avalanches de fontes se sont d\u00e9j\u00e0 produites ces derniers jours mais le refroidissement en cours va ralentir ce ph\u00e9nom\u00e8ne. Avec les chutes attendues la nuit prochaine et demain et au fur et \u00e0 mesure que les cumuls augmenteront de nouvelles avalanches naturelles vont se produire. Elles ne concernent en g\u00e9n\u00e9ral que la neige fra\u00eeche , mais parfois lors de leurs \u00e9coulements elles peuvent encore emporter une partie de l\u2019ancien manteau et devenir plus volumineuses. Ces chutes l\u00e9g\u00e8rement vent\u00e9es favoriseront \u00e9galement la formation de quelques plaques et accumulations qui elles aussi pourront d\u00e9crocher spontan\u00e9ment.\nD\u00e9clenchements provoqu\u00e9s\u00a0: Quelques plaques et accumulations se forment donc avec les prochaines chutes qui sont accompagn\u00e9es par un l\u00e9ger vent de sud. Peu \u00e9paisses dans un premier temps elles pourront c\u00e9der au passage d\u2019un randonneur d\u00e8s que la pente sera suffisamment raide.La neige fra\u00eeche de ce d\u00e9but d\u2019\u00e9pisode ainsi que la neige roul\u00e9e attendue sous les averses pourront faire office de couche fragile."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement  tr\u00e8s correct pour la saison . Limite skiable vers 1800/2000 m au mieux  en choisissant judicieusement son itin\u00e9raire.  Avec les prochaines chutes attendues on trouvera de la neige fra\u00eeche se d\u00e9posant sur l'ancien manteau printanier."
+      },
+      "bulletinID": "FR-70_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-72"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Situation avalancheuse typique: Neige fra\u00eeche\nD\u00e9parts spontan\u00e9s.  Les prochaines chutes de neige se d\u00e9posent sur un manteau printanier et dense. Pas mal d\u2019avalanches de fontes se sont d\u00e9j\u00e0 produites ces derniers jours mais le refroidissement en cours va ralentir ce ph\u00e9nom\u00e8ne. Avec les chutes attendues la nuit prochaine et demain et au fur et \u00e0 mesure que les cumuls augmenteront de nouvelles avalanches naturelles vont se produire. Elles ne concernent en g\u00e9n\u00e9ral que la neige fra\u00eeche , mais parfois lors de leurs \u00e9coulements elles peuvent encore emporter une partie de l\u2019ancien manteau et devenir plus volumineuses. Ces chutes l\u00e9g\u00e8rement vent\u00e9es favoriseront \u00e9galement la formation de quelques plaques et accumulations qui elles aussi pourront d\u00e9crocher spontan\u00e9ment.\nD\u00e9clenchements provoqu\u00e9s\u00a0: Quelques plaques et accumulations se forment donc avec les prochaines chutes qui sont accompagn\u00e9es par un l\u00e9ger vent de sud. Peu \u00e9paisses dans un premier temps elles pourront c\u00e9der au passage d\u2019un randonneur d\u00e8s que la pente sera suffisamment raide.La neige fra\u00eeche de ce d\u00e9but d\u2019\u00e9pisode ainsi que la neige roul\u00e9e attendue sous les averses pourront faire office de couche fragile."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement  tr\u00e8s correct pour la saison . Limite skiable vers 1800/2000 m au mieux  en choisissant judicieusement son itin\u00e9raire.  Avec les prochaines chutes attendues on trouvera de la neige fra\u00eeche se d\u00e9posant sur l'ancien manteau printanier."
+      },
+      "bulletinID": "FR-72_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-71"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Situation avalancheuse typique: Neige fra\u00eeche\nD\u00e9parts spontan\u00e9s.  Les prochaines chutes de neige se d\u00e9posent sur un manteau printanier et dense. Pas mal d\u2019avalanches de fontes se sont d\u00e9j\u00e0 produites ces derniers jours mais le refroidissement en cours va ralentir ce ph\u00e9nom\u00e8ne. Avec les chutes attendues la nuit prochaine et demain et au fur et \u00e0 mesure que les cumuls augmenteront de nouvelles avalanches naturelles vont se produire. Elles ne concernent en g\u00e9n\u00e9ral que la neige fra\u00eeche , mais parfois lors de leurs \u00e9coulements elles peuvent encore emporter une partie de l\u2019ancien manteau et devenir plus volumineuses. Ces chutes l\u00e9g\u00e8rement vent\u00e9es favoriseront \u00e9galement la formation de quelques plaques et accumulations qui elles aussi pourront d\u00e9crocher spontan\u00e9ment.\nD\u00e9clenchements provoqu\u00e9s\u00a0: Quelques plaques et accumulations se forment donc avec les prochaines chutes qui sont accompagn\u00e9es par un l\u00e9ger vent de sud. Peu \u00e9paisses dans un premier temps elles pourront c\u00e9der au passage d\u2019un randonneur d\u00e8s que la pente sera suffisamment raide.La neige fra\u00eeche de ce d\u00e9but d\u2019\u00e9pisode ainsi que la neige roul\u00e9e attendue sous les averses pourront faire office de couche fragile."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement  tr\u00e8s correct pour la saison . Limite skiable vers 1900/2000 m au mieux  en choisissant judicieusement son itin\u00e9raire.  Avec les prochaines chutes attendues on trouvera de la neige fra\u00eeche se d\u00e9posant sur l'ancien manteau printanier."
+      },
+      "bulletinID": "FR-71_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-73"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Situation avalancheuse typique: Neige fra\u00eeche\nD\u00e9parts spontan\u00e9s.  Les prochaines chutes de neige se d\u00e9posent sur un manteau printanier et dense. Pas mal d\u2019avalanches de fontes se sont d\u00e9j\u00e0 produites ces derniers jours mais le refroidissement en cours va ralentir ce ph\u00e9nom\u00e8ne. Avec les chutes attendues la nuit prochaine et demain et au fur et \u00e0 mesure que les cumuls augmenteront de nouvelles avalanches naturelles vont se produire. Elles ne concernent en g\u00e9n\u00e9ral que la neige fra\u00eeche , mais parfois lors de leurs \u00e9coulements elles peuvent encore emporter une partie de l\u2019ancien manteau et devenir plus volumineuses. Ces chutes l\u00e9g\u00e8rement vent\u00e9es favoriseront \u00e9galement la formation de quelques plaques et accumulations qui elles aussi pourront d\u00e9crocher spontan\u00e9ment.\nD\u00e9clenchements provoqu\u00e9s\u00a0: Quelques plaques et accumulations se forment donc avec les prochaines chutes qui sont accompagn\u00e9es par un l\u00e9ger vent de sud. Peu \u00e9paisses dans un premier temps elles pourront c\u00e9der au passage d\u2019un randonneur d\u00e8s que la pente sera suffisamment raide.La neige fra\u00eeche de ce d\u00e9but d\u2019\u00e9pisode ainsi que la neige roul\u00e9e attendue sous les averses pourront faire office de couche fragile."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement  tr\u00e8s correct pour la saison . Limite skiable vers 1800/2000 m au mieux  en choisissant judicieusement son itin\u00e9raire.  Avec les prochaines chutes attendues on trouvera de la neige fra\u00eeche se d\u00e9posant sur l'ancien manteau printanier."
+      },
+      "bulletinID": "FR-73_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-74"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T16:00:00+02:00",
+        "endTime": "2022-04-20T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-19T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "Situation avalancheuse typique: Neige fra\u00eeche\nD\u00e9parts spontan\u00e9s.  Les prochaines chutes de neige se d\u00e9posent sur un manteau printanier et dense. Pas mal d\u2019avalanches de fontes se sont d\u00e9j\u00e0 produites ces derniers jours mais le refroidissement en cours va ralentir ce ph\u00e9nom\u00e8ne. Avec les chutes attendues la nuit prochaine et demain et au fur et \u00e0 mesure que les cumuls augmenteront de nouvelles avalanches naturelles vont se produire. Elles ne concernent en g\u00e9n\u00e9ral que la neige fra\u00eeche , mais parfois lors de leurs \u00e9coulements elles peuvent encore emporter une partie de l\u2019ancien manteau et devenir plus volumineuses. Ces chutes l\u00e9g\u00e8rement vent\u00e9es favoriseront \u00e9galement la formation de quelques plaques et accumulations qui elles aussi pourront d\u00e9crocher spontan\u00e9ment.\nD\u00e9clenchements provoqu\u00e9s\u00a0: Quelques plaques et accumulations se forment donc avec les prochaines chutes qui sont accompagn\u00e9es par un l\u00e9ger vent de sud. Peu \u00e9paisses dans un premier temps elles pourront c\u00e9der au passage d\u2019un randonneur d\u00e8s que la pente sera suffisamment raide.La neige fra\u00eeche de ce d\u00e9but d\u2019\u00e9pisode ainsi que la neige roul\u00e9e attendue sous les averses pourront faire office de couche fragile."
+      },
+      "snowpackStructure": {
+        "comment": "Enneigement  tr\u00e8s correct pour la saison . Limite skiable vers 1900/2000 m au mieux  en choisissant judicieusement son itin\u00e9raire.  Avec les prochaines chutes attendues on trouvera de la neige fra\u00eeche se d\u00e9posant sur l'ancien manteau printanier."
+      },
+      "bulletinID": "FR-74_2022-04-19T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-40"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2100"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2100"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "upperBound": "2100"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2100"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "QUELQUES CHUTES EN ALTITUDE\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e.\nTemps perturb\u00e9 et pr\u00e9cipitations plus intenses en versants orientaux \u00e0 partir de jeudi, fin de matin\u00e9e.\n\nD\u00e9parts spontan\u00e9s : En fin d'apr\u00e8s-midi, quelques avalanches de neige fra\u00eeche sont attendues au-dessus de 2100m, principalement en versants orientaux.\n \nD\u00e9clenchements provoqu\u00e9s :  quelques plaques \u00e0 vent se forment en versants occidentaux, elles peuvent \u00eatre d\u00e9clanch\u00e9es par le passage d'un skieur en fin de journ\u00e9e."
+      },
+      "snowpackStructure": {
+        "comment": "L'enneigement est d\u00e9ficitaire pour la saison.  A 2350M d'altitude, sur la Maniccia, on enregistre une \u00e9paisseur totale de neige de 65 cm. Les quelques chutes attendues et le l\u00e9ger reffroidissement vont freiner ce ph\u00e9nom\u00e8ne."
+      },
+      "bulletinID": "FR-40_2022-04-20T16:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionId": "FR-41"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-20T16:00:00+02:00",
+        "endTime": "2022-04-21T18:00:00+02:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2100"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2100"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "upperBound": "2100"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2100"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "low"
+        }
+      ],
+      "customData": {
+        "MeteoFrance": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "SE",
+              "S",
+              "SW",
+              "W",
+              "NW"
+            ]
+          }
+        }
+      },
+      "publicationTime": "2022-04-20T16:00:00+02:00",
+      "avalancheActivity": {
+        "comment": "QUELQUES CHUTES EN ALTITUDE\nSituation avalancheuse typique : neige fra\u00eeche, neige vent\u00e9e.\nTemps perturb\u00e9 et pr\u00e9cipitations plus intenses en versants orientaux \u00e0 partir de jeudi, fin de matin\u00e9e.\n\nD\u00e9parts spontan\u00e9s : En fin d'apr\u00e8s-midi, quelques avalanches de neige fra\u00eeche sont attendues au-dessus de 2100m, principalement en versants orientaux.\n \nD\u00e9clenchements provoqu\u00e9s :  quelques plaques \u00e0 vent se forment en versants occidentaux, elles peuvent \u00eatre d\u00e9clanch\u00e9es par le passage d'un skieur en fin de journ\u00e9e."
+      },
+      "snowpackStructure": {
+        "comment": "La fonte est importante depuis d\u00e9but avril et l'enneigement est d\u00e9ficitaire pour la saison. Les quelques chutes attendues et le l\u00e9ger reffroidissement vont freiner ce ph\u00e9nom\u00e8ne."
+      },
+      "bulletinID": "FR-41_2022-04-20T16:00:00+02:00"
+    }
+  ]
+}

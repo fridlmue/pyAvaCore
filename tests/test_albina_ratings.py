@@ -3,6 +3,7 @@ from avacore.avabulletins import Bulletins
 import unittest
 import xml.etree.ElementTree as ET
 import json
+import datetime
 
 
 class TestAlbinaRatings(unittest.TestCase):
@@ -13,7 +14,7 @@ class TestAlbinaRatings(unittest.TestCase):
 
         self.assertEqual(bulletins.main_date().isoformat(), "2022-03-22")
         self.assertEqual(len(bulletins.bulletins), 2)
-        ratings = bulletins.max_danger_ratings()
+        ratings = bulletins.max_danger_ratings(datetime.datetime(2022, 3, 22).date())
 
         relevant_ratings = {}
         for key in ratings:
