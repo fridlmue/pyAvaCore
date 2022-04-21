@@ -17,6 +17,14 @@ unittest:
       junit: report.xml
       cobertura: coverage.xml
 
+mypy:
+  stage: test
+  script:
+    - python -V
+    - pip install --requirement requirements.txt
+    - pip install mypy types-python-dateutil types-pytz
+    - mypy avacore
+
 pylint:
   stage: test
   script:
