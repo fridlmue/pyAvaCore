@@ -20,6 +20,7 @@ import argparse
 import json
 import logging
 import logging.handlers
+from datetime import datetime
 
 from .pyAvaCore import JSONEncoder, get_reports
 from .avabulletins import Bulletins
@@ -67,22 +68,23 @@ def download_region(regionID):
     reports, _, url = get_reports(regionID)
     bulletins = Bulletins()
     bulletins.bulletins = reports
-    validityDates = bulletins.main_dates()
-    validityDate = None
+    validity_dates = bulletins.main_dates(protect_overwrite_now=datetime.now())
+    validity_date = None
 
     if args.cli != "o":
         directory = Path(args.output)
         directory.mkdir(parents=True, exist_ok=True)
         ext = "zip" if url[-3:] == "zip" else "xml"
-        for validityDate in validityDates:
+
+        for validity_date in validity_dates:
             if url != "":
                 with urlopen(url) as http, open(
-                    f"{directory}/{validityDate}-{regionID}.{ext}", mode="wb"
+                    f"{directory}/{validity_date}-{regionID}.{ext}", mode="wb"
                 ) as f:
                     logging.info("Writing %s to %s", url, f.name)
                     f.write(http.read())
             with open(
-                f"{directory}/{validityDate}-{regionID}.json", mode="w", encoding="utf-8"
+                f"{directory}/{validity_date}-{regionID}.json", mode="w", encoding="utf-8"
             ) as f:
                 logging.info("Writing %s", f.name)
                 bulletins_generic = json.loads(
@@ -91,11 +93,11 @@ def download_region(regionID):
                 bulletins_generic = remove_empty_elements(bulletins_generic)
                 json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
             with open(
-                f"{directory}/{validityDate}-{regionID}.ratings.json",
+                f"{directory}/{validity_date}-{regionID}.ratings.json",
                 mode="w",
                 encoding="utf-8",
             ) as f:
-                ratings = bulletins.max_danger_ratings(validityDate)
+                ratings = bulletins.max_danger_ratings(validity_date)
                 relevant_ratings = {}
                 for key, value in ratings.items():
                     if key.startswith(regionID):
@@ -114,7 +116,7 @@ def download_region(regionID):
                 geojson = FeatureCollection.from_dict(json.load(f))
             bulletins.augment_geojson(geojson)
             with open(
-                f"{directory}/{validityDate}-{regionID}.geojson", mode="w", encoding="utf-8"
+                f"{directory}/{validity_date}-{regionID}.geojson", mode="w", encoding="utf-8"
             ) as f:
                 # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
                 logging.info("Writing %s", f.name)
