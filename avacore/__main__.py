@@ -68,21 +68,13 @@ def download_region(regionID):
     reports, _, url = get_reports(regionID)
     bulletins = Bulletins()
     bulletins.bulletins = reports
-    validity_dates = bulletins.main_dates()
+    validity_dates = bulletins.main_dates(protect_overwrite_now=datetime.now())
     validity_date = None
 
     if args.cli != "o":
         directory = Path(args.output)
         directory.mkdir(parents=True, exist_ok=True)
         ext = "zip" if url[-3:] == "zip" else "xml"
-
-        validityDate_iter = validity_dates
-        for validity_date in validityDate_iter:
-            if validity_date < date.today():
-                validity_dates.remove(validity_date)
-
-        if len(validity_dates) > 1 and min(validity_dates) == date.today() and datetime.now().hours > 14:
-            validity_dates.remove(min(validity_dates))
 
         for validity_date in validity_dates:
             if url != "":

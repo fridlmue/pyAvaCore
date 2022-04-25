@@ -34,31 +34,46 @@ class Bulletins:
         """
         return self.bulletins[0].main_date()
 
-    def main_dates(self) -> typing.Set[date]:
+    def main_dates(self, protect_overwrite_now=None) -> typing.Set[date]:
         """
         Returns Main validity dates of Reports
-        """
-        return {d for bulletin in self.bulletins for d in bulletin.main_dates()}
 
-    def strip_wrong_day_reports(self, validityDate):
+        protect_override_now expects the date_time "now" to remove the bulletins,
+        that are from the day before.
+        """
+
+        validity_dates = {d for bulletin in self.bulletins for d in bulletin.main_dates()}
+
+        if protect_overwrite_now is not None:
+            validityDate_iter = validity_dates.copy()
+            for validity_date in validityDate_iter:
+                if validity_date < protect_overwrite_now.date():
+                    validity_dates.remove(validity_date)
+
+            if len(validity_dates) > 1 and min(validity_dates) == protect_overwrite_now.date() and protect_overwrite_now.hour > 14:
+                validity_dates.remove(min(validity_dates))
+
+        return validity_dates
+
+    def strip_wrong_day_reports(self, validity_date):
         """
         Returns only Bulletins of validityDate in main_dates
         """
         rel_bulletins = []
 
         for bulletin in self.bulletins:
-            if validityDate in bulletin.main_dates():
+            if validity_date in bulletin.main_dates():
                 rel_bulletins.append(bulletin)
         return rel_bulletins
 
-    def max_danger_ratings(self, validityDate):
+    def max_danger_ratings(self, validity_date):
         # pylint: disable=too-many-branches
         # pylint: disable=too-many-statements
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
         ratings = {}
-        for bulletin in self.strip_wrong_day_reports(validityDate):
+        for bulletin in self.strip_wrong_day_reports(validity_date):
 
             for region in bulletin.regions:
                 local_ratings = {}
