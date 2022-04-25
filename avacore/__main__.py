@@ -20,7 +20,7 @@ import argparse
 import json
 import logging
 import logging.handlers
-from datetime import date, datetime
+from datetime import datetime
 
 from .pyAvaCore import JSONEncoder, get_reports
 from .avabulletins import Bulletins
