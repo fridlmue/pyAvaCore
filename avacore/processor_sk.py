@@ -52,10 +52,7 @@ def get_reports_fromjson(sk_report):
     common_bulletin = AvaBulletin()
 
     common_bulletin.source = Source(
-        provider=Provider(
-            name=sk_report["author"],
-            website=str("https://www.hzs.sk"),
-        )
+        provider=Provider(name=sk_report["author"], website=str("https://www.hzs.sk"),)
     )
     common_bulletin.validTime = ValidTime(
         startTime=sk_report["validFrom"], endTime=sk_report["validTill"]
@@ -98,7 +95,12 @@ def get_reports_fromjson(sk_report):
                 elevations.append("upper")
             for elevation in elevations:
                 danger_rating = DangerRating()
-                danger_rating.set_mainValue_int(int(region[key][f"{elevation}Level"]))
+                main_val = (
+                    int(region[key][f"{elevation}Level"])
+                    if region[key][f"{elevation}Level"].isdigit()
+                    else 0
+                )
+                danger_rating.set_mainValue_int(main_val)
                 if len(elevations) > 1:
                     height = region[key][f"{elevation}Text"]
                     height = height.replace("nad ", ">")
