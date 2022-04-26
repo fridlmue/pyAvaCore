@@ -42,7 +42,9 @@ class Bulletins:
         that are from the day before.
         """
 
-        validity_dates = {d for bulletin in self.bulletins for d in bulletin.main_dates()}
+        validity_dates = {
+            d for bulletin in self.bulletins for d in bulletin.main_dates()
+        }
 
         if protect_overwrite_now is not None:
             validityDate_iter = validity_dates.copy()
@@ -50,7 +52,11 @@ class Bulletins:
                 if validity_date < protect_overwrite_now.date():
                     validity_dates.remove(validity_date)
 
-            if len(validity_dates) > 1 and min(validity_dates) == protect_overwrite_now.date() and protect_overwrite_now.hour > 14:
+            if (
+                len(validity_dates) > 1
+                and min(validity_dates) == protect_overwrite_now.date()
+                and protect_overwrite_now.hour > 14
+            ):
                 validity_dates.remove(min(validity_dates))
 
         return validity_dates
@@ -69,6 +75,7 @@ class Bulletins:
     def max_danger_ratings(self, validity_date):
         # pylint: disable=too-many-branches
         # pylint: disable=too-many-statements
+        # pylint: disable=too-many-nested-blocks
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
@@ -79,7 +86,25 @@ class Bulletins:
                 local_ratings = {}
                 regionId = region.regionId
 
-                # Check for available information in Bulletin
+                if len(bulletin.dangerRatings) > 1:
+                    remove = []
+                    for i in range(0, len(bulletin.dangerRatings) - 1):
+                        if (
+                            bulletin.dangerRatings[i].elevation.toString()
+                            == bulletin.dangerRatings[i + 1].elevation.toString()
+                            and bulletin.dangerRatings[i].validTimePeriod
+                            == bulletin.dangerRatings[i + 1].validTimePeriod
+                        ):
+                            if (
+                                bulletin.dangerRatings[i].get_mainValue_int()
+                                > bulletin.dangerRatings[i + 1].get_mainValue_int()
+                            ):
+                                remove.append(i + 1)
+                            else:
+                                remove.append(i)
+                    for j in remove:
+                        del bulletin.dangerRatings[j]
+
                 for danger in bulletin.dangerRatings:
 
                     key_elev = ""
