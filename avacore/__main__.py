@@ -84,7 +84,9 @@ def download_region(regionID):
                     logging.info("Writing %s to %s", url, f.name)
                     f.write(http.read())
             with open(
-                f"{directory}/{validity_date}-{regionID}.json", mode="w", encoding="utf-8"
+                f"{directory}/{validity_date}-{regionID}.json",
+                mode="w",
+                encoding="utf-8",
             ) as f:
                 logging.info("Writing %s", f.name)
                 bulletins_generic = json.loads(
@@ -116,7 +118,9 @@ def download_region(regionID):
                 geojson = FeatureCollection.from_dict(json.load(f))
             bulletins.augment_geojson(geojson)
             with open(
-                f"{directory}/{validity_date}-{regionID}.geojson", mode="w", encoding="utf-8"
+                f"{directory}/{validity_date}-{regionID}.geojson",
+                mode="w",
+                encoding="utf-8",
             ) as f:
                 # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
                 logging.info("Writing %s", f.name)
