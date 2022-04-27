@@ -56,7 +56,6 @@ def download_report_fr(region_id):
         + "&report_type=Forecast&report_subtype=BRA"
     )
     req.add_header("Authorization", "Bearer " + access_token)
-    logging.info("Fetching %s", req.full_url)
     with urlopen(req) as response_content:
         try:
             root = ET.fromstring(response_content.read().decode("utf-8"))

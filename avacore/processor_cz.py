@@ -40,7 +40,6 @@ def process_reports_cz():
 
     req = urllib.request.Request(url, headers=headers)
 
-    logging.info("Fetching %s", req.full_url)
     with urllib.request.urlopen(req) as response:
         content = response.read()
 

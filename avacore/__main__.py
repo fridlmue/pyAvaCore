@@ -15,6 +15,7 @@
 # pylint: disable=too-many-locals
 
 from pathlib import Path
+import sys
 from urllib.request import urlopen
 import argparse
 import json
@@ -60,6 +61,14 @@ logging.basicConfig(
         logging.StreamHandler(),
     ],
 )
+
+
+def log_http_requests(event, args):
+    if event == "urllib.Request":
+        logging.info("Fetching %s", args)
+
+
+sys.addaudithook(log_http_requests)
 
 
 def download_region(regionID):

@@ -38,7 +38,6 @@ def download_report_is(lang):
     req = Request(
         "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=" + lang
     )  # lang can only be `is` or `en`
-    logging.info("Fetching %s", req.full_url)
 
     with urlopen(req) as response_content:
         try:

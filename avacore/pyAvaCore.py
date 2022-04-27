@@ -18,7 +18,6 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 from pathlib import Path
 import xml.etree.ElementTree as ET
-import logging
 
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
@@ -96,18 +95,15 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         reports = process_reports_cat()
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("AD"):
-        logging.info("Fetching %s", url)
         url, provider = get_report_url(region_id, local)
         root = get_xml_as_et(url)
         reports = parse_xml_ad(root)
     elif region_id.startswith("SK"):
-        logging.info("Fetching %s", url)
         url, provider = get_report_url(region_id, local)
         reports = process_reports_sk()
     else:
         url, provider = get_report_url(region_id, local)
 
-        logging.info("Fetching %s", url)
         root = get_xml_as_et(url)
 
         if region_id.startswith("SI"):

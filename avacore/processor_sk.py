@@ -34,8 +34,6 @@ def process_reports_sk():
     Download reports
     """
     req = Request("https://caaml.hzs.sk/")
-    logging.info("Fetching %s", req.full_url)
-
     with urlopen(req) as response_content:
         response = response_content.read().decode("utf-8").split("</textarea>")[1]
         response_json = json.loads(response)
