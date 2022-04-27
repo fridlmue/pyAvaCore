@@ -478,6 +478,8 @@ def parse_xml_vorarlberg(root):
         for danger_main in reports[report_elem_number].dangerRatings:
             if danger_main.elevation.toString() == loc_elem[3].elevation.toString():
                 danger_main.mainValue = loc_elem[3].mainValue
+                break
+        reports[report_elem_number].dangerRatings.append(loc_elem[3])
 
     final_reports = []
 
