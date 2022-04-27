@@ -102,7 +102,7 @@ def parse_xml(root):
                 main_value = 0
                 am_rating = True
                 for mainValue in nDangerRating.iter(tag=CAAMLTAG + "mainValue"):
-                    main_value = int(mainValue.text)
+                    main_value = int(mainValue.text) if mainValue.text.isdigit() else 0
                 valid_elevation = "-"
                 for validElevation in nDangerRating.iter(
                     tag=CAAMLTAG + "validElevation"
@@ -111,12 +111,13 @@ def parse_xml(root):
                         "{http://www.w3.org/1999/xlink}href"
                     )
                 for beginPosition in nDangerRating.iter(tag=CAAMLTAG + "beginPosition"):
-                    validity_begin = dateutil.parser.parse(beginPosition.text)
-                    if validity_begin.time() <= time(
-                        15, 0, 0
-                    ) and validity_begin.time() >= time(8, 0, 0):
-                        am_rating = False
-                        # report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
+                    if len(beginPosition) > 4:
+                        validity_begin = dateutil.parser.parse(beginPosition.text)
+                        if validity_begin.time() <= time(
+                            15, 0, 0
+                        ) and validity_begin.time() >= time(8, 0, 0):
+                            am_rating = False
+                            # report.validTime.endTime = report.validTime.endTime.replace(hour=validity_begin.hour)
                 danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
@@ -190,7 +191,8 @@ def parse_xml(root):
             for wxSynopsisComment in observations.iter(
                 tag=CAAMLTAG + "wxSynopsisComment"
             ):
-                wxSynopsis.comment = wxSynopsisComment.text.replace("&nbsp;", "\n")
+                if not wxSynopsisComment.text is None:
+                    wxSynopsis.comment = wxSynopsisComment.text.replace("&nbsp;", "\n")
             for avActivityComment in observations.iter(
                 tag=CAAMLTAG + "avActivityComment"
             ):
