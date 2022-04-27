@@ -15,7 +15,6 @@
 import json
 import urllib.request
 from datetime import timedelta
-import logging
 
 import pytz
 import dateutil.parser

@@ -12,7 +12,6 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-import logging
 import copy
 import json
 from urllib.request import urlopen, Request

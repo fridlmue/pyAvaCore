@@ -14,7 +14,6 @@
 """
 from urllib.request import urlopen, Request
 import copy
-import logging
 import re
 import string
 import xml.etree.ElementTree as ET

@@ -66,6 +66,8 @@ logging.basicConfig(
 def log_http_requests(event, args):
     if event == "urllib.Request":
         logging.info("Fetching %s", args)
+    elif event == 'open' and 'w' in args[1]:
+        logging.info("Writing file %s", args[0])
 
 
 sys.addaudithook(log_http_requests)
@@ -91,14 +93,12 @@ def download_region(regionID):
                 with urlopen(url) as http, open(
                     f"{directory}/{validity_date}-{regionID}.{ext}", mode="wb"
                 ) as f:
-                    logging.info("Writing %s to %s", url, f.name)
                     f.write(http.read())
             with open(
                 f"{directory}/{validity_date}-{regionID}.json",
                 mode="w",
                 encoding="utf-8",
             ) as f:
-                logging.info("Writing %s", f.name)
                 json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
             with open(
                 f"{directory}/{validity_date}-{regionID}.ratings.json",
@@ -111,7 +111,6 @@ def download_region(regionID):
                     if key.startswith(regionID):
                         relevant_ratings[key] = value
                 maxDangerRatings = {"maxDangerRatings": relevant_ratings}
-                logging.info("Writing %s", f.name)
                 json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
         if args.cli in ("o", "y"):
             for bulletin in bulletins.bulletins:
@@ -129,7 +128,6 @@ def download_region(regionID):
                 encoding="utf-8",
             ) as f:
                 # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
-                logging.info("Writing %s", f.name)
                 json.dump(geojson.to_dict(), fp=f)
 
 
