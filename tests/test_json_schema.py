@@ -5,7 +5,7 @@ import pytest
 from jsonschema import validate
 
 from avacore import pyAvaCore
-from avacore.avajson import JSONEncoder, remove_empty_elements
+from avacore.avajson import JSONEncoder
 from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
 
@@ -29,11 +29,7 @@ class TestJsonSchema(unittest.TestCase):
                 bulletins = Bulletins()
                 bulletins.bulletins = reports
 
-                bulletins_generic = json.loads(
-                    json.dumps(bulletins, cls=JSONEncoder, indent=2)
-                )  # ToDo find better way. Probably with JSONEncoder directly
-                bulletins_generic = remove_empty_elements(bulletins_generic)
-
+                bulletins_generic = json.loads(json.dumps(bulletins, cls=JSONEncoder))
                 print(str(idx) + ": Test for:", regionID)
 
                 validate(instance=bulletins_generic, schema=json_schema)
@@ -41,10 +37,7 @@ class TestJsonSchema(unittest.TestCase):
                 bulletins_from_json = Bulletins()
                 bulletins_from_json.from_json(bulletins_generic)
                 bulletins_generic_compare = json.loads(
-                    json.dumps(bulletins, cls=JSONEncoder, indent=2)
-                )  # ToDo find better way. Probably with JSONEncoder directly
-                bulletins_generic_compare = remove_empty_elements(
-                    bulletins_generic_compare
+                    json.dumps(bulletins, cls=JSONEncoder)
                 )
 
                 self.assertEqual(bulletins_generic, bulletins_generic_compare)

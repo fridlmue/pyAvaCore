@@ -19,30 +19,20 @@ from datetime import datetime
 class JSONEncoder(json.JSONEncoder):
     """JSON serialization for pyAvaCore"""
 
+    def is_empty(self, x):
+        """Tests whether x is empty"""
+        if x is None or x == {} or x == []:
+            return True
+        try:
+            return self.is_empty(self.default(x))
+        except:  # pylint: disable=bare-except
+            return False
+
     def default(self, o):
         if isinstance(o, datetime):
             return o.isoformat()
         try:
             return o.toJSON()
         except:  # pylint: disable=bare-except
-            return o.__dict__
-
-
-def remove_empty_elements(d):
-    """
-    # Source: https://gist.github.com/nlohmann/c899442d8126917946580e7f84bf7ee7
-    recursively remove empty lists, empty dicts, or None elements from a dictionary
-    """
-
-    def empty(x):
-        return x is None or x == {} or x == []
-
-    if not isinstance(d, (dict, list)):
-        return d
-    if isinstance(d, list):
-        return [v for v in (remove_empty_elements(v) for v in d) if not empty(v)]
-    return {
-        k: v
-        for k, v in ((k, remove_empty_elements(v)) for k, v in d.items())
-        if not empty(v)
-    }
+            as_dict = o.__dict__
+            return {k: v for k, v in as_dict.items() if not self.is_empty(v)}

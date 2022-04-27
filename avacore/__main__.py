@@ -24,7 +24,7 @@ from datetime import datetime
 
 from .pyAvaCore import get_reports
 from .avabulletins import Bulletins
-from .avajson import JSONEncoder, remove_empty_elements
+from .avajson import JSONEncoder
 from .geojson import FeatureCollection
 
 parser = argparse.ArgumentParser(
@@ -90,11 +90,7 @@ def download_region(regionID):
                 encoding="utf-8",
             ) as f:
                 logging.info("Writing %s", f.name)
-                bulletins_generic = json.loads(
-                    json.dumps(bulletins, cls=JSONEncoder, indent=2)
-                )  # find better way. Probably with JSONEncoder directly
-                bulletins_generic = remove_empty_elements(bulletins_generic)
-                json.dump(bulletins_generic, fp=f, cls=JSONEncoder, indent=2)
+                json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
             with open(
                 f"{directory}/{validity_date}-{regionID}.ratings.json",
                 mode="w",
