@@ -401,12 +401,15 @@ class AvaBulletin:
 
     def get_region_list(self):
         """
-        returns valif region IDs as list.
+        returns valid region IDs as list.
         """
-        region_list = []
-        for reg in self.regions:
-            region_list.append(reg.regionId)
-        return region_list
+        return [r.regionId for r in self.regions]
+
+    def affects_region(self, regionId: str)->bool:
+        """
+        determines if this report affects the given region.
+        """
+        return any(r for r in self.regions if r.regionId.startswith(regionId))
 
     def from_json(self, bulletin_json):
         # pylint: disable=too-many-branches

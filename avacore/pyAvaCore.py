@@ -14,11 +14,13 @@
 """
 
 import configparser
+import typing
 from urllib.parse import urlparse
 from urllib.request import urlopen
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
+from avacore.avabulletin import AvaBulletin
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_catalunya import process_reports_cat
@@ -58,6 +60,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
     returns array of AvaReports for requested region_id and provider information
     """
 
+    reports: typing.List[AvaBulletin] = []
     url = ""
     region_id = region_id.upper()
     if region_id.startswith("FR"):
@@ -111,17 +114,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         else:
             reports = parse_xml(root)
 
-    relevant_reports = []
-
-    for report in reports:
-        found_one = False
-        for region in report.get_region_list():
-            if region.startswith(region_id):
-                found_one = True
-                break
-        if found_one:
-            relevant_reports.append(report)
-
+    relevant_reports = [report for report in reports if report.affects_region(region_id)]
     return relevant_reports, provider, url
 
 
