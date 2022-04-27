@@ -275,7 +275,10 @@ def parse_xml_vorarlberg(root):
     for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
         report_id = bulletin.attrib.get("{http://www.opengis.net/gml}id")
 
-    activity_com = ""
+    wxSynopsis = Texts()
+    avalancheActivity = Texts()
+    snowpackStructure = Texts()
+
     for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
         for detail in bulletin:
             for metaDataProperty in detail.iter(tag=CAAMLTAG + "metaDataProperty"):
@@ -287,9 +290,9 @@ def parse_xml_vorarlberg(root):
                 for travelAdvisoryComment in bulletinResultsOf.iter(
                     tag=CAAMLTAG + "" "travelAdvisoryComment"
                 ):
-                    activity_com = travelAdvisoryComment.text
+                    avalancheActivity.comment = travelAdvisoryComment.text
                 for highlights in bulletinResultsOf.iter(tag=CAAMLTAG + "highlights"):
-                    report.avalancheActivityHighlights = highlights.text
+                    avalancheActivity.highlights = highlights.text
                 for comment in bulletinResultsOf.iter(tag=CAAMLTAG + "comment"):
                     if comment_empty:
                         report.tendency.tendencyComment = comment.text
@@ -297,11 +300,11 @@ def parse_xml_vorarlberg(root):
                 for wxSynopsisComment in bulletinResultsOf.iter(
                     tag=CAAMLTAG + "" "wxSynopsisComment"
                 ):
-                    report.wxSynopsisComment = wxSynopsisComment.text
+                    wxSynopsis.comment = wxSynopsisComment.text
                 for snowpackStructureComment in bulletinResultsOf.iter(
                     tag=CAAMLTAG + "" "snowpackStructureComment"
                 ):
-                    report.snowpackStructureComment = snowpackStructureComment.text
+                    snowpackStructure.comment = snowpackStructureComment.text
                 for AvProblem in detail.iter(tag=CAAMLTAG + "AvProblem"):
                     type_r = ""
                     for ac_problemt_type in AvProblem.iter(tag=CAAMLTAG + "type"):
@@ -357,7 +360,10 @@ def parse_xml_vorarlberg(root):
                     # problem.dangerRating = problem_danger_rating
                     report.avalancheProblems.append(problem)
 
-    report.avalancheActivityComment = activity_com
+    report.avalancheActivity = avalancheActivity
+    report.wxSynopsis = wxSynopsis
+    report.snowpackStructure = snowpackStructure
+
 
     for bulletinResultOf in root.iter(tag=CAAMLTAG + "bulletinResultsOf"):
         et_add_parent_info(bulletinResultOf)
@@ -469,12 +475,36 @@ def parse_xml_vorarlberg(root):
 
     for index, loc_elem in enumerate(loc_list):
         report_elem_number = loc_ref_list.index(loc_elem[0] + "_PM")
-        for danger_main in reports[report_elem_number].dangerRating:
+        for danger_main in reports[report_elem_number].dangerRatings:
             if danger_main.elevation.toString() == loc_elem[3].elevation.toString():
                 danger_main.mainValue = loc_elem[3].mainValue
 
-    return reports
+    final_reports = []
 
+    for report in reports:
+        if report.bulletinID.endswith("_PM"):
+            for bulletin in reports:
+                if bulletin.bulletinID == report.bulletinID[:-3]:
+                    father_bulletin = bulletin
+                    father_bulletin.validTime.endTime = report.validTime.endTime
+                    for idx, danger_rating in enumerate(father_bulletin.dangerRatings):
+                        father_bulletin.dangerRatings[idx].validTimePeriod = "earlier"
+                    for danger_rating in report.dangerRatings:
+                        danger_rating.validTimePeriod = "later"
+                        father_bulletin.dangerRatings.append(danger_rating)
+                    for idx, avalanche_problem in enumerate(
+                        father_bulletin.avalancheProblems
+                    ):
+                        father_bulletin.avalancheProblems[
+                            idx
+                        ].validTimePeriod = "earlier"
+                    for avalanche_problem in report.avalancheProblems:
+                        avalanche_problem.validTimePeriod = "later"
+                        father_bulletin.avalancheProblems.append(avalanche_problem)
+        else:
+            final_reports.append(report)
+
+    return final_reports
 
 def parse_xml_bavaria(
     # pylint: disable=too-many-locals
