@@ -63,14 +63,15 @@ logging.basicConfig(
 )
 
 
-def log_http_requests(event, args):
+def log_events(event, event_args):
+    """Logs relevant events."""
     if event == "urllib.Request":
-        logging.info("Fetching %s", args)
-    elif event == 'open' and 'w' in args[1]:
-        logging.info("Writing file %s", args[0])
+        logging.info("Fetching %s", event_args)
+    elif event == 'open' and 'w' in event_args[1]:
+        logging.info("Writing file %s", event_args[0])
 
 
-sys.addaudithook(log_http_requests)
+sys.addaudithook(log_events)
 
 
 def download_region(regionID):
