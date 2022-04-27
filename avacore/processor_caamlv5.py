@@ -396,14 +396,14 @@ def parse_xml_vorarlberg(root):
                     for beginPosition in validElevation.iter(
                         tag=CAAMLTAG + "beginPosition"
                     ):
-                        if not "Keine" in beginPosition.text:
+                        if not "Keine" in beginPosition.text and not beginPosition.text == '0':
                             valid_elevation = (
                                 "ElevationRange_" + beginPosition.text + "Hi"
                             )
                     for endPosition in validElevation.iter(
                         tag=CAAMLTAG + "endPosition"
                     ):
-                        if not "Keine" in endPosition.text:
+                        if not "Keine" in endPosition.text and not endPosition.text == '0':
                             valid_elevation = (
                                 "ElevationRange_" + endPosition.text + "Lw"
                             )
