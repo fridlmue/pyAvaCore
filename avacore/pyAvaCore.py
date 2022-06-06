@@ -14,12 +14,10 @@
 """
 
 import configparser
-from datetime import datetime
 from urllib.parse import urlparse
 from urllib.request import urlopen
 from pathlib import Path
 import xml.etree.ElementTree as ET
-import json
 import logging
 
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
@@ -153,15 +151,3 @@ def get_report_url(region_id, local=""):
     else:
         provider = f"The displayed information is provided by: {name}. ({netloc})"
     return url, provider
-
-
-class JSONEncoder(json.JSONEncoder):
-    """JSON serialization of datetime"""
-
-    def default(self, o):
-        if isinstance(o, datetime):
-            return o.isoformat()
-        try:
-            return o.toJSON()
-        except:  # pylint: disable=bare-except
-            return o.__dict__

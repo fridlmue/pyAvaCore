@@ -3,27 +3,11 @@ import jsonschema
 import unittest
 import pytest
 from jsonschema import validate
+
 from avacore import pyAvaCore
+from avacore.avajson import JSONEncoder
 from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
-
-
-def remove_empty_elements(d):
-    """recursively remove empty lists, empty dicts, or None elements from a dictionary"""
-
-    def empty(x):
-        return x is None or x == {} or x == []
-
-    if not isinstance(d, (dict, list)):
-        return d
-    elif isinstance(d, list):
-        return [v for v in (remove_empty_elements(v) for v in d) if not empty(v)]
-    else:
-        return {
-            k: v
-            for k, v in ((k, remove_empty_elements(v)) for k, v in d.items())
-            if not empty(v)
-        }
 
 
 class TestJsonSchema(unittest.TestCase):
@@ -45,11 +29,7 @@ class TestJsonSchema(unittest.TestCase):
                 bulletins = Bulletins()
                 bulletins.bulletins = reports
 
-                bulletins_generic = json.loads(
-                    json.dumps(bulletins, cls=pyAvaCore.JSONEncoder, indent=2)
-                )  # ToDo find better way. Probably with JSONEncoder directly
-                bulletins_generic = remove_empty_elements(bulletins_generic)
-
+                bulletins_generic = json.loads(json.dumps(bulletins, cls=JSONEncoder))
                 print(str(idx) + ": Test for:", regionID)
 
                 validate(instance=bulletins_generic, schema=json_schema)
@@ -57,10 +37,7 @@ class TestJsonSchema(unittest.TestCase):
                 bulletins_from_json = Bulletins()
                 bulletins_from_json.from_json(bulletins_generic)
                 bulletins_generic_compare = json.loads(
-                    json.dumps(bulletins, cls=pyAvaCore.JSONEncoder, indent=2)
-                )  # ToDo find better way. Probably with JSONEncoder directly
-                bulletins_generic_compare = remove_empty_elements(
-                    bulletins_generic_compare
+                    json.dumps(bulletins, cls=JSONEncoder)
                 )
 
                 self.assertEqual(bulletins_generic, bulletins_generic_compare)

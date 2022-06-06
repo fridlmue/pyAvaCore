@@ -126,12 +126,11 @@ def parse_xml(root):
                 else:
                     pm_danger_ratings.append(danger_rating)
 
-            for DangerPattern in observations.iter(tag=CAAMLTAG + "DangerPattern"):
+            for DangerPatterns in observations.iter(tag=CAAMLTAG + "dangerPatterns"):
                 dp = []
-                for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + "type"):
-
-                    dp.append(DangerPatternType.text)
-
+                for DangerPattern in DangerPatterns.iter(tag=CAAMLTAG + "DangerPattern"):
+                    for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + "type"):
+                        dp.append(DangerPatternType.text)
                 report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
 
             for AvProblem in observations.iter(tag=CAAMLTAG + "AvProblem"):
