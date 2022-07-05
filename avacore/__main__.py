@@ -48,6 +48,8 @@ default_regions = [
     "IT-21",
     "IT-23",
     "IT-25",
+    "IT-32-BZ",
+    "IT-32-TN",
     "IT-34",
     "IT-36",
     "IT-57",
