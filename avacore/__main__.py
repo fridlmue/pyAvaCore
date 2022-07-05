@@ -20,21 +20,64 @@ import argparse
 import json
 import logging
 import logging.handlers
-from datetime import datetime
+from datetime import date, datetime, timedelta
 
 from .pyAvaCore import get_reports
 from .avabulletins import Bulletins
 from .avajson import JSONEncoder
 from .geojson import FeatureCollection
 
+default_regions = [
+    "AD",
+    "AT-02",
+    "AT-03",
+    "AT-04",
+    "AT-05",
+    "AT-06",
+    "AT-07",
+    "AT-08",
+    "CH",
+    "CZ",
+    "DE-BY",
+    "ES-CT-L",
+    "ES-CT",
+    "ES",
+    "FR",
+    "GB",
+    "IS",
+    "IT-21",
+    "IT-23",
+    "IT-25",
+    "IT-32-BZ",
+    "IT-32-TN",
+    "IT-34",
+    "IT-36",
+    "IT-57",
+    "NO",
+    "SI",
+    "SK",
+]
+
 parser = argparse.ArgumentParser(
     description="Download and parse EAWS avalanche bulletins"
 )
 parser.add_argument(
     "--regions",
-    default="AT-02 AT-03 AT-04 AT-05 AT-06 AT-07 AT-08 DE-BY CH SI FR IT-21 IT-23 IT-25 IT-34 IT-36 IT-57"
-    + " NO ES-CT-L GB IS ES-CT CZ ES AD SK",
-    help="avalanche region to download",
+    default=" ".join(default_regions),
+    help="avalanche regions to download",
+)
+parser.add_argument(
+    "--merge-dates",
+    default=" ".join(
+        [(date.today() + timedelta(days=days)).isoformat() for days in (-1, 0, +1)]
+    ),
+)
+parser.add_argument(
+    "--merge-regions",
+    default=" ".join(
+        [r for r in default_regions if not r.startswith("IT") or r.startswith("IT-32")]
+    ),
+    help="avalanche regions to merge into one file",
 )
 parser.add_argument("--output", default="./data", help="output directory")
 parser.add_argument("--cache", default="./cache", help="cache directory")
@@ -96,10 +139,11 @@ def download_region(regionID):
                 encoding="utf-8",
             ) as f:
                 ratings = bulletins.max_danger_ratings(validity_date)
-                relevant_ratings = {}
-                for key, value in ratings.items():
-                    if key.startswith(regionID):
-                        relevant_ratings[key] = value
+                relevant_ratings = {
+                    key: value
+                    for key, value in ratings.items()
+                    if key.startswith(regionID)
+                }
                 maxDangerRatings = {"maxDangerRatings": relevant_ratings}
                 logging.info("Writing %s", f.name)
                 json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
@@ -123,9 +167,40 @@ def download_region(regionID):
                 json.dump(geojson.to_dict(), fp=f)
 
 
-if __name__ == "__main__":
+def download_regions():
+    """Downloads all regions"""
     for region in args.regions.split():
         try:
             download_region(region)
         except Exception as e:  # pylint: disable=broad-except
             logging.error("Failed to download %s", region, exc_info=e)
+
+
+def merge_regions(validity_date: str):
+    """Create ratings JSON containing all regions"""
+    directory = Path(f"{args.output}/{validity_date}")
+    merge_ratings = {}
+    for regionID in args.merge_regions.split():
+        try:
+            path = directory.joinpath(f"{validity_date}-{regionID}.ratings.json")
+            if not path.exists():
+                continue
+            with path.open(encoding="utf-8") as f:
+                logging.info("Reading %s", f.name)
+                ratings = json.load(fp=f)
+            if "maxDangerRatings" in ratings:
+                merge_ratings.update(ratings["maxDangerRatings"])
+        except Exception as e:  # pylint: disable=broad-except
+            logging.error("Failed to load %s from %s", regionID, path, exc_info=e)
+    path = directory.joinpath(f"{validity_date}.ratings.json")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open(mode="w", encoding="utf-8") as f:
+        maxDangerRatings = {"maxDangerRatings": merge_ratings}
+        logging.info("Writing %s", f.name)
+        json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+
+
+if __name__ == "__main__":
+    download_regions()
+    for date_string in args.merge_dates.split():
+        merge_regions(date_string)
