@@ -73,11 +73,10 @@ def download_region(regionID):
     validity_date = None
 
     if args.cli != "o":
-        directory = Path(args.output)
-        directory.mkdir(parents=True, exist_ok=True)
         ext = "zip" if url[-3:] == "zip" else "xml"
-
         for validity_date in validity_dates:
+            directory = Path(f"{args.output}/{validity_date}")
+            directory.mkdir(parents=True, exist_ok=True)
             if url != "":
                 with urlopen(url) as http, open(
                     f"{directory}/{validity_date}-{regionID}.{ext}", mode="wb"
