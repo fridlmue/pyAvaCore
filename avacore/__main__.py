@@ -176,7 +176,7 @@ def download_regions():
             logging.error("Failed to download %s", region, exc_info=e)
 
 
-def merge_regions(validity_date: date):
+def merge_regions(validity_date: str):
     """Create ratings JSON containing all regions"""
     directory = Path(f"{args.output}/{validity_date}")
     merge_ratings = {}
@@ -203,4 +203,4 @@ def merge_regions(validity_date: date):
 if __name__ == "__main__":
     download_regions()
     for date_string in args.merge_dates.split():
-        merge_regions(date.fromisoformat(date_string))
+        merge_regions(date_string)
