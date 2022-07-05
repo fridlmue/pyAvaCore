@@ -126,10 +126,11 @@ def download_region(regionID):
                 encoding="utf-8",
             ) as f:
                 ratings = bulletins.max_danger_ratings(validity_date)
-                relevant_ratings = {}
-                for key, value in ratings.items():
-                    if key.startswith(regionID):
-                        relevant_ratings[key] = value
+                relevant_ratings = {
+                    key: value
+                    for key, value in ratings.items()
+                    if key.startswith(regionID)
+                }
                 maxDangerRatings = {"maxDangerRatings": relevant_ratings}
                 logging.info("Writing %s", f.name)
                 json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
