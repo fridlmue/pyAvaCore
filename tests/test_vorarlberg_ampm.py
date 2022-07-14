@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 class TestVorarlberg(unittest.TestCase):
     def test_vorarlberg(self):
         root = ET.parse(f"{__file__}.xml")
-        reports = parse_xml_vorarlberg(root)
+        reports = parse_xml_vorarlberg(root).bulletins
         self.assertEqual(len(reports), 12)
         report = reports[2]
         self.assertEqual(report.bulletinID, "DibosBulletinDeID5946-AT8R3")

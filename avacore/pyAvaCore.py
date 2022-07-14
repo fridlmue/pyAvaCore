@@ -19,6 +19,7 @@ from urllib.request import urlopen
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import logging
+from avacore.avabulletins import Bulletins
 
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
@@ -29,30 +30,19 @@ from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_es import process_reports_es
 from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
-from avacore.processor_ad import parse_xml as parse_xml_ad
+from avacore.processor_ad import parse_xml_ad
 from avacore.processor_sk import process_reports_sk
 
 config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
 
-### XML-Helpers
 
-
-def get_xml_as_et(url):
-    """
-    returns the xml-file from url as ElementTree
-    """
-
-    with urlopen(url) as response:
-        response_content = response.read()
-    try:
-        root = ET.fromstring(response_content.decode("utf-8"))
-    except Exception as r_e:  # pylint: disable=broad-except
-        print("error parsing ElementTree: " + str(r_e))
-    return root
-
-
-def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache=False):
+def get_reports(
+    region_id,
+    local="en",
+    cache_path=str(Path("cache")),
+    from_cache=False,
+) -> Bulletins:
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
     """
@@ -61,6 +51,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
 
     url = ""
     region_id = region_id.upper()
+    reports: Bulletins
     if region_id.startswith("FR"):
         if region_id == "FR":
             reports = process_all_reports_fr()
@@ -80,7 +71,7 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         reports = process_reports_uk()
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("IS"):
-        reports = process_reports_is()
+        reports = process_reports_is(local)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("CZ"):
         reports = process_reports_cz()
@@ -95,11 +86,6 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
     ):
         reports = process_reports_cat()
         _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("AD"):
-        logging.info("Fetching %s", url)
-        url, provider = get_report_url(region_id, local)
-        root = get_xml_as_et(url)
-        reports = parse_xml_ad(root)
     elif region_id.startswith("SK"):
         logging.info("Fetching %s", url)
         url, provider = get_report_url(region_id, local)
@@ -108,25 +94,28 @@ def get_reports(region_id, local="en", cache_path=str(Path("cache")), from_cache
         url, provider = get_report_url(region_id, local)
 
         logging.info("Fetching %s", url)
-        root = get_xml_as_et(url)
+        with urlopen(url) as response:
+            content = response.read().decode("utf-8")
+        try:
+            root = ET.fromstring(content)
+        except Exception as r_e:  # pylint: disable=broad-except
+            print("error parsing ElementTree: " + str(r_e))
 
         if region_id.startswith("SI"):
             reports = parse_xml_bavaria(root, "slovenia")
+        elif region_id.startswith("AD"):
+            reports = parse_xml_ad(root)
         else:
             reports = parse_xml(root)
+        reports.append_raw_data("", "xml", content)
 
-    relevant_reports = []
-
-    for report in reports:
-        found_one = False
-        for region in report.get_region_list():
-            if region.startswith(region_id):
-                found_one = True
-                break
-        if found_one:
-            relevant_reports.append(report)
-
-    return relevant_reports, provider, url
+    reports.bulletins = [
+        report
+        for report in reports.bulletins
+        if any(region.startswith(region_id) for region in report.get_region_list())
+    ]
+    reports.append_provider(provider, url)
+    return reports
 
 
 def get_report_url(region_id, local=""):

@@ -1,5 +1,4 @@
 from avacore import pyAvaCore
-from avacore.avabulletins import Bulletins
 import unittest
 import xml.etree.ElementTree as ET
 import datetime
@@ -8,8 +7,7 @@ import datetime
 class TestBavaria2021(unittest.TestCase):
     def test_bavaria_2021(self):
         root = ET.parse(f"{__file__}.xml")
-        bulletins = Bulletins()
-        bulletins.bulletins = pyAvaCore.parse_xml(root)
+        bulletins = pyAvaCore.parse_xml(root)
         self.assertEqual(bulletins.main_date().isoformat(), "2021-12-10")
         self.assertEqual(len(bulletins.bulletins), 3)
         ratings = bulletins.max_danger_ratings(datetime.datetime(2021, 12, 10).date())

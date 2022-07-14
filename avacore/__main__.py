@@ -15,7 +15,6 @@
 # pylint: disable=too-many-locals
 
 from pathlib import Path
-from urllib.request import urlopen
 import argparse
 import json
 import logging
@@ -23,7 +22,6 @@ import logging.handlers
 from datetime import date, datetime, timedelta
 
 from .pyAvaCore import get_reports
-from .avabulletins import Bulletins
 from .avajson import JSONEncoder
 from .geojson import FeatureCollection
 
@@ -109,23 +107,29 @@ def download_region(regionID):
     """
     Downloads the given region and converts it to JSON
     """
-    reports, _, url = get_reports(regionID)
-    bulletins = Bulletins()
-    bulletins.bulletins = reports
+    bulletins = get_reports(regionID)
+
     validity_dates = bulletins.main_dates(protect_overwrite_now=datetime.now())
     validity_date = None
 
     if args.cli != "o":
-        ext = "zip" if url[-3:] == "zip" else "xml"
         for validity_date in validity_dates:
             directory = Path(f"{args.output}/{validity_date}")
             directory.mkdir(parents=True, exist_ok=True)
-            if url != "":
-                with urlopen(url) as http, open(
-                    f"{directory}/{validity_date}-{regionID}.{ext}", mode="wb"
+            print(bulletins.customData)
+            if (
+                "data" in bulletins.customData
+                and "file_extension" in bulletins.customData
+            ):
+                data = bulletins.customData["data"]
+                ext = bulletins.customData["file_extension"]
+                with open(
+                    f"{directory}/{validity_date}-{regionID}.{ext}",
+                    mode="w",
+                    encoding="utf-8",
                 ) as f:
-                    logging.info("Writing %s to %s", url, f.name)
-                    f.write(http.read())
+                    logging.info("Writing %s", f.name)
+                    f.write(data)
             with open(
                 f"{directory}/{validity_date}-{regionID}.json",
                 mode="w",

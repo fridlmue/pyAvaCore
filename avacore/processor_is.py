@@ -29,9 +29,10 @@ from avacore.avabulletin import (
     Texts,
     Elevation,
 )
+from avacore.avabulletins import Bulletins
 
 
-def download_report_is(lang):
+def process_reports_is(lang) -> Bulletins:
     """
     Download reports
     """
@@ -42,22 +43,22 @@ def download_report_is(lang):
 
     with urlopen(req) as response_content:
         try:
-            root = ET.fromstring(response_content.read().decode("utf-8"))
+            content = response_content.read().decode("utf-8")
+            root = ET.fromstring(content)
         except Exception as r_e:  # pylint: disable=broad-except
             print("error parsing ElementTree: " + str(r_e))
-    return root
+
+    reports = parse_reports_is(root)
+    reports.append_raw_data("", "xml", content)
+    return reports
 
 
-def process_reports_is(path="", cached=False, lang="en"):
+def parse_reports_is(root: ET.ElementTree) -> Bulletins:
+
     # pylint: disable=too-many-locals
     """
     Processes downloaded report
     """
-    if not cached:
-        root = download_report_is(lang)
-    else:
-        root = ET.parse(path)
-
     common_report = AvaBulletin()
 
     conditions = root.find("conditions")
@@ -72,7 +73,7 @@ def process_reports_is(path="", cached=False, lang="en"):
     weather_forecast = root.find("weather_forecast")
     common_report.wxSynopsis = Texts(comment=weather_forecast.find("forecast").text)
 
-    reports = []
+    reports = Bulletins()
 
     area_forecasts = root.find("area_forecasts")
     for area_forcast in area_forecasts.iter(tag="area_forecast"):

@@ -28,9 +28,10 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
+from avacore.avabulletins import Bulletins
 
 
-def download_report_fr(region_id):
+def process_reports_fr(region_id) -> Bulletins:
     # pylint: disable=import-outside-toplevel
     """
     Downloads and returns requested Avalanche Bulletins
@@ -59,43 +60,39 @@ def download_report_fr(region_id):
     logging.info("Fetching %s", req.full_url)
     with urlopen(req) as response_content:
         try:
-            root = ET.fromstring(response_content.read().decode("utf-8"))
+            content = response_content.read().decode("utf-8")
+            root = ET.fromstring(content)
         except Exception as r_e:  # pylint: disable=broad-except
             print("error parsing ElementTree: " + str(r_e))
 
-    return root
+    reports = parse_reports_fr(root)
+    reports.append_raw_data("", "xml", content)
+    return reports
 
 
-def process_all_reports_fr():
+def process_all_reports_fr() -> Bulletins:
     """
-    Downloads and returns all Reports for FR (itterating threw region IDs)
+    Downloads and returns all Reports for FR (iterating threw region IDs)
     """
-    all_reports = []
+    all_reports = Bulletins()
     for region in fr_regions:
-        reports = process_reports_fr(region)
-        for report in reports:
+        for report in process_reports_fr(region).bulletins:
             all_reports.append(report)
     return all_reports
 
 
-def process_reports_fr(region_id, path="", cached=False):
+def parse_reports_fr(m_root: ET.ElementTree) -> Bulletins:
     # pylint: disable=too-many-statements
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-locals
     """
     Process XML file for a region
     """
-
-    if not cached:
-        root = download_report_fr(region_id)
-
-    else:
-        m_root = ET.parse(path)
-        for bulletins in m_root.iter(tag="BULLETINS_NEIGE_AVALANCHE"):
-            root = bulletins
+    for bulletins in m_root.iter(tag="BULLETINS_NEIGE_AVALANCHE"):
+        root = bulletins
 
     report = AvaBulletin()
-    reports = []
+    reports = Bulletins()
 
     report.regions.append(Region("FR-" + root.attrib.get("ID").zfill(2)))
     report.publicationTime = pytz.timezone("Europe/Paris").localize(

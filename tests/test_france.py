@@ -1,16 +1,13 @@
-from avacore import pyAvaCore
-from avacore.avabulletins import Bulletins
+from avacore.processor_fr import parse_reports_fr
 import unittest
 import xml.etree.ElementTree as ET
-import pathlib
 
 
 class TestFrance(unittest.TestCase):
     def test_france(self):
-        bulletins = Bulletins()
-        bulletins.bulletins = pyAvaCore.process_reports_fr(
-            "FR-22", path=f"{__file__}.xml", cached=True
-        )
+        root = ET.ElementTree()
+        root.parse(f"{__file__}.xml")
+        bulletins = parse_reports_fr(root)
         self.assertEqual(bulletins.main_date().isoformat(), "2021-03-19")
         self.assertEqual(len(bulletins.bulletins), 1)
         report = bulletins.bulletins[0]

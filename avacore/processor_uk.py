@@ -27,9 +27,10 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
+from avacore.avabulletins import Bulletins
 
 
-def get_reports_from_json(sais_reports):
+def get_reports_from_json(sais_reports) -> Bulletins:
     """
     Builds the CAAML JSONs form the original JSON formats.
     """
@@ -37,7 +38,7 @@ def get_reports_from_json(sais_reports):
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
 
-    reports = []
+    reports = Bulletins()
 
     for sais_report in sais_reports:
         report = AvaBulletin()
@@ -157,12 +158,10 @@ def get_reports_from_json(sais_reports):
     return reports
 
 
-def process_reports_uk():
+def process_reports_uk() -> Bulletins:
     """
     Downloads and returns requested Avalanche Bulletins
     """
-
-    reports = []
 
     url = "https://www.sais.gov.uk/api?action=getForecast"
 
@@ -179,5 +178,5 @@ def process_reports_uk():
     sais_reports = json.loads(content)
 
     reports = get_reports_from_json(sais_reports)
-
+    reports.append_raw_data("", "json", content)
     return reports

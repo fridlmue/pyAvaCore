@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 class TestAlbinaElevationBand(unittest.TestCase):
     def test_albina_elevation_band(self):
         root = ET.parse(f"{__file__}.xml")
-        reports = pyAvaCore.parse_xml(root)
+        reports = pyAvaCore.parse_xml(root).bulletins
         self.assertEqual(len(reports), 6)
 
         report = reports[0]

@@ -29,6 +29,7 @@ from avacore.avabulletin import (
     Texts,
     Provider,
 )
+from avacore.avabulletins import Bulletins
 
 CAAMLTAG = "{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}"
 
@@ -54,14 +55,14 @@ def et_get_parent(element_tree):
 ### XML-Parsers
 
 
-def parse_xml(root):
+def parse_xml(root) -> Bulletins:
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-nested-blocks
     # pylint: disable=too-many-statements
     # pylint: disable=too-many-branches
     """parses ALBINA-Style CAAML-XML. root is a ElementTree"""
 
-    reports = []
+    reports = Bulletins()
 
     for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
         report = AvaBulletin()
@@ -231,7 +232,7 @@ def parse_xml(root):
                 report.dangerRatings.append(pm_danger_ratings[idx])
 
         if report.bulletinID.endswith("_PM"):
-            for pm_bulletin in reports:
+            for pm_bulletin in reports.bulletins:
                 if pm_bulletin.bulletinID == report.bulletinID[:-3]:
                     father_bulletin = pm_bulletin
                     father_bulletin.validTime.endTime = report.validTime.endTime
@@ -255,14 +256,14 @@ def parse_xml(root):
     return reports
 
 
-def parse_xml_vorarlberg(root):
+def parse_xml_vorarlberg(root) -> Bulletins:
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-nested-blocks
     # pylint: disable=too-many-statements
     # pylint: disable=too-many-branches
     """parses Vorarlberg-Style CAAML-XML. root is a ElementTree"""
 
-    reports = []
+    reports = Bulletins()
     report = AvaBulletin()
     comment_empty = 1
 
@@ -482,7 +483,7 @@ def parse_xml_bavaria(
     location="bavaria",
     today=datetime(1, 1, 1, 1, 1, 1),
     fetch_time_dependant=True,
-):
+) -> Bulletins:
     """parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification"""
 
     now = datetime.now(pytz.timezone("Europe/Ljubljana"))
@@ -495,7 +496,7 @@ def parse_xml_bavaria(
     elif fetch_time_dependant and today == datetime(1, 1, 1, 1, 1, 1):
         today = now.date()
 
-    reports = []
+    reports = Bulletins()
     report = AvaBulletin()
 
     report_id = ""

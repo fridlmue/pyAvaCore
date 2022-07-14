@@ -9,7 +9,7 @@ class TestCZ(unittest.TestCase):
         with open(f"{__file__}.json") as fp:
             data = json.load(fp)
         cz_report = data
-        reports = get_reports_fromjson(cz_report)
+        reports = get_reports_fromjson(cz_report).bulletins
 
         self.assertEqual(len(reports), 2)
 

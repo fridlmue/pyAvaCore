@@ -1,6 +1,5 @@
 import json
-from avacore import pyAvaCore
-from avacore.processor_norway import get_reports_fromjson
+from avacore.processor_norway import parse_json_no
 import unittest
 import xml.etree.ElementTree as ET
 
@@ -10,9 +9,9 @@ class TestNorway(unittest.TestCase):
         with open(f"{__file__}.json") as fp:
             data = json.load(fp)
         varsom_report = data
-        reports = get_reports_fromjson(
+        reports = parse_json_no(
             "NO-3016", varsom_report, fetch_time_dependant=False
-        )
+        ).bulletins
 
         self.assertEqual(len(reports), 1)
 

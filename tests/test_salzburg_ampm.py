@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 class TestSalzburg(unittest.TestCase):
     def test_salzburg(self):
         root = ET.parse(f"{__file__}.xml")
-        reports = pyAvaCore.parse_xml(root)
+        reports = pyAvaCore.parse_xml(root).bulletins
         self.assertEqual(len(reports), 3)
         report = reports[0]
         self.assertEqual(report.bulletinID, "RID489RGR1")

@@ -27,6 +27,7 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
+from avacore.avabulletins import Bulletins
 
 code_dir = {
     "SOBRARBE": "ES-SO",
@@ -68,7 +69,7 @@ class LocaleParserInfo(dateutil.parser.parserinfo):
     ]
 
 
-def process_reports_es():
+def process_reports_es() -> Bulletins:
     """
     Downloads and returns requested Avalanche Bulletins
     """
@@ -77,21 +78,21 @@ def process_reports_es():
     req = urllib.request.Request(url)
 
     with urllib.request.urlopen(req) as response:
-        bulletin_raw = response.read()
+        bulletin_raw = response.read().decode("ISO-8859-1")
 
-    reports = get_reports_from_file(bulletin_raw.decode("ISO-8859-1"))
-
+    reports = get_reports_from_file(bulletin_raw)
+    reports.append_raw_data("", "xml", bulletin_raw)
     return reports
 
 
-def get_reports_from_file(aemet_reports):
+def get_reports_from_file(aemet_reports) -> Bulletins:
     # pylint: disable=too-many-statements
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-locals
     """
     Processes downloaded report from file
     """
-    reports = []
+    reports = Bulletins()
     report = AvaBulletin()
 
     re_result = re.search(r"(?<=Día)(.*)(?=hora oficial)", aemet_reports)

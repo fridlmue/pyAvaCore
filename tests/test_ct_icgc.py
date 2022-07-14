@@ -8,9 +8,8 @@ import xml.etree.ElementTree as ET
 class TestCtIcgc(unittest.TestCase):
     def test_ct_icgc(self):
         with open(f"{__file__}.json") as fp:
-            data = json.load(fp)
-        icgc_report = data
-        reports = get_reports_fromjson(icgc_report)
+            icgc_report = json.load(fp)
+        reports = get_reports_fromjson(icgc_report).bulletins
 
         self.assertEqual(len(reports), 7)
 
