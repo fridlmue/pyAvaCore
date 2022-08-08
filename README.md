@@ -14,7 +14,9 @@ It is also used as parser for the mobile app ["avaRisk"](https://github.com/frid
 
 ## Dependencies
 
-As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.6 is the current Python target version.
+pyAvaCore uses [Poetry](https://python-poetry.org/) for packaging and dependency management.
+
+As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["pyproject.toml"](pyproject.toml). Python 3.6 is the current Python target version.
 
 ## CLI Parameters
 

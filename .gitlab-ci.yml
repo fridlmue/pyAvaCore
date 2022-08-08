@@ -3,14 +3,16 @@
 # https://hub.docker.com/r/library/python/tags/
 image: python:3.6
 
-unittest:
+pytest:
   stage: test
-  script:
+  before_script:
     - python -V
-    - pip install pytest pytest-cov jsonschema
-    - pip install --requirement requirements.txt
-    - pytest --junitxml=report.xml --cov=avacore tests/
-    - coverage xml
+    - pip install poetry
+    - poetry install
+    - poetry --version
+  script:
+    - poetry run pytest --junitxml=report.xml --cov=avacore tests/
+    - poetry run coverage xml
   artifacts:
     when: always
     reports:
@@ -21,11 +23,13 @@ unittest:
 
 pylint:
   stage: test
-  script:
+  before_script:
     - python -V
-    - pip install --requirement requirements.txt
-    - pip install pylint
-    - pylint avacore
+    - pip install poetry
+    - poetry install
+    - poetry --version
+  script:
+    - poetry run pylint avacore
 
 deploy:
   stage: deploy

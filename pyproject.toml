@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "pyavacore"
+version = "0.0.0"
+description = "Download and parse EAWS avalanche bulletins"
+authors = ["Friedrich Mütschele <fridl@10hoch-6.de>"]
+license = "GPL"
+
+[tool.poetry.scripts]
+avacore = "avacore:__main__"
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+python-dateutil = "^2.8.2"
+pytz = "^2022.1"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+jsonschema = "^3"
+pylint = "^2.13"
+pytest = "^6"
+pytest-cov = "^3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.MASTER]
+disable = ["duplicate-code", "invalid-name"]
+
+[tool.pylint.FORMAT]
+max-line-length = 140
