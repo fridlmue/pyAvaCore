@@ -21,7 +21,7 @@ import logging
 import logging.handlers
 from datetime import date, datetime, timedelta
 
-from .pyAvaCore import get_reports
+from .pyAvaCore import get_bulletins
 from .avajson import JSONEncoder
 from .geojson import FeatureCollection
 
@@ -107,7 +107,7 @@ def download_region(regionID):
     """
     Downloads the given region and converts it to JSON
     """
-    bulletins = get_reports(regionID)
+    bulletins = get_bulletins(regionID)
 
     validity_dates = bulletins.main_dates(protect_overwrite_now=datetime.now())
     validity_date = None

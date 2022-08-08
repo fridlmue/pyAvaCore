@@ -14,11 +14,14 @@
 """
 
 import configparser
+from typing import List, Tuple
 from urllib.parse import urlparse
 from urllib.request import urlopen
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import logging
+
+from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
 
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
@@ -37,7 +40,7 @@ config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
 
 
-def get_reports(
+def get_bulletins(
     region_id,
     local="en",
     cache_path=str(Path("cache")),
@@ -46,7 +49,7 @@ def get_reports(
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
     """
-    returns array of AvaReports for requested region_id and provider information
+    returns Bulletins object for requested region_id and provider information
     """
 
     url = ""
@@ -116,6 +119,26 @@ def get_reports(
     ]
     reports.append_provider(provider, url)
     return reports
+
+
+def get_reports(
+    region_id,
+    local="en",
+    cache_path=str(Path("cache")),
+    from_cache=False,
+) -> Tuple[List[AvaBulletin], str, str]:
+    """
+    returns array of AvaReports for requested region_id and provider information
+    """
+    bulletins = get_bulletins(
+        region_id=region_id,
+        local=local,
+        cache_path=cache_path,
+        from_cache=from_cache,
+    )
+    provider = bulletins.customData["provider"]
+    url = bulletins.customData["url"]
+    return bulletins.bulletins, provider, url
 
 
 def get_report_url(region_id, local=""):
