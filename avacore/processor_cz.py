@@ -48,7 +48,7 @@ def process_reports_cz() -> Bulletins:
     horskasluzba_report = json.loads(content)
 
     reports = get_reports_fromjson(horskasluzba_report)
-    reports.append_raw_data("", "json", content)
+    reports.append_raw_data("json", content)
     return reports
 
 

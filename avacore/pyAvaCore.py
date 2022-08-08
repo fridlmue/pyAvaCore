@@ -110,7 +110,7 @@ def get_bulletins(
             reports = parse_xml_ad(root)
         else:
             reports = parse_xml(root)
-        reports.append_raw_data("", "xml", content)
+        reports.append_raw_data("xml", content)
 
     reports.bulletins = [
         report

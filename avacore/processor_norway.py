@@ -58,7 +58,7 @@ def process_reports_no(region_id) -> Bulletins:
     varsom_report = json.loads(content)
 
     reports = parse_json_no(region_id, varsom_report)
-    reports.append_raw_data("", "json", content)
+    reports.append_raw_data("json", content)
     return reports
 
 

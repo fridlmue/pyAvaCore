@@ -162,7 +162,7 @@ def process_reports_ch(
         with open(path + "/swiss/text.json", encoding="utf8") as fp:
             data = json.load(fp)
 
-        final_reports.append_raw_data("", "json", data)  # alternatively use ZIP file?
+        final_reports.append_raw_data("json", data)  # alternatively use ZIP file?
 
         # region_id = region_id[-4:]
 

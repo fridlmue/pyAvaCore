@@ -178,5 +178,5 @@ def process_reports_uk() -> Bulletins:
     sais_reports = json.loads(content)
 
     reports = get_reports_from_json(sais_reports)
-    reports.append_raw_data("", "json", content)
+    reports.append_raw_data("json", content)
     return reports

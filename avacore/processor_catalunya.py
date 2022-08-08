@@ -68,7 +68,7 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang="es") -> Bu
     icgc_reports = json.loads(content)
 
     reports = get_reports_fromjson(icgc_reports)
-    reports.append_raw_data("", "json", content)
+    reports.append_raw_data("json", content)
     return reports
 
 

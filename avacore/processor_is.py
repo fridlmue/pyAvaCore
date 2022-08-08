@@ -49,7 +49,7 @@ def process_reports_is(lang) -> Bulletins:
             print("error parsing ElementTree: " + str(r_e))
 
     reports = parse_reports_is(root)
-    reports.append_raw_data("", "xml", content)
+    reports.append_raw_data("xml", content)
     return reports
 
 

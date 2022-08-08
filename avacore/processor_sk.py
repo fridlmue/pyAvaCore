@@ -42,7 +42,7 @@ def process_reports_sk() -> Bulletins:
         response_json = json.loads(response)
 
     bulletins = get_reports_fromjson(response_json[0])
-    bulletins.append_raw_data("", "json", response)
+    bulletins.append_raw_data("json", response)
     return bulletins
 
 

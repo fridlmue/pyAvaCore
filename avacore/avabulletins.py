@@ -28,7 +28,7 @@ class Bulletins:
 
     def __init__(self) -> None:
         self.bulletins: typing.List[AvaBulletin] = []
-        self.customData = {}
+        self.customData: typing.Dict[str, str] = {}
 
     def __getitem__(self, item):
         return self.bulletins[item]
@@ -42,11 +42,10 @@ class Bulletins:
         """
         self.bulletins.append(bulletin)
 
-    def append_raw_data(self, region: str, file_extension: str, data: str):
+    def append_raw_data(self, file_extension: str, data: str):
         """
         Stores the given raw data as customData
         """
-        self.customData["region"] = region
         self.customData["file_extension"] = file_extension
         self.customData["data"] = data
 

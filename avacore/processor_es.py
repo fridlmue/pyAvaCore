@@ -81,7 +81,7 @@ def process_reports_es() -> Bulletins:
         bulletin_raw = response.read().decode("ISO-8859-1")
 
     reports = get_reports_from_file(bulletin_raw)
-    reports.append_raw_data("", "xml", bulletin_raw)
+    reports.append_raw_data("xml", bulletin_raw)
     return reports
 
 
