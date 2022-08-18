@@ -27,7 +27,6 @@ from avacore.avabulletins import Bulletins
 
 ad_ids = {"nord": "AD-01", "centre": "AD-02", "sud": "AD-03"}
 
-
 def parse_xml_ad(root: Element) -> Bulletins:
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-nested-blocks
