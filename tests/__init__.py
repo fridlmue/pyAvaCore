@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import unittest
 
@@ -11,4 +12,15 @@ class SnowTest(unittest.TestCase):
         self.assertEqual(
             expected.read_text(encoding="utf-8"),
             bulletins.to_json(),
+        )
+
+        maxDangerRatings = {
+            "maxDangerRatings": bulletins.max_danger_ratings(bulletins.main_date()),
+        }
+        ratings = json.dumps(maxDangerRatings, indent=2, sort_keys=True)
+        expected = Path(f"{expected_basename}.ratings.json")
+        # expected.write_text(ratings)
+        self.assertEqual(
+            expected.read_text(encoding="utf-8"),
+            ratings,
         )

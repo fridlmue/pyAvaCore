@@ -1,0 +1,13 @@
+{
+  "maxDangerRatings": {
+    "NO-3016": 3,
+    "NO-3016:am": 3,
+    "NO-3016:high": 3,
+    "NO-3016:high:am": 3,
+    "NO-3016:high:pm": 3,
+    "NO-3016:low": 3,
+    "NO-3016:low:am": 3,
+    "NO-3016:low:pm": 3,
+    "NO-3016:pm": 3
+  }
+}

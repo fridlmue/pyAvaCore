@@ -1,0 +1,117 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "AT-08-06"
+        },
+        {
+          "regionID": "AT-08-05-01"
+        },
+        {
+          "regionID": "AT-08-05-02"
+        },
+        {
+          "regionID": "AT-08-04"
+        },
+        {
+          "regionID": "AT-08-03-01"
+        },
+        {
+          "regionID": "AT-08-03-02"
+        },
+        {
+          "regionID": "AT-08-01"
+        },
+        {
+          "regionID": "AT-08-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-12-29T06:30:52+00:00",
+        "endTime": "2021-12-30T07:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "avalanche-warnings.eu",
+          "website": "https://avalanche-warnings.eu"
+        }
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow",
+          "terrainFeature": "Neu- und Triebschnee sind st\u00f6ranf\u00e4llig. Steilgel\u00e4nde, hinter Gel\u00e4ndekanten und eingewehte Rinnen und Mulden"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "wet_snow",
+          "terrainFeature": "mit milden Temperaturen und Regeneintrag nimmt die Gefahr von Gleit- und Nassschneelawinen im Tagesverlauf zu."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Mit der Warmfront steigt die Schneefallgrenze in der Nacht auf Donnerstag bis auf 2500m, somit ist nur in Hochlagen mit ergiebigeren Neuschneemengen zu rechnen. Die Lawinensituation bleibt weiter angespannt."
+      },
+      "bulletinID": "RID1242RGR1",
+      "publicationTime": "2021-12-29T06:30:52+00:00",
+      "wxSynopsis": {
+        "comment": "Vormittags vor\u00fcbergehend trocken, aber nur wenige Auflockerungen. Ab Mittag wieder Eintr\u00fcbung, zunehmend neblig, es kommt langsam ergiebiger Niederschlag auf. Dabei schneit es im Hochgebirge, bis etwa 2000m hinauf ist es aber Regen. Temperatur in 2000 m: von -3 auf +3 Grad steigend, H\u00f6henwind: stark bis st\u00fcrmisch erst aus West, sp\u00e4ter aus Nordwest."
+      },
+      "avalancheActivity": {
+        "highlights": "mit Neuschnee und Sturm in h\u00f6heren Lagen frischer Triebschnee. Intensiver Regen am Nachmittag f\u00fchrt zu einem Anstieg der Nass- und Gleitschneelawinengefahr.",
+        "comment": "Der Neuschnee und frische Triebschneeansammlungen sind st\u00f6ranf\u00e4llig und k\u00f6nnen bereits bei geringer Zusatzbelastung leicht ausgel\u00f6st werden. Gefahrenstellen befinden sich im Steilgel\u00e4nde aller Expositionen, hinter Gel\u00e4ndekanten und in eingewehten Rinnen und Mulden. Der Umfang und die Anzahl der Gefahrenstellen nehmen mit der H\u00f6he und im Tagesverlauf zu. In h\u00f6hergelegenen, sehr steilen Schattenh\u00e4ngen und im extremen Steilgel\u00e4nde k\u00f6nnen vereinzelt noch kleine Schneebrettlawinen mit gro\u00dfer Zusatzbelastung an \u00dcberg\u00e4ngen von wenig zu viel Schnee, wie z.B. bei Einfahrten in Rinnen und Mulden, oder an schneearmen Stellen ausgel\u00f6st werden. Spontane Lawinenabg\u00e4nge sind vor allem ab Nachmittag m\u00f6glich.\nMit den milden Temperaturen und dem intensiven Regeneintrag am Nachmittag nimmt die Gefahr von Gleit- und Nassschneelawinen in allen Expositionen unterhalb etwa 2200m im Tagesverlauf zu."
+      },
+      "snowpackStructure": {
+        "comment": "In den letzten 24 Stunden gab es oberhalb etwa 1600m 10 bis 15cm Neuschnee. Bis morgen Fr\u00fch kommt oberhalb etwa 2000 bis 2200m 10 bis 30cm Neuschnee dazu. Mit starkem bis st\u00fcrmischem West- bis Nordwestwind wird der Neuschnee in der H\u00f6he intensiv verfrachtet und es entstehen gro\u00dfe, kammferne Triebschneeansammlungen. Der Neu- und Triebschnee kommt auf Wind- oder Schmelzharsch, auf Triebschneeschichten von Dienstag, in hochgelegenen Schattenh\u00e4ngen auf teilweise noch lockeren und pulvrigen Schichten zu liegen und ist st\u00f6ranf\u00e4llig. In mittleren Lagen und an S\u00fcdh\u00e4ngen ist die Verbindung zur Altschneeoberfl\u00e4che besser. Zudem sind in h\u00f6hergelegenen, sehr steilen Schattenh\u00e4ngen teilweise noch Schwachschichten im Mittelteil der Schneedecke oder \u00e4ltere Triebschneepakete st\u00f6rbar. In tieferen und mittleren Lagen wurde die Schneedecke durch milde Temperaturen und Regeneinfluss weiter geschw\u00e4cht. Ab Nachmittag wird mit intensivem Regen bis 2200m hinauf die Schneedecke durchn\u00e4sst."
+      }
+    }
+  ]
+}

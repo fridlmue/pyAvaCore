@@ -1,0 +1,22 @@
+{
+  "maxDangerRatings": {
+    "CZ-04": 2,
+    "CZ-04:am": 2,
+    "CZ-04:high": 2,
+    "CZ-04:high:am": 2,
+    "CZ-04:high:pm": 2,
+    "CZ-04:low": 2,
+    "CZ-04:low:am": 2,
+    "CZ-04:low:pm": 2,
+    "CZ-04:pm": 2,
+    "CZ-06": 2,
+    "CZ-06:am": 2,
+    "CZ-06:high": 2,
+    "CZ-06:high:am": 2,
+    "CZ-06:high:pm": 2,
+    "CZ-06:low": 2,
+    "CZ-06:low:am": 2,
+    "CZ-06:low:pm": 2,
+    "CZ-06:pm": 2
+  }
+}

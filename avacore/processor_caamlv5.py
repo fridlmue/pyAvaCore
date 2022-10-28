@@ -723,4 +723,5 @@ def parse_xml_bavaria(
         else:
             final_reports.append(report)
 
-    return final_reports
+    reports.bulletins = final_reports
+    return reports

@@ -1,0 +1,739 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "CH-1312"
+        },
+        {
+          "regionID": "CH-2122"
+        },
+        {
+          "regionID": "CH-4121"
+        },
+        {
+          "regionID": "CH-4215"
+        },
+        {
+          "regionID": "CH-1232"
+        },
+        {
+          "regionID": "CH-5121"
+        },
+        {
+          "regionID": "CH-2212"
+        },
+        {
+          "regionID": "CH-4213"
+        },
+        {
+          "regionID": "CH-3223"
+        },
+        {
+          "regionID": "CH-3222"
+        },
+        {
+          "regionID": "CH-4214"
+        },
+        {
+          "regionID": "CH-3113"
+        },
+        {
+          "regionID": "CH-4114"
+        },
+        {
+          "regionID": "CH-5211"
+        },
+        {
+          "regionID": "CH-4243"
+        },
+        {
+          "regionID": "CH-3112"
+        },
+        {
+          "regionID": "CH-4232"
+        },
+        {
+          "regionID": "CH-4244"
+        },
+        {
+          "regionID": "CH-5124"
+        },
+        {
+          "regionID": "CH-4111"
+        },
+        {
+          "regionID": "CH-3311"
+        },
+        {
+          "regionID": "CH-2211"
+        },
+        {
+          "regionID": "CH-3224"
+        },
+        {
+          "regionID": "CH-1247"
+        },
+        {
+          "regionID": "CH-1246"
+        },
+        {
+          "regionID": "CH-1114"
+        },
+        {
+          "regionID": "CH-1243"
+        },
+        {
+          "regionID": "CH-2222"
+        },
+        {
+          "regionID": "CH-4242"
+        },
+        {
+          "regionID": "CH-1227"
+        },
+        {
+          "regionID": "CH-1245"
+        },
+        {
+          "regionID": "CH-1225"
+        },
+        {
+          "regionID": "CH-4211"
+        },
+        {
+          "regionID": "CH-4241"
+        },
+        {
+          "regionID": "CH-5111"
+        },
+        {
+          "regionID": "CH-2224"
+        },
+        {
+          "regionID": "CH-4231"
+        },
+        {
+          "regionID": "CH-5112"
+        },
+        {
+          "regionID": "CH-2223"
+        },
+        {
+          "regionID": "CH-2221"
+        },
+        {
+          "regionID": "CH-1223"
+        },
+        {
+          "regionID": "CH-1234"
+        },
+        {
+          "regionID": "CH-3114"
+        },
+        {
+          "regionID": "CH-2134"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ],
+            "elevation": "2400"
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "In the late morning a generally favourable avalanche situation will prevail. \n Avalanches can in isolated cases be released in near-surface layers of the snowpack and reach medium size. In addition the mostly small wind slabs of the last two days are capable of being triggered in some cases still. \n Careful route selection is recommended.\nAs a consequence of warming during the day and solar radiation medium-sized and, in isolated cases, large wet and gliding avalanches are to be expected. The avalanche prone locations for gliding avalanches are to be found in particular on steep sunny slopes below approximately 2400 m. Especially on very steep south facing slopes more wet loose snow avalanches are possible below approximately 3000 m. Backcountry tours should be concluded timely."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477118947717"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-4113"
+        },
+        {
+          "regionID": "CH-4116"
+        },
+        {
+          "regionID": "CH-4212"
+        },
+        {
+          "regionID": "CH-4224"
+        },
+        {
+          "regionID": "CH-4115"
+        },
+        {
+          "regionID": "CH-4123"
+        },
+        {
+          "regionID": "CH-4222"
+        },
+        {
+          "regionID": "CH-4122"
+        },
+        {
+          "regionID": "CH-4225"
+        },
+        {
+          "regionID": "CH-4125"
+        },
+        {
+          "regionID": "CH-4223"
+        },
+        {
+          "regionID": "CH-4112"
+        },
+        {
+          "regionID": "CH-4124"
+        },
+        {
+          "regionID": "CH-4221"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ],
+            "elevation": "2400"
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "In very isolated cases avalanches can be triggered in deep layers of the snowpack and reach large size. These avalanche prone locations are barely recognisable. Individual avalanche prone locations are to be found in particular in little used terrain and in areas where the snow cover is rather shallow. Defensive route selection is appropriate. \n The small wind slabs of the last few days are in individual cases still prone to triggering at elevated altitudes. They are to be found in particular in gullies and bowls, and behind abrupt changes in the terrain. The wind slabs are to be evaluated with care and prudence in very steep terrain.\nAs a consequence of warming during the day and solar radiation more frequent medium-sized and, in isolated cases, large wet and gliding avalanches are to be expected. The avalanche prone locations for gliding avalanches are to be found in particular on steep sunny slopes below approximately 2400 m. Especially on very steep south facing slopes more wet loose snow avalanches are to be expected below approximately 3000 m. Additionally in some places wet avalanches can also release the entire snowpack and reach quite a large size. Backcountry tours should be concluded timely."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477158947719"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-1122"
+        },
+        {
+          "regionID": "CH-1211"
+        },
+        {
+          "regionID": "CH-1212"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "low"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [],
+            "elevation": ""
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "Individual avalanche prone locations for dry avalanches are to be found in particular in extremely steep terrain at high altitude. Restraint should be exercised because avalanches can sweep people along and give rise to falls.\nAs a consequence of warming during the day and solar radiation individual gliding avalanches and moist snow slides are possible."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477148947718"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-3211"
+        },
+        {
+          "regionID": "CH-1228"
+        },
+        {
+          "regionID": "CH-2123"
+        },
+        {
+          "regionID": "CH-1221"
+        },
+        {
+          "regionID": "CH-2112"
+        },
+        {
+          "regionID": "CH-1213"
+        },
+        {
+          "regionID": "CH-2124"
+        },
+        {
+          "regionID": "CH-3221"
+        },
+        {
+          "regionID": "CH-2133"
+        },
+        {
+          "regionID": "CH-3111"
+        },
+        {
+          "regionID": "CH-1242"
+        },
+        {
+          "regionID": "CH-1121"
+        },
+        {
+          "regionID": "CH-1231"
+        },
+        {
+          "regionID": "CH-1113"
+        },
+        {
+          "regionID": "CH-1244"
+        },
+        {
+          "regionID": "CH-2132"
+        },
+        {
+          "regionID": "CH-1222"
+        },
+        {
+          "regionID": "CH-1311"
+        },
+        {
+          "regionID": "CH-1224"
+        },
+        {
+          "regionID": "CH-2111"
+        },
+        {
+          "regionID": "CH-2131"
+        },
+        {
+          "regionID": "CH-2121"
+        },
+        {
+          "regionID": "CH-1241"
+        },
+        {
+          "regionID": "CH-1111"
+        },
+        {
+          "regionID": "CH-1112"
+        },
+        {
+          "regionID": "CH-1233"
+        },
+        {
+          "regionID": "CH-1226"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [],
+            "elevation": ""
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "Individual avalanche prone locations for dry avalanches are to be found in particular in extremely steep terrain at high altitude. Restraint should be exercised because avalanches can sweep people along and give rise to falls.\nAs a consequence of warming during the day and solar radiation medium-sized and, in isolated cases, large wet and gliding avalanches are to be expected. The avalanche prone locations for gliding avalanches are to be found in particular on steep sunny slopes below approximately 2400 m. Especially on very steep south facing slopes more wet loose snow avalanches are possible below approximately 3000 m. Backcountry tours should be concluded timely."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477148947717"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-7111"
+        },
+        {
+          "regionID": "CH-7123"
+        },
+        {
+          "regionID": "CH-7221"
+        },
+        {
+          "regionID": "CH-5231"
+        },
+        {
+          "regionID": "CH-7121"
+        },
+        {
+          "regionID": "CH-7125"
+        },
+        {
+          "regionID": "CH-5221"
+        },
+        {
+          "regionID": "CH-5232"
+        },
+        {
+          "regionID": "CH-7211"
+        },
+        {
+          "regionID": "CH-7112"
+        },
+        {
+          "regionID": "CH-7126"
+        },
+        {
+          "regionID": "CH-5212"
+        },
+        {
+          "regionID": "CH-5216"
+        },
+        {
+          "regionID": "CH-7114"
+        },
+        {
+          "regionID": "CH-5215"
+        },
+        {
+          "regionID": "CH-5122"
+        },
+        {
+          "regionID": "CH-7113"
+        },
+        {
+          "regionID": "CH-5233"
+        },
+        {
+          "regionID": "CH-5234"
+        },
+        {
+          "regionID": "CH-5223"
+        },
+        {
+          "regionID": "CH-5222"
+        },
+        {
+          "regionID": "CH-7222"
+        },
+        {
+          "regionID": "CH-5113"
+        },
+        {
+          "regionID": "CH-7115"
+        },
+        {
+          "regionID": "CH-7231"
+        },
+        {
+          "regionID": "CH-7124"
+        },
+        {
+          "regionID": "CH-5214"
+        },
+        {
+          "regionID": "CH-7122"
+        },
+        {
+          "regionID": "CH-5123"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "N",
+              "NE",
+              "E",
+              "W",
+              "NW"
+            ],
+            "elevation": "2200"
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "In very isolated cases avalanches can be triggered in deep layers of the snowpack and reach large size. These avalanche prone locations are barely recognisable. Individual avalanche prone locations are to be found in particular in little used terrain and in areas where the snow cover is rather shallow. Defensive route selection is appropriate. \n The small wind slabs of the last few days are in individual cases still prone to triggering at elevated altitudes. They are to be found in particular in gullies and bowls, and behind abrupt changes in the terrain. The wind slabs are to be evaluated with care and prudence in very steep terrain.\nAs a consequence of warming during the day and solar radiation more frequent medium-sized and, in isolated cases, large wet and gliding avalanches are to be expected. The avalanche prone locations for gliding avalanches are to be found in particular on steep sunny slopes below approximately 2400 m. Especially on very steep south facing slopes more wet loose snow avalanches are to be expected below approximately 3000 m. Additionally in some places wet avalanches can also release the entire snowpack and reach quite a large size. Backcountry tours should be concluded timely."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477128947719"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-8112"
+        },
+        {
+          "regionID": "CH-8211"
+        },
+        {
+          "regionID": "CH-8213"
+        },
+        {
+          "regionID": "CH-8224"
+        },
+        {
+          "regionID": "CH-8221"
+        },
+        {
+          "regionID": "CH-8114"
+        },
+        {
+          "regionID": "CH-8212"
+        },
+        {
+          "regionID": "CH-8222"
+        },
+        {
+          "regionID": "CH-8113"
+        },
+        {
+          "regionID": "CH-8111"
+        },
+        {
+          "regionID": "CH-8215"
+        },
+        {
+          "regionID": "CH-8214"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "low"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [],
+            "elevation": ""
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "Dry avalanches are not to be expected.\nAs a consequence of warming during the day and solar radiation individual gliding avalanches and moist snow slides are possible."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477138947718"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "CH-6111"
+        },
+        {
+          "regionID": "CH-6212"
+        },
+        {
+          "regionID": "CH-6131"
+        },
+        {
+          "regionID": "CH-6132"
+        },
+        {
+          "regionID": "CH-6114"
+        },
+        {
+          "regionID": "CH-6112"
+        },
+        {
+          "regionID": "CH-6121"
+        },
+        {
+          "regionID": "CH-6113"
+        },
+        {
+          "regionID": "CH-6122"
+        },
+        {
+          "regionID": "CH-6115"
+        },
+        {
+          "regionID": "CH-6211"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-22T17:00:00+01:00",
+        "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Clear skies at night will be followed by sunny weather during the day. It will remain very mild. The zero degree level will be between 3200 and 3500 m. \n In the majority of cases, the avalanche situation will be favourable in the morning. The danger of wet snow and gliding avalanches will increase significantly during the day on sunny slopes. Backcountry touring is to be concluded timely."
+      },
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [],
+            "elevation": ""
+          }
+        }
+      },
+      "publicationTime": "2021-02-22T17:00:00+01:00",
+      "avalancheActivity": {
+        "comment": "Individual avalanche prone locations for dry avalanches are to be found in particular in extremely steep terrain. The number and size of avalanche prone locations will increase with altitude. \n Apart from the danger of being buried, restraint should be exercised in particular in view of the danger of avalanches sweeping people along and giving rise to falls.\nAs a consequence of warming during the day and solar radiation medium-sized and, in isolated cases, large wet and gliding avalanches are to be expected. The avalanche prone locations for gliding avalanches are to be found in particular on steep sunny slopes below approximately 2400 m. Especially on very steep south facing slopes more wet loose snow avalanches are possible below approximately 3000 m. Backcountry tours should be concluded timely."
+      },
+      "snowpackStructure": {
+        "comment": "During a clear night, a strong melt-freeze crust will form on the snowpack up to high altitudes on steep south facing slopes. As the crust melts, the snowpack will become less stable. On sunny slopes in particular, wet snow and gliding avalanches are to be expected as the day progresses. \n In Grisons and Valais above approximately 2200 and 2400 m, weak layers exist in the old snow near the ground. As the snowpack becomes increasingly moist, these layers will be further weakened on south facing slopes in particular. Avalanches in these regions can release the entire snowpack."
+      },
+      "wxSynopsis": {
+        "comment": "The night was mostly clear. During the day it was partly sunny in the east, otherwise it was frequently cloudy as a consequence of airborne Saharan dust. \nFresh snow: - \nTemperature: At midday at 2000 m: from +7 \u00b0C in the west to +5 \u00b0C in the east and +1 \u00b0C in the south \nWind: Moderate to strong at times, during the night on the northern Alpine ridge sometimes storm force from the south\nOn Monday night the skies will be mostly clear. It will be mostly sunny during the day despite some high-altitude cloudbanks. \nFresh snow: - \nTemperature: At midday at 2000 m: about +6 \u00b0C \nWind: Mostly light from southerly directions"
+      },
+      "bulletinID": "89477168947717"
+    }
+  ],
+  "customData": {
+    "file_extension": "json",
+    "data": {
+      "title": "Avalanche bulletin through Tuesday, 23 February 2021",
+      "flash": "A generally favourable avalanche situation will prevail. Wet avalanches as the day progresses",
+      "validity": "Edition: 22.2., 17:00 / Next update: 23.2., 08:00",
+      "summer": false,
+      "map": [
+        {
+          "title": "Dry avalanches"
+        },
+        {
+          "title": "Wet avalanches as day progresses"
+        }
+      ]
+    }
+  }
+}
