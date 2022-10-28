@@ -324,10 +324,10 @@ class Region:
     """
 
     name: str
-    regionId: str
+    regionID: str
 
-    def __init__(self, regionId, name=None) -> None:
-        self.regionId = regionId
+    def __init__(self, regionID: str, name=None) -> None:
+        self.regionID = regionID
         if not name is None:
             self.name = name
 
@@ -405,7 +405,7 @@ class AvaBulletin:
         """
         region_list = []
         for reg in self.regions:
-            region_list.append(reg.regionId)
+            region_list.append(reg.regionID)
         return region_list
 
     def from_json(self, bulletin_json):
@@ -433,7 +433,7 @@ class AvaBulletin:
                 elif attribute == "regions":
                     for region in bulletin_json[attribute]:
                         self.regions.append(
-                            Region(region.get("regionId"), region.get("name"))
+                            Region(region.get("regionID"), region.get("name"))
                         )
 
                 elif attribute == "dangerRatings":
@@ -552,7 +552,7 @@ class AvaBulletin:
         print("║ Valid to:            ", self.validTime.endTime)
         print("║ Valid for:")
         for region in self.regions:
-            print("║ ├─ ", region.regionId)
+            print("║ ├─ ", region.regionID)
 
         print("╟───── Danger Rating")
         for dangerRating in self.dangerRatings:

@@ -112,7 +112,7 @@ class Bulletins:
 
             for region in bulletin.regions:
                 local_ratings = {}
-                regionId = region.regionId
+                regionId = region.regionID
 
                 if len(bulletin.dangerRatings) > 1:
                     remove = []
@@ -290,7 +290,7 @@ class Bulletins:
         elevation = feature.properties.elevation
 
         def affects_region(b: AvaBulletin):
-            return idx in [r.regionId for r in b.regions]
+            return idx in [r.regionID for r in b.regions]
 
         def affects_danger(d: DangerRating):
             if not d.elevation:

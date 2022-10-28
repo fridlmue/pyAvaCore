@@ -153,7 +153,7 @@ def get_reports_from_file(aemet_reports) -> Bulletins:
         current_report = copy.deepcopy(report)
         current_report.regions.append(Region(code_dir[elem.upper()]))
         current_report.bulletinID = (
-            current_report.regions[0].regionId + "_" + str(report.publicationTime)
+            current_report.regions[0].regionID + "_" + str(report.publicationTime)
         )
         sentences = item.split(".")
         pm_ratings_hi = 0
