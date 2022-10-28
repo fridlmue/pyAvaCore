@@ -14,9 +14,39 @@
 """
 
 from abc import ABC, abstractmethod
+import json
+import logging
+from typing import Any
+import urllib.request
+from pathlib import Path
+
 from avacore.avabulletins import Bulletins
+import avacore.processor_norway
+
 
 class Processor(ABC):
+    local = "en"
+    cache_path = str(Path("cache"))
+    from_cache = False
+
+    # def __init__(self) -> None:
+    #     super().__init__()
+    #     self.reports = Bulletins()
+
     @abstractmethod
-    def process_bulletin(self, region_id: str, local: list) -> Bulletins:
+    def process_bulletin(self, region_id: str) -> Bulletins:
         pass
+
+    def _fetch_json(self, url: str, headers) -> Any:
+        req = urllib.request.Request(url, headers=headers)
+        logging.info("Fetching %s", req.full_url)
+        with urllib.request.urlopen(req) as response:
+            content = response.read()
+        # self.reports.append_raw_data("json", content.decode("utf-8"))
+        return json.loads(content)
+
+
+def new_processor(region: str) -> Processor:
+    if region == "NO":
+        return avacore.processor_norway.Processor()
+    return None

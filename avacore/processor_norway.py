@@ -57,16 +57,10 @@ class Processor(avacore.processor.Processor):
 
         headers = {"Content-Type": "application/json; charset=utf-8"}
 
-        req = urllib.request.Request(url, headers=headers)
-
-        logging.info("Fetching %s", req.full_url)
-        with urllib.request.urlopen(req) as response:
-            content = response.read()
-
-        varsom_report = json.loads(content)
+        varsom_report = self._fetch_json(url, headers=headers)
 
         reports = self.parse_json_no(region_id, varsom_report)
-        reports.append_raw_data("json", content.decode("utf-8") )
+        reports.append_raw_data("json", json.dumps(varsom_report))
         return reports
 
 
