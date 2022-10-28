@@ -225,11 +225,11 @@ def parse_xml(root) -> Bulletins:
         report.snowpackStructure = snowpackStructure
 
         if pm_available:
-            for idx, danger_rating in enumerate(report.dangerRatings):
-                report.dangerRatings[idx].validTimePeriod = "earlier"
-            for idx, danger_rating in enumerate(pm_danger_ratings):
-                pm_danger_ratings[idx].validTimePeriod = "later"
-                report.dangerRatings.append(pm_danger_ratings[idx])
+            for danger_rating in report.dangerRatings:
+                danger_rating.validTimePeriod = "earlier"
+            for danger_rating in pm_danger_ratings:
+                danger_rating.validTimePeriod = "later"
+                report.dangerRatings.append(danger_rating)
 
         if report.bulletinID.endswith("_PM"):
             for pm_bulletin in reports.bulletins:
