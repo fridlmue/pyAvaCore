@@ -124,10 +124,7 @@ def get_reports_from_json(sais_reports) -> Bulletins:
             danger_rating.set_mainValue_int(int(max(danger_ratings_lw)))
             report.dangerRatings.append(danger_rating)
         else:
-            set_danger_ratings_hi = set(danger_ratings_hi)
-            set_danger_ratings_lw = set(danger_ratings_lw)
-
-            for rating in set_danger_ratings_hi:
+            for rating in sorted(set(danger_ratings_hi)):
                 aspect_list = []
                 for idx, aspect in enumerate(aspects):
                     if danger_ratings_hi[idx] == rating:
@@ -140,7 +137,7 @@ def get_reports_from_json(sais_reports) -> Bulletins:
                 # danger_rating.aspect = aspect_list
                 report.dangerRatings.append(danger_rating)
 
-            for rating in set_danger_ratings_lw:
+            for rating in sorted(set(danger_ratings_lw)):
                 aspect_list = []
                 for idx, aspect in enumerate(aspects):
                     if danger_ratings_lw[idx] == rating:
