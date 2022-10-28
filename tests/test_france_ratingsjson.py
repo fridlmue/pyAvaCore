@@ -26,7 +26,3 @@ class TestFrance_dangerratings(unittest.TestCase):
         self.assertEqual(ratings["FR-01:low:am"], 3)
         self.assertEqual(ratings["FR-01:high:pm"], 3)
         self.assertEqual(ratings["FR-01:high:am"], 4)
-
-
-if __name__ == "__main__":
-    unittest.main()

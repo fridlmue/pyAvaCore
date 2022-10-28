@@ -15,6 +15,7 @@
 from datetime import datetime
 from datetime import timedelta
 from pathlib import Path
+from typing import Set
 import urllib.request
 import zipfile
 import copy
@@ -233,7 +234,7 @@ def process_reports_ch(
         common_report.wxSynopsis = wxSynopsis
 
         bulletinIDs = []
-        bulletin_combinations = set()
+        bulletin_combinations: Set[AvaBulletin] = set()
         # Receives the ID of the report that matches the selected region_id
         with open(path + "/swiss/gk_region2pdf.txt", encoding="utf8") as fp:
             for line in fp:
@@ -400,7 +401,7 @@ def process_reports_ch(
                 matched_regions = set(reports[am_idx].get_region_list()).intersection(
                     set(reports[pm_idx].get_region_list())
                 )
-                combined_report = copy.deepcopy(reports[am_idx])
+                combined_report: AvaBulletin = copy.deepcopy(reports[am_idx])
 
                 combined_report.bulletinID = combination
                 combined_report.regions = []
@@ -426,6 +427,8 @@ def process_reports_ch(
                     + "\n"
                     + reports[pm_idx].avalancheActivity.comment
                 )
+                combined_report.regions.sort(key=lambda r: r.regionID)
                 final_reports.append(combined_report)
 
+    final_reports.bulletins.sort(key=lambda b: b.bulletinID)
     return final_reports

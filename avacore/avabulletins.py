@@ -14,8 +14,10 @@
 """
 
 from datetime import date
+import json
 import typing
 
+from .avajson import JSONEncoder
 from .avabulletin import AvaBulletin, DangerRating
 from .geojson import Feature, FeatureCollection
 
@@ -319,10 +321,14 @@ class Bulletins:
 
     def from_json(self, bulletins_json):
         """
-        read bulletions from CAAMLv6 JSON
+        read bulletins from CAAMLv6 JSON
         """
         self.bulletins = []
         for bulletin_json in bulletins_json["bulletins"]:
             bulletin = AvaBulletin()
             bulletin.from_json(bulletin_json)
             self.bulletins.append(bulletin)
+
+    def to_json(self) -> str:
+        """write bulletins as CAAMLv6 JSON string"""
+        return json.dumps(self, cls=JSONEncoder, indent=2)
