@@ -95,7 +95,7 @@ def parse_reports_is(root: ET.ElementTree) -> Bulletins:
         )
 
         report.bulletinID = (
-            report.regions[0].regionId + "-" + report.publicationTime.isoformat()
+            report.regions[0].regionID + "-" + report.publicationTime.isoformat()
         )
 
         avalancheActivity.highlights = area_forcast.find("forecast").text

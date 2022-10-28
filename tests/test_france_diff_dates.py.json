@@ -3,7 +3,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-01"
+          "regionID": "FR-01"
         }
       ],
       "validTime": {
@@ -47,7 +47,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-02"
+          "regionID": "FR-02"
         }
       ],
       "validTime": {
@@ -91,7 +91,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-03"
+          "regionID": "FR-03"
         }
       ],
       "validTime": {
@@ -136,7 +136,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-04"
+          "regionID": "FR-04"
         }
       ],
       "validTime": {
@@ -177,7 +177,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-05"
+          "regionID": "FR-05"
         }
       ],
       "validTime": {
@@ -222,7 +222,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-06"
+          "regionID": "FR-06"
         }
       ],
       "validTime": {
@@ -267,7 +267,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-09"
+          "regionID": "FR-09"
         }
       ],
       "validTime": {
@@ -312,7 +312,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-10"
+          "regionID": "FR-10"
         }
       ],
       "validTime": {
@@ -357,7 +357,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-11"
+          "regionID": "FR-11"
         }
       ],
       "validTime": {
@@ -402,7 +402,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-07"
+          "regionID": "FR-07"
         }
       ],
       "validTime": {
@@ -440,7 +440,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-08"
+          "regionID": "FR-08"
         }
       ],
       "validTime": {
@@ -485,7 +485,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-12"
+          "regionID": "FR-12"
         }
       ],
       "validTime": {
@@ -530,7 +530,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-14"
+          "regionID": "FR-14"
         }
       ],
       "validTime": {
@@ -572,7 +572,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-15"
+          "regionID": "FR-15"
         }
       ],
       "validTime": {
@@ -617,7 +617,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-13"
+          "regionID": "FR-13"
         }
       ],
       "validTime": {
@@ -659,7 +659,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-16"
+          "regionID": "FR-16"
         }
       ],
       "validTime": {
@@ -701,7 +701,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-17"
+          "regionID": "FR-17"
         }
       ],
       "validTime": {
@@ -743,7 +743,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-18"
+          "regionID": "FR-18"
         }
       ],
       "validTime": {
@@ -785,7 +785,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-19"
+          "regionID": "FR-19"
         }
       ],
       "validTime": {
@@ -827,7 +827,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-20"
+          "regionID": "FR-20"
         }
       ],
       "validTime": {
@@ -865,7 +865,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-21"
+          "regionID": "FR-21"
         }
       ],
       "validTime": {
@@ -903,7 +903,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-22"
+          "regionID": "FR-22"
         }
       ],
       "validTime": {
@@ -939,7 +939,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-23"
+          "regionID": "FR-23"
         }
       ],
       "validTime": {
@@ -979,7 +979,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-64"
+          "regionID": "FR-64"
         }
       ],
       "validTime": {
@@ -1020,7 +1020,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-65"
+          "regionID": "FR-65"
         }
       ],
       "validTime": {
@@ -1061,7 +1061,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-66"
+          "regionID": "FR-66"
         }
       ],
       "validTime": {
@@ -1102,7 +1102,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-67"
+          "regionID": "FR-67"
         }
       ],
       "validTime": {
@@ -1143,7 +1143,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-68"
+          "regionID": "FR-68"
         }
       ],
       "validTime": {
@@ -1184,7 +1184,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-69"
+          "regionID": "FR-69"
         }
       ],
       "validTime": {
@@ -1229,7 +1229,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-70"
+          "regionID": "FR-70"
         }
       ],
       "validTime": {
@@ -1274,7 +1274,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-72"
+          "regionID": "FR-72"
         }
       ],
       "validTime": {
@@ -1319,7 +1319,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-71"
+          "regionID": "FR-71"
         }
       ],
       "validTime": {
@@ -1364,7 +1364,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-73"
+          "regionID": "FR-73"
         }
       ],
       "validTime": {
@@ -1409,7 +1409,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-74"
+          "regionID": "FR-74"
         }
       ],
       "validTime": {
@@ -1454,7 +1454,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-40"
+          "regionID": "FR-40"
         }
       ],
       "validTime": {
@@ -1519,7 +1519,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-41"
+          "regionID": "FR-41"
         }
       ],
       "validTime": {

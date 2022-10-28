@@ -209,7 +209,7 @@ def parse_reports_fr(m_root: ET.ElementTree) -> Bulletins:
                 pm_danger_ratings.append(am_danger_ratings[1])
 
     report.bulletinID = (
-        report.regions[0].regionId + "_" + str(report.publicationTime.isoformat())
+        report.regions[0].regionID + "_" + str(report.publicationTime.isoformat())
     )
 
     for dangerRating in am_danger_ratings:
