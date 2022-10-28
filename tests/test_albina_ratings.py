@@ -1,5 +1,4 @@
 from avacore import pyAvaCore
-from avacore.avabulletins import Bulletins
 import unittest
 import xml.etree.ElementTree as ET
 import json
@@ -9,8 +8,7 @@ import datetime
 class TestAlbinaRatings(unittest.TestCase):
     def test_albina_ratings(self):
         root = ET.parse(f"{__file__}.xml")
-        bulletins = Bulletins()
-        bulletins.bulletins = pyAvaCore.parse_xml(root)
+        bulletins = pyAvaCore.parse_xml(root)
 
         self.assertEqual(bulletins.main_date().isoformat(), "2022-03-22")
         self.assertEqual(len(bulletins.bulletins), 2)

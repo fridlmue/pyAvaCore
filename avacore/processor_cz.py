@@ -28,9 +28,10 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
+from avacore.avabulletins import Bulletins
 
 
-def process_reports_cz():
+def process_reports_cz() -> Bulletins:
     """
     Downloads and returns requested Avalanche Bulletins
     """
@@ -47,16 +48,16 @@ def process_reports_cz():
     horskasluzba_report = json.loads(content)
 
     reports = get_reports_fromjson(horskasluzba_report)
-
+    reports.append_raw_data("json", content)
     return reports
 
 
-def get_reports_fromjson(cz_report):
+def get_reports_fromjson(cz_report) -> Bulletins:
     """
     Builds the CAAML JSONs form the original JSON formats.
     """
 
-    reports = []
+    reports = Bulletins()
 
     for bulletin in cz_report:
         report = AvaBulletin()

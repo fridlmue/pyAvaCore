@@ -1,11 +1,13 @@
-from avacore import pyAvaCore
+from avacore.processor_is import parse_reports_is
 import unittest
 import xml.etree.ElementTree as ET
 
 
 class TestIceland(unittest.TestCase):
     def test_iceland(self):
-        reports = pyAvaCore.process_reports_is(path=f"{__file__}.xml", cached=True)
+        root = ET.ElementTree()
+        root.parse(f"{__file__}.xml")
+        reports = parse_reports_is(root).bulletins
         self.assertEqual(len(reports), 4)
         report = reports[0]
         self.assertEqual(report.bulletinID, "IS-SV-2022-02-21T16:40:51+00:00")

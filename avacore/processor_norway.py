@@ -29,9 +29,10 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
+from avacore.avabulletins import Bulletins
 
 
-def process_reports_no(region_id):
+def process_reports_no(region_id) -> Bulletins:
     """
     Downloads and returns requested Avalanche Bulletins
     """
@@ -56,29 +57,31 @@ def process_reports_no(region_id):
 
     varsom_report = json.loads(content)
 
-    reports = get_reports_fromjson(region_id, varsom_report)
-
+    reports = parse_json_no(region_id, varsom_report)
+    reports.append_raw_data("json", content)
     return reports
 
 
-def process_all_reports_no():
+def process_all_reports_no() -> Bulletins:
     """
     Downloads and returns all norwegian avalanche reports
     """
-    all_reports = []
+    all_reports = Bulletins()
     for region in no_regions:
         try:
             m_reports = process_reports_no(region)
         except Exception as e:  # pylint: disable=broad-except
             logging.error("Failed to download %s", region, exc_info=e)
 
-        for report in m_reports:
+        for report in m_reports.bulletins:
             all_reports.append(report)
 
     return all_reports
 
 
-def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
+def parse_json_no(
+    region_id, varsom_report, fetch_time_dependant=True
+) -> Bulletins:
     """
     Builds the CAAML JSONs form the norwegian JSON formats.
     """
@@ -86,7 +89,7 @@ def get_reports_fromjson(region_id, varsom_report, fetch_time_dependant=True):
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
 
-    reports = []
+    reports = Bulletins()
     report = AvaBulletin()
 
     current = 0

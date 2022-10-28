@@ -26,7 +26,35 @@ class Bulletins:
     Follows partly CAAMLv6 caaml:Bulletins
     """
 
-    bulletins: typing.List[AvaBulletin]
+    def __init__(self) -> None:
+        self.bulletins: typing.List[AvaBulletin] = []
+        self.customData: typing.Dict[str, str] = {}
+
+    def __getitem__(self, item):
+        return self.bulletins[item]
+
+    def __len__(self):
+        return len(self.bulletins)
+
+    def append(self, bulletin: AvaBulletin):
+        """
+        Appends a bulletin
+        """
+        self.bulletins.append(bulletin)
+
+    def append_raw_data(self, file_extension: str, data: str):
+        """
+        Stores the given raw data as customData
+        """
+        self.customData["file_extension"] = file_extension
+        self.customData["data"] = data
+
+    def append_provider(self, provider: str, url: str):
+        """
+        Stores the given provider/url as customData
+        """
+        self.customData["provider"] = provider
+        self.customData["url"] = url
 
     def main_date(self) -> date:
         """

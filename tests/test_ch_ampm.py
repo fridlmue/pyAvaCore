@@ -8,7 +8,7 @@ class TestCH(unittest.TestCase):
     def test_ch(self):
         reports = pyAvaCore.process_reports_ch(
             str(pathlib.Path(__file__).parent.absolute()), cached=True, year="2021"
-        )
+        ).bulletins
         self.assertEqual(len(reports), 7)
         for idx, report in enumerate(reports):
             if report.bulletinID == "89477158947719":

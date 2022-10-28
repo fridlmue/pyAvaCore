@@ -15,6 +15,7 @@
 from datetime import timedelta
 import re
 import copy
+from xml.etree.ElementTree import Element
 import pytz
 import dateutil.parser
 from avacore.avabulletin import (
@@ -22,18 +23,19 @@ from avacore.avabulletin import (
     DangerRating,
     AvaBulletin,
 )
+from avacore.avabulletins import Bulletins
 
 ad_ids = {"nord": "AD-01", "centre": "AD-02", "sud": "AD-03"}
 
 
-def parse_xml(root):
+def parse_xml_ad(root: Element) -> Bulletins:
     # pylint: disable=too-many-locals
     # pylint: disable=too-many-nested-blocks
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
     """parses Andora Danger Ratgin XML"""
 
-    bulletins = []
+    bulletins = Bulletins()
 
     bulletin = AvaBulletin()
     bulletin.publicationTime = pytz.timezone("Europe/Paris").localize(

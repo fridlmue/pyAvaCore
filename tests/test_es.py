@@ -1,4 +1,3 @@
-from avacore import pyAvaCore
 from avacore.processor_es import get_reports_from_file
 import unittest
 import xml.etree.ElementTree as ET
@@ -8,7 +7,7 @@ class TestES(unittest.TestCase):
     def test_ES(self):
         with open(f"{__file__}.xml", encoding="ISO-8859-1") as f:
             text = f.read()
-        reports = get_reports_from_file(text)
+        reports = get_reports_from_file(text).bulletins
         self.assertEqual(len(reports), 5)
         report = reports[0]
         self.assertEqual(report.bulletinID, "ES-NA_2022-03-01 16:19:00+01:00")

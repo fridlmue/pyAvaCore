@@ -24,6 +24,7 @@ import logging
 import re
 
 import pytz
+from avacore.avabulletins import Bulletins
 
 from avacore.png import png
 from avacore.avabulletin import (
@@ -139,7 +140,9 @@ def clean_html_string(to_clean):
     return to_clean.strip()
 
 
-def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
+def process_reports_ch(
+    path, lang="en", cached=False, problems=False, year=""
+) -> Bulletins:
     """
     Download the reports for CH
     """
@@ -148,7 +151,7 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
     # pylint: disable=too-many-statements
 
     reports = []
-    final_reports = []
+    final_reports = Bulletins()
 
     if not cached:
         fetch_files_ch(lang, path)
@@ -158,6 +161,8 @@ def process_reports_ch(path, lang="en", cached=False, problems=False, year=""):
         # Receives validity information from text.json
         with open(path + "/swiss/text.json", encoding="utf8") as fp:
             data = json.load(fp)
+
+        final_reports.append_raw_data("json", data)  # alternatively use ZIP file?
 
         # region_id = region_id[-4:]
 

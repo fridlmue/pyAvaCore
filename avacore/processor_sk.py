@@ -27,9 +27,10 @@ from avacore.avabulletin import (
     Texts,
     ValidTime,
 )
+from avacore.avabulletins import Bulletins
 
 
-def process_reports_sk():
+def process_reports_sk() -> Bulletins:
     """
     Download reports
     """
@@ -40,10 +41,12 @@ def process_reports_sk():
         response = response_content.read().decode("utf-8").split("</textarea>")[1]
         response_json = json.loads(response)
 
-    return get_reports_fromjson(response_json[0])
+    bulletins = get_reports_fromjson(response_json[0])
+    bulletins.append_raw_data("json", response)
+    return bulletins
 
 
-def get_reports_fromjson(sk_report):
+def get_reports_fromjson(sk_report) -> Bulletins:
     # pylint: disable=too-many-locals
     """
     Processes downloaded report
@@ -77,7 +80,7 @@ def get_reports_fromjson(sk_report):
     common_bulletin.avalancheActivity = avalancheActivity
     common_bulletin.snowpackStructure = snowpackStructure
 
-    bulletins = []
+    bulletins = Bulletins()
 
     for region_id, region in sk_report["regions"].items():
         bulletin = AvaBulletin()

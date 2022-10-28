@@ -26,6 +26,7 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
+from avacore.avabulletins import Bulletins
 
 code_dir = {
     "1": "ES-CT-L-04",
@@ -38,7 +39,7 @@ code_dir = {
 }
 
 
-def process_reports_cat(today=datetime.datetime.today().date(), lang="es"):
+def process_reports_cat(today=datetime.datetime.today().date(), lang="es") -> Bulletins:
     """
     Downloads and returns requested Catalanian (ICGC) avalanche bulletins
     """
@@ -67,15 +68,15 @@ def process_reports_cat(today=datetime.datetime.today().date(), lang="es"):
     icgc_reports = json.loads(content)
 
     reports = get_reports_fromjson(icgc_reports)
-
+    reports.append_raw_data("json", content)
     return reports
 
 
-def get_reports_fromjson(icgc_reports):
+def get_reports_fromjson(icgc_reports) -> Bulletins:
     """
     Builds the CAAML JSONs form the ICGC JSON formats.
     """
-    reports = []
+    reports = Bulletins()
     report = AvaBulletin()
 
     for icgc_report in icgc_reports:

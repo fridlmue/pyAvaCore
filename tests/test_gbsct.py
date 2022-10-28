@@ -8,9 +8,8 @@ import xml.etree.ElementTree as ET
 class TestGbSct(unittest.TestCase):
     def test_gbsct(self):
         with open(f"{__file__}.json") as fp:
-            data = json.load(fp)
-        sais_report = data
-        reports = get_reports_from_json(sais_report)
+            sais_report = json.load(fp)
+        reports = get_reports_from_json(sais_report).bulletins
 
         self.assertEqual(len(reports), 6)
 

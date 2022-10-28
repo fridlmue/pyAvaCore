@@ -7,8 +7,7 @@ import xml.etree.ElementTree as ET
 class TestAlbinaAmPm(unittest.TestCase):
     def test_albina_ampm(self):
         root = ET.parse(f"{__file__}.xml")
-        bulletins = Bulletins()
-        bulletins.bulletins = pyAvaCore.parse_xml(root)
+        bulletins = pyAvaCore.parse_xml(root)
         self.assertEqual(bulletins.main_date().isoformat(), "2021-02-22")
         self.assertEqual(len(bulletins.bulletins), 3)
 
