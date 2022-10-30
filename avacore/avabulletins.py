@@ -13,6 +13,7 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from dataclasses import dataclass, field
 from datetime import date
 import json
 import typing
@@ -22,15 +23,15 @@ from .avabulletin import AvaBulletin, DangerRating
 from .geojson import Feature, FeatureCollection
 
 
+@dataclass
 class Bulletins:
     """
     Class for the AvaBulletin collection
     Follows partly CAAMLv6 caaml:Bulletins
     """
 
-    def __init__(self) -> None:
-        self.bulletins: typing.List[AvaBulletin] = []
-        self.customData: typing.Dict[str, str] = {}
+    bulletins: typing.List[AvaBulletin] = field(default_factory=list)
+    customData: typing.Dict[str, str] = field(default_factory=dict)
 
     def __getitem__(self, item):
         return self.bulletins[item]

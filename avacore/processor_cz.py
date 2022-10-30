@@ -84,7 +84,8 @@ def get_reports_fromjson(cz_report) -> Bulletins:
             if "ALL" not in aspect_list:
                 problem.aspects = aspect_list
             problem.elevation = Elevation(
-                lowerBound=warning["altitude_from"], upperBound=warning["altitude_to"]
+                lowerBound=warning["altitude_from"] or None,
+                upperBound=warning["altitude_to"] or None,
             )
             problem.add_problemType(warning["type"])
             report.avalancheProblems.append(problem)
