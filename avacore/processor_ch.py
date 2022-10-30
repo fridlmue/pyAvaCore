@@ -23,8 +23,8 @@ import base64
 import json
 import logging
 import re
+from zoneinfo import ZoneInfo
 
-import pytz
 from avacore.avabulletins import Bulletins
 
 from avacore.png import png
@@ -175,12 +175,11 @@ def process_reports_ch(
 
         if year == "":
             year = str(date_time_now.year)
+        tzinfo = ZoneInfo("Europe/Zurich")
 
-        common_report.publicationTime = pytz.timezone("Europe/Zurich").localize(
-            datetime.strptime(
-                year + "-" + begin[begin.find(":") + 2 : -1], "%Y-%d.%m., %H:%M"
-            )
-        )
+        common_report.publicationTime = datetime.strptime(
+            year + "-" + begin[begin.find(":") + 2 : -1], "%Y-%d.%m., %H:%M"
+        ).replace(tzinfo=tzinfo)
         common_report.validTime.startTime = common_report.publicationTime
         if common_report.validTime.startTime.hour == 17:
             common_report.validTime.endTime = (
@@ -191,12 +190,10 @@ def process_reports_ch(
                 common_report.validTime.startTime + timedelta(hours=9)
             )
         else:  # Shourld not happen
-            common_report.validTime.endTime = pytz.timezone("Europe/Zurich").localize(
-                datetime.strptime(
-                    str(date_time_now.year) + "-" + end[end.find(":") + 2 :],
-                    "%Y-%d.%m., %H:%M",
-                )
-            )
+            common_report.validTime.endTime = datetime.strptime(
+                str(date_time_now.year) + "-" + end[end.find(":") + 2 :],
+                "%Y-%d.%m., %H:%M",
+            ).replace(tzinfo=tzinfo)
 
         common_report.avalancheActivity = Texts(highlights=data["flash"])
 

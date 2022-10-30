@@ -16,7 +16,7 @@
 from datetime import datetime
 import json
 import urllib.request
-import pytz
+from zoneinfo import ZoneInfo
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -82,18 +82,19 @@ def get_reports_fromjson(icgc_reports) -> Bulletins:
         region_id = code_dir[icgc_report["id_zona"]]
 
         report = AvaBulletin()
+        tzinfo = ZoneInfo("Europe/Madrid")
 
-        report.publicationTime = pytz.timezone("Europe/Madrid").localize(
-            datetime.fromisoformat(icgc_report["databutlleti"])
-        )
+        report.publicationTime = datetime.fromisoformat(
+            icgc_report["databutlleti"]
+        ).replace(tzinfo=tzinfo)
         report.bulletinID = region_id + "_" + str(report.publicationTime)
         report.regions.append(Region(region_id))
-        report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(
-            datetime.fromisoformat(icgc_report["datavalidesabutlleti"] + "T00:00")
-        )
-        report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(
-            datetime.fromisoformat(icgc_report["datavalidesabutlleti"] + "T23:59")
-        )
+        report.validTime.startTime = datetime.fromisoformat(
+            icgc_report["datavalidesabutlleti"] + "T00:00"
+        ).replace(tzinfo=tzinfo)
+        report.validTime.endTime = datetime.fromisoformat(
+            icgc_report["datavalidesabutlleti"] + "T23:59"
+        ).replace(tzinfo=tzinfo)
 
         report.avalancheActivity = Texts(
             highlights=icgc_report["perill_text"],

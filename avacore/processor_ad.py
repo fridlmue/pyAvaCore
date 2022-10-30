@@ -16,7 +16,7 @@ from datetime import datetime, timedelta
 import re
 import copy
 from xml.etree.ElementTree import Element
-import pytz
+from zoneinfo import ZoneInfo
 from avacore.avabulletin import (
     Region,
     DangerRating,
@@ -37,9 +37,10 @@ def parse_xml_ad(root: Element) -> Bulletins:
     bulletins = Bulletins()
 
     bulletin = AvaBulletin()
-    bulletin.publicationTime = pytz.timezone("Europe/Paris").localize(
-        datetime.fromisoformat(root.find("date").text)
+    bulletin.publicationTime = datetime.fromisoformat(root.find("date").text).replace(
+        tzinfo=ZoneInfo("Europe/Paris")
     )
+
     bulletin.validTime.startTime = bulletin.publicationTime
     bulletin.validTime.endTime = bulletin.publicationTime + timedelta(
         hours=23, minutes=59, seconds=59

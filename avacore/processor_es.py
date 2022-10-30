@@ -17,8 +17,8 @@ from datetime import datetime, timedelta
 import urllib.request
 import re
 import copy
+from zoneinfo import ZoneInfo
 
-import pytz
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -95,18 +95,16 @@ def get_reports_from_file(aemet_reports) -> Bulletins:
         aemet_reports,
     )
 
-    t_spain = datetime(
+    report.publicationTime = datetime(
         year=int(re_result.group("year")),
         month=MONTHS[re_result.group("month")],
         day=int(re_result.group("day")),
         hour=int(re_result.group("hour")),
         minute=int(re_result.group("minute")),
+        tzinfo=ZoneInfo("Europe/Madrid"),
     )
-    report.publicationTime = pytz.timezone("Europe/Madrid").localize(t_spain)
     report.validTime.startTime = report.publicationTime
     report.validTime.endTime = report.publicationTime + timedelta(hours=24)
-    # t_spain = datetime.fromisoformat(re_result.group(0)[1:-1])
-    # t_spain = pytz.timezone("Europe/Madrid").localize(t_spain)
 
     re_result = re.search(
         r"(?<=2\.- Estado del manto y observaciones recientes:)(?s:.*)(?=3\.- Evolución del manto)",
