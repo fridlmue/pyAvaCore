@@ -14,11 +14,10 @@
 """
 import json
 import urllib.request
-from datetime import timedelta
+from datetime import datetime, timedelta
 import logging
 
 import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -63,7 +62,7 @@ def get_reports_fromjson(cz_report) -> Bulletins:
         report = AvaBulletin()
         report.regions.append(Region("CZ-" + bulletin["region_id"]))
         report.publicationTime = pytz.timezone("Europe/Prague").localize(
-            dateutil.parser.parse(bulletin["date_time"])
+            datetime.fromisoformat(bulletin["date_time"])
         )
         report.bulletinID = bulletin["id"]
 

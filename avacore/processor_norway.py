@@ -19,7 +19,6 @@ from datetime import time
 import logging
 
 import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -98,15 +97,15 @@ def parse_json_no(
         current = 1
 
     report.regions.append(Region(region_id))
-    report.publicationTime = dateutil.parser.parse(
+    report.publicationTime = datetime.fromisoformat(
         varsom_report[current]["PublishTime"].split(".")[0]
     )
     report.bulletinID = region_id + "_" + str(report.publicationTime)
 
-    report.validTime.startTime = dateutil.parser.parse(
+    report.validTime.startTime = datetime.fromisoformat(
         varsom_report[current]["ValidFrom"]
     )
-    report.validTime.endTime = dateutil.parser.parse(varsom_report[current]["ValidTo"])
+    report.validTime.endTime = datetime.fromisoformat(varsom_report[current]["ValidTo"])
 
     danger_rating = DangerRating()
     danger_rating.set_mainValue_int(int(varsom_report[current]["DangerLevel"]))

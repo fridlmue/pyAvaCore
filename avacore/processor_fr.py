@@ -12,6 +12,7 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+from datetime import datetime
 from urllib.request import urlopen, Request
 import copy
 import logging
@@ -20,7 +21,6 @@ import string
 import xml.etree.ElementTree as ET
 
 import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -96,13 +96,13 @@ def parse_reports_fr(m_root: ET.ElementTree) -> Bulletins:
 
     report.regions.append(Region("FR-" + root.attrib.get("ID").zfill(2)))
     report.publicationTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.attrib.get("DATEBULLETIN"))
+        datetime.fromisoformat(root.attrib.get("DATEBULLETIN"))
     )
     report.validTime.startTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.attrib.get("DATEBULLETIN"))
+        datetime.fromisoformat(root.attrib.get("DATEBULLETIN"))
     )
     report.validTime.endTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.attrib.get("DATEVALIDITE"))
+        datetime.fromisoformat(root.attrib.get("DATEVALIDITE"))
     )
 
     am_danger_ratings = []

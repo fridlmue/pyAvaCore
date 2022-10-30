@@ -13,13 +13,12 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-from datetime import timedelta
+from datetime import datetime, timedelta
 import urllib.request
 import re
 import copy
 
 import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -37,36 +36,32 @@ code_dir = {
     "NAVARRA": "ES-NA",
 }
 
-
-class LocaleParserInfo(dateutil.parser.parserinfo):
-    """
-    Provide local parser info for ES
-    https://stackoverflow.com/questions/19927654/using-dateutil-parser-to-parse-a-date-in-another-language/62581811#62581811
-    """
-
-    WEEKDAYS = [
-        ("Mon", "Monday"),
-        ("Tue", "Tuesday"),
-        ("Wed", "Wednesday"),
-        ("Thu", "Thursday"),
-        ("Fri", "Friday"),
-        ("Sat", "Saturday"),
-        ("Sun", "Sunday"),
-    ]
-    MONTHS = [
-        ("ene", "enero"),
-        ("feb", "febrero"),
-        ("mar", "marzo"),
-        ("abr", "abril"),
-        ("may", "mayo"),
-        ("jun", "junio"),
-        ("jul", "julio"),
-        ("ago", "agosto"),
-        ("sep", "septiembre"),
-        ("oct", "octubre"),
-        ("nov", "noviembre"),
-        ("dic", "diciembre"),
-    ]
+MONTHS = {
+    "ene": 1,
+    "enero": 1,
+    "feb": 2,
+    "febrero": 2,
+    "mar": 3,
+    "marzo": 3,
+    "abr": 4,
+    "abril": 4,
+    "may": 5,
+    "mayo": 5,
+    "jun": 6,
+    "junio": 6,
+    "jul": 7,
+    "julio": 7,
+    "ago": 8,
+    "agosto": 8,
+    "sep": 9,
+    "septiembre": 9,
+    "oct": 10,
+    "octubre": 10,
+    "nov": 11,
+    "noviembre": 11,
+    "dic": 12,
+    "diciembre": 12,
+}
 
 
 def process_reports_es() -> Bulletins:
@@ -95,16 +90,23 @@ def get_reports_from_file(aemet_reports) -> Bulletins:
     reports = Bulletins()
     report = AvaBulletin()
 
-    re_result = re.search(r"(?<=Día)(.*)(?=hora oficial)", aemet_reports)
+    re_result = re.search(
+        r"Día (?P<day>\d+) de (?P<month>\w+) de (?P<year>\d+) a las (?P<hour>\d+):(?P<minute>\d+) hora",
+        aemet_reports,
+    )
 
-    t_spain = dateutil.parser.parse(
-        re_result.group(0)[1:-1], fuzzy=True, parserinfo=LocaleParserInfo()
+    t_spain = datetime(
+        year=int(re_result.group("year")),
+        month=MONTHS[re_result.group("month")],
+        day=int(re_result.group("day")),
+        hour=int(re_result.group("hour")),
+        minute=int(re_result.group("minute")),
     )
     report.publicationTime = pytz.timezone("Europe/Madrid").localize(t_spain)
     report.validTime.startTime = report.publicationTime
     report.validTime.endTime = report.publicationTime + timedelta(hours=24)
-    t_spain = dateutil.parser.parse(re_result.group(0)[1:-1], fuzzy=True)
-    t_spain = pytz.timezone("Europe/Madrid").localize(t_spain)
+    # t_spain = datetime.fromisoformat(re_result.group(0)[1:-1])
+    # t_spain = pytz.timezone("Europe/Madrid").localize(t_spain)
 
     re_result = re.search(
         r"(?<=2\.- Estado del manto y observaciones recientes:)(?s:.*)(?=3\.- Evolución del manto)",

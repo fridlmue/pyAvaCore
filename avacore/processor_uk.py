@@ -15,10 +15,8 @@
 
 import json
 import urllib.request
-from datetime import timedelta
+from datetime import datetime, timedelta
 import re
-
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -45,7 +43,7 @@ def get_reports_from_json(sais_reports) -> Bulletins:
         report.regions.append(Region("GB-SCT-" + sais_report["Region"]))
         report.bulletinID = "GB-SCT-" + sais_report["ID"]
 
-        report.publicationTime = dateutil.parser.parse(sais_report["DatePublished"])
+        report.publicationTime = datetime.fromisoformat(sais_report["DatePublished"])
         report.validTime.startTime = report.publicationTime.replace(hour=18)
         report.validTime.endTime = report.validTime.startTime + timedelta(days=1)
 
@@ -163,8 +161,9 @@ def process_reports_uk() -> Bulletins:
     url = "https://www.sais.gov.uk/api?action=getForecast"
 
     headers = {
-        "User-Agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/50.0.2661.102 Safari/537.36"
     }
 
     req = urllib.request.Request(url, headers=headers)
