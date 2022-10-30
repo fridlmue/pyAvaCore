@@ -12,13 +12,13 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+from datetime import datetime
 import logging
 import copy
 import re
 import xml.etree.ElementTree as ET
 from urllib.request import urlopen, Request
 
-import dateutil.parser
 import pytz
 
 from avacore.avabulletin import (
@@ -67,7 +67,7 @@ def parse_reports_is(root: ET.ElementTree) -> Bulletins:
         comment=re.sub(r"(\<.*?\>)", "", conditions.find("full_description").text),
     )
     common_report.publicationTime = pytz.timezone("Iceland").localize(
-        dateutil.parser.parse(conditions.find("update_time").text)
+        datetime.fromisoformat(conditions.find("update_time").text)
     )
 
     weather_forecast = root.find("weather_forecast")
@@ -82,13 +82,13 @@ def parse_reports_is(root: ET.ElementTree) -> Bulletins:
         snowpackStructure = Texts()
         report = copy.deepcopy(common_report)
         report.publicationTime = pytz.timezone("Iceland").localize(
-            dateutil.parser.parse(area_forcast.find("updated").text)
+            datetime.fromisoformat(area_forcast.find("updated").text)
         )
         report.validTime.startTime = pytz.timezone("Iceland").localize(
-            dateutil.parser.parse(area_forcast.find("valid_from").text)
+            datetime.fromisoformat(area_forcast.find("valid_from").text)
         )
         report.validTime.endTime = pytz.timezone("Iceland").localize(
-            dateutil.parser.parse(area_forcast.find("valid_until").text)
+            datetime.fromisoformat(area_forcast.find("valid_until").text)
         )
         report.regions.append(
             Region("IS-" + area_forcast.find("region_code").text.upper())

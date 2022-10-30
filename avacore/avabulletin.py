@@ -19,8 +19,6 @@ import re
 import typing
 import textwrap
 
-import dateutil.parser
-
 
 class ValidTime:
     """
@@ -36,11 +34,11 @@ class ValidTime:
 
         if not startTime is None:
             if not isinstance(startTime, datetime):
-                startTime = dateutil.parser.parse(startTime)
+                startTime = datetime.fromisoformat(startTime)
             self.startTime = startTime
         if not endTime is None:
             if not isinstance(endTime, datetime):
-                endTime = dateutil.parser.parse(endTime)
+                endTime = datetime.fromisoformat(endTime)
             self.endTime = endTime
 
 

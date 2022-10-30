@@ -13,11 +13,10 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from datetime import datetime
 import json
 import urllib.request
-import datetime
 import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -39,7 +38,7 @@ code_dir = {
 }
 
 
-def process_reports_cat(today=datetime.datetime.today().date(), lang="es") -> Bulletins:
+def process_reports_cat(today=datetime.today().date(), lang="es") -> Bulletins:
     """
     Downloads and returns requested Catalanian (ICGC) avalanche bulletins
     """
@@ -85,15 +84,15 @@ def get_reports_fromjson(icgc_reports) -> Bulletins:
         report = AvaBulletin()
 
         report.publicationTime = pytz.timezone("Europe/Madrid").localize(
-            dateutil.parser.parse(icgc_report["databutlleti"])
+            datetime.fromisoformat(icgc_report["databutlleti"])
         )
         report.bulletinID = region_id + "_" + str(report.publicationTime)
         report.regions.append(Region(region_id))
         report.validTime.startTime = pytz.timezone("Europe/Madrid").localize(
-            dateutil.parser.parse(icgc_report["datavalidesabutlleti"] + "T00:00")
+            datetime.fromisoformat(icgc_report["datavalidesabutlleti"] + "T00:00")
         )
         report.validTime.endTime = pytz.timezone("Europe/Madrid").localize(
-            dateutil.parser.parse(icgc_report["datavalidesabutlleti"] + "T23:59")
+            datetime.fromisoformat(icgc_report["datavalidesabutlleti"] + "T23:59")
         )
 
         report.avalancheActivity = Texts(
