@@ -16,8 +16,8 @@ import json
 import urllib.request
 from datetime import datetime, timedelta
 import logging
+from zoneinfo import ZoneInfo
 
-import pytz
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -61,8 +61,8 @@ def get_reports_fromjson(cz_report) -> Bulletins:
     for bulletin in cz_report:
         report = AvaBulletin()
         report.regions.append(Region("CZ-" + bulletin["region_id"]))
-        report.publicationTime = pytz.timezone("Europe/Prague").localize(
-            datetime.fromisoformat(bulletin["date_time"])
+        report.publicationTime = datetime.fromisoformat(bulletin["date_time"]).replace(
+            tzinfo=ZoneInfo("Europe/Prague")
         )
         report.bulletinID = bulletin["id"]
 

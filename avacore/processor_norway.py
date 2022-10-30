@@ -17,8 +17,8 @@ import urllib.request
 from datetime import datetime
 from datetime import time
 import logging
+from zoneinfo import ZoneInfo
 
-import pytz
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -78,9 +78,7 @@ def process_all_reports_no() -> Bulletins:
     return all_reports
 
 
-def parse_json_no(
-    region_id, varsom_report, fetch_time_dependant=True
-) -> Bulletins:
+def parse_json_no(region_id, varsom_report, fetch_time_dependant=True) -> Bulletins:
     """
     Builds the CAAML JSONs form the norwegian JSON formats.
     """
@@ -92,7 +90,7 @@ def parse_json_no(
     report = AvaBulletin()
 
     current = 0
-    now = datetime.now(pytz.timezone("Europe/Oslo"))
+    now = datetime.now(ZoneInfo("Europe/Oslo"))
     if fetch_time_dependant and now.time() > time(17, 0, 0):
         current = 1
 

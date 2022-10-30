@@ -19,8 +19,8 @@ import logging
 import re
 import string
 import xml.etree.ElementTree as ET
+from zoneinfo import ZoneInfo
 
-import pytz
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -94,16 +94,17 @@ def parse_reports_fr(m_root: ET.ElementTree) -> Bulletins:
     report = AvaBulletin()
     reports = Bulletins()
 
+    tzinfo = ZoneInfo("Europe/Paris")
     report.regions.append(Region("FR-" + root.attrib.get("ID").zfill(2)))
-    report.publicationTime = pytz.timezone("Europe/Paris").localize(
-        datetime.fromisoformat(root.attrib.get("DATEBULLETIN"))
-    )
-    report.validTime.startTime = pytz.timezone("Europe/Paris").localize(
-        datetime.fromisoformat(root.attrib.get("DATEBULLETIN"))
-    )
-    report.validTime.endTime = pytz.timezone("Europe/Paris").localize(
-        datetime.fromisoformat(root.attrib.get("DATEVALIDITE"))
-    )
+    report.publicationTime = datetime.fromisoformat(
+        root.attrib.get("DATEBULLETIN")
+    ).replace(tzinfo=tzinfo)
+    report.validTime.startTime = datetime.fromisoformat(
+        root.attrib.get("DATEBULLETIN")
+    ).replace(tzinfo=tzinfo)
+    report.validTime.endTime = datetime.fromisoformat(
+        root.attrib.get("DATEVALIDITE")
+    ).replace(tzinfo=tzinfo)
 
     am_danger_ratings = []
 
