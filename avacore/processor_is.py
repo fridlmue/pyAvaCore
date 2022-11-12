@@ -12,14 +12,13 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+from datetime import datetime
 import logging
 import copy
 import re
 import xml.etree.ElementTree as ET
 from urllib.request import urlopen, Request
-
-import dateutil.parser
-import pytz
+from zoneinfo import ZoneInfo
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -60,15 +59,16 @@ def parse_reports_is(root: ET.ElementTree) -> Bulletins:
     Processes downloaded report
     """
     common_report = AvaBulletin()
+    tzinfo = ZoneInfo("Iceland")
 
     conditions = root.find("conditions")
     common_report.travelAdvisory = Texts(
         highlights=conditions.find("short_description").text,
         comment=re.sub(r"(\<.*?\>)", "", conditions.find("full_description").text),
     )
-    common_report.publicationTime = pytz.timezone("Iceland").localize(
-        dateutil.parser.parse(conditions.find("update_time").text)
-    )
+    common_report.publicationTime = datetime.fromisoformat(
+        conditions.find("update_time").text
+    ).replace(tzinfo=tzinfo)
 
     weather_forecast = root.find("weather_forecast")
     common_report.wxSynopsis = Texts(comment=weather_forecast.find("forecast").text)
@@ -81,21 +81,21 @@ def parse_reports_is(root: ET.ElementTree) -> Bulletins:
         avalancheActivity = Texts()
         snowpackStructure = Texts()
         report = copy.deepcopy(common_report)
-        report.publicationTime = pytz.timezone("Iceland").localize(
-            dateutil.parser.parse(area_forcast.find("updated").text)
-        )
-        report.validTime.startTime = pytz.timezone("Iceland").localize(
-            dateutil.parser.parse(area_forcast.find("valid_from").text)
-        )
-        report.validTime.endTime = pytz.timezone("Iceland").localize(
-            dateutil.parser.parse(area_forcast.find("valid_until").text)
-        )
+        report.publicationTime = datetime.fromisoformat(
+            area_forcast.find("updated").text
+        ).replace(tzinfo=tzinfo)
+        report.validTime.startTime = datetime.fromisoformat(
+            area_forcast.find("valid_from").text
+        ).replace(tzinfo=tzinfo)
+        report.validTime.endTime = datetime.fromisoformat(
+            area_forcast.find("valid_until").text
+        ).replace(tzinfo=tzinfo)
         report.regions.append(
             Region("IS-" + area_forcast.find("region_code").text.upper())
         )
 
         report.bulletinID = (
-            report.regions[0].regionId + "-" + report.publicationTime.isoformat()
+            report.regions[0].regionID + "-" + report.publicationTime.isoformat()
         )
 
         avalancheActivity.highlights = area_forcast.find("forecast").text

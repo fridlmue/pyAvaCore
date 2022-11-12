@@ -44,7 +44,3 @@ class TestFrance_diff_dates(unittest.TestCase):
         dates = bulletins.main_dates(datetime.datetime(2022, 4, 21, 14, 1, 0))
         self.assertEqual(len(dates), 1)
         self.assertIn(datetime.date(2022, 4, 21), dates)
-
-
-if __name__ == "__main__":
-    unittest.main()

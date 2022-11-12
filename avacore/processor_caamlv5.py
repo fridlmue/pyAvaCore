@@ -17,8 +17,7 @@ from datetime import datetime
 from datetime import time
 from datetime import timedelta
 import copy
-import pytz
-import dateutil.parser
+from zoneinfo import ZoneInfo
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -86,18 +85,20 @@ def parse_xml(root) -> Bulletins:
                 if loc_ref not in report.regions:
                     report.regions.append(Region(loc_ref))
             for dateTimeReport in observations.iter(tag=CAAMLTAG + "dateTimeReport"):
-                report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
+                report.publicationTime = datetime.fromisoformat(
+                    dateTimeReport.text.replace("Z", "+00:00")
+                )
             for validTime in observations.iter(tag=CAAMLTAG + "validTime"):
                 if not et_get_parent(validTime):
                     for beginPosition in observations.iter(
                         tag=CAAMLTAG + "beginPosition"
                     ):
-                        report.validTime.startTime = dateutil.parser.parse(
-                            beginPosition.text
+                        report.validTime.startTime = datetime.fromisoformat(
+                            beginPosition.text.replace("Z", "+00:00")
                         )
                     for endPosition in observations.iter(tag=CAAMLTAG + "endPosition"):
-                        report.validTime.endTime = dateutil.parser.parse(
-                            endPosition.text
+                        report.validTime.endTime = datetime.fromisoformat(
+                            endPosition.text.replace("Z", "+00:00")
                         )
             for nDangerRating in observations.iter(tag=CAAMLTAG + "DangerRating"):
                 main_value = 0
@@ -112,7 +113,9 @@ def parse_xml(root) -> Bulletins:
                         "{http://www.w3.org/1999/xlink}href"
                     )
                 for beginPosition in nDangerRating.iter(tag=CAAMLTAG + "beginPosition"):
-                    validity_begin = dateutil.parser.parse(beginPosition.text)
+                    validity_begin = datetime.fromisoformat(
+                        beginPosition.text.replace("Z", "+00:00")
+                    )
                     if validity_begin.time() <= time(
                         15, 0, 0
                     ) and validity_begin.time() >= time(8, 0, 0):
@@ -128,7 +131,9 @@ def parse_xml(root) -> Bulletins:
 
             for DangerPatterns in observations.iter(tag=CAAMLTAG + "dangerPatterns"):
                 dp = []
-                for DangerPattern in DangerPatterns.iter(tag=CAAMLTAG + "DangerPattern"):
+                for DangerPattern in DangerPatterns.iter(
+                    tag=CAAMLTAG + "DangerPattern"
+                ):
                     for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + "type"):
                         dp.append(DangerPatternType.text)
                 report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
@@ -225,11 +230,11 @@ def parse_xml(root) -> Bulletins:
         report.snowpackStructure = snowpackStructure
 
         if pm_available:
-            for idx, danger_rating in enumerate(report.dangerRatings):
-                report.dangerRatings[idx].validTimePeriod = "earlier"
-            for idx, danger_rating in enumerate(pm_danger_ratings):
-                pm_danger_ratings[idx].validTimePeriod = "later"
-                report.dangerRatings.append(pm_danger_ratings[idx])
+            for danger_rating in report.dangerRatings:
+                danger_rating.validTimePeriod = "earlier"
+            for danger_rating in pm_danger_ratings:
+                danger_rating.validTimePeriod = "later"
+                report.dangerRatings.append(danger_rating)
 
         if report.bulletinID.endswith("_PM"):
             for pm_bulletin in reports.bulletins:
@@ -280,7 +285,7 @@ def parse_xml_vorarlberg(root) -> Bulletins:
                 for dateTimeReport in metaDataProperty.iter(
                     tag=CAAMLTAG + "dateTimeReport"
                 ):
-                    report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
+                    report.publicationTime = datetime.fromisoformat(dateTimeReport.text)
             for bulletinResultsOf in detail.iter(tag=CAAMLTAG + "bulletinResultsOf"):
                 for travelAdvisoryComment in bulletinResultsOf.iter(
                     tag=CAAMLTAG + "" "travelAdvisoryComment"
@@ -373,9 +378,9 @@ def parse_xml_vorarlberg(root) -> Bulletins:
 
             for validTime in nDangerRating.iter(tag=CAAMLTAG + "validTime"):
                 for beginPosition in validTime.iter(tag=CAAMLTAG + "beginPosition"):
-                    validity_begin = dateutil.parser.parse(beginPosition.text)
+                    validity_begin = datetime.fromisoformat(beginPosition.text)
                 for endPosition in validTime.iter(tag=CAAMLTAG + "endPosition"):
-                    validity_end = dateutil.parser.parse(endPosition.text)
+                    validity_end = datetime.fromisoformat(endPosition.text)
             main_value = 0
             for main_value in nDangerRating.iter(tag=CAAMLTAG + "mainValue"):
                 main_value = int(main_value.text)
@@ -486,7 +491,8 @@ def parse_xml_bavaria(
 ) -> Bulletins:
     """parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification"""
 
-    now = datetime.now(pytz.timezone("Europe/Ljubljana"))
+    tzinfo = ZoneInfo("Europe/Ljubljana")
+    now = datetime.now(tzinfo)
     if (
         fetch_time_dependant
         and today == datetime(1, 1, 1, 1, 1, 1)
@@ -506,13 +512,9 @@ def parse_xml_bavaria(
     # Common for every Report:
     for metaData in root.iter(tag=CAAMLTAG + "metaDataProperty"):
         for dateTimeReport in metaData.iter(tag=CAAMLTAG + "dateTimeReport"):
+            report.publicationTime = datetime.fromisoformat(dateTimeReport.text)
             if location == "slovenia":
-                time_i = dateutil.parser.parse(dateTimeReport.text, ignoretz=True)
-                report.publicationTime = pytz.timezone("Europe/Ljubljana").localize(
-                    time_i
-                )
-            else:
-                report.publicationTime = dateutil.parser.parse(dateTimeReport.text)
+                report.publicationTime = report.publicationTime.replace(tzinfo=tzinfo)
 
     wxSynopsis = Texts()
     avalancheActivity = Texts()
@@ -598,19 +600,13 @@ def parse_xml_bavaria(
 
             for validTime in nDangerRating.iter(tag=CAAMLTAG + "validTime"):
                 for beginPosition in validTime.iter(tag=CAAMLTAG + "beginPosition"):
+                    validity_begin = datetime.fromisoformat(beginPosition.text)
                     if location == "slovenia":
-                        time_i = dateutil.parser.parse(
-                            beginPosition.text, ignoretz=True
-                        )
-                        validity_begin = pytz.timezone("Europe/Berlin").localize(time_i)
-                    else:
-                        validity_begin = dateutil.parser.parse(beginPosition.text)
+                        validity_begin = validity_begin.replace(tzinfo=tzinfo)
                 for endPosition in validTime.iter(tag=CAAMLTAG + "endPosition"):
+                    validity_end = datetime.fromisoformat(endPosition.text)
                     if location == "slovenia":
-                        time_i = dateutil.parser.parse(endPosition.text, ignoretz=True)
-                        validity_end = pytz.timezone("Europe/Berlin").localize(time_i)
-                    else:
-                        validity_end = dateutil.parser.parse(endPosition.text)
+                        validity_end = validity_end.replace(tzinfo=tzinfo)
             main_value = 0
             for main_value in nDangerRating.iter(tag=CAAMLTAG + "mainValue"):
                 main_value = int(main_value.text)
@@ -723,4 +719,5 @@ def parse_xml_bavaria(
         else:
             final_reports.append(report)
 
-    return final_reports
+    reports.bulletins = final_reports
+    return reports

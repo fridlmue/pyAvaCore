@@ -55,7 +55,10 @@ def get_reports_fromjson(sk_report) -> Bulletins:
     common_bulletin = AvaBulletin()
 
     common_bulletin.source = Source(
-        provider=Provider(name=sk_report["author"], website=str("https://www.hzs.sk"),)
+        provider=Provider(
+            name=sk_report["author"],
+            website=str("https://www.hzs.sk"),
+        )
     )
     common_bulletin.validTime = ValidTime(
         startTime=sk_report["validFrom"], endTime=sk_report["validTill"]

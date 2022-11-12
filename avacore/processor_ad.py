@@ -12,12 +12,11 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-from datetime import timedelta
+from datetime import datetime, timedelta
 import re
 import copy
 from xml.etree.ElementTree import Element
-import pytz
-import dateutil.parser
+from zoneinfo import ZoneInfo
 from avacore.avabulletin import (
     Region,
     DangerRating,
@@ -37,9 +36,10 @@ def parse_xml_ad(root: Element) -> Bulletins:
     bulletins = Bulletins()
 
     bulletin = AvaBulletin()
-    bulletin.publicationTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.find("date").text)
+    bulletin.publicationTime = datetime.fromisoformat(root.find("date").text).replace(
+        tzinfo=ZoneInfo("Europe/Paris")
     )
+
     bulletin.validTime.startTime = bulletin.publicationTime
     bulletin.validTime.endTime = bulletin.publicationTime + timedelta(
         hours=23, minutes=59, seconds=59

@@ -1,0 +1,13 @@
+{
+  "maxDangerRatings": {
+    "FR-22": 3,
+    "FR-22:am": 2,
+    "FR-22:high": 3,
+    "FR-22:high:am": 2,
+    "FR-22:high:pm": 3,
+    "FR-22:low": 2,
+    "FR-22:low:am": 1,
+    "FR-22:low:pm": 2,
+    "FR-22:pm": 3
+  }
+}

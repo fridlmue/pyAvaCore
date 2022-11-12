@@ -12,15 +12,15 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+from datetime import datetime
 from urllib.request import urlopen, Request
 import copy
 import logging
 import re
 import string
 import xml.etree.ElementTree as ET
+from zoneinfo import ZoneInfo
 
-import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -94,16 +94,17 @@ def parse_reports_fr(m_root: ET.ElementTree) -> Bulletins:
     report = AvaBulletin()
     reports = Bulletins()
 
+    tzinfo = ZoneInfo("Europe/Paris")
     report.regions.append(Region("FR-" + root.attrib.get("ID").zfill(2)))
-    report.publicationTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.attrib.get("DATEBULLETIN"))
-    )
-    report.validTime.startTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.attrib.get("DATEBULLETIN"))
-    )
-    report.validTime.endTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.attrib.get("DATEVALIDITE"))
-    )
+    report.publicationTime = datetime.fromisoformat(
+        root.attrib.get("DATEBULLETIN")
+    ).replace(tzinfo=tzinfo)
+    report.validTime.startTime = datetime.fromisoformat(
+        root.attrib.get("DATEBULLETIN")
+    ).replace(tzinfo=tzinfo)
+    report.validTime.endTime = datetime.fromisoformat(
+        root.attrib.get("DATEVALIDITE")
+    ).replace(tzinfo=tzinfo)
 
     am_danger_ratings = []
 
@@ -209,7 +210,7 @@ def parse_reports_fr(m_root: ET.ElementTree) -> Bulletins:
                 pm_danger_ratings.append(am_danger_ratings[1])
 
     report.bulletinID = (
-        report.regions[0].regionId + "_" + str(report.publicationTime.isoformat())
+        report.regions[0].regionID + "_" + str(report.publicationTime.isoformat())
     )
 
     for dangerRating in am_danger_ratings:

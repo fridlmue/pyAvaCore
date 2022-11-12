@@ -1,0 +1,394 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "ES-NA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-23T12:00:00+01:00",
+        "endTime": "2022-02-23T15:57:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-NA_2022-02-22 15:57:00+01:00_PM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-NA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-22T15:57:00+01:00",
+        "endTime": "2022-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-NA_2022-02-22 15:57:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-JA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-23T12:00:00+01:00",
+        "endTime": "2022-02-23T15:57:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-JA_2022-02-22 15:57:00+01:00_PM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-JA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-22T15:57:00+01:00",
+        "endTime": "2022-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-JA_2022-02-22 15:57:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-GA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-23T12:00:00+01:00",
+        "endTime": "2022-02-23T15:57:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-GA_2022-02-22 15:57:00+01:00_PM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-GA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-22T15:57:00+01:00",
+        "endTime": "2022-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-GA_2022-02-22 15:57:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-SO"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-23T12:00:00+01:00",
+        "endTime": "2022-02-23T15:57:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-SO_2022-02-22 15:57:00+01:00_PM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-SO"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-22T15:57:00+01:00",
+        "endTime": "2022-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-SO_2022-02-22 15:57:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-RI"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-23T12:00:00+01:00",
+        "endTime": "2022-02-23T15:57:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-RI_2022-02-22 15:57:00+01:00_PM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-RI"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-02-22T15:57:00+01:00",
+        "endTime": "2022-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro sin grandes cambios.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-02-22T15:57:00+01:00",
+      "snowpackStructure": {
+        "comment": " Aunque con distribuci\u00f3n muy irregular, la nieve est\u00e1 presente desde cotas bajas en las umbr\u00edas, teniendo que ascender a altitudes sensiblemente superiores en las solanas para hallar cierta continuidad. Debido a la insolaci\u00f3n los espesores han disminuido entre 1 y 10 cm durante las \u00faltimas 24 horas en los diferentes puntos de observaci\u00f3n; no obstante, se superan los 100 cm en bastantes \u00e1reas por encima de 2.100 metros de altitud.  El manto est\u00e1 constituido por un sustrato de nieve vieja compacta sobre el que se han ido depositando estos \u00faltimos d\u00edas cantidades variables de nieve m\u00e1s reciente, cuya capa m\u00e1s superficial se encuentra encostrada a primeras horas del d\u00eda, reblandeci\u00e9ndose durante las horas centrales en las zonas m\u00e1s soleadas. En orientaciones este y sudeste de cotas altas existen numerosas placas de viento, as\u00ed como en las umbr\u00edas. Tambi\u00e9n son frecuentes las cornisas en las crestas y ventisqueros en \u00e1reas de resguardo. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y nieve venteada.  Continuaremos con tiempo seco y soleado, por lo que se esperan pocos cambios respecto a la jornada precedente, siendo probables algunas purgas de nieve h\u00fameda, principalmente en pendientes con suficiente inclinaci\u00f3n de las solanas y durante las horas centrales del d\u00eda, que ser\u00e1n de tama\u00f1o peque\u00f1o o, m\u00e1s raramente, mediano.  En las cotas altas persisten placas de viento formadas en d\u00edas previos, principalmente en las umbr\u00edas y orientaciones este y sudeste. Estas estructuras a\u00fan permanecen fr\u00e1giles y podr\u00edan fracturarse por sobrecargas d\u00e9biles, como es el paso de una sola persona, ocasionando aludes que podr\u00edan alcanzar dimensi\u00f3n mediana.  Tambi\u00e9n conviene tener en cuenta el peligro asociado a los resbalones sobre el manto helado, por lo que se recomienda extremar las precauciones si se va a transitar por zonas que susciten dudas. "
+      },
+      "wxSynopsis": {
+        "comment": " Poco nuboso o despejado, con algunos bancos de nubes bajas a primeras horas en el Pirineo navarro, tendiendo a aumentar las nubes medias y altas a lo largo de la tarde. Temperaturas con ligeras variaciones, quiz\u00e1 las m\u00e1ximas m\u00e1s altas en el \u00e1rea occidental. Heladas d\u00e9biles o moderadas. En cotas altas, predominio de vientos moderados de componente oeste. En el resto de las zonas soplar\u00e1n flojos de este y sur, m\u00e1s intensos en los valles navarros.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 3.500 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 5.000 m  Viento en la atm\u00f3sfera libre a 1500 m: SE 10 km/h Viento en la atm\u00f3sfera libre a 3000 m: SW 20 km/h "
+      },
+      "bulletinID": "ES-RI_2022-02-22 15:57:00+01:00"
+    }
+  ]
+}

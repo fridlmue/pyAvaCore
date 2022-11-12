@@ -18,9 +18,8 @@ import urllib.request
 from datetime import datetime
 from datetime import time
 import logging
+from zoneinfo import ZoneInfo
 
-import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -95,20 +94,20 @@ class Processor(avacore.processor.Processor):
         report = AvaBulletin()
 
         current = 0
-        now = datetime.now(pytz.timezone("Europe/Oslo"))
+        now = datetime.now(ZoneInfo("Europe/Oslo"))
         if fetch_time_dependant and now.time() > time(17, 0, 0):
             current = 1
 
         report.regions.append(Region(region_id))
-        report.publicationTime = dateutil.parser.parse(
+        report.publicationTime = datetime.fromisoformat(
             varsom_report[current]["PublishTime"].split(".")[0]
         )
         report.bulletinID = region_id + "_" + str(report.publicationTime)
 
-        report.validTime.startTime = dateutil.parser.parse(
+        report.validTime.startTime = datetime.fromisoformat(
             varsom_report[current]["ValidFrom"]
         )
-        report.validTime.endTime = dateutil.parser.parse(varsom_report[current]["ValidTo"])
+        report.validTime.endTime = datetime.fromisoformat(varsom_report[current]["ValidTo"])
 
         danger_rating = DangerRating()
         danger_rating.set_mainValue_int(int(varsom_report[current]["DangerLevel"]))

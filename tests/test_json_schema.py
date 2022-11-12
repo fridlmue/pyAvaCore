@@ -43,7 +43,3 @@ class TestJsonSchema(unittest.TestCase):
                 self.assertEqual(bulletins_generic, bulletins_generic_compare)
             except:
                 print("No more report issued for", regionID, "?")
-
-
-if __name__ == "__main__":
-    unittest.main()

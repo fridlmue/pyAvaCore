@@ -14,7 +14,7 @@ It is also used as parser for the mobile app ["avaRisk"](https://github.com/frid
 
 ## Dependencies
 
-As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.6 is the current Python target version.
+As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.9 is the current Python target version. On Windows, please install the package `tzdata`.
 
 ## CLI Parameters
 

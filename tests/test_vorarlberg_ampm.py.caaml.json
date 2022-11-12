@@ -1,0 +1,672 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "AT8R1"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T07:30:00+01:00",
+        "endTime": "2021-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R1"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R2"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T07:30:00+01:00",
+        "endTime": "2021-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R2"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R3"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T07:30:00+01:00",
+        "endTime": "2021-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R3"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R4"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T07:30:00+01:00",
+        "endTime": "2021-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R4"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R5"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T07:30:00+01:00",
+        "endTime": "2021-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R5"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R6"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T07:30:00+01:00",
+        "endTime": "2021-02-23T12:00:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R6"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R1"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T12:00:00+01:00",
+        "endTime": "2021-02-24T07:30:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R1_PM",
+      "predecessor_id": "DibosBulletinDeID5946-AT8R1"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R2"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T12:00:00+01:00",
+        "endTime": "2021-02-24T07:30:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R2_PM",
+      "predecessor_id": "DibosBulletinDeID5946-AT8R2"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R3"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T12:00:00+01:00",
+        "endTime": "2021-02-24T07:30:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R3_PM",
+      "predecessor_id": "DibosBulletinDeID5946-AT8R3"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R4"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T12:00:00+01:00",
+        "endTime": "2021-02-24T07:30:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R4_PM",
+      "predecessor_id": "DibosBulletinDeID5946-AT8R4"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R5"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T12:00:00+01:00",
+        "endTime": "2021-02-24T07:30:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R5_PM",
+      "predecessor_id": "DibosBulletinDeID5946-AT8R5"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AT8R6"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-23T12:00:00+01:00",
+        "endTime": "2021-02-24T07:30:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "W",
+            "NW"
+          ],
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "problemType": "wet_snow"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Die Nacht verl\u00e4uft \u00fcberwiegend klar und der Mittwoch und Donnerstag werden sehr sonnig und mild. Die Lawinengefahr ist jeweils in der Nacht und am Vormittag meist gering. Die Gefahr nasser Lawinen steigt jeweils im Tagesverlauf deutlich an. Andreas Pecl"
+      },
+      "publicationTime": "2021-02-23T07:30:00+01:00",
+      "avalancheActivityHighlights": "in hohen Lagen Triebschnee und nasse Lawinen im Tagesverlauf beachten",
+      "wxSynopsisComment": "Es wird trotz d\u00fcnner Federwolken \u00fcberwiegend sonnig. Saharastaub sorgt f\u00fcr leicht diffuses Licht. Es ist in allen H\u00f6henlagen \u00fcberdurchschnittlich mild. Temperatur in 2000m: 3 bis 7 Grad, H\u00f6henwind: meist nur schwach aus S\u00fcdwest bis S\u00fcd.",
+      "snowpackStructureComment": "Pulverschnee findet sich nur noch in h\u00f6hergelegenen, schattseitigen und windgesch\u00fctzten Lagen. Sonst dominiert oft br\u00fcchiger Windharsch und sonnseitig Schmelzharsch. \u00c4lterer Triebschnee in Hochlagen bleibt stellenweise noch st\u00f6ranf\u00e4llig. Mit zeitweise kr\u00e4ftigem Windeinfluss sind gestern untertags kleinr\u00e4umig auch frische Einwehungen entstanden. In hochalpinen Schattenh\u00e4ngen k\u00f6nnen kantige Kristalle im Mittelteil der Schneedecke teilweise noch Schwachschichten darstellen. Nach klarer Nacht bildete sich ein br\u00fcchiger bis tragf\u00e4higer Harschdeckel, der tags\u00fcber vor allem sonnseitig aufweicht. Mit Einstrahlung, Tageserw\u00e4rmung und zunehmender Luftfeuchtigkeit verliert die Schneedecke vor allem in tieferen und mittleren Lagen untertags an Festigkeit.",
+      "avalancheActivityComment": "In den Vormittagsstunden herrschen meist g\u00fcnstige Verh\u00e4ltnisse mit geringer und schattseitig in hohen Lagen m\u00e4\u00dfiger Lawinengefahr. Frischer und \u00e4lterer Triebschnee sollte im schattseitigen, sehr steilen Gel\u00e4nde vorsichtig beurteilt werden. Auch in sehr steilen und selten befahrenen Schattenh\u00e4ngen k\u00f6nnen Schneebrettlawinen mit gro\u00dfer Zusatzbelastung vor allem an \u00dcberg\u00e4ngen von wenig zu viel Schnee ausgel\u00f6st werden. Spontan sind mit Einstrahlung und Tageserw\u00e4rmung ab Nachmittag besonders an steilen Sonnenh\u00e4ngen unterhalb etwa 2400m kleine bis mittlere Nassschnee- und Gleitschneelawinen m\u00f6glich. Erstere k\u00f6nnen auch von Schneesportlern ausgel\u00f6st werden. Schitouren und Variantenabfahrten sollten daher rechtzeitig beendet werden.",
+      "bulletinID": "DibosBulletinDeID5946-AT8R6_PM",
+      "predecessor_id": "DibosBulletinDeID5946-AT8R6"
+    }
+  ]
+}

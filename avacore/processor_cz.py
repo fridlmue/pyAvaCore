@@ -14,11 +14,10 @@
 """
 import json
 import urllib.request
-from datetime import timedelta
+from datetime import datetime, timedelta
 import logging
+from zoneinfo import ZoneInfo
 
-import pytz
-import dateutil.parser
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -62,8 +61,8 @@ def get_reports_fromjson(cz_report) -> Bulletins:
     for bulletin in cz_report:
         report = AvaBulletin()
         report.regions.append(Region("CZ-" + bulletin["region_id"]))
-        report.publicationTime = pytz.timezone("Europe/Prague").localize(
-            dateutil.parser.parse(bulletin["date_time"])
+        report.publicationTime = datetime.fromisoformat(bulletin["date_time"]).replace(
+            tzinfo=ZoneInfo("Europe/Prague")
         )
         report.bulletinID = bulletin["id"]
 
@@ -85,7 +84,8 @@ def get_reports_fromjson(cz_report) -> Bulletins:
             if "ALL" not in aspect_list:
                 problem.aspects = aspect_list
             problem.elevation = Elevation(
-                lowerBound=warning["altitude_from"], upperBound=warning["altitude_to"]
+                lowerBound=warning["altitude_from"] or None,
+                upperBound=warning["altitude_to"] or None,
             )
             problem.add_problemType(warning["type"])
             report.avalancheProblems.append(problem)

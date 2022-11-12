@@ -1,0 +1,394 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "BYALL"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-20T00:00:00+01:00",
+        "endTime": "2021-02-20T23:59:59+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-19T17:24:15+01:00",
+      "avalancheActivity": {
+        "highlights": "Triebschnee in den Hochlagen vereinzelt noch st\u00f6ranf\u00e4llig, mit milden Temperaturen und Sonne zunehmende Nassschneeproblematik.",
+        "comment": "Oberhalb 2000m herrscht im bayerischen Alpenraum eine m\u00e4\u00dfige Lawinengefahr. Darunter ist die Lawinengefahr gering, steigt dann in der zweiten Tagesh\u00e4lfte auf m\u00e4\u00dfig an. Das Hauptproblem stellt in den Hochlagen der Triebschnee dar. Dieser kann noch insbesondere bei gro\u00dfer Zusatzbelastung, beispielsweise durch eine Skifahrergruppe ohne Abst\u00e4nde, als kleine bis mittelgro\u00dfe Schneebrettlawine ausgel\u00f6st werden. Einzelne Gefahrenstellen befinden sich im kammnahen Steilgel\u00e4nde der Hangrichtungen Nordwest \u00fcber Nord bis Ost sowie in eingewehten Rinnen und Mulden. Mit Sonneneinstrahlung und fr\u00fchlingshaften Temperaturen ist in der zweiten Tagesh\u00e4lfte vermehrt mit der Selbstausl\u00f6sung meist kleinerer, vereinzelt auch mittelgro\u00dfer, oberfl\u00e4chlicher Nassschneelawinen aus steilem Gel\u00e4nde zu rechnen. In mittleren Lagen rutscht auf steilen, glatten Wiesenh\u00e4ngen der Schnee auch am Boden ab. H\u00e4nge mit Gleitschneerissen meiden. Die Gleitschneelawinen erreichen mittlere Ausma\u00dfe."
+      },
+      "snowpackStructure": {
+        "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
+      },
+      "wxSynopsis": {
+        "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
+      },
+      "bulletinID": "BYCAAMLGenID3631-BYALL"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYAMM"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-20T00:00:00+01:00",
+        "endTime": "2021-02-20T23:59:59+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-19T17:24:15+01:00",
+      "avalancheActivity": {
+        "highlights": "Triebschnee in den Hochlagen vereinzelt noch st\u00f6ranf\u00e4llig, mit milden Temperaturen und Sonne zunehmende Nassschneeproblematik.",
+        "comment": "Oberhalb 2000m herrscht im bayerischen Alpenraum eine m\u00e4\u00dfige Lawinengefahr. Darunter ist die Lawinengefahr gering, steigt dann in der zweiten Tagesh\u00e4lfte auf m\u00e4\u00dfig an. Das Hauptproblem stellt in den Hochlagen der Triebschnee dar. Dieser kann noch insbesondere bei gro\u00dfer Zusatzbelastung, beispielsweise durch eine Skifahrergruppe ohne Abst\u00e4nde, als kleine bis mittelgro\u00dfe Schneebrettlawine ausgel\u00f6st werden. Einzelne Gefahrenstellen befinden sich im kammnahen Steilgel\u00e4nde der Hangrichtungen Nordwest \u00fcber Nord bis Ost sowie in eingewehten Rinnen und Mulden. Mit Sonneneinstrahlung und fr\u00fchlingshaften Temperaturen ist in der zweiten Tagesh\u00e4lfte vermehrt mit der Selbstausl\u00f6sung meist kleinerer, vereinzelt auch mittelgro\u00dfer, oberfl\u00e4chlicher Nassschneelawinen aus steilem Gel\u00e4nde zu rechnen. In mittleren Lagen rutscht auf steilen, glatten Wiesenh\u00e4ngen der Schnee auch am Boden ab. H\u00e4nge mit Gleitschneerissen meiden. Die Gleitschneelawinen erreichen mittlere Ausma\u00dfe."
+      },
+      "snowpackStructure": {
+        "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
+      },
+      "wxSynopsis": {
+        "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
+      },
+      "bulletinID": "BYCAAMLGenID3631-BYAMM"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYWFK"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-20T00:00:00+01:00",
+        "endTime": "2021-02-20T23:59:59+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-19T17:24:15+01:00",
+      "avalancheActivity": {
+        "highlights": "Triebschnee in den Hochlagen vereinzelt noch st\u00f6ranf\u00e4llig, mit milden Temperaturen und Sonne zunehmende Nassschneeproblematik.",
+        "comment": "Oberhalb 2000m herrscht im bayerischen Alpenraum eine m\u00e4\u00dfige Lawinengefahr. Darunter ist die Lawinengefahr gering, steigt dann in der zweiten Tagesh\u00e4lfte auf m\u00e4\u00dfig an. Das Hauptproblem stellt in den Hochlagen der Triebschnee dar. Dieser kann noch insbesondere bei gro\u00dfer Zusatzbelastung, beispielsweise durch eine Skifahrergruppe ohne Abst\u00e4nde, als kleine bis mittelgro\u00dfe Schneebrettlawine ausgel\u00f6st werden. Einzelne Gefahrenstellen befinden sich im kammnahen Steilgel\u00e4nde der Hangrichtungen Nordwest \u00fcber Nord bis Ost sowie in eingewehten Rinnen und Mulden. Mit Sonneneinstrahlung und fr\u00fchlingshaften Temperaturen ist in der zweiten Tagesh\u00e4lfte vermehrt mit der Selbstausl\u00f6sung meist kleinerer, vereinzelt auch mittelgro\u00dfer, oberfl\u00e4chlicher Nassschneelawinen aus steilem Gel\u00e4nde zu rechnen. In mittleren Lagen rutscht auf steilen, glatten Wiesenh\u00e4ngen der Schnee auch am Boden ab. H\u00e4nge mit Gleitschneerissen meiden. Die Gleitschneelawinen erreichen mittlere Ausma\u00dfe."
+      },
+      "snowpackStructure": {
+        "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
+      },
+      "wxSynopsis": {
+        "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
+      },
+      "bulletinID": "BYCAAMLGenID3631-BYWFK"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYBVA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-20T00:00:00+01:00",
+        "endTime": "2021-02-20T23:59:59+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-19T17:24:15+01:00",
+      "avalancheActivity": {
+        "highlights": "Triebschnee in den Hochlagen vereinzelt noch st\u00f6ranf\u00e4llig, mit milden Temperaturen und Sonne zunehmende Nassschneeproblematik.",
+        "comment": "Oberhalb 2000m herrscht im bayerischen Alpenraum eine m\u00e4\u00dfige Lawinengefahr. Darunter ist die Lawinengefahr gering, steigt dann in der zweiten Tagesh\u00e4lfte auf m\u00e4\u00dfig an. Das Hauptproblem stellt in den Hochlagen der Triebschnee dar. Dieser kann noch insbesondere bei gro\u00dfer Zusatzbelastung, beispielsweise durch eine Skifahrergruppe ohne Abst\u00e4nde, als kleine bis mittelgro\u00dfe Schneebrettlawine ausgel\u00f6st werden. Einzelne Gefahrenstellen befinden sich im kammnahen Steilgel\u00e4nde der Hangrichtungen Nordwest \u00fcber Nord bis Ost sowie in eingewehten Rinnen und Mulden. Mit Sonneneinstrahlung und fr\u00fchlingshaften Temperaturen ist in der zweiten Tagesh\u00e4lfte vermehrt mit der Selbstausl\u00f6sung meist kleinerer, vereinzelt auch mittelgro\u00dfer, oberfl\u00e4chlicher Nassschneelawinen aus steilem Gel\u00e4nde zu rechnen. In mittleren Lagen rutscht auf steilen, glatten Wiesenh\u00e4ngen der Schnee auch am Boden ab. H\u00e4nge mit Gleitschneerissen meiden. Die Gleitschneelawinen erreichen mittlere Ausma\u00dfe."
+      },
+      "snowpackStructure": {
+        "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
+      },
+      "wxSynopsis": {
+        "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
+      },
+      "bulletinID": "BYCAAMLGenID3631-BYBVA"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYCHG"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-20T00:00:00+01:00",
+        "endTime": "2021-02-20T23:59:59+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-19T17:24:15+01:00",
+      "avalancheActivity": {
+        "highlights": "Triebschnee in den Hochlagen vereinzelt noch st\u00f6ranf\u00e4llig, mit milden Temperaturen und Sonne zunehmende Nassschneeproblematik.",
+        "comment": "Oberhalb 2000m herrscht im bayerischen Alpenraum eine m\u00e4\u00dfige Lawinengefahr. Darunter ist die Lawinengefahr gering, steigt dann in der zweiten Tagesh\u00e4lfte auf m\u00e4\u00dfig an. Das Hauptproblem stellt in den Hochlagen der Triebschnee dar. Dieser kann noch insbesondere bei gro\u00dfer Zusatzbelastung, beispielsweise durch eine Skifahrergruppe ohne Abst\u00e4nde, als kleine bis mittelgro\u00dfe Schneebrettlawine ausgel\u00f6st werden. Einzelne Gefahrenstellen befinden sich im kammnahen Steilgel\u00e4nde der Hangrichtungen Nordwest \u00fcber Nord bis Ost sowie in eingewehten Rinnen und Mulden. Mit Sonneneinstrahlung und fr\u00fchlingshaften Temperaturen ist in der zweiten Tagesh\u00e4lfte vermehrt mit der Selbstausl\u00f6sung meist kleinerer, vereinzelt auch mittelgro\u00dfer, oberfl\u00e4chlicher Nassschneelawinen aus steilem Gel\u00e4nde zu rechnen. In mittleren Lagen rutscht auf steilen, glatten Wiesenh\u00e4ngen der Schnee auch am Boden ab. H\u00e4nge mit Gleitschneerissen meiden. Die Gleitschneelawinen erreichen mittlere Ausma\u00dfe."
+      },
+      "snowpackStructure": {
+        "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
+      },
+      "wxSynopsis": {
+        "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
+      },
+      "bulletinID": "BYCAAMLGenID3631-BYCHG"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "BYBGD"
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-20T00:00:00+01:00",
+        "endTime": "2021-02-20T23:59:59+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        },
+        {
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NW",
+            "N",
+            "NE",
+            "E"
+          ],
+          "problemType": "wind_drifted_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-19T17:24:15+01:00",
+      "avalancheActivity": {
+        "highlights": "Triebschnee in den Hochlagen vereinzelt noch st\u00f6ranf\u00e4llig, mit milden Temperaturen und Sonne zunehmende Nassschneeproblematik.",
+        "comment": "Oberhalb 2000m herrscht im bayerischen Alpenraum eine m\u00e4\u00dfige Lawinengefahr. Darunter ist die Lawinengefahr gering, steigt dann in der zweiten Tagesh\u00e4lfte auf m\u00e4\u00dfig an. Das Hauptproblem stellt in den Hochlagen der Triebschnee dar. Dieser kann noch insbesondere bei gro\u00dfer Zusatzbelastung, beispielsweise durch eine Skifahrergruppe ohne Abst\u00e4nde, als kleine bis mittelgro\u00dfe Schneebrettlawine ausgel\u00f6st werden. Einzelne Gefahrenstellen befinden sich im kammnahen Steilgel\u00e4nde der Hangrichtungen Nordwest \u00fcber Nord bis Ost sowie in eingewehten Rinnen und Mulden. Mit Sonneneinstrahlung und fr\u00fchlingshaften Temperaturen ist in der zweiten Tagesh\u00e4lfte vermehrt mit der Selbstausl\u00f6sung meist kleinerer, vereinzelt auch mittelgro\u00dfer, oberfl\u00e4chlicher Nassschneelawinen aus steilem Gel\u00e4nde zu rechnen. In mittleren Lagen rutscht auf steilen, glatten Wiesenh\u00e4ngen der Schnee auch am Boden ab. H\u00e4nge mit Gleitschneerissen meiden. Die Gleitschneelawinen erreichen mittlere Ausma\u00dfe."
+      },
+      "snowpackStructure": {
+        "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
+      },
+      "wxSynopsis": {
+        "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
+      },
+      "bulletinID": "BYCAAMLGenID3631-BYBGD"
+    }
+  ]
+}
