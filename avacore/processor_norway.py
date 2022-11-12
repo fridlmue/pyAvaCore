@@ -12,7 +12,6 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-import json
 from datetime import datetime
 from datetime import time
 import logging
@@ -41,12 +40,7 @@ class Processor(JsonProcessor):
         return self.process_reports_no(region_id)
 
     def process_reports_no(self, region_id) -> Bulletins:
-        """
-        Downloads and returns requested Avalanche Bulletins
-        """
-
         langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
-
         url = (
             "https://api01.nve.no/hydrology/forecast/avalanche/v6.0.0/api/AvalancheWarningByRegion/Detail/"
             + region_id[3:]
@@ -54,14 +48,9 @@ class Processor(JsonProcessor):
             + langkey
             + "/"
         )
-
         headers = {"Content-Type": "application/json; charset=utf-8"}
-
         varsom_report = self._fetch_json(url, headers=headers)
-
-        reports = self.parse_json(region_id, varsom_report)
-        reports.append_raw_data("json", json.dumps(varsom_report))
-        return reports
+        return self.parse_json(region_id, varsom_report)
 
     def process_all_reports_no(self) -> Bulletins:
         """

@@ -41,10 +41,11 @@ class Processor(JsonProcessor):
 
         with urlopen(req) as response_content:
             response = response_content.read().decode("utf-8").split("</textarea>")[1]
+            self.raw_data = response
+            self.raw_data_format = "json"
             response_json = json.loads(response)
 
         bulletins = self.parse_json(region_id, response_json)
-        bulletins.append_raw_data("json", response)
         return bulletins
 
     def parse_json(self, _region_id, data) -> Bulletins:

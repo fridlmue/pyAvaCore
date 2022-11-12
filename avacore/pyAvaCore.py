@@ -69,18 +69,22 @@ def get_bulletins(
     elif region_id.startswith("NO"):
         processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("GB"):
         processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("IS"):
         processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("CZ"):
         processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
         reports = process_reports_es()
@@ -92,10 +96,12 @@ def get_bulletins(
     ):
         processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("SK"):
         processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         url, provider = get_report_url(region_id, local)
     else:
         url, provider = get_report_url(region_id, local)

@@ -28,6 +28,8 @@ class Processor(ABC):
     local = "en"
     cache_path = str(Path("cache"))
     from_cache = False
+    raw_data = ""
+    raw_data_format = ""
 
     # def __init__(self) -> None:
     #     super().__init__()
@@ -38,6 +40,12 @@ class Processor(ABC):
         """
         Downloads and returns requested Avalanche Bulletins
         """
+
+    def _fetch_url(self, url: str, headers: dict, encoding="utf-8") -> str:
+        req = urllib.request.Request(url, headers=headers)
+        logging.info("Fetching %s", req.full_url)
+        with urllib.request.urlopen(req) as response:
+            return response.read().decode(encoding)
 
 
 class JsonProcessor(Processor):
@@ -55,12 +63,9 @@ class JsonProcessor(Processor):
         return self.parse_json(region_id, data)
 
     def _fetch_json(self, url: str, headers) -> Any:
-        req = urllib.request.Request(url, headers=headers)
-        logging.info("Fetching %s", req.full_url)
-        with urllib.request.urlopen(req) as response:
-            content = response.read()
-        # self.reports.append_raw_data("json", content.decode("utf-8"))
-        return json.loads(content)
+        self.raw_data = self._fetch_url(url, headers)
+        self.raw_data_format = "json"
+        return json.loads(self.raw_data)
 
 
 class XmlProcessor(Processor):
@@ -78,9 +83,6 @@ class XmlProcessor(Processor):
         return self.parse_xml(region_id, data)
 
     def _fetch_xml(self, url: str, headers) -> ET.Element:
-        req = urllib.request.Request(url, headers=headers)
-        logging.info("Fetching %s", req.full_url)
-        with urllib.request.urlopen(req) as response:
-            content = response.read().decode("utf-8")
-        # self.reports.append_raw_data("xml", content)
-        return ET.fromstring(content)
+        self.raw_data = self._fetch_url(url, headers)
+        self.raw_data_format = "xml"
+        return ET.fromstring(self.raw_data)
