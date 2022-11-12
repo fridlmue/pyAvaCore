@@ -1,4 +1,4 @@
-from avacore.processor_is import parse_reports_is
+from avacore.processor_is import Processor
 import xml.etree.ElementTree as ET
 
 from tests import SnowTest
@@ -6,7 +6,6 @@ from tests import SnowTest
 
 class TestIceland(SnowTest):
     def test_iceland(self):
-        root = ET.ElementTree()
-        root.parse(f"{__file__}.xml")
-        bulletins = parse_reports_is(root)
+        processor = Processor()
+        bulletins = processor.parse_xml_file("", f"{__file__}.xml")
         self.assertEqualBulletinJSON(__file__, bulletins)

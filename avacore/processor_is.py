@@ -13,11 +13,9 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 from datetime import datetime
-import logging
 import copy
 import re
 import xml.etree.ElementTree as ET
-from urllib.request import urlopen, Request
 from zoneinfo import ZoneInfo
 
 from avacore.avabulletin import (
@@ -29,116 +27,105 @@ from avacore.avabulletin import (
     Elevation,
 )
 from avacore.avabulletins import Bulletins
+from avacore.processor import XmlProcessor
 
 
-def process_reports_is(lang) -> Bulletins:
-    """
-    Download reports
-    """
-    req = Request(
-        "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=" + lang
-    )  # lang can only be `is` or `en`
-    logging.info("Fetching %s", req.full_url)
+class Processor(XmlProcessor):
+    def process_bulletin(self, region_id) -> Bulletins:
+        req = (
+            "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang="
+            + self.local
+        )  # lang can only be `is` or `en`
+        root = self._fetch_xml(req, {})
+        return self.parse_xml(region_id, root)
 
-    with urlopen(req) as response_content:
-        try:
-            content = response_content.read().decode("utf-8")
-            root = ET.fromstring(content)
-        except Exception as r_e:  # pylint: disable=broad-except
-            print("error parsing ElementTree: " + str(r_e))
+    def parse_xml(self, region_id, root: ET.ElementTree) -> Bulletins:
 
-    reports = parse_reports_is(root)
-    reports.append_raw_data("xml", content)
-    return reports
+        # pylint: disable=too-many-locals
+        """
+        Processes downloaded report
+        """
+        common_report = AvaBulletin()
+        tzinfo = ZoneInfo("Iceland")
 
-
-def parse_reports_is(root: ET.ElementTree) -> Bulletins:
-
-    # pylint: disable=too-many-locals
-    """
-    Processes downloaded report
-    """
-    common_report = AvaBulletin()
-    tzinfo = ZoneInfo("Iceland")
-
-    conditions = root.find("conditions")
-    common_report.travelAdvisory = Texts(
-        highlights=conditions.find("short_description").text,
-        comment=re.sub(r"(\<.*?\>)", "", conditions.find("full_description").text),
-    )
-    common_report.publicationTime = datetime.fromisoformat(
-        conditions.find("update_time").text
-    ).replace(tzinfo=tzinfo)
-
-    weather_forecast = root.find("weather_forecast")
-    common_report.wxSynopsis = Texts(comment=weather_forecast.find("forecast").text)
-
-    reports = Bulletins()
-
-    area_forecasts = root.find("area_forecasts")
-    for area_forcast in area_forecasts.iter(tag="area_forecast"):
-        wxSynopsis = Texts()
-        avalancheActivity = Texts()
-        snowpackStructure = Texts()
-        report = copy.deepcopy(common_report)
-        report.publicationTime = datetime.fromisoformat(
-            area_forcast.find("updated").text
-        ).replace(tzinfo=tzinfo)
-        report.validTime.startTime = datetime.fromisoformat(
-            area_forcast.find("valid_from").text
-        ).replace(tzinfo=tzinfo)
-        report.validTime.endTime = datetime.fromisoformat(
-            area_forcast.find("valid_until").text
-        ).replace(tzinfo=tzinfo)
-        report.regions.append(
-            Region("IS-" + area_forcast.find("region_code").text.upper())
+        conditions = root.find("conditions")
+        common_report.travelAdvisory = Texts(
+            highlights=conditions.find("short_description").text,
+            comment=re.sub(r"(\<.*?\>)", "", conditions.find("full_description").text),
         )
+        common_report.publicationTime = datetime.fromisoformat(
+            conditions.find("update_time").text
+        ).replace(tzinfo=tzinfo)
 
-        report.bulletinID = (
-            report.regions[0].regionID + "-" + report.publicationTime.isoformat()
-        )
+        weather_forecast = root.find("weather_forecast")
+        common_report.wxSynopsis = Texts(comment=weather_forecast.find("forecast").text)
 
-        avalancheActivity.highlights = area_forcast.find("forecast").text
-        avalancheActivity.comment = area_forcast.find("recent_avalances").text
-        snowpackStructure.highlights = area_forcast.find("snow_condition").text
-        wxSynopsis.highlights = area_forcast.find("weather").text
+        reports = Bulletins()
 
-        danger_rating = DangerRating()
-        danger_rating.set_mainValue_int(
-            int(area_forcast.find("danger_level_day1_code").text)
-        )
-        report.dangerRatings.append(danger_rating)
-
-        report.wxSynopsis = wxSynopsis
-        report.avalancheActivity = avalancheActivity
-        report.snowpackStructure = snowpackStructure
-
-        for snow_problem in area_forcast.iter(tag="snow_problem"):
-            # problem_danger_rating = DangerRating()
-
-            aspects_list = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] * 2
-            index_from = "0"
-            index_to = "0"
-            index_from = aspects_list.index(snow_problem.find("aspect_from").text)
-            index_to = aspects_list.index(
-                snow_problem.find("aspect_to").text, index_from
+        area_forecasts = root.find("area_forecasts")
+        for area_forcast in area_forecasts.iter(tag="area_forecast"):
+            wxSynopsis = Texts()
+            avalancheActivity = Texts()
+            snowpackStructure = Texts()
+            report = copy.deepcopy(common_report)
+            report.publicationTime = datetime.fromisoformat(
+                area_forcast.find("updated").text
+            ).replace(tzinfo=tzinfo)
+            report.validTime.startTime = datetime.fromisoformat(
+                area_forcast.find("valid_from").text
+            ).replace(tzinfo=tzinfo)
+            report.validTime.endTime = datetime.fromisoformat(
+                area_forcast.find("valid_until").text
+            ).replace(tzinfo=tzinfo)
+            report.regions.append(
+                Region("IS-" + area_forcast.find("region_code").text.upper())
             )
-            # problem_danger_rating.aspect = aspects_list[index_from:index_to+1]
-            elevation = Elevation()
 
-            if snow_problem.find("height").text != "0":
-                up_down = ">"
-                if "Above" in snow_problem.find("height").text:
-                    up_down = "<"
-                elevation.auto_select(up_down + snow_problem.find("height").text)
+            report.bulletinID = (
+                report.regions[0].regionID + "-" + report.publicationTime.isoformat()
+            )
 
-            problem = AvalancheProblem()
-            problem.add_problemType(snow_problem.find("type").text.lower())
-            problem.aspects = aspects_list[index_from : index_to + 1]
-            problem.elevation = elevation
-            # problem.dangerRating = problem_danger_rating
-            report.avalancheProblems.append(problem)
+            avalancheActivity.highlights = area_forcast.find("forecast").text
+            avalancheActivity.comment = area_forcast.find("recent_avalances").text
+            snowpackStructure.highlights = area_forcast.find("snow_condition").text
+            wxSynopsis.highlights = area_forcast.find("weather").text
 
-        reports.append(report)
+            danger_rating = DangerRating()
+            danger_rating.set_mainValue_int(
+                int(area_forcast.find("danger_level_day1_code").text)
+            )
+            report.dangerRatings.append(danger_rating)
 
-    return reports
+            report.wxSynopsis = wxSynopsis
+            report.avalancheActivity = avalancheActivity
+            report.snowpackStructure = snowpackStructure
+
+            for snow_problem in area_forcast.iter(tag="snow_problem"):
+                # problem_danger_rating = DangerRating()
+
+                aspects_list = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] * 2
+                index_from = "0"
+                index_to = "0"
+                index_from = aspects_list.index(snow_problem.find("aspect_from").text)
+                index_to = aspects_list.index(
+                    snow_problem.find("aspect_to").text, index_from
+                )
+                # problem_danger_rating.aspect = aspects_list[index_from:index_to+1]
+                elevation = Elevation()
+
+                if snow_problem.find("height").text != "0":
+                    up_down = ">"
+                    if "Above" in snow_problem.find("height").text:
+                        up_down = "<"
+                    elevation.auto_select(up_down + snow_problem.find("height").text)
+
+                problem = AvalancheProblem()
+                problem.add_problemType(snow_problem.find("type").text.lower())
+                problem.aspects = aspects_list[index_from : index_to + 1]
+                problem.elevation = elevation
+                # problem.dangerRating = problem_danger_rating
+                report.avalancheProblems.append(problem)
+
+            reports.append(report)
+
+        return reports

@@ -19,6 +19,7 @@ import logging
 from typing import Any
 import urllib.request
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 from avacore.avabulletins import Bulletins
 
@@ -60,3 +61,26 @@ class JsonProcessor(Processor):
             content = response.read()
         # self.reports.append_raw_data("json", content.decode("utf-8"))
         return json.loads(content)
+
+
+class XmlProcessor(Processor):
+    @abstractmethod
+    def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
+        """
+        Builds the CAAML JSONs form the original XML formats.
+        """
+
+    def parse_xml_file(self, region_id: str, file: str) -> Bulletins:
+        """
+        Builds the CAAML JSONs form the original XML read from given file.
+        """
+        data = ET.fromstring(Path(file).read_text(encoding="utf-8"))
+        return self.parse_xml(region_id, data)
+
+    def _fetch_xml(self, url: str, headers) -> ET.Element:
+        req = urllib.request.Request(url, headers=headers)
+        logging.info("Fetching %s", req.full_url)
+        with urllib.request.urlopen(req) as response:
+            content = response.read().decode("utf-8")
+        # self.reports.append_raw_data("xml", content)
+        return ET.fromstring(content)

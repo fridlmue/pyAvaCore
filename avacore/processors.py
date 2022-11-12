@@ -16,6 +16,7 @@
 import avacore.processor
 import avacore.processor_catalunya
 import avacore.processor_cz
+import avacore.processor_is
 import avacore.processor_norway
 import avacore.processor_uk
 
@@ -31,6 +32,8 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_catalunya.Processor()
     if region_id.startswith("GB"):
         return avacore.processor_uk.Processor()
+    if region_id.startswith("IS"):
+        return avacore.processor_is.Processor()
     if region_id.startswith("NO"):
         return avacore.processor_norway.Processor()
     return None
