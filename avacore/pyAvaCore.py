@@ -26,7 +26,7 @@ from avacore.avabulletins import Bulletins
 
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
-from avacore.processor_catalunya import process_reports_cat
+# from avacore.processor_catalunya import process_reports_cat
 # from avacore.processor_uk import process_reports_uk
 # from avacore.processor_cz import process_reports_cz
 # from avacore.processor_norway import process_reports_no, process_all_reports_no
@@ -89,7 +89,8 @@ def get_bulletins(
         and not region_id.startswith("ES-CT-L")
         or region_id.startswith("ES-CT-L-04")
     ):
-        reports = process_reports_cat()
+        processor = avacore.processors.new_processor(region_id)
+        reports = processor.process_bulletin(region_id)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("SK"):
         processor = avacore.processors.new_processor(region_id)
