@@ -70,9 +70,20 @@ class Processor(XmlProcessor):
         Downloads and returns all Reports for FR (iterating threw region IDs)
         """
         all_reports = Bulletins()
+        all_raw_data = []
         for region in fr_regions:
             for report in self.process_bulletin(region).bulletins:
                 all_reports.append(report)
+            all_raw_data.append(
+                self.raw_data.removeprefix("""<?xml version="1.0" encoding="utf-8"?>""")
+                .strip()
+                .removeprefix(
+                    """<?xml-stylesheet type="text/xsl" href="../web/bra.xslt"?>"""
+                )
+                .strip()
+            )
+        raw_data = "\\n".join(all_raw_data)
+        self.raw_data = f"<ROOT>{raw_data}</ROOT>"
         return all_reports
 
     def parse_xml(self, region_id, root: ET.ElementTree) -> Bulletins:
