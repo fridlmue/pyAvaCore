@@ -114,7 +114,6 @@ def download_region(regionID):
         for validity_date in validity_dates:
             directory = Path(f"{args.output}/{validity_date}")
             directory.mkdir(parents=True, exist_ok=True)
-            print(bulletins.customData)
             if (
                 "data" in bulletins.customData
                 and "file_extension" in bulletins.customData
