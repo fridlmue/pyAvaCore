@@ -27,7 +27,7 @@ from avacore.avabulletins import Bulletins
 from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
 from avacore.processor_catalunya import process_reports_cat
-from avacore.processor_uk import process_reports_uk
+# from avacore.processor_uk import process_reports_uk
 from avacore.processor_cz import process_reports_cz
 # from avacore.processor_norway import process_reports_no, process_all_reports_no
 from avacore.processor_es import process_reports_es
@@ -37,6 +37,7 @@ from avacore.processor_ad import parse_xml_ad
 from avacore.processor_sk import process_reports_sk
 
 import avacore.processor_norway
+import avacore.processor_uk
 
 config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
@@ -71,7 +72,8 @@ def get_bulletins(
         reports = processor.process_bulletin(region_id)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("GB"):
-        reports = process_reports_uk()
+        processor = avacore.processor_uk.Processor()
+        reports = processor.process_bulletin(region_id)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("IS"):
         reports = process_reports_is(local)
