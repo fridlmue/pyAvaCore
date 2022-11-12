@@ -46,25 +46,23 @@ class Processor(AbstractProcessor):
         """
         Downloads the swiss avalanche zip for the slf app together with the region mapping information
         """
-        Path(f"{self.cache_path}/swiss/").mkdir(parents=True, exist_ok=True)
+        cache_path = Path(f"{self.cache_path}/swiss/")
+        cache_path_zip = cache_path.joinpath(f"bulletin_{self.local}.zip")
+        cache_path.mkdir(parents=True, exist_ok=True)
         url = f"https://www.slf.ch/avalanche/mobile/bulletin_{self.local}.zip"
         logging.info("Fetching %s", url)
-        urllib.request.urlretrieve(
-            url, f"{self.cache_path}/swiss/bulletin_{self.local}.zip"
-        )
+        urllib.request.urlretrieve(url, cache_path_zip)
 
         try:
             urllib.request.urlretrieve(
                 f"https://www.slf.ch/avalanche/bulletin/{self.local}/gk_region2pdf.txt",
-                f"{self.cache_path}/swiss/gk_region2pdf.txt",
+                cache_path.joinpath("gk_region2pdf.txt"),
             )
         except:  # pylint: disable=bare-except
             logging.warning("Could not locate gk_regions2pdf.txt")
 
-        with zipfile.ZipFile(
-            f"{self.cache_path}/swiss/bulletin_{self.local}.zip", "r"
-        ) as zip_ref:
-            zip_ref.extractall(f"{self.cache_path}/swiss/")
+        with zipfile.ZipFile(cache_path_zip, "r") as zip_ref:
+            zip_ref.extractall(cache_path)
 
     @staticmethod
     def get_prone_locations(img_text):
