@@ -33,7 +33,7 @@ from avacore.processor_ch import process_reports_ch
 # from avacore.processor_es import process_reports_es
 # from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
-from avacore.processor_ad import parse_xml_ad
+# from avacore.processor_ad import parse_xml_ad
 # from avacore.processor_sk import process_reports_sk
 
 import avacore.processors
@@ -105,6 +105,11 @@ def get_bulletins(
         reports = processor.process_bulletin(region_id)
         reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         url, provider = get_report_url(region_id, local)
+    elif region_id.startswith("AD"):
+        processor = avacore.processors.new_processor(region_id)
+        reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
+        url, provider = get_report_url(region_id, local)
     else:
         url, provider = get_report_url(region_id, local)
 
@@ -118,8 +123,6 @@ def get_bulletins(
 
         if region_id.startswith("SI"):
             reports = parse_xml_bavaria(root, "slovenia")
-        elif region_id.startswith("AD"):
-            reports = parse_xml_ad(root)
         else:
             reports = parse_xml(root)
         reports.append_raw_data("xml", content)
