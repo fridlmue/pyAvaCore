@@ -28,96 +28,98 @@ from avacore.avabulletin import (
     ValidTime,
 )
 from avacore.avabulletins import Bulletins
+from avacore.processor import JsonProcessor
 
 
-def process_reports_sk() -> Bulletins:
-    """
-    Download reports
-    """
-    req = Request("https://caaml.hzs.sk/")
-    logging.info("Fetching %s", req.full_url)
+class Processor(JsonProcessor):
+    def process_bulletin(self, region_id) -> Bulletins:
+        """
+        Download reports
+        """
+        req = Request("https://caaml.hzs.sk/")
+        logging.info("Fetching %s", req.full_url)
 
-    with urlopen(req) as response_content:
-        response = response_content.read().decode("utf-8").split("</textarea>")[1]
-        response_json = json.loads(response)
+        with urlopen(req) as response_content:
+            response = response_content.read().decode("utf-8").split("</textarea>")[1]
+            response_json = json.loads(response)
 
-    bulletins = get_reports_fromjson(response_json[0])
-    bulletins.append_raw_data("json", response)
-    return bulletins
+        bulletins = self.parse_json(region_id, response_json)
+        bulletins.append_raw_data("json", response)
+        return bulletins
 
+    def parse_json(self, region_id, sk_report) -> Bulletins:
+        # pylint: disable=too-many-locals
+        """
+        Processes downloaded report
+        """
+        sk_report = sk_report[0]
 
-def get_reports_fromjson(sk_report) -> Bulletins:
-    # pylint: disable=too-many-locals
-    """
-    Processes downloaded report
-    """
+        common_bulletin = AvaBulletin()
 
-    common_bulletin = AvaBulletin()
-
-    common_bulletin.source = Source(
-        provider=Provider(
-            name=sk_report["author"],
-            website=str("https://www.hzs.sk"),
+        common_bulletin.source = Source(
+            provider=Provider(
+                name=sk_report["author"],
+                website=str("https://www.hzs.sk"),
+            )
         )
-    )
-    common_bulletin.validTime = ValidTime(
-        startTime=sk_report["validFrom"], endTime=sk_report["validTill"]
-    )
-    common_bulletin.publicationTime = sk_report["published"]
+        common_bulletin.validTime = ValidTime(
+            startTime=sk_report["validFrom"], endTime=sk_report["validTill"]
+        )
+        common_bulletin.publicationTime = sk_report["published"]
 
-    common_bulletin.bulletinID = "SK" + sk_report["published"]
+        common_bulletin.bulletinID = "SK" + sk_report["published"]
 
-    avalancheActivity = Texts()
-    snowpackStructure = Texts()
+        avalancheActivity = Texts()
+        snowpackStructure = Texts()
 
-    avalancheActivity.highlights = sk_report["headline"]
+        avalancheActivity.highlights = sk_report["headline"]
 
-    for description in sk_report["descriptions"]:
-        if "Lavínová situácia" in description["heading"]:
-            avalancheActivity.comment = description["text"]
-        elif "Snehová pokrývka" in description["heading"]:
-            snowpackStructure.comment = description["text"]
-        elif "Krátkodobý vývoj" in description["heading"]:
-            common_bulletin.tendency = Tendency(tendencyComment=description["text"])
+        for description in sk_report["descriptions"]:
+            if "Lavínová situácia" in description["heading"]:
+                avalancheActivity.comment = description["text"]
+            elif "Snehová pokrývka" in description["heading"]:
+                snowpackStructure.comment = description["text"]
+            elif "Krátkodobý vývoj" in description["heading"]:
+                common_bulletin.tendency = Tendency(tendencyComment=description["text"])
 
-    common_bulletin.avalancheActivity = avalancheActivity
-    common_bulletin.snowpackStructure = snowpackStructure
+        common_bulletin.avalancheActivity = avalancheActivity
+        common_bulletin.snowpackStructure = snowpackStructure
 
-    bulletins = Bulletins()
+        bulletins = Bulletins()
 
-    for region_id, region in sk_report["regions"].items():
-        bulletin = AvaBulletin()
-        bulletin = copy.deepcopy(common_bulletin)
-        bulletin.regions.append(Region(region_id.replace("SK0R", "SK-0")))
+        for region_id, region in sk_report["regions"].items():
+            bulletin = AvaBulletin()
+            bulletin = copy.deepcopy(common_bulletin)
+            bulletin.regions.append(Region(region_id.replace("SK0R", "SK-0")))
 
-        keys = ["am"]
-        if "pm" in region:
-            keys.append("pm")
-        valid_time = {"am": "earlier", "pm": "later"}
+            keys = ["am"]
+            if "pm" in region:
+                keys.append("pm")
+            valid_time = {"am": "earlier", "pm": "later"}
 
-        for key in keys:
-            elevations = ["lower"]
-            if len(region[key][f"{elevations[0]}Text"]) > 4:
-                elevations.append("upper")
-            for elevation in elevations:
-                danger_rating = DangerRating()
-                main_val = (
-                    int(region[key][f"{elevation}Level"])
-                    if region[key][f"{elevation}Level"].isdigit()
-                    else 0
-                )
-                danger_rating.set_mainValue_int(main_val)
-                if len(elevations) > 1:
-                    height = region[key][f"{elevation}Text"]
-                    height = height.replace("nad ", ">")
-                    height = height.replace("pod ", "<")
-                    danger_rating.elevation.auto_select(height)
-                if len(keys) > 1:
-                    danger_rating.validTimePeriod = valid_time[key]
-                else:
-                    danger_rating.validTimePeriod = "all_day"
-                bulletin.dangerRatings.append(danger_rating)
+            for key in keys:
+                elevations = ["lower"]
+                if len(region[key][f"{elevations[0]}Text"]) > 4:
+                    elevations.append("upper")
+                for elevation in elevations:
+                    danger_rating = DangerRating()
+                    main_val = (
+                        int(region[key][f"{elevation}Level"])
+                        if region[key][f"{elevation}Level"].isdigit()
+                        else 0
+                    )
+                    danger_rating.set_mainValue_int(main_val)
+                    if len(elevations) > 1:
+                        height = region[key][f"{elevation}Text"]
+                        height = height.replace("nad ", ">")
+                        height = height.replace("pod ", "<")
+                        danger_rating.elevation.auto_select(height)
+                    if len(keys) > 1:
+                        danger_rating.validTimePeriod = valid_time[key]
+                    else:
+                        danger_rating.validTimePeriod = "all_day"
+                    bulletin.dangerRatings.append(danger_rating)
 
-        bulletins.append(bulletin)
+            bulletins.append(bulletin)
 
-    return bulletins
+        return bulletins

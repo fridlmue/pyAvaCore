@@ -34,7 +34,7 @@ from avacore.processor_es import process_reports_es
 from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
 from avacore.processor_ad import parse_xml_ad
-from avacore.processor_sk import process_reports_sk
+# from avacore.processor_sk import process_reports_sk
 
 import avacore.processors
 
@@ -91,9 +91,9 @@ def get_bulletins(
         reports = process_reports_cat()
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("SK"):
-        logging.info("Fetching %s", url)
+        processor = avacore.processors.new_processor(region_id)
+        reports = processor.process_bulletin(region_id)
         url, provider = get_report_url(region_id, local)
-        reports = process_reports_sk()
     else:
         url, provider = get_report_url(region_id, local)
 
