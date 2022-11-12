@@ -14,11 +14,14 @@
 """
 
 import avacore.processor
+import avacore.processor_cz
 import avacore.processor_norway
 import avacore.processor_uk
 
 
 def new_processor(region_id: str) -> avacore.processor.Processor:
+    if region_id.startswith("CZ"):
+        return avacore.processor_cz.Processor()
     if region_id.startswith("GB"):
         return avacore.processor_uk.Processor()
     if region_id.startswith("NO"):

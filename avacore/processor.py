@@ -34,15 +34,22 @@ class Processor(ABC):
 
     @abstractmethod
     def process_bulletin(self, region_id: str) -> Bulletins:
-        pass
+        """
+        Downloads and returns requested Avalanche Bulletins
+        """
 
 
 class JsonProcessor(Processor):
     @abstractmethod
     def parse_json(self, region_id: str, data: Any) -> Bulletins:
-        pass
+        """
+        Builds the CAAML JSONs form the original JSON formats.
+        """
 
     def parse_json_file(self, region_id: str, file: str) -> Bulletins:
+        """
+        Builds the CAAML JSONs form the original JSON read from given file.
+        """
         data = json.loads(Path(file).read_text(encoding="utf-8"))
         return self.parse_json(region_id, data)
 
