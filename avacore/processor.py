@@ -16,7 +16,8 @@
 from abc import ABC, abstractmethod
 import json
 import logging
-from typing import Any
+from io import BytesIO
+from typing import Any, Union
 import urllib.request
 from pathlib import Path
 import xml.etree.ElementTree as ET
@@ -28,9 +29,7 @@ class Processor(ABC):
     local = "en"
     url = ""
     provider = ""
-    cache_path = str(Path("cache"))
-    from_cache = False
-    raw_data = ""
+    raw_data: Union[str, BytesIO] = ""
     raw_data_encoding = "utf-8"
     raw_data_format = ""
 

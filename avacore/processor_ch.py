@@ -14,7 +14,6 @@
 """
 from datetime import datetime
 from datetime import timedelta
-from pathlib import Path
 from typing import Set
 import urllib.request
 import zipfile
@@ -24,6 +23,7 @@ import json
 import logging
 import re
 from zoneinfo import ZoneInfo
+from io import BytesIO
 
 from avacore.avabulletins import Bulletins
 
@@ -46,25 +46,22 @@ class Processor(AbstractProcessor):
         """
         Downloads the swiss avalanche zip for the slf app together with the region mapping information
         """
-        cache_path = Path(f"{self.cache_path}/swiss/")
-        cache_path_zip = cache_path.joinpath(f"bulletin_{self.local}.zip")
-        cache_path.mkdir(parents=True, exist_ok=True)
         url = f"https://www.slf.ch/avalanche/mobile/bulletin_{self.local}.zip"
-        logging.info("Fetching %s", url)
-        urllib.request.urlretrieve(url, cache_path_zip)
-        self.raw_data = cache_path_zip.read_bytes()
-        self.raw_data_format = "zip"
+        with urllib.request.urlopen(url) as response:
+            logging.info("Fetching %s", url)
+            data = response.read()
+            self.raw_data = BytesIO(data)
+            self.raw_data_format = "zip"
 
+        url = f"https://www.slf.ch/avalanche/bulletin/{self.local}/gk_region2pdf.txt"
         try:
-            urllib.request.urlretrieve(
-                f"https://www.slf.ch/avalanche/bulletin/{self.local}/gk_region2pdf.txt",
-                cache_path.joinpath("gk_region2pdf.txt"),
-            )
+            with urllib.request.urlopen(url) as response:
+                logging.info("Fetching %s", url)
+                data = response.read()
+            with zipfile.ZipFile(self.raw_data, "a") as zip_ref:
+                zip_ref.writestr("gk_region2pdf.txt", data)
         except:  # pylint: disable=bare-except
             logging.warning("Could not locate gk_regions2pdf.txt")
-
-        with zipfile.ZipFile(cache_path_zip, "r") as zip_ref:
-            zip_ref.extractall(cache_path)
 
     @staticmethod
     def get_prone_locations(img_text):
@@ -150,13 +147,15 @@ class Processor(AbstractProcessor):
         reports = []
         final_reports = Bulletins()
 
-        if not self.from_cache:
+        if not isinstance(self.raw_data, BytesIO):
             self.fetch_files_ch()
 
-        if Path(self.cache_path + "/swiss/gk_region2pdf.txt").is_file():
+        zip_path = zipfile.Path(self.raw_data)
+
+        if zip_path.joinpath("gk_region2pdf.txt").is_file():
 
             # Receives validity information from text.json
-            with open(self.cache_path + "/swiss/text.json", encoding="utf8") as fp:
+            with zip_path.joinpath("text.json").open(encoding="utf8") as fp:
                 data = json.load(fp)
 
             # region_id = region_id[-4:]
@@ -190,10 +189,7 @@ class Processor(AbstractProcessor):
 
             common_report.avalancheActivity = Texts(highlights=data["flash"])
 
-            text = ""
-            with open(self.cache_path + "/swiss/sdwetter.html", encoding="utf-8") as f:
-                text = f.read()
-
+            text = zip_path.joinpath("sdwetter.html").read_text(encoding="utf-8")
             text = text.split('<div class="footer-meteo-mobile')[0]
             segments = text.split("popover-flag")
 
@@ -226,9 +222,7 @@ class Processor(AbstractProcessor):
             bulletinIDs = []
             bulletin_combinations: Set[AvaBulletin] = set()
             # Receives the ID of the report that matches the selected region_id
-            with open(
-                self.cache_path + "/swiss/gk_region2pdf.txt", encoding="utf8"
-            ) as fp:
+            with zip_path.joinpath("gk_region2pdf.txt").open(encoding="utf8") as fp:
                 for line in fp:
                     bulletinID = line.split("_")[5][:-5]
                     bulletin_combinations.add(bulletinID)
@@ -269,16 +263,11 @@ class Processor(AbstractProcessor):
                 if hasattr(report, "predecessor_id"):
                     folder = "2"
 
-                with open(
-                    self.cache_path
-                    + "/swiss/"
-                    + folder
-                    + "/dst"
-                    + report.bulletinID
-                    + ".html",
-                    encoding="utf-8",
-                ) as f:
-                    text = f.read()
+                text = (
+                    zip_path.joinpath(folder)
+                    .joinpath("dst" + report.bulletinID + ".html")
+                    .read_text(encoding="utf-8")
+                )
 
                 # Isolates the relevant Danger Information
                 text_pos = text.find("data-level=") + len("data-level=") + 1
