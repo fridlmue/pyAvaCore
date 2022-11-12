@@ -16,6 +16,7 @@
 import avacore.processor
 import avacore.processor_catalunya
 import avacore.processor_cz
+import avacore.processor_es
 import avacore.processor_is
 import avacore.processor_norway
 import avacore.processor_uk
@@ -24,6 +25,8 @@ import avacore.processor_uk
 def new_processor(region_id: str) -> avacore.processor.Processor:
     if region_id.startswith("CZ"):
         return avacore.processor_cz.Processor()
+    if region_id.startswith("ES") and not region_id.startswith("ES-CT"):
+        return avacore.processor_es.Processor()
     if (
         region_id.startswith("ES-CT")
         and not region_id.startswith("ES-CT-L")

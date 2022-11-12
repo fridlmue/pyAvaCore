@@ -29,6 +29,7 @@ class Processor(ABC):
     cache_path = str(Path("cache"))
     from_cache = False
     raw_data = ""
+    raw_data_encoding = "utf-8"
     raw_data_format = ""
 
     # def __init__(self) -> None:
@@ -41,11 +42,11 @@ class Processor(ABC):
         Downloads and returns requested Avalanche Bulletins
         """
 
-    def _fetch_url(self, url: str, headers: dict, encoding="utf-8") -> str:
+    def _fetch_url(self, url: str, headers: dict) -> str:
         req = urllib.request.Request(url, headers=headers)
         logging.info("Fetching %s", req.full_url)
         with urllib.request.urlopen(req) as response:
-            return response.read().decode(encoding)
+            return response.read().decode(encoding=self.raw_data_encoding)
 
 
 class JsonProcessor(Processor):
@@ -59,10 +60,10 @@ class JsonProcessor(Processor):
         """
         Builds the CAAML JSONs form the original JSON read from given file.
         """
-        data = json.loads(Path(file).read_text(encoding="utf-8"))
+        data = json.loads(Path(file).read_text(encoding=self.raw_data_encoding))
         return self.parse_json(region_id, data)
 
-    def _fetch_json(self, url: str, headers) -> Any:
+    def _fetch_json(self, url: str, headers: dict) -> Any:
         self.raw_data = self._fetch_url(url, headers)
         self.raw_data_format = "json"
         return json.loads(self.raw_data)
@@ -79,10 +80,10 @@ class XmlProcessor(Processor):
         """
         Builds the CAAML JSONs form the original XML read from given file.
         """
-        data = ET.fromstring(Path(file).read_text(encoding="utf-8"))
+        data = ET.fromstring(Path(file).read_text(encoding=self.raw_data_encoding))
         return self.parse_xml(region_id, data)
 
-    def _fetch_xml(self, url: str, headers) -> ET.Element:
+    def _fetch_xml(self, url: str, headers: dict) -> ET.Element:
         self.raw_data = self._fetch_url(url, headers)
         self.raw_data_format = "xml"
         return ET.fromstring(self.raw_data)
