@@ -21,7 +21,6 @@ import urllib.request
 from pathlib import Path
 
 from avacore.avabulletins import Bulletins
-import avacore.processor_norway
 
 
 class Processor(ABC):
@@ -54,9 +53,3 @@ class JsonProcessor(Processor):
             content = response.read()
         # self.reports.append_raw_data("json", content.decode("utf-8"))
         return json.loads(content)
-
-
-def new_processor(region: str) -> Processor:
-    if region == "NO":
-        return avacore.processor_norway.Processor()
-    return None

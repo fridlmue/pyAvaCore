@@ -36,8 +36,7 @@ from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
 from avacore.processor_ad import parse_xml_ad
 from avacore.processor_sk import process_reports_sk
 
-import avacore.processor_norway
-import avacore.processor_uk
+import avacore.processors
 
 config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
@@ -68,11 +67,11 @@ def get_bulletins(
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
         url, provider = get_report_url(region_id, local)
     elif region_id.startswith("NO"):
-        processor = avacore.processor_norway.Processor()
+        processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("GB"):
-        processor = avacore.processor_uk.Processor()
+        processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("IS"):
