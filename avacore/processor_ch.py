@@ -52,6 +52,8 @@ class Processor(AbstractProcessor):
         url = f"https://www.slf.ch/avalanche/mobile/bulletin_{self.local}.zip"
         logging.info("Fetching %s", url)
         urllib.request.urlretrieve(url, cache_path_zip)
+        self.raw_data = cache_path_zip.read_bytes()
+        self.raw_data_format = "zip"
 
         try:
             urllib.request.urlretrieve(
@@ -156,8 +158,6 @@ class Processor(AbstractProcessor):
             # Receives validity information from text.json
             with open(self.cache_path + "/swiss/text.json", encoding="utf8") as fp:
                 data = json.load(fp)
-
-            final_reports.append_raw_data("json", data)  # alternatively use ZIP file?
 
             # region_id = region_id[-4:]
 
