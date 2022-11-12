@@ -1,11 +1,10 @@
-from avacore.processor_caamlv5 import parse_xml_vorarlberg
-import xml.etree.ElementTree as ET
+from avacore.processor_caamlv5 import VorarlbergProcessor
 
 from tests import SnowTest
 
 
 class TestVorarlberg(SnowTest):
     def test_vorarlberg(self):
-        root = ET.parse(f"{__file__}.xml")
-        bulletins = parse_xml_vorarlberg(root)
+        processor = VorarlbergProcessor()
+        bulletins = processor.parse_xml_file("", f"{__file__}.xml")
         self.assertEqualBulletinJSON(__file__, bulletins)

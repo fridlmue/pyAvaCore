@@ -1,17 +1,13 @@
-from avacore import pyAvaCore
+from avacore.processor_caamlv5 import SloveniaProcessor
 import datetime
-import xml.etree.ElementTree as ET
 
 from tests import SnowTest
 
 
 class TestSlovenia(SnowTest):
     def test_slovenia(self):
-        root = ET.parse(f"{__file__}.xml")
-        bulletins = pyAvaCore.parse_xml_bavaria(
-            root,
-            location="slovenia",
-            today=datetime.date(2021, 3, 20),
-            fetch_time_dependant=False,
-        )
+        processor = SloveniaProcessor()
+        processor.today = datetime.date(2021, 3, 20)
+        processor.fetch_time_dependant = False
+        bulletins = processor.parse_xml_file("SI", f"{__file__}.xml")
         self.assertEqualBulletinJSON(__file__, bulletins)

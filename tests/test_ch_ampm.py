@@ -1,6 +1,5 @@
 from avacore.processor_ch import Processor
 
-from avacore import pyAvaCore
 import pathlib
 
 from tests import SnowTest

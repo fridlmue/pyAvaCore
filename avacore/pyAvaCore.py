@@ -14,18 +14,13 @@
 """
 
 import configparser
+from pathlib import Path
 from typing import List, Tuple
 from urllib.parse import urlparse
-from urllib.request import urlopen
-from pathlib import Path
-import xml.etree.ElementTree as ET
-import logging
-
-from avacore.avabulletin import AvaBulletin
-from avacore.avabulletins import Bulletins
-from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
 
 import avacore.processors
+from avacore.avabulletin import AvaBulletin
+from avacore.avabulletins import Bulletins
 
 config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
@@ -42,42 +37,21 @@ def get_bulletins(
     """
     returns Bulletins object for requested region_id and provider information
     """
-
-    url = ""
     region_id = region_id.upper()
-    reports: Bulletins
     processor = avacore.processors.new_processor(region_id)
-    if processor:
-        processor.local = local
-        processor.cache_path = cache_path
-        processor.from_cache = from_cache
-        processor.url, processor.provider = get_report_url(region_id, local)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        url, provider = get_report_url(region_id, local)
-    else:
-        url, provider = get_report_url(region_id, local)
+    processor.local = local
+    processor.cache_path = cache_path
+    processor.from_cache = from_cache
+    processor.url, processor.provider = get_report_url(region_id, local)
 
-        logging.info("Fetching %s", url)
-        with urlopen(url) as response:
-            content = response.read().decode("utf-8")
-        try:
-            root = ET.fromstring(content)
-        except Exception as r_e:  # pylint: disable=broad-except
-            print("error parsing ElementTree: " + str(r_e))
-
-        if region_id.startswith("SI"):
-            reports = parse_xml_bavaria(root, "slovenia")
-        else:
-            reports = parse_xml(root)
-        reports.append_raw_data("xml", content)
-
+    reports = processor.process_bulletin(region_id)
+    reports.append_raw_data(processor.raw_data_format, processor.raw_data)
     reports.bulletins = [
         report
         for report in reports.bulletins
         if any(region.startswith(region_id) for region in report.get_region_list())
     ]
-    reports.append_provider(provider, url)
+    reports.append_provider(processor.provider, processor.url)
     return reports
 
 

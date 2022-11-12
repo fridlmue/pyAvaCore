@@ -1,8 +1,6 @@
-from avacore import pyAvaCore
 from avacore.avabulletins import Bulletins
 import unittest
 import json
-import pathlib
 import datetime
 
 

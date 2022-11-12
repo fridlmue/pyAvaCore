@@ -1,12 +1,11 @@
-from avacore import pyAvaCore
-import xml.etree.ElementTree as ET
+from avacore.processor_caamlv5 import Processor
 
 from tests import SnowTest
 
 
 class TestAlbinaRatings(SnowTest):
     def test_albina_ratings(self):
-        root = ET.parse(f"{__file__}.xml")
-        bulletins = pyAvaCore.parse_xml(root)
+        processor = Processor()
+        bulletins = processor.parse_xml_file("", f"{__file__}.xml")
         self.assertEqual(bulletins.main_date().isoformat(), "2022-03-22")
         self.assertEqualBulletinJSON(__file__, bulletins)
