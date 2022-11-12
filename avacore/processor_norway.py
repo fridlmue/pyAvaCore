@@ -55,21 +55,21 @@ class Processor(JsonProcessor):
         Downloads and returns all norwegian avalanche reports
         """
         all_reports = Bulletins()
+        all_raw_data = []
         for region in no_regions:
             try:
                 m_reports = self.process_bulletin(region)
+                all_raw_data.append(
+                    self.raw_data.strip().removeprefix("[").removesuffix("]")
+                )
+                for report in m_reports.bulletins:
+                    all_reports.append(report)
             except Exception as e:  # pylint: disable=broad-except
                 logging.error("Failed to download %s", region, exc_info=e)
-
-            for report in m_reports.bulletins:
-                all_reports.append(report)
-
+        self.raw_data = "[" + ",".join(all_raw_data) + "]"
         return all_reports
 
     def parse_json(self, region_id, data) -> Bulletins:
-        """
-        Builds the CAAML JSONs form the norwegian JSON formats.
-        """
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-branches
         # pylint: disable=too-many-statements

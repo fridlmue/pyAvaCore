@@ -121,7 +121,7 @@ def download_region(regionID):
                 data = bulletins.customData["data"]
                 ext = bulletins.customData["file_extension"]
                 with open(
-                    f"{directory}/{validity_date}-{regionID}.{ext}",
+                    f"{directory}/{validity_date}-{regionID}.raw.{ext}",
                     mode="w",
                     encoding="utf-8",
                 ) as f:
