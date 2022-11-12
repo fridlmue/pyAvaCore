@@ -23,18 +23,7 @@ import logging
 
 from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
-
-# from avacore.processor_fr import process_reports_fr, process_all_reports_fr
-# from avacore.processor_ch import process_reports_ch
-# from avacore.processor_catalunya import process_reports_cat
-# from avacore.processor_uk import process_reports_uk
-# from avacore.processor_cz import process_reports_cz
-# from avacore.processor_norway import process_reports_no, process_all_reports_no
-# from avacore.processor_es import process_reports_es
-# from avacore.processor_is import process_reports_is
 from avacore.processor_caamlv5 import parse_xml, parse_xml_bavaria
-# from avacore.processor_ad import parse_xml_ad
-# from avacore.processor_sk import process_reports_sk
 
 import avacore.processors
 
@@ -57,60 +46,11 @@ def get_bulletins(
     url = ""
     region_id = region_id.upper()
     reports: Bulletins
-    if region_id.startswith("FR"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("CH"):
-        processor = avacore.processors.new_processor(region_id)
+    processor = avacore.processors.new_processor(region_id)
+    if processor:
         processor.local = local
         processor.cache_path = cache_path
         processor.from_cache = from_cache
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        url, provider = get_report_url(region_id, local)
-    elif region_id.startswith("NO"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("GB"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("IS"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("CZ"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("ES") and not region_id.startswith("ES-CT"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        url, provider = get_report_url(region_id, local)
-    elif (
-        region_id.startswith("ES-CT")
-        and not region_id.startswith("ES-CT-L")
-        or region_id.startswith("ES-CT-L-04")
-    ):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        _, provider = get_report_url(region_id, local)
-    elif region_id.startswith("SK"):
-        processor = avacore.processors.new_processor(region_id)
-        reports = processor.process_bulletin(region_id)
-        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-        url, provider = get_report_url(region_id, local)
-    elif region_id.startswith("AD"):
-        processor = avacore.processors.new_processor(region_id)
         reports = processor.process_bulletin(region_id)
         reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         url, provider = get_report_url(region_id, local)
