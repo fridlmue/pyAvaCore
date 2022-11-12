@@ -25,7 +25,7 @@ from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
 
 # from avacore.processor_fr import process_reports_fr, process_all_reports_fr
-from avacore.processor_ch import process_reports_ch
+# from avacore.processor_ch import process_reports_ch
 # from avacore.processor_catalunya import process_reports_cat
 # from avacore.processor_uk import process_reports_uk
 # from avacore.processor_cz import process_reports_cz
@@ -63,7 +63,12 @@ def get_bulletins(
         reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("CH"):
-        reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
+        processor = avacore.processors.new_processor(region_id)
+        processor.local = local
+        processor.cache_path = cache_path
+        processor.from_cache = from_cache
+        reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         url, provider = get_report_url(region_id, local)
     elif region_id.startswith("NO"):
         processor = avacore.processors.new_processor(region_id)
