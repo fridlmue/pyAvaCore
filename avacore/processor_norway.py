@@ -37,9 +37,7 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         if region_id == "NO":
             return self.process_all_reports_no()
-        return self.process_reports_no(region_id)
 
-    def process_reports_no(self, region_id) -> Bulletins:
         langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
         url = (
             "https://api01.nve.no/hydrology/forecast/avalanche/v6.0.0/api/AvalancheWarningByRegion/Detail/"
@@ -59,7 +57,7 @@ class Processor(JsonProcessor):
         all_reports = Bulletins()
         for region in no_regions:
             try:
-                m_reports = self.process_reports_no(region)
+                m_reports = self.process_bulletin(region)
             except Exception as e:  # pylint: disable=broad-except
                 logging.error("Failed to download %s", region, exc_info=e)
 

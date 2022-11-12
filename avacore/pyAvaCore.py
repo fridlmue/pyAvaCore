@@ -24,7 +24,7 @@ import logging
 from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
 
-from avacore.processor_fr import process_reports_fr, process_all_reports_fr
+# from avacore.processor_fr import process_reports_fr, process_all_reports_fr
 from avacore.processor_ch import process_reports_ch
 # from avacore.processor_catalunya import process_reports_cat
 # from avacore.processor_uk import process_reports_uk
@@ -58,10 +58,9 @@ def get_bulletins(
     region_id = region_id.upper()
     reports: Bulletins
     if region_id.startswith("FR"):
-        if region_id == "FR":
-            reports = process_all_reports_fr()
-        else:
-            reports = process_reports_fr(region_id)
+        processor = avacore.processors.new_processor(region_id)
+        reports = processor.process_bulletin(region_id)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("CH"):
         reports = process_reports_ch(lang=local, path=cache_path, cached=from_cache)
