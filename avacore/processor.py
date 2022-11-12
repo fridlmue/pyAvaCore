@@ -37,6 +37,16 @@ class Processor(ABC):
     def process_bulletin(self, region_id: str) -> Bulletins:
         pass
 
+
+class JsonProcessor(Processor):
+    @abstractmethod
+    def parse_json(self, region_id: str, data: Any) -> Bulletins:
+        pass
+
+    def parse_json_file(self, region_id: str, file: str) -> Bulletins:
+        data = json.loads(Path(file).read_text(encoding="utf-8"))
+        return self.parse_json(region_id, data)
+
     def _fetch_json(self, url: str, headers) -> Any:
         req = urllib.request.Request(url, headers=headers)
         logging.info("Fetching %s", req.full_url)

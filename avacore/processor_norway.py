@@ -12,9 +12,7 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-import avacore.processor
 import json
-import urllib.request
 from datetime import datetime
 from datetime import time
 import logging
@@ -30,10 +28,14 @@ from avacore.avabulletin import (
     Texts,
 )
 from avacore.avabulletins import Bulletins
+from avacore.processor import JsonProcessor
 
-class Processor(avacore.processor.Processor):
 
-    def process_bulletin(self, region_id, local) -> Bulletins:
+class Processor(JsonProcessor):
+
+    fetch_time_dependant = True
+
+    def process_bulletin(self, region_id) -> Bulletins:
         if region_id == "NO":
             return self.process_all_reports_no()
         else:
@@ -58,10 +60,9 @@ class Processor(avacore.processor.Processor):
 
         varsom_report = self._fetch_json(url, headers=headers)
 
-        reports = self.parse_json_no(region_id, varsom_report)
+        reports = self.parse_json(region_id, varsom_report)
         reports.append_raw_data("json", json.dumps(varsom_report))
         return reports
-
 
     def process_all_reports_no(self) -> Bulletins:
         """
@@ -79,10 +80,7 @@ class Processor(avacore.processor.Processor):
 
         return all_reports
 
-
-    def parse_json_no(self,
-        region_id, varsom_report, fetch_time_dependant=True
-    ) -> Bulletins:
+    def parse_json(self, region_id, varsom_report) -> Bulletins:
         """
         Builds the CAAML JSONs form the norwegian JSON formats.
         """
@@ -95,7 +93,7 @@ class Processor(avacore.processor.Processor):
 
         current = 0
         now = datetime.now(ZoneInfo("Europe/Oslo"))
-        if fetch_time_dependant and now.time() > time(17, 0, 0):
+        if self.fetch_time_dependant and now.time() > time(17, 0, 0):
             current = 1
 
         report.regions.append(Region(region_id))

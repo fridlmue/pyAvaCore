@@ -68,7 +68,7 @@ def get_bulletins(
         url, provider = get_report_url(region_id, local)
     elif region_id.startswith("NO"):
         processor = avacore.processor_norway.Processor()
-        reports = processor.process_bulletin(region_id, local)
+        reports = processor.process_bulletin(region_id)
         _, provider = get_report_url(region_id, local)
     elif region_id.startswith("GB"):
         reports = process_reports_uk()
