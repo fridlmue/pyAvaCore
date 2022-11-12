@@ -31,14 +31,6 @@ from avacore.processor import XmlProcessor
 
 
 class Processor(XmlProcessor):
-    def process_bulletin(self, region_id) -> Bulletins:
-        req = (
-            "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang="
-            + self.local
-        )  # lang can only be `is` or `en`
-        root = self._fetch_xml(req, {})
-        return self.parse_xml(region_id, root)
-
     def parse_xml(self, region_id, root: ET.ElementTree) -> Bulletins:
 
         # pylint: disable=too-many-locals

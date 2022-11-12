@@ -26,6 +26,8 @@ from avacore.avabulletins import Bulletins
 
 class Processor(ABC):
     local = "en"
+    url = ""
+    provider = ""
     cache_path = str(Path("cache"))
     from_cache = False
     raw_data = ""
@@ -70,6 +72,10 @@ class JsonProcessor(Processor):
 
 
 class XmlProcessor(Processor):
+    def process_bulletin(self, region_id) -> Bulletins:
+        root = self._fetch_xml(self.url, {})
+        return self.parse_xml(region_id, root)
+
     @abstractmethod
     def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
         """

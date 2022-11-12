@@ -30,12 +30,6 @@ ad_ids = {"nord": "AD-01", "centre": "AD-02", "sud": "AD-03"}
 
 
 class Processor(XmlProcessor):
-    def process_bulletin(self, region_id) -> Bulletins:
-        url = "https://www.meteo.ad/xml/neige.xml"
-        root = self._fetch_xml(url, {})
-        reports = self.parse_xml(region_id, root)
-        return reports
-
     def parse_xml(self, region_id, root: Element) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-nested-blocks

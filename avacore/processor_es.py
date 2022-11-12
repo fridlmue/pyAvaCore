@@ -68,11 +68,6 @@ MONTHS = {
 class Processor(XmlProcessor):
     raw_data_encoding = "ISO-8859-1"
 
-    def process_bulletin(self, region_id) -> Bulletins:
-        url = "http://www.aemet.es/xml/montana/p18tarn1.xml"
-        root = self._fetch_xml(url, {})
-        return self.parse_xml(region_id, root)
-
     def parse_xml(self, region_id, root) -> Bulletins:
         # pylint: disable=too-many-statements
         # pylint: disable=too-many-branches

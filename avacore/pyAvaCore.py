@@ -51,6 +51,7 @@ def get_bulletins(
         processor.local = local
         processor.cache_path = cache_path
         processor.from_cache = from_cache
+        processor.url, processor.provider = get_report_url(region_id, local)
         reports = processor.process_bulletin(region_id)
         reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         url, provider = get_report_url(region_id, local)
