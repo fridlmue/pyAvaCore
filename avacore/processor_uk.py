@@ -28,7 +28,7 @@ from avacore.processor import JsonProcessor
 
 
 class Processor(JsonProcessor):
-    def parse_json(self, region_id, sais_reports) -> Bulletins:
+    def parse_json(self, region_id, data) -> Bulletins:
         """
         Builds the CAAML JSONs form the original JSON formats.
         """
@@ -38,7 +38,7 @@ class Processor(JsonProcessor):
 
         reports = Bulletins()
 
-        for sais_report in sais_reports:
+        for sais_report in data:
             report = AvaBulletin()
             report.regions.append(Region("GB-SCT-" + sais_report["Region"]))
             report.bulletinID = "GB-SCT-" + sais_report["ID"]

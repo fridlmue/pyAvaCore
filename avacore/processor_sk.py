@@ -47,34 +47,34 @@ class Processor(JsonProcessor):
         bulletins.append_raw_data("json", response)
         return bulletins
 
-    def parse_json(self, region_id, sk_report) -> Bulletins:
+    def parse_json(self, _region_id, data) -> Bulletins:
         # pylint: disable=too-many-locals
         """
         Processes downloaded report
         """
-        sk_report = sk_report[0]
+        data = data[0]
 
         common_bulletin = AvaBulletin()
 
         common_bulletin.source = Source(
             provider=Provider(
-                name=sk_report["author"],
+                name=data["author"],
                 website=str("https://www.hzs.sk"),
             )
         )
         common_bulletin.validTime = ValidTime(
-            startTime=sk_report["validFrom"], endTime=sk_report["validTill"]
+            startTime=data["validFrom"], endTime=data["validTill"]
         )
-        common_bulletin.publicationTime = sk_report["published"]
+        common_bulletin.publicationTime = data["published"]
 
-        common_bulletin.bulletinID = "SK" + sk_report["published"]
+        common_bulletin.bulletinID = "SK" + data["published"]
 
         avalancheActivity = Texts()
         snowpackStructure = Texts()
 
-        avalancheActivity.highlights = sk_report["headline"]
+        avalancheActivity.highlights = data["headline"]
 
-        for description in sk_report["descriptions"]:
+        for description in data["descriptions"]:
             if "Lavínová situácia" in description["heading"]:
                 avalancheActivity.comment = description["text"]
             elif "Snehová pokrývka" in description["heading"]:
@@ -87,7 +87,7 @@ class Processor(JsonProcessor):
 
         bulletins = Bulletins()
 
-        for region_id, region in sk_report["regions"].items():
+        for region_id, region in data["regions"].items():
             bulletin = AvaBulletin()
             bulletin = copy.deepcopy(common_bulletin)
             bulletin.regions.append(Region(region_id.replace("SK0R", "SK-0")))

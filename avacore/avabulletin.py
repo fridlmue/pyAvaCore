@@ -12,8 +12,6 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-# pylint: disable=too-few-public-methods
-
 from dataclasses import dataclass
 from datetime import datetime, timedelta, date
 import re

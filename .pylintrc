@@ -2,6 +2,9 @@
 disable=
   duplicate-code,
   invalid-name,
+  missing-class-docstring,
+  missing-function-docstring,
+  too-few-public-methods,
 
 [FORMAT]
 max-line-length=140

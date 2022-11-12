@@ -38,8 +38,7 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         if region_id == "NO":
             return self.process_all_reports_no()
-        else:
-            return self.process_reports_no(region_id)
+        return self.process_reports_no(region_id)
 
     def process_reports_no(self, region_id) -> Bulletins:
         """
@@ -80,7 +79,7 @@ class Processor(JsonProcessor):
 
         return all_reports
 
-    def parse_json(self, region_id, varsom_report) -> Bulletins:
+    def parse_json(self, region_id, data) -> Bulletins:
         """
         Builds the CAAML JSONs form the norwegian JSON formats.
         """
@@ -98,22 +97,20 @@ class Processor(JsonProcessor):
 
         report.regions.append(Region(region_id))
         report.publicationTime = datetime.fromisoformat(
-            varsom_report[current]["PublishTime"].split(".")[0]
+            data[current]["PublishTime"].split(".")[0]
         )
         report.bulletinID = region_id + "_" + str(report.publicationTime)
 
-        report.validTime.startTime = datetime.fromisoformat(
-            varsom_report[current]["ValidFrom"]
-        )
-        report.validTime.endTime = datetime.fromisoformat(varsom_report[current]["ValidTo"])
+        report.validTime.startTime = datetime.fromisoformat(data[current]["ValidFrom"])
+        report.validTime.endTime = datetime.fromisoformat(data[current]["ValidTo"])
 
         danger_rating = DangerRating()
-        danger_rating.set_mainValue_int(int(varsom_report[current]["DangerLevel"]))
+        danger_rating.set_mainValue_int(int(data[current]["DangerLevel"]))
 
         report.dangerRatings.append(danger_rating)
 
-        if varsom_report[current]["AvalancheProblems"] != None:
-            for problem in varsom_report[current]["AvalancheProblems"]:
+        if data[current]["AvalancheProblems"] is not None:
+            for problem in data[current]["AvalancheProblems"]:
                 problem_type = ""
                 if problem["AvalancheProblemTypeId"] == 7:
                     problem_type = "new_snow"
@@ -154,14 +151,14 @@ class Processor(JsonProcessor):
         avalancheActivity = Texts()
         snowpackStructure = Texts()
 
-        avalancheActivity.highlights = varsom_report[current]["MainText"]
-        avalancheActivity.comment = varsom_report[current]["AvalancheDanger"]
+        avalancheActivity.highlights = data[current]["MainText"]
+        avalancheActivity.comment = data[current]["AvalancheDanger"]
         waek_layers = ""
-        if varsom_report[0]["CurrentWeaklayers"] is not None:
-            waek_layers = "\n" + varsom_report[0]["CurrentWeaklayers"]
-        if varsom_report[current]["SnowSurface"] != None:
-            snowpackStructure.comment = varsom_report[current]["SnowSurface"] + waek_layers
-        report.tendency.tendencyComment = varsom_report[current + 1]["MainText"]
+        if data[0]["CurrentWeaklayers"] is not None:
+            waek_layers = "\n" + data[0]["CurrentWeaklayers"]
+        if data[current]["SnowSurface"] is not None:
+            snowpackStructure.comment = data[current]["SnowSurface"] + waek_layers
+        report.tendency.tendencyComment = data[current + 1]["MainText"]
 
         report.wxSynopsis = wxSynopsis
         report.avalancheActivity = avalancheActivity
