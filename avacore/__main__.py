@@ -20,6 +20,7 @@ import json
 import logging
 import logging.handlers
 from datetime import date, datetime, timedelta
+from io import BytesIO
 
 from .pyAvaCore import get_bulletins
 from .avajson import JSONEncoder
@@ -76,7 +77,6 @@ parser.add_argument(
     help="avalanche regions to merge into one file",
 )
 parser.add_argument("--output", default="./data", help="output directory")
-parser.add_argument("--cache", default="./cache", help="cache directory")
 parser.add_argument(
     "--geojson",
     help="eaws-regions directory containing *micro-regions_elevation.geojson.json of",
@@ -117,13 +117,12 @@ def download_region(regionID):
             data = bulletins.customData.pop("data", "")
             ext = bulletins.customData.pop("file_extension", "")
             if data and ext:
-                with open(
-                    f"{directory}/{validity_date}-{regionID}.raw.{ext}",
-                    mode="w",
-                    encoding="utf-8",
-                ) as f:
-                    logging.info("Writing %s", f.name)
-                    f.write(data)
+                raw = Path(f"{directory}/{validity_date}-{regionID}.raw.{ext}")
+                logging.info("Writing %s", raw)
+                if isinstance(data, BytesIO):
+                    raw.write_bytes(data.getvalue())
+                else:
+                    raw.write_text(data, encoding="utf-8")
             with open(
                 f"{directory}/{validity_date}-{regionID}.json",
                 mode="w",

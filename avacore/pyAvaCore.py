@@ -14,7 +14,6 @@
 """
 
 import configparser
-from pathlib import Path
 from typing import List, Tuple
 from urllib.parse import urlparse
 
@@ -26,12 +25,7 @@ config = configparser.ConfigParser()
 config.read(f"{__file__}.ini")
 
 
-def get_bulletins(
-    region_id,
-    local="en",
-    cache_path=str(Path("cache")),
-    from_cache=False,
-) -> Bulletins:
+def get_bulletins(region_id, local="en") -> Bulletins:
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
     """
@@ -40,8 +34,6 @@ def get_bulletins(
     region_id = region_id.upper()
     processor = avacore.processors.new_processor(region_id)
     processor.local = local
-    processor.cache_path = cache_path
-    processor.from_cache = from_cache
     processor.url, processor.provider = get_report_url(region_id, local)
 
     reports = processor.process_bulletin(region_id)
@@ -55,21 +47,11 @@ def get_bulletins(
     return reports
 
 
-def get_reports(
-    region_id,
-    local="en",
-    cache_path=str(Path("cache")),
-    from_cache=False,
-) -> Tuple[List[AvaBulletin], str, str]:
+def get_reports(region_id, local="en") -> Tuple[List[AvaBulletin], str, str]:
     """
     returns array of AvaReports for requested region_id and provider information
     """
-    bulletins = get_bulletins(
-        region_id=region_id,
-        local=local,
-        cache_path=cache_path,
-        from_cache=from_cache,
-    )
+    bulletins = get_bulletins(region_id=region_id, local=local)
     provider = bulletins.customData["provider"]
     url = bulletins.customData["url"]
     return bulletins.bulletins, provider, url
