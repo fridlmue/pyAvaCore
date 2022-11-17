@@ -14,7 +14,7 @@ It is also used as parser for the mobile app ["avaRisk"](https://github.com/frid
 
 ## Dependencies
 
-As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.6 is the current Python target version.
+As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.9 is the current Python target version. On Windows, please install the package `tzdata`.
 
 ## CLI Parameters
 
@@ -22,7 +22,7 @@ In default configuration, pyAvaCore will fetch the bulletins for all supported r
 
 The regions to fetch can be limited with the `--regions` parameter. Multiple regions can be entered delimited by space. E. g. `python -m avacore --regions AT-02 IT-57` will fetch the bulletins for AT-02 and IT-57 only.
 
-The files are written to `./data` by default the folder can be adjusted by setting the `--output ./subfolder/of/choice`. Same can be done for the cache by the the `--cache` parameter.
+The files are written to `./data` by default the folder can be adjusted by setting the `--output ./subfolder/of/choice`.
 
 A CLI output of the bulletin can be generated with the `--cli` parameter. Default is `n`, which gives no CLI output. With `y` a CLI output is generated in addition to the JSON files. With `o`, only the cli output is generated but no JSON files are written.
 

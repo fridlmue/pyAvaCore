@@ -12,111 +12,114 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-from datetime import timedelta
+from datetime import datetime, timedelta
 import re
 import copy
 from xml.etree.ElementTree import Element
-import pytz
-import dateutil.parser
+from zoneinfo import ZoneInfo
 from avacore.avabulletin import (
     Region,
     DangerRating,
     AvaBulletin,
 )
 from avacore.avabulletins import Bulletins
+from avacore.processor import XmlProcessor
+
 
 ad_ids = {"nord": "AD-01", "centre": "AD-02", "sud": "AD-03"}
 
 
-def parse_xml_ad(root: Element) -> Bulletins:
-    # pylint: disable=too-many-locals
-    # pylint: disable=too-many-nested-blocks
-    # pylint: disable=too-many-branches
-    # pylint: disable=too-many-statements
-    """parses Andora Danger Ratgin XML"""
+class Processor(XmlProcessor):
+    def parse_xml(self, region_id, root: Element) -> Bulletins:
+        # pylint: disable=too-many-locals
+        # pylint: disable=too-many-nested-blocks
+        # pylint: disable=too-many-branches
+        # pylint: disable=too-many-statements
+        """parses Andora Danger Ratgin XML"""
 
-    bulletins = Bulletins()
+        bulletins = Bulletins()
 
-    bulletin = AvaBulletin()
-    bulletin.publicationTime = pytz.timezone("Europe/Paris").localize(
-        dateutil.parser.parse(root.find("date").text)
-    )
-    bulletin.validTime.startTime = bulletin.publicationTime
-    bulletin.validTime.endTime = bulletin.publicationTime + timedelta(
-        hours=23, minutes=59, seconds=59
-    )
+        bulletin = AvaBulletin()
+        bulletin.publicationTime = datetime.strptime(
+            root.find("date").text, "%m/%d/%Y"
+        ).replace(tzinfo=ZoneInfo("Europe/Paris"))
 
-    for geopos in root.iter("gp"):
-        local_bulletin = copy.deepcopy(bulletin)
-        local_bulletin.regions.append(Region(ad_ids[geopos.attrib["id"]]))
-        local_bulletin.bulletinID = (
-            f'{ad_ids[geopos.attrib["id"]]}_{bulletin.publicationTime}'
+        bulletin.validTime.startTime = bulletin.publicationTime
+        bulletin.validTime.endTime = bulletin.publicationTime + timedelta(
+            hours=23, minutes=59, seconds=59
         )
 
-        for neige in geopos.iter("neige"):
-            if "risc" in neige.attrib["data"]:
-                idstate = neige.attrib["idstate"]
+        for geopos in root.iter("gp"):
+            local_bulletin = copy.deepcopy(bulletin)
+            local_bulletin.regions.append(Region(ad_ids[geopos.attrib["id"]]))
+            local_bulletin.bulletinID = (
+                f'{ad_ids[geopos.attrib["id"]]}_{bulletin.publicationTime}'
+            )
 
-                if "damunt" in idstate:
-                    ratings = idstate.split("damunt")
-                    validity = ["all_day", "all_day"]
-                    elevation = [">", "<"]
+            for neige in geopos.iter("neige"):
+                if "risc" in neige.attrib["data"]:
+                    idstate = neige.attrib["idstate"]
 
-                elif "escala-allau" in idstate:
-                    results = re.findall(r"\d*(\d-\d|\d)", idstate)
-                    ratings = []
-                    loc_validity = ["earlier", "later"]
-                    validity = []
-                    loc_elevation = ["<", ">"]
-                    elevation = []
-                    for idx, result in enumerate(results):
-                        if "-" in result:
-                            loc_ratings = result.split("-")
-                            for idy, loc_rating in enumerate(loc_ratings):
-                                validity.append(loc_validity[idy])
+                    if "damunt" in idstate:
+                        ratings = idstate.split("damunt")
+                        validity = ["all_day", "all_day"]
+                        elevation = [">", "<"]
+
+                    elif "escala-allau" in idstate:
+                        results = re.findall(r"\d*(\d-\d|\d)", idstate)
+                        ratings = []
+                        loc_validity = ["earlier", "later"]
+                        validity = []
+                        loc_elevation = ["<", ">"]
+                        elevation = []
+                        for idx, result in enumerate(results):
+                            if "-" in result:
+                                loc_ratings = result.split("-")
+                                for idy, loc_rating in enumerate(loc_ratings):
+                                    validity.append(loc_validity[idy])
+                                    elevation.append(loc_elevation[idx])
+                                    ratings.append(loc_rating)
+                            else:
+                                validity.append("all_day")
                                 elevation.append(loc_elevation[idx])
-                                ratings.append(loc_rating)
-                        else:
-                            validity.append("all_day")
-                            elevation.append(loc_elevation[idx])
-                            ratings.append(result)
+                                ratings.append(result)
 
-                elif "escala-allau" in idstate:
-                    results = re.findall(r"\d*(\d-\d|\d)", idstate)
-                    ratings = []
-                    loc_validity = ["earlier", "later"]
-                    validity = []
-                    loc_elevation = ["<", ">"]
-                    elevation = []
-                    for idx, result in enumerate(results):
-                        if "-" in result:
-                            loc_ratings = result.split("-")
-                            for idy, loc_rating in enumerate(loc_ratings):
-                                validity.append(loc_validity[idy])
+                    elif "escala-allau" in idstate:
+                        results = re.findall(r"\d*(\d-\d|\d)", idstate)
+                        ratings = []
+                        loc_validity = ["earlier", "later"]
+                        validity = []
+                        loc_elevation = ["<", ">"]
+                        elevation = []
+                        for idx, result in enumerate(results):
+                            if "-" in result:
+                                loc_ratings = result.split("-")
+                                for idy, loc_rating in enumerate(loc_ratings):
+                                    validity.append(loc_validity[idy])
+                                    elevation.append(loc_elevation[idx])
+                                    ratings.append(loc_rating)
+                            else:
+                                validity.append("all_day")
                                 elevation.append(loc_elevation[idx])
-                                ratings.append(loc_rating)
-                        else:
-                            validity.append("all_day")
-                            elevation.append(loc_elevation[idx])
-                            ratings.append(result)
+                                ratings.append(result)
 
-                elif "-" in idstate:
-                    ratings = idstate.split("-")
-                    elevation = ["", ""]
-                    validity = ["earlier", "later"]
+                    elif "-" in idstate:
+                        ratings = idstate.split("-")
+                        elevation = ["", ""]
+                        validity = ["earlier", "later"]
 
-                else:
-                    ratings = [idstate]
-                    validity = ["all_day"]
-                    elevation = [""]
+                    else:
+                        ratings = [idstate]
+                        validity = ["all_day"]
+                        elevation = [""]
 
-                for idx, rating in enumerate(ratings):
-                    dangerRating = DangerRating()
-                    dangerRating.set_mainValue_int(int(rating))
-                    dangerRating.validTimePeriod = validity[idx]
-                    dangerRating.elevation.auto_select(elevation[idx])
-                    local_bulletin.dangerRatings.append(dangerRating)
+                    for idx, rating in enumerate(ratings):
+                        dangerRating = DangerRating()
+                        dangerRating.set_mainValue_int(int(rating))
+                        dangerRating.validTimePeriod = validity[idx]
+                        dangerRating.elevation.auto_select(elevation[idx])
+                        local_bulletin.dangerRatings.append(dangerRating)
 
-        bulletins.append(local_bulletin)
+            bulletins.append(local_bulletin)
 
-    return bulletins
+        return bulletins

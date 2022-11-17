@@ -3,7 +3,7 @@
     {
       "regions": [
         {
-          "regionId": "FR-01"
+          "regionID": "FR-01"
         }
       ],
       "validTime": {

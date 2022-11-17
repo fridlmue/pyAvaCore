@@ -12,14 +12,11 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-# pylint: disable=too-few-public-methods
-
+from dataclasses import dataclass
 from datetime import datetime, timedelta, date
 import re
 import typing
 import textwrap
-
-import dateutil.parser
 
 
 class ValidTime:
@@ -36,62 +33,44 @@ class ValidTime:
 
         if not startTime is None:
             if not isinstance(startTime, datetime):
-                startTime = dateutil.parser.parse(startTime)
+                startTime = datetime.fromisoformat(startTime)
             self.startTime = startTime
         if not endTime is None:
             if not isinstance(endTime, datetime):
-                endTime = dateutil.parser.parse(endTime)
+                endTime = datetime.fromisoformat(endTime)
             self.endTime = endTime
 
 
+@dataclass
 class Provider:
     """
     Describes the provider given in the source
     """
 
-    name: str
-    website: str  # Should be URL
-
-    def __init__(self, name=None, website=None):
-        if not name is None:
-            self.name = name
-        if not website is None:
-            self.website = website
+    name: typing.Optional[str] = None
+    website: typing.Optional[str] = None
 
 
+@dataclass
 class Source:
     """
     Describes the source of the Report
     """
 
-    provider: Provider
+    provider: typing.Optional[Provider] = None
     """Bulletin Provider Information"""
-    person: str
+    person: typing.Optional[str] = None
     """Bulletin Author DEVIATES FROM CAAMLv6"""
 
-    def __init__(self, provider=None, person=None):
-        if not provider is None:
-            self.provider = provider
-        if not person is None:
-            self.person = person
 
-
+@dataclass
 class Elevation:
     """
     contains a elevation band
     """
 
-    lowerBound: str
-    upperBound: str
-
-    def __init__(self, lowerBound="", upperBound="", auto_select="") -> None:
-        if lowerBound != "":
-            self.lowerBound = lowerBound
-        if upperBound != "":
-            self.upperBound = upperBound
-
-        if auto_select != "":
-            self.auto_select(auto_select)
+    lowerBound: typing.Optional[str] = None
+    upperBound: typing.Optional[str] = None
 
     def auto_select(self, auto_select):
         """
@@ -115,25 +94,23 @@ class Elevation:
         """
         Return a elevation as string.
         """
-        if hasattr(self, "lowerBound") and hasattr(self, "upperBound"):
+        if self.lowerBound and self.upperBound:
             return ">" + self.lowerBound + "<" + self.upperBound
-        if hasattr(self, "lowerBound"):
+        if self.lowerBound:
             return ">" + self.lowerBound
-        if hasattr(self, "upperBound"):
+        if self.upperBound:
             return "<" + self.upperBound
 
         return ""
 
 
+@dataclass
 class MetaData:
     """
     MetaData for Report
     """
 
     customData: typing.Dict
-
-    def __init__(self):
-        self.customData = []
 
 
 class DangerRating:
@@ -318,33 +295,24 @@ class Tendency:
             self.tendencyComment = tendencyComment
 
 
+@dataclass
 class Region:
     """
     Describes a Region
     """
 
-    name: str
-    regionId: str
-
-    def __init__(self, regionId, name=None) -> None:
-        self.regionId = regionId
-        if not name is None:
-            self.name = name
+    regionID: str
+    name: typing.Optional[str] = None
 
 
+@dataclass
 class Texts:
     """
-    Describes Texts in the Bulletion with highlights and coomment
+    Describes Texts in the Bulletin with highlights and comment
     """
 
-    highlights: str
-    comment: str
-
-    def __init__(self, highlights=None, comment=None) -> None:
-        if not highlights is None:
-            self.highlights = highlights
-        if not comment is None:
-            self.comment = comment
+    highlights: typing.Optional[str] = None
+    comment: typing.Optional[str] = None
 
 
 class AvaBulletin:
@@ -405,7 +373,7 @@ class AvaBulletin:
         """
         region_list = []
         for reg in self.regions:
-            region_list.append(reg.regionId)
+            region_list.append(reg.regionID)
         return region_list
 
     def from_json(self, bulletin_json):
@@ -433,7 +401,7 @@ class AvaBulletin:
                 elif attribute == "regions":
                     for region in bulletin_json[attribute]:
                         self.regions.append(
-                            Region(region.get("regionId"), region.get("name"))
+                            Region(region.get("regionID"), region.get("name"))
                         )
 
                 elif attribute == "dangerRatings":
@@ -552,7 +520,7 @@ class AvaBulletin:
         print("║ Valid to:            ", self.validTime.endTime)
         print("║ Valid for:")
         for region in self.regions:
-            print("║ ├─ ", region.regionId)
+            print("║ ├─ ", region.regionID)
 
         print("╟───── Danger Rating")
         for dangerRating in self.dangerRatings:

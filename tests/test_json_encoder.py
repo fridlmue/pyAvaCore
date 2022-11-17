@@ -13,7 +13,3 @@ class TestJsonEncoder(unittest.TestCase):
             json.dumps(bulletin, cls=JSONEncoder),
             '{"validTime": {"startTime": "2022-03-04T00:00:00"}}',
         )
-
-
-if __name__ == "__main__":
-    unittest.main()

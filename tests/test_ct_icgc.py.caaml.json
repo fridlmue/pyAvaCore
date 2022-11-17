@@ -1,0 +1,265 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-L-04"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_drifted_snow"
+        },
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Divendres predominar\u00e0 el problema de neu ventada, tot i que de forma local i amb possibles allaus de mida petita. Perill EN LLEU AUGMENT. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-L-04_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1) arreu excepte, \nMODERAT (2) a la Franja Nord Pallaresa per damunt de 2400 m.",
+        "comment": "Dijous anir\u00e0 apareixent el problema de neu ventada, a causa de les nevades previstes acompanyades de vent de nord. Hi haur\u00e0 plaques de neu ventada, en especial al llarg de la tarda, i a la Franja Nord Pallaresa i al sud i est de l'Aran. Podrien donar lloc a allaus accidentals a sotavents orientats al sud, al pas d'una persona i de mida 1, suficient per produir caigudes i lesions. \nFora d'aquesta nevada trobem un mantell ben consolidat, amb neu pols reciclada alternada amb crostes. De manera molt local trobem plaques de vent antigues que reposen sobre neu facetada. S\u00f3n possibles desencadenaments accidentals al pas d'una persona, que en general donaran lloc a allaus de mida 1. Cal anar amb compte a acumulacions de neu antigues, en especial a obagues.\nEncara podem trobar crostes relliscoses. Eviteu les caigudes i porteu el material de seguretat corresponent (grampons o ganivetes, piolet i casc) a m\u00e9s del material de seguretat per allaus."
+      },
+      "snowpackStructure": {
+        "comment": "Hi ha neu des de 1400-1500 m, esquiables a partir de 1600 m. Els gruixos s\u00f3n molt excedentaris, amb valors que oscil\u00b7len entre 140-190 cm a 2200 m, normals o lleugerament excedentaris per l'\u00e8poca de l'any. "
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-RF"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Les condicions d'estabilitat seran similars, amb facetes enterrades que podrien donar lloc a allaus accidentals de forma molt local. Perill ESTACIONARI. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-RF_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1) arreu excepte,\nMODERAT (2), al nord del sector i per damunt de 2400 m.\n",
+        "comment": "Problema de capes febles persistents.\nEl mantell est\u00e0 encrostat, amb acumulacions locals de neu ventada vella. Per sobre de 2100 m aquestes acumulacions reposen sobre facetes que trenquen i propaguen f\u00e0cilment. Hi s\u00f3n a indrets arrecerats del vent, localment a qualsevol orientaci\u00f3. Al nostre pas s\u00f3n possibles allaus de mida 1, suficient per produir caigudes i lesions. Per damunt de 2400 m i per sobrec\u00e0rrega forta es podria desencadenar alguna allau de mida suficient per enterrar una persona. Entre dimecres i dijous podria haver cert transport degut al vent de nord que s'espera, amb formaci\u00f3 molt local de plaques a sotavents del nord. A la meitat sud d'aquest sector les plaques s\u00f3n menys freq\u00fcents i a\u00efllades.\nEn superf\u00edcie tamb\u00e9 hi ha crostes relliscoses, sobretot a la meitat sud. Eviteu les relliscades i porteu el material de seguretat corresponent (grampons o ganivetes, piolet i casc) a m\u00e9s del material de seguretat per allaus."
+      },
+      "snowpackStructure": {
+        "comment": "El mantell \u00e9s present a partir de 1800 m a les obagues, discontinu a cotes altes a totes orientacions a causa del vent i la pluja de finals de desembre. Nom\u00e9s \u00e9s esquiable en tubs i zones arrecerades, a partir dels 1800 m en est i dels 1900 m a oest. A cotes mitjanes els gruixos s\u00f3n similars als normals, entre 20-50 cm. "
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-PA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Hi haur\u00e0 pocs canvis en les condicions d'estabilitat del mantell, amb facetes enterrades que podrien donar lloc a allaus accidentals de forma molt local. Perill ESTACIONARI. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-PA_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1) arreu excepte,\nMODERAT (2), al nord del sector i per damunt de 2400 m.\n",
+        "comment": "Problema de capes febles persistents.\nTrobem un mantell encrostat, amb acumulacions locals de neu ventada vella. Per sobre de 2100 m aquestes acumulacions reposen sobre facetes que trenquen i propaguen f\u00e0cilment. Hi s\u00f3n a indrets arrecerats del vent, localment a qualsevol orientaci\u00f3. Al nostre pas s\u00f3n possibles allaus de mida 1, suficient per produir caigudes i lesions. Per damunt de 2400 m i per sobrec\u00e0rrega forta es podria desencadenar alguna allau de mida suficient per enterrar una persona. Entre dimecres i dijous podria haver cert transport degut al vent de nord que s'espera, amb formaci\u00f3 molt local de plaques a sotavents del nord. A la meitat sud d'aquest sector les plaques s\u00f3n menys freq\u00fcents i a\u00efllades.\nEn superf\u00edcie tamb\u00e9 hi ha crostes relliscoses, sobretot a la meitat sud. Eviteu les relliscades i porteu el material de seguretat corresponent (grampons o ganivetes, piolet i casc) a m\u00e9s del material de seguretat per allaus."
+      },
+      "snowpackStructure": {
+        "comment": "El mantell \u00e9s present a partir de 1600-1700 m a les obagues i de 1900-2000 a solanes, discontinu a cotes altes a totes orientacions a causa del vent recurrent al llarg d'aquesta temporada. Nom\u00e9s \u00e9s esquiable en tubs i zones arrecerades. A cotes mitjanes els gruixos s\u00f3n similars als normals, entre 20-40 cm. "
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-PP"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "No hi haur\u00e0 canvis importants en l'estabilitat del mantell. Perill ESTACIONARI. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-PP_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1) per sota de 2400 m. \nMODERAT (2) per sobre.",
+        "comment": "Trobem un mantell amb neu freda, sovint facetada, diferents nivells de crostes i neu redistribu\u00efda pel vent. El principal problema \u00e9s la pres\u00e8ncia de plaques de vent antigues sobre nivells de facetes. Atenci\u00f3 als grinyols o sorolls de buit, que ens indiquen condicions d'inestabilitat. Les possibles allaus podran caure al pas d'una persona i seran de mida 1, insuficient per enterrar una persona, per\u00f2 per damunt de 2400 m i al pas d'un grup de persones podrien assolir mida 2, suficient per enterrar una persona. No es descarta la formaci\u00f3 de noves plaques de neu ventada, a\u00efllades i de mida molt petita, a causa del vent de dimecres i dijous, atenci\u00f3 als sotavents orientats al sud.\nAtenci\u00f3, hi ha crostes dures que poden quedar amagades per una fina capa de neu ventada o sucre reciclada. Eviteu les relliscades i porteu, a m\u00e9s del material de seguretat per allaus, el material de seguretat corresponent (grampons o ganivetes, piolet i casc)."
+      },
+      "snowpackStructure": {
+        "comment": "Trobem neu des de 1800 m. Hi ha grans deflacions a vessants orientats a nord i oest pels recurrents episodis de vent de la temporada. A 2200 m els gruixos s\u00f3n excedentaris, amb valors que oscil\u00b7len entre 50-90 cm. "
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-VN"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "favourable_situation"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "No s'esperen gaires canvis en l'estabilitat del mantell nival. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-VN_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1).",
+        "comment": "La situaci\u00f3 \u00e9s favorable pel que fa a les allaus, per\u00f2 delicada davant les relliscades. \nEl mantell no t\u00e9 condicions prop\u00edcies a l'activitat d'allaus, ni naturals ni provocades. Est\u00e0 format principalment per crostes i neu facetada, sense estructura de placa.  \nEn superf\u00edcie les crostes dures, localment amagades per una fina capa de gebre o neu sucre reciclada. Eviteu les relliscades i porteu el material de seguretat corresponent (grampons o ganivetes, piolet i casc) a m\u00e9s del material de seguretat per allaus."
+      },
+      "snowpackStructure": {
+        "comment": "Trobem neu des de 1600 m i \u00e9s esquiable des dels 1700 m a obagues. A indrets molt exposats per damunt de 2100 m el mantell ha quedat afectat per l'acci\u00f3 del vent i es presenta erosionat i amb algunes acumulacions. A cotes mitjanes els gruixos s\u00f3n superiors als normals, entre 30-50 cm. "
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-PR"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "favourable_situation"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "No s'esperen gaires canvis en l'estabilitat del mantell nival. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-PR_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1).",
+        "comment": "Les allaus s\u00f3n improbables al sectors, per\u00f2 les relliscades poden donar f\u00e0cilment lloc a accidents. \nEl mantell no t\u00e9 condicions prop\u00edcies a l'activitat d'allaus, ni naturals ni provocades. Est\u00e0 format principalment per crostes i neu facetada, sense estructura de placa.  \nEn superf\u00edcie les crostes dures, localment amagades per una fina capa de gebre o neu sucre reciclada. Eviteu les relliscades i porteu el material de seguretat corresponent (grampons o ganivetes, piolet i casc) a m\u00e9s del material de seguretat per allaus."
+      },
+      "snowpackStructure": {
+        "comment": "A obagues trobem neu des dels 1900 m, mentre que a les solanes la neu \u00e9s present per damunt d'uns 2000 m, amb discontinu\u00eftats a totes orientacions. El fort vent que ha bufat predominantment de nord i oest durant bona part de la temporada ha produ\u00eft acumulacions i deflacions per damunt del nivell del bosc. Els gruixos oscil\u00b7len entre 20-40 cm, normals per l'\u00e8poca de l'any. "
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-CT-TF"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-01-20T00:00:00+01:00",
+        "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "No es preveuen canvis significatius en l'estabilitat del mantell. Perill ESTACIONARI. "
+      },
+      "publicationTime": "2022-01-19T00:00:00+01:00",
+      "bulletinID": "ES-CT-TF_2022-01-19 00:00:00+01:00",
+      "avalancheActivity": {
+        "highlights": "FEBLE (1) per sota de 2400 m. \nMODERAT (2) per sobre.",
+        "comment": "Trobem un mantell amb neu freda, sovint facetada, diferents nivells de crostes i neu redistribu\u00efda pel vent. El principal problema \u00e9s la pres\u00e8ncia de plaques de vent antigues sobre nivells de facetes. Atenci\u00f3 als grinyols o sorolls de buit, que ens indiquen condicions d'inestabilitat. Les possibles allaus podran caure al pas d'una persona i seran de mida 1, insuficient per enterrar una persona, per\u00f2 per damunt de 2400 m i al pas d'un grup de persones podrien assolir mida 2, suficient per enterrar una persona. No es descarta la formaci\u00f3 de noves plaques de neu ventada, a\u00efllades i de mida molt petita, a causa del vent de dimecres i dijous, atenci\u00f3 als sotavents orientats al sud.\nAtenci\u00f3, hi ha crostes dures que poden quedar amagades per una fina capa de neu ventada o sucre reciclada. Eviteu les relliscades i porteu, a m\u00e9s del material de seguretat per allaus, el material de seguretat corresponent (grampons o ganivetes, piolet i casc)."
+      },
+      "snowpackStructure": {
+        "comment": "El mantell \u00e9s esquiable a partir dels 1800 m a nord i dels 2000 m a sud, amb discontinu\u00eftats fins als cims. Els gruixos oscil\u00b7len entre 30-50 cm a 2200 m, per\u00f2 el vent ha mogut tant la neu que els gruixos s\u00f3n molt irregulars, amb terreny desprove\u00eft de neu per sobre de 2400 m en orientacions sud, nord i oest."
+      }
+    }
+  ]
+}

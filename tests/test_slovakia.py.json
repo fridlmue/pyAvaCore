@@ -1,0 +1,57 @@
+[
+  {
+    "id": "SK",
+    "language": "SK",
+    "author": "Martin Buliak, Stredisko lavínovej prevencie, SLP HZS",
+    "published": "2022-04-20T16:37:36+02:00",
+    "validFrom": "2022-04-20T08:30:36+02:00",
+    "validTill": "2022-04-21T08:30:36+02:00",
+    "headline": "Pozor na oťaženie nového snehu vplyvom oteplenia",
+    "descriptions": [
+      {
+        "heading": "Lavínová situácia",
+        "text": "Vplyvom chladného počasia spojeného so zrážkami, ktoré prichádzali od severovýchodu platí v najvyšších polohách Vysokých Tatier ZVÝŠNÉ (3. stupeň) lavínové nebezpečenstvo. Tu v polohách nad 1600 m n.m pripadlo za poslednú periódu sneženia miestami až 40 cm (!) voľného suchého prachového snehu. Ten sa nachádza vo všetkých expozíciách, najmä však na záveterných J,JZ a JV stranách. Uvoľniť lavínu tu je možné už pri malom dodatočnom zaťažení a počas dňa sa môžu vyskytnúť aj spontánne lavíny stredných rozmerov.  V najvyšších polohách Západných a Nízkych Tatier platí MIERNE (2. stupeň) lavínové nebezpečenstvo. Vo Fatrách vplyvom nízkej výšky snehovej pokrývky pretrváva malé lavínové nebezpečenstvo. "
+      },
+      {
+        "heading": "Snehová pokrývka",
+        "text": "Počasie nad horstvami Slovenska ovplyvňuje výšková tlaková níž, z ktorej prúdi chladný a vlhký vzduch. Teploty sa počas dňa budú pohybovať od -8°C v najvyšších polohách (2500 m n.m.) po 3°C na podhorí.  Počas dňa bude počasie premenlivé, do poludnia očakávame snehové prehánky, ktoré budú k večeru ustávať. Snehová pokrývka je rôznorodá, na náveterných stranách a hrebeňoch je vyfúkaná na tvrdú ľadovú vrstvu, čerstvý naviaty sneh je najmä na záveterných stranách šťítov a hrebeňov (J,JV,JZ) najvyšších polôh. Súvislá snehová pokrývka je v dolinách od 1100 m n.m. "
+      },
+      { "heading": "Krátkodobý vývoj", "text": "zotrvalá" }
+    ],
+    "regions": {
+      "SK0R1": {
+        "am": {
+          "upperLevel": "3",
+          "lowerLevel": "2",
+          "upperText": "nad 1600",
+          "lowerText": "pod 1600",
+          "problems": [{ "expositions": [] }]
+        }
+      },
+      "SK0R2": {
+        "am": {
+          "upperLevel": "2",
+          "lowerLevel": "1",
+          "upperText": "nad 1500",
+          "lowerText": "pod 1500",
+          "problems": [{ "expositions": [] }]
+        }
+      },
+      "SK0R3": {
+        "am": {
+          "upperLevel": "2",
+          "lowerLevel": "1",
+          "upperText": "nad 1500",
+          "lowerText": "pod 1500",
+          "problems": [{ "expositions": [] }]
+        }
+      },
+      "SK0R4": {
+        "am": { "upperLevel": "1", "lowerLevel": "1", "upperText": "nad ", "lowerText": "pod ", "problems": [{ "expositions": [] }] }
+      },
+      "SK0R5": {
+        "am": { "upperLevel": "1", "lowerLevel": "1", "upperText": "nad ", "lowerText": "pod ", "problems": [{ "expositions": [] }] }
+      }
+    }
+  }
+]

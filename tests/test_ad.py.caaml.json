@@ -1,0 +1,73 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "AD-01"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T00:00:00+02:00",
+        "endTime": "2022-04-19T23:59:59+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "publicationTime": "2022-04-19T00:00:00+02:00",
+      "bulletinID": "AD-01_2022-04-19 00:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AD-02"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T00:00:00+02:00",
+        "endTime": "2022-04-19T23:59:59+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "publicationTime": "2022-04-19T00:00:00+02:00",
+      "bulletinID": "AD-02_2022-04-19 00:00:00+02:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "AD-03"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-04-19T00:00:00+02:00",
+        "endTime": "2022-04-19T23:59:59+02:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "earlier",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "later",
+          "mainValue": "moderate"
+        }
+      ],
+      "publicationTime": "2022-04-19T00:00:00+02:00",
+      "bulletinID": "AD-03_2022-04-19 00:00:00+02:00"
+    }
+  ]
+}

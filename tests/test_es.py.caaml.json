@@ -1,0 +1,199 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "ES-NA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-03-01T16:19:00+01:00",
+        "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro en ascenso.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-03-01T16:19:00+01:00",
+      "snowpackStructure": {
+        "comment": " Seg\u00fan transcurren los d\u00edas van disminuyendo progresivamente los espesores en los diferentes puntos de observaci\u00f3n como consecuencia de la escasez de precipitaciones y la alta insolaci\u00f3n que han caracterizado este reci\u00e9n concluido mes de febrero, ocasionando, asimismo, el palpable y acusado contraste que se observa entre laderas de solana y umbr\u00eda. No obstante y pese a todos los condicionantes, siguen super\u00e1ndose los 100 cm por encima de 2.100 metros en numerosos puntos.  El manto durante la ma\u00f1ana presenta costras de rehielo superficiales en la mayor parte del \u00e1rea, pero se reblandece y humidifica durante las horas centrales, principalmente en cotas medias y bajas, aunque tambi\u00e9n en zonas soleadas de mayores altitudes. En las umbr\u00edas de alta monta\u00f1a hay nieve menos evolucionada, y en el interior del manto persisten estratos d\u00e9biles e inestables. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y capas d\u00e9biles persistentes.  Durante las pr\u00f3ximas 24 horas se prev\u00e9n algunas precipitaciones en forma s\u00f3lida por encima de unos 1.800 metros, que no se espera que dejen acumulaciones de nieve nueva a tener en cuenta de cara a un incremento sustancial del peligro de aludes. El descenso de las temperaturas diurnas har\u00e1 poco probables las purgas de nieve h\u00fameda, quedando restringidas a altitudes inferiores a unos 2.000 metros. En cualquier caso ser\u00edan coladas o aludes peque\u00f1os en pendientes con suficiente inclinaci\u00f3n de todas las orientaciones.  En la alta monta\u00f1a, principalmente en umbr\u00edas, existen estructuras de placa sobre estratos d\u00e9biles e inestables, las cuales podr\u00edan colapsar de forma accidental ante sobrecargas no necesariamente fuertes, ocasionando aludes que en alg\u00fan caso podr\u00e1n adquirir dimensi\u00f3n mediana, tama\u00f1o suficiente para enterrar a una persona.  Tambi\u00e9n destacar la posibilidad de sufrir resbalones al transitar sobre el manto helado a primeras horas, aunque podr\u00e1 mantenerse en este estado todo el d\u00eda en zonas umbr\u00edas y en cotas altas. "
+      },
+      "wxSynopsis": {
+        "comment": " Predominio de cielos nubosos o cubiertos, con tendencia a disminuir la nubosidad al final del d\u00eda. Se esperan precipitaciones ocasionales, d\u00e9biles o localmente moderadas, que podr\u00e1n ser en forma de chubascos, sobre todo por la tarde, cuando no se descarta que puedan ir acompa\u00f1ados de alguna tormenta. Cota de nieve: bajando de 1.800 a unos 1.400 metros. Temperaturas m\u00ednimas en ligero o moderado ascenso en zonas bajas y en ligero descenso en median\u00edas y cumbres. Las m\u00e1ximas experimentar\u00e1n un moderado descenso en toda el \u00e1rea. Heladas d\u00e9biles o moderadas en cotas altas, que podr\u00e1n ser fuertes en cumbres. Soplar\u00e1n vientos flojos o moderados de componentes oeste y sur, m\u00e1s intensos en la alta monta\u00f1a, con tendencia a girar a norte al final.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 2.000 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 3.500 m  Viento en la atm\u00f3sfera libre a 1500 m: NW 20 km/h Viento en la atm\u00f3sfera libre a 3000 m: W 40 km/h "
+      },
+      "bulletinID": "ES-NA_2022-03-01 16:19:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-JA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-03-01T16:19:00+01:00",
+        "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro en ascenso.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-03-01T16:19:00+01:00",
+      "snowpackStructure": {
+        "comment": " Seg\u00fan transcurren los d\u00edas van disminuyendo progresivamente los espesores en los diferentes puntos de observaci\u00f3n como consecuencia de la escasez de precipitaciones y la alta insolaci\u00f3n que han caracterizado este reci\u00e9n concluido mes de febrero, ocasionando, asimismo, el palpable y acusado contraste que se observa entre laderas de solana y umbr\u00eda. No obstante y pese a todos los condicionantes, siguen super\u00e1ndose los 100 cm por encima de 2.100 metros en numerosos puntos.  El manto durante la ma\u00f1ana presenta costras de rehielo superficiales en la mayor parte del \u00e1rea, pero se reblandece y humidifica durante las horas centrales, principalmente en cotas medias y bajas, aunque tambi\u00e9n en zonas soleadas de mayores altitudes. En las umbr\u00edas de alta monta\u00f1a hay nieve menos evolucionada, y en el interior del manto persisten estratos d\u00e9biles e inestables. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y capas d\u00e9biles persistentes.  Durante las pr\u00f3ximas 24 horas se prev\u00e9n algunas precipitaciones en forma s\u00f3lida por encima de unos 1.800 metros, que no se espera que dejen acumulaciones de nieve nueva a tener en cuenta de cara a un incremento sustancial del peligro de aludes. El descenso de las temperaturas diurnas har\u00e1 poco probables las purgas de nieve h\u00fameda, quedando restringidas a altitudes inferiores a unos 2.000 metros. En cualquier caso ser\u00edan coladas o aludes peque\u00f1os en pendientes con suficiente inclinaci\u00f3n de todas las orientaciones.  En la alta monta\u00f1a, principalmente en umbr\u00edas, existen estructuras de placa sobre estratos d\u00e9biles e inestables, las cuales podr\u00edan colapsar de forma accidental ante sobrecargas no necesariamente fuertes, ocasionando aludes que en alg\u00fan caso podr\u00e1n adquirir dimensi\u00f3n mediana, tama\u00f1o suficiente para enterrar a una persona.  Tambi\u00e9n destacar la posibilidad de sufrir resbalones al transitar sobre el manto helado a primeras horas, aunque podr\u00e1 mantenerse en este estado todo el d\u00eda en zonas umbr\u00edas y en cotas altas. "
+      },
+      "wxSynopsis": {
+        "comment": " Predominio de cielos nubosos o cubiertos, con tendencia a disminuir la nubosidad al final del d\u00eda. Se esperan precipitaciones ocasionales, d\u00e9biles o localmente moderadas, que podr\u00e1n ser en forma de chubascos, sobre todo por la tarde, cuando no se descarta que puedan ir acompa\u00f1ados de alguna tormenta. Cota de nieve: bajando de 1.800 a unos 1.400 metros. Temperaturas m\u00ednimas en ligero o moderado ascenso en zonas bajas y en ligero descenso en median\u00edas y cumbres. Las m\u00e1ximas experimentar\u00e1n un moderado descenso en toda el \u00e1rea. Heladas d\u00e9biles o moderadas en cotas altas, que podr\u00e1n ser fuertes en cumbres. Soplar\u00e1n vientos flojos o moderados de componentes oeste y sur, m\u00e1s intensos en la alta monta\u00f1a, con tendencia a girar a norte al final.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 2.000 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 3.500 m  Viento en la atm\u00f3sfera libre a 1500 m: NW 20 km/h Viento en la atm\u00f3sfera libre a 3000 m: W 40 km/h "
+      },
+      "bulletinID": "ES-JA_2022-03-01 16:19:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-GA"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-03-01T16:19:00+01:00",
+        "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro en ascenso.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-03-01T16:19:00+01:00",
+      "snowpackStructure": {
+        "comment": " Seg\u00fan transcurren los d\u00edas van disminuyendo progresivamente los espesores en los diferentes puntos de observaci\u00f3n como consecuencia de la escasez de precipitaciones y la alta insolaci\u00f3n que han caracterizado este reci\u00e9n concluido mes de febrero, ocasionando, asimismo, el palpable y acusado contraste que se observa entre laderas de solana y umbr\u00eda. No obstante y pese a todos los condicionantes, siguen super\u00e1ndose los 100 cm por encima de 2.100 metros en numerosos puntos.  El manto durante la ma\u00f1ana presenta costras de rehielo superficiales en la mayor parte del \u00e1rea, pero se reblandece y humidifica durante las horas centrales, principalmente en cotas medias y bajas, aunque tambi\u00e9n en zonas soleadas de mayores altitudes. En las umbr\u00edas de alta monta\u00f1a hay nieve menos evolucionada, y en el interior del manto persisten estratos d\u00e9biles e inestables. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y capas d\u00e9biles persistentes.  Durante las pr\u00f3ximas 24 horas se prev\u00e9n algunas precipitaciones en forma s\u00f3lida por encima de unos 1.800 metros, que no se espera que dejen acumulaciones de nieve nueva a tener en cuenta de cara a un incremento sustancial del peligro de aludes. El descenso de las temperaturas diurnas har\u00e1 poco probables las purgas de nieve h\u00fameda, quedando restringidas a altitudes inferiores a unos 2.000 metros. En cualquier caso ser\u00edan coladas o aludes peque\u00f1os en pendientes con suficiente inclinaci\u00f3n de todas las orientaciones.  En la alta monta\u00f1a, principalmente en umbr\u00edas, existen estructuras de placa sobre estratos d\u00e9biles e inestables, las cuales podr\u00edan colapsar de forma accidental ante sobrecargas no necesariamente fuertes, ocasionando aludes que en alg\u00fan caso podr\u00e1n adquirir dimensi\u00f3n mediana, tama\u00f1o suficiente para enterrar a una persona.  Tambi\u00e9n destacar la posibilidad de sufrir resbalones al transitar sobre el manto helado a primeras horas, aunque podr\u00e1 mantenerse en este estado todo el d\u00eda en zonas umbr\u00edas y en cotas altas. "
+      },
+      "wxSynopsis": {
+        "comment": " Predominio de cielos nubosos o cubiertos, con tendencia a disminuir la nubosidad al final del d\u00eda. Se esperan precipitaciones ocasionales, d\u00e9biles o localmente moderadas, que podr\u00e1n ser en forma de chubascos, sobre todo por la tarde, cuando no se descarta que puedan ir acompa\u00f1ados de alguna tormenta. Cota de nieve: bajando de 1.800 a unos 1.400 metros. Temperaturas m\u00ednimas en ligero o moderado ascenso en zonas bajas y en ligero descenso en median\u00edas y cumbres. Las m\u00e1ximas experimentar\u00e1n un moderado descenso en toda el \u00e1rea. Heladas d\u00e9biles o moderadas en cotas altas, que podr\u00e1n ser fuertes en cumbres. Soplar\u00e1n vientos flojos o moderados de componentes oeste y sur, m\u00e1s intensos en la alta monta\u00f1a, con tendencia a girar a norte al final.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 2.000 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 3.500 m  Viento en la atm\u00f3sfera libre a 1500 m: NW 20 km/h Viento en la atm\u00f3sfera libre a 3000 m: W 40 km/h "
+      },
+      "bulletinID": "ES-GA_2022-03-01 16:19:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-SO"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-03-01T16:19:00+01:00",
+        "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro en ascenso.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-03-01T16:19:00+01:00",
+      "snowpackStructure": {
+        "comment": " Seg\u00fan transcurren los d\u00edas van disminuyendo progresivamente los espesores en los diferentes puntos de observaci\u00f3n como consecuencia de la escasez de precipitaciones y la alta insolaci\u00f3n que han caracterizado este reci\u00e9n concluido mes de febrero, ocasionando, asimismo, el palpable y acusado contraste que se observa entre laderas de solana y umbr\u00eda. No obstante y pese a todos los condicionantes, siguen super\u00e1ndose los 100 cm por encima de 2.100 metros en numerosos puntos.  El manto durante la ma\u00f1ana presenta costras de rehielo superficiales en la mayor parte del \u00e1rea, pero se reblandece y humidifica durante las horas centrales, principalmente en cotas medias y bajas, aunque tambi\u00e9n en zonas soleadas de mayores altitudes. En las umbr\u00edas de alta monta\u00f1a hay nieve menos evolucionada, y en el interior del manto persisten estratos d\u00e9biles e inestables. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y capas d\u00e9biles persistentes.  Durante las pr\u00f3ximas 24 horas se prev\u00e9n algunas precipitaciones en forma s\u00f3lida por encima de unos 1.800 metros, que no se espera que dejen acumulaciones de nieve nueva a tener en cuenta de cara a un incremento sustancial del peligro de aludes. El descenso de las temperaturas diurnas har\u00e1 poco probables las purgas de nieve h\u00fameda, quedando restringidas a altitudes inferiores a unos 2.000 metros. En cualquier caso ser\u00edan coladas o aludes peque\u00f1os en pendientes con suficiente inclinaci\u00f3n de todas las orientaciones.  En la alta monta\u00f1a, principalmente en umbr\u00edas, existen estructuras de placa sobre estratos d\u00e9biles e inestables, las cuales podr\u00edan colapsar de forma accidental ante sobrecargas no necesariamente fuertes, ocasionando aludes que en alg\u00fan caso podr\u00e1n adquirir dimensi\u00f3n mediana, tama\u00f1o suficiente para enterrar a una persona.  Tambi\u00e9n destacar la posibilidad de sufrir resbalones al transitar sobre el manto helado a primeras horas, aunque podr\u00e1 mantenerse en este estado todo el d\u00eda en zonas umbr\u00edas y en cotas altas. "
+      },
+      "wxSynopsis": {
+        "comment": " Predominio de cielos nubosos o cubiertos, con tendencia a disminuir la nubosidad al final del d\u00eda. Se esperan precipitaciones ocasionales, d\u00e9biles o localmente moderadas, que podr\u00e1n ser en forma de chubascos, sobre todo por la tarde, cuando no se descarta que puedan ir acompa\u00f1ados de alguna tormenta. Cota de nieve: bajando de 1.800 a unos 1.400 metros. Temperaturas m\u00ednimas en ligero o moderado ascenso en zonas bajas y en ligero descenso en median\u00edas y cumbres. Las m\u00e1ximas experimentar\u00e1n un moderado descenso en toda el \u00e1rea. Heladas d\u00e9biles o moderadas en cotas altas, que podr\u00e1n ser fuertes en cumbres. Soplar\u00e1n vientos flojos o moderados de componentes oeste y sur, m\u00e1s intensos en la alta monta\u00f1a, con tendencia a girar a norte al final.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 2.000 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 3.500 m  Viento en la atm\u00f3sfera libre a 1500 m: NW 20 km/h Viento en la atm\u00f3sfera libre a 3000 m: W 40 km/h "
+      },
+      "bulletinID": "ES-SO_2022-03-01 16:19:00+01:00"
+    },
+    {
+      "regions": [
+        {
+          "regionID": "ES-RI"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-03-01T16:19:00+01:00",
+        "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "tendency": {
+        "tendencyComment": " Nivel de peligro en ascenso.  Nota: Se recuerda que, siempre que haya nieve, la ausencia total de peligro no existe. Hay que tener presente que en circunstancias desfavorables, con aludes de tama\u00f1o 1 (alud peque\u00f1o o colada) y tama\u00f1o 2 (alud mediano), se pueden sufrir severos da\u00f1os personales. \t"
+      },
+      "publicationTime": "2022-03-01T16:19:00+01:00",
+      "snowpackStructure": {
+        "comment": " Seg\u00fan transcurren los d\u00edas van disminuyendo progresivamente los espesores en los diferentes puntos de observaci\u00f3n como consecuencia de la escasez de precipitaciones y la alta insolaci\u00f3n que han caracterizado este reci\u00e9n concluido mes de febrero, ocasionando, asimismo, el palpable y acusado contraste que se observa entre laderas de solana y umbr\u00eda. No obstante y pese a todos los condicionantes, siguen super\u00e1ndose los 100 cm por encima de 2.100 metros en numerosos puntos.  El manto durante la ma\u00f1ana presenta costras de rehielo superficiales en la mayor parte del \u00e1rea, pero se reblandece y humidifica durante las horas centrales, principalmente en cotas medias y bajas, aunque tambi\u00e9n en zonas soleadas de mayores altitudes. En las umbr\u00edas de alta monta\u00f1a hay nieve menos evolucionada, y en el interior del manto persisten estratos d\u00e9biles e inestables. "
+      },
+      "avalancheActivity": {
+        "comment": " Situaci\u00f3n de nieve h\u00fameda y capas d\u00e9biles persistentes.  Durante las pr\u00f3ximas 24 horas se prev\u00e9n algunas precipitaciones en forma s\u00f3lida por encima de unos 1.800 metros, que no se espera que dejen acumulaciones de nieve nueva a tener en cuenta de cara a un incremento sustancial del peligro de aludes. El descenso de las temperaturas diurnas har\u00e1 poco probables las purgas de nieve h\u00fameda, quedando restringidas a altitudes inferiores a unos 2.000 metros. En cualquier caso ser\u00edan coladas o aludes peque\u00f1os en pendientes con suficiente inclinaci\u00f3n de todas las orientaciones.  En la alta monta\u00f1a, principalmente en umbr\u00edas, existen estructuras de placa sobre estratos d\u00e9biles e inestables, las cuales podr\u00edan colapsar de forma accidental ante sobrecargas no necesariamente fuertes, ocasionando aludes que en alg\u00fan caso podr\u00e1n adquirir dimensi\u00f3n mediana, tama\u00f1o suficiente para enterrar a una persona.  Tambi\u00e9n destacar la posibilidad de sufrir resbalones al transitar sobre el manto helado a primeras horas, aunque podr\u00e1 mantenerse en este estado todo el d\u00eda en zonas umbr\u00edas y en cotas altas. "
+      },
+      "wxSynopsis": {
+        "comment": " Predominio de cielos nubosos o cubiertos, con tendencia a disminuir la nubosidad al final del d\u00eda. Se esperan precipitaciones ocasionales, d\u00e9biles o localmente moderadas, que podr\u00e1n ser en forma de chubascos, sobre todo por la tarde, cuando no se descarta que puedan ir acompa\u00f1ados de alguna tormenta. Cota de nieve: bajando de 1.800 a unos 1.400 metros. Temperaturas m\u00ednimas en ligero o moderado ascenso en zonas bajas y en ligero descenso en median\u00edas y cumbres. Las m\u00e1ximas experimentar\u00e1n un moderado descenso en toda el \u00e1rea. Heladas d\u00e9biles o moderadas en cotas altas, que podr\u00e1n ser fuertes en cumbres. Soplar\u00e1n vientos flojos o moderados de componentes oeste y sur, m\u00e1s intensos en la alta monta\u00f1a, con tendencia a girar a norte al final.  Altitud de la isoterma de 0 \u00baC en la atm\u00f3sfera libre: 2.000 m Altitud de la isoterma de -10 \u00baC en la atm\u00f3sfera libre: 3.500 m  Viento en la atm\u00f3sfera libre a 1500 m: NW 20 km/h Viento en la atm\u00f3sfera libre a 3000 m: W 40 km/h "
+      },
+      "bulletinID": "ES-RI_2022-03-01 16:19:00+01:00"
+    }
+  ]
+}

@@ -13,22 +13,25 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from dataclasses import dataclass, field
 from datetime import date
+import json
 import typing
 
+from .avajson import JSONEncoder
 from .avabulletin import AvaBulletin, DangerRating
 from .geojson import Feature, FeatureCollection
 
 
+@dataclass
 class Bulletins:
     """
     Class for the AvaBulletin collection
     Follows partly CAAMLv6 caaml:Bulletins
     """
 
-    def __init__(self) -> None:
-        self.bulletins: typing.List[AvaBulletin] = []
-        self.customData: typing.Dict[str, str] = {}
+    bulletins: typing.List[AvaBulletin] = field(default_factory=list)
+    customData: typing.Dict[str, str] = field(default_factory=dict)
 
     def __getitem__(self, item):
         return self.bulletins[item]
@@ -112,7 +115,7 @@ class Bulletins:
 
             for region in bulletin.regions:
                 local_ratings = {}
-                regionId = region.regionId
+                regionId = region.regionID
 
                 if len(bulletin.dangerRatings) > 1:
                     remove = []
@@ -290,7 +293,7 @@ class Bulletins:
         elevation = feature.properties.elevation
 
         def affects_region(b: AvaBulletin):
-            return idx in [r.regionId for r in b.regions]
+            return idx in [r.regionID for r in b.regions]
 
         def affects_danger(d: DangerRating):
             if not d.elevation:
@@ -319,10 +322,14 @@ class Bulletins:
 
     def from_json(self, bulletins_json):
         """
-        read bulletions from CAAMLv6 JSON
+        read bulletins from CAAMLv6 JSON
         """
         self.bulletins = []
         for bulletin_json in bulletins_json["bulletins"]:
             bulletin = AvaBulletin()
             bulletin.from_json(bulletin_json)
             self.bulletins.append(bulletin)
+
+    def to_json(self) -> str:
+        """write bulletins as CAAMLv6 JSON string"""
+        return json.dumps(self, cls=JSONEncoder, indent=2)
