@@ -1,10 +1,10 @@
-from avacore.processor_catalunya import Processor
+from avacore.processor_sk import Processor
 
 from tests import SnowTest
 
 
-class TestCtIcgc(SnowTest):
-    def test_ct_icgc(self):
+class TestSlovaika(SnowTest):
+    def test_slovakia(self):
         processor = Processor()
         bulletins = processor.parse_json_file("", f"{__file__}.json")
         self.assertEqualBulletinJSON(__file__, bulletins)

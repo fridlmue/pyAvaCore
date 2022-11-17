@@ -718,22 +718,5 @@
       },
       "bulletinID": "89477168947717"
     }
-  ],
-  "customData": {
-    "file_extension": "json",
-    "data": {
-      "title": "Avalanche bulletin through Tuesday, 23 February 2021",
-      "flash": "A generally favourable avalanche situation will prevail. Wet avalanches as the day progresses",
-      "validity": "Edition: 22.2., 17:00 / Next update: 23.2., 08:00",
-      "summer": false,
-      "map": [
-        {
-          "title": "Dry avalanches"
-        },
-        {
-          "title": "Wet avalanches as day progresses"
-        }
-      ]
-    }
-  }
+  ]
 }

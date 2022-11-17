@@ -1,11 +1,10 @@
-from avacore.processor_caamlv5 import Processor
+from avacore.processor_ad import Processor
 
 from tests import SnowTest
 
 
-class TestVorarlberg(SnowTest):
-    def test_vorarlberg(self):
+class TestAD(SnowTest):
+    def test_AD(self):
         processor = Processor()
         bulletins = processor.parse_xml_file("", f"{__file__}.xml")
-        self.assertEqual(bulletins.main_date().isoformat(), "2021-12-29")
         self.assertEqualBulletinJSON(__file__, bulletins)

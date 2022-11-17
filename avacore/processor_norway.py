@@ -12,8 +12,6 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-import json
-import urllib.request
 from datetime import datetime
 from datetime import time
 import logging
@@ -29,143 +27,133 @@ from avacore.avabulletin import (
     Texts,
 )
 from avacore.avabulletins import Bulletins
+from avacore.processor import JsonProcessor
 
 
-def process_reports_no(region_id) -> Bulletins:
-    """
-    Downloads and returns requested Avalanche Bulletins
-    """
+class Processor(JsonProcessor):
 
-    langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
+    fetch_time_dependant = True
 
-    url = (
-        "https://api01.nve.no/hydrology/forecast/avalanche/v6.0.0/api/AvalancheWarningByRegion/Detail/"
-        + region_id[3:]
-        + "/"
-        + langkey
-        + "/"
-    )
+    def process_bulletin(self, region_id) -> Bulletins:
+        if region_id == "NO":
+            return self.process_all_reports_no()
 
-    headers = {"Content-Type": "application/json; charset=utf-8"}
+        langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
+        url = (
+            "https://api01.nve.no/hydrology/forecast/avalanche/v6.0.0/api/AvalancheWarningByRegion/Detail/"
+            + region_id[3:]
+            + "/"
+            + langkey
+            + "/"
+        )
+        headers = {"Content-Type": "application/json; charset=utf-8"}
+        varsom_report = self._fetch_json(url, headers=headers)
+        return self.parse_json(region_id, varsom_report)
 
-    req = urllib.request.Request(url, headers=headers)
+    def process_all_reports_no(self) -> Bulletins:
+        """
+        Downloads and returns all norwegian avalanche reports
+        """
+        all_reports = Bulletins()
+        all_raw_data = []
+        for region in no_regions:
+            try:
+                m_reports = self.process_bulletin(region)
+                all_raw_data.append(
+                    self.raw_data.strip().removeprefix("[").removesuffix("]")
+                )
+                for report in m_reports.bulletins:
+                    all_reports.append(report)
+            except Exception as e:  # pylint: disable=broad-except
+                logging.error("Failed to download %s", region, exc_info=e)
+        self.raw_data = "[" + ",".join(all_raw_data) + "]"
+        return all_reports
 
-    logging.info("Fetching %s", req.full_url)
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
+    def parse_json(self, region_id, data) -> Bulletins:
+        # pylint: disable=too-many-locals
+        # pylint: disable=too-many-branches
+        # pylint: disable=too-many-statements
 
-    varsom_report = json.loads(content)
+        reports = Bulletins()
+        report = AvaBulletin()
 
-    reports = parse_json_no(region_id, varsom_report)
-    reports.append_raw_data("json", content)
-    return reports
+        current = 0
+        now = datetime.now(ZoneInfo("Europe/Oslo"))
+        if self.fetch_time_dependant and now.time() > time(17, 0, 0):
+            current = 1
 
+        report.regions.append(Region(region_id))
+        report.publicationTime = datetime.fromisoformat(
+            data[current]["PublishTime"].split(".")[0]
+        )
+        report.bulletinID = region_id + "_" + str(report.publicationTime)
 
-def process_all_reports_no() -> Bulletins:
-    """
-    Downloads and returns all norwegian avalanche reports
-    """
-    all_reports = Bulletins()
-    for region in no_regions:
-        try:
-            m_reports = process_reports_no(region)
-        except Exception as e:  # pylint: disable=broad-except
-            logging.error("Failed to download %s", region, exc_info=e)
+        report.validTime.startTime = datetime.fromisoformat(data[current]["ValidFrom"])
+        report.validTime.endTime = datetime.fromisoformat(data[current]["ValidTo"])
 
-        for report in m_reports.bulletins:
-            all_reports.append(report)
+        danger_rating = DangerRating()
+        danger_rating.set_mainValue_int(int(data[current]["DangerLevel"]))
 
-    return all_reports
+        report.dangerRatings.append(danger_rating)
 
+        if data[current]["AvalancheProblems"] is not None:
+            for problem in data[current]["AvalancheProblems"]:
+                problem_type = ""
+                if problem["AvalancheProblemTypeId"] == 7:
+                    problem_type = "new_snow"
+                elif problem["AvalancheProblemTypeId"] == 10:
+                    problem_type = "wind_drifted_snow"
+                elif problem["AvalancheProblemTypeId"] == 30:
+                    problem_type = "persistent_weak_layers"
+                elif problem["AvalancheProblemTypeId"] == 45:
+                    problem_type = "wet_snow"
+                elif problem["AvalancheProblemTypeId"] == 0:  # ???
+                    problem_type = "gliding_snow"
+                elif problem["AvalancheProblemTypeId"] == 0:  # ???
+                    problem_type = "favourable_situation"
 
-def parse_json_no(region_id, varsom_report, fetch_time_dependant=True) -> Bulletins:
-    """
-    Builds the CAAML JSONs form the norwegian JSON formats.
-    """
-    # pylint: disable=too-many-locals
-    # pylint: disable=too-many-branches
-    # pylint: disable=too-many-statements
+                aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+                aspect_list = []
 
-    reports = Bulletins()
-    report = AvaBulletin()
+                for i, c in enumerate(problem["ValidExpositions"]):
+                    if c == "1":
+                        aspect_list.append(aspects[i])
 
-    current = 0
-    now = datetime.now(ZoneInfo("Europe/Oslo"))
-    if fetch_time_dependant and now.time() > time(17, 0, 0):
-        current = 1
+                elev_prefix = ""
+                if problem["ExposedHeightFill"] == 1:
+                    elev_prefix = ">"
+                elif problem["ExposedHeightFill"] == 2:
+                    elev_prefix = "<"
 
-    report.regions.append(Region(region_id))
-    report.publicationTime = datetime.fromisoformat(
-        varsom_report[current]["PublishTime"].split(".")[0]
-    )
-    report.bulletinID = region_id + "_" + str(report.publicationTime)
+                if not problem_type == "":
+                    elevation = Elevation()
+                    elevation.auto_select(elev_prefix + str(problem["ExposedHeight1"]))
+                    problem = AvalancheProblem()
+                    problem.aspects = aspect_list
+                    problem.elevation = elevation
+                    problem.problemType = problem_type
+                    report.avalancheProblems.append(problem)
 
-    report.validTime.startTime = datetime.fromisoformat(
-        varsom_report[current]["ValidFrom"]
-    )
-    report.validTime.endTime = datetime.fromisoformat(varsom_report[current]["ValidTo"])
+        wxSynopsis = Texts()
+        avalancheActivity = Texts()
+        snowpackStructure = Texts()
 
-    danger_rating = DangerRating()
-    danger_rating.set_mainValue_int(int(varsom_report[current]["DangerLevel"]))
+        avalancheActivity.highlights = data[current]["MainText"]
+        avalancheActivity.comment = data[current]["AvalancheDanger"]
+        waek_layers = ""
+        if data[0]["CurrentWeaklayers"] is not None:
+            waek_layers = "\n" + data[0]["CurrentWeaklayers"]
+        if data[current]["SnowSurface"] is not None:
+            snowpackStructure.comment = data[current]["SnowSurface"] + waek_layers
+        report.tendency.tendencyComment = data[current + 1]["MainText"]
 
-    report.dangerRatings.append(danger_rating)
+        report.wxSynopsis = wxSynopsis
+        report.avalancheActivity = avalancheActivity
+        report.snowpackStructure = snowpackStructure
 
-    for problem in varsom_report[current]["AvalancheProblems"]:
-        problem_type = ""
-        if problem["AvalancheProblemTypeId"] == 7:
-            problem_type = "new_snow"
-        elif problem["AvalancheProblemTypeId"] == 10:
-            problem_type = "wind_drifted_snow"
-        elif problem["AvalancheProblemTypeId"] == 30:
-            problem_type = "persistent_weak_layers"
-        elif problem["AvalancheProblemTypeId"] == 45:
-            problem_type = "wet_snow"
-        elif problem["AvalancheProblemTypeId"] == 0:  # ???
-            problem_type = "gliding_snow"
-        elif problem["AvalancheProblemTypeId"] == 0:  # ???
-            problem_type = "favourable_situation"
+        reports.append(report)
 
-        aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
-        aspect_list = []
-
-        for i, c in enumerate(problem["ValidExpositions"]):
-            if c == "1":
-                aspect_list.append(aspects[i])
-
-        elev_prefix = ""
-        if problem["ExposedHeightFill"] == 1:
-            elev_prefix = ">"
-        elif problem["ExposedHeightFill"] == 2:
-            elev_prefix = "<"
-
-        if not problem_type == "":
-            elevation = Elevation()
-            elevation.auto_select(elev_prefix + str(problem["ExposedHeight1"]))
-            problem = AvalancheProblem()
-            problem.aspects = aspect_list
-            problem.elevation = elevation
-            problem.problemType = problem_type
-            report.avalancheProblems.append(problem)
-
-    wxSynopsis = Texts()
-    avalancheActivity = Texts()
-    snowpackStructure = Texts()
-
-    avalancheActivity.highlights = varsom_report[current]["MainText"]
-    avalancheActivity.comment = varsom_report[current]["AvalancheDanger"]
-    waek_layers = ""
-    if varsom_report[0]["CurrentWeaklayers"] is not None:
-        waek_layers = "\n" + varsom_report[0]["CurrentWeaklayers"]
-    snowpackStructure.comment = varsom_report[current]["SnowSurface"] + waek_layers
-    report.tendency.tendencyComment = varsom_report[current + 1]["MainText"]
-
-    report.wxSynopsis = wxSynopsis
-    report.avalancheActivity = avalancheActivity
-    report.snowpackStructure = snowpackStructure
-
-    reports.append(report)
-
-    return reports
+        return reports
 
 
 no_regions = [

@@ -12,10 +12,7 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-import json
-import urllib.request
 from datetime import datetime, timedelta
-import logging
 from zoneinfo import ZoneInfo
 
 
@@ -28,70 +25,54 @@ from avacore.avabulletin import (
     Texts,
 )
 from avacore.avabulletins import Bulletins
+from avacore.processor import JsonProcessor
 
 
-def process_reports_cz() -> Bulletins:
-    """
-    Downloads and returns requested Avalanche Bulletins
-    """
-    url = "https://www.horskasluzba.cz/cz/avalanche-json"
+class Processor(JsonProcessor):
+    def process_bulletin(self, region_id) -> Bulletins:
+        url = "https://www.horskasluzba.cz/cz/avalanche-json"
+        headers = {"Content-Type": "application/json; charset=utf-8"}
+        horskasluzba_report = self._fetch_json(url, headers)
+        reports = self.parse_json(region_id, horskasluzba_report)
+        return reports
 
-    headers = {"Content-Type": "application/json; charset=utf-8"}
+    def parse_json(self, region_id, data) -> Bulletins:
+        reports = Bulletins()
 
-    req = urllib.request.Request(url, headers=headers)
+        for bulletin in data:
+            report = AvaBulletin()
+            report.regions.append(Region("CZ-" + bulletin["region_id"]))
+            report.publicationTime = datetime.fromisoformat(
+                bulletin["date_time"]
+            ).replace(tzinfo=ZoneInfo("Europe/Prague"))
+            report.bulletinID = bulletin["id"]
 
-    logging.info("Fetching %s", req.full_url)
-    with urllib.request.urlopen(req) as response:
-        content = response.read()
+            report.validTime.startTime = report.publicationTime
+            report.validTime.endTime = report.publicationTime + timedelta(hours=24)
 
-    horskasluzba_report = json.loads(content)
+            danger_rating = DangerRating()
+            danger_rating.set_mainValue_int(int(bulletin["warning_level"]))
 
-    reports = get_reports_fromjson(horskasluzba_report)
-    reports.append_raw_data("json", content)
-    return reports
+            report.dangerRatings.append(danger_rating)
 
+            for warning in bulletin["warnings"]:
+                aspect_list = []
+                if warning["exposition"] != "NONE":
+                    for exposition in warning["exposition"].replace(" ", "").split(","):
+                        aspect_list.append(exposition)
 
-def get_reports_fromjson(cz_report) -> Bulletins:
-    """
-    Builds the CAAML JSONs form the original JSON formats.
-    """
+                problem = AvalancheProblem()
+                if "ALL" not in aspect_list:
+                    problem.aspects = aspect_list
+                problem.elevation = Elevation(
+                    lowerBound=warning["altitude_from"] or None,
+                    upperBound=warning["altitude_to"] or None,
+                )
+                problem.add_problemType(warning["type"])
+                report.avalancheProblems.append(problem)
 
-    reports = Bulletins()
+            report.avalancheActivity = Texts(comment=bulletin["description"])
 
-    for bulletin in cz_report:
-        report = AvaBulletin()
-        report.regions.append(Region("CZ-" + bulletin["region_id"]))
-        report.publicationTime = datetime.fromisoformat(bulletin["date_time"]).replace(
-            tzinfo=ZoneInfo("Europe/Prague")
-        )
-        report.bulletinID = bulletin["id"]
+            reports.append(report)
 
-        report.validTime.startTime = report.publicationTime
-        report.validTime.endTime = report.publicationTime + timedelta(hours=24)
-
-        danger_rating = DangerRating()
-        danger_rating.set_mainValue_int(int(bulletin["warning_level"]))
-
-        report.dangerRatings.append(danger_rating)
-
-        for warning in bulletin["warnings"]:
-            aspect_list = []
-            if warning["exposition"] != "NONE":
-                for exposition in warning["exposition"].replace(" ", "").split(","):
-                    aspect_list.append(exposition)
-
-            problem = AvalancheProblem()
-            if "ALL" not in aspect_list:
-                problem.aspects = aspect_list
-            problem.elevation = Elevation(
-                lowerBound=warning["altitude_from"] or None,
-                upperBound=warning["altitude_to"] or None,
-            )
-            problem.add_problemType(warning["type"])
-            report.avalancheProblems.append(problem)
-
-        report.avalancheActivity = Texts(comment=bulletin["description"])
-
-        reports.append(report)
-
-    return reports
+        return reports

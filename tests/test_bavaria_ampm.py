@@ -1,11 +1,10 @@
-from avacore import pyAvaCore
-import xml.etree.ElementTree as ET
+from avacore.processor_caamlv5 import BavariaProcessor
 
 from tests import SnowTest
 
 
 class TestBavariaAmPm(SnowTest):
     def test_bavaria_ampm(self):
-        root = ET.parse(f"{__file__}.xml")
-        bulletins = pyAvaCore.parse_xml_bavaria(root)
+        processor = BavariaProcessor()
+        bulletins = processor.parse_xml_file("DE-BY", f"{__file__}.xml")
         self.assertEqualBulletinJSON(__file__, bulletins)
