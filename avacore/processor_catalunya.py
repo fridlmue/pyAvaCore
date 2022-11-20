@@ -45,10 +45,7 @@ class Processor(JsonProcessor):
         lang_dir = {"en": 3, "ca": 1, "es": 2}
         lang = lang_dir.get(self.local, 2)
         url = (
-            "https://bpa.icgc.cat/api/apiext/butlletiglobal?values="
-            + str(self.today)
-            + ";"
-            + str(lang_dir[lang])
+            f"https://bpa.icgc.cat/api/apiext/butlletiglobal?values={self.today};{lang}"
         )
         headers = {"Content-Type": "application/json; charset=utf-8"}
         icgc_reports = self._fetch_json(url, headers)
