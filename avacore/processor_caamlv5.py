@@ -54,9 +54,6 @@ def et_get_parent(element_tree):
 
 
 class Processor(XmlProcessor):
-    def process_bulletin(self, region_id: str) -> Bulletins:
-        ...
-
     def parse_xml(self, region_id, root) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-nested-blocks
