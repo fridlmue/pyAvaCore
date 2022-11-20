@@ -21,6 +21,7 @@ import logging
 import logging.handlers
 from datetime import date, datetime, timedelta
 from io import BytesIO
+import urllib.error
 
 from .pyAvaCore import get_bulletins
 from .avajson import JSONEncoder
@@ -169,6 +170,14 @@ def download_regions():
     for region in args.regions.split():
         try:
             download_region(region)
+        except urllib.error.HTTPError as e:
+            logging.warning(
+                "Failed to download %s from %s: %s %s",
+                region,
+                e.filename,
+                e.status,
+                e.reason,
+            )
         except Exception as e:  # pylint: disable=broad-except
             logging.error("Failed to download %s", region, exc_info=e)
 
