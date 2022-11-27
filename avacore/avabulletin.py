@@ -369,12 +369,9 @@ class AvaBulletin:
 
     def get_region_list(self):
         """
-        returns valif region IDs as list.
+        returns valid region IDs as list.
         """
-        region_list = []
-        for reg in self.regions:
-            region_list.append(reg.regionID)
-        return region_list
+        return [r.regionID for r in self.regions]
 
     def from_json(self, bulletin_json):
         # pylint: disable=too-many-branches
