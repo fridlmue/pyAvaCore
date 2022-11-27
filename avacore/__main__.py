@@ -111,58 +111,59 @@ def download_region(regionID):
     validity_dates = bulletins.main_dates(protect_overwrite_now=datetime.now())
     validity_date = None
 
-    if args.cli != "o":
-        for validity_date in validity_dates:
-            directory = Path(f"{args.output}/{validity_date}")
-            directory.mkdir(parents=True, exist_ok=True)
-            data = bulletins.customData.pop("data", "")
-            ext = bulletins.customData.pop("file_extension", "")
-            if data and ext:
-                raw = Path(f"{directory}/{validity_date}-{regionID}.raw.{ext}")
-                logging.info("Writing %s", raw)
-                if isinstance(data, BytesIO):
-                    raw.write_bytes(data.getvalue())
-                else:
-                    raw.write_text(data, encoding="utf-8")
-            with open(
-                f"{directory}/{validity_date}-{regionID}.json",
-                mode="w",
-                encoding="utf-8",
-            ) as f:
-                logging.info("Writing %s", f.name)
-                json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
-            with open(
-                f"{directory}/{validity_date}-{regionID}.ratings.json",
-                mode="w",
-                encoding="utf-8",
-            ) as f:
-                ratings = bulletins.max_danger_ratings(validity_date)
-                relevant_ratings = {
-                    key: value
-                    for key, value in ratings.items()
-                    if key.startswith(regionID)
-                }
-                maxDangerRatings = {"maxDangerRatings": relevant_ratings}
-                logging.info("Writing %s", f.name)
-                json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
-        if args.cli in ("o", "y"):
-            for bulletin in bulletins.bulletins:
-                bulletin.cli_out()
-        if args.geojson:
-            with open(
-                f"{args.geojson}/{regionID}_micro-regions_elevation.geojson.json",
-                encoding="utf-8",
-            ) as f:
-                geojson = FeatureCollection.from_dict(json.load(f))
-            bulletins.augment_geojson(geojson)
-            with open(
-                f"{directory}/{validity_date}-{regionID}.geojson",
-                mode="w",
-                encoding="utf-8",
-            ) as f:
-                # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
-                logging.info("Writing %s", f.name)
-                json.dump(geojson.to_dict(), fp=f)
+    if args.cli == "o":
+        return
+    for validity_date in validity_dates:
+        directory = Path(f"{args.output}/{validity_date}")
+        directory.mkdir(parents=True, exist_ok=True)
+        data = bulletins.customData.pop("data", "")
+        ext = bulletins.customData.pop("file_extension", "")
+        if data and ext:
+            raw = Path(f"{directory}/{validity_date}-{regionID}.raw.{ext}")
+            logging.info("Writing %s", raw)
+            if isinstance(data, BytesIO):
+                raw.write_bytes(data.getvalue())
+            else:
+                raw.write_text(data, encoding="utf-8")
+        with open(
+            f"{directory}/{validity_date}-{regionID}.json",
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            logging.info("Writing %s", f.name)
+            json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
+        with open(
+            f"{directory}/{validity_date}-{regionID}.ratings.json",
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            ratings = bulletins.max_danger_ratings(validity_date)
+            relevant_ratings = {
+                key: value
+                for key, value in ratings.items()
+                if key.startswith(regionID)
+            }
+            maxDangerRatings = {"maxDangerRatings": relevant_ratings}
+            logging.info("Writing %s", f.name)
+            json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+    if args.cli in ("o", "y"):
+        for bulletin in bulletins.bulletins:
+            bulletin.cli_out()
+    if args.geojson:
+        with open(
+            f"{args.geojson}/{regionID}_micro-regions_elevation.geojson.json",
+            encoding="utf-8",
+        ) as f:
+            geojson = FeatureCollection.from_dict(json.load(f))
+        bulletins.augment_geojson(geojson)
+        with open(
+            f"{directory}/{validity_date}-{regionID}.geojson",
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
+            logging.info("Writing %s", f.name)
+            json.dump(geojson.to_dict(), fp=f)
 
 
 def download_regions():
