@@ -77,6 +77,12 @@ parser.add_argument(
     default=" ".join([r for r in default_regions if not r.startswith("IT")]),
     help="avalanche regions to merge into one file",
 )
+parser.add_argument(
+    "--protect-overwrite-now",
+    default=datetime.now().replace(microsecond=0).isoformat(),
+    metavar="TIMESTAMP",
+    help="exclude bulletins prior the given timestamp",
+)
 parser.add_argument("--output", default="./data", help="output directory")
 parser.add_argument(
     "--geojson",
@@ -108,7 +114,8 @@ def download_region(regionID):
     """
     bulletins = get_bulletins(regionID)
 
-    validity_dates = bulletins.main_dates(protect_overwrite_now=datetime.now())
+    protect_overwrite_now = datetime.fromisoformat(args.protect_overwrite_now)
+    validity_dates = bulletins.main_dates(protect_overwrite_now)
     validity_date = None
 
     if args.cli == "o":
