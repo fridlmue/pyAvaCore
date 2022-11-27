@@ -74,21 +74,19 @@ class Bulletins:
         """
 
         validity_dates = {
-            d for bulletin in self.bulletins for d in bulletin.main_dates()
+            date
+            for bulletin in self.bulletins
+            for date in bulletin.main_dates()
+            if protect_overwrite_now is None or date >= protect_overwrite_now.date()
         }
 
-        if protect_overwrite_now is not None:
-            validityDate_iter = validity_dates.copy()
-            for validity_date in validityDate_iter:
-                if validity_date < protect_overwrite_now.date():
-                    validity_dates.remove(validity_date)
-
-            if (
-                len(validity_dates) > 1
-                and min(validity_dates) == protect_overwrite_now.date()
-                and protect_overwrite_now.hour > 14
-            ):
-                validity_dates.remove(min(validity_dates))
+        if (
+            len(validity_dates) > 1
+            and protect_overwrite_now is not None
+            and min(validity_dates) == protect_overwrite_now.date()
+            and protect_overwrite_now.hour > 14
+        ):
+            validity_dates.remove(min(validity_dates))
 
         return validity_dates
 
