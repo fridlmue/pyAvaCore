@@ -77,38 +77,24 @@ class Processor(AbstractProcessor):
 
         aspects = []
 
-        if px_list[20][129] == 0:
-            # aspects.append('NNE')
-            aspects = append_to_list(aspects, "N")
-            aspects = append_to_list(aspects, "NE")
-        if px_list[25][145] == 0:
-            # aspects.append('ENE')
-            aspects = append_to_list(aspects, "NE")
-            aspects = append_to_list(aspects, "E")
-        if px_list[31][145] == 0:
-            # aspects.append('ESE')
-            aspects = append_to_list(aspects, "E")
-            aspects = append_to_list(aspects, "SE")
-        if px_list[36][129] == 0:
-            # aspects.append('SSE')
-            aspects = append_to_list(aspects, "SE")
-            aspects = append_to_list(aspects, "S")
-        if px_list[36][101] == 0:
-            # aspects.append('SSW')
-            aspects = append_to_list(aspects, "S")
-            aspects = append_to_list(aspects, "SW")
-        if px_list[31][77] == 0:
-            # aspects.append('WSW')
-            aspects = append_to_list(aspects, "SW")
-            aspects = append_to_list(aspects, "W")
-        if px_list[25][77] == 0:
-            # aspects.append('WNW')
-            aspects = append_to_list(aspects, "W")
-            aspects = append_to_list(aspects, "NW")
-        if px_list[20][101] == 0:
-            # aspects.append('NNW')
-            aspects = append_to_list(aspects, "NW")
-            aspects = append_to_list(aspects, "N")
+        # in px_list[y][x], y is the line, x is the row with 4 channels each. x in pixel = 1+ x/4
+
+        if px_list[19][81] == 0:
+            aspects.append('NW')
+        if px_list[19][113] == 0:
+            aspects.append('N')
+        if px_list[19][145] == 0:
+            aspects.append('NE')
+        if px_list[28][81] == 0:
+            aspects.append('W')
+        if px_list[28][145] == 0:
+            aspects.append('E')
+        if px_list[36][81] == 0:
+            aspects.append('SW')
+        if px_list[36][113] == 0:
+            aspects.append('S')
+        if px_list[36][145] == 0:
+            aspects.append('SE')
 
         return aspects
 
