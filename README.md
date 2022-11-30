@@ -18,6 +18,23 @@ As on some target platforms the number of available Python dependencies is limit
 
 ## CLI Parameters
 
+```
+> python -m avacore --help
+usage: avacore [-h] [--regions REGIONS] [--merge-dates MERGE_DATES] [--merge-regions MERGE_REGIONS] [--output OUTPUT] [--geojson GEOJSON] [--cli CLI]
+
+Download and parse EAWS avalanche bulletins
+
+options:
+  -h, --help            show this help message and exit
+  --regions REGIONS     avalanche regions to download
+  --merge-dates MERGE_DATES
+  --merge-regions MERGE_REGIONS
+                        avalanche regions to merge into one file
+  --output OUTPUT       output directory
+  --geojson GEOJSON     eaws-regions directory containing *micro-regions_elevation.geojson.json of
+  --cli CLI             print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)
+```
+
 In default configuration, pyAvaCore will fetch the bulletins for all supported regions. 
 
 The regions to fetch can be limited with the `--regions` parameter. Multiple regions can be entered delimited by space. E. g. `python -m avacore --regions AT-02 IT-57` will fetch the bulletins for AT-02 and IT-57 only.
