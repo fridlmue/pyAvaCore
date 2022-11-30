@@ -1,0 +1,13 @@
+{
+  "maxDangerRatings": {
+    "PL-01": 2,
+    "PL-01:am": 2,
+    "PL-01:high": 2,
+    "PL-01:high:am": 2,
+    "PL-01:high:pm": 2,
+    "PL-01:low": 2,
+    "PL-01:low:am": 2,
+    "PL-01:low:pm": 2,
+    "PL-01:pm": 2
+  }
+}

@@ -54,6 +54,7 @@ default_regions = [
     "IT-36",
     "IT-57",
     "NO",
+    "PL",
     "SI",
     "SK",
 ]
@@ -146,9 +147,7 @@ def download_region(regionID):
         ) as f:
             ratings = bulletins.max_danger_ratings(validity_date)
             relevant_ratings = {
-                key: value
-                for key, value in ratings.items()
-                if key.startswith(regionID)
+                key: value for key, value in ratings.items() if key.startswith(regionID)
             }
             maxDangerRatings = {"maxDangerRatings": relevant_ratings}
             logging.info("Writing %s", f.name)
