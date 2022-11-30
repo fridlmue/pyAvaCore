@@ -35,7 +35,7 @@
             "S",
             "SW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2021-01-26T17:43:18+01:00",
@@ -83,7 +83,7 @@
             "S",
             "SW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2021-01-26T17:43:18+01:00",
@@ -131,7 +131,7 @@
             "S",
             "SW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2021-01-26T17:43:18+01:00",
@@ -172,7 +172,7 @@
             "S",
             "SW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2021-01-26T17:43:18+01:00",
@@ -213,7 +213,7 @@
             "S",
             "SW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2021-01-26T17:43:18+01:00",
@@ -254,7 +254,7 @@
             "S",
             "SW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2021-01-26T17:43:18+01:00",

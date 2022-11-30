@@ -52,7 +52,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -66,7 +66,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -141,7 +141,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -155,7 +155,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -230,7 +230,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -244,7 +244,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -319,7 +319,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -333,7 +333,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -388,7 +388,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -402,7 +402,7 @@
           "elevation": {
             "upperBound": "3000"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],

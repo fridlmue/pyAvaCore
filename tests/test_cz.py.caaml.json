@@ -33,7 +33,7 @@
             "NE",
             "NW"
           ],
-          "problemType": "old_snow"
+          "problemType": "persistent_weak_layers"
         }
       ],
       "publicationTime": "2022-03-15T07:48:00+01:00",
@@ -67,7 +67,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "publicationTime": "2022-03-15T08:36:01+01:00",

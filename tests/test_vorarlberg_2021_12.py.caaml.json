@@ -79,7 +79,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "terrainFeature": "Neu- und Triebschnee sind st\u00f6ranf\u00e4llig. Steilgel\u00e4nde, hinter Gel\u00e4ndekanten und eingewehte Rinnen und Mulden"
         },
         {
