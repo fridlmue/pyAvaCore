@@ -25,7 +25,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -86,7 +86,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -147,7 +147,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -208,7 +208,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -269,7 +269,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -330,7 +330,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -381,7 +381,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -433,7 +433,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -485,7 +485,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -537,7 +537,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -589,7 +589,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -641,7 +641,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [

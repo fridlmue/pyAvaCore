@@ -80,7 +80,7 @@
           "elevation": {
             "lowerBound": "treeline"
           },
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -231,7 +231,7 @@
           "elevation": {
             "lowerBound": "treeline"
           },
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -438,7 +438,7 @@
           "elevation": {
             "lowerBound": "treeline"
           },
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -616,7 +616,7 @@
           "elevation": {
             "lowerBound": "1800"
           },
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -927,7 +927,7 @@
           "elevation": {
             "lowerBound": "1600"
           },
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "tendency": {

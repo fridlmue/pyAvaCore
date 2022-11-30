@@ -22,7 +22,7 @@
       ],
       "avalancheProblems": [
         {
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "problemType": "persistent_weak_layers"

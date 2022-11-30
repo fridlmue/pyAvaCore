@@ -75,7 +75,7 @@ class Processor(JsonProcessor):
 
             if problems & (1 << 1):
                 problem = AvalancheProblem()
-                problem.problemType = "wind_drifted_snow"
+                problem.problemType = "wind_slab"
                 report.avalancheProblems.append(problem)
             if problems & (1 << 2):
                 problem = AvalancheProblem()
