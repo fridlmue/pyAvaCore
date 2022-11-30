@@ -183,6 +183,7 @@ class DangerRating:
             ),
             None,
         )
+        return self
 
     def from_json(self, dangerRating_json):
         """
