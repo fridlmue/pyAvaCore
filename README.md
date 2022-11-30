@@ -9,7 +9,14 @@ This Project is Licensed under GPL-3.0
 
 ## Utilization
 
-pyAvaCore is used in the ALBINA project to parse the neighbor bulletins in a unified way as JSON-File and a ratings.json file with the danger levels for the regions. This is used to augment the map with the danger rating information.
+pyAvaCore is used in the [ALBINA](https://gitlab.com/albina-euregio) project to parse the neighbor bulletins in a unified way as JSON-File and a ratings.json file with the danger levels for the regions. This is used to augment the map with the danger rating information.
+
+* https://avalanche.report/
+
+pyAvaCore is used by [EAWS](https://www.avalanches.org/) to visualize (almost all) avalanche bulletins of Europe on a single map:
+
+* https://www.avalanches.org/
+
 It is also used as parser for the mobile app ["avaRisk"](https://github.com/fridlmue/harbour-avarisk) as background parser to fetch a wide variety of reports.
 
 ## Dependencies
