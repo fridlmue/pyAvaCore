@@ -143,7 +143,7 @@
             "title": "Avalanche Problem Type",
             "description": "Expected Avalanche Problem, according to the EAWS Avalanche Problem Definition.",
             "type" : "string",
-            "enum" : [ "new_snow", "wind_drifted_snow", "persistent_weak_layers", "wet_snow", "gliding_snow", "cornice_failure", "favourable_situation" ]
+            "enum" : [ "new_snow", "wind_slab", "persistent_weak_layers", "wet_snow", "gliding_snow", "cornices", "no_distinct_avalanche_problem", "favourable_situation" ]
         },
         "avalancheSize" : {
             "title": "Expected Avalanche Size",

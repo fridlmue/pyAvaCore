@@ -48,7 +48,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -58,7 +58,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -103,7 +103,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -113,7 +113,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -178,7 +178,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -188,7 +188,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -233,7 +233,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -243,7 +243,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -288,7 +288,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -298,7 +298,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -363,7 +363,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -373,7 +373,7 @@
             "NE",
             "E"
           ],
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],

@@ -197,7 +197,7 @@
             "SE",
             "S"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [

@@ -437,7 +437,7 @@
           "elevation": {
             "lowerBound": "2400"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -464,7 +464,7 @@
           "elevation": {
             "lowerBound": "2400"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],
@@ -680,7 +680,7 @@
           "elevation": {
             "lowerBound": "2400"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "earlier"
         },
         {
@@ -706,7 +706,7 @@
           "elevation": {
             "lowerBound": "2400"
           },
-          "problemType": "wind_drifted_snow",
+          "problemType": "wind_slab",
           "validTimePeriod": "later"
         }
       ],

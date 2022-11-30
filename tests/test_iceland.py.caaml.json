@@ -25,7 +25,7 @@
             "N",
             "NE"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -83,7 +83,7 @@
             "N",
             "NE"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "travelAdvisory": {
@@ -131,7 +131,7 @@
             "W",
             "NW"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         },
         {
           "aspects": [
@@ -189,7 +189,7 @@
             "NW",
             "N"
           ],
-          "problemType": "wind_drifted_snow"
+          "problemType": "wind_slab"
         }
       ],
       "travelAdvisory": {
