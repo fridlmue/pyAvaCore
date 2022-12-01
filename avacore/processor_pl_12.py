@@ -12,7 +12,6 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-from datetime import datetime
 import re
 import json
 
@@ -88,13 +87,13 @@ class Processor(JsonProcessor):
 
         aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 
-        for rating in ratings.keys():
+        for rating, rating_ident in ratings.items():
             elevs = ["upper"]
             if data[rating]["mode"] == 2:
                 elevs.append("lower")
             for elev in elevs:
                 danger_rating = DangerRating(
-                    validTimePeriod=ratings[rating]
+                    validTimePeriod=rating_ident
                 )
                 danger_rating.set_mainValue_int(int(data[rating][elev]["lev"]))
                 if len(elev) > 1:
@@ -116,20 +115,6 @@ class Processor(JsonProcessor):
                     problem_type = "wind_slab"
                 if data[rating][elev]["prb"] == 'prws':
                     problem_type = "wet_snow"
-                # if data[rating][elev]["prb"] == 'brak':
-                #     problem_type = ""
-                '''
-                elif problem["AvalancheProblemTypeId"] == 10:
-                    problem_type = "wind_drifted_snow"
-                elif problem["AvalancheProblemTypeId"] == 30:
-                    problem_type = "persistent_weak_layers"
-                elif problem["AvalancheProblemTypeId"] == 45:
-                    problem_type = "wet_snow"
-                elif problem["AvalancheProblemTypeId"] == 0:  # ???
-                    problem_type = "gliding_snow"
-                elif problem["AvalancheProblemTypeId"] == 0:  # ???
-                    problem_type = "favourable_situation"
-                '''
 
                 bulletin.dangerRatings.append(danger_rating)
 
