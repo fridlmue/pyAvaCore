@@ -31,6 +31,7 @@ import avacore.processor_uk
 
 def new_processor(region_id: str) -> avacore.processor.Processor:
     # pylint: disable=too-many-return-statements
+    # pylint: disable=too-many-branches
     if region_id.startswith("AD"):
         return avacore.processor_ad.Processor()
     if region_id.startswith("CH"):
