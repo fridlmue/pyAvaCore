@@ -88,11 +88,11 @@ class Processor(JsonProcessor):
 
         aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 
-        for rating in ratings.items():
+        for rating in ratings.keys():
             elevs = ["upper"]
             if data[rating]["mode"] == 2:
                 elevs.append("lower")
-            for elev in elevs.items():
+            for elev in elevs:
                 danger_rating = DangerRating(
                     validTimePeriod=ratings[rating]
                 )
