@@ -102,7 +102,7 @@ class Processor(JsonProcessor):
                 if problem["AvalancheProblemTypeId"] == 7:
                     problem_type = "new_snow"
                 elif problem["AvalancheProblemTypeId"] == 10:
-                    problem_type = "wind_drifted_snow"
+                    problem_type = "wind_slab"
                 elif problem["AvalancheProblemTypeId"] == 30:
                     problem_type = "persistent_weak_layers"
                 elif problem["AvalancheProblemTypeId"] == 45:
