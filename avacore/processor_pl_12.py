@@ -84,6 +84,10 @@ class Processor(JsonProcessor):
             "am": "earlier",
             "pm": "later"
             }
+        for rating in ratings.keys():
+            del data[rating]["img"]
+        if data["am"] == data["pm"]:
+            ratings = {"am": "all_day"}```
 
         aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 
