@@ -46,7 +46,8 @@ class Processor(JsonProcessor):
 
         return self.parse_json(region_id, pl_12_report)
 
-    def parse_json(self, region_id, data) -> Bulletins:
+    @staticmethod
+    def parse_json(region_id, data) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-branches
 
@@ -84,10 +85,10 @@ class Processor(JsonProcessor):
             "am": "earlier",
             "pm": "later"
             }
-        for rating in ratings.keys():
+        for rating in ratings:
             del data[rating]["img"]
         if data["am"] == data["pm"]:
-            ratings = {"am": "all_day"}```
+            ratings = {"am": "all_day"}
 
         aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 

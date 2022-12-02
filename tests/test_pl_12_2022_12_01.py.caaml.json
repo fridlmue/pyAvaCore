@@ -15,45 +15,18 @@
           "elevation": {
             "lowerBound": "1900"
           },
-          "validTimePeriod": "earlier",
+          "validTimePeriod": "all_day",
           "mainValue": "low"
         },
         {
           "elevation": {
             "upperBound": "1900"
           },
-          "validTimePeriod": "earlier",
-          "mainValue": "no_snow"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1900"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "upperBound": "1900"
-          },
-          "validTimePeriod": "later",
+          "validTimePeriod": "all_day",
           "mainValue": "no_snow"
         }
       ],
       "avalancheProblems": [
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "SE",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "1900"
-          },
-          "problemType": "wind_slab"
-        },
         {
           "aspects": [
             "N",
