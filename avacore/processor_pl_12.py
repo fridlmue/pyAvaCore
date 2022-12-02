@@ -46,8 +46,7 @@ class Processor(JsonProcessor):
 
         return self.parse_json(region_id, pl_12_report)
 
-    @staticmethod
-    def parse_json(region_id, data) -> Bulletins:
+    def parse_json(self, region_id, data) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-branches
 
