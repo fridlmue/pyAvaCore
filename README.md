@@ -81,6 +81,7 @@ At the moment the following regions are supported with the localization versions
 - SK (http://www.laviny.sk/) (SK)
 - NO (https://www.varsom.no) (NO/EN)
 - PL (https://www.gopr.pl/) (PL)
+- PL (https://lawiny.topr.pl/) (PL)
 
 ### RegionIDs
 
