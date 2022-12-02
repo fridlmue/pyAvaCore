@@ -24,12 +24,14 @@ import avacore.processor_fr
 import avacore.processor_is
 import avacore.processor_norway
 import avacore.processor_pl
+import avacore.processor_pl_12
 import avacore.processor_sk
 import avacore.processor_uk
 
 
 def new_processor(region_id: str) -> avacore.processor.Processor:
     # pylint: disable=too-many-return-statements
+    # pylint: disable=too-many-branches
     if region_id.startswith("AD"):
         return avacore.processor_ad.Processor()
     if region_id.startswith("CH"):
@@ -52,8 +54,11 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_is.Processor()
     if region_id.startswith("NO"):
         return avacore.processor_norway.Processor()
-    if region_id.startswith("PL"):
+    if (region_id.startswith("PL")
+        and not region_id.startswith("PL-12")):
         return avacore.processor_pl.Processor()
+    if region_id.startswith("PL-12"):
+        return avacore.processor_pl_12.Processor()
     if region_id.startswith("SI"):
         return avacore.processor_caamlv5.SloveniaProcessor()
     if region_id.startswith("SK"):
