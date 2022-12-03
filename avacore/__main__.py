@@ -55,6 +55,7 @@ default_regions = [
     "IT-57",
     "NO",
     "PL",
+    "PL-12",
     "SI",
     "SK",
 ]
