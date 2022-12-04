@@ -97,17 +97,20 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
-Path("logs").mkdir(parents=True, exist_ok=True)
-logging.basicConfig(
-    format="[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s",
-    level=logging.INFO,
-    handlers=[
-        logging.handlers.TimedRotatingFileHandler(
-            filename="logs/pyAvaCore.log", when="midnight"
-        ),
-        logging.StreamHandler(),
-    ],
-)
+
+def init_logging(filename="logs/pyAvaCore.log"):
+    """Initialize the logging system"""
+    Path(filename).parent.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        format="[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s",
+        level=logging.INFO,
+        handlers=[
+            logging.handlers.TimedRotatingFileHandler(
+                filename=filename, when="midnight"
+            ),
+            logging.StreamHandler(),
+        ],
+    )
 
 
 def download_region(regionID):
@@ -215,6 +218,7 @@ def merge_regions(validity_date: str):
 
 
 if __name__ == "__main__":
+    init_logging()
     download_regions()
     for date_string in args.merge_dates.split():
         merge_regions(date_string)
