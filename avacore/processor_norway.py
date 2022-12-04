@@ -37,15 +37,7 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         if region_id == "NO":
             return self.process_all_reports_no()
-
-        langkey = "2"  # Needs to be set by language 1 -> Norwegian, 2 -> Englisch (parts of report)
-        url = (
-            "https://api01.nve.no/hydrology/forecast/avalanche/v6.0.0/api/AvalancheWarningByRegion/Detail/"
-            + region_id[3:]
-            + "/"
-            + langkey
-            + "/"
-        )
+        url = self.url.format(region=region_id[3:])
         headers = {"Content-Type": "application/json; charset=utf-8"}
         varsom_report = self._fetch_json(url, headers=headers)
         return self.parse_json(region_id, varsom_report)

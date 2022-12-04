@@ -44,9 +44,7 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         lang_dir = {"en": 3, "ca": 1, "es": 2}
         lang = lang_dir.get(self.local, 2)
-        url = (
-            f"https://bpa.icgc.cat/api/apiext/butlletiglobal?values={self.today};{lang}"
-        )
+        url = self.url.format(date=self.today, lang=lang)
         headers = {"Content-Type": "application/json; charset=utf-8"}
         icgc_reports = self._fetch_json(url, headers)
         reports = self.parse_json(region_id, icgc_reports)

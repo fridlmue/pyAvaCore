@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
+          "website": "https://www.sais.gov.uk/api?action=getForecast"
         }
       },
       "dangerRatings": [
@@ -45,7 +45,7 @@
       "source": {
         "provider": {
           "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
+          "website": "https://www.sais.gov.uk/api?action=getForecast"
         }
       },
       "dangerRatings": [
@@ -77,7 +77,7 @@
       "source": {
         "provider": {
           "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
+          "website": "https://www.sais.gov.uk/api?action=getForecast"
         }
       },
       "dangerRatings": [
@@ -109,7 +109,7 @@
       "source": {
         "provider": {
           "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
+          "website": "https://www.sais.gov.uk/api?action=getForecast"
         }
       },
       "dangerRatings": [
@@ -197,7 +197,7 @@
       "source": {
         "provider": {
           "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
+          "website": "https://www.sais.gov.uk/api?action=getForecast"
         }
       },
       "dangerRatings": [
@@ -229,7 +229,7 @@
       "source": {
         "provider": {
           "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
+          "website": "https://www.sais.gov.uk/api?action=getForecast"
         }
       },
       "dangerRatings": [

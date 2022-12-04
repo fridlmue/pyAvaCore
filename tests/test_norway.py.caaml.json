@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "Varsom: En tjeneste levert av NVE, i samarbeid med Statens vegvesen og Meteorologisk institutt",
-          "website": "https://varsom.no/"
+          "website": "https://api01.nve.no/hydrology/forecast/avalanche/v6.0.0/api/AvalancheWarningByRegion/Detail/{region}/2/"
         }
       },
       "dangerRatings": [

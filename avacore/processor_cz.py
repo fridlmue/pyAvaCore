@@ -30,9 +30,8 @@ from avacore.processor import JsonProcessor
 
 class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
-        url = "https://www.horskasluzba.cz/cz/avalanche-json"
         headers = {"Content-Type": "application/json; charset=utf-8"}
-        horskasluzba_report = self._fetch_json(url, headers)
+        horskasluzba_report = self._fetch_json(self.url, headers)
         reports = self.parse_json(region_id, horskasluzba_report)
         return reports
 

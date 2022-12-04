@@ -38,7 +38,7 @@ class Processor(AbstractProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         if region_id == "PL":
             return self.process_all_reports()
-        url = f"https://www.gopr.pl/lawiny/{regions[region_id]}"
+        url = self.url.format(region=regions[region_id])
         response: str = self._fetch_url(url, {})
         self.raw_data += response
         self.raw_data_format = "html"
