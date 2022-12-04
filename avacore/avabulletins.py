@@ -19,7 +19,7 @@ import json
 import typing
 
 from .avajson import JSONEncoder
-from .avabulletin import AvaBulletin, DangerRating
+from .avabulletin import AvaBulletin, DangerRating, Provider
 from .geojson import Feature, FeatureCollection
 
 
@@ -52,12 +52,15 @@ class Bulletins:
         self.customData["file_extension"] = file_extension
         self.customData["data"] = data
 
-    def append_provider(self, provider: str, url: str):
+    def append_provider(self, provider_name: str, website: str):
         """
-        Stores the given provider/url as customData
+        Stores the given provider/url as source/provider on each bulletin
         """
-        self.customData["provider"] = provider
-        self.customData["url"] = url
+        for bulletin in self.bulletins:
+            if not bulletin.source.provider:
+                bulletin.source.provider = Provider()
+            bulletin.source.provider.name = provider_name
+            bulletin.source.provider.website = website
 
     def main_date(self) -> date:
         """

@@ -127,12 +127,6 @@
         "startTime": "2021-12-28T23:00:00+00:00",
         "endTime": "2021-12-29T23:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
-      },
       "dangerRatings": [
         {
           "elevation": {
@@ -361,12 +355,6 @@
         "startTime": "2021-12-28T23:00:00+00:00",
         "endTime": "2021-12-29T23:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
-      },
       "dangerRatings": [
         {
           "elevation": {
@@ -499,12 +487,6 @@
         "startTime": "2021-12-28T23:00:00+00:00",
         "endTime": "2021-12-29T23:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
-      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -579,12 +561,6 @@
       "validTime": {
         "startTime": "2021-12-28T23:00:00+00:00",
         "endTime": "2021-12-29T23:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
       },
       "dangerRatings": [
         {
@@ -790,12 +766,6 @@
         "startTime": "2021-12-28T23:00:00+00:00",
         "endTime": "2021-12-29T23:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
-      },
       "dangerRatings": [
         {
           "elevation": {
@@ -963,12 +933,6 @@
       "validTime": {
         "startTime": "2021-12-28T23:00:00+00:00",
         "endTime": "2021-12-29T23:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
       },
       "dangerRatings": [
         {

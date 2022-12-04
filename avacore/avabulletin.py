@@ -42,13 +42,23 @@ class ValidTime:
 
 
 @dataclass
+class Person:
+    """Details on a person."""
+
+    name: typing.Optional[str] = None
+    website: typing.Optional[str] = None
+
+
+@dataclass
 class Provider:
     """
-    Describes the provider given in the source
+    Information about the bulletin provider. Defines the name, website and/or contactPerson
+    (which could be the author) of the issuing AWS.
     """
 
     name: typing.Optional[str] = None
     website: typing.Optional[str] = None
+    contactPerson: typing.Optional[Person] = None
 
 
 @dataclass
@@ -59,8 +69,8 @@ class Source:
 
     provider: typing.Optional[Provider] = None
     """Bulletin Provider Information"""
-    person: typing.Optional[str] = None
-    """Bulletin Author DEVIATES FROM CAAMLv6"""
+    contactPerson: typing.Optional[Person] = None
+    """Bulletin Author"""
 
 
 @dataclass
@@ -435,7 +445,7 @@ class AvaBulletin:
                             provider=bulletin_json[attribute]["provider"]
                         )
                     elif hasattr(bulletin_json[attribute], "person"):
-                        self.source = Source(person=bulletin_json[attribute]["website"])
+                        ...
 
                 elif attribute == "customData":
                     self.customData = bulletin_json[attribute]

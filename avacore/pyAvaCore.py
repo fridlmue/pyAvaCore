@@ -15,7 +15,6 @@
 
 import configparser
 from typing import List, Tuple
-from urllib.parse import urlparse
 
 import avacore.processors
 from avacore.avabulletin import AvaBulletin
@@ -34,7 +33,7 @@ def get_bulletins(region_id, local="en") -> Bulletins:
     region_id = region_id.upper()
     processor = avacore.processors.new_processor(region_id)
     processor.local = local
-    processor.url, processor.provider = get_report_url(region_id, local)
+    processor.url, provider = get_report_url(region_id, local)
 
     reports = processor.process_bulletin(region_id)
     reports.append_raw_data(processor.raw_data_format, processor.raw_data)
@@ -43,7 +42,7 @@ def get_bulletins(region_id, local="en") -> Bulletins:
         for report in reports.bulletins
         if any(region.startswith(region_id) for region in report.get_region_list())
     ]
-    reports.append_provider(processor.provider, processor.url)
+    reports.append_provider(provider, processor.url)
     return reports
 
 
@@ -73,9 +72,4 @@ def get_report_url(region_id, local=""):
     url = config[region_id_prefix]["url"]
     if f"url.{local}" in config[region_id_prefix]:
         url = config[region_id_prefix][f"url.{local}"]
-    netloc = urlparse(url).netloc
-    if local.upper() == "DE":
-        provider = f"Die dargestellten Informationen werden bereitgestellt von: {name}. ({netloc})"
-    else:
-        provider = f"The displayed information is provided by: {name}. ({netloc})"
-    return url, provider
+    return url, name

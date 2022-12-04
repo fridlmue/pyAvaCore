@@ -21,8 +21,8 @@ from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
     Region,
+    Person,
     Provider,
-    Source,
     Tendency,
     Texts,
     ValidTime,
@@ -57,11 +57,8 @@ class Processor(JsonProcessor):
 
         common_bulletin = AvaBulletin()
 
-        common_bulletin.source = Source(
-            provider=Provider(
-                name=data["author"],
-                website=str("https://www.hzs.sk"),
-            )
+        common_bulletin.source.provider = Provider(
+            contactPerson=Person(name=data["author"])
         )
         common_bulletin.validTime = ValidTime(
             startTime=data["validFrom"], endTime=data["validTill"]

@@ -181,12 +181,6 @@
         "startTime": "2022-03-21T23:00:00+00:00",
         "endTime": "2022-03-22T23:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
-      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -285,12 +279,6 @@
       "validTime": {
         "startTime": "2022-03-21T23:00:00+00:00",
         "endTime": "2022-03-22T23:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "Avalanche.report",
-          "website": "https://Avalanche.report"
-        }
       },
       "dangerRatings": [
         {
