@@ -54,8 +54,9 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_is.Processor()
     if region_id.startswith("NO"):
         return avacore.processor_norway.Processor()
-    if (region_id.startswith("PL")
-        and not region_id.startswith("PL-12")):
+    if region_id.startswith("PL-12"):
+        return avacore.processor_pl_12.Processor()
+    if region_id.startswith("PL"):
         return avacore.processor_pl.Processor()
     if region_id.startswith("PL-12"):
         return avacore.processor_pl_12.Processor()
