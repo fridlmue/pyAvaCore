@@ -28,6 +28,7 @@ from avacore.avabulletin import (
 from avacore.avabulletins import Bulletins
 from avacore.processor import JsonProcessor
 
+
 class Processor(JsonProcessor):
 
     fetch_time_dependant = True
@@ -37,7 +38,11 @@ class Processor(JsonProcessor):
         url = "https://lawiny.topr.pl/"
         response: str = self._fetch_url(url, {})
 
-        raw = re.compile(r"const oLawReport = (?P<raw_json>[^*]+?);\n").search(response).group(1)
+        raw = (
+            re.compile(r"const oLawReport = (?P<raw_json>[^*]+?);\n")
+            .search(response)
+            .group(1)
+        )
 
         pl_12_report = json.loads(raw)
 
@@ -56,10 +61,7 @@ class Processor(JsonProcessor):
         # ZoneInfo("Europe/Warsaw")
 
         bulletin.regions = [Region(regionID=region_id)]
-        bulletin.validTime  = ValidTime(
-            data["iat"],
-            data["exp"]
-            )
+        bulletin.validTime = ValidTime(data["iat"], data["exp"])
 
         bulletin.publicationTime = bulletin.validTime.startTime
 
@@ -71,19 +73,16 @@ class Processor(JsonProcessor):
         bulletin.avalancheActivity = avalancheActivity
 
         snowpackStructure = Texts()
-        snowpackStructure.comment = data['mst']['desc1']
+        snowpackStructure.comment = data["mst"]["desc1"]
 
         bulletin.snowpackStructure = snowpackStructure
 
         travelAdvisory = Texts()
-        travelAdvisory.comment = data['mst']['desc2']
+        travelAdvisory.comment = data["mst"]["desc2"]
 
         bulletin.travelAdvisory = travelAdvisory
 
-        ratings = {
-            "am": "earlier",
-            "pm": "later"
-            }
+        ratings = {"am": "earlier", "pm": "later"}
         for rating in ratings:
             del data[rating]["img"]
         if data["am"] == data["pm"]:
@@ -96,9 +95,7 @@ class Processor(JsonProcessor):
             if data[rating]["mode"] == 2:
                 elevs.append("lower")
             for elev in elevs:
-                danger_rating = DangerRating(
-                    validTimePeriod=rating_ident
-                )
+                danger_rating = DangerRating(validTimePeriod=rating_ident)
                 danger_rating.set_mainValue_int(int(data[rating][elev]["lev"]))
                 if len(elev) > 1:
                     elevation = Elevation()
@@ -115,9 +112,9 @@ class Processor(JsonProcessor):
                         aspect_list.append(aspects[i])
 
                 problem_type = ""
-                if data[rating][elev]["prb"] == 'prwd':
+                if data[rating][elev]["prb"] == "prwd":
                     problem_type = "wind_slab"
-                if data[rating][elev]["prb"] == 'prws':
+                if data[rating][elev]["prb"] == "prws":
                     problem_type = "wet_snow"
 
                 bulletin.dangerRatings.append(danger_rating)
