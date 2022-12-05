@@ -137,6 +137,7 @@ problem_ids = {
     3: "persistent_weak_layers",
     11: "wet_snow",
     7: "cornice_failure",
+    4: "new_snow",
 }
 
 aspect_keys = {
