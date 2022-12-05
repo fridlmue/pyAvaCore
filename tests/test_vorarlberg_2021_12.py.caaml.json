@@ -31,12 +31,6 @@
         "startTime": "2021-12-29T06:30:52+00:00",
         "endTime": "2021-12-30T07:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "avalanche-warnings.eu",
-          "website": "https://avalanche-warnings.eu"
-        }
-      },
       "dangerRatings": [
         {
           "elevation": {

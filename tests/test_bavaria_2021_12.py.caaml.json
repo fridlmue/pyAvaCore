@@ -13,12 +13,6 @@
         "startTime": "2021-12-09T23:00:00+00:00",
         "endTime": "2021-12-10T23:00:00+00:00"
       },
-      "source": {
-        "provider": {
-          "name": "avalanche-warnings.eu",
-          "website": "https://avalanche-warnings.eu"
-        }
-      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -78,12 +72,6 @@
       "validTime": {
         "startTime": "2021-12-09T23:00:00+00:00",
         "endTime": "2021-12-10T23:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "avalanche-warnings.eu",
-          "website": "https://avalanche-warnings.eu"
-        }
       },
       "dangerRatings": [
         {
@@ -166,12 +154,6 @@
       "validTime": {
         "startTime": "2021-12-09T23:00:00+00:00",
         "endTime": "2021-12-10T23:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "avalanche-warnings.eu",
-          "website": "https://avalanche-warnings.eu"
-        }
       },
       "dangerRatings": [
         {

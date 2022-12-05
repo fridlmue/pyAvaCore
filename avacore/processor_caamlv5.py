@@ -24,9 +24,7 @@ from avacore.avabulletin import (
     AvalancheProblem,
     Region,
     Elevation,
-    Source,
     Texts,
-    Provider,
 )
 from avacore.avabulletins import Bulletins
 from avacore.processor import XmlProcessor
@@ -231,15 +229,6 @@ class Processor(XmlProcessor):
                     if not tendencyComment.text is None:
                         report.tendency.tendencyComment = tendencyComment.text.replace(
                             "&nbsp;", "\n"
-                        )
-
-                for source in observations.iter(tag=CAAMLTAG + "Operation"):
-                    for source_name in source.iter(tag=CAAMLTAG + "name"):
-                        report.source = Source(
-                            provider=Provider(
-                                name=source_name.text,
-                                website=str("https://" + source_name.text),
-                            )
                         )
 
             report.wxSynopsis = wxSynopsis
