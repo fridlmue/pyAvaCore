@@ -10,4 +10,4 @@ class TestSlovenia(SnowTest):
         processor.today = datetime.date(2021, 3, 20)
         processor.fetch_time_dependant = False
         bulletins = processor.parse_xml_file("SI", f"{__file__}.xml")
-        self.assertEqualBulletinJSON(__file__, bulletins)
+        self.assertEqualBulletinJSON(__file__, bulletins, "SI")

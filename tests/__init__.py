@@ -8,9 +8,9 @@ from avacore.avabulletins import Bulletins
 
 
 class SnowTest(unittest.TestCase):
-    def assertEqualBulletinJSON(self, expected_basename: str, bulletins: Bulletins):
+    def assertEqualBulletinJSON(self, expected_basename: str, bulletins: Bulletins, region_id: str = ""):
 
-        region_id = bulletins[0].get_region_list()[0].upper()
+        region_id = region_id or bulletins[0].get_region_list()[0].upper()
         url, provider = get_report_url(region_id, "en")
         bulletins.append_provider(provider, url)
 
