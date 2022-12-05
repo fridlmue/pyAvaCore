@@ -10,6 +10,12 @@
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -51,6 +57,12 @@
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -88,6 +100,12 @@
       "validTime": {
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {
@@ -127,6 +145,12 @@
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -165,6 +189,12 @@
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -199,6 +229,12 @@
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -232,6 +268,12 @@
       "validTime": {
         "startTime": "2022-01-20T00:00:00+01:00",
         "endTime": "2022-01-20T23:59:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Conselh Generau d'Aran",
+          "website": "http://statics.lauegi.report/albina_files/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {

@@ -139,6 +139,12 @@
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -272,6 +278,12 @@
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -353,6 +365,12 @@
       "validTime": {
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
       },
       "dangerRatings": [
         {
@@ -475,6 +493,12 @@
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -523,6 +547,12 @@
       "validTime": {
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
       },
       "dangerRatings": [
         {
@@ -606,6 +636,12 @@
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -684,6 +720,12 @@
       "validTime": {
         "startTime": "2021-02-22T17:00:00+01:00",
         "endTime": "2021-02-23T17:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/avalanche/mobile/bulletin_en.zip"
+        }
       },
       "dangerRatings": [
         {

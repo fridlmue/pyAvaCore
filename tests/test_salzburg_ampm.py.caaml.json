@@ -13,6 +13,12 @@
         "startTime": "2021-02-25T23:00:00+00:00",
         "endTime": "2021-02-26T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Salzburg",
+          "website": "https://www.avalanche-warnings.eu/public/salzburg/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -108,6 +114,12 @@
         "startTime": "2021-02-25T23:00:00+00:00",
         "endTime": "2021-02-26T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Salzburg",
+          "website": "https://www.avalanche-warnings.eu/public/salzburg/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -182,6 +194,12 @@
       "validTime": {
         "startTime": "2021-02-25T23:00:00+00:00",
         "endTime": "2021-02-26T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Salzburg",
+          "website": "https://www.avalanche-warnings.eu/public/salzburg/caaml/en"
+        }
       },
       "dangerRatings": [
         {

@@ -13,6 +13,12 @@
         "startTime": "2021-12-09T23:00:00+00:00",
         "endTime": "2021-12-10T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -72,6 +78,12 @@
       "validTime": {
         "startTime": "2021-12-09T23:00:00+00:00",
         "endTime": "2021-12-10T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
       },
       "dangerRatings": [
         {
@@ -154,6 +166,12 @@
       "validTime": {
         "startTime": "2021-12-09T23:00:00+00:00",
         "endTime": "2021-12-10T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
       },
       "dangerRatings": [
         {

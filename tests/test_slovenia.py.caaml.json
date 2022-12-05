@@ -10,6 +10,12 @@
         "startTime": "2021-03-20T00:00:00+01:00",
         "endTime": "2021-03-20T23:59:59.999000+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Avalanche Warning Service Slovenia",
+          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -98,6 +104,12 @@
       "validTime": {
         "startTime": "2021-03-20T00:00:00+01:00",
         "endTime": "2021-03-20T23:59:59.999000+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Avalanche Warning Service Slovenia",
+          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        }
       },
       "dangerRatings": [
         {
@@ -188,6 +200,12 @@
         "startTime": "2021-03-20T00:00:00+01:00",
         "endTime": "2021-03-20T23:59:59.999000+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Avalanche Warning Service Slovenia",
+          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -277,6 +295,12 @@
         "startTime": "2021-03-20T00:00:00+01:00",
         "endTime": "2021-03-20T23:59:59.999000+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Avalanche Warning Service Slovenia",
+          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -365,6 +389,12 @@
       "validTime": {
         "startTime": "2021-03-20T00:00:00+01:00",
         "endTime": "2021-03-20T23:59:59.999000+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Avalanche Warning Service Slovenia",
+          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+        }
       },
       "dangerRatings": [
         {

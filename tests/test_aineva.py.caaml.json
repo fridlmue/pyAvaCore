@@ -31,6 +31,12 @@
         "startTime": "2022-11-22T23:00:00+00:00",
         "endTime": "2022-11-23T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "AINEVA",
+          "website": "https://bollettini.aineva.it/albina_files/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

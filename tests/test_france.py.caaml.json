@@ -10,6 +10,12 @@
         "startTime": "2021-03-18T16:00:00+01:00",
         "endTime": "2021-03-19T18:00:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "R\u00e9dig\u00e9 par M\u00e9t\u00e9o-France avec la contribution des observateurs du r\u00e9seau nivo-m\u00e9t\u00e9orologique. Partenariat: ANMSM (Maires de Stations de Montagne), DSF (Domaines Skiables de France), ADSP (Directeurs de Pistes et de la S\u00e9curit\u00e9 des Stations de Sports d'Hiver) et autres acteurs de la montagne",
+          "website": "https://meteofrance.com/meteo-montagne"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

@@ -10,6 +10,12 @@
         "startTime": "2021-01-27T00:00:00+01:00",
         "endTime": "2021-01-27T23:59:59+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -57,6 +63,12 @@
       "validTime": {
         "startTime": "2021-01-27T00:00:00+01:00",
         "endTime": "2021-01-27T23:59:59+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
       },
       "dangerRatings": [
         {
@@ -106,6 +118,12 @@
         "startTime": "2021-01-27T00:00:00+01:00",
         "endTime": "2021-01-27T23:59:59+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -154,6 +172,12 @@
         "startTime": "2021-01-27T00:00:00+01:00",
         "endTime": "2021-01-27T23:59:59+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -195,6 +219,12 @@
         "startTime": "2021-01-27T00:00:00+01:00",
         "endTime": "2021-01-27T23:59:59+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -235,6 +265,12 @@
       "validTime": {
         "startTime": "2021-01-27T00:00:00+01:00",
         "endTime": "2021-01-27T23:59:59+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.avalanche-warnings.eu/public/bayern/caaml/en"
+        }
       },
       "dangerRatings": [
         {

@@ -10,6 +10,12 @@
         "startTime": "2022-03-01T16:19:00+01:00",
         "endTime": "2022-03-02T16:19:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Agencia Estatal de Meteorolog\u00eda",
+          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -40,6 +46,12 @@
       "validTime": {
         "startTime": "2022-03-01T16:19:00+01:00",
         "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Agencia Estatal de Meteorolog\u00eda",
+          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+        }
       },
       "dangerRatings": [
         {
@@ -82,6 +94,12 @@
         "startTime": "2022-03-01T16:19:00+01:00",
         "endTime": "2022-03-02T16:19:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Agencia Estatal de Meteorolog\u00eda",
+          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -123,6 +141,12 @@
         "startTime": "2022-03-01T16:19:00+01:00",
         "endTime": "2022-03-02T16:19:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Agencia Estatal de Meteorolog\u00eda",
+          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -163,6 +187,12 @@
       "validTime": {
         "startTime": "2022-03-01T16:19:00+01:00",
         "endTime": "2022-03-02T16:19:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Agencia Estatal de Meteorolog\u00eda",
+          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+        }
       },
       "dangerRatings": [
         {

@@ -10,6 +10,12 @@
         "startTime": "2022-02-21T19:00:00+00:00",
         "endTime": "2022-02-22T19:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Ve\u00f0urstofa \u00cdslands",
+          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -68,6 +74,12 @@
         "startTime": "2022-02-21T19:00:00+00:00",
         "endTime": "2022-02-22T19:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Ve\u00f0urstofa \u00cdslands",
+          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -112,6 +124,12 @@
       "validTime": {
         "startTime": "2022-02-21T19:00:00+00:00",
         "endTime": "2022-02-22T19:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Ve\u00f0urstofa \u00cdslands",
+          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+        }
       },
       "dangerRatings": [
         {
@@ -173,6 +191,12 @@
       "validTime": {
         "startTime": "2022-02-21T19:00:00+00:00",
         "endTime": "2022-02-22T19:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Ve\u00f0urstofa \u00cdslands",
+          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+        }
       },
       "dangerRatings": [
         {
