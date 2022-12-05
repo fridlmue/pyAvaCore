@@ -10,6 +10,12 @@
         "startTime": "2022-11-30T17:44:00",
         "endTime": "2022-12-01T20:00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Tatrza\u0144skie Ochotnicze Pogotowie Ratunkowe",
+          "website": "https://lawiny.topr.pl/"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

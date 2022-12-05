@@ -10,6 +10,12 @@
         "startTime": "2021-12-22T18:00:00",
         "endTime": "2021-12-23T18:00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -35,6 +41,12 @@
       "validTime": {
         "startTime": "2021-12-22T18:00:00",
         "endTime": "2021-12-23T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
       },
       "dangerRatings": [
         {
@@ -62,6 +74,12 @@
         "startTime": "2021-12-22T18:00:00",
         "endTime": "2021-12-23T18:00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -87,6 +105,12 @@
       "validTime": {
         "startTime": "2021-12-22T18:00:00",
         "endTime": "2021-12-23T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
       },
       "dangerRatings": [
         {
@@ -170,6 +194,12 @@
         "startTime": "2021-12-22T18:00:00",
         "endTime": "2021-12-23T18:00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -195,6 +225,12 @@
       "validTime": {
         "startTime": "2021-12-22T18:00:00",
         "endTime": "2021-12-23T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
       },
       "dangerRatings": [
         {

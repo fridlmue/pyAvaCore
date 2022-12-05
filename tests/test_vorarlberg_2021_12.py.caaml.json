@@ -31,6 +31,12 @@
         "startTime": "2021-12-29T06:30:52+00:00",
         "endTime": "2021-12-30T07:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Landeswarnzentrale Vorarlberg",
+          "website": "https://www.avalanche-warnings.eu/public/vorarlberg/caaml/en"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

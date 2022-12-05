@@ -10,6 +10,12 @@
         "startTime": "2022-04-19T00:00:00+02:00",
         "endTime": "2022-04-19T23:59:59+02:00"
       },
+      "source": {
+        "provider": {
+          "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
+          "website": "https://www.meteo.ad/xml/neige.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -33,6 +39,12 @@
         "startTime": "2022-04-19T00:00:00+02:00",
         "endTime": "2022-04-19T23:59:59+02:00"
       },
+      "source": {
+        "provider": {
+          "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
+          "website": "https://www.meteo.ad/xml/neige.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -55,6 +67,12 @@
       "validTime": {
         "startTime": "2022-04-19T00:00:00+02:00",
         "endTime": "2022-04-19T23:59:59+02:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
+          "website": "https://www.meteo.ad/xml/neige.xml"
+        }
       },
       "dangerRatings": [
         {

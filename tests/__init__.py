@@ -2,12 +2,18 @@ import json
 from pathlib import Path
 import unittest
 from jsonschema import validate
+from avacore.pyAvaCore import get_report_url
 
 from avacore.avabulletins import Bulletins
 
 
 class SnowTest(unittest.TestCase):
-    def assertEqualBulletinJSON(self, expected_basename: str, bulletins: Bulletins):
+    def assertEqualBulletinJSON(self, expected_basename: str, bulletins: Bulletins, region_id: str = ""):
+
+        region_id = region_id or bulletins[0].get_region_list()[0].upper()
+        url, provider = get_report_url(region_id, "en")
+        bulletins.append_provider(provider, url)
+
         expected = Path(f"{expected_basename}.caaml.json")
         # expected.write_text(bulletins.to_json())
         self.assertEqual(

@@ -133,6 +133,12 @@
         "startTime": "2021-02-21T23:00:00+00:00",
         "endTime": "2021-02-22T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Trentino",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -384,6 +390,12 @@
         "startTime": "2021-02-21T23:00:00+00:00",
         "endTime": "2021-02-22T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Trentino",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -621,6 +633,12 @@
       "validTime": {
         "startTime": "2021-02-21T23:00:00+00:00",
         "endTime": "2021-02-22T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Trentino",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {

@@ -62,7 +62,7 @@ def get_report_url(region_id, local=""):
     """
 
     region_id_prefix = region_id
-    while not region_id_prefix in config.keys():
+    while not region_id_prefix in config.keys() and "-" in region_id_prefix:
         if region_id_prefix.startswith("SI"):
             region_id_prefix = "SI"
         else:

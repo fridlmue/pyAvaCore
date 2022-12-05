@@ -181,6 +181,12 @@
         "startTime": "2022-03-21T23:00:00+00:00",
         "endTime": "2022-03-22T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Alto Adige/S\u00fcdtirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "earlier",
@@ -279,6 +285,12 @@
       "validTime": {
         "startTime": "2022-03-21T23:00:00+00:00",
         "endTime": "2022-03-22T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Alto Adige/S\u00fcdtirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {

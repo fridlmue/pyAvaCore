@@ -43,6 +43,12 @@
         "startTime": "2021-02-09T23:00:00+00:00",
         "endTime": "2021-02-10T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -187,6 +193,12 @@
       "validTime": {
         "startTime": "2021-02-09T23:00:00+00:00",
         "endTime": "2021-02-10T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {
@@ -393,6 +405,12 @@
         "startTime": "2021-02-09T23:00:00+00:00",
         "endTime": "2021-02-10T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -560,6 +578,12 @@
       "validTime": {
         "startTime": "2021-02-09T23:00:00+00:00",
         "endTime": "2021-02-10T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {
@@ -766,6 +790,12 @@
         "startTime": "2021-02-09T23:00:00+00:00",
         "endTime": "2021-02-10T23:00:00+00:00"
       },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -864,6 +894,12 @@
       "validTime": {
         "startTime": "2021-02-09T23:00:00+00:00",
         "endTime": "2021-02-10T23:00:00+00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+        }
       },
       "dangerRatings": [
         {

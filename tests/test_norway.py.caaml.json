@@ -10,6 +10,12 @@
         "startTime": "2021-12-02T00:00:00",
         "endTime": "2021-12-02T23:59:59"
       },
+      "source": {
+        "provider": {
+          "name": "Varsom: En tjeneste levert av NVE, i samarbeid med Statens vegvesen og Meteorologisk institutt",
+          "website": "https://varsom.no/"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",

@@ -10,6 +10,12 @@
         "startTime": "2022-03-15T07:48:00+01:00",
         "endTime": "2022-03-16T07:48:00+01:00"
       },
+      "source": {
+        "provider": {
+          "name": "Horsk\u00e1 slu\u017eba",
+          "website": "https://www.horskasluzba.cz/cz/avalanche-json"
+        }
+      },
       "dangerRatings": [
         {
           "validTimePeriod": "all_day",
@@ -51,6 +57,12 @@
       "validTime": {
         "startTime": "2022-03-15T08:36:01+01:00",
         "endTime": "2022-03-16T08:36:01+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "Horsk\u00e1 slu\u017eba",
+          "website": "https://www.horskasluzba.cz/cz/avalanche-json"
+        }
       },
       "dangerRatings": [
         {
