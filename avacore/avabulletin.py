@@ -95,9 +95,12 @@ class Elevation:
                 self.upperBound = re.sub(
                     r"ElevationRange_(.+)(Lo|Lw)", r"\1", auto_select
                 )
-            if ">" in auto_select:
+            if "><" in auto_select:
+                self.lowerBound = re.sub(r"><(.+)", r"\1", auto_select)
+                self.upperBound = re.sub(r"><(.+)", r"\1", auto_select)
+            elif ">" in auto_select:
                 self.lowerBound = re.sub(r">(.+)", r"\1", auto_select)
-            if "<" in auto_select:
+            elif "<" in auto_select:
                 self.upperBound = re.sub(r"<(.+)", r"\1", auto_select)
 
     def toString(self):

@@ -81,6 +81,8 @@ class Processor(JsonProcessor):
                             aspect_list.append(aspects[i])
 
                     elev = ""
+                    if problem["altitude_meter_treeline"]:
+                        elev = "><treeline"
                     if problem["altitude_meter_above_treeline"]:
                         elev = ">treeline"
                     if problem["altitude_meter_below_treeline"]:
