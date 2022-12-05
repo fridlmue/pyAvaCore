@@ -1,0 +1,404 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": ""
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-28T18:00:00",
+        "endTime": "2021-03-01T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "lavinprognoser",
+          "website": "https://lavinprognoser.se/"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "persistent_weak_layers",
+          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+        },
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "wind_slab",
+          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Betydande lavinfara"
+      },
+      "publicationTime": "2021-03-01T00:00:00",
+      "bulletinID": "_2021-03-01 00:00:00",
+      "avalancheActivity": {
+        "highlights": "R\u00e5d f\u00f6r m\u00e5ndagen",
+        "comment": "<div>M\u00e5ndagen bjuder p\u00e5 klassiskt lavinv\u00e4der. H\u00e5rda vindar och rikliga nederb\u00f6rdsm\u00e4ngder. Temperaturen sjunker och nederb\u00f6rden v\u00e4ntas som sn\u00f6.&nbsp;Drevsn\u00f6flaken byggs p\u00e5. Sn\u00f6fallet och drevet \u00f6kar belastningen ytterligare p\u00e5 v\u00e5ra begravda svaga lager. Det kan inte uteslutas att laviner sprider sig till djupt begravda svagheter, vilket kan resultera i stora laviner.</div><div><br></div><div>Under m\u00e5ndagen g\u00e4ller det att vara konservativ i v\u00e4gvalen. H\u00e5lla avst\u00e5nd och undvika branta sluttningar. Den svagaste sn\u00f6n bed\u00f6ms finnas i skogen och i omr\u00e5det ovan tr\u00e4dgr\u00e4ns d\u00e4r kalfj\u00e4llet tar vid. Sluttningar som saknar st\u00f6d nerifr\u00e5n, till exempel ovanf\u00f6r klippor eller konvex terr\u00e4ng, \u00e4r platser som ska undvikas. Whumpfljud \u00e4r naturens varningssignal f\u00f6r att sn\u00f6t\u00e4cket&nbsp;\u00e4r svagt, ta dessa p\u00e5 allvar.</div>"
+      },
+      "snowpackStructure": {
+        "comment": "Sm\u00e5 laviner i m\u00e5nga omr\u00e5den, eller stora laviner i delar av terr\u00e4ngen, eller mycket stora laviner p\u00e5 enstaka platser."
+      },
+      "travelAdvisory": {
+        "comment": "Farliga f\u00f6rh\u00e5llanden. Bed\u00f6m sn\u00f6t\u00e4cket och terr\u00e4ngen noggrant. Var mycket f\u00f6rsiktig n\u00e4r du v\u00e4ljer var och hur du \u00e5ker."
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": ""
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-28T18:00:00",
+        "endTime": "2021-03-01T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "lavinprognoser",
+          "website": "https://lavinprognoser.se/"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "persistent_weak_layers",
+          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "wind_slab",
+          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Betydande lavinfara"
+      },
+      "publicationTime": "2021-02-28T00:00:00",
+      "bulletinID": "_2021-02-28 00:00:00",
+      "avalancheActivity": {
+        "highlights": "M\u00e5ndag - Lavinv\u00e4der",
+        "comment": "<div>Typiskt lavinv\u00e4der v\u00e4ntas under kommande dygn.&nbsp;H\u00e5rda vindar och stora nederb\u00f6rdsm\u00e4ngder. Temperaturen sjunker och nederb\u00f6rden kommer som sn\u00f6.&nbsp;Drevsn\u00f6flaken byggs p\u00e5.&nbsp;Sn\u00f6fall och sn\u00f6drev \u00f6kar belastningen ytterligare p\u00e5 v\u00e5ra begravda svaga lager.&nbsp;Det kan inte uteslutas att laviner sprider sig till djupt begravda svagheter, vilket kan resultera i mycket stora laviner.&nbsp;</div><div><br></div><div>Beger du dig ut i terr\u00e4ngen under m\u00e5ndagen \u00e4r det h\u00f6g tid att vara konservativ: H\u00e5lla avst\u00e5nd till och undvika all lavinterr\u00e4ng.</div>"
+      },
+      "snowpackStructure": {
+        "comment": "Stora laviner i m\u00e5nga omr\u00e5den, eller mycket stora laviner i delar av terr\u00e4ngen."
+      },
+      "travelAdvisory": {
+        "comment": "Mycket farliga f\u00f6rh\u00e5llanden. All vistelse i lavinterr\u00e4ng avr\u00e5des."
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": ""
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-28T18:00:00",
+        "endTime": "2021-03-01T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "lavinprognoser",
+          "website": "https://lavinprognoser.se/"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "wind_slab",
+          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "persistent_weak_layers",
+          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Betydande lavinfara"
+      },
+      "publicationTime": "2021-03-01T00:00:00",
+      "bulletinID": "_2021-03-01 00:00:00",
+      "avalancheActivity": {
+        "highlights": "Undvik branta l\u00e4sluttningar",
+        "comment": "<div>Det f\u00f6rv\u00e4ntas mer sn\u00f6 under m\u00e5ndagen och i kombination med h\u00e5rd vind kommer drevsn\u00f6flaket att byggas p\u00e5. V\u00e5rt r\u00e5d \u00e4r d\u00e4rf\u00f6r att undvika branta l\u00e4sluttningar. Enligt v\u00e4derprognosen \u00e4r det framf\u00f6rallt sluttningar i v\u00e4derstrecken nordost till syd som kommer samla sn\u00f6, men var uppm\u00e4rksam p\u00e5 hur vinden bl\u00e5ser i morgon och d\u00e4rmed p\u00e5 var sn\u00f6n l\u00e4gger sig. Var dessutom observant p\u00e5 om den nyindrevade sn\u00f6n flakar eller spricker upp l\u00e4tt, v\u00e4lj d\u00e5 flack terr\u00e4ng.</div><div><br></div><div>Problemet med best\u00e5ende flak finns fortsatt kvar s\u00e5 vi vill att ni \u00e4r uppm\u00e4rksamma p\u00e5 platser med exempelvis tunt sn\u00f6t\u00e4cke eller vid uppstickande stenar och invid klippor. Det \u00e5r p\u00e5 s\u00e5dana platser man kan kliva igenom sn\u00f6t\u00e4cket och p\u00e5 s\u00e5 vis komma \u00e5t det svaga lagret. Det kan utl\u00f6sa stora laviner. </div>"
+      },
+      "snowpackStructure": {
+        "comment": "Sm\u00e5 laviner i m\u00e5nga omr\u00e5den, eller stora laviner i delar av terr\u00e4ngen, eller mycket stora laviner p\u00e5 enstaka platser."
+      },
+      "travelAdvisory": {
+        "comment": "Farliga f\u00f6rh\u00e5llanden. Bed\u00f6m sn\u00f6t\u00e4cket och terr\u00e4ngen noggrant. Var mycket f\u00f6rsiktig n\u00e4r du v\u00e4ljer var och hur du \u00e5ker."
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": ""
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-28T18:00:00",
+        "endTime": "2021-03-01T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "lavinprognoser",
+          "website": "https://lavinprognoser.se/"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "wind_slab",
+          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+        },
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "persistent_weak_layers",
+          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Betydande lavinfara"
+      },
+      "publicationTime": "2021-02-28T00:00:00",
+      "bulletinID": "_2021-02-28 00:00:00",
+      "avalancheActivity": {
+        "highlights": "Undvik branta l\u00e4sluttningar",
+        "comment": "<div>Det f\u00f6rv\u00e4ntas mer sn\u00f6 under m\u00e5ndagen och i kombination med h\u00e5rd vind kommer drevsn\u00f6flaket att byggas p\u00e5. V\u00e5rt r\u00e5d \u00e4r d\u00e4rf\u00f6r att undvika branta l\u00e4sluttningar. Var uppm\u00e4rksam p\u00e5 om den nyindrevade sn\u00f6n flakar eller spricker upp l\u00e4tt, v\u00e4lj d\u00e5 flack terr\u00e4ng. </div><div><br></div><div>Problemet med best\u00e5ende flak finns fortsatt kvar s\u00e5 vi vill att ni \u00e4r uppm\u00e4rksamma p\u00e5 platser med exempelvis tunt sn\u00f6t\u00e4cke eller vid uppstickande stenar och invid klippor. Det \u00e5r p\u00e5 s\u00e5dana platser man kan kliva igenom sn\u00f6t\u00e4cket och p\u00e5 s\u00e5 vis komma \u00e5t det svaga lagret. Det kan utl\u00f6sa stora laviner. <br></div>"
+      },
+      "snowpackStructure": {
+        "comment": "Sm\u00e5 laviner i m\u00e5nga omr\u00e5den, eller stora laviner i delar av terr\u00e4ngen, eller mycket stora laviner p\u00e5 enstaka platser."
+      },
+      "travelAdvisory": {
+        "comment": "Farliga f\u00f6rh\u00e5llanden. Bed\u00f6m sn\u00f6t\u00e4cket och terr\u00e4ngen noggrant. Var mycket f\u00f6rsiktig n\u00e4r du v\u00e4ljer var och hur du \u00e5ker."
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": ""
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-28T18:00:00",
+        "endTime": "2021-03-01T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "lavinprognoser",
+          "website": "https://lavinprognoser.se/"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "high"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "persistent_weak_layers",
+          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+        },
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "wind_slab",
+          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Betydande lavinfara"
+      },
+      "publicationTime": "2021-02-28T00:00:00",
+      "bulletinID": "_2021-02-28 00:00:00",
+      "avalancheActivity": {
+        "highlights": "M\u00e5ndag - Lavinv\u00e4der",
+        "comment": "<div>Typiskt lavinv\u00e4der v\u00e4ntas under kommande dygn.&nbsp;H\u00e5rda vindar och stora nederb\u00f6rdsm\u00e4ngder. Temperaturen sjunker och nederb\u00f6rden kommer som sn\u00f6.&nbsp;Drevsn\u00f6flaken byggs p\u00e5.&nbsp;Sn\u00f6fall och sn\u00f6drev \u00f6kar belastningen p\u00e5 v\u00e5ra begravda svaga lager.&nbsp;Det kan inte uteslutas att laviner sprider sig till djupt begravda svagheter, vilket kan resultera i mycket stora laviner.&nbsp;</div><div><br></div><div>Beger du dig ut i terr\u00e4ngen under m\u00e5ndagen \u00e4r det h\u00f6g tid att vara konservativ: H\u00e5lla avst\u00e5nd till och undvika all lavinterr\u00e4ng.</div>"
+      },
+      "snowpackStructure": {
+        "comment": "Stora laviner i m\u00e5nga omr\u00e5den, eller mycket stora laviner i delar av terr\u00e4ngen."
+      },
+      "travelAdvisory": {
+        "comment": "Mycket farliga f\u00f6rh\u00e5llanden. All vistelse i lavinterr\u00e4ng avr\u00e5des."
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": ""
+        }
+      ],
+      "validTime": {
+        "startTime": "2021-02-28T18:00:00",
+        "endTime": "2021-03-01T18:00:00"
+      },
+      "source": {
+        "provider": {
+          "name": "lavinprognoser",
+          "website": "https://lavinprognoser.se/"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "problemType": "persistent_weak_layers",
+          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+        },
+        {
+          "aspects": [
+            "NE",
+            "E",
+            "SE",
+            "S"
+          ],
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "problemType": "wind_slab",
+          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+        }
+      ],
+      "tendency": {
+        "tendencyComment": "Betydande lavinfara"
+      },
+      "publicationTime": "2021-03-01T00:00:00",
+      "bulletinID": "_2021-03-01 00:00:00",
+      "avalancheActivity": {
+        "highlights": "Undvik branta l\u00e4sluttningar",
+        "comment": "<div>Den h\u00e5rda vinden forts\u00e4tter under hela m\u00e5ndagen. Det i kombination med tilltagande sn\u00f6byar g\u00f6r att problemet med drevsn\u00f6flak kommer att f\u00f6rv\u00e4rras, b\u00e5de i utbredning och k\u00e4nslighet. V\u00e5rt r\u00e5d \u00e4r att undvika branta l\u00e4sluttningar under morgondagen eftersom en eventuell lavin p\u00e5 drevsn\u00f6flaket dessutom skulle kunna utl\u00f6sa en lavin p\u00e5 det best\u00e5ende flaket som finns begravt i sn\u00f6t\u00e4cket. En lavin p\u00e5 det lagret kan komma att bli betydligt st\u00f6rre \u00e4n de vi f\u00f6rv\u00e4ntar oss kan utl\u00f6sas i drevsn\u00f6n. </div>"
+      },
+      "snowpackStructure": {
+        "comment": "Sm\u00e5 laviner i m\u00e5nga omr\u00e5den, eller stora laviner i delar av terr\u00e4ngen, eller mycket stora laviner p\u00e5 enstaka platser."
+      },
+      "travelAdvisory": {
+        "comment": "Farliga f\u00f6rh\u00e5llanden. Bed\u00f6m sn\u00f6t\u00e4cket och terr\u00e4ngen noggrant. Var mycket f\u00f6rsiktig n\u00e4r du v\u00e4ljer var och hur du \u00e5ker."
+      }
+    }
+  ]
+}
