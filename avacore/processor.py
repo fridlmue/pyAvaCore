@@ -44,6 +44,8 @@ class Processor(ABC):
 
     def _fetch_url(self, url: str, headers: dict) -> str:
         req = urllib.request.Request(url, headers=headers)
+        if not req.has_header("User-Agent"):
+            req.add_header("User-Agent", "gitlab.com/albina-euregio/pyAvaCore")
         logging.info("Fetching %s", req.full_url)
         with urllib.request.urlopen(req) as response:
             return response.read().decode(encoding=self.raw_data_encoding)
