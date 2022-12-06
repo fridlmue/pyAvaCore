@@ -1,0 +1,13 @@
+{
+  "maxDangerRatings": {
+    "": 3,
+    ":am": 3,
+    ":high": 3,
+    ":high:am": 3,
+    ":high:pm": 3,
+    ":low": 3,
+    ":low:am": 3,
+    ":low:pm": 3,
+    ":pm": 3
+  }
+}
