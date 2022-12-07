@@ -142,17 +142,19 @@ class Processor(AbstractProcessor):
             self.fetch_files_ch()
 
         zip_path = zipfile.Path(self.raw_data)
+
+        gk_region2pdf = []
         for p in zip_path.joinpath("1").iterdir():
             if str(p.at).startswith("1/gk1_dst"):
                 png_data = png.Reader(bytes=p.read_bytes())
                 _, _, px, info = png_data.read()
                 px_list = list(px)
                 for region in regions:
-                    if px_list[region.x][region.y] not in info["background"]:
+                    if px_list[region.y][region.x] not in info["background"]:
                         bid = str(p.at).removeprefix("1/gk1_dst")[:7]
-                        print(f"{region.id}=gk_[color]_[language]_reg_XXX_{bid}8947717.pdf")
+                        gk_region2pdf.append(f"{region.id}=gk_[color]_[language]_reg_XXX_{bid}8947717.pdf\n")
 
-        if zip_path.joinpath("gk_region2pdf.txt").is_file():
+        if True:
 
             # Receives validity information from text.json
             with zip_path.joinpath("text.json").open(encoding="utf8") as fp:
@@ -222,8 +224,8 @@ class Processor(AbstractProcessor):
             bulletinIDs = []
             bulletin_combinations: Set[AvaBulletin] = set()
             # Receives the ID of the report that matches the selected region_id
-            with zip_path.joinpath("gk_region2pdf.txt").open(encoding="utf8") as fp:
-                for line in fp:
+            if True:
+                for line in gk_region2pdf:
                     bulletinID = line.split("_")[5][:-5]
                     bulletin_combinations.add(bulletinID)
                     bulletinID_pm = None
