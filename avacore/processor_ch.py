@@ -54,14 +54,11 @@ class Processor(AbstractProcessor):
             self.raw_data_format = "zip"
 
         url = f"https://www.slf.ch/avalanche/bulletin/{self.local}/gk_region2pdf.txt"
-        try:
-            with urllib.request.urlopen(url) as response:
-                logging.info("Fetching %s", url)
-                data = response.read()
-            with zipfile.ZipFile(self.raw_data, "a") as zip_ref:
-                zip_ref.writestr("gk_region2pdf.txt", data)
-        except:  # pylint: disable=bare-except
-            logging.warning("Could not locate gk_regions2pdf.txt")
+        with urllib.request.urlopen(url) as response:
+            logging.info("Fetching %s", url)
+            data = response.read()
+        with zipfile.ZipFile(self.raw_data, "a") as zip_ref:
+            zip_ref.writestr("gk_region2pdf.txt", data)
 
     @staticmethod
     def get_prone_locations(img_text):
