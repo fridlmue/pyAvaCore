@@ -136,7 +136,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Trentino",
-          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+          "website": "https://static.avalanche.report/bulletins/latest/IT-32-TN_en.xml"
         }
       },
       "dangerRatings": [
@@ -393,7 +393,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Trentino",
-          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+          "website": "https://static.avalanche.report/bulletins/latest/IT-32-TN_en.xml"
         }
       },
       "dangerRatings": [
@@ -637,7 +637,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Trentino",
-          "website": "https://static.avalanche.report/bulletins/latest/en.xml"
+          "website": "https://static.avalanche.report/bulletins/latest/IT-32-TN_en.xml"
         }
       },
       "dangerRatings": [
