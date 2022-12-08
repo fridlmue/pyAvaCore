@@ -47,6 +47,7 @@ class Processor(AbstractProcessor):
         """
         Downloads the swiss avalanche zip for the slf app together with the region mapping information
         """
+        self.url = f"https://www.slf.ch/avalanche/mobile/bulletin_{self.local}.zip"
         with urllib.request.urlopen(self.url) as response:
             logging.info("Fetching %s", self.url)
             data = response.read()
@@ -162,7 +163,9 @@ class Processor(AbstractProcessor):
                     planes = info["planes"]
                     px_list = list(px)
                     for region in regions:
-                        b = px_list[region.y][region.x * planes : (region.x + 1) * planes]
+                        b = px_list[region.y][
+                            region.x * planes : (region.x + 1) * planes
+                        ]
                         if sum(b) > 0:
                             bid = str(p.at).removeprefix("1/gk1_dst")[:8]
                             gk_region2pdf[region.id] = bid

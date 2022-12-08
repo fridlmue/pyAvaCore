@@ -278,6 +278,8 @@ class AvalancheProblem:
             problem_type_text = "gliding_snow"
         elif "favourable" in problem_type_text:
             problem_type_text = "favourable_situation"
+        elif "no_distinct" in problem_type_text:
+            problem_type_text = "no_distinct_avalanche_problem"
         self.problemType = problem_type_text
         return self
 
