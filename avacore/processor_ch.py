@@ -228,10 +228,8 @@ class Processor(AbstractProcessor):
                 wxSynopsis.comment += (
                     "\n" + segment.split("popover-weather-forecast ")[1]
                 )
-            # if outlook:
-            #     common_report.tendency.tendencyComment = self.clean_html_string(
-            #         outlook.split("</span>")[1]
-            #     )
+            if outlook:
+                common_report.tendency.tendencyComment = self.clean_html_string(outlook)
 
         common_report.wxSynopsis = wxSynopsis
 
