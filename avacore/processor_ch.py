@@ -143,16 +143,30 @@ class Processor(AbstractProcessor):
 
         zip_path = zipfile.Path(self.raw_data)
 
-        gk_region2pdf = []
+        gk_region2pdf = {}
         for p in zip_path.joinpath("1").iterdir():
             if str(p.at).startswith("1/gk1_dst"):
                 png_data = png.Reader(bytes=p.read_bytes())
                 _, _, px, info = png_data.read()
+                planes = info["planes"]
                 px_list = list(px)
                 for region in regions:
-                    if px_list[region.y][region.x] not in info["background"]:
-                        bid = str(p.at).removeprefix("1/gk1_dst")[:7]
-                        gk_region2pdf.append(f"{region.id}=gk_[color]_[language]_reg_XXX_{bid}8947717.pdf\n")
+                    b = px_list[region.y][region.x * planes : (region.x + 1) * planes]
+                    if sum(b) > 0:
+                        bid = str(p.at).removeprefix("1/gk1_dst")[:8]
+                        gk_region2pdf[region.id] = bid
+        if zip_path.joinpath("2").is_dir():
+            for p in zip_path.joinpath("2").iterdir():
+                if str(p.at).startswith("2/gk1_dst"):
+                    png_data = png.Reader(bytes=p.read_bytes())
+                    _, _, px, info = png_data.read()
+                    planes = info["planes"]
+                    px_list = list(px)
+                    for region in regions:
+                        b = px_list[region.y][region.x * planes : (region.x + 1) * planes]
+                        if sum(b) > 0:
+                            bid = str(p.at).removeprefix("1/gk1_dst")[:8]
+                            gk_region2pdf[region.id] = bid
 
         if True:
 
@@ -164,7 +178,10 @@ class Processor(AbstractProcessor):
 
             common_report = AvaBulletin()
 
-            begin, end = data["validity"].split("/")
+            begin_end_match = re.compile(
+                r"Edition: (?P<begin_date>[0-9.]+), (?P<begin_time>[0-9:]+) "
+                r"Next update: (?P<end_date>[0-9.]+), (?P<end_time>[0-9:]+)"
+            ).match(data["validity"])
 
             date_time_now = datetime.now()
 
@@ -172,7 +189,8 @@ class Processor(AbstractProcessor):
             tzinfo = ZoneInfo("Europe/Zurich")
 
             common_report.publicationTime = datetime.strptime(
-                year + "-" + begin[begin.find(":") + 2 : -1], "%Y-%d.%m., %H:%M"
+                f"{year}-{begin_end_match.group('begin_date')}, {begin_end_match.group('begin_time')}",
+                "%Y-%d.%m., %H:%M",
             ).replace(tzinfo=tzinfo)
             common_report.validTime.startTime = common_report.publicationTime
             if common_report.validTime.startTime.hour == 17:
@@ -214,10 +232,10 @@ class Processor(AbstractProcessor):
                     wxSynopsis.comment += (
                         "\n" + segment.split("popover-weather-forecast ")[1]
                     )
-                if outlook:
-                    common_report.tendency.tendencyComment = self.clean_html_string(
-                        outlook.split("</span>")[1]
-                    )
+                # if outlook:
+                #     common_report.tendency.tendencyComment = self.clean_html_string(
+                #         outlook.split("</span>")[1]
+                #     )
 
             common_report.wxSynopsis = wxSynopsis
 
@@ -225,13 +243,12 @@ class Processor(AbstractProcessor):
             bulletin_combinations: Set[AvaBulletin] = set()
             # Receives the ID of the report that matches the selected region_id
             if True:
-                for line in gk_region2pdf:
-                    bulletinID = line.split("_")[5][:-5]
+                for regionID, bulletinID in gk_region2pdf.items():
                     bulletin_combinations.add(bulletinID)
                     bulletinID_pm = None
-                    if len(bulletinID) > 7:
-                        bulletinID_pm = bulletinID[7:]
-                        bulletinID = bulletinID[:7]
+                    if len(bulletinID) > 8:
+                        bulletinID_pm = bulletinID[8:]
+                        bulletinID = bulletinID[:8]
                     if bulletinID not in bulletinIDs:
                         bulletinIDs.append(bulletinID)
                         new_report = copy.deepcopy(common_report)
@@ -252,11 +269,11 @@ class Processor(AbstractProcessor):
                                 bulletinIDs.index(bulletinID_pm)
                             ].predecessor_id += ("_" + bulletinID)
                     reports[bulletinIDs.index(bulletinID)].regions.append(
-                        Region("CH-" + line[:4])
+                        Region(regionID)
                     )
                     if not bulletinID_pm is None:
                         reports[bulletinIDs.index(bulletinID_pm)].regions.append(
-                            Region("CH-" + line[:4])
+                            Region(regionID)
                         )
 
             for report in reports:
@@ -322,40 +339,40 @@ class Processor(AbstractProcessor):
                 else:
                     texts.append(text)
 
-                avalancheActivity = Texts(comment="")
+                # avalancheActivity = Texts(comment="")
 
-                for element in texts:
-                    if "<h5>Danger description</h5>" in element:
-                        avalancheActivityComment = re.search(
-                            r"(?<=\<\/h5><p>)(.|\n)*?(?=\<\/p>)", element
-                        )
-                        avalancheActivity.comment += (
-                            avalancheActivityComment.group(0) + " "
-                        )
-                    elif "No distinct avalanche problem</h4>" in element:
-                        avalancheActivityComment = re.search(
-                            r"(?<=No distinct avalanche problem<\/h4><p>)(.|\n)*?(?=\<\/p>)",
-                            element,
-                        )
-                        avalancheActivity.comment += (
-                            avalancheActivityComment.group(0) + " "
-                        )
-                    elif "</h4><p>" in element:
-                        avalancheActivityComment = re.search(
-                            r"(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)", element
-                        )
-                        comment = avalancheActivityComment.group(0)
-                        comment = re.sub(r"\(see.*map\)", "", comment)
-                        avalancheActivity.comment += comment + " "
-                    else:
-                        logging.warning(
-                            "Error parsing avActComment in: %s", report.bulletinID
-                        )
+                # for element in texts:
+                #     if "<h5>Danger description</h5>" in element:
+                #         avalancheActivityComment = re.search(
+                #             r"(?<=\<\/h5><p>)(.|\n)*?(?=\<\/p>)", element
+                #         )
+                #         avalancheActivity.comment += (
+                #             avalancheActivityComment.group(0) + " "
+                #         )
+                #     elif "No distinct avalanche problem</h4>" in element:
+                #         avalancheActivityComment = re.search(
+                #             r"(?<=No distinct avalanche problem<\/h4><p>)(.|\n)*?(?=\<\/p>)",
+                #             element,
+                #         )
+                #         avalancheActivity.comment += (
+                #             avalancheActivityComment.group(0) + " "
+                #         )
+                #     elif "</h4><p>" in element:
+                #         avalancheActivityComment = re.search(
+                #             r"(?<=\<\/h4><p>)(.|\n)*?(?=\<\/p>)", element
+                #         )
+                #         comment = avalancheActivityComment.group(0)
+                #         comment = re.sub(r"\(see.*map\)", "", comment)
+                #         avalancheActivity.comment += comment + " "
+                #     else:
+                #         logging.warning(
+                #             "Error parsing avActComment in: %s", report.bulletinID
+                #         )
 
-                avalancheActivity.comment = self.clean_html_string(
-                    avalancheActivity.comment
-                )
-                report.avalancheActivity = avalancheActivity
+                # avalancheActivity.comment = self.clean_html_string(
+                #     avalancheActivity.comment
+                # )
+                # report.avalancheActivity = avalancheActivity
 
                 if self.problems:
                     # Optional Feature to parse Problems from the swiss Reports
