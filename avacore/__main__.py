@@ -179,10 +179,12 @@ def download_region(regionID):
 
 def download_regions():
     """Downloads all regions"""
+    failed_regions = []
     for region in args.regions.split():
         try:
             download_region(region)
         except urllib.error.HTTPError as e:
+            failed_regions.append(region)
             logging.warning(
                 "Failed to download %s from %s: %s %s",
                 region,
@@ -191,7 +193,13 @@ def download_regions():
                 e.reason,
             )
         except Exception as e:  # pylint: disable=broad-except
+            failed_regions.append(region)
             logging.error("Failed to download %s", region, exc_info=e)
+    if failed_regions:
+        logging.error(
+            "Failed to download the following regions: %s",
+            " ".join(failed_regions),
+        )
 
 
 def merge_regions(validity_date: str):
