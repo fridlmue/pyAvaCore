@@ -1,4 +1,4 @@
-from avacore.processor_ch import Processor
+from avacore.processor_ch_zip import Processor
 
 import io
 import pathlib
