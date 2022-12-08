@@ -2,11 +2,13 @@ from avacore.processor_ch import Processor
 
 import io
 import pathlib
+import pytest
 
 from tests import SnowTest
 
 
 class TestCH(SnowTest):
+    @pytest.mark.skip("2021 format unsupported")
     def test_ch(self):
         processor = Processor()
         processor.raw_data = io.BytesIO(pathlib.Path(f"{__file__}.zip").read_bytes())
