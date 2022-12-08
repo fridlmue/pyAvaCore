@@ -12,10 +12,8 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-import logging
 import copy
 import json
-from urllib.request import urlopen, Request
 
 from avacore.avabulletin import (
     AvaBulletin,
@@ -36,14 +34,10 @@ class Processor(JsonProcessor):
         """
         Download reports
         """
-        req = Request("https://caaml.hzs.sk/")
-        logging.info("Fetching %s", req.full_url)
-
-        with urlopen(req) as response_content:
-            response = response_content.read().decode("utf-8").split("</textarea>")[1]
-            self.raw_data = response
-            self.raw_data_format = "json"
-            response_json = json.loads(response)
+        response = self._fetch_url(self.url, {}).split("</textarea>")[1]
+        self.raw_data = response
+        self.raw_data_format = "json"
+        response_json = json.loads(response)
 
         bulletins = self.parse_json(region_id, response_json)
         return bulletins

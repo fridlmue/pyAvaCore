@@ -54,14 +54,10 @@ class Processor(XmlProcessor):
         with urlopen(req) as response_content:
             return response_content.read().decode("utf-8")
 
-    def process_bulletin(self, region_id) -> Bulletins:
+    def process_bulletin(self, region_id: str) -> Bulletins:
         if region_id == "FR":
             return self.process_all_reports_fr()
-        url = (
-            "https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain="
-            + re.sub("FR-", "", region_id)
-            + "&report_type=Forecast&report_subtype=BRA"
-        )
+        url = self.url.format(region=region_id.removeprefix("FR-"))
         root = self._fetch_xml(url, {})
         return self.parse_xml(region_id, root)
 

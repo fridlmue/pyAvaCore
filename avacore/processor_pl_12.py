@@ -35,8 +35,7 @@ class Processor(JsonProcessor):
 
     def process_bulletin(self, region_id) -> Bulletins:
 
-        url = "https://lawiny.topr.pl/"
-        response: str = self._fetch_url(url, {})
+        response: str = self._fetch_url(self.url, {})
 
         raw = (
             re.compile(r"const oLawReport = (?P<raw_json>[^*]+?);\n")

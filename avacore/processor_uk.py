@@ -163,12 +163,11 @@ class Processor(JsonProcessor):
         Downloads and returns requested Avalanche Bulletins
         """
 
-        url = "https://www.sais.gov.uk/api?action=getForecast"
         headers = {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/50.0.2661.102 Safari/537.36"
         }
-        sais_reports = self._fetch_json(url, headers)
+        sais_reports = self._fetch_json(self.url, headers)
 
         return self.parse_json(region_id, sais_reports)
