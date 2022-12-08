@@ -1,4 +1,4 @@
-from avacore.processor_ch import Processor
+from avacore.processor_ch_zip import Processor
 
 import io
 import pathlib
@@ -12,4 +12,4 @@ class TestCH(SnowTest):
         processor.raw_data = io.BytesIO(pathlib.Path(f"{__file__}.zip").read_bytes())
         processor.year = "2022"
         bulletins = processor.process_bulletin("")
-        self.assertEqualBulletinJSON(__file__, bulletins)
+        self.assertEqualBulletinJSON(__file__, bulletins, "CH@zip")

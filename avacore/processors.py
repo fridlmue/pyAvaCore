@@ -18,6 +18,7 @@ import avacore.processor_ad
 import avacore.processor_caamlv5
 import avacore.processor_catalunya
 import avacore.processor_ch
+import avacore.processor_ch_zip
 import avacore.processor_cz
 import avacore.processor_es
 import avacore.processor_fr
@@ -37,6 +38,8 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_ad.Processor()
     if region_id.startswith("CH"):
         return avacore.processor_ch.Processor()
+    if region_id.startswith("CH@zip"):
+        return avacore.processor_ch_zip.Processor()
     if region_id.startswith("CZ"):
         return avacore.processor_cz.Processor()
     if region_id.startswith("ES") and not region_id.startswith("ES-CT"):
