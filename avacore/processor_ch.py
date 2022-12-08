@@ -172,22 +172,17 @@ class Processor(AbstractProcessor):
         with zip_path.joinpath("text.json").open(encoding="utf8") as fp:
             data = json.load(fp)
 
-        # region_id = region_id[-4:]
-
         common_report = AvaBulletin()
 
-        begin_end_match = re.compile(
-            r"Edition: (?P<begin_date>[0-9.]+), (?P<begin_time>[0-9:]+) "
-            r"Next update: (?P<end_date>[0-9.]+), (?P<end_time>[0-9:]+)"
-        ).match(data["validity"])
-
         date_time_now = datetime.now()
-
         year = self.year or str(date_time_now.year)
         tzinfo = ZoneInfo("Europe/Zurich")
 
+        begin = re.compile(r"Edition: (?P<date>[0-9.]+), (?P<time>[0-9:]+)").search(
+            data["validity"]
+        )
         common_report.publicationTime = datetime.strptime(
-            f"{year}-{begin_end_match.group('begin_date')}, {begin_end_match.group('begin_time')}",
+            f"{year}-{begin['date']}, {begin['time']}",
             "%Y-%d.%m., %H:%M",
         ).replace(tzinfo=tzinfo)
         common_report.validTime.startTime = common_report.publicationTime
@@ -199,9 +194,12 @@ class Processor(AbstractProcessor):
             common_report.validTime.endTime = (
                 common_report.validTime.startTime + timedelta(hours=9)
             )
-        else:  # Shourld not happen
+        else:  # Should not happen
+            end = re.compile(
+                r"Next update: (?P<date>[0-9.]+), (?P<time>[0-9:]+)"
+            ).search(data["validity"])
             common_report.validTime.endTime = datetime.strptime(
-                str(date_time_now.year) + "-" + end[end.find(":") + 2 :],
+                f"{year}-{end['date']}, {end['time']}",
                 "%Y-%d.%m., %H:%M",
             ).replace(tzinfo=tzinfo)
 
