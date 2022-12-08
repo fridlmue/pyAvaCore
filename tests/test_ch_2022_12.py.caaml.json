@@ -9,6 +9,9 @@
           "regionID": "CH-2221"
         },
         {
+          "regionID": "CH-2222"
+        },
+        {
           "regionID": "CH-2223"
         },
         {
@@ -28,6 +31,9 @@
         },
         {
           "regionID": "CH-4232"
+        },
+        {
+          "regionID": "CH-4241"
         },
         {
           "regionID": "CH-4242"
@@ -141,15 +147,6 @@
     {
       "regions": [
         {
-          "regionID": "CH-2222"
-        },
-        {
-          "regionID": "CH-5232"
-        },
-        {
-          "regionID": "CH-7115"
-        },
-        {
           "regionID": "CH-1114"
         },
         {
@@ -228,6 +225,9 @@
           "regionID": "CH-3113"
         },
         {
+          "regionID": "CH-3114"
+        },
+        {
           "regionID": "CH-3222"
         },
         {
@@ -238,9 +238,6 @@
         },
         {
           "regionID": "CH-3311"
-        },
-        {
-          "regionID": "CH-5121"
         },
         {
           "regionID": "CH-5124"
@@ -258,13 +255,25 @@
           "regionID": "CH-5231"
         },
         {
+          "regionID": "CH-5232"
+        },
+        {
           "regionID": "CH-7113"
+        },
+        {
+          "regionID": "CH-7115"
+        },
+        {
+          "regionID": "CH-7125"
         },
         {
           "regionID": "CH-7126"
         },
         {
           "regionID": "CH-7221"
+        },
+        {
+          "regionID": "CH-7222"
         },
         {
           "regionID": "CH-7231"
@@ -312,12 +321,6 @@
     {
       "regions": [
         {
-          "regionID": "CH-4241"
-        },
-        {
-          "regionID": "CH-4211"
-        },
-        {
           "regionID": "CH-4111"
         },
         {
@@ -349,6 +352,9 @@
         },
         {
           "regionID": "CH-4125"
+        },
+        {
+          "regionID": "CH-4211"
         },
         {
           "regionID": "CH-4212"
@@ -411,10 +417,7 @@
     {
       "regions": [
         {
-          "regionID": "CH-5123"
-        },
-        {
-          "regionID": "CH-7125"
+          "regionID": "CH-5121"
         },
         {
           "regionID": "CH-5111"
@@ -427,6 +430,9 @@
         },
         {
           "regionID": "CH-5122"
+        },
+        {
+          "regionID": "CH-5123"
         },
         {
           "regionID": "CH-7121"
@@ -530,9 +536,6 @@
     },
     {
       "regions": [
-        {
-          "regionID": "CH-3114"
-        },
         {
           "regionID": "CH-1111"
         },
