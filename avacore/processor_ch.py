@@ -135,6 +135,10 @@ class Root(TypedDict):
 
 
 class Processor(JsonProcessor):
+    """
+    Fetches from the SLF: Avalanche Bulletin API -- https://api.slf.ch/bulletin/v2/
+    """
+
     def process_bulletin(self, region_id) -> Bulletins:
         root = self._fetch_json(self.url, {})
         return self.parse_json(region_id, root)

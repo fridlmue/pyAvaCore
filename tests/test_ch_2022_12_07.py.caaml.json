@@ -112,7 +112,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/whiterisk/current?geojson=true"
+          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true"
         }
       },
       "dangerRatings": [
@@ -302,7 +302,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/whiterisk/current?geojson=true"
+          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true"
         }
       },
       "dangerRatings": [
@@ -408,7 +408,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/whiterisk/current?geojson=true"
+          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true"
         }
       },
       "dangerRatings": [
@@ -490,7 +490,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/whiterisk/current?geojson=true"
+          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true"
         }
       },
       "dangerRatings": [
@@ -548,7 +548,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/whiterisk/current?geojson=true"
+          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true"
         }
       },
       "dangerRatings": [
@@ -666,7 +666,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/whiterisk/current?geojson=true"
+          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true"
         }
       },
       "dangerRatings": [
