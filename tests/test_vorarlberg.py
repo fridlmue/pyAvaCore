@@ -1,11 +1,11 @@
-import pytest
+import unittest
 from avacore.processor_caamlv5 import VorarlbergProcessor
 
 from tests import SnowTest
 
 
 class TestVorarlberg(SnowTest):
-    @pytest.mark.skip("wxSynopsisComment")
+    @unittest.skip("wxSynopsisComment")
     def test_vorarlberg(self):
         processor = VorarlbergProcessor()
         bulletins = processor.parse_xml_file("", f"{__file__}.xml")

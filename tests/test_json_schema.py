@@ -1,7 +1,5 @@
 import json
-import jsonschema
 import unittest
-import pytest
 from jsonschema import validate
 
 from avacore import pyAvaCore
@@ -11,7 +9,7 @@ from avacore.avabulletins import Bulletins
 
 
 class TestJsonSchema(unittest.TestCase):
-    @pytest.mark.skip(
+    @unittest.skip(
         reason="Test is designed for a local execution to ensure general compatibility agains JSON schema once."
     )
     def test_json_schema(self):
