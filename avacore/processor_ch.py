@@ -180,12 +180,18 @@ class Processor(JsonProcessor):
                 )
             ]
             bulletin.customData = dict(
-                CH=dict(
+                SLF=dict(
                     avalancheProneLocation=dict(
-                        aspects=rating["aspect"],
+                        aspects=AvalancheProblem()
+                        .add_aspects(rating["aspect"]["from"], rating["aspect"]["to"])
+                        .aspects
+                        if rating["aspect"]
+                        and "from" in rating["aspect"]
+                        and "to" in rating["aspect"]
+                        else None,
                         elevation=rating["altitude"],
                     ),
-                    dangerlevel=rating["dangerlevel"],
+                    dangerLevelDetail=rating["dangerlevel"]["level_detail"],
                 )
             )
             bulletin.highlights = flash

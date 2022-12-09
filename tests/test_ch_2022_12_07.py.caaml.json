@@ -130,22 +130,20 @@
         }
       ],
       "customData": {
-        "CH": {
+        "SLF": {
           "avalancheProneLocation": {
-            "aspects": {
-              "from": "NW",
-              "to": "E"
-            },
+            "aspects": [
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
             "elevation": {
               "indicator": "ABOVE",
               "altitude": 2400
             }
           },
-          "dangerlevel": {
-            "level": "3_CONSIDERABLE",
-            "level_detail": "LEVDET_MINUS",
-            "reliability": null
-          }
+          "dangerLevelDetail": "LEVDET_MINUS"
         }
       },
       "bulletinID": "CH-52492-1",
@@ -317,22 +315,20 @@
         }
       ],
       "customData": {
-        "CH": {
+        "SLF": {
           "avalancheProneLocation": {
-            "aspects": {
-              "from": "NW",
-              "to": "E"
-            },
+            "aspects": [
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
             "elevation": {
               "indicator": "ABOVE",
               "altitude": 2200
             }
           },
-          "dangerlevel": {
-            "level": "2_MODERATE",
-            "level_detail": "LEVDET_NEUTRAL",
-            "reliability": null
-          }
+          "dangerLevelDetail": "LEVDET_NEUTRAL"
         }
       },
       "bulletinID": "CH-52492-2",
@@ -423,22 +419,20 @@
         }
       ],
       "customData": {
-        "CH": {
+        "SLF": {
           "avalancheProneLocation": {
-            "aspects": {
-              "from": "NW",
-              "to": "E"
-            },
+            "aspects": [
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
             "elevation": {
               "indicator": "ABOVE",
               "altitude": 2400
             }
           },
-          "dangerlevel": {
-            "level": "2_MODERATE",
-            "level_detail": "LEVDET_NEUTRAL",
-            "reliability": null
-          }
+          "dangerLevelDetail": "LEVDET_NEUTRAL"
         }
       },
       "bulletinID": "CH-52492-3",
@@ -505,22 +499,20 @@
         }
       ],
       "customData": {
-        "CH": {
+        "SLF": {
           "avalancheProneLocation": {
-            "aspects": {
-              "from": "NW",
-              "to": "E"
-            },
+            "aspects": [
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
             "elevation": {
               "indicator": "ABOVE",
               "altitude": 2600
             }
           },
-          "dangerlevel": {
-            "level": "2_MODERATE",
-            "level_detail": "LEVDET_MINUS",
-            "reliability": null
-          }
+          "dangerLevelDetail": "LEVDET_MINUS"
         }
       },
       "bulletinID": "CH-52492-4",
@@ -566,22 +558,19 @@
         }
       ],
       "customData": {
-        "CH": {
+        "SLF": {
           "avalancheProneLocation": {
-            "aspects": {
-              "from": "NW",
-              "to": "NE"
-            },
+            "aspects": [
+              "NW",
+              "N",
+              "NE"
+            ],
             "elevation": {
               "indicator": "ABOVE",
               "altitude": 1600
             }
           },
-          "dangerlevel": {
-            "level": "2_MODERATE",
-            "level_detail": "LEVDET_MINUS",
-            "reliability": null
-          }
+          "dangerLevelDetail": "LEVDET_MINUS"
         }
       },
       "bulletinID": "CH-52492-5",
@@ -681,16 +670,12 @@
         }
       ],
       "customData": {
-        "CH": {
+        "SLF": {
           "avalancheProneLocation": {
             "aspects": null,
             "elevation": null
           },
-          "dangerlevel": {
-            "level": "1_LOW",
-            "level_detail": null,
-            "reliability": null
-          }
+          "dangerLevelDetail": null
         }
       },
       "bulletinID": "CH-52492-6",

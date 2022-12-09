@@ -283,6 +283,14 @@ class AvalancheProblem:
         self.problemType = problem_type_text
         return self
 
+    def add_aspects(self, aspect_from:str, aspect_to:str):
+        """Adds aspects in clockwise mode"""
+        aspects_list = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] * 2
+        index_from = aspects_list.index(aspect_from.upper())
+        index_to = aspects_list.index(aspect_to.upper(), index_from)
+        self.aspects = aspects_list[index_from : index_to + 1]
+        return self
+
 
 class Tendency:
     """

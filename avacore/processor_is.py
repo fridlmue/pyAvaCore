@@ -93,18 +93,7 @@ class Processor(XmlProcessor):
             report.snowpackStructure = snowpackStructure
 
             for snow_problem in area_forcast.iter(tag="snow_problem"):
-                # problem_danger_rating = DangerRating()
-
-                aspects_list = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] * 2
-                index_from = "0"
-                index_to = "0"
-                index_from = aspects_list.index(snow_problem.find("aspect_from").text)
-                index_to = aspects_list.index(
-                    snow_problem.find("aspect_to").text, index_from
-                )
-                # problem_danger_rating.aspect = aspects_list[index_from:index_to+1]
                 elevation = Elevation()
-
                 if snow_problem.find("height").text != "0":
                     up_down = ">"
                     if "Above" in snow_problem.find("height").text:
@@ -113,9 +102,11 @@ class Processor(XmlProcessor):
 
                 problem = AvalancheProblem()
                 problem.add_problemType(snow_problem.find("type").text.lower())
-                problem.aspects = aspects_list[index_from : index_to + 1]
+                problem.add_aspects(
+                    snow_problem.find("aspect_from").text,
+                    snow_problem.find("aspect_to").text,
+                )
                 problem.elevation = elevation
-                # problem.dangerRating = problem_danger_rating
                 report.avalancheProblems.append(problem)
 
             reports.append(report)
