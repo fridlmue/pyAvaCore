@@ -65,6 +65,10 @@ parser = argparse.ArgumentParser(
     description="Download and parse EAWS avalanche bulletins"
 )
 parser.add_argument(
+    "--date",
+    help="date to fetch avalanche bulletins for",
+)
+parser.add_argument(
     "--regions",
     default=" ".join(default_regions),
     help="avalanche regions to download",
@@ -118,7 +122,7 @@ def download_region(regionID):
     """
     Downloads the given region and converts it to JSON
     """
-    bulletins = get_bulletins(regionID)
+    bulletins = get_bulletins(regionID, date=args.date)
 
     protect_overwrite_now = datetime.fromisoformat(args.protect_overwrite_now)
     validity_dates = bulletins.main_dates(protect_overwrite_now)

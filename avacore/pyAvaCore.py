@@ -14,6 +14,7 @@
 """
 
 import configparser
+from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
 
@@ -25,7 +26,7 @@ config = configparser.ConfigParser()
 config.read_string(Path(f"{__file__}.ini").read_text(encoding="utf-8"))
 
 
-def get_bulletins(region_id, local="en") -> Bulletins:
+def get_bulletins(region_id, *, date="", local="en") -> Bulletins:
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
     """
@@ -33,8 +34,7 @@ def get_bulletins(region_id, local="en") -> Bulletins:
     """
     region_id = region_id.upper()
     processor = avacore.processors.new_processor(region_id)
-    processor.local = local
-    processor.url, provider = get_report_url(region_id, local)
+    processor.url, provider = get_report_url(region_id, date=date,local=local)
 
     reports = processor.process_bulletin(region_id)
     reports.append_raw_data(processor.raw_data_format, processor.raw_data)
@@ -57,20 +57,31 @@ def get_reports(region_id, local="en") -> Tuple[List[AvaBulletin], str, str]:
     return bulletins.bulletins, provider, url
 
 
-def get_report_url(region_id, local=""):
+def get_config(region_id: str, option: str, fallback="") -> str:
+    """
+    returns the requested option for the requested region_id
+    """
+    while (
+        not config.has_section(region_id)
+        and not config.has_option(region_id, option)
+        and "-" in region_id
+    ):
+        region_id = region_id[0 : region_id.rindex("-")]
+    return config.get(region_id, option, fallback=fallback)
+
+
+def get_report_url(region_id, *, date="", local="") -> Tuple[str, str]:
     """
     returns the valid URL for requested region_id
     """
+    url = get_config(region_id, "url.date" if date else f"url.{local}")
+    if not url:
+        url = get_config(region_id, "url")
+    url = url.format(
+        date=date or datetime.today().date(),
+        local=local,
+        region="{region}",
+    )
 
-    region_id_prefix = region_id
-    while not region_id_prefix in config.keys() and "-" in region_id_prefix:
-        if region_id_prefix.startswith("SI"):
-            region_id_prefix = "SI"
-        else:
-            region_id_prefix = "-".join(region_id_prefix.split("-")[:-1])
-
-    name = config[region_id_prefix]["name"]
-    url = config[region_id_prefix]["url"]
-    if f"url.{local}" in config[region_id_prefix]:
-        url = config[region_id_prefix][f"url.{local}"]
+    name = get_config(region_id, "name")
     return url, name
