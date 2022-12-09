@@ -14,6 +14,7 @@
 """
 
 import configparser
+from pathlib import Path
 from typing import List, Tuple
 
 import avacore.processors
@@ -21,7 +22,7 @@ from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
 
 config = configparser.ConfigParser()
-config.read(f"{__file__}.ini")
+config.read_string(Path(f"{__file__}.ini").read_text(encoding="utf-8"))
 
 
 def get_bulletins(region_id, local="en") -> Bulletins:
