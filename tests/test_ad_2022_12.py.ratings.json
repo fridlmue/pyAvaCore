@@ -1,0 +1,31 @@
+{
+  "maxDangerRatings": {
+    "AD-01": 3,
+    "AD-01:am": 3,
+    "AD-01:high": 3,
+    "AD-01:high:am": 3,
+    "AD-01:high:pm": 3,
+    "AD-01:low": 3,
+    "AD-01:low:am": 3,
+    "AD-01:low:pm": 3,
+    "AD-01:pm": 3,
+    "AD-02": 2,
+    "AD-02:am": 2,
+    "AD-02:high": 2,
+    "AD-02:high:am": 2,
+    "AD-02:high:pm": 2,
+    "AD-02:low": 2,
+    "AD-02:low:am": 2,
+    "AD-02:low:pm": 2,
+    "AD-02:pm": 2,
+    "AD-03": 2,
+    "AD-03:am": 2,
+    "AD-03:high": 2,
+    "AD-03:high:am": 2,
+    "AD-03:high:pm": 2,
+    "AD-03:low": 2,
+    "AD-03:low:am": 2,
+    "AD-03:low:pm": 2,
+    "AD-03:pm": 2
+  }
+}

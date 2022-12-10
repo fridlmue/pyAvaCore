@@ -95,12 +95,12 @@ class Elevation:
                 self.upperBound = re.sub(
                     r"ElevationRange_(.+)(Lo|Lw)", r"\1", auto_select
                 )
-            if "><" in auto_select:
+            if "><" in auto_select and len(auto_select) > 2:
                 self.lowerBound = re.sub(r"><(.+)", r"\1", auto_select)
                 self.upperBound = re.sub(r"><(.+)", r"\1", auto_select)
-            elif ">" in auto_select:
+            elif ">" in auto_select and len(auto_select) > 1:
                 self.lowerBound = re.sub(r">(.+)", r"\1", auto_select)
-            elif "<" in auto_select:
+            elif "<" in auto_select and len(auto_select) > 1:
                 self.upperBound = re.sub(r"<(.+)", r"\1", auto_select)
 
     def toString(self):
@@ -283,7 +283,7 @@ class AvalancheProblem:
         self.problemType = problem_type_text
         return self
 
-    def add_aspects(self, aspect_from:str, aspect_to:str):
+    def add_aspects(self, aspect_from: str, aspect_to: str):
         """Adds aspects in clockwise mode"""
         aspects_list = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] * 2
         index_from = aspects_list.index(aspect_from.upper())
