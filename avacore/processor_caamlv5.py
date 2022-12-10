@@ -503,8 +503,12 @@ class VorarlbergProcessor(Processor):
 
 
 class BavariaProcessor(Processor):
-    today = datetime(1, 1, 1, 1, 1, 1)
-    fetch_time_dependant = True
+    tzinfo = ZoneInfo("Europe/Ljubljana")
+    today = (
+        datetime.now(tzinfo) + timedelta(days=1)
+        if datetime.now(tzinfo).time() > time(17, 0, 0)
+        else datetime.now(tzinfo)
+    )
 
     def parse_xml(self, region_id, root) -> Bulletins:
         # pylint: disable=too-many-locals
@@ -512,17 +516,7 @@ class BavariaProcessor(Processor):
         # pylint: disable=too-many-statements
         # pylint: disable=too-many-branches
         """parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification"""
-
-        tzinfo = ZoneInfo("Europe/Ljubljana")
-        now = datetime.now(tzinfo)
-        if (
-            self.fetch_time_dependant
-            and self.today == datetime(1, 1, 1, 1, 1, 1)
-            and now.time() > time(17, 0, 0)
-        ):
-            self.today = now.date() + timedelta(days=1)
-        elif self.fetch_time_dependant and self.today == datetime(1, 1, 1, 1, 1, 1):
-            self.today = now.date()
+        tzinfo = self.tzinfo
 
         reports = Bulletins()
         report = AvaBulletin()
