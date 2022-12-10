@@ -27,16 +27,23 @@ As on some target platforms the number of available Python dependencies is limit
 
 ```
 > python -m avacore --help
-usage: avacore [-h] [--regions REGIONS] [--merge-dates MERGE_DATES] [--merge-regions MERGE_REGIONS] [--output OUTPUT] [--geojson GEOJSON] [--cli CLI]
+usage: avacore [-h] [--lang LANG] [--date DATE] [--regions REGIONS]
+               [--merge-dates DATES] [--merge-regions REGIONS]
+               [--protect-overwrite-now TIMESTAMP] [--output OUTPUT]
+               [--geojson GEOJSON] [--cli CLI]
 
 Download and parse EAWS avalanche bulletins
 
 options:
   -h, --help            show this help message and exit
+  --lang LANG           language to fetch avalanche bulletins for
+  --date DATE           date to fetch avalanche bulletins for
   --regions REGIONS     avalanche regions to download
-  --merge-dates MERGE_DATES
-  --merge-regions MERGE_REGIONS
+  --merge-dates DATES   dates to merge into one file
+  --merge-regions REGIONS
                         avalanche regions to merge into one file
+  --protect-overwrite-now TIMESTAMP
+                        exclude bulletins prior the given timestamp
   --output OUTPUT       output directory
   --geojson GEOJSON     eaws-regions directory containing *micro-regions_elevation.geojson.json of
   --cli CLI             print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)
