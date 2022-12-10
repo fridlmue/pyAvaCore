@@ -90,7 +90,6 @@ parser.add_argument(
 )
 parser.add_argument(
     "--protect-overwrite-now",
-    default=datetime.now().replace(microsecond=0).isoformat(),
     metavar="TIMESTAMP",
     help="exclude bulletins prior the given timestamp",
 )
@@ -142,7 +141,11 @@ def download_region(regionID):
     """
     bulletins = get_bulletins(regionID, date=args.date)
 
-    protect_overwrite_now = datetime.fromisoformat(args.protect_overwrite_now)
+    protect_overwrite_now = datetime.fromisoformat(
+        args.protect_overwrite_now
+        or args.date
+        or datetime.now().replace(microsecond=0).isoformat()
+    )
     validity_dates = bulletins.main_dates(protect_overwrite_now)
     validity_date = None
 

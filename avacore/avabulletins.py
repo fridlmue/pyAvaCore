@@ -14,7 +14,7 @@
 """
 
 from dataclasses import dataclass, field
-from datetime import date
+from datetime import date, datetime
 import json
 import typing
 
@@ -68,7 +68,9 @@ class Bulletins:
         """
         return self.bulletins[0].main_date()
 
-    def main_dates(self, protect_overwrite_now=None) -> typing.Set[date]:
+    def main_dates(
+        self, protect_overwrite_now: typing.Optional[datetime] = None
+    ) -> typing.Set[date]:
         """
         Returns Main validity dates of Reports
 
