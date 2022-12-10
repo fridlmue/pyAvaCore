@@ -254,5 +254,5 @@ def merge_regions(validity_date: str):
 if __name__ == "__main__":
     init_logging()
     download_regions()
-    for date_string in args.merge_dates.split():
+    for date_string in (args.date or args.merge_dates).split():
         merge_regions(date_string)
