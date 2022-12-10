@@ -100,7 +100,21 @@ parser.add_argument(
     default="n",
     help="print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)",
 )
-args = parser.parse_args()
+
+
+@dataclass
+class CliArgs:
+    cli: str
+    date: str
+    geojson: str
+    merge_dates: str
+    merge_regions: str
+    output: str
+    protect_overwrite_now: str
+    regions: str
+
+
+args = parser.parse_args(namespace=CliArgs)
 
 
 def init_logging(filename="logs/pyAvaCore.log"):
