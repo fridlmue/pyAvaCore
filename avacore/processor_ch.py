@@ -138,10 +138,11 @@ class Processor(JsonProcessor):
     """
     Fetches from the SLF: Avalanche Bulletin API -- https://api.slf.ch/bulletin/v2/
     """
-    local = 'en'
+
+    local = "en"
 
     def process_bulletin(self, region_id) -> Bulletins:
-        self.url, self.local = self.url.split('#', maxsplit=1)
+        self.url, self.local = self.url.split("#", maxsplit=1)
         root = self._fetch_json(self.url, {})
         return self.parse_json(region_id, root)
 

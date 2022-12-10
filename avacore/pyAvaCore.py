@@ -34,7 +34,7 @@ def get_bulletins(region_id, *, date="", local="en") -> Bulletins:
     """
     region_id = region_id.upper()
     processor = avacore.processors.new_processor(region_id)
-    processor.url, provider = get_report_url(region_id, date=date,local=local)
+    processor.url, provider = get_report_url(region_id, date=date, local=local)
 
     reports = processor.process_bulletin(region_id)
     reports.append_raw_data(processor.raw_data_format, processor.raw_data)
