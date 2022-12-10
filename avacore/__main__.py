@@ -107,6 +107,7 @@ parser.add_argument(
 
 @dataclass
 class CliArgs:
+    # pylint: disable=too-many-instance-attributes
     cli: str
     date: str
     geojson: str
