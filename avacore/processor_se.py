@@ -13,7 +13,8 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 import json
-from datetime import datetime
+import logging
+from datetime import datetime, timedelta
 from .avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -54,15 +55,25 @@ class Processor(JsonProcessor):
                 properties["published_date"]
             )
 
-            report.validTime.startTime = datetime.fromisoformat(
-                properties["valid_from"]
-            )
-            report.validTime.endTime = datetime.fromisoformat(properties["valid_to"])
+            validTime = report.validTime
+            validTime.startTime = datetime.fromisoformat(properties["valid_from"])
+            validTime.endTime = datetime.fromisoformat(properties["valid_to"])
 
             danger_rating = DangerRating()
             danger_rating.set_mainValue_int(int(properties["risk"]))
-
             report.dangerRatings.append(danger_rating)
+
+            if (
+                validTime.endTime - validTime.startTime > timedelta(days=3)
+                and danger_rating.mainValue == "no_snow"
+            ):
+                logging.warning(
+                    "Skipping bulletin %s with too long validity %s %s",
+                    report.bulletinID,
+                    properties["valid_from"],
+                    properties["valid_to"],
+                )
+                continue
 
             if properties["problems"]:
                 problems = json.loads(properties["problems"])
