@@ -14,6 +14,7 @@
 """
 # pylint: disable=too-many-locals
 
+from dataclasses import dataclass
 from pathlib import Path
 import argparse
 import json
@@ -78,10 +79,13 @@ parser.add_argument(
     default=" ".join(
         [(date.today() + timedelta(days=days)).isoformat() for days in (-1, 0, +1)]
     ),
+    metavar="DATES",
+    help="dates to merge into one file",
 )
 parser.add_argument(
     "--merge-regions",
     default=" ".join([r for r in default_regions if not r.startswith("IT")]),
+    metavar="REGIONS",
     help="avalanche regions to merge into one file",
 )
 parser.add_argument(
