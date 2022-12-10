@@ -7,8 +7,8 @@
         }
       ],
       "validTime": {
-        "startTime": "2022-04-19T16:00:00+02:00",
-        "endTime": "2022-04-20T15:59:59+02:00"
+        "startTime": "2022-12-09T16:00:00+01:00",
+        "endTime": "2022-12-10T15:59:59+01:00"
       },
       "source": {
         "provider": {
@@ -18,16 +18,16 @@
       },
       "dangerRatings": [
         {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
         },
         {
-          "validTimePeriod": "later",
+          "validTimePeriod": "all_day",
           "mainValue": "moderate"
         }
       ],
-      "publicationTime": "2022-04-19T00:00:00+02:00",
-      "bulletinID": "AD-01_2022-04-19 00:00:00+02:00"
+      "publicationTime": "2022-12-09T00:00:00+01:00",
+      "bulletinID": "AD-01_2022-12-09 00:00:00+01:00"
     },
     {
       "regions": [
@@ -36,8 +36,8 @@
         }
       ],
       "validTime": {
-        "startTime": "2022-04-19T16:00:00+02:00",
-        "endTime": "2022-04-20T15:59:59+02:00"
+        "startTime": "2022-12-09T16:00:00+01:00",
+        "endTime": "2022-12-10T15:59:59+01:00"
       },
       "source": {
         "provider": {
@@ -47,16 +47,12 @@
       },
       "dangerRatings": [
         {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
+          "validTimePeriod": "all_day",
           "mainValue": "moderate"
         }
       ],
-      "publicationTime": "2022-04-19T00:00:00+02:00",
-      "bulletinID": "AD-02_2022-04-19 00:00:00+02:00"
+      "publicationTime": "2022-12-09T00:00:00+01:00",
+      "bulletinID": "AD-02_2022-12-09 00:00:00+01:00"
     },
     {
       "regions": [
@@ -65,8 +61,8 @@
         }
       ],
       "validTime": {
-        "startTime": "2022-04-19T16:00:00+02:00",
-        "endTime": "2022-04-20T15:59:59+02:00"
+        "startTime": "2022-12-09T16:00:00+01:00",
+        "endTime": "2022-12-10T15:59:59+01:00"
       },
       "source": {
         "provider": {
@@ -76,16 +72,12 @@
       },
       "dangerRatings": [
         {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
+          "validTimePeriod": "all_day",
           "mainValue": "moderate"
         }
       ],
-      "publicationTime": "2022-04-19T00:00:00+02:00",
-      "bulletinID": "AD-03_2022-04-19 00:00:00+02:00"
+      "publicationTime": "2022-12-09T00:00:00+01:00",
+      "bulletinID": "AD-03_2022-12-09 00:00:00+01:00"
     }
   ]
 }

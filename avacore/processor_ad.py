@@ -41,11 +41,13 @@ class Processor(XmlProcessor):
 
         bulletin = AvaBulletin()
         bulletin.publicationTime = datetime.strptime(
-            root.find("date").text, "%m/%d/%Y"
+            root.findtext("date"), "%m/%d/%Y"
         ).replace(tzinfo=ZoneInfo("Europe/Paris"))
 
-        bulletin.validTime.startTime = bulletin.publicationTime
-        bulletin.validTime.endTime = bulletin.publicationTime + timedelta(
+        bulletin.validTime.startTime = bulletin.publicationTime.replace(
+            hour=16, minute=0, second=0
+        )
+        bulletin.validTime.endTime = bulletin.validTime.startTime + timedelta(
             hours=23, minutes=59, seconds=59
         )
 

@@ -12,6 +12,6 @@ class TestCH(SnowTest):
     def test_ch(self):
         processor = Processor()
         processor.raw_data = io.BytesIO(pathlib.Path(f"{__file__}.zip").read_bytes())
-        processor.year = "2021"
+        processor.year = 2021
         bulletins = processor.process_bulletin("")
         self.assertEqualBulletinJSON(__file__, bulletins)

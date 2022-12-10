@@ -41,7 +41,7 @@ from avacore.processor import Processor as AbstractProcessor
 
 class Processor(AbstractProcessor):
     problems = False
-    year = ""
+    year = datetime.now().year
 
     def fetch_files_ch(self):
         """
@@ -176,15 +176,13 @@ class Processor(AbstractProcessor):
 
         common_report = AvaBulletin()
 
-        date_time_now = datetime.now()
-        year = self.year or str(date_time_now.year)
         tzinfo = ZoneInfo("Europe/Zurich")
 
         begin = re.compile(r"Edition: (?P<date>[0-9.]+), (?P<time>[0-9:]+)").search(
             data["validity"]
         )
         common_report.publicationTime = datetime.strptime(
-            f"{year}-{begin['date']}, {begin['time']}",
+            f"{self.year}-{begin['date']}, {begin['time']}",
             "%Y-%d.%m., %H:%M",
         ).replace(tzinfo=tzinfo)
         common_report.validTime.startTime = common_report.publicationTime
@@ -201,7 +199,7 @@ class Processor(AbstractProcessor):
                 r"Next update: (?P<date>[0-9.]+), (?P<time>[0-9:]+)"
             ).search(data["validity"])
             common_report.validTime.endTime = datetime.strptime(
-                f"{year}-{end['date']}, {end['time']}",
+                f"{self.year}-{end['date']}, {end['time']}",
                 "%Y-%d.%m., %H:%M",
             ).replace(tzinfo=tzinfo)
 
