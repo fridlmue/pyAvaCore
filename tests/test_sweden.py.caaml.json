@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "lavinprognoser",
-          "website": "https://lavinprognoser.se/"
+          "website": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;"
         }
       },
       "dangerRatings": [
@@ -80,7 +80,7 @@
       "source": {
         "provider": {
           "name": "lavinprognoser",
-          "website": "https://lavinprognoser.se/"
+          "website": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;"
         }
       },
       "dangerRatings": [
@@ -148,7 +148,7 @@
       "source": {
         "provider": {
           "name": "lavinprognoser",
-          "website": "https://lavinprognoser.se/"
+          "website": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;"
         }
       },
       "dangerRatings": [
@@ -215,7 +215,7 @@
       "source": {
         "provider": {
           "name": "lavinprognoser",
-          "website": "https://lavinprognoser.se/"
+          "website": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;"
         }
       },
       "dangerRatings": [
@@ -282,7 +282,7 @@
       "source": {
         "provider": {
           "name": "lavinprognoser",
-          "website": "https://lavinprognoser.se/"
+          "website": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;"
         }
       },
       "dangerRatings": [
@@ -350,7 +350,7 @@
       "source": {
         "provider": {
           "name": "lavinprognoser",
-          "website": "https://lavinprognoser.se/"
+          "website": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;"
         }
       },
       "dangerRatings": [

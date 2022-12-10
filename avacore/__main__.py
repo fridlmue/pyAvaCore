@@ -14,6 +14,7 @@
 """
 # pylint: disable=too-many-locals
 
+from dataclasses import dataclass
 from pathlib import Path
 import argparse
 import json
@@ -65,6 +66,10 @@ parser = argparse.ArgumentParser(
     description="Download and parse EAWS avalanche bulletins"
 )
 parser.add_argument(
+    "--date",
+    help="date to fetch avalanche bulletins for",
+)
+parser.add_argument(
     "--regions",
     default=" ".join(default_regions),
     help="avalanche regions to download",
@@ -74,15 +79,17 @@ parser.add_argument(
     default=" ".join(
         [(date.today() + timedelta(days=days)).isoformat() for days in (-1, 0, +1)]
     ),
+    metavar="DATES",
+    help="dates to merge into one file",
 )
 parser.add_argument(
     "--merge-regions",
     default=" ".join([r for r in default_regions if not r.startswith("IT")]),
+    metavar="REGIONS",
     help="avalanche regions to merge into one file",
 )
 parser.add_argument(
     "--protect-overwrite-now",
-    default=datetime.now().replace(microsecond=0).isoformat(),
     metavar="TIMESTAMP",
     help="exclude bulletins prior the given timestamp",
 )
@@ -96,7 +103,22 @@ parser.add_argument(
     default="n",
     help="print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)",
 )
-args = parser.parse_args()
+
+
+@dataclass
+class CliArgs:
+    # pylint: disable=too-many-instance-attributes
+    cli: str
+    date: str
+    geojson: str
+    merge_dates: str
+    merge_regions: str
+    output: str
+    protect_overwrite_now: str
+    regions: str
+
+
+args = parser.parse_args(namespace=CliArgs)
 
 
 def init_logging(filename="logs/pyAvaCore.log"):
@@ -118,9 +140,13 @@ def download_region(regionID):
     """
     Downloads the given region and converts it to JSON
     """
-    bulletins = get_bulletins(regionID)
+    bulletins = get_bulletins(regionID, date=args.date)
 
-    protect_overwrite_now = datetime.fromisoformat(args.protect_overwrite_now)
+    protect_overwrite_now = datetime.fromisoformat(
+        args.protect_overwrite_now
+        or args.date
+        or datetime.now().replace(microsecond=0).isoformat()
+    )
     validity_dates = bulletins.main_dates(protect_overwrite_now)
     validity_date = None
 
@@ -229,5 +255,5 @@ def merge_regions(validity_date: str):
 if __name__ == "__main__":
     init_logging()
     download_regions()
-    for date_string in args.merge_dates.split():
+    for date_string in (args.date or args.merge_dates).split():
         merge_regions(date_string)

@@ -28,15 +28,10 @@ from .processor import JsonProcessor
 
 class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
-        langkey = "sv"  # Should also work with en and smi (Samiska)
-        url = (
-            "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/"
-            + "ows?service=WFS&version=1.0.0&request=GetFeature"
-            + "&typeName=lavinprognoser:published_forecasts&outputformat=application/json"
-            + f"&viewparams=lang:{langkey};"
-        )
+        url = self.url
         if region_id != "SE":
             url += f"location:{region_id[3:]};"
+
         headers = {"Content-Type": "application/json; charset=utf-8"}
         response_json = self._fetch_json(url, headers)
         bulletins = self.parse_json(region_id, response_json)

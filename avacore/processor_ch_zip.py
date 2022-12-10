@@ -47,7 +47,6 @@ class Processor(AbstractProcessor):
         """
         Downloads the swiss avalanche zip for the slf app together with the region mapping information
         """
-        self.url = f"https://www.slf.ch/avalanche/mobile/bulletin_{self.local}.zip"
         with urllib.request.urlopen(self.url) as response:
             logging.info("Fetching %s", self.url)
             data = response.read()
