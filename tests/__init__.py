@@ -13,7 +13,7 @@ class SnowTest(unittest.TestCase):
     ):
 
         region_id = region_id or bulletins[0].get_region_list()[0].upper()
-        url, provider = get_report_url(region_id, local="en")
+        url, provider = get_report_url(region_id, lang="en")
         bulletins.append_provider(provider, url)
 
         expected = Path(f"{expected_basename}.caaml.json")
