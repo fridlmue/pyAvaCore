@@ -26,7 +26,7 @@ config = configparser.ConfigParser()
 config.read_string(Path(f"{__file__}.ini").read_text(encoding="utf-8"))
 
 
-def get_bulletins(region_id, *, date="", local="en") -> Bulletins:
+def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
     # pylint: disable=too-many-branches
     # pylint: disable=too-many-statements
     """
@@ -34,7 +34,7 @@ def get_bulletins(region_id, *, date="", local="en") -> Bulletins:
     """
     region_id = region_id.upper()
     processor = avacore.processors.new_processor(region_id)
-    processor.url, provider = get_report_url(region_id, date=date, local=local)
+    processor.url, provider = get_report_url(region_id, date=date, lang=lang)
 
     reports = processor.process_bulletin(region_id)
     reports.append_raw_data(processor.raw_data_format, processor.raw_data)
@@ -47,11 +47,11 @@ def get_bulletins(region_id, *, date="", local="en") -> Bulletins:
     return reports
 
 
-def get_reports(region_id, local="en") -> Tuple[List[AvaBulletin], str, str]:
+def get_reports(region_id, lang="en") -> Tuple[List[AvaBulletin], str, str]:
     """
     returns array of AvaReports for requested region_id and provider information
     """
-    bulletins = get_bulletins(region_id=region_id, local=local)
+    bulletins = get_bulletins(region_id=region_id, lang=lang)
     provider = bulletins.customData["provider"]
     url = bulletins.customData["url"]
     return bulletins.bulletins, provider, url
@@ -70,16 +70,16 @@ def get_config(region_id: str, option: str, fallback="") -> str:
     return config.get(region_id, option, fallback=fallback)
 
 
-def get_report_url(region_id, *, date="", local="") -> Tuple[str, str]:
+def get_report_url(region_id, *, date="", lang="") -> Tuple[str, str]:
     """
     returns the valid URL for requested region_id
     """
-    url = get_config(region_id, "url.date" if date else f"url.{local}")
+    url = get_config(region_id, "url.date" if date else f"url.{lang}")
     if not url:
         url = get_config(region_id, "url")
     url = url.format(
         date=date or datetime.today().date(),
-        local=local,
+        lang=lang,
         region="{region}",
     )
 

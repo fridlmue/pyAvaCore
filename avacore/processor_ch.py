@@ -139,10 +139,10 @@ class Processor(JsonProcessor):
     Fetches from the SLF: Avalanche Bulletin API -- https://api.slf.ch/bulletin/v2/
     """
 
-    local = "en"
+    lang = "en"
 
     def process_bulletin(self, region_id) -> Bulletins:
-        self.url, self.local = self.url.split("#", maxsplit=1)
+        self.url, self.lang = self.url.split("#", maxsplit=1)
         root = self._fetch_json(self.url, {})
         return self.parse_json(region_id, root)
 
@@ -158,7 +158,7 @@ class Processor(JsonProcessor):
                 data_bulletin["valid_to"].replace("Z", "+00:00")
             ),
         )
-        flash = data_bulletin["flash"][self.local]
+        flash = data_bulletin["flash"][self.lang]
         bulletins = Bulletins()
         for feature in data_bulletins["rating_1"]["geojson"]["features"]:
             bulletin = AvaBulletin()
@@ -211,10 +211,10 @@ class Processor(JsonProcessor):
         return bulletins
 
     def _parse_text(self, text: Optional[Text]) -> Texts:
-        return Texts(comment=text[self.local] if text and self.local in text else None)
+        return Texts(comment=text[self.lang] if text and self.lang in text else None)
 
     def _parse_paragraphs(self, paragraphs: Optional[list[Paragraph]]) -> Iterable[str]:
         for p in paragraphs or []:
-            yield p.get(f"title_{self.local}", "") or ""
-            yield p.get(self.local, "") or ""
+            yield p.get(f"title_{self.lang}", "") or ""
+            yield p.get(self.lang, "") or ""
             yield from self._parse_paragraphs(p.get("subparagraphs", []))
