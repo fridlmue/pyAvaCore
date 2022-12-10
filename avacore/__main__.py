@@ -66,6 +66,10 @@ parser = argparse.ArgumentParser(
     description="Download and parse EAWS avalanche bulletins"
 )
 parser.add_argument(
+    "--lang",
+    help="language to fetch avalanche bulletins for",
+)
+parser.add_argument(
     "--date",
     help="date to fetch avalanche bulletins for",
 )
@@ -111,6 +115,7 @@ class CliArgs:
     cli: str
     date: str
     geojson: str
+    lang: str
     merge_dates: str
     merge_regions: str
     output: str
@@ -140,7 +145,7 @@ def download_region(regionID):
     """
     Downloads the given region and converts it to JSON
     """
-    bulletins = get_bulletins(regionID, date=args.date)
+    bulletins = get_bulletins(regionID, date=args.date, lang=args.lang)
 
     protect_overwrite_now = datetime.fromisoformat(
         args.protect_overwrite_now
