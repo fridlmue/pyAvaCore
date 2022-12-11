@@ -67,6 +67,7 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument(
     "--lang",
+    default="en",
     help="language to fetch avalanche bulletins for",
 )
 parser.add_argument(
