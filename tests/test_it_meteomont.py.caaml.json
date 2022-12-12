@@ -1,0 +1,1620 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "IT-36-UD-03",
+          "name": "ALPI GIULIE SENZA CANIN := FRIULI VENEZIA GIULIA / Alpi Giulie"
+        },
+        {
+          "regionID": "IT-36-UD-05",
+          "name": "PREALPI GIULIE := FRIULI VENEZIA GIULIA / Alpi Giulie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "42",
+          "snowDepthAltitude": "800",
+          "freshSnow": "4"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-36-UD-02",
+          "name": "ALPI CARNICHE ORIENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+        },
+        {
+          "regionID": "IT-36-PN-02",
+          "name": "PRALPI CARNICHE ORIENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "55",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "2"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-36-UD-01",
+          "name": "ALPI CARNICHE OCCIDENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+        },
+        {
+          "regionID": "IT-36-PN-01",
+          "name": "PREALPI CARNICHE OCCIDENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "62",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "2"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " VENETO / Dolomiti settentrionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "78",
+          "snowDepthAltitude": "2500",
+          "freshSnow": "8"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " VENETO / Dolomiti meridionali"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "74",
+          "snowDepthAltitude": "1800",
+          "freshSnow": "7"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-25-BG-02",
+          "name": "PREALPI BERGAMASCHE := VENETO / Prealpi"
+        },
+        {
+          "regionID": "IT-25-BS-02",
+          "name": "PREALPI BRESCIANE := VENETO / Prealpi"
+        },
+        {
+          "regionID": "IT-25-VA-01",
+          "name": "PREALPI OCCIDENTALI := VENETO / Prealpi"
+        },
+        {
+          "regionID": "IT-32-TN-12",
+          "name": "Prealpi := VENETO / Prealpi"
+        },
+        {
+          "regionID": "IT-36-UD-05",
+          "name": "PREALPI GIULIE := VENETO / Prealpi"
+        },
+        {
+          "regionID": "IT-36-PN-01",
+          "name": "PREALPI CARNICHE OCCIDENTALI := VENETO / Prealpi"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "60",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "6"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-25-SO-01",
+          "name": "RETICHE OCCIDENTALI := LOMBARDIA / Alpi Retiche"
+        },
+        {
+          "regionID": "IT-25-SO-02",
+          "name": "RETICHE CENTRALI := LOMBARDIA / Alpi Retiche"
+        },
+        {
+          "regionID": "IT-25-SO-03",
+          "name": "RETICHE ORIENTALI := LOMBARDIA / Alpi Retiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "40-50",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LOMBARDIA / Alpi Orobiche"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "40-50",
+          "snowDepthAltitude": "1800",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LOMBARDIA / Prealpi Lombarde"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "25-40",
+          "snowDepthAltitude": "1700",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LOMBARDIA / Appennino Pavese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "gliding_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "15",
+          "snowDepthAltitude": "1400",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-VB-02",
+          "name": "Alpi Lepontine Nord := PIEMONTE / Alpi Lepontine"
+        },
+        {
+          "regionID": "IT-21-VB-03",
+          "name": "Alpi Lepontine Sud := PIEMONTE / Alpi Lepontine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "60",
+          "snowDepthAltitude": "1600",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-VB-01",
+          "name": "Alpi Pennine di confine := PIEMONTE / Alpi Pennine"
+        },
+        {
+          "regionID": "IT-21-VC-01",
+          "name": "Alpi Pennine := PIEMONTE / Alpi Pennine"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "79",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-TO-01",
+          "name": "Alpi Graie di confine := PIEMONTE / Alpi Graie"
+        },
+        {
+          "regionID": "IT-21-TO-03",
+          "name": "Alpi Graie := PIEMONTE / Alpi Graie"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "40",
+          "snowDepthAltitude": "2300",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-TO-02",
+          "name": "Alpi Cozie Nord di confine := PIEMONTE / Alpi Cozie nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "50",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-01",
+          "name": "Alpi Cozie Sud di confine := PIEMONTE / Alpi Cozie sud"
+        },
+        {
+          "regionID": "IT-21-CN-03",
+          "name": "Alpi Cozie Sud := PIEMONTE / Alpi Cozie sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "40",
+          "snowDepthAltitude": "2600",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-21-CN-02",
+          "name": "Alpi Marittime Occidentali := PIEMONTE / Alpi Marittime"
+        },
+        {
+          "regionID": "IT-21-CN-04",
+          "name": "Alpi Marittime Orientali := PIEMONTE / Alpi Marittime"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "44",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " PIEMONTE / Alpi Liguri nord"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "45",
+          "snowDepthAltitude": "1900",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LIGURIA / Alpi Liguri sud"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "25",
+          "snowDepthAltitude": "1400",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LIGURIA / Appennino Ligure"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "17",
+          "snowDepthAltitude": "1000",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " EMILIA ROMAGNA / Appennino Emiliano Occidentale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "1",
+          "snowDepthAltitude": "1450",
+          "freshSnow": "1"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " EMILIA ROMAGNA / Appennino Emiliano Centrale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "8",
+          "snowDepthAltitude": "1450",
+          "freshSnow": "2"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " EMILIA ROMAGNA / Appennino Romagnolo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "new_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "9",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "9"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "1",
+          "snowDepthAltitude": "1400",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " TOSCANA / Appennino Toscano meridionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "5",
+          "snowDepthAltitude": "1100",
+          "freshSnow": "5"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " None / Monte Amiata"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "1",
+          "snowDepthAltitude": "1700",
+          "freshSnow": "1"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " MARCHE / Appennino Umbro-Marchigiano settentrionale"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1500",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "10",
+          "snowDepthAltitude": "2000",
+          "freshSnow": "2"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " ABRUZZO / Gran Sasso Est - Laga Est"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "1",
+          "snowDepthAltitude": "1380",
+          "freshSnow": "1"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " ABRUZZO / Gran Sasso Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "7",
+          "snowDepthAltitude": "2135",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " ABRUZZO / Majella"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1650",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " ABRUZZO / P.N. Abruzzo"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1456",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " ABRUZZO / Velino - Sirente"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1573",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " MOLISE / Mainarde-Alto Molise"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1436",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " MOLISE / Matese"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "1429",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LAZIO / Terminillo Monti Reatini e Laga Ovest"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "1",
+          "snowDepthAltitude": "1670",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " LAZIO / Monti Simbruini e Meta"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "4",
+          "snowDepthAltitude": "1790",
+          "freshSnow": "1"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " PUGLIA / Appennino Campano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "no_snow"
+        }
+      ],
+      "avalancheProblems": [
+        {}
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "0",
+          "snowDepthAltitude": "",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " BASILICATA / Appennino Lucano"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "4",
+          "snowDepthAltitude": "1700",
+          "freshSnow": "0"
+        }
+      }
+    },
+    {
+      "regions": [
+        {
+          "regionID": "IT-???",
+          "name": " CALABRIA / Appennino Calabro"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-12T00:00:00+01:00",
+        "endTime": "2022-12-13T00:00:00+01:00"
+      },
+      "source": {
+        "provider": {
+          "name": "MeteoMont",
+          "website": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data=2022-12-13"
+        }
+      },
+      "dangerRatings": [
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        },
+        {
+          "validTimePeriod": "all_day",
+          "mainValue": "low"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "customData": {
+        "MeteoMont": {
+          "snowDepth": "5",
+          "snowDepthAltitude": "1700",
+          "freshSnow": "0"
+        }
+      }
+    }
+  ]
+}
