@@ -32,7 +32,6 @@ def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
     """
     returns Bulletins object for requested region_id and provider information
     """
-    region_id = region_id.upper()
     processor = avacore.processors.new_processor(region_id)
     processor.url, provider = get_report_url(region_id, date=date, lang=lang)
 
