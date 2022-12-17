@@ -1,0 +1,13 @@
+{
+  "maxDangerRatings": {
+    "IT-Livigno": 3,
+    "IT-Livigno:am": 3,
+    "IT-Livigno:high": 3,
+    "IT-Livigno:high:am": 3,
+    "IT-Livigno:high:pm": 3,
+    "IT-Livigno:low": 2,
+    "IT-Livigno:low:am": 2,
+    "IT-Livigno:low:pm": 2,
+    "IT-Livigno:pm": 3
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "bulletins": [
+    {
+      "regions": [
+        {
+          "regionID": "IT-Livigno",
+          "name": "Livigno"
+        }
+      ],
+      "validTime": {
+        "startTime": "2022-12-18T00:00:00",
+        "endTime": "2022-12-18T23:59:59"
+      },
+      "source": {
+        "provider": {
+          "name": "AINEVA",
+          "website": "https://bollettini-en.aineva.it"
+        }
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "lowerBound": "treeline",
+            "upperBound": "treeline"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "considerable"
+        },
+        {
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "validTimePeriod": "all_day",
+          "mainValue": "moderate"
+        }
+      ],
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        },
+        {
+          "problemType": "wind_slab"
+        }
+      ]
+    }
+  ]
+}
