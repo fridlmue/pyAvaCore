@@ -3,12 +3,14 @@
     {
       "regions": [
         {
-          "regionID": "IT-36-UD-03",
-          "name": "ALPI GIULIE SENZA CANIN := FRIULI VENEZIA GIULIA / Alpi Giulie"
+          "regionID": "IT-MeteoMont-01-1",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
         },
         {
-          "regionID": "IT-36-UD-05",
-          "name": "PREALPI GIULIE := FRIULI VENEZIA GIULIA / Alpi Giulie"
+          "regionID": "IT-36-UD-04"
+        },
+        {
+          "regionID": "IT-36-UD-03"
         }
       ],
       "validTime": {
@@ -47,12 +49,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-36-UD-02",
-          "name": "ALPI CARNICHE ORIENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
-        },
-        {
-          "regionID": "IT-36-PN-02",
-          "name": "PRALPI CARNICHE ORIENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
+          "regionID": "IT-MeteoMont-01-2",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche orientali"
         }
       ],
       "validTime": {
@@ -91,12 +89,11 @@
     {
       "regions": [
         {
-          "regionID": "IT-36-UD-01",
-          "name": "ALPI CARNICHE OCCIDENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+          "regionID": "IT-MeteoMont-01-3",
+          "name": "FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
         },
         {
-          "regionID": "IT-36-PN-01",
-          "name": "PREALPI CARNICHE OCCIDENTALI := FRIULI VENEZIA GIULIA / Alpi Carniche occidentali"
+          "regionID": "IT-36-UD-01"
         }
       ],
       "validTime": {
@@ -135,8 +132,14 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " VENETO / Dolomiti settentrionali"
+          "regionID": "IT-MeteoMont-02-1",
+          "name": "VENETO / Dolomiti settentrionali"
+        },
+        {
+          "regionID": "IT-34-BL-02"
+        },
+        {
+          "regionID": "IT-34-BL-03"
         }
       ],
       "validTime": {
@@ -175,8 +178,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " VENETO / Dolomiti meridionali"
+          "regionID": "IT-MeteoMont-02-2",
+          "name": "VENETO / Dolomiti meridionali"
         }
       ],
       "validTime": {
@@ -215,28 +218,17 @@
     {
       "regions": [
         {
-          "regionID": "IT-25-BG-02",
-          "name": "PREALPI BERGAMASCHE := VENETO / Prealpi"
+          "regionID": "IT-MeteoMont-02-3",
+          "name": "VENETO / Prealpi"
         },
         {
-          "regionID": "IT-25-BS-02",
-          "name": "PREALPI BRESCIANE := VENETO / Prealpi"
+          "regionID": "IT-34-VI-01"
         },
         {
-          "regionID": "IT-25-VA-01",
-          "name": "PREALPI OCCIDENTALI := VENETO / Prealpi"
+          "regionID": "IT-34-BL-06"
         },
         {
-          "regionID": "IT-32-TN-12",
-          "name": "Prealpi := VENETO / Prealpi"
-        },
-        {
-          "regionID": "IT-36-UD-05",
-          "name": "PREALPI GIULIE := VENETO / Prealpi"
-        },
-        {
-          "regionID": "IT-36-PN-01",
-          "name": "PREALPI CARNICHE OCCIDENTALI := VENETO / Prealpi"
+          "regionID": "IT-34-VR-01"
         }
       ],
       "validTime": {
@@ -275,16 +267,20 @@
     {
       "regions": [
         {
-          "regionID": "IT-25-SO-01",
-          "name": "RETICHE OCCIDENTALI := LOMBARDIA / Alpi Retiche"
+          "regionID": "IT-MeteoMont-04-1",
+          "name": "LOMBARDIA / Alpi Retiche"
         },
         {
-          "regionID": "IT-25-SO-02",
-          "name": "RETICHE CENTRALI := LOMBARDIA / Alpi Retiche"
+          "regionID": "IT-25-SO-01"
         },
         {
-          "regionID": "IT-25-SO-03",
-          "name": "RETICHE ORIENTALI := LOMBARDIA / Alpi Retiche"
+          "regionID": "IT-25-SO-02"
+        },
+        {
+          "regionID": "IT-25-BS-01"
+        },
+        {
+          "regionID": "IT-25-SO-03"
         }
       ],
       "validTime": {
@@ -323,8 +319,11 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LOMBARDIA / Alpi Orobiche"
+          "regionID": "IT-MeteoMont-04-2",
+          "name": "LOMBARDIA / Alpi Orobiche"
+        },
+        {
+          "regionID": "IT-25-BG-01"
         }
       ],
       "validTime": {
@@ -363,8 +362,17 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LOMBARDIA / Prealpi Lombarde"
+          "regionID": "IT-MeteoMont-04-3",
+          "name": "LOMBARDIA / Prealpi Lombarde"
+        },
+        {
+          "regionID": "IT-25-BG-02"
+        },
+        {
+          "regionID": "IT-25-BS-02"
+        },
+        {
+          "regionID": "IT-25-LC-01"
         }
       ],
       "validTime": {
@@ -403,8 +411,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LOMBARDIA / Appennino Pavese"
+          "regionID": "IT-MeteoMont-04-4",
+          "name": "LOMBARDIA / Appennino Pavese"
         }
       ],
       "validTime": {
@@ -443,12 +451,14 @@
     {
       "regions": [
         {
-          "regionID": "IT-21-VB-02",
-          "name": "Alpi Lepontine Nord := PIEMONTE / Alpi Lepontine"
+          "regionID": "IT-MeteoMont-06-1",
+          "name": "PIEMONTE / Alpi Lepontine"
         },
         {
-          "regionID": "IT-21-VB-03",
-          "name": "Alpi Lepontine Sud := PIEMONTE / Alpi Lepontine"
+          "regionID": "IT-21-VB-03"
+        },
+        {
+          "regionID": "IT-21-VB-02"
         }
       ],
       "validTime": {
@@ -487,12 +497,14 @@
     {
       "regions": [
         {
-          "regionID": "IT-21-VB-01",
-          "name": "Alpi Pennine di confine := PIEMONTE / Alpi Pennine"
+          "regionID": "IT-MeteoMont-06-2",
+          "name": "PIEMONTE / Alpi Pennine"
         },
         {
-          "regionID": "IT-21-VC-01",
-          "name": "Alpi Pennine := PIEMONTE / Alpi Pennine"
+          "regionID": "IT-21-VC-01"
+        },
+        {
+          "regionID": "IT-21-VB-01"
         }
       ],
       "validTime": {
@@ -531,12 +543,14 @@
     {
       "regions": [
         {
-          "regionID": "IT-21-TO-01",
-          "name": "Alpi Graie di confine := PIEMONTE / Alpi Graie"
+          "regionID": "IT-MeteoMont-06-3",
+          "name": "PIEMONTE / Alpi Graie"
         },
         {
-          "regionID": "IT-21-TO-03",
-          "name": "Alpi Graie := PIEMONTE / Alpi Graie"
+          "regionID": "IT-21-TO-05"
+        },
+        {
+          "regionID": "IT-21-TO-04"
         }
       ],
       "validTime": {
@@ -575,8 +589,14 @@
     {
       "regions": [
         {
-          "regionID": "IT-21-TO-02",
-          "name": "Alpi Cozie Nord di confine := PIEMONTE / Alpi Cozie nord"
+          "regionID": "IT-MeteoMont-06-4",
+          "name": "PIEMONTE / Alpi Cozie nord"
+        },
+        {
+          "regionID": "IT-21-TO-02"
+        },
+        {
+          "regionID": "IT-21-TO-03"
         }
       ],
       "validTime": {
@@ -615,12 +635,17 @@
     {
       "regions": [
         {
-          "regionID": "IT-21-CN-01",
-          "name": "Alpi Cozie Sud di confine := PIEMONTE / Alpi Cozie sud"
+          "regionID": "IT-MeteoMont-06-5",
+          "name": "PIEMONTE / Alpi Cozie sud"
         },
         {
-          "regionID": "IT-21-CN-03",
-          "name": "Alpi Cozie Sud := PIEMONTE / Alpi Cozie sud"
+          "regionID": "IT-21-CN-03"
+        },
+        {
+          "regionID": "IT-21-CN-05"
+        },
+        {
+          "regionID": "IT-21-CN-04"
         }
       ],
       "validTime": {
@@ -659,12 +684,11 @@
     {
       "regions": [
         {
-          "regionID": "IT-21-CN-02",
-          "name": "Alpi Marittime Occidentali := PIEMONTE / Alpi Marittime"
+          "regionID": "IT-MeteoMont-06-6",
+          "name": "PIEMONTE / Alpi Marittime"
         },
         {
-          "regionID": "IT-21-CN-04",
-          "name": "Alpi Marittime Orientali := PIEMONTE / Alpi Marittime"
+          "regionID": "IT-21-CN-02"
         }
       ],
       "validTime": {
@@ -703,8 +727,11 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " PIEMONTE / Alpi Liguri nord"
+          "regionID": "IT-MeteoMont-06-7",
+          "name": "PIEMONTE / Alpi Liguri nord"
+        },
+        {
+          "regionID": "IT-21-CN-01"
         }
       ],
       "validTime": {
@@ -743,8 +770,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LIGURIA / Alpi Liguri sud"
+          "regionID": "IT-MeteoMont-07-1",
+          "name": "LIGURIA / Alpi Liguri sud"
         }
       ],
       "validTime": {
@@ -783,8 +810,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LIGURIA / Appennino Ligure"
+          "regionID": "IT-MeteoMont-07-2",
+          "name": "LIGURIA / Appennino Ligure"
         }
       ],
       "validTime": {
@@ -823,8 +850,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " EMILIA ROMAGNA / Appennino Emiliano Occidentale"
+          "regionID": "IT-MeteoMont-08-1",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Occidentale"
         }
       ],
       "validTime": {
@@ -863,8 +890,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " EMILIA ROMAGNA / Appennino Emiliano Centrale"
+          "regionID": "IT-MeteoMont-08-2",
+          "name": "EMILIA ROMAGNA / Appennino Emiliano Centrale"
         }
       ],
       "validTime": {
@@ -903,8 +930,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " EMILIA ROMAGNA / Appennino Romagnolo"
+          "regionID": "IT-MeteoMont-08-3",
+          "name": "EMILIA ROMAGNA / Appennino Romagnolo"
         }
       ],
       "validTime": {
@@ -943,8 +970,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
+          "regionID": "IT-MeteoMont-09-1",
+          "name": "TOSCANA / Alpi Apuane - Appennino Toscano settentrionale"
         }
       ],
       "validTime": {
@@ -983,8 +1010,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " TOSCANA / Appennino Toscano meridionale"
+          "regionID": "IT-MeteoMont-09-2",
+          "name": "TOSCANA / Appennino Toscano meridionale"
         }
       ],
       "validTime": {
@@ -1023,8 +1050,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " None / Monte Amiata"
+          "regionID": "IT-MeteoMont-09-3",
+          "name": "None / Monte Amiata"
         }
       ],
       "validTime": {
@@ -1063,8 +1090,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " MARCHE / Appennino Umbro-Marchigiano settentrionale"
+          "regionID": "IT-MeteoMont-10-1",
+          "name": "MARCHE / Appennino Umbro-Marchigiano settentrionale"
         }
       ],
       "validTime": {
@@ -1101,8 +1128,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
+          "regionID": "IT-MeteoMont-10-2",
+          "name": "MARCHE / Appennino Umbro-Marchig. merid. - Monti Sibillini"
         }
       ],
       "validTime": {
@@ -1141,8 +1168,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " ABRUZZO / Gran Sasso Est - Laga Est"
+          "regionID": "IT-MeteoMont-11-1",
+          "name": "ABRUZZO / Gran Sasso Est - Laga Est"
         }
       ],
       "validTime": {
@@ -1181,8 +1208,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " ABRUZZO / Gran Sasso Ovest"
+          "regionID": "IT-MeteoMont-11-2",
+          "name": "ABRUZZO / Gran Sasso Ovest"
         }
       ],
       "validTime": {
@@ -1221,8 +1248,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " ABRUZZO / Majella"
+          "regionID": "IT-MeteoMont-11-3",
+          "name": "ABRUZZO / Majella"
         }
       ],
       "validTime": {
@@ -1261,8 +1288,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " ABRUZZO / P.N. Abruzzo"
+          "regionID": "IT-MeteoMont-11-4",
+          "name": "ABRUZZO / P.N. Abruzzo"
         }
       ],
       "validTime": {
@@ -1301,8 +1328,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " ABRUZZO / Velino - Sirente"
+          "regionID": "IT-MeteoMont-11-5",
+          "name": "ABRUZZO / Velino - Sirente"
         }
       ],
       "validTime": {
@@ -1341,8 +1368,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " MOLISE / Mainarde-Alto Molise"
+          "regionID": "IT-MeteoMont-11-6",
+          "name": "MOLISE / Mainarde-Alto Molise"
         }
       ],
       "validTime": {
@@ -1381,8 +1408,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " MOLISE / Matese"
+          "regionID": "IT-MeteoMont-11-7",
+          "name": "MOLISE / Matese"
         }
       ],
       "validTime": {
@@ -1421,8 +1448,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LAZIO / Terminillo Monti Reatini e Laga Ovest"
+          "regionID": "IT-MeteoMont-12-1",
+          "name": "LAZIO / Terminillo Monti Reatini e Laga Ovest"
         }
       ],
       "validTime": {
@@ -1461,8 +1488,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " LAZIO / Monti Simbruini e Meta"
+          "regionID": "IT-MeteoMont-12-2",
+          "name": "LAZIO / Monti Simbruini e Meta"
         }
       ],
       "validTime": {
@@ -1501,8 +1528,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " PUGLIA / Appennino Campano"
+          "regionID": "IT-MeteoMont-13-1",
+          "name": "PUGLIA / Appennino Campano"
         }
       ],
       "validTime": {
@@ -1539,8 +1566,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " BASILICATA / Appennino Lucano"
+          "regionID": "IT-MeteoMont-13-2",
+          "name": "BASILICATA / Appennino Lucano"
         }
       ],
       "validTime": {
@@ -1579,8 +1606,8 @@
     {
       "regions": [
         {
-          "regionID": "IT-???",
-          "name": " CALABRIA / Appennino Calabro"
+          "regionID": "IT-MeteoMont-13-3",
+          "name": "CALABRIA / Appennino Calabro"
         }
       ],
       "validTime": {
