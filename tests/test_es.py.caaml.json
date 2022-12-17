@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "Agencia Estatal de Meteorolog\u00eda",
-          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+          "website": "https://www.aemet.es/es/eltiempo/prediccion/montana"
         }
       },
       "dangerRatings": [
@@ -50,7 +50,7 @@
       "source": {
         "provider": {
           "name": "Agencia Estatal de Meteorolog\u00eda",
-          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+          "website": "https://www.aemet.es/es/eltiempo/prediccion/montana"
         }
       },
       "dangerRatings": [
@@ -97,7 +97,7 @@
       "source": {
         "provider": {
           "name": "Agencia Estatal de Meteorolog\u00eda",
-          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+          "website": "https://www.aemet.es/es/eltiempo/prediccion/montana"
         }
       },
       "dangerRatings": [
@@ -144,7 +144,7 @@
       "source": {
         "provider": {
           "name": "Agencia Estatal de Meteorolog\u00eda",
-          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+          "website": "https://www.aemet.es/es/eltiempo/prediccion/montana"
         }
       },
       "dangerRatings": [
@@ -191,7 +191,7 @@
       "source": {
         "provider": {
           "name": "Agencia Estatal de Meteorolog\u00eda",
-          "website": "http://www.aemet.es/xml/montana/p18tarn1.xml"
+          "website": "https://www.aemet.es/es/eltiempo/prediccion/montana"
         }
       },
       "dangerRatings": [

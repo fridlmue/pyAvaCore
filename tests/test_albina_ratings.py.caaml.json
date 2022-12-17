@@ -184,7 +184,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Alto Adige/S\u00fcdtirol",
-          "website": "https://static.avalanche.report/bulletins/latest/IT-32-BZ_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [
@@ -289,7 +289,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Alto Adige/S\u00fcdtirol",
-          "website": "https://static.avalanche.report/bulletins/latest/IT-32-BZ_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [

@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
-          "website": "https://www.meteo.ad/xml/neige.xml"
+          "website": "https://www.meteo.ad/fr/etatneige"
         }
       },
       "dangerRatings": [
@@ -42,7 +42,7 @@
       "source": {
         "provider": {
           "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
-          "website": "https://www.meteo.ad/xml/neige.xml"
+          "website": "https://www.meteo.ad/fr/etatneige"
         }
       },
       "dangerRatings": [
@@ -71,7 +71,7 @@
       "source": {
         "provider": {
           "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
-          "website": "https://www.meteo.ad/xml/neige.xml"
+          "website": "https://www.meteo.ad/fr/etatneige"
         }
       },
       "dangerRatings": [

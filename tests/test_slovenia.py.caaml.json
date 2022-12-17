@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "Avalanche Warning Service Slovenia",
-          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
       "dangerRatings": [
@@ -108,7 +108,7 @@
       "source": {
         "provider": {
           "name": "Avalanche Warning Service Slovenia",
-          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
       "dangerRatings": [
@@ -203,7 +203,7 @@
       "source": {
         "provider": {
           "name": "Avalanche Warning Service Slovenia",
-          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
       "dangerRatings": [
@@ -298,7 +298,7 @@
       "source": {
         "provider": {
           "name": "Avalanche Warning Service Slovenia",
-          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
       "dangerRatings": [
@@ -393,7 +393,7 @@
       "source": {
         "provider": {
           "name": "Avalanche Warning Service Slovenia",
-          "website": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml"
+          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
       "dangerRatings": [

@@ -34,7 +34,7 @@
       "source": {
         "provider": {
           "name": "AINEVA",
-          "website": "https://bollettini.aineva.it/albina_files/latest/en.xml"
+          "website": "https://bollettini-en.aineva.it"
         }
       },
       "dangerRatings": [

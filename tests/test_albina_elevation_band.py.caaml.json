@@ -130,7 +130,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Tirol",
-          "website": "https://static.avalanche.report/bulletins/latest/AT-07_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [
@@ -364,7 +364,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Tirol",
-          "website": "https://static.avalanche.report/bulletins/latest/AT-07_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [
@@ -502,7 +502,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Tirol",
-          "website": "https://static.avalanche.report/bulletins/latest/AT-07_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [
@@ -583,7 +583,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Tirol",
-          "website": "https://static.avalanche.report/bulletins/latest/AT-07_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [
@@ -793,7 +793,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Tirol",
-          "website": "https://static.avalanche.report/bulletins/latest/AT-07_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [
@@ -967,7 +967,7 @@
       "source": {
         "provider": {
           "name": "Lawinenwarndienst Tirol",
-          "website": "https://static.avalanche.report/bulletins/latest/AT-07_en.xml"
+          "website": "https://avalanche.report/"
         }
       },
       "dangerRatings": [

@@ -34,7 +34,7 @@
       "source": {
         "provider": {
           "name": "Landeswarnzentrale Vorarlberg",
-          "website": "https://www.avalanche-warnings.eu/public/vorarlberg/caaml/en"
+          "website": "https://warndienste.cnv.at/dibos/lawine"
         }
       },
       "dangerRatings": [
