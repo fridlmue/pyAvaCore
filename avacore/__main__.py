@@ -54,6 +54,7 @@ default_regions = [
     "IT-34",
     "IT-36",
     "IT-57",
+    "IT-MeteoMont",
     "NO",
     "PL",
     "PL-12",

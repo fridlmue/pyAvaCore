@@ -23,6 +23,7 @@ import avacore.processor_cz
 import avacore.processor_es
 import avacore.processor_fr
 import avacore.processor_is
+import avacore.processor_it_meteomont
 import avacore.processor_norway
 import avacore.processor_pl
 import avacore.processor_pl_12
@@ -56,6 +57,8 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_uk.Processor()
     if region_id.startswith("IS"):
         return avacore.processor_is.Processor()
+    if region_id.startswith("IT-MeteoMont"):
+        return avacore.processor_it_meteomont.Processor()
     if region_id.startswith("NO"):
         return avacore.processor_norway.Processor()
     if region_id.startswith("PL-12"):
