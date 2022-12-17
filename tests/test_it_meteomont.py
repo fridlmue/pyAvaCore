@@ -7,4 +7,9 @@ class TestMeteoMont(SnowTest):
     def test_it_meteomont(self):
         processor = Processor()
         bulletins = processor.parse_json_file("", f"{__file__}.json")
-        self.assertEqualBulletinJSON(__file__, bulletins, 'IT-MeteoMont')
+        self.assertEqualBulletinJSON(
+            __file__,
+            bulletins,
+            region_id="IT-MeteoMont",
+            date="2022-12-12",
+        )

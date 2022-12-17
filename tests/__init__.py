@@ -9,11 +9,15 @@ from avacore.avabulletins import Bulletins
 
 class SnowTest(unittest.TestCase):
     def assertEqualBulletinJSON(
-        self, expected_basename: str, bulletins: Bulletins, region_id: str = ""
+        self,
+        expected_basename: str,
+        bulletins: Bulletins,
+        region_id: str = "",
+        date: str = "",
     ):
 
         region_id = region_id or bulletins[0].get_region_list()[0].upper()
-        url, provider = get_report_url(region_id, lang="en")
+        url, provider = get_report_url(region_id, date=date, lang="en")
         bulletins.append_provider(provider, url)
 
         expected = Path(f"{expected_basename}.caaml.json")
