@@ -7,10 +7,10 @@
           "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
         },
         {
-          "regionID": "IT-36-UD-04"
+          "regionID": "IT-36-UD-03"
         },
         {
-          "regionID": "IT-36-UD-03"
+          "regionID": "IT-36-UD-04"
         }
       ],
       "validTime": {
@@ -222,10 +222,10 @@
           "name": "VENETO / Prealpi"
         },
         {
-          "regionID": "IT-34-VI-01"
+          "regionID": "IT-34-BL-06"
         },
         {
-          "regionID": "IT-34-BL-06"
+          "regionID": "IT-34-VI-01"
         },
         {
           "regionID": "IT-34-VR-01"
@@ -271,13 +271,13 @@
           "name": "LOMBARDIA / Alpi Retiche"
         },
         {
+          "regionID": "IT-25-BS-01"
+        },
+        {
           "regionID": "IT-25-SO-01"
         },
         {
           "regionID": "IT-25-SO-02"
-        },
-        {
-          "regionID": "IT-25-BS-01"
         },
         {
           "regionID": "IT-25-SO-03"
@@ -455,10 +455,10 @@
           "name": "PIEMONTE / Alpi Lepontine"
         },
         {
-          "regionID": "IT-21-VB-03"
+          "regionID": "IT-21-VB-02"
         },
         {
-          "regionID": "IT-21-VB-02"
+          "regionID": "IT-21-VB-03"
         }
       ],
       "validTime": {
@@ -501,10 +501,10 @@
           "name": "PIEMONTE / Alpi Pennine"
         },
         {
-          "regionID": "IT-21-VC-01"
+          "regionID": "IT-21-VB-01"
         },
         {
-          "regionID": "IT-21-VB-01"
+          "regionID": "IT-21-VC-01"
         }
       ],
       "validTime": {
@@ -547,10 +547,10 @@
           "name": "PIEMONTE / Alpi Graie"
         },
         {
-          "regionID": "IT-21-TO-05"
+          "regionID": "IT-21-TO-04"
         },
         {
-          "regionID": "IT-21-TO-04"
+          "regionID": "IT-21-TO-05"
         }
       ],
       "validTime": {
@@ -642,10 +642,10 @@
           "regionID": "IT-21-CN-03"
         },
         {
-          "regionID": "IT-21-CN-05"
+          "regionID": "IT-21-CN-04"
         },
         {
-          "regionID": "IT-21-CN-04"
+          "regionID": "IT-21-CN-05"
         }
       ],
       "validTime": {
@@ -1650,10 +1650,10 @@
           "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
         },
         {
-          "regionID": "IT-36-UD-04"
+          "regionID": "IT-36-UD-03"
         },
         {
-          "regionID": "IT-36-UD-03"
+          "regionID": "IT-36-UD-04"
         }
       ],
       "validTime": {
@@ -1865,10 +1865,10 @@
           "name": "VENETO / Prealpi"
         },
         {
-          "regionID": "IT-34-VI-01"
+          "regionID": "IT-34-BL-06"
         },
         {
-          "regionID": "IT-34-BL-06"
+          "regionID": "IT-34-VI-01"
         },
         {
           "regionID": "IT-34-VR-01"
@@ -1914,13 +1914,13 @@
           "name": "LOMBARDIA / Alpi Retiche"
         },
         {
+          "regionID": "IT-25-BS-01"
+        },
+        {
           "regionID": "IT-25-SO-01"
         },
         {
           "regionID": "IT-25-SO-02"
-        },
-        {
-          "regionID": "IT-25-BS-01"
         },
         {
           "regionID": "IT-25-SO-03"
@@ -2098,10 +2098,10 @@
           "name": "PIEMONTE / Alpi Lepontine"
         },
         {
-          "regionID": "IT-21-VB-03"
+          "regionID": "IT-21-VB-02"
         },
         {
-          "regionID": "IT-21-VB-02"
+          "regionID": "IT-21-VB-03"
         }
       ],
       "validTime": {
@@ -2144,10 +2144,10 @@
           "name": "PIEMONTE / Alpi Pennine"
         },
         {
-          "regionID": "IT-21-VC-01"
+          "regionID": "IT-21-VB-01"
         },
         {
-          "regionID": "IT-21-VB-01"
+          "regionID": "IT-21-VC-01"
         }
       ],
       "validTime": {
@@ -2190,10 +2190,10 @@
           "name": "PIEMONTE / Alpi Graie"
         },
         {
-          "regionID": "IT-21-TO-05"
+          "regionID": "IT-21-TO-04"
         },
         {
-          "regionID": "IT-21-TO-04"
+          "regionID": "IT-21-TO-05"
         }
       ],
       "validTime": {
@@ -2285,10 +2285,10 @@
           "regionID": "IT-21-CN-03"
         },
         {
-          "regionID": "IT-21-CN-05"
+          "regionID": "IT-21-CN-04"
         },
         {
-          "regionID": "IT-21-CN-04"
+          "regionID": "IT-21-CN-05"
         }
       ],
       "validTime": {
@@ -3295,10 +3295,10 @@
           "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
         },
         {
-          "regionID": "IT-36-UD-04"
+          "regionID": "IT-36-UD-03"
         },
         {
-          "regionID": "IT-36-UD-03"
+          "regionID": "IT-36-UD-04"
         }
       ],
       "validTime": {
@@ -3510,10 +3510,10 @@
           "name": "VENETO / Prealpi"
         },
         {
-          "regionID": "IT-34-VI-01"
+          "regionID": "IT-34-BL-06"
         },
         {
-          "regionID": "IT-34-BL-06"
+          "regionID": "IT-34-VI-01"
         },
         {
           "regionID": "IT-34-VR-01"
@@ -3559,13 +3559,13 @@
           "name": "LOMBARDIA / Alpi Retiche"
         },
         {
+          "regionID": "IT-25-BS-01"
+        },
+        {
           "regionID": "IT-25-SO-01"
         },
         {
           "regionID": "IT-25-SO-02"
-        },
-        {
-          "regionID": "IT-25-BS-01"
         },
         {
           "regionID": "IT-25-SO-03"
@@ -3743,10 +3743,10 @@
           "name": "PIEMONTE / Alpi Lepontine"
         },
         {
-          "regionID": "IT-21-VB-03"
+          "regionID": "IT-21-VB-02"
         },
         {
-          "regionID": "IT-21-VB-02"
+          "regionID": "IT-21-VB-03"
         }
       ],
       "validTime": {
@@ -3789,10 +3789,10 @@
           "name": "PIEMONTE / Alpi Pennine"
         },
         {
-          "regionID": "IT-21-VC-01"
+          "regionID": "IT-21-VB-01"
         },
         {
-          "regionID": "IT-21-VB-01"
+          "regionID": "IT-21-VC-01"
         }
       ],
       "validTime": {
@@ -3835,10 +3835,10 @@
           "name": "PIEMONTE / Alpi Graie"
         },
         {
-          "regionID": "IT-21-TO-05"
+          "regionID": "IT-21-TO-04"
         },
         {
-          "regionID": "IT-21-TO-04"
+          "regionID": "IT-21-TO-05"
         }
       ],
       "validTime": {
@@ -3930,10 +3930,10 @@
           "regionID": "IT-21-CN-03"
         },
         {
-          "regionID": "IT-21-CN-05"
+          "regionID": "IT-21-CN-04"
         },
         {
-          "regionID": "IT-21-CN-04"
+          "regionID": "IT-21-CN-05"
         }
       ],
       "validTime": {
@@ -4940,10 +4940,10 @@
           "name": "FRIULI VENEZIA GIULIA / Alpi Giulie"
         },
         {
-          "regionID": "IT-36-UD-04"
+          "regionID": "IT-36-UD-03"
         },
         {
-          "regionID": "IT-36-UD-03"
+          "regionID": "IT-36-UD-04"
         }
       ],
       "validTime": {
@@ -5155,10 +5155,10 @@
           "name": "VENETO / Prealpi"
         },
         {
-          "regionID": "IT-34-VI-01"
+          "regionID": "IT-34-BL-06"
         },
         {
-          "regionID": "IT-34-BL-06"
+          "regionID": "IT-34-VI-01"
         },
         {
           "regionID": "IT-34-VR-01"
@@ -5204,13 +5204,13 @@
           "name": "LOMBARDIA / Alpi Retiche"
         },
         {
+          "regionID": "IT-25-BS-01"
+        },
+        {
           "regionID": "IT-25-SO-01"
         },
         {
           "regionID": "IT-25-SO-02"
-        },
-        {
-          "regionID": "IT-25-BS-01"
         },
         {
           "regionID": "IT-25-SO-03"
@@ -5388,10 +5388,10 @@
           "name": "PIEMONTE / Alpi Lepontine"
         },
         {
-          "regionID": "IT-21-VB-03"
+          "regionID": "IT-21-VB-02"
         },
         {
-          "regionID": "IT-21-VB-02"
+          "regionID": "IT-21-VB-03"
         }
       ],
       "validTime": {
@@ -5434,10 +5434,10 @@
           "name": "PIEMONTE / Alpi Pennine"
         },
         {
-          "regionID": "IT-21-VC-01"
+          "regionID": "IT-21-VB-01"
         },
         {
-          "regionID": "IT-21-VB-01"
+          "regionID": "IT-21-VC-01"
         }
       ],
       "validTime": {
@@ -5480,10 +5480,10 @@
           "name": "PIEMONTE / Alpi Graie"
         },
         {
-          "regionID": "IT-21-TO-05"
+          "regionID": "IT-21-TO-04"
         },
         {
-          "regionID": "IT-21-TO-04"
+          "regionID": "IT-21-TO-05"
         }
       ],
       "validTime": {
@@ -5575,10 +5575,10 @@
           "regionID": "IT-21-CN-03"
         },
         {
-          "regionID": "IT-21-CN-05"
+          "regionID": "IT-21-CN-04"
         },
         {
-          "regionID": "IT-21-CN-04"
+          "regionID": "IT-21-CN-05"
         }
       ],
       "validTime": {
