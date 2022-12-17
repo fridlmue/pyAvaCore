@@ -66,6 +66,7 @@ class PrevisioniValanghe(TypedDict):
 
 
 class Processor(JsonProcessor):
+    add_eaws_id = False
     tzinfo = ZoneInfo("Europe/Rome")
 
     def process_bulletin(self, region_id) -> Bulletins:
@@ -101,7 +102,7 @@ class Processor(JsonProcessor):
         for eaws_id in (
             eaws_id
             for (eaws_id, id) in eaws_regions.items()
-            if id == bulletin.regions[0].regionID
+            if self.add_eaws_id and id == bulletin.regions[0].regionID
         ):
             bulletin.regions.append(Region(regionID=eaws_id))
         bulletin.dangerRatings = [

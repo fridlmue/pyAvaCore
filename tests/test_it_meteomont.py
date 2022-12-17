@@ -6,6 +6,7 @@ from tests import SnowTest
 class TestMeteoMont(SnowTest):
     def test_it_meteomont(self):
         processor = Processor()
+        processor.add_eaws_id = True
         bulletins = processor.parse_json_file("", f"{__file__}.json")
         self.assertEqual("2022-12-12", bulletins.main_date().isoformat())
         self.assertEqual(
