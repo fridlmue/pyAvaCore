@@ -66,48 +66,62 @@ class PrevisioniValanghe(TypedDict):
 
 
 class Processor(JsonProcessor):
+    tzinfo = ZoneInfo("Europe/Rome")
+
     def process_bulletin(self, region_id) -> Bulletins:
         root = self._fetch_json(self.url, {})
         return self.parse_json(region_id, root)
 
     def parse_json(self, region_id, data: PrevisioniValanghe) -> Bulletins:
         bulletins = Bulletins()
-        tzinfo = ZoneInfo("Europe/Rome")
         for valanga in data["giorno0"]["previsioneValanga"]:
-            bulletin = AvaBulletin()
-            time = bulletin.validTime
-            time.startTime = datetime.fromisoformat(valanga["dataRif"])
-            time.startTime = time.startTime.replace(tzinfo=tzinfo)
-            time.endTime = time.startTime + timedelta(days=1)
-            bulletin.regions = [
-                Region(
-                    regionID=f"IT-MeteoMont-{valanga['codSett']}-{valanga['codSottoSett']}",
-                    name=f"{valanga['regione']} / {valanga['descSottoSett']}",
-                )
-            ]
-            for id in (eaws_id
-                for (eaws_id, id) in eaws_regions.items()
-                if id == bulletin.regions[0].regionID):
-                bulletin.regions.append(Region(regionID=id))
-            bulletin.dangerRatings = [
-                DangerRating().set_mainValue_int(int(valanga["colorePericolo1"])),
-                DangerRating().set_mainValue_int(int(valanga["colorePericolo2"])),
-            ]
-            bulletin.avalancheProblems = [
-                AvalancheProblem(
-                    problemType=problemTypes.get(valanga["situazioneTipoImg"], None),
-                    # aspects=valanga["esposizioneImg"]
-                )
-            ]
-            bulletin.customData = dict(
-                MeteoMont=dict(
-                    snowDepth=valanga["hNeve"],
-                    snowDepthAltitude=valanga["quotaNeve"],
-                    freshSnow=valanga["hNeveFresca"],
-                )
-            )
-            bulletins.append(bulletin)
+            bulletins.append(self._parse_valanga(valanga, timedelta(days=0)))
+        for valanga in data["giorno1"]["previsioneValanga"]:
+            bulletins.append(self._parse_valanga(valanga, timedelta(days=1)))
+        for valanga in data["giorno2"]["previsioneValanga"]:
+            bulletins.append(self._parse_valanga(valanga, timedelta(days=2)))
+        for valanga in data["giorno3"]["previsioneValanga"]:
+            bulletins.append(self._parse_valanga(valanga, timedelta(days=3)))
         return bulletins
+
+    def _parse_valanga(
+        self, valanga: PrevisioneValangaItem, delta: timedelta
+    ) -> AvaBulletin:
+        bulletin = AvaBulletin()
+        time = bulletin.validTime
+        time.startTime = datetime.fromisoformat(valanga["dataRif"]) + delta
+        time.startTime = time.startTime.replace(tzinfo=self.tzinfo)
+        time.endTime = time.startTime + timedelta(days=1)
+        bulletin.regions = [
+            Region(
+                regionID=f"IT-MeteoMont-{valanga['codSett']}-{valanga['codSottoSett']}",
+                name=f"{valanga['regione']} / {valanga['descSottoSett']}",
+            )
+        ]
+        for id in (
+            eaws_id
+            for (eaws_id, id) in eaws_regions.items()
+            if id == bulletin.regions[0].regionID
+        ):
+            bulletin.regions.append(Region(regionID=id))
+        bulletin.dangerRatings = [
+            DangerRating().set_mainValue_int(int(valanga["colorePericolo1"])),
+            DangerRating().set_mainValue_int(int(valanga["colorePericolo2"])),
+        ]
+        bulletin.avalancheProblems = [
+            AvalancheProblem(
+                problemType=problemTypes.get(valanga["situazioneTipoImg"], None),
+                # aspects=valanga["esposizioneImg"]
+            )
+        ]
+        bulletin.customData = dict(
+            MeteoMont=dict(
+                snowDepth=valanga["hNeve"],
+                snowDepthAltitude=valanga["quotaNeve"],
+                freshSnow=valanga["hNeveFresca"],
+            )
+        )
+        return bulletin
 
 
 problemTypes = {
