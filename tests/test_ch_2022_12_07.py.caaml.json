@@ -112,7 +112,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true#en"
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
       "dangerRatings": [
@@ -300,7 +300,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true#en"
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
       "dangerRatings": [
@@ -404,7 +404,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true#en"
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
       "dangerRatings": [
@@ -484,7 +484,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true#en"
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
       "dangerRatings": [
@@ -540,7 +540,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true#en"
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
       "dangerRatings": [
@@ -655,7 +655,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://api.slf.ch/bulletin/eaws/current?geojson=true#en"
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
       "dangerRatings": [

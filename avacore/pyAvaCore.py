@@ -14,6 +14,7 @@
 """
 
 import configparser
+import dataclasses
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
@@ -33,7 +34,8 @@ def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
     returns Bulletins object for requested region_id and provider information
     """
     processor = avacore.processors.new_processor(region_id)
-    processor.url, provider = get_report_url(region_id, date=date, lang=lang)
+    provider = get_report_provider(region_id, date=date, lang=lang)
+    processor.url = provider.url
 
     reports = processor.process_bulletin(region_id)
     reports.append_raw_data(processor.raw_data_format, processor.raw_data)
@@ -42,7 +44,7 @@ def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
         for report in reports.bulletins
         if any(region.startswith(region_id) for region in report.get_region_list())
     ]
-    reports.append_provider(provider, processor.url)
+    reports.append_provider(provider.name, provider.website)
     return reports
 
 
@@ -69,7 +71,16 @@ def get_config(region_id: str, option: str, fallback="") -> str:
     return config.get(region_id, option, fallback=fallback)
 
 
-def get_report_url(region_id, *, date="", lang="") -> Tuple[str, str]:
+@dataclasses.dataclass
+class BulletinProvider:
+    lang: str
+    name: str
+    region: str
+    url: str
+    website: str
+
+
+def get_report_provider(region_id, *, date="", lang="") -> BulletinProvider:
     """
     returns the valid URL for requested region_id
     """
@@ -82,5 +93,10 @@ def get_report_url(region_id, *, date="", lang="") -> Tuple[str, str]:
         region="{region}",
     )
 
-    name = get_config(region_id, "name")
-    return url, name
+    return BulletinProvider(
+        lang=lang,
+        name=get_config(region_id, "name"),
+        region=region_id,
+        url=url,
+        website=get_config(region_id, "website"),
+    )

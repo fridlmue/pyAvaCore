@@ -13,7 +13,7 @@
       "source": {
         "provider": {
           "name": "Ve\u00f0urstofa \u00cdslands",
-          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+          "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
       "dangerRatings": [
@@ -77,7 +77,7 @@
       "source": {
         "provider": {
           "name": "Ve\u00f0urstofa \u00cdslands",
-          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+          "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
       "dangerRatings": [
@@ -128,7 +128,7 @@
       "source": {
         "provider": {
           "name": "Ve\u00f0urstofa \u00cdslands",
-          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+          "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
       "dangerRatings": [
@@ -195,7 +195,7 @@
       "source": {
         "provider": {
           "name": "Ve\u00f0urstofa \u00cdslands",
-          "website": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en"
+          "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
       "dangerRatings": [

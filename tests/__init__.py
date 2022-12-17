@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import unittest
 from jsonschema import validate
-from avacore.pyAvaCore import get_report_url
+from avacore.pyAvaCore import get_report_provider
 
 from avacore.avabulletins import Bulletins
 
@@ -17,8 +17,8 @@ class SnowTest(unittest.TestCase):
     ):
 
         region_id = region_id or bulletins[0].get_region_list()[0].upper()
-        url, provider = get_report_url(region_id, date=date, lang="en")
-        bulletins.append_provider(provider, url)
+        provider = get_report_provider(region_id, date=date, lang="en")
+        bulletins.append_provider(provider.name, provider.website)
 
         expected = Path(f"{expected_basename}.caaml.json")
         # expected.write_text(bulletins.to_json())
