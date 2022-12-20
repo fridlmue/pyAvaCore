@@ -24,7 +24,7 @@ from datetime import date, datetime, timedelta
 from io import BytesIO
 import urllib.error
 
-from .pyAvaCore import get_bulletins
+from .pyAvaCore import get_bulletins, parse_dates
 from .avajson import JSONEncoder
 from .geojson import FeatureCollection
 
@@ -74,7 +74,10 @@ parser.add_argument(
 )
 parser.add_argument(
     "--date",
-    help="date to fetch avalanche bulletins for",
+    help="date to fetch avalanche bulletins for; "
+    "date is specified in ISO 8601 format `YYYY-MM-DD`; "
+    "multiple dates may be specified using a space separator; "
+    "an ISO 8601 interval may be specified as `YYYY-MM-DD/YYYY-MM-DD`",
 )
 parser.add_argument(
     "--regions",
@@ -144,15 +147,15 @@ def init_logging(filename="logs/pyAvaCore.log"):
     )
 
 
-def download_region(regionID):
+def download_region(regionID, fetch_date: str):
     """
     Downloads the given region and converts it to JSON
     """
-    bulletins = get_bulletins(regionID, date=args.date, lang=args.lang)
+    bulletins = get_bulletins(regionID, date=fetch_date, lang=args.lang)
 
     protect_overwrite_now = datetime.fromisoformat(
         args.protect_overwrite_now
-        or args.date
+        or fetch_date
         or datetime.now().replace(microsecond=0).isoformat()
     )
     validity_dates = bulletins.main_dates(protect_overwrite_now)
@@ -215,20 +218,21 @@ def download_regions():
     """Downloads all regions"""
     failed_regions = []
     for region in args.regions.split():
-        try:
-            download_region(region)
-        except urllib.error.HTTPError as e:
-            failed_regions.append(region)
-            logging.warning(
-                "Failed to download %s from %s: %s %s",
-                region,
-                e.filename,
-                e.status,
-                e.reason,
-            )
-        except Exception as e:  # pylint: disable=broad-except
-            failed_regions.append(region)
-            logging.error("Failed to download %s", region, exc_info=e)
+        for fetch_date in parse_dates(args.date):
+            try:
+                download_region(region, fetch_date)
+            except urllib.error.HTTPError as e:
+                failed_regions.append(region)
+                logging.warning(
+                    "Failed to download %s from %s: %s %s",
+                    region,
+                    e.filename,
+                    e.status,
+                    e.reason,
+                )
+            except Exception as e:  # pylint: disable=broad-except
+                failed_regions.append(region)
+                logging.error("Failed to download %s", region, exc_info=e)
     if failed_regions:
         logging.error(
             "Failed to download the following regions: %s",
@@ -263,5 +267,5 @@ def merge_regions(validity_date: str):
 if __name__ == "__main__":
     init_logging()
     download_regions()
-    for date_string in (args.date or args.merge_dates).split():
+    for date_string in parse_dates(args.date or args.merge_dates):
         merge_regions(date_string)
