@@ -37,7 +37,10 @@ Download and parse EAWS avalanche bulletins
 options:
   -h, --help            show this help message and exit
   --lang LANG           language to fetch avalanche bulletins for
-  --date DATE           date to fetch avalanche bulletins for
+  --date DATE           date to fetch avalanche bulletins for;
+                        date is specified in ISO 8601 format `YYYY-MM-DD`;
+                        multiple dates may be specified using a space separator;
+                        an ISO 8601 interval may be specified as `YYYY-MM-DD/YYYY-MM-DD`
   --regions REGIONS     avalanche regions to download
   --merge-dates DATES   dates to merge into one file
   --merge-regions REGIONS

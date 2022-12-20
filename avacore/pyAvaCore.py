@@ -15,6 +15,7 @@
 
 import configparser
 import dataclasses
+import datetime as dt
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
@@ -100,3 +101,20 @@ def get_report_provider(region_id, *, date="", lang="") -> BulletinProvider:
         url=url,
         website=get_config(region_id, "website"),
     )
+
+
+def parse_dates(date_str: str) -> List[str]:
+    """Parses a singleton date, a space separated list of dates or a date interval"""
+    if not date_str:
+        return [None]
+    if "/" not in date_str:
+        return date_str.split()
+    # ISO 8601 interval
+    [start_str, end_str] = date_str.split("/")
+    start_date = dt.date.fromisoformat(start_str)
+    end_date = dt.date.fromisoformat(end_str)
+    dates: List[str] = []
+    while start_date <= end_date:
+        dates.append(start_date.isoformat())
+        start_date += dt.timedelta(days=1)
+    return dates
