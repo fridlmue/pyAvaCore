@@ -17,7 +17,10 @@ from datetime import datetime
 from datetime import time
 from datetime import timedelta
 import copy
+import itertools
 from zoneinfo import ZoneInfo
+from typing import Iterable, List
+import xml.etree.ElementTree as ET
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -25,12 +28,14 @@ from avacore.avabulletin import (
     Region,
     Elevation,
     Texts,
+    ValidTime,
 )
 from avacore.avabulletins import Bulletins
 from avacore.processor import XmlProcessor
 
 
-CAAMLTAG = "{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}"
+CAAML_NS = "{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}"
+XLINK_NS = "{http://www.w3.org/1999/xlink}"
 
 
 def et_add_parent_info(element_tree):
@@ -52,7 +57,7 @@ def et_get_parent(element_tree):
 
 
 class Processor(XmlProcessor):
-    def parse_xml(self, region_id, root) -> Bulletins:
+    def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-nested-blocks
         # pylint: disable=too-many-statements
@@ -61,14 +66,14 @@ class Processor(XmlProcessor):
 
         reports = Bulletins()
 
-        for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
+        for bulletin in root.iter(CAAML_NS + "Bulletin"):
             report = AvaBulletin()
             report.bulletinID = bulletin.attrib.get("{http://www.opengis.net/gml}id")
             pm_danger_ratings = []
 
             pm_available = False
-            for nDangerRating in bulletin.iter(tag=CAAMLTAG + "DangerRating"):
-                for validTime in nDangerRating.iter(tag=CAAMLTAG + "validTime"):
+            for nDangerRating in bulletin.iter(CAAML_NS + "DangerRating"):
+                for validTime in nDangerRating.iter(CAAML_NS + "validTime"):
                     pm_available = True
                     break
 
@@ -78,45 +83,37 @@ class Processor(XmlProcessor):
 
             for observations in bulletin:
                 et_add_parent_info(observations)
-                for locRef in observations.iter(tag=CAAMLTAG + "locRef"):
-                    loc_ref = locRef.attrib.get("{http://www.w3.org/1999/xlink}href")
+                for locRef in observations.iter(CAAML_NS + "locRef"):
+                    loc_ref = locRef.attrib.get(XLINK_NS + "href")
                     if loc_ref not in report.regions:
                         report.regions.append(Region(loc_ref))
-                for dateTimeReport in observations.iter(
-                    tag=CAAMLTAG + "dateTimeReport"
-                ):
+                for dateTimeReport in observations.iter(CAAML_NS + "dateTimeReport"):
                     report.publicationTime = datetime.fromisoformat(
                         dateTimeReport.text.replace("Z", "+00:00")
                     )
-                for validTime in observations.iter(tag=CAAMLTAG + "validTime"):
+                for validTime in observations.iter(CAAML_NS + "validTime"):
                     if not et_get_parent(validTime):
                         for beginPosition in observations.iter(
-                            tag=CAAMLTAG + "beginPosition"
+                            CAAML_NS + "beginPosition"
                         ):
                             report.validTime.startTime = datetime.fromisoformat(
                                 beginPosition.text.replace("Z", "+00:00")
                             )
-                        for endPosition in observations.iter(
-                            tag=CAAMLTAG + "endPosition"
-                        ):
+                        for endPosition in observations.iter(CAAML_NS + "endPosition"):
                             report.validTime.endTime = datetime.fromisoformat(
                                 endPosition.text.replace("Z", "+00:00")
                             )
-                for nDangerRating in observations.iter(tag=CAAMLTAG + "DangerRating"):
+                for nDangerRating in observations.iter(CAAML_NS + "DangerRating"):
                     main_value = 0
                     am_rating = True
-                    for mainValue in nDangerRating.iter(tag=CAAMLTAG + "mainValue"):
+                    for mainValue in nDangerRating.iter(CAAML_NS + "mainValue"):
                         main_value = int(mainValue.text)
                     valid_elevation = "-"
                     for validElevation in nDangerRating.iter(
-                        tag=CAAMLTAG + "validElevation"
+                        CAAML_NS + "validElevation"
                     ):
-                        valid_elevation = validElevation.attrib.get(
-                            "{http://www.w3.org/1999/xlink}href"
-                        )
-                    for beginPosition in nDangerRating.iter(
-                        tag=CAAMLTAG + "beginPosition"
-                    ):
+                        valid_elevation = validElevation.attrib.get(XLINK_NS + "href")
+                    for beginPosition in nDangerRating.iter(CAAML_NS + "beginPosition"):
                         validity_begin = datetime.fromisoformat(
                             beginPosition.text.replace("Z", "+00:00")
                         )
@@ -133,61 +130,50 @@ class Processor(XmlProcessor):
                     else:
                         pm_danger_ratings.append(danger_rating)
 
-                for DangerPatterns in observations.iter(
-                    tag=CAAMLTAG + "dangerPatterns"
-                ):
+                for DangerPatterns in observations.iter(CAAML_NS + "dangerPatterns"):
                     dp = []
                     for DangerPattern in DangerPatterns.iter(
-                        tag=CAAMLTAG + "DangerPattern"
+                        CAAML_NS + "DangerPattern"
                     ):
-                        for DangerPatternType in DangerPattern.iter(
-                            tag=CAAMLTAG + "type"
-                        ):
+                        for DangerPatternType in DangerPattern.iter(CAAML_NS + "type"):
                             dp.append(DangerPatternType.text)
                     report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
 
-                for AvProblem in observations.iter(tag=CAAMLTAG + "AvProblem"):
+                for AvProblem in observations.iter(CAAML_NS + "AvProblem"):
                     type_r = ""
                     # problem_danger_rating = DangerRating()
                     elevation = Elevation()
-                    for avProbType in AvProblem.iter(tag=CAAMLTAG + "type"):
+                    for avProbType in AvProblem.iter(CAAML_NS + "type"):
                         type_r = avProbType.text
                     aspect = []
-                    for validAspect in AvProblem.iter(tag=CAAMLTAG + "validAspect"):
+                    for validAspect in AvProblem.iter(CAAML_NS + "validAspect"):
                         aspect.append(
-                            validAspect.get("{http://www.w3.org/1999/xlink}href")
+                            validAspect.get(XLINK_NS + "href")
                             .upper()
                             .replace("ASPECTRANGE_", "")
                         )
                     valid_elevation = "-"
-                    for validElevation in AvProblem.iter(
-                        tag=CAAMLTAG + "validElevation"
-                    ):
-                        if (
-                            "{http://www.w3.org/1999/xlink}href"
-                            in validElevation.attrib
-                        ):
+                    for validElevation in AvProblem.iter(CAAML_NS + "validElevation"):
+                        if XLINK_NS + "href" in validElevation.attrib:
                             elevation.auto_select(
-                                validElevation.attrib.get(
-                                    "{http://www.w3.org/1999/xlink}href"
-                                )
+                                validElevation.attrib.get(XLINK_NS + "href")
                             )
                         else:
                             for beginPosition in validElevation.iter(
-                                tag=CAAMLTAG + "beginPosition"
+                                CAAML_NS + "beginPosition"
                             ):
                                 elevation.auto_select(
                                     "ElevationRange_" + beginPosition.text + "Hi"
                                 )
                             for endPosition in validElevation.iter(
-                                tag=CAAMLTAG + "endPosition"
+                                CAAML_NS + "endPosition"
                             ):
                                 elevation.auto_select(
                                     "ElevationRange_" + endPosition.text + "Lw"
                                 )
 
                     comment_r = ""
-                    for comment in AvProblem.iter(tag=CAAMLTAG + "comment"):
+                    for comment in AvProblem.iter(CAAML_NS + "comment"):
                         comment_r = comment.text
                     # problem_danger_rating.aspects = aspect
                     problem = AvalancheProblem()
@@ -199,33 +185,31 @@ class Processor(XmlProcessor):
                     report.avalancheProblems.append(problem)
 
                 for avActivityHighlights in observations.iter(
-                    tag=CAAMLTAG + "avActivityHighlights"
+                    CAAML_NS + "avActivityHighlights"
                 ):
                     if not avActivityHighlights.text is None:
                         avalancheActivity.highlights = (
                             avActivityHighlights.text.replace("&nbsp;", "\n")
                         )
                 for wxSynopsisComment in observations.iter(
-                    tag=CAAMLTAG + "wxSynopsisComment"
+                    CAAML_NS + "wxSynopsisComment"
                 ):
                     wxSynopsis.comment = wxSynopsisComment.text.replace("&nbsp;", "\n")
                 for avActivityComment in observations.iter(
-                    tag=CAAMLTAG + "avActivityComment"
+                    CAAML_NS + "avActivityComment"
                 ):
                     if not avActivityComment.text is None:
                         avalancheActivity.comment = avActivityComment.text.replace(
                             "&nbsp;", "\n"
                         )
                 for snowpackStructureComment in observations.iter(
-                    tag=CAAMLTAG + "" "snowpackStructureComment"
+                    CAAML_NS + "snowpackStructureComment"
                 ):
                     if not snowpackStructureComment.text is None:
                         snowpackStructure.comment = (
                             snowpackStructureComment.text.replace("&nbsp;", "\n")
                         )
-                for tendencyComment in observations.iter(
-                    tag=CAAMLTAG + "tendencyComment"
-                ):
+                for tendencyComment in observations.iter(CAAML_NS + "tendencyComment"):
                     if not tendencyComment.text is None:
                         report.tendency.tendencyComment = tendencyComment.text.replace(
                             "&nbsp;", "\n"
@@ -271,8 +255,8 @@ class Processor(XmlProcessor):
         return reports
 
 
-class VorarlbergProcessor(Processor):
-    def parse_xml(self, region_id, root) -> Bulletins:
+class VorarlbergProcessor(XmlProcessor):
+    def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-nested-blocks
         # pylint: disable=too-many-statements
@@ -286,83 +270,75 @@ class VorarlbergProcessor(Processor):
         # Common for every Report:
 
         report_id = ""
-        for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
+        for bulletin in root.iter(CAAML_NS + "Bulletin"):
             report_id = bulletin.attrib.get("{http://www.opengis.net/gml}id")
 
         activity_com = ""
-        for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
+        for bulletin in root.iter(CAAML_NS + "Bulletin"):
             for detail in bulletin:
-                for metaDataProperty in detail.iter(tag=CAAMLTAG + "metaDataProperty"):
+                for metaDataProperty in detail.iter(CAAML_NS + "metaDataProperty"):
                     for dateTimeReport in metaDataProperty.iter(
-                        tag=CAAMLTAG + "dateTimeReport"
+                        CAAML_NS + "dateTimeReport"
                     ):
                         report.publicationTime = datetime.fromisoformat(
                             dateTimeReport.text
                         )
-                for bulletinResultsOf in detail.iter(
-                    tag=CAAMLTAG + "bulletinResultsOf"
-                ):
+                for bulletinResultsOf in detail.iter(CAAML_NS + "bulletinResultsOf"):
                     for travelAdvisoryComment in bulletinResultsOf.iter(
-                        tag=CAAMLTAG + "" "travelAdvisoryComment"
+                        CAAML_NS + "travelAdvisoryComment"
                     ):
                         activity_com = travelAdvisoryComment.text
-                    for highlights in bulletinResultsOf.iter(
-                        tag=CAAMLTAG + "highlights"
-                    ):
+                    for highlights in bulletinResultsOf.iter(CAAML_NS + "highlights"):
                         report.avalancheActivityHighlights = highlights.text
-                    for comment in bulletinResultsOf.iter(tag=CAAMLTAG + "comment"):
+                    for comment in bulletinResultsOf.iter(CAAML_NS + "comment"):
                         if comment_empty:
                             report.tendency.tendencyComment = comment.text
                             comment_empty = 0
                     for wxSynopsisComment in bulletinResultsOf.iter(
-                        tag=CAAMLTAG + "" "wxSynopsisComment"
+                        CAAML_NS + "wxSynopsisComment"
                     ):
                         report.wxSynopsisComment = wxSynopsisComment.text
                     for snowpackStructureComment in bulletinResultsOf.iter(
-                        tag=CAAMLTAG + "" "snowpackStructureComment"
+                        CAAML_NS + "snowpackStructureComment"
                     ):
                         report.snowpackStructureComment = snowpackStructureComment.text
-                    for AvProblem in detail.iter(tag=CAAMLTAG + "AvProblem"):
+                    for AvProblem in detail.iter(CAAML_NS + "AvProblem"):
                         type_r = ""
-                        for ac_problemt_type in AvProblem.iter(tag=CAAMLTAG + "type"):
+                        for ac_problemt_type in AvProblem.iter(CAAML_NS + "type"):
                             type_r = ac_problemt_type.text
                         aspect = []
-                        for validAspect in AvProblem.iter(tag=CAAMLTAG + "validAspect"):
+                        for validAspect in AvProblem.iter(CAAML_NS + "validAspect"):
                             aspect.append(
-                                validAspect.get("{http://www.w3.org/1999/xlink}href")
+                                validAspect.get(XLINK_NS + "href")
                                 .upper()
                                 .replace("ASPECTRANGE_", "")
                                 .replace("O", "E")
                             )
                         valid_elevation = "-"
                         for validElevation in AvProblem.iter(
-                            tag=CAAMLTAG + "validElevation"
+                            CAAML_NS + "validElevation"
                         ):
-                            if (
-                                "{http://www.w3.org/1999/xlink}href"
-                                in validElevation.attrib
-                            ):
+                            if XLINK_NS + "href" in validElevation.attrib:
                                 if "Treeline" in validElevation.attrib.get(
-                                    "{http://www.w3.org/1999/xlink}href"
+                                    XLINK_NS + "href"
                                 ):
                                     if "Hi" in validElevation.attrib.get(
-                                        "{http://www.w3.org/1999/xlink}href"
+                                        XLINK_NS + "href"
                                     ):
                                         valid_elevation = ">Treeline"
                                     if "Lo" in validElevation.attrib.get(
-                                        "{http://www.w3.org/1999/xlink}href"
+                                        XLINK_NS + "href"
                                     ):
                                         valid_elevation = "<Treeline"
                             else:
                                 for beginPosition in validElevation.iter(
-                                    tag="{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS\
-                                                                        beginPosition"
+                                    CAAML_NS + "beginPosition"
                                 ):
                                     valid_elevation = (
                                         "ElevationRange_" + beginPosition.text + "Hi"
                                     )
                                 for endPosition in validElevation.iter(
-                                    tag=CAAMLTAG + "endPosition"
+                                    CAAML_NS + "endPosition"
                                 ):
                                     valid_elevation = (
                                         "ElevationRange_" + endPosition.text + "Lw"
@@ -379,15 +355,13 @@ class VorarlbergProcessor(Processor):
 
         report.avalancheActivityComment = activity_com
 
-        for bulletinResultOf in root.iter(tag=CAAMLTAG + "bulletinResultsOf"):
+        for bulletinResultOf in root.iter(CAAML_NS + "bulletinResultsOf"):
             et_add_parent_info(bulletinResultOf)
 
             loc_list = []
 
-            for locRef in bulletinResultOf.iter(tag=CAAMLTAG + "locRef"):
-                current_loc_ref = locRef.attrib.get(
-                    "{http://www.w3.org/1999/xlink}href"
-                )
+            for locRef in bulletinResultOf.iter(CAAML_NS + "locRef"):
+                current_loc_ref = locRef.attrib.get(XLINK_NS + "href")
 
                 nDangerRating = et_get_parent(locRef)
                 validity_begin = ""
@@ -395,31 +369,27 @@ class VorarlbergProcessor(Processor):
                 main_value = 0
                 valid_elevation = "-"
 
-                for validTime in nDangerRating.iter(tag=CAAMLTAG + "validTime"):
-                    for beginPosition in validTime.iter(tag=CAAMLTAG + "beginPosition"):
+                for validTime in nDangerRating.iter(CAAML_NS + "validTime"):
+                    for beginPosition in validTime.iter(CAAML_NS + "beginPosition"):
                         validity_begin = datetime.fromisoformat(beginPosition.text)
-                    for endPosition in validTime.iter(tag=CAAMLTAG + "endPosition"):
+                    for endPosition in validTime.iter(CAAML_NS + "endPosition"):
                         validity_end = datetime.fromisoformat(endPosition.text)
                 main_value = 0
-                for main_value in nDangerRating.iter(tag=CAAMLTAG + "mainValue"):
+                for main_value in nDangerRating.iter(CAAML_NS + "mainValue"):
                     main_value = int(main_value.text)
-                for validElevation in nDangerRating.iter(
-                    tag=CAAMLTAG + "validElevation"
-                ):
-                    if "{http://www.w3.org/1999/xlink}href" in validElevation.attrib:
-                        valid_elevation = validElevation.attrib.get(
-                            "{http://www.w3.org/1999/xlink}href"
-                        )
+                for validElevation in nDangerRating.iter(CAAML_NS + "validElevation"):
+                    if XLINK_NS + "href" in validElevation.attrib:
+                        valid_elevation = validElevation.attrib.get(XLINK_NS + "href")
                     else:
                         for beginPosition in validElevation.iter(
-                            tag=CAAMLTAG + "beginPosition"
+                            CAAML_NS + "beginPosition"
                         ):
                             if not "Keine" in beginPosition.text:
                                 valid_elevation = (
                                     "ElevationRange_" + beginPosition.text + "Hi"
                                 )
                         for endPosition in validElevation.iter(
-                            tag=CAAMLTAG + "endPosition"
+                            CAAML_NS + "endPosition"
                         ):
                             if not "Keine" in endPosition.text:
                                 valid_elevation = (
@@ -510,7 +480,7 @@ class BavariaProcessor(Processor):
         else datetime.now(tzinfo)
     )
 
-    def parse_xml(self, region_id, root) -> Bulletins:
+    def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-nested-blocks
         # pylint: disable=too-many-statements
@@ -522,12 +492,12 @@ class BavariaProcessor(Processor):
         report = AvaBulletin()
 
         report_id = ""
-        for bulletin in root.iter(tag=CAAMLTAG + "Bulletin"):
+        for bulletin in root.iter(CAAML_NS + "Bulletin"):
             report_id = bulletin.attrib.get("{http://www.opengis.net/gml}id")
 
         # Common for every Report:
-        for metaData in root.iter(tag=CAAMLTAG + "metaDataProperty"):
-            for dateTimeReport in metaData.iter(tag=CAAMLTAG + "dateTimeReport"):
+        for metaData in root.iter(CAAML_NS + "metaDataProperty"):
+            for dateTimeReport in metaData.iter(CAAML_NS + "dateTimeReport"):
                 report.publicationTime = datetime.fromisoformat(dateTimeReport.text)
                 if region_id == "SI":
                     report.publicationTime = report.publicationTime.replace(
@@ -538,34 +508,32 @@ class BavariaProcessor(Processor):
         avalancheActivity = Texts()
         snowpackStructure = Texts()
 
-        for bulletinMeasurements in root.iter(tag=CAAMLTAG + "BulletinMeasurements"):
+        for bulletinMeasurements in root.iter(CAAML_NS + "BulletinMeasurements"):
             for travelAdvisoryComment in bulletinMeasurements.iter(
-                tag=CAAMLTAG + "" "travelAdvisoryComment"
+                CAAML_NS + "travelAdvisoryComment"
             ):
                 avalancheActivity.comment = travelAdvisoryComment.text.strip()
 
             for wxSynopsisComment in bulletinMeasurements.iter(
-                tag=CAAMLTAG + "wxSynopsisComment"
+                CAAML_NS + "wxSynopsisComment"
             ):
                 wxSynopsis.comment = wxSynopsisComment.text
                 if isinstance(wxSynopsis.comment, str):
                     wxSynopsis.comment = wxSynopsis.comment.strip()
             for snowpackStructureComment in bulletinMeasurements.iter(
-                tag=CAAMLTAG + "" "snowpackStructureComment"
+                CAAML_NS + "snowpackStructureComment"
             ):
                 snowpackStructure.comment = snowpackStructureComment.text
                 if isinstance(snowpackStructure.comment, str):
                     snowpackStructure.comment = snowpackStructure.comment.strip()
-            for highlights in bulletinMeasurements.iter(tag=CAAMLTAG + "comment"):
+            for highlights in bulletinMeasurements.iter(CAAML_NS + "comment"):
                 avalancheActivity.highlights = highlights.text
                 if isinstance(avalancheActivity.highlights, str):
                     avalancheActivity.highlights = avalancheActivity.highlights.strip()
 
-            for DangerPattern in bulletinMeasurements.iter(
-                tag=CAAMLTAG + "DangerPattern"
-            ):
+            for DangerPattern in bulletinMeasurements.iter(CAAML_NS + "DangerPattern"):
                 dp = []
-                for DangerPatternType in DangerPattern.iter(tag=CAAMLTAG + "type"):
+                for DangerPatternType in DangerPattern.iter(CAAML_NS + "type"):
                     dp.append(DangerPatternType.text)
                 report.customData = {"LWD_Tyrol": {"dangerPatterns": dp}}
 
@@ -573,31 +541,27 @@ class BavariaProcessor(Processor):
                 "avProblem" if region_id.startswith("DE-BY") else "AvProblem"
             )
 
-            for avProblem in bulletinMeasurements.iter(
-                tag=CAAMLTAG + "" + av_problem_tag
-            ):
+            for avProblem in bulletinMeasurements.iter(CAAML_NS + av_problem_tag):
                 type_r = ""
-                for avType in avProblem.iter(tag=CAAMLTAG + "type"):
+                for avType in avProblem.iter(CAAML_NS + "type"):
                     type_r = avType.text
                 aspect = []
-                for validAspect in avProblem.iter(tag=CAAMLTAG + "validAspect"):
+                for validAspect in avProblem.iter(CAAML_NS + "validAspect"):
                     aspect.append(
-                        validAspect.get("{http://www.w3.org/1999/xlink}href")
+                        validAspect.get(XLINK_NS + "href")
                         .upper()
                         .replace("ASPECTRANGE_", "")
                     )
                 valid_elevation = "-"
-                for validElevation in avProblem.iter(tag=CAAMLTAG + "validElevation"):
+                for validElevation in avProblem.iter(CAAML_NS + "validElevation"):
                     for beginPosition in validElevation.iter(
-                        tag=CAAMLTAG + "beginPosition"
+                        CAAML_NS + "beginPosition"
                     ):
                         if not "Keine" in beginPosition.text:
                             valid_elevation = (
                                 "ElevationRange_" + beginPosition.text + "Hi"
                             )
-                    for endPosition in validElevation.iter(
-                        tag=CAAMLTAG + "endPosition"
-                    ):
+                    for endPosition in validElevation.iter(CAAML_NS + "endPosition"):
                         if not "Keine" in endPosition.text:
                             valid_elevation = (
                                 "ElevationRange_" + endPosition.text + "Lw"
@@ -614,15 +578,13 @@ class BavariaProcessor(Processor):
         report.snowpackStructure = snowpackStructure
         report.wxSynopsis = wxSynopsis
 
-        for bulletinResultOf in root.iter(tag=CAAMLTAG + "bulletinResultsOf"):
+        for bulletinResultOf in root.iter(CAAML_NS + "bulletinResultsOf"):
             et_add_parent_info(bulletinResultOf)
 
             loc_list = []
 
-            for locRef in bulletinResultOf.iter(tag=CAAMLTAG + "locRef"):
-                current_loc_ref = locRef.attrib.get(
-                    "{http://www.w3.org/1999/xlink}href"
-                )
+            for locRef in bulletinResultOf.iter(CAAML_NS + "locRef"):
+                current_loc_ref = locRef.attrib.get(XLINK_NS + "href")
 
                 nDangerRating = et_get_parent(locRef)
                 validity_begin = ""
@@ -630,23 +592,21 @@ class BavariaProcessor(Processor):
                 main_value = 0
                 valid_elevation = "-"
 
-                for validTime in nDangerRating.iter(tag=CAAMLTAG + "validTime"):
-                    for beginPosition in validTime.iter(tag=CAAMLTAG + "beginPosition"):
+                for validTime in nDangerRating.iter(CAAML_NS + "validTime"):
+                    for beginPosition in validTime.iter(CAAML_NS + "beginPosition"):
                         validity_begin = datetime.fromisoformat(beginPosition.text)
                         if region_id == "SI":
                             validity_begin = validity_begin.replace(tzinfo=tzinfo)
-                    for endPosition in validTime.iter(tag=CAAMLTAG + "endPosition"):
+                    for endPosition in validTime.iter(CAAML_NS + "endPosition"):
                         validity_end = datetime.fromisoformat(endPosition.text)
                         if region_id == "SI":
                             validity_end = validity_end.replace(tzinfo=tzinfo)
                 main_value = 0
-                for main_value in nDangerRating.iter(tag=CAAMLTAG + "mainValue"):
+                for main_value in nDangerRating.iter(CAAML_NS + "mainValue"):
                     main_value = int(main_value.text)
-                for validElevation in nDangerRating.iter(
-                    tag=CAAMLTAG + "validElevation"
-                ):
+                for validElevation in nDangerRating.iter(CAAML_NS + "validElevation"):
                     for beginPosition in validElevation.iter(
-                        tag=CAAMLTAG + "beginPosition"
+                        CAAML_NS + "beginPosition"
                     ):
                         if not (
                             "Keine" in beginPosition.text or beginPosition.text == "0"
@@ -654,9 +614,7 @@ class BavariaProcessor(Processor):
                             valid_elevation = (
                                 "ElevationRange_" + beginPosition.text + "Hi"
                             )
-                    for endPosition in validElevation.iter(
-                        tag=CAAMLTAG + "endPosition"
-                    ):
+                    for endPosition in validElevation.iter(CAAML_NS + "endPosition"):
                         if not (
                             "Keine" in endPosition.text or endPosition.text == "3000"
                         ):
@@ -667,6 +625,7 @@ class BavariaProcessor(Processor):
                 danger_rating = DangerRating()
                 danger_rating.set_mainValue_int(main_value)
                 danger_rating.elevation.auto_select(valid_elevation)
+                print(current_loc_ref, validity_begin, validity_end, danger_rating)
                 loc_list.append(
                     [current_loc_ref, validity_begin, validity_end, danger_rating]
                 )
@@ -773,5 +732,113 @@ class BavariaProcessor(Processor):
         return reports
 
 
-class SloveniaProcessor(BavariaProcessor):
-    ...
+class SloveniaProcessor(XmlProcessor):
+    tzinfo = ZoneInfo("Europe/Ljubljana")
+
+    def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
+        bulletins: Bulletins = self.group_bulletins(
+            self.parse_bulletin(root, dangerRating)
+            for dangerRating in root.iterfind(f".//{CAAML_NS}DangerRating")
+        )
+        for bulletin in bulletins.bulletins:
+            bulletin.wxSynopsis = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}wxSynopsisHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}wxSynopsisComment"),
+            )
+            bulletin.avalancheActivity = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}avActivityHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}avActivityComment"),
+            )
+            bulletin.snowpackStructure = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}snowpackStructureHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}snowpackStructureComment"),
+            )
+            bulletin.travelAdvisory = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}travelAdvisoryHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}travelAdvisoryComment"),
+            )
+            bulletin.avalancheProblems = [
+                self.parse_problem(avProblem)
+                for avProblem in root.iterfind(f".//{CAAML_NS}AvProblem")
+            ]
+        return bulletins
+
+    def parse_bulletin(self, root: ET.Element, caaml: ET.Element) -> AvaBulletin:
+        bulletin = AvaBulletin()
+        bulletin.publicationTime = root.findtext(f".//{CAAML_NS}dateTimeReport")
+        bulletin.regions = [
+            Region(caaml.find(f".//{CAAML_NS}locRef").attrib.get(XLINK_NS + "href"))
+        ]
+        bulletin.validTime = ValidTime(
+            startTime=datetime.fromisoformat(
+                caaml.findtext(f".//{CAAML_NS}TimePeriod/{CAAML_NS}beginPosition")
+            ).replace(tzinfo=self.tzinfo),
+            endTime=datetime.fromisoformat(
+                caaml.findtext(f".//{CAAML_NS}TimePeriod/{CAAML_NS}endPosition")
+            ).replace(tzinfo=self.tzinfo),
+        )
+
+        rating = DangerRating()
+        rating.set_mainValue_int(int(caaml.findtext(f".//{CAAML_NS}mainValue")))
+        rating.elevation = self.parse_elevation(caaml)
+        bulletin.dangerRatings = [rating]
+        return bulletin
+
+    def parse_elevation(self, caaml: ET.Element) -> Elevation:
+        elevation = Elevation(
+            lowerBound=caaml.findtext(
+                f".//{CAAML_NS}ElevationRange/{CAAML_NS}beginPosition"
+            ),
+            upperBound=caaml.findtext(
+                f".//{CAAML_NS}ElevationRange/{CAAML_NS}endPosition"
+            ),
+        )
+        if elevation.lowerBound == "0":
+            elevation.lowerBound = None
+        if elevation.upperBound == "3000":
+            elevation.upperBound = None
+        return elevation
+
+    def parse_problem(self, caaml: ET.Element) -> AvalancheProblem:
+        p = AvalancheProblem()
+        p.add_problemType(caaml.findtext(f".//{CAAML_NS}type"))
+        p.aspects = [
+            aspect.attrib.get(XLINK_NS + "href").removeprefix("AspectRange_")
+            for aspect in caaml.iterfind(f".//{CAAML_NS}validAspect")
+        ]
+        p.elevation = self.parse_elevation(caaml)
+        return p
+
+    def group_bulletins(self, raw_bulletin: Iterable[AvaBulletin]) -> Bulletins:
+        def key(b: AvaBulletin):
+            return (
+                b.validTime.startTime.date().isoformat()
+                + "--"
+                + "-".join(r.regionID for r in b.regions)
+            )
+
+        def merge_bulletins(bulletins: List[AvaBulletin]) -> AvaBulletin:
+            for bulletin in bulletins:
+                t = bulletin.validTime
+                for rating in bulletin.dangerRatings:
+                    if t.startTime.hour <= 12 and t.endTime.hour <= 12:
+                        rating.validTimePeriod = "earlier"
+                    elif t.startTime.hour >= 12 and t.endTime.hour >= 12:
+                        rating.validTimePeriod = "later"
+                    else:
+                        rating.validTimePeriod = "all_day"
+
+            bulletin = bulletins[0]
+            bulletin.validTime.startTime = min(b.validTime.startTime for b in bulletins)
+            bulletin.validTime.endTime = max(b.validTime.endTime for b in bulletins)
+            bulletin.dangerRatings = [r for b in bulletins for r in b.dangerRatings]
+            return bulletin
+
+        return Bulletins(
+            bulletins=[
+                bulletin
+                for [_, bb] in itertools.groupby(sorted(raw_bulletin, key=key), key=key)
+                if (bulletin := merge_bulletins(list(bb)))
+                and bulletin.validTime.startTime.hour < 12  # breaks max_danger_ratings
+            ]
+        )
