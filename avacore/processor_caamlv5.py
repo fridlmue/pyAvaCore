@@ -17,7 +17,10 @@ from datetime import datetime
 from datetime import time
 from datetime import timedelta
 import copy
+import itertools
 from zoneinfo import ZoneInfo
+from typing import Iterable, List
+import xml.etree.ElementTree as ET
 from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
@@ -25,10 +28,10 @@ from avacore.avabulletin import (
     Region,
     Elevation,
     Texts,
+    ValidTime,
 )
 from avacore.avabulletins import Bulletins
 from avacore.processor import XmlProcessor
-import xml.etree.ElementTree as ET
 
 
 CAAML_NS = "{http://caaml.org/Schemas/V5.0/Profiles/BulletinEAWS}"
@@ -252,7 +255,7 @@ class Processor(XmlProcessor):
         return reports
 
 
-class VorarlbergProcessor(Processor):
+class VorarlbergProcessor(XmlProcessor):
     def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
         # pylint: disable=too-many-locals
         # pylint: disable=too-many-nested-blocks
@@ -729,5 +732,113 @@ class BavariaProcessor(Processor):
         return reports
 
 
-class SloveniaProcessor(BavariaProcessor):
-    ...
+class SloveniaProcessor(XmlProcessor):
+    tzinfo = ZoneInfo("Europe/Ljubljana")
+
+    def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
+        bulletins: Bulletins = self.group_bulletins(
+            self.parse_bulletin(root, dangerRating)
+            for dangerRating in root.iterfind(f".//{CAAML_NS}DangerRating")
+        )
+        for bulletin in bulletins.bulletins:
+            bulletin.wxSynopsis = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}wxSynopsisHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}wxSynopsisComment"),
+            )
+            bulletin.avalancheActivity = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}avActivityHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}avActivityComment"),
+            )
+            bulletin.snowpackStructure = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}snowpackStructureHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}snowpackStructureComment"),
+            )
+            bulletin.travelAdvisory = Texts(
+                highlights=root.findtext(f".//{CAAML_NS}travelAdvisoryHighlights"),
+                comment=root.findtext(f".//{CAAML_NS}travelAdvisoryComment"),
+            )
+            bulletin.avalancheProblems = [
+                self.parse_problem(avProblem)
+                for avProblem in root.iterfind(f".//{CAAML_NS}AvProblem")
+            ]
+        return bulletins
+
+    def parse_bulletin(self, root: ET.Element, caaml: ET.Element) -> AvaBulletin:
+        bulletin = AvaBulletin()
+        bulletin.publicationTime = root.findtext(f".//{CAAML_NS}dateTimeReport")
+        bulletin.regions = [
+            Region(caaml.find(f".//{CAAML_NS}locRef").attrib.get(XLINK_NS + "href"))
+        ]
+        bulletin.validTime = ValidTime(
+            startTime=datetime.fromisoformat(
+                caaml.findtext(f".//{CAAML_NS}TimePeriod/{CAAML_NS}beginPosition")
+            ).replace(tzinfo=self.tzinfo),
+            endTime=datetime.fromisoformat(
+                caaml.findtext(f".//{CAAML_NS}TimePeriod/{CAAML_NS}endPosition")
+            ).replace(tzinfo=self.tzinfo),
+        )
+
+        rating = DangerRating()
+        rating.set_mainValue_int(int(caaml.findtext(f".//{CAAML_NS}mainValue")))
+        rating.elevation = self.parse_elevation(caaml)
+        bulletin.dangerRatings = [rating]
+        return bulletin
+
+    def parse_elevation(self, caaml: ET.Element) -> Elevation:
+        elevation = Elevation(
+            lowerBound=caaml.findtext(
+                f".//{CAAML_NS}ElevationRange/{CAAML_NS}beginPosition"
+            ),
+            upperBound=caaml.findtext(
+                f".//{CAAML_NS}ElevationRange/{CAAML_NS}endPosition"
+            ),
+        )
+        if elevation.lowerBound == "0":
+            elevation.lowerBound = None
+        if elevation.upperBound == "3000":
+            elevation.upperBound = None
+        return elevation
+
+    def parse_problem(self, caaml: ET.Element) -> AvalancheProblem:
+        p = AvalancheProblem()
+        p.add_problemType(caaml.findtext(f".//{CAAML_NS}type"))
+        p.aspects = [
+            aspect.attrib.get(XLINK_NS + "href").removeprefix("AspectRange_")
+            for aspect in caaml.iterfind(f".//{CAAML_NS}validAspect")
+        ]
+        p.elevation = self.parse_elevation(caaml)
+        return p
+
+    def group_bulletins(self, raw_bulletin: Iterable[AvaBulletin]) -> Bulletins:
+        def key(b: AvaBulletin):
+            return (
+                b.validTime.startTime.date().isoformat()
+                + "--"
+                + "-".join(r.regionID for r in b.regions)
+            )
+
+        def merge_bulletins(bulletins: List[AvaBulletin]) -> AvaBulletin:
+            for bulletin in bulletins:
+                t = bulletin.validTime
+                for rating in bulletin.dangerRatings:
+                    if t.startTime.hour <= 12 and t.endTime.hour <= 12:
+                        rating.validTimePeriod = "earlier"
+                    elif t.startTime.hour >= 12 and t.endTime.hour >= 12:
+                        rating.validTimePeriod = "later"
+                    else:
+                        rating.validTimePeriod = "all_day"
+
+            bulletin = bulletins[0]
+            bulletin.validTime.startTime = min(b.validTime.startTime for b in bulletins)
+            bulletin.validTime.endTime = max(b.validTime.endTime for b in bulletins)
+            bulletin.dangerRatings = [r for b in bulletins for r in b.dangerRatings]
+            return bulletin
+
+        return Bulletins(
+            bulletins=[
+                bulletin
+                for [_, bb] in itertools.groupby(sorted(raw_bulletin, key=key), key=key)
+                if (bulletin := merge_bulletins(list(bb)))
+                and bulletin.validTime.startTime.hour < 12  # breaks max_danger_ratings
+            ]
+        )
