@@ -46,7 +46,8 @@ class Processor(AbstractProcessor):
             month=[
                 datetime(2000, month, 1).strftime("%b").upper()
                 for month in range(1, 13)
-            ].index(time.group("month"))+1,
+            ].index(time.group("month"))
+            + 1,
             day=int(time.group("day")),
         )
         delta = timedelta(days=1, seconds=-1)

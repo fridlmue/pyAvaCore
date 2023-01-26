@@ -107,9 +107,6 @@ class Bulletins:
         return rel_bulletins
 
     def max_danger_ratings(self, validity_date):
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-statements
-        # pylint: disable=too-many-nested-blocks
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
@@ -189,7 +186,7 @@ class Bulletins:
                             ] = danger.get_mainValue_int()
 
                 # Fill missing ratings for the current Region
-                if not f"{regionId}:low" in local_ratings:
+                if f"{regionId}:low" not in local_ratings:
                     if (
                         f"{regionId}:low:am" in local_ratings
                         and f"{regionId}:low:pm" in local_ratings
@@ -211,7 +208,7 @@ class Bulletins:
                             f"{regionId}:high"
                         ]
 
-                if not f"{regionId}:high" in local_ratings:
+                if f"{regionId}:high" not in local_ratings:
                     if (
                         f"{regionId}:high:am" in local_ratings
                         and f"{regionId}:high:pm" in local_ratings
@@ -234,29 +231,29 @@ class Bulletins:
                         ]
 
                 if (
-                    not f"{regionId}:high:am" in local_ratings
-                    and not f"{regionId}:high:pm" in local_ratings
+                    f"{regionId}:high:am" not in local_ratings
+                    and f"{regionId}:high:pm" not in local_ratings
                 ):
                     local_ratings[f"{regionId}:high:am"] = local_ratings[
                         f"{regionId}:high:pm"
                     ] = local_ratings[f"{regionId}:high"]
 
                 if (
-                    not f"{regionId}:low:am" in local_ratings
-                    and not f"{regionId}:low:pm" in local_ratings
+                    f"{regionId}:low:am" not in local_ratings
+                    and f"{regionId}:low:pm" not in local_ratings
                 ):
                     local_ratings[f"{regionId}:low:am"] = local_ratings[
                         f"{regionId}:low:pm"
                     ] = local_ratings[f"{regionId}:low"]
 
                 key = f"{regionId}:high"
-                if not key in local_ratings:
+                if key not in local_ratings:
                     local_ratings[key] = max(
                         local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
                     )
 
                 key = f"{regionId}:low"
-                if not key in local_ratings:
+                if key not in local_ratings:
                     local_ratings[key] = max(
                         local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
                     )

@@ -56,15 +56,12 @@ class Processor(JsonProcessor):
                 )
                 for report in m_reports.bulletins:
                     all_reports.append(report)
-            except Exception as e:  # pylint: disable=broad-except
+            except Exception as e:
                 logging.error("Failed to download %s", region, exc_info=e)
         self.raw_data = "[" + ",".join(all_raw_data) + "]"
         return all_reports
 
     def parse_json(self, region_id, data) -> Bulletins:
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-statements
 
         reports = Bulletins()
         report = AvaBulletin()

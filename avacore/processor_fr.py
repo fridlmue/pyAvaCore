@@ -83,9 +83,6 @@ class Processor(XmlProcessor):
         return all_reports
 
     def parse_xml(self, region_id, root: ET.ElementTree) -> Bulletins:
-        # pylint: disable=too-many-statements
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-locals
         """
         Process XML file for a region
         """

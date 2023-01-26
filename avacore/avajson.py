@@ -25,7 +25,7 @@ class JSONEncoder(json.JSONEncoder):
             return True
         try:
             return self.is_empty(self.default(x))
-        except:  # pylint: disable=bare-except
+        except:
             return False
 
     def default(self, o):
@@ -33,6 +33,6 @@ class JSONEncoder(json.JSONEncoder):
             return o.isoformat()
         try:
             return o.toJSON()
-        except:  # pylint: disable=bare-except
+        except:
             as_dict = o.__dict__
             return {k: v for k, v in as_dict.items() if not self.is_empty(v)}
