@@ -29,8 +29,6 @@ config.read_string(Path(f"{__file__}.ini").read_text(encoding="utf-8"))
 
 
 def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
-    # pylint: disable=too-many-branches
-    # pylint: disable=too-many-statements
     """
     returns Bulletins object for requested region_id and provider information
     """

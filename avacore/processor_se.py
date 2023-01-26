@@ -39,16 +39,12 @@ class Processor(JsonProcessor):
         return bulletins
 
     def parse_json(self, region_id, data) -> Bulletins:
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-statements
 
         bulletins = Bulletins()
 
         for feature in data["features"]:
             properties = feature["properties"]
             report = AvaBulletin()
-            # pylint: disable=consider-using-f-string
             region_id = "SE-%02d" % properties["area_id"]
             report.regions.append(Region(region_id))
             report.bulletinID = f"{region_id}-{properties['id']}"

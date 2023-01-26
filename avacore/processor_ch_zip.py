@@ -130,9 +130,6 @@ class Processor(AbstractProcessor):
         """
         Download the reports for CH
         """
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-statements
 
         reports = []
         final_reports = Bulletins()
@@ -246,22 +243,22 @@ class Processor(AbstractProcessor):
                 new_report = copy.deepcopy(common_report)
                 new_report.bulletinID = bulletinID
                 reports.append(new_report)
-            if not bulletinID_pm is None and bulletinID_pm not in bulletinIDs:
+            if bulletinID_pm is not None and bulletinID_pm not in bulletinIDs:
                 bulletinIDs.append(bulletinID_pm)
                 new_report = copy.deepcopy(common_report)
                 new_report.bulletinID = bulletinID_pm
                 new_report.predecessor_id = bulletinID
                 reports.append(new_report)
-            elif not bulletinID_pm is None:
+            elif bulletinID_pm is not None:
                 if (
-                    not bulletinID
-                    in reports[bulletinIDs.index(bulletinID_pm)].predecessor_id
+                    bulletinID
+                    not in reports[bulletinIDs.index(bulletinID_pm)].predecessor_id
                 ):
                     reports[bulletinIDs.index(bulletinID_pm)].predecessor_id += (
                         "_" + bulletinID
                     )
             reports[bulletinIDs.index(bulletinID)].regions.append(Region(regionID))
-            if not bulletinID_pm is None:
+            if bulletinID_pm is not None:
                 reports[bulletinIDs.index(bulletinID_pm)].regions.append(
                     Region(regionID)
                 )
@@ -441,7 +438,7 @@ def append_to_list(list_r, element):
     """
     Append Element to List, if element is not yet there
     """
-    if not element in list_r:
+    if element not in list_r:
         list_r.append(element)
         return list_r
     return list_r

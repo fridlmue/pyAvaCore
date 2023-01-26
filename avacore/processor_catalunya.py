@@ -80,7 +80,7 @@ class Processor(JsonProcessor):
             danger_rating = DangerRating()
             danger_rating.set_mainValue_int(int(icgc_report["grau_perill_primari"]))
             report.dangerRatings.append(danger_rating)
-            if not icgc_report["grau_perill_secundari"] is None:
+            if icgc_report["grau_perill_secundari"] is not None:
                 danger_rating_2 = DangerRating()
                 danger_rating_2.set_mainValue_int(
                     int(icgc_report["grau_perill_secundari"])

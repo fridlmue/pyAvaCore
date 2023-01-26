@@ -31,11 +31,11 @@ class ValidTime:
 
     def __init__(self, startTime=None, endTime=None):
 
-        if not startTime is None:
+        if startTime is not None:
             if not isinstance(startTime, datetime):
                 startTime = datetime.fromisoformat(startTime)
             self.startTime = startTime
-        if not endTime is None:
+        if endTime is not None:
             if not isinstance(endTime, datetime):
                 endTime = datetime.fromisoformat(endTime)
             self.endTime = endTime
@@ -86,7 +86,7 @@ class Elevation:
         """
         Auto-Selct from different possible ways of elevation description if it is lower or upper bound.
         """
-        if not auto_select is None:
+        if auto_select is not None:
             auto_select = auto_select.replace("Forestline", "treeline")
             auto_select = auto_select.replace("Treeline", "treeline")
             if "Hi" in auto_select:
@@ -229,7 +229,6 @@ class AvalancheProblem:
     validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
 
     def __init__(
-        # pylint: disable=too-many-arguments
         self,
         problemType=None,
         comment=None,
@@ -241,24 +240,24 @@ class AvalancheProblem:
     ) -> None:
         self.aspects = []
         self.elevation = Elevation()
-        if not problemType is None:
+        if problemType is not None:
             self.problemType = problemType
-        if not comment is None:
+        if comment is not None:
             self.terrainFeature = comment
-        if not terrainFeature is None:
+        if terrainFeature is not None:
             self.terrainFeature = terrainFeature
-        if not dangerRating is None:  # Compatibility with older parsers, deprecated
+        if dangerRating is not None:  # Compatibility with older parsers, deprecated
             self.elevation = dangerRating.elevation
             self.aspects = dangerRating.aspect
         if (
-            not dangerRating_json is None
+            dangerRating_json is not None
         ):  # Compatibility with older parsers, deprecated
             dangerRating = dangerRating.from_json(dangerRating_json)
             self.elevation = dangerRating.elevation
             self.aspects = dangerRating.aspect
-        if not aspects is None:
+        if aspects is not None:
             self.aspects = aspects
-        if not elevation is None:
+        if elevation is not None:
             self.elevation = elevation
 
     def add_problemType(self, problem_type_text):
@@ -308,13 +307,13 @@ class Tendency:
         self, tendencyType=None, validTime_json=None, tendencyComment=None
     ) -> None:
         self.validTime = ValidTime()
-        if not validTime_json is None and not len(validTime_json) == 0:
+        if validTime_json is not None and not len(validTime_json) == 0:
             self.validTime = ValidTime(
                 validTime_json["startTime"], validTime_json["endTime"]
             )
-        if not tendencyType is None:
+        if tendencyType is not None:
             self.tendencyType = tendencyType
-        if not tendencyComment is None:
+        if tendencyComment is not None:
             self.tendencyComment = tendencyComment
 
 
@@ -339,7 +338,6 @@ class Texts:
 
 
 class AvaBulletin:
-    # pylint: disable=too-many-instance-attributes
     """
     Class for the AvaBulletin
     Follows partly CAAMLv6 caaml:BulletinType
@@ -397,7 +395,6 @@ class AvaBulletin:
         return [r.regionID for r in self.regions]
 
     def from_json(self, bulletin_json):
-        # pylint: disable=too-many-branches
         """
         convert to avaBulletin from JSON
         """
@@ -518,7 +515,7 @@ class AvaBulletin:
         """
         if hasattr(self, element):
             if hasattr(getattr(self, element), attribute):
-                if not getattr(getattr(self, element), attribute) is None:
+                if getattr(getattr(self, element), attribute) is not None:
                     self.prettify_out(
                         element
                         + " "
@@ -564,7 +561,7 @@ class AvaBulletin:
                     "\n║    Aspects: ",
                     problem.aspects,
                 )
-            except:  # pylint: disable=bare-except
+            except:
                 print("║ Problem: ", problem.problemType)
 
         print("╟───── Bulletin Texts ─────")

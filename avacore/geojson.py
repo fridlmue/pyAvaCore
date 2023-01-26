@@ -14,7 +14,6 @@
 """
 
 # Generated using https://app.quicktype.io/
-# pylint: skip-file
 
 from typing import Optional, List, Any, TypeVar, Callable, Type, cast
 

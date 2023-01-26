@@ -69,9 +69,6 @@ class Processor(XmlProcessor):
     raw_data_encoding = "ISO-8859-1"
 
     def parse_xml(self, region_id, root) -> Bulletins:
-        # pylint: disable=too-many-statements
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-locals
         reports = Bulletins()
         report = AvaBulletin()
 

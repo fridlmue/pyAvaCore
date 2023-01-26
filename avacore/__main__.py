@@ -12,7 +12,6 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-# pylint: disable=too-many-locals
 
 from dataclasses import dataclass
 from pathlib import Path
@@ -88,10 +87,7 @@ parser.add_argument(
 parser.add_argument(
     "--merge-dates",
     default=" ".join(
-        [
-            (dt.date.today() + timedelta(days=days)).isoformat()
-            for days in (-1, 0, +1)
-        ]
+        [(dt.date.today() + timedelta(days=days)).isoformat() for days in (-1, 0, +1)]
     ),
     metavar="DATES",
     help="dates to merge into one file",
@@ -121,7 +117,6 @@ parser.add_argument(
 
 @dataclass
 class CliArgs:
-    # pylint: disable=too-many-instance-attributes
     cli: str
     date: str
     geojson: str
@@ -234,7 +229,7 @@ def download_regions():
                     e.status,
                     e.reason,
                 )
-            except Exception as e:  # pylint: disable=broad-except
+            except Exception as e:
                 failed_regions.append(region)
                 logging.error("Failed to download %s", region, exc_info=e)
     if failed_regions:
@@ -258,7 +253,7 @@ def merge_regions(validity_date: str):
                 ratings = json.load(fp=f)
             if "maxDangerRatings" in ratings:
                 merge_ratings.update(ratings["maxDangerRatings"])
-        except Exception as e:  # pylint: disable=broad-except
+        except Exception as e:
             logging.error("Failed to load %s from %s", regionID, path, exc_info=e)
     path = directory.joinpath(f"{validity_date}.ratings.json")
     path.parent.mkdir(parents=True, exist_ok=True)

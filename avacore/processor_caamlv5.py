@@ -58,10 +58,6 @@ def et_get_parent(element_tree):
 
 class Processor(XmlProcessor):
     def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-nested-blocks
-        # pylint: disable=too-many-statements
-        # pylint: disable=too-many-branches
         """parses ALBINA-Style CAAML-XML. root is a ElementTree"""
 
         reports = Bulletins()
@@ -187,7 +183,7 @@ class Processor(XmlProcessor):
                 for avActivityHighlights in observations.iter(
                     CAAML_NS + "avActivityHighlights"
                 ):
-                    if not avActivityHighlights.text is None:
+                    if avActivityHighlights.text is not None:
                         avalancheActivity.highlights = (
                             avActivityHighlights.text.replace("&nbsp;", "\n")
                         )
@@ -198,19 +194,19 @@ class Processor(XmlProcessor):
                 for avActivityComment in observations.iter(
                     CAAML_NS + "avActivityComment"
                 ):
-                    if not avActivityComment.text is None:
+                    if avActivityComment.text is not None:
                         avalancheActivity.comment = avActivityComment.text.replace(
                             "&nbsp;", "\n"
                         )
                 for snowpackStructureComment in observations.iter(
                     CAAML_NS + "snowpackStructureComment"
                 ):
-                    if not snowpackStructureComment.text is None:
+                    if snowpackStructureComment.text is not None:
                         snowpackStructure.comment = (
                             snowpackStructureComment.text.replace("&nbsp;", "\n")
                         )
                 for tendencyComment in observations.iter(CAAML_NS + "tendencyComment"):
-                    if not tendencyComment.text is None:
+                    if tendencyComment.text is not None:
                         report.tendency.tendencyComment = tendencyComment.text.replace(
                             "&nbsp;", "\n"
                         )
@@ -257,10 +253,6 @@ class Processor(XmlProcessor):
 
 class VorarlbergProcessor(XmlProcessor):
     def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-nested-blocks
-        # pylint: disable=too-many-statements
-        # pylint: disable=too-many-branches
         """parses Vorarlberg-Style CAAML-XML. root is a ElementTree"""
 
         reports = Bulletins()
@@ -384,14 +376,14 @@ class VorarlbergProcessor(XmlProcessor):
                         for beginPosition in validElevation.iter(
                             CAAML_NS + "beginPosition"
                         ):
-                            if not "Keine" in beginPosition.text:
+                            if "Keine" not in beginPosition.text:
                                 valid_elevation = (
                                     "ElevationRange_" + beginPosition.text + "Hi"
                                 )
                         for endPosition in validElevation.iter(
                             CAAML_NS + "endPosition"
                         ):
-                            if not "Keine" in endPosition.text:
+                            if "Keine" not in endPosition.text:
                                 valid_elevation = (
                                     "ElevationRange_" + endPosition.text + "Lw"
                                 )
@@ -481,10 +473,6 @@ class BavariaProcessor(Processor):
     )
 
     def parse_xml(self, region_id: str, root: ET.Element) -> Bulletins:
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-nested-blocks
-        # pylint: disable=too-many-statements
-        # pylint: disable=too-many-branches
         """parses Bavarian-Style CAAML-XML. root is a ElementTree. Also works for Slovenia with minor modification"""
         tzinfo = self.tzinfo
 
@@ -557,12 +545,12 @@ class BavariaProcessor(Processor):
                     for beginPosition in validElevation.iter(
                         CAAML_NS + "beginPosition"
                     ):
-                        if not "Keine" in beginPosition.text:
+                        if "Keine" not in beginPosition.text:
                             valid_elevation = (
                                 "ElevationRange_" + beginPosition.text + "Hi"
                             )
                     for endPosition in validElevation.iter(CAAML_NS + "endPosition"):
-                        if not "Keine" in endPosition.text:
+                        if "Keine" not in endPosition.text:
                             valid_elevation = (
                                 "ElevationRange_" + endPosition.text + "Lw"
                             )
