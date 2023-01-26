@@ -32,9 +32,6 @@ class Processor(JsonProcessor):
         """
         Builds the CAAML JSONs form the original JSON formats.
         """
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-branches
-        # pylint: disable=too-many-statements
 
         reports = Bulletins()
 

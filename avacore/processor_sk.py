@@ -43,7 +43,6 @@ class Processor(JsonProcessor):
         return bulletins
 
     def parse_json(self, _region_id, data) -> Bulletins:
-        # pylint: disable=too-many-locals
         """
         Processes downloaded report
         """

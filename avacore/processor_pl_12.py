@@ -51,8 +51,6 @@ class Processor(JsonProcessor):
         return self.parse_json(region_id, pl_12_report)
 
     def parse_json(self, region_id, data) -> Bulletins:
-        # pylint: disable=too-many-locals
-        # pylint: disable=too-many-branches
 
         bulletins = Bulletins()
         bulletin = AvaBulletin()

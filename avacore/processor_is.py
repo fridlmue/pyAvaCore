@@ -33,7 +33,6 @@ from avacore.processor import XmlProcessor
 class Processor(XmlProcessor):
     def parse_xml(self, region_id, root: ET.ElementTree) -> Bulletins:
 
-        # pylint: disable=too-many-locals
         """
         Processes downloaded report
         """

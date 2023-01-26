@@ -206,7 +206,7 @@ class Processor(JsonProcessor):
             )
             paragraphs = data_bulletins["snow_weather"]["paragraphs"]
             bulletin.wxSynopsis = Texts(
-                comment="\n".join(l for l in self._parse_paragraphs(paragraphs) if l)
+                comment="\n".join(p for p in self._parse_paragraphs(paragraphs) if p)
             )
         return bulletins
 
