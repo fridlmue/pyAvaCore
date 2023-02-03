@@ -43,6 +43,7 @@ default_regions = [
     "ES-CT-L",
     "ES-CT",
     "ES",
+    "FI",
     "FR",
     "GB",
     "IS",
