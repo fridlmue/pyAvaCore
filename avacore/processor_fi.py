@@ -14,6 +14,9 @@
 """
 import datetime as dt
 import logging
+import re
+import shutil
+import subprocess
 import urllib
 from io import BytesIO
 
@@ -25,7 +28,7 @@ from avacore.png import png
 # https://cdn.fmi.fi/apps/avalanche-forecast/show-map.php?lang=en
 # https://api.ocr.space/parse/imageurl?apikey=K81943660188957&url=https://cdn.fmi.fi/apps/avalanche-forecast/show-map.php
 class Processor(AbstractProcessor):
-    today: dt.date
+    today: dt.datetime
 
     def _fetch_files(self):
         with urllib.request.urlopen(self.url) as response:
@@ -33,7 +36,25 @@ class Processor(AbstractProcessor):
             data = response.read()
             self.raw_data = BytesIO(data)
             self.raw_data_format = "png"
-            self.today = dt.date.today()
+        self.today = dt.datetime.today()
+        self._ocr_today()
+
+    def _ocr_today(self):
+        if not shutil.which("tesseract"):
+            return
+        process = subprocess.Popen(
+            ["tesseract", "-", "-"],
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+        )
+        out_bytes, _ = process.communicate(self.raw_data.getvalue(), timeout=7)
+        output = out_bytes.decode(encoding="utf-8")
+        match = re.search(r"Updated (\d+.\d+.\d+ \d+:\d+)", output)
+        if not match:
+            return
+        self.today = dt.datetime.strptime(match.group(1), "%d.%m.%Y %H:%M")
+        logging.info("Obtained %s using OCR tesseract", self.today.isoformat())
 
     def process_bulletin(self, region_id: str) -> Bulletins:
         if not isinstance(self.raw_data, BytesIO):
@@ -45,6 +66,7 @@ class Processor(AbstractProcessor):
         bulletins = Bulletins()
         for [region_id, region_name, x, y] in fi_regions:
             bulletin = AvaBulletin()
+            bulletin.publicationTime = self.today
             tomorrow = self.today + dt.timedelta(days=1)
             bulletin.validTime = ValidTime(
                 startTime=dt.datetime.combine(tomorrow, dt.time(0, 0, 0)),
