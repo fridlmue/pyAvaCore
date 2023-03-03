@@ -111,7 +111,7 @@ class SnowWeather(TypedDict):
 
 class AvalancheMapBulletin(TypedDict):
     rating_1: Rating1
-    rating_2: None
+    rating_2: Optional[Rating1]
     snow_weather: SnowWeather
 
 
@@ -160,7 +160,10 @@ class Processor(JsonProcessor):
         )
         flash = data_bulletin["flash"][self.lang]
         bulletins = Bulletins()
-        for feature in data_bulletins["rating_1"]["geojson"]["features"]:
+        features = data_bulletins["rating_1"]["geojson"]["features"]
+        if data_bulletins["rating_2"]:
+            features = features + (data_bulletins["rating_2"]["geojson"]["features"])
+        for feature in features:
             bulletin = AvaBulletin()
             bulletins.append(bulletin)
             bulletin.bulletinID = (
