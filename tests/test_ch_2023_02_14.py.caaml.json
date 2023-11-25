@@ -1,38 +1,15 @@
 {
   "bulletins": [
     {
-      "regions": [
-        {
-          "regionID": "CH-5111"
-        },
-        {
-          "regionID": "CH-5112"
-        },
-        {
-          "regionID": "CH-5113"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "Distinct weak layers exist in the snowpack. Some medium-sized to large dry slab avalanches have been released by people in the last few days. This applies in particular on steep, little used shady slopes.\nSingle persons can release avalanches as before. Remotely triggered avalanches are possible. The avalanche prone locations are rather rare but are barely recognisable, even to the trained eye.\nBackcountry touring calls for defensive route selection."
       },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "problemType": "persistent_weak_layers"
         }
       ],
+      "bulletinID": "CH-52630-1",
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -42,714 +19,20 @@
               "NE"
             ],
             "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2000
+              "altitude": 2000,
+              "indicator": "ABOVE"
             }
           },
           "dangerLevelDetail": "LEVDET_MINUS"
         }
       },
-      "bulletinID": "CH-52630-1",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "Distinct weak layers exist in the snowpack. Some medium-sized to large dry slab avalanches have been released by people in the last few days. This applies in particular on steep, little used shady slopes.\nSingle persons can release avalanches as before. Remotely triggered avalanches are possible. The avalanche prone locations are rather rare but are barely recognisable, even to the trained eye.\nBackcountry touring calls for defensive route selection."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "CH-5122"
-        },
-        {
-          "regionID": "CH-5123"
-        },
-        {
-          "regionID": "CH-5221"
-        },
-        {
-          "regionID": "CH-5231"
-        },
-        {
-          "regionID": "CH-7113"
-        },
-        {
-          "regionID": "CH-7121"
-        },
-        {
-          "regionID": "CH-7122"
-        },
-        {
-          "regionID": "CH-7123"
-        },
-        {
-          "regionID": "CH-7124"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
       "dangerRatings": [
         {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         }
       ],
-      "avalancheProblems": [
-        {
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": [
-              "SW",
-              "W",
-              "NW",
-              "N",
-              "NE",
-              "E",
-              "SE"
-            ],
-            "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2000
-            }
-          },
-          "dangerLevelDetail": "LEVDET_PLUS"
-        }
-      },
-      "bulletinID": "CH-52630-2",
       "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "Distinct weak layers exist in the snowpack. Single winter sport participants can release avalanches in some places. These can release the weakly bonded old snow as well and reach medium size. The avalanche prone locations are rather rare but are barely recognisable, even to the trained eye.\nBackcountry touring calls for careful route selection."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "CH-2122"
-        },
-        {
-          "regionID": "CH-2124"
-        },
-        {
-          "regionID": "CH-2132"
-        },
-        {
-          "regionID": "CH-2133"
-        },
-        {
-          "regionID": "CH-2134"
-        },
-        {
-          "regionID": "CH-2211"
-        },
-        {
-          "regionID": "CH-2212"
-        },
-        {
-          "regionID": "CH-2221"
-        },
-        {
-          "regionID": "CH-2222"
-        },
-        {
-          "regionID": "CH-3111"
-        },
-        {
-          "regionID": "CH-3112"
-        },
-        {
-          "regionID": "CH-3113"
-        },
-        {
-          "regionID": "CH-3114"
-        },
-        {
-          "regionID": "CH-3222"
-        },
-        {
-          "regionID": "CH-3223"
-        },
-        {
-          "regionID": "CH-3224"
-        },
-        {
-          "regionID": "CH-3311"
-        },
-        {
-          "regionID": "CH-5121"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": [
-              "W",
-              "NW",
-              "N",
-              "NE",
-              "E"
-            ],
-            "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2000
-            }
-          },
-          "dangerLevelDetail": "LEVDET_NEUTRAL"
-        }
-      },
-      "bulletinID": "CH-52630-3",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "Faceted weak layers exist in the centre of the snowpack. Single winter sport participants can release avalanches in some places. These can in some cases reach medium size.\nCareful route selection is recommended."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "CH-2223"
-        },
-        {
-          "regionID": "CH-2224"
-        },
-        {
-          "regionID": "CH-4213"
-        },
-        {
-          "regionID": "CH-4231"
-        },
-        {
-          "regionID": "CH-4241"
-        },
-        {
-          "regionID": "CH-4242"
-        },
-        {
-          "regionID": "CH-4243"
-        },
-        {
-          "regionID": "CH-4244"
-        },
-        {
-          "regionID": "CH-5124"
-        },
-        {
-          "regionID": "CH-5211"
-        },
-        {
-          "regionID": "CH-5212"
-        },
-        {
-          "regionID": "CH-5214"
-        },
-        {
-          "regionID": "CH-5215"
-        },
-        {
-          "regionID": "CH-5216"
-        },
-        {
-          "regionID": "CH-5222"
-        },
-        {
-          "regionID": "CH-5223"
-        },
-        {
-          "regionID": "CH-5232"
-        },
-        {
-          "regionID": "CH-5233"
-        },
-        {
-          "regionID": "CH-5234"
-        },
-        {
-          "regionID": "CH-7111"
-        },
-        {
-          "regionID": "CH-7112"
-        },
-        {
-          "regionID": "CH-7114"
-        },
-        {
-          "regionID": "CH-7115"
-        },
-        {
-          "regionID": "CH-7125"
-        },
-        {
-          "regionID": "CH-7126"
-        },
-        {
-          "regionID": "CH-7211"
-        },
-        {
-          "regionID": "CH-7221"
-        },
-        {
-          "regionID": "CH-7222"
-        },
-        {
-          "regionID": "CH-7231"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": [
-              "SW",
-              "W",
-              "NW",
-              "N",
-              "NE",
-              "E",
-              "SE"
-            ],
-            "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2400
-            }
-          },
-          "dangerLevelDetail": "LEVDET_NEUTRAL"
-        }
-      },
-      "bulletinID": "CH-52630-4",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "The older wind slabs are lying on top of a weakly bonded old snowpack. They are to be evaluated with care and prudence in particular in very steep terrain. Avalanches can in some places be released easily and reach medium size.\nBackcountry touring and other off-piste activities call for careful route selection."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "CH-1213"
-        },
-        {
-          "regionID": "CH-1226"
-        },
-        {
-          "regionID": "CH-1227"
-        },
-        {
-          "regionID": "CH-1231"
-        },
-        {
-          "regionID": "CH-1232"
-        },
-        {
-          "regionID": "CH-1233"
-        },
-        {
-          "regionID": "CH-1234"
-        },
-        {
-          "regionID": "CH-1241"
-        },
-        {
-          "regionID": "CH-1242"
-        },
-        {
-          "regionID": "CH-1243"
-        },
-        {
-          "regionID": "CH-1244"
-        },
-        {
-          "regionID": "CH-1245"
-        },
-        {
-          "regionID": "CH-1246"
-        },
-        {
-          "regionID": "CH-1247"
-        },
-        {
-          "regionID": "CH-2111"
-        },
-        {
-          "regionID": "CH-2121"
-        },
-        {
-          "regionID": "CH-2123"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": [
-              "W",
-              "NW",
-              "N",
-              "NE",
-              "E"
-            ],
-            "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2000
-            }
-          },
-          "dangerLevelDetail": "LEVDET_MINUS"
-        }
-      },
-      "bulletinID": "CH-52630-5",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "Weak layers in the upper part of the snowpack can still be released in some place by people. Avalanches can in some cases reach medium size. The avalanche prone locations are to be found especially in gullies and bowls, and behind abrupt changes in the terrain.\nBackcountry touring and other off-piste activities call for careful route selection."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "CH-1112"
-        },
-        {
-          "regionID": "CH-1113"
-        },
-        {
-          "regionID": "CH-1114"
-        },
-        {
-          "regionID": "CH-1121"
-        },
-        {
-          "regionID": "CH-1221"
-        },
-        {
-          "regionID": "CH-1222"
-        },
-        {
-          "regionID": "CH-1223"
-        },
-        {
-          "regionID": "CH-1224"
-        },
-        {
-          "regionID": "CH-1225"
-        },
-        {
-          "regionID": "CH-1228"
-        },
-        {
-          "regionID": "CH-1311"
-        },
-        {
-          "regionID": "CH-1312"
-        },
-        {
-          "regionID": "CH-4111"
-        },
-        {
-          "regionID": "CH-4112"
-        },
-        {
-          "regionID": "CH-4113"
-        },
-        {
-          "regionID": "CH-4114"
-        },
-        {
-          "regionID": "CH-4115"
-        },
-        {
-          "regionID": "CH-4116"
-        },
-        {
-          "regionID": "CH-4121"
-        },
-        {
-          "regionID": "CH-4122"
-        },
-        {
-          "regionID": "CH-4123"
-        },
-        {
-          "regionID": "CH-4124"
-        },
-        {
-          "regionID": "CH-4125"
-        },
-        {
-          "regionID": "CH-4211"
-        },
-        {
-          "regionID": "CH-4212"
-        },
-        {
-          "regionID": "CH-4214"
-        },
-        {
-          "regionID": "CH-4215"
-        },
-        {
-          "regionID": "CH-4221"
-        },
-        {
-          "regionID": "CH-4222"
-        },
-        {
-          "regionID": "CH-4223"
-        },
-        {
-          "regionID": "CH-4224"
-        },
-        {
-          "regionID": "CH-4225"
-        },
-        {
-          "regionID": "CH-4232"
-        },
-        {
-          "regionID": "CH-6111"
-        },
-        {
-          "regionID": "CH-6112"
-        },
-        {
-          "regionID": "CH-6113"
-        },
-        {
-          "regionID": "CH-6114"
-        },
-        {
-          "regionID": "CH-6115"
-        },
-        {
-          "regionID": "CH-6211"
-        },
-        {
-          "regionID": "CH-6212"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": null,
-            "elevation": null
-          },
-          "dangerLevelDetail": null
-        }
-      },
-      "bulletinID": "CH-52630-6",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "Individual avalanche prone locations for dry avalanches are to be found in particular in extremely steep terrain. In very isolated cases avalanches can be triggered in the weakly bonded old snow and reach medium size in some cases. Apart from the danger of being buried, restraint should be exercised as well in view of the danger of avalanches sweeping people along and giving rise to falls."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "CH-1111"
-        },
-        {
-          "regionID": "CH-1122"
-        },
-        {
-          "regionID": "CH-1211"
-        },
-        {
-          "regionID": "CH-1212"
-        },
-        {
-          "regionID": "CH-2112"
-        },
-        {
-          "regionID": "CH-2131"
-        },
-        {
-          "regionID": "CH-3211"
-        },
-        {
-          "regionID": "CH-3221"
-        },
-        {
-          "regionID": "CH-6121"
-        },
-        {
-          "regionID": "CH-6122"
-        },
-        {
-          "regionID": "CH-6131"
-        },
-        {
-          "regionID": "CH-6132"
-        },
-        {
-          "regionID": "CH-8111"
-        },
-        {
-          "regionID": "CH-8112"
-        },
-        {
-          "regionID": "CH-8113"
-        },
-        {
-          "regionID": "CH-8114"
-        },
-        {
-          "regionID": "CH-8211"
-        },
-        {
-          "regionID": "CH-8212"
-        },
-        {
-          "regionID": "CH-8213"
-        },
-        {
-          "regionID": "CH-8221"
-        }
-      ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "no_distinct_avalanche_problem"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": null,
-            "elevation": null
-          },
-          "dangerLevelDetail": null
-        }
-      },
-      "bulletinID": "CH-52630-7",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "Only a little snow is lying.\nIndividual avalanche prone locations are to be found in particular in extremely steep terrain. Even a small avalanche can sweep people along and give rise to falls."
-      },
-      "weatherForecast": {
-        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "CH-5111"
@@ -761,27 +44,721 @@
           "regionID": "CH-5113"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
           "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
-      "dangerRatings": [
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Distinct weak layers exist in the snowpack. Single winter sport participants can release avalanches in some places. These can release the weakly bonded old snow as well and reach medium size. The avalanche prone locations are rather rare but are barely recognisable, even to the trained eye.\nBackcountry touring calls for careful route selection."
+      },
+      "avalancheProblems": [
         {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
+          "problemType": "persistent_weak_layers"
         }
       ],
+      "bulletinID": "CH-52630-2",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "SW",
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE"
+            ],
+            "elevation": {
+              "altitude": 2000,
+              "indicator": "ABOVE"
+            }
+          },
+          "dangerLevelDetail": "LEVDET_PLUS"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
+      "regions": [
+        {
+          "regionID": "CH-5122"
+        },
+        {
+          "regionID": "CH-5123"
+        },
+        {
+          "regionID": "CH-5221"
+        },
+        {
+          "regionID": "CH-5231"
+        },
+        {
+          "regionID": "CH-7113"
+        },
+        {
+          "regionID": "CH-7121"
+        },
+        {
+          "regionID": "CH-7122"
+        },
+        {
+          "regionID": "CH-7123"
+        },
+        {
+          "regionID": "CH-7124"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Faceted weak layers exist in the centre of the snowpack. Single winter sport participants can release avalanches in some places. These can in some cases reach medium size.\nCareful route selection is recommended."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "bulletinID": "CH-52630-3",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
+            "elevation": {
+              "altitude": 2000,
+              "indicator": "ABOVE"
+            }
+          },
+          "dangerLevelDetail": "LEVDET_NEUTRAL"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
+      "regions": [
+        {
+          "regionID": "CH-2122"
+        },
+        {
+          "regionID": "CH-2124"
+        },
+        {
+          "regionID": "CH-2132"
+        },
+        {
+          "regionID": "CH-2133"
+        },
+        {
+          "regionID": "CH-2134"
+        },
+        {
+          "regionID": "CH-2211"
+        },
+        {
+          "regionID": "CH-2212"
+        },
+        {
+          "regionID": "CH-2221"
+        },
+        {
+          "regionID": "CH-2222"
+        },
+        {
+          "regionID": "CH-3111"
+        },
+        {
+          "regionID": "CH-3112"
+        },
+        {
+          "regionID": "CH-3113"
+        },
+        {
+          "regionID": "CH-3114"
+        },
+        {
+          "regionID": "CH-3222"
+        },
+        {
+          "regionID": "CH-3223"
+        },
+        {
+          "regionID": "CH-3224"
+        },
+        {
+          "regionID": "CH-3311"
+        },
+        {
+          "regionID": "CH-5121"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "The older wind slabs are lying on top of a weakly bonded old snowpack. They are to be evaluated with care and prudence in particular in very steep terrain. Avalanches can in some places be released easily and reach medium size.\nBackcountry touring and other off-piste activities call for careful route selection."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "bulletinID": "CH-52630-4",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "SW",
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E",
+              "SE"
+            ],
+            "elevation": {
+              "altitude": 2400,
+              "indicator": "ABOVE"
+            }
+          },
+          "dangerLevelDetail": "LEVDET_NEUTRAL"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
+      "regions": [
+        {
+          "regionID": "CH-2223"
+        },
+        {
+          "regionID": "CH-2224"
+        },
+        {
+          "regionID": "CH-4213"
+        },
+        {
+          "regionID": "CH-4231"
+        },
+        {
+          "regionID": "CH-4241"
+        },
+        {
+          "regionID": "CH-4242"
+        },
+        {
+          "regionID": "CH-4243"
+        },
+        {
+          "regionID": "CH-4244"
+        },
+        {
+          "regionID": "CH-5124"
+        },
+        {
+          "regionID": "CH-5211"
+        },
+        {
+          "regionID": "CH-5212"
+        },
+        {
+          "regionID": "CH-5214"
+        },
+        {
+          "regionID": "CH-5215"
+        },
+        {
+          "regionID": "CH-5216"
+        },
+        {
+          "regionID": "CH-5222"
+        },
+        {
+          "regionID": "CH-5223"
+        },
+        {
+          "regionID": "CH-5232"
+        },
+        {
+          "regionID": "CH-5233"
+        },
+        {
+          "regionID": "CH-5234"
+        },
+        {
+          "regionID": "CH-7111"
+        },
+        {
+          "regionID": "CH-7112"
+        },
+        {
+          "regionID": "CH-7114"
+        },
+        {
+          "regionID": "CH-7115"
+        },
+        {
+          "regionID": "CH-7125"
+        },
+        {
+          "regionID": "CH-7126"
+        },
+        {
+          "regionID": "CH-7211"
+        },
+        {
+          "regionID": "CH-7221"
+        },
+        {
+          "regionID": "CH-7222"
+        },
+        {
+          "regionID": "CH-7231"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Weak layers in the upper part of the snowpack can still be released in some place by people. Avalanches can in some cases reach medium size. The avalanche prone locations are to be found especially in gullies and bowls, and behind abrupt changes in the terrain.\nBackcountry touring and other off-piste activities call for careful route selection."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "bulletinID": "CH-52630-5",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "W",
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
+            "elevation": {
+              "altitude": 2000,
+              "indicator": "ABOVE"
+            }
+          },
+          "dangerLevelDetail": "LEVDET_MINUS"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
+      "regions": [
+        {
+          "regionID": "CH-1213"
+        },
+        {
+          "regionID": "CH-1226"
+        },
+        {
+          "regionID": "CH-1227"
+        },
+        {
+          "regionID": "CH-1231"
+        },
+        {
+          "regionID": "CH-1232"
+        },
+        {
+          "regionID": "CH-1233"
+        },
+        {
+          "regionID": "CH-1234"
+        },
+        {
+          "regionID": "CH-1241"
+        },
+        {
+          "regionID": "CH-1242"
+        },
+        {
+          "regionID": "CH-1243"
+        },
+        {
+          "regionID": "CH-1244"
+        },
+        {
+          "regionID": "CH-1245"
+        },
+        {
+          "regionID": "CH-1246"
+        },
+        {
+          "regionID": "CH-1247"
+        },
+        {
+          "regionID": "CH-2111"
+        },
+        {
+          "regionID": "CH-2121"
+        },
+        {
+          "regionID": "CH-2123"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Individual avalanche prone locations for dry avalanches are to be found in particular in extremely steep terrain. In very isolated cases avalanches can be triggered in the weakly bonded old snow and reach medium size in some cases. Apart from the danger of being buried, restraint should be exercised as well in view of the danger of avalanches sweeping people along and giving rise to falls."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "bulletinID": "CH-52630-6",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": null,
+            "elevation": null
+          },
+          "dangerLevelDetail": null
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
+      "regions": [
+        {
+          "regionID": "CH-1112"
+        },
+        {
+          "regionID": "CH-1113"
+        },
+        {
+          "regionID": "CH-1114"
+        },
+        {
+          "regionID": "CH-1121"
+        },
+        {
+          "regionID": "CH-1221"
+        },
+        {
+          "regionID": "CH-1222"
+        },
+        {
+          "regionID": "CH-1223"
+        },
+        {
+          "regionID": "CH-1224"
+        },
+        {
+          "regionID": "CH-1225"
+        },
+        {
+          "regionID": "CH-1228"
+        },
+        {
+          "regionID": "CH-1311"
+        },
+        {
+          "regionID": "CH-1312"
+        },
+        {
+          "regionID": "CH-4111"
+        },
+        {
+          "regionID": "CH-4112"
+        },
+        {
+          "regionID": "CH-4113"
+        },
+        {
+          "regionID": "CH-4114"
+        },
+        {
+          "regionID": "CH-4115"
+        },
+        {
+          "regionID": "CH-4116"
+        },
+        {
+          "regionID": "CH-4121"
+        },
+        {
+          "regionID": "CH-4122"
+        },
+        {
+          "regionID": "CH-4123"
+        },
+        {
+          "regionID": "CH-4124"
+        },
+        {
+          "regionID": "CH-4125"
+        },
+        {
+          "regionID": "CH-4211"
+        },
+        {
+          "regionID": "CH-4212"
+        },
+        {
+          "regionID": "CH-4214"
+        },
+        {
+          "regionID": "CH-4215"
+        },
+        {
+          "regionID": "CH-4221"
+        },
+        {
+          "regionID": "CH-4222"
+        },
+        {
+          "regionID": "CH-4223"
+        },
+        {
+          "regionID": "CH-4224"
+        },
+        {
+          "regionID": "CH-4225"
+        },
+        {
+          "regionID": "CH-4232"
+        },
+        {
+          "regionID": "CH-6111"
+        },
+        {
+          "regionID": "CH-6112"
+        },
+        {
+          "regionID": "CH-6113"
+        },
+        {
+          "regionID": "CH-6114"
+        },
+        {
+          "regionID": "CH-6115"
+        },
+        {
+          "regionID": "CH-6211"
+        },
+        {
+          "regionID": "CH-6212"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Only a little snow is lying.\nIndividual avalanche prone locations are to be found in particular in extremely steep terrain. Even a small avalanche can sweep people along and give rise to falls."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "no_distinct_avalanche_problem"
+        }
+      ],
+      "bulletinID": "CH-52630-7",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": null,
+            "elevation": null
+          },
+          "dangerLevelDetail": null
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
+      "regions": [
+        {
+          "regionID": "CH-1111"
+        },
+        {
+          "regionID": "CH-1122"
+        },
+        {
+          "regionID": "CH-1211"
+        },
+        {
+          "regionID": "CH-1212"
+        },
+        {
+          "regionID": "CH-2112"
+        },
+        {
+          "regionID": "CH-2131"
+        },
+        {
+          "regionID": "CH-3211"
+        },
+        {
+          "regionID": "CH-3221"
+        },
+        {
+          "regionID": "CH-6121"
+        },
+        {
+          "regionID": "CH-6122"
+        },
+        {
+          "regionID": "CH-6131"
+        },
+        {
+          "regionID": "CH-6132"
+        },
+        {
+          "regionID": "CH-8111"
+        },
+        {
+          "regionID": "CH-8112"
+        },
+        {
+          "regionID": "CH-8113"
+        },
+        {
+          "regionID": "CH-8114"
+        },
+        {
+          "regionID": "CH-8211"
+        },
+        {
+          "regionID": "CH-8212"
+        },
+        {
+          "regionID": "CH-8213"
+        },
+        {
+          "regionID": "CH-8221"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "As a consequence of warming during the day and the solar radiation, the likelihood of moist avalanches being released will increase also on steep sunny slopes. Small to medium-sized wet avalanches are to be expected."
+      },
       "avalancheProblems": [
         {
           "problemType": "wet_snow"
         }
       ],
+      "bulletinID": "CH-52630-1",
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -791,23 +768,78 @@
               "SW"
             ],
             "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2800
+              "altitude": 2800,
+              "indicator": "ABOVE"
             }
           },
           "dangerLevelDetail": null
         }
       },
-      "bulletinID": "CH-52630-1",
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "As a consequence of warming during the day and the solar radiation, the likelihood of moist avalanches being released will increase also on steep sunny slopes. Small to medium-sized wet avalanches are to be expected."
+      "regions": [
+        {
+          "regionID": "CH-5111"
+        },
+        {
+          "regionID": "CH-5112"
+        },
+        {
+          "regionID": "CH-5113"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+        }
+      },
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
       },
       "weatherForecast": {
         "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "On very steep sunny slopes small to medium-sized wet avalanches are possible as a consequence of warming during the day."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "bulletinID": "CH-52630-2",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "SE",
+              "S",
+              "SW"
+            ],
+            "elevation": {
+              "altitude": 2800,
+              "indicator": "BELOW"
+            }
+          },
+          "dangerLevelDetail": null
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
       "regions": [
         {
           "regionID": "CH-1111"
@@ -1152,53 +1184,46 @@
           "regionID": "CH-7231"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
           "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "wet_snow"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": [
-              "SE",
-              "S",
-              "SW"
-            ],
-            "elevation": {
-              "indicator": "BELOW",
-              "altitude": 2800
-            }
-          },
-          "dangerLevelDetail": null
-        }
-      },
-      "bulletinID": "CH-52630-2",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "On very steep sunny slopes small to medium-sized wet avalanches are possible as a consequence of warming during the day."
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
       },
       "weatherForecast": {
         "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "On very steep sunny slopes individual moist snow slides are possible as a consequence of warming during the day."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "wet_snow"
+        }
+      ],
+      "bulletinID": "CH-52630-3",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": null,
+            "elevation": null
+          },
+          "dangerLevelDetail": null
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
       "regions": [
         {
           "regionID": "CH-1122"
@@ -1258,40 +1283,15 @@
           "regionID": "CH-8221"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-13T16:00:00+00:00",
-        "endTime": "2023-02-14T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
           "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "wet_snow"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": null,
-            "elevation": null
-          },
-          "dangerLevelDetail": null
-        }
-      },
-      "bulletinID": "CH-52630-3",
-      "highlights": "Weakly bonded old snow requires caution. Wet avalanches during the day.",
-      "avalancheActivity": {
-        "comment": "On very steep sunny slopes individual moist snow slides are possible as a consequence of warming during the day."
+      "validTime": {
+        "endTime": "2023-02-14T16:00:00+00:00",
+        "startTime": "2023-02-13T16:00:00+00:00"
       },
       "weatherForecast": {
         "comment": "Snowpack\nExcept in the extreme west of Lower Valais and in northern Lower Valais, the snowpack contains faceted and loosely bonded layers over a wide area. On the northern flank of the Alps, these layers are often to be found near the surface of the snowpack; in southern Valais and in Grisons, the entire snowpack is faceted and loosely bonded in some cases. In particular in northern Grisons, surface hoar that has been covered with snow also exists in some locations. Although the number of avalanche prone locations has decreased in recent days, in the east in particular dry slab avalanches can still be released even by small additional loads in some places.  <br/>  As a consequence of warming and solar radiation, wet snow avalanches are to be expected on very steep south facing slopes as the day progresses.\nObserved weather review Monday, 13.02.2023\nAfter a clear night, in the mountains it was sunny and mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +4 \u00b0C\nWind\nLight to moderate from the northeast, from the west in the Prealps during the day\nWeather forecast through Tuesday, 14.02.2023\nAfter a clear night, in the mountains it will be sunny and exceptionally mild during the day.\nFresh snow\n-\nTemperature\nAt midday at 2000 m: about +5 \u00b0C; the zero degree level will be approximately 3100 m\nWind\nLight\nOutlook through Thursday, 16.02.2023\nAfter a clear night, it will be sunny and very mild again on Wednesday. Wednesday night will be mostly clear, and Thursday will be mostly sunny despite high-altitude cloudbanks, but no longer quite as mild.  <br/>  The danger of dry avalanches will continue to decrease, but only slowly because of the weak layers in the old snowpack. On very steep sunny slopes, wet snow and gliding avalanches are to be expected."

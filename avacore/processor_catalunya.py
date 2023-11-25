@@ -76,7 +76,7 @@ class Processor(JsonProcessor):
                 comment=icgc_report["text_estat_mantell"],
             )
             report.snowpackStructure = Texts(comment=icgc_report["text_distribucio"])
-            report.tendency = [Tendency(tendencyComment=icgc_report["text_tendencia"])]
+            report.tendency = [Tendency(comment=icgc_report["text_tendencia"])]
 
             danger_rating = DangerRating()
             danger_rating.set_mainValue_int(int(icgc_report["grau_perill_primari"]))

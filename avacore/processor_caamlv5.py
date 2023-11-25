@@ -210,7 +210,7 @@ class Processor(XmlProcessor):
                     if tendencyComment.text is not None:
                         report.tendency = [
                             Tendency(
-                                tendencyComment=tendencyComment.text.replace(
+                                comment=tendencyComment.text.replace(
                                     "&nbsp;", "\n"
                                 )
                             )
@@ -289,7 +289,7 @@ class VorarlbergProcessor(XmlProcessor):
                         report.avalancheActivityHighlights = highlights.text
                     for comment in bulletinResultsOf.iter(CAAML_NS + "comment"):
                         if comment_empty:
-                            report.tendency = [Tendency(tendencyComment=comment.text)]
+                            report.tendency = [Tendency(comment=comment.text)]
                             comment_empty = 0
                     for wxSynopsisComment in bulletinResultsOf.iter(
                         CAAML_NS + "wxSynopsisComment"
@@ -345,7 +345,7 @@ class VorarlbergProcessor(XmlProcessor):
                         # problem_danger_rating.elevation.auto_select(valid_elevation)
                         problem = AvalancheProblem()
                         problem.aspects = aspect
-                        problem.elevation.auto_select(valid_elevation)
+                        problem.elevation = Elevation().auto_select(valid_elevation)
                         problem.add_problemType(type_r)
                         # problem.dangerRating = problem_danger_rating
                         report.avalancheProblems.append(problem)
@@ -562,7 +562,7 @@ class BavariaProcessor(Processor):
                 problem = AvalancheProblem()
                 problem.add_problemType(type_r)
                 problem.aspects = aspect
-                problem.elevation.auto_select(valid_elevation)
+                problem.elevation = Elevation().auto_select(valid_elevation)
 
                 report.avalancheProblems.append(problem)
 

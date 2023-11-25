@@ -119,7 +119,7 @@ class Processor(XmlProcessor):
             r"(?<=5\.- Avance para el)(?s:.*)(?=</TXT_PREDICCION>)?", aemet_reports
         )
         report.tendency = [
-            Tendency(tendencyComment=" ".join(re_result.group(0).splitlines()[1:]))
+            Tendency(comment=" ".join(re_result.group(0).splitlines()[1:]))
         ]
 
         re_result = re.search(

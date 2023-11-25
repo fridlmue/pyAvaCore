@@ -1,27 +1,10 @@
 {
   "bulletins": [
     {
-      "regions": [
-        {
-          "regionID": "NO-3016"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-12-02T00:00:00",
-        "endTime": "2021-12-02T23:59:59"
+      "avalancheActivity": {
+        "comment": "Skredfaren vil \u00f8ke i takt med at vinden \u00f8ker. Enkelte steder vil det trolig v\u00e6re lett \u00e5 l\u00f8se ut store skred. \n\nKombinasjonen med nedf\u00f8yket overflaterim og/eller kantkorn samt store mengder l\u00f8s sn\u00f8 i terrenget l\u00f8fter skredfaren opp til 3-betydelig.",
+        "highlights": "Avoid leeward slopes, wind deposited snow are covering persistent weak layer. Beware of danger signs like shooting cracks and whumpf-sounds."
       },
-      "source": {
-        "provider": {
-          "name": "Varsom: En tjeneste levert av NVE, i samarbeid med Statens vegvesen og Meteorologisk institutt",
-          "website": "https://www.varsom.no/en/avalanche-bulletins/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "aspects": [
@@ -37,19 +20,36 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": [
+      "bulletinID": "NO-3016_2021-12-01 15:42:45",
+      "dangerRatings": [
         {
-          "tendencyComment": "Avoid leeward slopes, wind deposited snow are covering persistent weak layer. Beware of danger signs like shooting cracks and whumpf-sounds."
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         }
       ],
       "publicationTime": "2021-12-01T15:42:45",
-      "bulletinID": "NO-3016_2021-12-01 15:42:45",
-      "avalancheActivity": {
-        "highlights": "Avoid leeward slopes, wind deposited snow are covering persistent weak layer. Beware of danger signs like shooting cracks and whumpf-sounds.",
-        "comment": "Skredfaren vil \u00f8ke i takt med at vinden \u00f8ker. Enkelte steder vil det trolig v\u00e6re lett \u00e5 l\u00f8se ut store skred. \n\nKombinasjonen med nedf\u00f8yket overflaterim og/eller kantkorn samt store mengder l\u00f8s sn\u00f8 i terrenget l\u00f8fter skredfaren opp til 3-betydelig."
-      },
+      "regions": [
+        {
+          "regionID": "NO-3016"
+        }
+      ],
       "snowpackStructure": {
         "comment": "Det st\u00f8rste sn\u00f8fall av betydning s\u00e5 langt i sesongen kom 27-28 november. Det kom 20-40 cm, men det er store lokale variasjoner pga. bygev\u00e6r. \n\nF\u00f8r sn\u00f8fallet besto sn\u00f8overflaten i hovedsak av kald, t\u00f8rr nysn\u00f8. Det var stor utbredelse av rim og kantkorn i sn\u00f8overflaten. \n\nUnder skoggrensen ligger den l\u00f8se nysn\u00f8en rett p\u00e5 bakken. \n\nH\u00f8yere i terrenget er der en liten s\u00e5le av skaresn\u00f8 fra tidligere i h\u00f8st. \n\nMandag ettermiddag og natt til tirsdag har vinden flyttet p\u00e5 sn\u00f8en. \n"
+      },
+      "source": {
+        "provider": {
+          "name": "Varsom: En tjeneste levert av NVE, i samarbeid med Statens vegvesen og Meteorologisk institutt",
+          "website": "https://www.varsom.no/en/avalanche-bulletins/"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "Avoid leeward slopes, wind deposited snow are covering persistent weak layer. Beware of danger signs like shooting cracks and whumpf-sounds."
+        }
+      ],
+      "validTime": {
+        "endTime": "2021-12-02T23:59:59",
+        "startTime": "2021-12-02T00:00:00"
       }
     }
   ]

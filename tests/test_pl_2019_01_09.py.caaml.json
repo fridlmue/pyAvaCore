@@ -1,27 +1,6 @@
 {
   "bulletins": [
     {
-      "regions": [
-        {
-          "regionID": "PL-01"
-        }
-      ],
-      "validTime": {
-        "startTime": "2019-01-09T16:31:14",
-        "endTime": "2019-01-10T16:31:14"
-      },
-      "source": {
-        "provider": {
-          "name": "G\u00f3rskie Ochotnicze Pogotowie Ratunkowe",
-          "website": "https://www.gopr.pl/en/avalanches"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "problemType": "new_snow"
@@ -30,11 +9,32 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "regions": [
+        {
+          "regionID": "PL-01"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "G\u00f3rskie Ochotnicze Pogotowie Ratunkowe",
+          "website": "https://www.gopr.pl/en/avalanches"
+        }
+      },
       "tendency": [
         {
-          "tendencyComment": "no-change"
+          "comment": "no-change"
         }
-      ]
+      ],
+      "validTime": {
+        "endTime": "2019-01-10T16:31:14",
+        "startTime": "2019-01-09T16:31:14"
+      }
     }
   ]
 }

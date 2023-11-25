@@ -1,70 +1,10 @@
 {
   "bulletins": [
     {
-      "regions": [
-        {
-          "regionID": "AT-07-26"
-        },
-        {
-          "regionID": "AT-07-27"
-        },
-        {
-          "regionID": "AT-07-28"
-        },
-        {
-          "regionID": "AT-07-29"
-        },
-        {
-          "regionID": "AT-07-24"
-        },
-        {
-          "regionID": "AT-07-25"
-        },
-        {
-          "regionID": "AT-07-26"
-        },
-        {
-          "regionID": "AT-07-27"
-        },
-        {
-          "regionID": "AT-07-28"
-        },
-        {
-          "regionID": "AT-07-29"
-        },
-        {
-          "regionID": "AT-07-24"
-        },
-        {
-          "regionID": "AT-07-25"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-02-09T23:00:00+00:00",
-        "endTime": "2021-02-10T23:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "High altitudes and the high Alpine regions: The fresh snow and in particular the sometimes deep wind slabs can be released easily, or, in isolated cases naturally in all aspects. The number and size of avalanche prone locations will increase with altitude. On extremely steep sunny slopes individual loose snow avalanches are possible. Avalanches can also penetrate deep layers and reach dangerously large size. Weak layers in the upper part of the snowpack can still be released in some places by individual winter sport participants in particular in areas where the snow cover is rather shallow. <br/> Low and intermediate altitudes: A substantial danger of gliding avalanches exists. Areas with glide cracks are to be avoided as far as possible. <br/> In the regions exposed to heavier precipitation the avalanche prone locations are more prevalent and larger. Extensive experience in the assessment of avalanche danger is required.",
+        "highlights": "A critical avalanche situation will persist in some cases."
       },
-      "source": {
-        "provider": {
-          "name": "Lawinenwarndienst Tirol",
-          "website": "https://avalanche.report/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "lowerBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "aspects": [
@@ -112,11 +52,7 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": [
-        {
-          "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
-        }
-      ],
+      "bulletinID": "e263e7ab-68cf-4efe-8e20-82ec6a575cf0",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -125,76 +61,63 @@
           ]
         }
       },
-      "bulletinID": "e263e7ab-68cf-4efe-8e20-82ec6a575cf0",
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "publicationTime": "2021-02-09T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "A critical avalanche situation will persist in some cases.",
-        "comment": "High altitudes and the high Alpine regions: The fresh snow and in particular the sometimes deep wind slabs can be released easily, or, in isolated cases naturally in all aspects. The number and size of avalanche prone locations will increase with altitude. On extremely steep sunny slopes individual loose snow avalanches are possible. Avalanches can also penetrate deep layers and reach dangerously large size. Weak layers in the upper part of the snowpack can still be released in some places by individual winter sport participants in particular in areas where the snow cover is rather shallow. <br/> Low and intermediate altitudes: A substantial danger of gliding avalanches exists. Areas with glide cracks are to be avoided as far as possible. <br/> In the regions exposed to heavier precipitation the avalanche prone locations are more prevalent and larger. Extensive experience in the assessment of avalanche danger is required."
-      },
+      "regions": [
+        {
+          "regionID": "AT-07-26"
+        },
+        {
+          "regionID": "AT-07-27"
+        },
+        {
+          "regionID": "AT-07-28"
+        },
+        {
+          "regionID": "AT-07-29"
+        },
+        {
+          "regionID": "AT-07-24"
+        },
+        {
+          "regionID": "AT-07-25"
+        },
+        {
+          "regionID": "AT-07-26"
+        },
+        {
+          "regionID": "AT-07-27"
+        },
+        {
+          "regionID": "AT-07-28"
+        },
+        {
+          "regionID": "AT-07-29"
+        },
+        {
+          "regionID": "AT-07-24"
+        },
+        {
+          "regionID": "AT-07-25"
+        }
+      ],
       "snowpackStructure": {
         "comment": "20 to 40 cm of snow, and up to 70 cm in some localities, has fallen since Saturday above approximately 1800 m. The fresh wind slabs are lying on soft layers in all aspects above the tree line. The snowpack is moist, in particular at low and intermediate altitudes. <br/> Avalanche prone weak layers exist in the centre of the snowpack in all aspects, in particular above approximately 2000 m."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "IT-32-BZ-18"
-        },
-        {
-          "regionID": "IT-32-BZ-07"
-        },
-        {
-          "regionID": "IT-32-BZ-19"
-        },
-        {
-          "regionID": "IT-32-BZ-20"
-        },
-        {
-          "regionID": "IT-32-BZ-11"
-        },
-        {
-          "regionID": "IT-32-BZ-04"
-        },
-        {
-          "regionID": "IT-32-BZ-15"
-        },
-        {
-          "regionID": "IT-32-BZ-05"
-        },
-        {
-          "regionID": "IT-32-BZ-17"
-        },
-        {
-          "regionID": "IT-32-BZ-18"
-        },
-        {
-          "regionID": "IT-32-BZ-07"
-        },
-        {
-          "regionID": "IT-32-BZ-19"
-        },
-        {
-          "regionID": "IT-32-BZ-20"
-        },
-        {
-          "regionID": "IT-32-BZ-11"
-        },
-        {
-          "regionID": "IT-32-BZ-04"
-        },
-        {
-          "regionID": "IT-32-BZ-15"
-        },
-        {
-          "regionID": "IT-32-BZ-05"
-        },
-        {
-          "regionID": "IT-32-BZ-17"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-02-09T23:00:00+00:00",
-        "endTime": "2021-02-10T23:00:00+00:00"
       },
       "source": {
         "provider": {
@@ -202,22 +125,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
+          "comment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
         }
       ],
+      "validTime": {
+        "endTime": "2021-02-10T23:00:00+00:00",
+        "startTime": "2021-02-09T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "High altitudes and the high Alpine regions: On wind-loaded slopes dry slab avalanches are possible, even large ones in isolated cases. The number and size of avalanche prone locations will increase with altitude. <br/> The fresh snow and in particular the sometimes deep wind slabs can be released easily, or, in isolated cases naturally in all aspects. Avalanches can also penetrate deep layers and reach dangerously large size. Weak layers in the upper part of the snowpack can still be released in some places by individual winter sport participants in particular in areas where the snow cover is rather shallow. Low and intermediate altitudes: A latent danger of gliding avalanches exists. Areas with glide cracks are to be avoided as far as possible. <br/> Extensive experience in the assessment of avalanche danger is required.",
+        "highlights": "As a consequence of the new snow the avalanche prone locations will become more prevalent from the second half of the night."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -265,11 +187,7 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": [
-        {
-          "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists. As a consequence of falling temperatures the snowpack will consolidate during the next few days, in particular below approximately 2000 m in all regions."
-        }
-      ],
+      "bulletinID": "acb06ef8-b9b8-4340-b97b-b4931d224204",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -278,136 +196,81 @@
           ]
         }
       },
-      "bulletinID": "acb06ef8-b9b8-4340-b97b-b4931d224204",
-      "publicationTime": "2021-02-09T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "As a consequence of the new snow the avalanche prone locations will become more prevalent from the second half of the night.",
-        "comment": "High altitudes and the high Alpine regions: On wind-loaded slopes dry slab avalanches are possible, even large ones in isolated cases. The number and size of avalanche prone locations will increase with altitude. <br/> The fresh snow and in particular the sometimes deep wind slabs can be released easily, or, in isolated cases naturally in all aspects. Avalanches can also penetrate deep layers and reach dangerously large size. Weak layers in the upper part of the snowpack can still be released in some places by individual winter sport participants in particular in areas where the snow cover is rather shallow. Low and intermediate altitudes: A latent danger of gliding avalanches exists. Areas with glide cracks are to be avoided as far as possible. <br/> Extensive experience in the assessment of avalanche danger is required."
-      },
-      "snowpackStructure": {
-        "comment": "10 to 30 cm of snow, and even more in some localities, will fall until Thursday above approximately 1000 m. The fresh wind slabs are lying on soft layers in all aspects above the tree line. As a consequence of snowfall the occasionally strong southerly wind, the snow drift accumulations will increase in size. <br/> The snowpack is moist, in particular at low and intermediate altitudes. <br/> Avalanche prone weak layers exist in the centre of the snowpack in all aspects, in particular above approximately 2000 m."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "IT-32-TN-09"
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         },
         {
-          "regionID": "IT-32-TN-02"
-        },
-        {
-          "regionID": "IT-32-TN-13"
-        },
-        {
-          "regionID": "IT-32-TN-01"
-        },
-        {
-          "regionID": "IT-32-TN-12"
-        },
-        {
-          "regionID": "IT-32-TN-04"
-        },
-        {
-          "regionID": "IT-32-TN-03"
-        },
-        {
-          "regionID": "IT-32-TN-14"
-        },
-        {
-          "regionID": "IT-32-TN-06"
-        },
-        {
-          "regionID": "IT-32-TN-05"
-        },
-        {
-          "regionID": "IT-32-TN-16"
-        },
-        {
-          "regionID": "IT-32-TN-19"
-        },
-        {
-          "regionID": "IT-32-TN-08"
-        },
-        {
-          "regionID": "IT-32-TN-18"
-        },
-        {
-          "regionID": "IT-32-TN-07"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-TN-11"
-        },
-        {
-          "regionID": "IT-32-TN-10"
-        },
-        {
-          "regionID": "IT-32-TN-21"
-        },
-        {
-          "regionID": "IT-32-TN-09"
-        },
-        {
-          "regionID": "IT-32-TN-02"
-        },
-        {
-          "regionID": "IT-32-TN-13"
-        },
-        {
-          "regionID": "IT-32-TN-01"
-        },
-        {
-          "regionID": "IT-32-TN-12"
-        },
-        {
-          "regionID": "IT-32-TN-04"
-        },
-        {
-          "regionID": "IT-32-TN-03"
-        },
-        {
-          "regionID": "IT-32-TN-14"
-        },
-        {
-          "regionID": "IT-32-TN-06"
-        },
-        {
-          "regionID": "IT-32-TN-05"
-        },
-        {
-          "regionID": "IT-32-TN-16"
-        },
-        {
-          "regionID": "IT-32-TN-19"
-        },
-        {
-          "regionID": "IT-32-TN-08"
-        },
-        {
-          "regionID": "IT-32-TN-18"
-        },
-        {
-          "regionID": "IT-32-TN-07"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-TN-11"
-        },
-        {
-          "regionID": "IT-32-TN-10"
-        },
-        {
-          "regionID": "IT-32-TN-21"
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2021-02-09T23:00:00+00:00",
-        "endTime": "2021-02-10T23:00:00+00:00"
+      "publicationTime": "2021-02-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-32-BZ-18"
+        },
+        {
+          "regionID": "IT-32-BZ-07"
+        },
+        {
+          "regionID": "IT-32-BZ-19"
+        },
+        {
+          "regionID": "IT-32-BZ-20"
+        },
+        {
+          "regionID": "IT-32-BZ-11"
+        },
+        {
+          "regionID": "IT-32-BZ-04"
+        },
+        {
+          "regionID": "IT-32-BZ-15"
+        },
+        {
+          "regionID": "IT-32-BZ-05"
+        },
+        {
+          "regionID": "IT-32-BZ-17"
+        },
+        {
+          "regionID": "IT-32-BZ-18"
+        },
+        {
+          "regionID": "IT-32-BZ-07"
+        },
+        {
+          "regionID": "IT-32-BZ-19"
+        },
+        {
+          "regionID": "IT-32-BZ-20"
+        },
+        {
+          "regionID": "IT-32-BZ-11"
+        },
+        {
+          "regionID": "IT-32-BZ-04"
+        },
+        {
+          "regionID": "IT-32-BZ-15"
+        },
+        {
+          "regionID": "IT-32-BZ-05"
+        },
+        {
+          "regionID": "IT-32-BZ-17"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "10 to 30 cm of snow, and even more in some localities, will fall until Thursday above approximately 1000 m. The fresh wind slabs are lying on soft layers in all aspects above the tree line. As a consequence of snowfall the occasionally strong southerly wind, the snow drift accumulations will increase in size. <br/> The snowpack is moist, in particular at low and intermediate altitudes. <br/> Avalanche prone weak layers exist in the centre of the snowpack in all aspects, in particular above approximately 2000 m."
       },
       "source": {
         "provider": {
@@ -415,22 +278,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
+          "comment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists. As a consequence of falling temperatures the snowpack will consolidate during the next few days, in particular below approximately 2000 m in all regions."
         }
       ],
+      "validTime": {
+        "endTime": "2021-02-10T23:00:00+00:00",
+        "startTime": "2021-02-09T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Over a wide area 15 to 30 cm of snow, and even more in some localities, will fall from early morning above approximately 1500 m. The new snow and wind slabs remain very prone to triggering in all aspects above the tree line. This applies in particular on very steep slopes, and adjacent to ridgelines. Dry avalanches can be released by small loads or triggered naturally. <br/> In addition a latent danger of gliding avalanches and moist snow slides exists. Until the temperature falls more medium-sized moist slab avalanches are possible. They can also penetrate deep layers and reach quite a large size, caution is to be exercised, including on cut and grassy slopes. <br/> Extensive experience in the assessment of avalanche danger is required. Areas with glide cracks are to be avoided as far as possible.",
+        "highlights": "Considerable avalanche danger will still be encountered. As the snowfall becomes more intense the avalanche prone locations will become more prevalent as the day progresses."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -477,11 +339,7 @@
           "problemType": "gliding_snow"
         }
       ],
-      "tendency": [
-        {
-          "tendencyComment": "Slight decrease in danger of dry avalanches as a consequence of the ceasing of precipitation. Until the temperature falls at any time small and medium-sized moist and wet avalanches are possible. This applies in particular below approximately 2000 m, as well as on very steep sunny slopes."
-        }
-      ],
+      "bulletinID": "00ab2e19-7b52-47d5-85aa-cef76cc1035d",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -490,100 +348,141 @@
           ]
         }
       },
-      "bulletinID": "00ab2e19-7b52-47d5-85aa-cef76cc1035d",
-      "publicationTime": "2021-02-09T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Considerable avalanche danger will still be encountered. As the snowfall becomes more intense the avalanche prone locations will become more prevalent as the day progresses.",
-        "comment": "Over a wide area 15 to 30 cm of snow, and even more in some localities, will fall from early morning above approximately 1500 m. The new snow and wind slabs remain very prone to triggering in all aspects above the tree line. This applies in particular on very steep slopes, and adjacent to ridgelines. Dry avalanches can be released by small loads or triggered naturally. <br/> In addition a latent danger of gliding avalanches and moist snow slides exists. Until the temperature falls more medium-sized moist slab avalanches are possible. They can also penetrate deep layers and reach quite a large size, caution is to be exercised, including on cut and grassy slopes. <br/> Extensive experience in the assessment of avalanche danger is required. Areas with glide cracks are to be avoided as far as possible."
-      },
-      "snowpackStructure": {
-        "comment": "As a consequence of new snow and a moderate to strong southwesterly wind, easily released wind slabs will form especially adjacent to ridgelines. This also applies in gullies and bowls above the tree line. Over a wide area new snow and wind slabs are lying on the smooth surface of an old snowpack, especially above approximately 1900 m. <br/> The old snowpack is moist, in particular in the south, as well as in the other regions in particular at low and intermediate altitudes. Faceted weak layers exist in the centre of the snowpack."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "IT-32-BZ-10"
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         },
         {
-          "regionID": "IT-32-BZ-12"
-        },
-        {
-          "regionID": "IT-32-BZ-01"
-        },
-        {
-          "regionID": "IT-32-BZ-13"
-        },
-        {
-          "regionID": "IT-32-BZ-02"
-        },
-        {
-          "regionID": "IT-32-BZ-14"
-        },
-        {
-          "regionID": "IT-32-BZ-03"
-        },
-        {
-          "regionID": "IT-32-BZ-16"
-        },
-        {
-          "regionID": "IT-32-BZ-06"
-        },
-        {
-          "regionID": "IT-32-BZ-08"
-        },
-        {
-          "regionID": "IT-32-BZ-09"
-        },
-        {
-          "regionID": "IT-32-TN-15"
-        },
-        {
-          "regionID": "IT-32-TN-17"
-        },
-        {
-          "regionID": "IT-32-BZ-10"
-        },
-        {
-          "regionID": "IT-32-BZ-12"
-        },
-        {
-          "regionID": "IT-32-BZ-01"
-        },
-        {
-          "regionID": "IT-32-BZ-13"
-        },
-        {
-          "regionID": "IT-32-BZ-02"
-        },
-        {
-          "regionID": "IT-32-BZ-14"
-        },
-        {
-          "regionID": "IT-32-BZ-03"
-        },
-        {
-          "regionID": "IT-32-BZ-16"
-        },
-        {
-          "regionID": "IT-32-BZ-06"
-        },
-        {
-          "regionID": "IT-32-BZ-08"
-        },
-        {
-          "regionID": "IT-32-BZ-09"
-        },
-        {
-          "regionID": "IT-32-TN-15"
-        },
-        {
-          "regionID": "IT-32-TN-17"
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2021-02-09T23:00:00+00:00",
-        "endTime": "2021-02-10T23:00:00+00:00"
+      "publicationTime": "2021-02-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-32-TN-09"
+        },
+        {
+          "regionID": "IT-32-TN-02"
+        },
+        {
+          "regionID": "IT-32-TN-13"
+        },
+        {
+          "regionID": "IT-32-TN-01"
+        },
+        {
+          "regionID": "IT-32-TN-12"
+        },
+        {
+          "regionID": "IT-32-TN-04"
+        },
+        {
+          "regionID": "IT-32-TN-03"
+        },
+        {
+          "regionID": "IT-32-TN-14"
+        },
+        {
+          "regionID": "IT-32-TN-06"
+        },
+        {
+          "regionID": "IT-32-TN-05"
+        },
+        {
+          "regionID": "IT-32-TN-16"
+        },
+        {
+          "regionID": "IT-32-TN-19"
+        },
+        {
+          "regionID": "IT-32-TN-08"
+        },
+        {
+          "regionID": "IT-32-TN-18"
+        },
+        {
+          "regionID": "IT-32-TN-07"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-TN-11"
+        },
+        {
+          "regionID": "IT-32-TN-10"
+        },
+        {
+          "regionID": "IT-32-TN-21"
+        },
+        {
+          "regionID": "IT-32-TN-09"
+        },
+        {
+          "regionID": "IT-32-TN-02"
+        },
+        {
+          "regionID": "IT-32-TN-13"
+        },
+        {
+          "regionID": "IT-32-TN-01"
+        },
+        {
+          "regionID": "IT-32-TN-12"
+        },
+        {
+          "regionID": "IT-32-TN-04"
+        },
+        {
+          "regionID": "IT-32-TN-03"
+        },
+        {
+          "regionID": "IT-32-TN-14"
+        },
+        {
+          "regionID": "IT-32-TN-06"
+        },
+        {
+          "regionID": "IT-32-TN-05"
+        },
+        {
+          "regionID": "IT-32-TN-16"
+        },
+        {
+          "regionID": "IT-32-TN-19"
+        },
+        {
+          "regionID": "IT-32-TN-08"
+        },
+        {
+          "regionID": "IT-32-TN-18"
+        },
+        {
+          "regionID": "IT-32-TN-07"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-TN-11"
+        },
+        {
+          "regionID": "IT-32-TN-10"
+        },
+        {
+          "regionID": "IT-32-TN-21"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "As a consequence of new snow and a moderate to strong southwesterly wind, easily released wind slabs will form especially adjacent to ridgelines. This also applies in gullies and bowls above the tree line. Over a wide area new snow and wind slabs are lying on the smooth surface of an old snowpack, especially above approximately 1900 m. <br/> The old snowpack is moist, in particular in the south, as well as in the other regions in particular at low and intermediate altitudes. Faceted weak layers exist in the centre of the snowpack."
       },
       "source": {
         "provider": {
@@ -591,22 +490,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
+          "comment": "Slight decrease in danger of dry avalanches as a consequence of the ceasing of precipitation. Until the temperature falls at any time small and medium-sized moist and wet avalanches are possible. This applies in particular below approximately 2000 m, as well as on very steep sunny slopes."
         }
       ],
+      "validTime": {
+        "endTime": "2021-02-10T23:00:00+00:00",
+        "startTime": "2021-02-09T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "High altitudes and the high Alpine regions: On wind-loaded slopes dry slab avalanches are possible, even large ones in isolated cases. The number and size of avalanche prone locations will increase with altitude. <br/> The fresh snow and in particular the sometimes deep wind slabs can be released easily, or, in isolated cases naturally in all aspects. Avalanches can also penetrate deep layers and reach dangerously large size. Weak layers in the upper part of the snowpack can still be released in some places by individual winter sport participants in particular in areas where the snow cover is rather shallow. Low and intermediate altitudes: A latent danger of gliding avalanches exists. Areas with glide cracks are to be avoided as far as possible.",
+        "highlights": "Backcountry touring calls for experience in the assessment of avalanche danger."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -654,11 +552,7 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": [
-        {
-          "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
-        }
-      ],
+      "bulletinID": "9e5d53cf-dd9a-4ebc-a860-0108889b9623",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -667,136 +561,105 @@
           ]
         }
       },
-      "bulletinID": "9e5d53cf-dd9a-4ebc-a860-0108889b9623",
-      "publicationTime": "2021-02-09T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Backcountry touring calls for experience in the assessment of avalanche danger.",
-        "comment": "High altitudes and the high Alpine regions: On wind-loaded slopes dry slab avalanches are possible, even large ones in isolated cases. The number and size of avalanche prone locations will increase with altitude. <br/> The fresh snow and in particular the sometimes deep wind slabs can be released easily, or, in isolated cases naturally in all aspects. Avalanches can also penetrate deep layers and reach dangerously large size. Weak layers in the upper part of the snowpack can still be released in some places by individual winter sport participants in particular in areas where the snow cover is rather shallow. Low and intermediate altitudes: A latent danger of gliding avalanches exists. Areas with glide cracks are to be avoided as far as possible."
-      },
-      "snowpackStructure": {
-        "comment": "10 to 20 cm of snow will fall until Thursday above approximately 1000 m. The fresh wind slabs are lying on soft layers in all aspects above the tree line. As a consequence of snowfall the occasionally strong southerly wind, the snow drift accumulations will increase in size. <br/> The snowpack is moist, in particular at low and intermediate altitudes. <br/> Avalanche prone weak layers exist in the centre of the snowpack in all aspects, in particular above approximately 2000 m."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "AT-07-20"
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         },
         {
-          "regionID": "AT-07-10"
-        },
-        {
-          "regionID": "AT-07-21"
-        },
-        {
-          "regionID": "AT-07-22"
-        },
-        {
-          "regionID": "AT-07-11"
-        },
-        {
-          "regionID": "AT-07-23"
-        },
-        {
-          "regionID": "AT-07-01"
-        },
-        {
-          "regionID": "AT-07-12"
-        },
-        {
-          "regionID": "AT-07-13"
-        },
-        {
-          "regionID": "AT-07-02"
-        },
-        {
-          "regionID": "AT-07-14"
-        },
-        {
-          "regionID": "AT-07-03"
-        },
-        {
-          "regionID": "AT-07-15"
-        },
-        {
-          "regionID": "AT-07-04"
-        },
-        {
-          "regionID": "AT-07-16"
-        },
-        {
-          "regionID": "AT-07-07"
-        },
-        {
-          "regionID": "AT-07-08"
-        },
-        {
-          "regionID": "AT-07-19"
-        },
-        {
-          "regionID": "AT-07-09"
-        },
-        {
-          "regionID": "AT-07-20"
-        },
-        {
-          "regionID": "AT-07-10"
-        },
-        {
-          "regionID": "AT-07-21"
-        },
-        {
-          "regionID": "AT-07-22"
-        },
-        {
-          "regionID": "AT-07-11"
-        },
-        {
-          "regionID": "AT-07-23"
-        },
-        {
-          "regionID": "AT-07-01"
-        },
-        {
-          "regionID": "AT-07-12"
-        },
-        {
-          "regionID": "AT-07-13"
-        },
-        {
-          "regionID": "AT-07-02"
-        },
-        {
-          "regionID": "AT-07-14"
-        },
-        {
-          "regionID": "AT-07-03"
-        },
-        {
-          "regionID": "AT-07-15"
-        },
-        {
-          "regionID": "AT-07-04"
-        },
-        {
-          "regionID": "AT-07-16"
-        },
-        {
-          "regionID": "AT-07-07"
-        },
-        {
-          "regionID": "AT-07-08"
-        },
-        {
-          "regionID": "AT-07-19"
-        },
-        {
-          "regionID": "AT-07-09"
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2021-02-09T23:00:00+00:00",
-        "endTime": "2021-02-10T23:00:00+00:00"
+      "publicationTime": "2021-02-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-32-BZ-10"
+        },
+        {
+          "regionID": "IT-32-BZ-12"
+        },
+        {
+          "regionID": "IT-32-BZ-01"
+        },
+        {
+          "regionID": "IT-32-BZ-13"
+        },
+        {
+          "regionID": "IT-32-BZ-02"
+        },
+        {
+          "regionID": "IT-32-BZ-14"
+        },
+        {
+          "regionID": "IT-32-BZ-03"
+        },
+        {
+          "regionID": "IT-32-BZ-16"
+        },
+        {
+          "regionID": "IT-32-BZ-06"
+        },
+        {
+          "regionID": "IT-32-BZ-08"
+        },
+        {
+          "regionID": "IT-32-BZ-09"
+        },
+        {
+          "regionID": "IT-32-TN-15"
+        },
+        {
+          "regionID": "IT-32-TN-17"
+        },
+        {
+          "regionID": "IT-32-BZ-10"
+        },
+        {
+          "regionID": "IT-32-BZ-12"
+        },
+        {
+          "regionID": "IT-32-BZ-01"
+        },
+        {
+          "regionID": "IT-32-BZ-13"
+        },
+        {
+          "regionID": "IT-32-BZ-02"
+        },
+        {
+          "regionID": "IT-32-BZ-14"
+        },
+        {
+          "regionID": "IT-32-BZ-03"
+        },
+        {
+          "regionID": "IT-32-BZ-16"
+        },
+        {
+          "regionID": "IT-32-BZ-06"
+        },
+        {
+          "regionID": "IT-32-BZ-08"
+        },
+        {
+          "regionID": "IT-32-BZ-09"
+        },
+        {
+          "regionID": "IT-32-TN-15"
+        },
+        {
+          "regionID": "IT-32-TN-17"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "10 to 20 cm of snow will fall until Thursday above approximately 1000 m. The fresh wind slabs are lying on soft layers in all aspects above the tree line. As a consequence of snowfall the occasionally strong southerly wind, the snow drift accumulations will increase in size. <br/> The snowpack is moist, in particular at low and intermediate altitudes. <br/> Avalanche prone weak layers exist in the centre of the snowpack in all aspects, in particular above approximately 2000 m."
       },
       "source": {
         "provider": {
@@ -804,22 +667,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "2000"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "2000"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
+          "comment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
         }
       ],
+      "validTime": {
+        "endTime": "2021-02-10T23:00:00+00:00",
+        "startTime": "2021-02-09T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Avalanches can be released in the weakly bonded old snow by a single winter sport participant. This applies above approximately 2000 m, especially in areas where the snow cover is rather shallow, as well as at transitions from a shallow to a deep snowpack. Between approximately 2000 and 2400 m the avalanche prone locations are more prevalent and the danger is slightly greater. Avalanches can penetrate deep layers and reach dangerously large size. <br/> As a consequence of new snow and a strong to storm force wind, sometimes avalanche prone wind slabs formed. The avalanche prone locations are to be found in particular on near-ridge shady slopes at high altitudes and in high Alpine regions. <br/> In addition an appreciable danger of gliding avalanches exists. This applies in particular in the west and in the northwest. Areas with glide cracks are to be avoided. <br/> Experience and restraint are required.",
+        "highlights": "In some places avalanches can be released in the weakly bonded old snow and reach large size."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -851,11 +713,7 @@
           "problemType": "gliding_snow"
         }
       ],
-      "tendency": [
-        {
-          "tendencyComment": "As a consequence of new snow and wind, further wind slabs will form."
-        }
-      ],
+      "bulletinID": "f62e7782-6db5-4e21-b831-0c58f2dc5d41",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -864,46 +722,141 @@
           ]
         }
       },
-      "bulletinID": "f62e7782-6db5-4e21-b831-0c58f2dc5d41",
-      "publicationTime": "2021-02-09T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "In some places avalanches can be released in the weakly bonded old snow and reach large size.",
-        "comment": "Avalanches can be released in the weakly bonded old snow by a single winter sport participant. This applies above approximately 2000 m, especially in areas where the snow cover is rather shallow, as well as at transitions from a shallow to a deep snowpack. Between approximately 2000 and 2400 m the avalanche prone locations are more prevalent and the danger is slightly greater. Avalanches can penetrate deep layers and reach dangerously large size. <br/> As a consequence of new snow and a strong to storm force wind, sometimes avalanche prone wind slabs formed. The avalanche prone locations are to be found in particular on near-ridge shady slopes at high altitudes and in high Alpine regions. <br/> In addition an appreciable danger of gliding avalanches exists. This applies in particular in the west and in the northwest. Areas with glide cracks are to be avoided. <br/> Experience and restraint are required."
-      },
-      "snowpackStructure": {
-        "comment": "Over a wide area 5 to 10 cm of snow, and up to 20 cm in some localities, has fallen above approximately 1000 m. <br/> The fresh wind slabs are lying on soft layers in particular on shady slopes at high altitude. <br/> Avalanche prone weak layers exist in the centre of the snowpack, especially between approximately 2000 and 2400 m in all aspects. Stability tests confirm the existence of a weak snowack."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "AT-07-05"
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         },
         {
-          "regionID": "AT-07-17"
-        },
-        {
-          "regionID": "AT-07-06"
-        },
-        {
-          "regionID": "AT-07-18"
-        },
-        {
-          "regionID": "AT-07-05"
-        },
-        {
-          "regionID": "AT-07-17"
-        },
-        {
-          "regionID": "AT-07-06"
-        },
-        {
-          "regionID": "AT-07-18"
+          "elevation": {
+            "upperBound": "2000"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2021-02-09T23:00:00+00:00",
-        "endTime": "2021-02-10T23:00:00+00:00"
+      "publicationTime": "2021-02-09T16:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "AT-07-20"
+        },
+        {
+          "regionID": "AT-07-10"
+        },
+        {
+          "regionID": "AT-07-21"
+        },
+        {
+          "regionID": "AT-07-22"
+        },
+        {
+          "regionID": "AT-07-11"
+        },
+        {
+          "regionID": "AT-07-23"
+        },
+        {
+          "regionID": "AT-07-01"
+        },
+        {
+          "regionID": "AT-07-12"
+        },
+        {
+          "regionID": "AT-07-13"
+        },
+        {
+          "regionID": "AT-07-02"
+        },
+        {
+          "regionID": "AT-07-14"
+        },
+        {
+          "regionID": "AT-07-03"
+        },
+        {
+          "regionID": "AT-07-15"
+        },
+        {
+          "regionID": "AT-07-04"
+        },
+        {
+          "regionID": "AT-07-16"
+        },
+        {
+          "regionID": "AT-07-07"
+        },
+        {
+          "regionID": "AT-07-08"
+        },
+        {
+          "regionID": "AT-07-19"
+        },
+        {
+          "regionID": "AT-07-09"
+        },
+        {
+          "regionID": "AT-07-20"
+        },
+        {
+          "regionID": "AT-07-10"
+        },
+        {
+          "regionID": "AT-07-21"
+        },
+        {
+          "regionID": "AT-07-22"
+        },
+        {
+          "regionID": "AT-07-11"
+        },
+        {
+          "regionID": "AT-07-23"
+        },
+        {
+          "regionID": "AT-07-01"
+        },
+        {
+          "regionID": "AT-07-12"
+        },
+        {
+          "regionID": "AT-07-13"
+        },
+        {
+          "regionID": "AT-07-02"
+        },
+        {
+          "regionID": "AT-07-14"
+        },
+        {
+          "regionID": "AT-07-03"
+        },
+        {
+          "regionID": "AT-07-15"
+        },
+        {
+          "regionID": "AT-07-04"
+        },
+        {
+          "regionID": "AT-07-16"
+        },
+        {
+          "regionID": "AT-07-07"
+        },
+        {
+          "regionID": "AT-07-08"
+        },
+        {
+          "regionID": "AT-07-19"
+        },
+        {
+          "regionID": "AT-07-09"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Over a wide area 5 to 10 cm of snow, and up to 20 cm in some localities, has fallen above approximately 1000 m. <br/> The fresh wind slabs are lying on soft layers in particular on shady slopes at high altitude. <br/> Avalanche prone weak layers exist in the centre of the snowpack, especially between approximately 2000 and 2400 m in all aspects. Stability tests confirm the existence of a weak snowack."
       },
       "source": {
         "provider": {
@@ -911,22 +864,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "1600"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1600"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
+          "comment": "As a consequence of new snow and wind, further wind slabs will form."
         }
       ],
+      "validTime": {
+        "endTime": "2021-02-10T23:00:00+00:00",
+        "startTime": "2021-02-09T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "As a consequence of new snow and a strong to storm force wind, sometimes avalanche prone wind slabs formed. The avalanche prone locations are to be found in particular on near-ridge shady slopes at high altitudes and in high Alpine regions. Such avalanche prone locations are clearly recognisable to the trained eye. <br/> Weak layers in the old snowpack can still be released in some places by individual winter sport participants. This applies in particular in the southwest between approximately 2000 and 2400 m on shady slopes, especially at transitions from a shallow to a deep snowpack.",
+        "highlights": "Fresh wind slabs require caution."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -940,11 +892,7 @@
           "problemType": "wind_slab"
         }
       ],
-      "tendency": [
-        {
-          "tendencyComment": "Fresh wind slabs represent the main danger."
-        }
-      ],
+      "bulletinID": "546108bb-5640-4022-bd49-ba83d949eb97",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -953,14 +901,66 @@
           ]
         }
       },
-      "bulletinID": "546108bb-5640-4022-bd49-ba83d949eb97",
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "publicationTime": "2021-02-09T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Fresh wind slabs require caution.",
-        "comment": "As a consequence of new snow and a strong to storm force wind, sometimes avalanche prone wind slabs formed. The avalanche prone locations are to be found in particular on near-ridge shady slopes at high altitudes and in high Alpine regions. Such avalanche prone locations are clearly recognisable to the trained eye. <br/> Weak layers in the old snowpack can still be released in some places by individual winter sport participants. This applies in particular in the southwest between approximately 2000 and 2400 m on shady slopes, especially at transitions from a shallow to a deep snowpack."
-      },
+      "regions": [
+        {
+          "regionID": "AT-07-05"
+        },
+        {
+          "regionID": "AT-07-17"
+        },
+        {
+          "regionID": "AT-07-06"
+        },
+        {
+          "regionID": "AT-07-18"
+        },
+        {
+          "regionID": "AT-07-05"
+        },
+        {
+          "regionID": "AT-07-17"
+        },
+        {
+          "regionID": "AT-07-06"
+        },
+        {
+          "regionID": "AT-07-18"
+        }
+      ],
       "snowpackStructure": {
         "comment": "Over a wide area 5 to 10 cm of snow, and up to 20 cm in some localities, has fallen above approximately 1000 m. The fresh wind slabs are lying on soft layers in particular on shady slopes at high altitude. <br/> Individual weak layers exist in the bottom section of the snowpack. <br/> At low altitude a little snow is lying. <br/>"
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://avalanche.report/"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "Fresh wind slabs represent the main danger."
+        }
+      ],
+      "validTime": {
+        "endTime": "2021-02-10T23:00:00+00:00",
+        "startTime": "2021-02-09T23:00:00+00:00"
       }
     }
   ]

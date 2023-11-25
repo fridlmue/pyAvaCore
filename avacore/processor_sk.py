@@ -72,7 +72,7 @@ class Processor(JsonProcessor):
                 snowpackStructure.comment = description["text"]
             elif "Krátkodobý vývoj" in description["heading"]:
                 common_bulletin.tendency = [
-                    Tendency(tendencyComment=description["text"])
+                    Tendency(comment=description["text"])
                 ]
 
         common_bulletin.avalancheActivity = avalancheActivity

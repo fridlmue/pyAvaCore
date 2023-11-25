@@ -1,6 +1,46 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "Main problem: wind-ranging fresh snow. Due to the burden of this snow on the old snowpack surface and settling impulses from solar radiation tomorrow (Friday), large-sized loosely-packed and slab avalanches could trigger naturally. These releases can be expected at all altitudes and in all aspects. Moreover, if they fracture down to deeper layers they could in isolated cases grow to large size. Exposed transportation routes and hiking trails could be placed at risk.\r\nApart from this, there is an old-snow problem. At high altitudes in all aspects there are ground-level weak layers of expansively metamorphosed (faceted) crystals which could trigger with large additional loading.",
+        "highlights": "Up to 70 cm of fresh snow in the Allg\u00e4u Alps. Large-sized avalanches can trigger naturally."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "new_snow"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "bulletinID": "RID1076RGR1",
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2021-12-09T17:00:00+00:00",
       "regions": [
         {
           "regionID": "DE-BY-11"
@@ -9,9 +49,8 @@
           "regionID": "DE-BY-12"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-09T23:00:00+00:00",
-        "endTime": "2021-12-10T23:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "Since yesterday there has been 50-70 cm of fresh snow registered, lightly bonded with the surface hoar on the snowpack surface, in some places atop an expansively metamorphosed old snowpack surface. Bonding of the layers is poor. Older drifts are covered, lie bonded atop a loosely-packed, cold layer and are still prone to triggering. At high altitudes in all aspects there are ground-level weak layers of faceted crystals."
       },
       "source": {
         "provider": {
@@ -19,12 +58,21 @@
           "website": "https://www.lawinenwarndienst-bayern.de/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
+          "comment": "Avalanche danger levels are not expected to recede in the next few days."
         }
       ],
+      "validTime": {
+        "endTime": "2021-12-10T23:00:00+00:00",
+        "startTime": "2021-12-09T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Main problem: wind-ranging fresh snow. Due to the burden of this snow on the old snowpack surface and settling impulses from solar radiation tomorrow (Friday), large-sized loosely-packed and slab avalanches could trigger naturally. In steep rocky terrain, medium sized loosely-packed avalanches could trigger naturally as a result of solar radiation\r\nIn addition, at high altitude, ground-level weak layers of expansively metamorphosed (faceted) crystals could trigger by large additional loading and in transition zones from deep to shallow snow.",
+        "highlights": "Caution: trigger-sensitive fresh snow"
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -53,22 +101,24 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": [
+      "bulletinID": "RID1076RGR2",
+      "dangerRatings": [
         {
-          "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "bulletinID": "RID1076RGR1",
       "publicationTime": "2021-12-09T17:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Up to 70 cm of fresh snow in the Allg\u00e4u Alps. Large-sized avalanches can trigger naturally.",
-        "comment": "Main problem: wind-ranging fresh snow. Due to the burden of this snow on the old snowpack surface and settling impulses from solar radiation tomorrow (Friday), large-sized loosely-packed and slab avalanches could trigger naturally. These releases can be expected at all altitudes and in all aspects. Moreover, if they fracture down to deeper layers they could in isolated cases grow to large size. Exposed transportation routes and hiking trails could be placed at risk.\r\nApart from this, there is an old-snow problem. At high altitudes in all aspects there are ground-level weak layers of expansively metamorphosed (faceted) crystals which could trigger with large additional loading."
-      },
-      "snowpackStructure": {
-        "comment": "Since yesterday there has been 50-70 cm of fresh snow registered, lightly bonded with the surface hoar on the snowpack surface, in some places atop an expansively metamorphosed old snowpack surface. Bonding of the layers is poor. Older drifts are covered, lie bonded atop a loosely-packed, cold layer and are still prone to triggering. At high altitudes in all aspects there are ground-level weak layers of faceted crystals."
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "DE-BY-30"
@@ -77,9 +127,8 @@
           "regionID": "DE-BY-20"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-09T23:00:00+00:00",
-        "endTime": "2021-12-10T23:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "Since yesterday there has been 20-40 cm of fresh snow registered.  Moderate strength NW winds have consolidated the snow slightly, deposited it atop an old snowpack surface of expansively metamorphosed (faceted) crystals or atop loose, cold intermediate layers of the fresh snow itself. Bonding of these layers is often inadequate. Older drifts are covered, lie bonded atop a loosely-packed cold layer and continue to be trigger-sensitive. At high altitudes in all aspects there are ground-level weak layers of faceted crystals. These can be triggered, particularly in places where the snow is shallow."
       },
       "source": {
         "provider": {
@@ -87,112 +136,21 @@
           "website": "https://www.lawinenwarndienst-bayern.de/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "lowerBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "treeline"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "SE",
-            "S",
-            "SW",
-            "W",
-            "NW"
-          ],
-          "problemType": "new_snow"
-        },
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "SE",
-            "S",
-            "SW",
-            "W",
-            "NW"
-          ],
-          "problemType": "persistent_weak_layers"
-        }
-      ],
       "tendency": [
         {
-          "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
+          "comment": "Avalanche danger levels are not expected to recede in the next few days."
         }
       ],
-      "bulletinID": "RID1076RGR2",
-      "publicationTime": "2021-12-09T17:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Caution: trigger-sensitive fresh snow",
-        "comment": "Main problem: wind-ranging fresh snow. Due to the burden of this snow on the old snowpack surface and settling impulses from solar radiation tomorrow (Friday), large-sized loosely-packed and slab avalanches could trigger naturally. In steep rocky terrain, medium sized loosely-packed avalanches could trigger naturally as a result of solar radiation\r\nIn addition, at high altitude, ground-level weak layers of expansively metamorphosed (faceted) crystals could trigger by large additional loading and in transition zones from deep to shallow snow."
-      },
-      "snowpackStructure": {
-        "comment": "Since yesterday there has been 20-40 cm of fresh snow registered.  Moderate strength NW winds have consolidated the snow slightly, deposited it atop an old snowpack surface of expansively metamorphosed (faceted) crystals or atop loose, cold intermediate layers of the fresh snow itself. Bonding of these layers is often inadequate. Older drifts are covered, lie bonded atop a loosely-packed cold layer and continue to be trigger-sensitive. At high altitudes in all aspects there are ground-level weak layers of faceted crystals. These can be triggered, particularly in places where the snow is shallow."
+      "validTime": {
+        "endTime": "2021-12-10T23:00:00+00:00",
+        "startTime": "2021-12-09T23:00:00+00:00"
       }
     },
     {
-      "regions": [
-        {
-          "regionID": "DE-BY-42"
-        },
-        {
-          "regionID": "DE-BY-43"
-        },
-        {
-          "regionID": "DE-BY-51"
-        },
-        {
-          "regionID": "DE-BY-52"
-        },
-        {
-          "regionID": "DE-BY-60"
-        },
-        {
-          "regionID": "DE-BY-41"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-12-09T23:00:00+00:00",
-        "endTime": "2021-12-10T23:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "Main problem: wind-ranging fresh snowdrifts. Danger zones are found in ridgeline N/E/SW steep terrain and in freshly wind-loaded gullies and bowls. Small-to-medium slab avalanches can be triggered even by minimum additional loading, i.e. the weight of one sole skier.\r\nIn addition, at high altitude ground-level weak layers in the old snow can be triggered by large additional loading, as well as transitions from deep to shallow snow.\r\nIn steep rocky terrain in case of solar radiation, naturally triggered small loose-snow avalanches can be expected.",
+        "highlights": "Caution: trigger-sensitive fresh snowdrift accumulations"
       },
-      "source": {
-        "provider": {
-          "name": "Lawinenwarnzentrale Bayern",
-          "website": "https://www.lawinenwarndienst-bayern.de/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "lowerBound": "1600"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1600"
-          },
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
       "avalancheProblems": [
         {
           "aspects": [
@@ -217,19 +175,61 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": [
+      "bulletinID": "RID1076RGR3",
+      "dangerRatings": [
         {
-          "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
+          "elevation": {
+            "lowerBound": "1600"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "upperBound": "1600"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
         }
       ],
-      "bulletinID": "RID1076RGR3",
       "publicationTime": "2021-12-09T17:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Caution: trigger-sensitive fresh snowdrift accumulations",
-        "comment": "Main problem: wind-ranging fresh snowdrifts. Danger zones are found in ridgeline N/E/SW steep terrain and in freshly wind-loaded gullies and bowls. Small-to-medium slab avalanches can be triggered even by minimum additional loading, i.e. the weight of one sole skier.\r\nIn addition, at high altitude ground-level weak layers in the old snow can be triggered by large additional loading, as well as transitions from deep to shallow snow.\r\nIn steep rocky terrain in case of solar radiation, naturally triggered small loose-snow avalanches can be expected."
-      },
+      "regions": [
+        {
+          "regionID": "DE-BY-42"
+        },
+        {
+          "regionID": "DE-BY-43"
+        },
+        {
+          "regionID": "DE-BY-51"
+        },
+        {
+          "regionID": "DE-BY-52"
+        },
+        {
+          "regionID": "DE-BY-60"
+        },
+        {
+          "regionID": "DE-BY-41"
+        }
+      ],
       "snowpackStructure": {
         "comment": "Since yesterday there has been 50-70 cm of fresh snow registered, lightly bonded with the surface hoar on the snowpack surface, in some places atop an expansively metamorphosed old snowpack surface. Bonding of the layers is poor. Older drifts are covered, lie bonded atop a loosely-packed, cold layer and are still prone to triggering. At high altitudes in all aspects there are ground-level weak layers of faceted crystals, easily triggered in places where the snow is shallow."
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarnzentrale Bayern",
+          "website": "https://www.lawinenwarndienst-bayern.de/"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "Avalanche danger levels are not expected to recede in the next few days."
+        }
+      ],
+      "validTime": {
+        "endTime": "2021-12-10T23:00:00+00:00",
+        "startTime": "2021-12-09T23:00:00+00:00"
       }
     }
   ]

@@ -12,22 +12,107 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, date
 import re
 import typing
+from typing import Optional, Any, List
+from enum import Enum
 import textwrap
 
+from .MetaData import MetaData
 
+
+class Aspect(Enum):
+    """An aspect can be defined as a set of aspects. The aspects are the expositions as in a
+    eight part (45°) segments. The allowed aspects are the four main cardinal directions and
+    the four intercardinal directions.
+    """
+
+    E = "E"
+    N = "N"
+    NE = "NE"
+    NW = "NW"
+    S = "S"
+    SE = "SE"
+    SW = "SW"
+    W = "W"
+    na = "n/a"
+
+
+class DangerRatingValue(Enum):
+    """Danger rating value, according to EAWS danger scale definition."""
+
+    considerable = "considerable"
+    high = "high"
+    low = "low"
+    moderate = "moderate"
+    no_rating = "no_rating"
+    no_snow = "no_snow"
+    very_high = "very_high"
+
+
+class ExpectedAvalancheFrequency(Enum):
+    """Expected frequency of lowest snowpack stability, according to the EAWS definition. Three
+    stage scale (few, some, many).
+    """
+
+    few = "few"
+    many = "many"
+    none = "none"
+    some = "some"
+
+
+class AvalancheProblemType(Enum):
+    """Expected avalanche problem, according to the EAWS avalanche problem definition."""
+
+    cornices = "cornices"
+    favourable_situation = "favourable_situation"
+    gliding_snow = "gliding_snow"
+    new_snow = "new_snow"
+    no_distinct_avalanche_problem = "no_distinct_avalanche_problem"
+    persistent_weak_layers = "persistent_weak_layers"
+    wet_snow = "wet_snow"
+    wind_slab = "wind_slab"
+
+
+class ExpectedSnowpackStability(Enum):
+    """Snowpack stability, according to the EAWS definition. Four stage scale (very poor, poor,
+    fair, good).
+    """
+
+    fair = "fair"
+    good = "good"
+    poor = "poor"
+    very_poor = "very_poor"
+
+
+class ValidTimePeriod(Enum):
+    """Valid time period can be used to limit the validity of an element to an earlier or later
+    period. It can be used to distinguish danger ratings or avalanche problems.
+    """
+
+    all_day = "all_day"
+    earlier = "earlier"
+    later = "later"
+
+
+class TendencyType(Enum):
+    decreasing = "decreasing"
+    increasing = "increasing"
+    steady = "steady"
+
+
+@dataclass
 class ValidTime:
-    """
-    Defines time intervall for the validity of a Bulletin
+    """Valid time defines two ISO 8601 timestamps in UTC or with time zone information.
+
+    Date and Time from and until this bulletin is valid. ISO 8601 Timestamp in UTC or with
+    time zone information.
     """
 
-    startTime: datetime
-    """valid time start"""
-    endTime: datetime
-    """valid time end"""
+    endTime: Optional[datetime] = None
+    startTime: Optional[datetime] = None
 
     def __init__(self, startTime=None, endTime=None):
         if startTime is not None:
@@ -44,42 +129,48 @@ class ValidTime:
 class Person:
     """Details on a person."""
 
-    name: typing.Optional[str] = None
-    website: typing.Optional[str] = None
+    customData: Any = None
+    metaData: Optional[MetaData] = None
+    name: Optional[str] = None
+    website: Optional[str] = None
 
 
 @dataclass
 class Provider:
-    """
-    Information about the bulletin provider. Defines the name, website and/or contactPerson
+    """Information about the bulletin provider. Defines the name, website and/or contactPerson
     (which could be the author) of the issuing AWS.
     """
 
-    name: typing.Optional[str] = None
-    website: typing.Optional[str] = None
-    contactPerson: typing.Optional[Person] = None
+    customData: Any = None
+    contactPerson: Optional[Person] = None
+    metaData: Optional[MetaData] = None
+    name: Optional[str] = None
+    website: Optional[str] = None
 
 
 @dataclass
 class Source:
-    """
-    Describes the source of the Report
+    """Details about the issuer/AWS of the bulletin.
+
+    Information about the bulletin source. Either as in a person or with a provider element
+    to specify details about the AWS.
     """
 
-    provider: typing.Optional[Provider] = None
-    """Bulletin Provider Information"""
-    contactPerson: typing.Optional[Person] = None
-    """Bulletin Author"""
+    person: Optional[Person] = None
+    provider: Optional[Provider] = None
 
 
 @dataclass
 class Elevation:
-    """
-    contains a elevation band
+    """Elevation describes either an elevation range below a certain bound (only upperBound is
+    set to a value) or above a certain bound (only lowerBound is set to a value). If both
+    values are set to a value, an elevation band is defined by this property. The value uses
+    a numeric value, not more detailed than 100m resolution. Additionally to the numeric
+    values also 'treeline' is allowed.
     """
 
-    lowerBound: typing.Optional[str] = None
-    upperBound: typing.Optional[str] = None
+    lowerBound: Optional[str] = None
+    upperBound: Optional[str] = None
 
     def auto_select(self, auto_select):
         """
@@ -102,6 +193,13 @@ class Elevation:
             elif "<" in auto_select and len(auto_select) > 1:
                 self.upperBound = re.sub(r"<(.+)", r"\1", auto_select)
 
+    @staticmethod
+    def from_dict(obj: Any) -> "Elevation":
+        assert isinstance(obj, dict)
+        lowerBound = obj.get("lowerBound")
+        upperBound = obj.get("upperBound")
+        return Elevation(lowerBound, upperBound)
+
     def toString(self):
         """
         Return a elevation as string.
@@ -117,47 +215,18 @@ class Elevation:
 
 
 @dataclass
-class MetaData:
-    """
-    MetaData for Report
-    """
-
-    customData: typing.Dict
-
-
 class DangerRating:
+    """Defines a danger rating, its elevation constraints and the valid time period. If
+    validTimePeriod or elevation are constrained for a rating, it is expected to define a
+    dangerRating for all the other cases.
     """
-    Describes the Danger Ratings
-    """
 
-    mainValue: str
-    """main value as standardized descriptive text"""
-    aspects: list
-    """list of valid aspects"""
-    elevation: Elevation
-    """valid elevation for DangerRating"""
-    terrainFeature: str
-    """textual description of terrain, where this danger rating is applicable"""
-    validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
-
-    # --- Values form EAWS Matrix ---
-
-    artificialDangerRating: str
-    """artificial danger rating from matrix as standardized descriptive text"""
-    artificialAvalancheSize: int
-    """size as value from 1 to 5"""
-    artificialAvalancheReleaseProbability: int
-    """release probability from 1 to 4"""
-    artificialHazardSiteDistribution: int
-    """hazard site distribution from 1 to 5"""
-    naturalDangerRating: str
-    """natural danger rating from matrix as standardized descriptive text"""
-    naturalAvalancheReleaseProbability: int
-    """release probability from 1 to 4"""
-    naturalHazardSiteDistribution: int
-    """natural hazard site distribution from 1 to 5"""
-    customData: typing.Dict
-    """Custom Data for special reports"""
+    mainValue: Optional[DangerRatingValue] = None
+    aspects: Optional[List[Aspect]] = None
+    elevation: Optional[Elevation] = field(default_factory=Elevation)
+    validTimePeriod: ValidTimePeriod = "all_day"
+    customData: Any = None
+    metaData: Optional[MetaData] = None
 
     # --- Values form EAWS Matrix ---
 
@@ -170,12 +239,6 @@ class DangerRating:
         "high": 4,
         "very_high": 5,
     }
-
-    def __init__(self, mainValue="", validTimePeriod="all_day") -> None:
-        self.elevation = Elevation()
-        self.customData = []
-        self.validTimePeriod = validTimePeriod
-        self.mainValue = mainValue
 
     def get_mainValue_int(self):
         """
@@ -197,64 +260,40 @@ class DangerRating:
         )
         return self
 
-    def from_json(self, dangerRating_json):
-        """
-        get danger rating from JSON
-        """
-        attributes = DangerRating.__dict__["__annotations__"]
-        for attribute in attributes:
-            if not attribute.startswith("__") and attribute in dangerRating_json:
-                if attributes[attribute] in {str, datetime, list, int}:
-                    setattr(self, attribute, dangerRating_json[attribute])
-                elif attribute == "elevation":
-                    for elevation_attribute in dangerRating_json[attribute]:
-                        setattr(
-                            self.elevation,
-                            elevation_attribute,
-                            dangerRating_json[attribute][elevation_attribute],
-                        )
+    @staticmethod
+    def from_dict(obj: typing.Dict) -> "DangerRating":
+        assert isinstance(obj, dict)
+        return DangerRating(
+            mainValue=obj.get("mainValue"),
+            aspects=obj.get("aspects"),
+            elevation=Elevation.from_dict(obj.get("elevation"))
+            if obj.get("elevation")
+            else Elevation(),
+            validTimePeriod=obj.get("validTimePeriod", "all_day"),
+            customData=obj.get("customData"),
+            metaData=obj.get("metaData"),
+        )
 
 
+@dataclass
 class AvalancheProblem:
-    """
-    Describes the Avalanche Problem
+    """Defines an avalanche problem, its time, aspect, and elevation constraints. A textual
+    detail about the affected terrain can be given in the comment field. Also, details about
+    the expected avalanche size, snowpack stability and its frequency can be defined. The
+    implied danger rating value is optional.
     """
 
-    problemType: str
-    """problem type as standardized descriptive text"""
-    elevation: Elevation
-    aspects: list
-    comment: str
-    validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
-
-    def __init__(
-        self,
-        problemType=None,
-        comment=None,
-        dangerRating_json=None,
-        dangerRating=None,
-        aspects=None,
-        elevation=None,
-    ) -> None:
-        self.aspects = []
-        self.elevation = Elevation()
-        if problemType is not None:
-            self.problemType = problemType
-        if comment is not None:
-            self.comment = comment
-        if dangerRating is not None:  # Compatibility with older parsers, deprecated
-            self.elevation = dangerRating.elevation
-            self.aspects = dangerRating.aspect
-        if (
-            dangerRating_json is not None
-        ):  # Compatibility with older parsers, deprecated
-            dangerRating = dangerRating.from_json(dangerRating_json)
-            self.elevation = dangerRating.elevation
-            self.aspects = dangerRating.aspect
-        if aspects is not None:
-            self.aspects = aspects
-        if elevation is not None:
-            self.elevation = elevation
+    customData: Any = None
+    problemType: Optional[AvalancheProblemType] = None
+    aspects: Optional[List[Aspect]] = None
+    avalancheSize: Optional[float] = None
+    comment: Optional[str] = None
+    dangerRatingValue: Optional[DangerRatingValue] = None
+    elevation: Optional[Elevation] = None
+    frequency: Optional[ExpectedAvalancheFrequency] = None
+    metaData: Optional[MetaData] = None
+    snowpackStability: Optional[ExpectedSnowpackStability] = None
+    validTimePeriod: Optional[ValidTimePeriod] = None
 
     def add_problemType(self, problem_type_text):
         """
@@ -287,104 +326,118 @@ class AvalancheProblem:
         return self
 
 
+@dataclass
 class Tendency:
-    """
-    Describes the Tendency
+    """Texts element with highlight and comment for the avalanche activity.
+
+    Texts contains a highlight and a comment string, where highlights could also be described
+    as a kind of headline for the longer comment. For text-formatting the HTML-Tags <br/> for
+    a new line, (<ul>,<ul/>) and (<li>,<li/>) for lists, (<h1>,<h1/>) to (<h6>,<h6/>) for
+    headings and (<b>,</b>) for a bold text are allowed.
+
+    Texts element with highlight and comment for details on the snowpack structure.
+
+    Texts element with highlight and comment for travel advisory.
+
+    Texts element with highlight and comment for weather forecast information.
+
+    Texts element with highlight and comment for weather review information.
+
+    Describes the expected tendency of the development of the avalanche situation for a
+    defined time period.
     """
 
-    tendencyType: str
-    """string contains decreasing, steady or increasing"""
-    validTime: ValidTime
-    """valid time interval for tendency"""
-    tendencyComment: str
-    """tendency comment"""
-
-    def __init__(
-        self, tendencyType=None, validTime_json=None, tendencyComment=None
-    ) -> None:
-        self.validTime = ValidTime()
-        if validTime_json is not None and not len(validTime_json) == 0:
-            self.validTime = ValidTime(
-                validTime_json["startTime"], validTime_json["endTime"]
-            )
-        if tendencyType is not None:
-            self.tendencyType = tendencyType
-        if tendencyComment is not None:
-            self.tendencyComment = tendencyComment
+    customData: Any = None
+    comment: Optional[str] = None
+    highlights: Optional[str] = None
+    metaData: Optional[MetaData] = None
+    tendencyType: Optional[TendencyType] = None
+    validTime: Optional[ValidTime] = None
 
 
 @dataclass
 class Region:
-    """
-    Describes a Region
+    """Region element describes a (micro) region. The regionID follows the EAWS schema. It is
+    recommended to have the region shape's files with the same IDs in
+    gitlab.com/eaws/eaws-regions. Additionally, the region name can be added.
     """
 
-    regionID: str
-    name: typing.Optional[str] = None
+    regionID: Optional[str] = None
+    name: Optional[str] = None
+    metaData: Optional[MetaData] = None
+    customData: Any = None
 
 
 @dataclass
 class Texts:
+    """Texts element with highlight and comment for the avalanche activity.
+
+    Texts contains a highlight and a comment string, where highlights could also be described
+    as a kind of headline for the longer comment. For text-formatting the HTML-Tags <br/> for
+    a new line, (<ul>,<ul/>) and (<li>,<li/>) for lists, (<h1>,<h1/>) to (<h6>,<h6/>) for
+    headings and (<b>,</b>) for a bold text are allowed.
+
+    Texts element with highlight and comment for details on the snowpack structure.
+
+    Texts element with highlight and comment for travel advisory.
+
+    Texts element with highlight and comment for weather forecast information.
+
+    Texts element with highlight and comment for weather review information.
     """
-    Describes Texts in the Bulletin with highlights and comment
-    """
 
-    highlights: typing.Optional[str] = None
-    comment: typing.Optional[str] = None
+    comment: Optional[str] = None
+    highlights: Optional[str] = None
 
 
+@dataclass
 class AvaBulletin:
+    """Avalanche Bulletin valid for a given set of regions."""
+
+    avalancheActivity: Optional[Texts] = None
+    """Collection of Avalanche Problem elements for this bulletin."""
+    avalancheProblems: Optional[List[AvalancheProblem]] = field(default_factory=list)
+    """Unique ID for the bulletin."""
+    bulletinID: Optional[str] = None
+    """Collection of Danger Rating elements for this bulletin."""
+    customData: Any = None
+    """Texts element with highlight and comment for the avalanche activity."""
+    dangerRatings: Optional[List[DangerRating]] = field(default_factory=list)
+    """Contains an optional short text to highlight an exceptionally dangerous situation."""
+    highlights: Optional[str] = None
+    """Two-letter language code (ISO 639-1)."""
+    lang: Optional[str] = None
+    metaData: Optional[MetaData] = None
+    """Time and date when the next bulletin will be published by the AWS to the Public. ISO 8601
+    timestamp in UTC or with time zone information.
     """
-    Class for the AvaBulletin
-    Follows partly CAAMLv6 caaml:BulletinType
+    nextUpdate: Optional[datetime] = None
+    """Time and date when the bulletin was issued by the AWS to the Public. ISO 8601 timestamp
+    in UTC or with time zone information.
     """
-
-    bulletinID: str
-    """ID of the Bulletin"""
-    reportLang: str
-    """language of the Bulletin"""
-    regions: typing.List[Region]
-    """list of Regions, where this Report is valid"""
-    publicationTime: datetime
-    """Date of Bulletin"""
-    validTime: ValidTime
-    """Valid TimeInterval of the Bulletin"""
-    source: Source
-
-    """Details about the Bulletin Provider"""
-    dangerRatings: typing.List[DangerRating]
-    """avalanche danger rating"""
-    avalancheProblems: typing.List[AvalancheProblem]
-    """avalanche problem"""
-    tendency: typing.List[Tendency]
-    """tendency of the av situation"""
-    highlights: str
-    """very important note in the report"""
-    weatherForecast: Texts
-    """weather forecast"""
-    weatherReview: Texts
-    """weather review"""
-    avalancheActivity: Texts
-    """avalanche activity"""
-    snowpackStructure: Texts
-    """avalanche structure """
-    travelAdvisory: Texts
-    """travel advisory"""
-    metaData: MetaData
-
-    customData: typing.Dict
-
-    predecessor_id: str
-    """not part of CAAMLv6 (yet)"""
-
-    def __init__(self):
-        self.regions = []
-        self.validTime = ValidTime()
-        self.source = Source()
-        self.dangerRatings = []
-        self.avalancheProblems = []
-        self.tendency = []
-        self.customData = []
+    publicationTime: Optional[datetime] = None
+    """Collection of region elements for which this bulletin is valid."""
+    regions: Optional[List[Region]] = field(default_factory=list)
+    """Texts element with highlight and comment for details on the snowpack structure."""
+    snowpackStructure: Optional[Texts] = None
+    """Details about the issuer/AWS of the bulletin."""
+    source: Optional[Source] = field(default_factory=Source)
+    """Tendency element for a detailed description of the expected avalanche situation tendency
+    after the bulletin's period of validity.
+    """
+    tendency: Optional[List[Tendency]] = field(default_factory=list)
+    """Texts element with highlight and comment for travel advisory."""
+    travelAdvisory: Optional[Texts] = None
+    """Flag if bulletin is unscheduled or not."""
+    unscheduled: Optional[bool] = None
+    """Date and Time from and until this bulletin is valid. ISO 8601 Timestamp in UTC or with
+    time zone information.
+    """
+    validTime: Optional[ValidTime] = field(default_factory=ValidTime)
+    """Texts element with highlight and comment for weather forecast information."""
+    weatherForecast: Optional[Texts] = None
+    """Texts element with highlight and comment for weather review information."""
+    weatherReview: Optional[Texts] = None
 
     def get_region_list(self):
         """
@@ -416,13 +469,12 @@ class AvaBulletin:
                 elif attribute == "regions":
                     for region in bulletin_json[attribute]:
                         self.regions.append(
-                            Region(region.get("regionID"), region.get("name"))
+                            Region(region.get("regionID"), name=region.get("name"))
                         )
 
                 elif attribute == "dangerRatings":
                     for dangerRating_json in bulletin_json[attribute]:
-                        dangerRating = DangerRating()
-                        dangerRating.from_json(dangerRating_json)
+                        dangerRating = DangerRating.from_dict(dangerRating_json)
                         self.dangerRatings.append(dangerRating)
 
                 elif attribute == "avalancheProblems":

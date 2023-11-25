@@ -113,7 +113,7 @@ class Processor(JsonProcessor):
             avalancheActivity.highlights = properties["assessment_title"]
             avalancheActivity.comment = properties["assessment_content"]
             snowpackStructure.comment = properties["size_and_spread"]
-            report.tendency = [Tendency(tendencyComment=properties["trend_label"])]
+            report.tendency = [Tendency(comment=properties["trend_label"])]
             travelAdvisory.comment = properties["recommendation"]
 
             report.weatherForecast = weatherForecast

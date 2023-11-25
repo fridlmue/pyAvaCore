@@ -133,7 +133,7 @@ class Processor(JsonProcessor):
             waek_layers = "\n" + data[0]["CurrentWeaklayers"]
         if data[current]["SnowSurface"] is not None:
             snowpackStructure.comment = data[current]["SnowSurface"] + waek_layers
-        report.tendency = [Tendency(tendencyComment=data[current + 1]["MainText"])]
+        report.tendency = [Tendency(comment=data[current + 1]["MainText"])]
 
         report.weatherForecast = weatherForecast
         report.avalancheActivity = avalancheActivity

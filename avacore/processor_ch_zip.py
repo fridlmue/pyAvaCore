@@ -227,7 +227,7 @@ class Processor(AbstractProcessor):
                 )
             if outlook:
                 common_report.tendency = [
-                    Tendency(tendencyComment=self.clean_html_string(outlook))
+                    Tendency(comment=self.clean_html_string(outlook))
                 ]
 
         common_report.weatherForecast = weatherForecast

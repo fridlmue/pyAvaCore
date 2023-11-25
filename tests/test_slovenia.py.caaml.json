@@ -1,14 +1,64 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W"
+          ],
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "problemType": "wind_slab"
+        }
+      ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-03-19T07:47:19+00:00",
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-19T00:00:00+01:00",
-        "endTime": "2021-03-19T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -16,36 +66,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-19T23:59:59.999000+01:00",
+        "startTime": "2021-03-19T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -61,33 +99,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-19T00:00:00+01:00",
-        "endTime": "2021-03-19T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -95,36 +145,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-19T23:59:59.999000+01:00",
+        "startTime": "2021-03-19T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -140,33 +178,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-19T00:00:00+01:00",
-        "endTime": "2021-03-19T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -174,36 +224,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-19T23:59:59.999000+01:00",
+        "startTime": "2021-03-19T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -219,33 +257,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-19T00:00:00+01:00",
-        "endTime": "2021-03-19T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -253,36 +303,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-19T23:59:59.999000+01:00",
+        "startTime": "2021-03-19T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -298,33 +336,25 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI5"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-19T00:00:00+01:00",
-        "endTime": "2021-03-19T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -332,16 +362,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-19T23:59:59.999000+01:00",
+        "startTime": "2021-03-19T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -357,33 +395,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-20T00:00:00+01:00",
-        "endTime": "2021-03-20T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -391,36 +441,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-20T23:59:59.999000+01:00",
+        "startTime": "2021-03-20T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -436,33 +474,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-20T00:00:00+01:00",
-        "endTime": "2021-03-20T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -470,36 +520,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-20T23:59:59.999000+01:00",
+        "startTime": "2021-03-20T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -515,33 +553,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-20T00:00:00+01:00",
-        "endTime": "2021-03-20T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -549,36 +599,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-20T23:59:59.999000+01:00",
+        "startTime": "2021-03-20T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -594,33 +632,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-20T00:00:00+01:00",
-        "endTime": "2021-03-20T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -628,36 +678,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-20T23:59:59.999000+01:00",
+        "startTime": "2021-03-20T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -673,33 +711,25 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI5"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-20T00:00:00+01:00",
-        "endTime": "2021-03-20T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -707,16 +737,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-20T23:59:59.999000+01:00",
+        "startTime": "2021-03-20T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -732,33 +770,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-21T00:00:00+01:00",
-        "endTime": "2021-03-21T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -766,36 +816,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-21T23:59:59.999000+01:00",
+        "startTime": "2021-03-21T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -811,33 +849,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-21T00:00:00+01:00",
-        "endTime": "2021-03-21T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -845,36 +895,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-21T23:59:59.999000+01:00",
+        "startTime": "2021-03-21T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -890,33 +928,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-21T00:00:00+01:00",
-        "endTime": "2021-03-21T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -924,36 +974,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-21T23:59:59.999000+01:00",
+        "startTime": "2021-03-21T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -969,33 +1007,45 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-21T00:00:00+01:00",
-        "endTime": "2021-03-21T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1003,36 +1053,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-21T23:59:59.999000+01:00",
+        "startTime": "2021-03-21T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1048,33 +1086,25 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI5"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-21T00:00:00+01:00",
-        "endTime": "2021-03-21T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1082,16 +1112,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-21T23:59:59.999000+01:00",
+        "startTime": "2021-03-21T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1107,33 +1145,31 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-22T00:00:00+01:00",
-        "endTime": "2021-03-22T12:00:00+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1141,22 +1177,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-22T12:00:00+01:00",
+        "startTime": "2021-03-22T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1172,33 +1210,31 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-22T00:00:00+01:00",
-        "endTime": "2021-03-22T12:00:00+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1206,22 +1242,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-22T12:00:00+01:00",
+        "startTime": "2021-03-22T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1237,33 +1275,31 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-22T00:00:00+01:00",
-        "endTime": "2021-03-22T12:00:00+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1271,22 +1307,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-22T12:00:00+01:00",
+        "startTime": "2021-03-22T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1302,98 +1340,31 @@
           "problemType": "wind_slab"
         }
       ],
-      "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "SI4"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-03-22T00:00:00+01:00",
-        "endTime": "2021-03-22T12:00:00+01:00"
-      },
-      "source": {
-        "provider": {
-          "name": "Avalanche Warning Service Slovenia",
-          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
-        }
-      },
       "dangerRatings": [
         {
           "elevation": {
             "upperBound": "1800"
           },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
         },
         {
           "elevation": {
             "lowerBound": "1800"
           },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "E",
-            "SE",
-            "S",
-            "SW",
-            "W"
-          ],
-          "elevation": {
-            "lowerBound": "1700"
-          },
-          "problemType": "wind_slab"
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
         }
       ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
-      }
-    },
-    {
       "regions": [
         {
-          "regionID": "SI5"
+          "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2021-03-22T00:00:00+01:00",
-        "endTime": "2021-03-22T12:00:00+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1401,12 +1372,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-22T12:00:00+01:00",
+        "startTime": "2021-03-22T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1422,22 +1405,39 @@
           "problemType": "wind_slab"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        }
+      ],
       "publicationTime": "2021-03-19T07:47:19+00:00",
-      "weatherForecast": {
-        "highlights": "",
-        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
+      "regions": [
+        {
+          "regionID": "SI5"
+        }
+      ],
       "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            "
+        "comment": "\n                Sne\u017ene razmere so krajevno zelo razli\u010dne. V zadnjih dneh je ob manj\u0161ih plohah zapadlo do 5 cm zelo rahlega snega, ki ga je prena\u0161al veter. Sne\u017ena odeja je na vetru izpostavljenih legah trda in deloma poledenela. V zati\u0161nih pa je na trdi podlagi plast suhega snega, ki je ve\u010dinoma debela od 10 do 20 cm. Zaradi pogostega vetra je precej zametov in klo\u017e, ki so predvsem na ju\u017enih staneh pobo\u010dij. Zaradi nizke temperature se sneg na prisojnih pobo\u010djih \u010dez dan oju\u017ei predvsem v sredogorju, v visokogorju pa precej manj in ostaja \u010dez dan ve\u010dinoma trd. Nekaj skorje je na novem snegu predvsem zaradi vetra, v sredogorju pa tudi zaradi vpliva sonca.\n                Sne\u017ene razmere se zaradi hladnega vremena ne bodo prav dosti spreminjale. Ostala bo velika nevarnost zdrsa. Na mestih z napihanim snegom bo \u0161e vedno nevarno, da spro\u017eite plaz klo\u017eastega snega. V za\u010detku prihodnjega tedna se bodo obmo\u010dja z napihanim snegom nekoliko pove\u010dala.\n            ",
+        "highlights": ""
+      },
+      "source": {
+        "provider": {
+          "name": "Avalanche Warning Service Slovenia",
+          "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
+        }
       },
       "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            "
+        "comment": "\n                Nevarnost sne\u017enih plazov je nad okoli 1700 m ve\u010dinoma ZMERNA, 2. stopnje, ni\u017eje pa MAJHNA, 1. stopnje. Na mestih z napihanim snegom lahko \u017ee ob manj\u0161i obremenitvi spro\u017eite plaz suhega klo\u017eastega snega. Na spihanih obmo\u010djih ter na grebenih je velika nevarnost zdrsa.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2021-03-22T12:00:00+01:00",
+        "startTime": "2021-03-22T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo dopoldne delno jasno, popoldne pa spremenljivo obla\u010dno, nekateri vrhovi bodo ob\u010dasno v oblakih. Predvsem sredi dneva in popoldne bodo nastale posamezne sne\u017ene plohe, zapade lahko nekaj centimetrov novega snega. Pihal bo \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -6, na 2500 m pa okoli -14 \u00b0C.\nV soboto bo prete\u017eno obla\u010dno, ponekod tudi megleno. Pojavljale se bodo krajevne padavine, deloma plohe, ki jih bo ve\u010d v popoldanskem \u010dasu. Predvidoma bo zapadlo do 5 cm novega snega. Pihal bo pove\u010dini \u0161ibak veter severnih smeri. Temperatura na 1500 m bo okoli -7, na 2500 m pa okoli -16 \u00b0C.\nV nedeljo bo suho vreme. Sprva bo prete\u017eno jasno, sredi dneva bo obla\u010dnost od severozahoda nara\u0161\u010dala. Vrhovi v visokogorju bodo ob\u010dasno tudi v oblakih. Krepiti se bo za\u010del veter severne smeri. Zjutraj bo \u0161e mrzlo, sredi dneva pa se bo postopno nekoliko ogrelo, na 1500 m bo okoli -6, na 2500 m pa okoli -12 \u00b0C. \nTudi v za\u010detku prihodnjega tedna bo suho vreme s spremenljivo obla\u010dnostjo. \u0160e bo vetrovno, pihal bo okrepljen severnik.\n            ",
+        "highlights": ""
       }
     }
   ]
