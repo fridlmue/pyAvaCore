@@ -80,7 +80,7 @@
             "NW"
           ],
           "problemType": "wind_slab",
-          "terrainFeature": "an Umfang und Gr\u00f6\u00dfe zunehmend in Rinnen, Mulden und hinter Gel\u00e4ndekanten"
+          "comment": "an Umfang und Gr\u00f6\u00dfe zunehmend in Rinnen, Mulden und hinter Gel\u00e4ndekanten"
         },
         {
           "aspects": [
@@ -94,15 +94,17 @@
             "NW"
           ],
           "problemType": "new_snow",
-          "terrainFeature": "kritische Neuschneemenge im Tagesverlauf"
+          "comment": "kritische Neuschneemenge im Tagesverlauf"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Bis Dienstagmorgen sind  gro\u00dfe Neuschneemengen zu erwarten. Die Lawinengefahr steigt somit in der Nachstunden und auf Morgen auf Stufe 4 an. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Bis Dienstagmorgen sind  gro\u00dfe Neuschneemengen zu erwarten. Die Lawinengefahr steigt somit in der Nachstunden und auf Morgen auf Stufe 4 an. "
+        }
+      ],
       "bulletinID": "RID1535RGR1",
       "publicationTime": "2022-01-31T06:30:25+00:00",
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Markante Kaltfront mit Sturm. Gegen Mittag setzt Schneefall ein. Dieser f\u00e4llt zum Ende des Tages teilweise intensiv aus. In den n\u00f6rdlichen Regionen fallen bis Morgen fr\u00fch 60 bis 70 cm, in den anderen Gebieten bis 50 cm Neuschnee. Temperatur in 2000 m: um -4 Grad. Der H\u00f6henwind weht stark bis st\u00fcrmisch aus W bis NW."
       },
       "avalancheActivity": {

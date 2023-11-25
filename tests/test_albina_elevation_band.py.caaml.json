@@ -231,9 +231,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Up to 2400 m rain will fall on Thursday in some regions, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Up to 2400 m rain will fall on Thursday in some regions, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -447,9 +449,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Up to 2200 m and above rain will fall on Thursday in the north and in the northeast, this applies in particular until the early morning. As a consequence of the ceasing of precipitation there will be a decrease in the danger of wet and gliding avalanches. As a consequence of solar radiation loose snow avalanches are to be expected. The danger of dry avalanches will persist."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Up to 2200 m and above rain will fall on Thursday in the north and in the northeast, this applies in particular until the early morning. As a consequence of the ceasing of precipitation there will be a decrease in the danger of wet and gliding avalanches. As a consequence of solar radiation loose snow avalanches are to be expected. The danger of dry avalanches will persist."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -528,9 +532,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Up to 2400 m rain will fall on Thursday, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Up to 2400 m rain will fall on Thursday, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -666,9 +672,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -876,9 +884,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -1031,9 +1041,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Over a wide area further warming: Gradual increase in danger of wet and gliding avalanches in particular on shady slopes."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Over a wide area further warming: Gradual increase in danger of wet and gliding avalanches in particular on shady slopes."
+        }
+      ],
       "bulletinID": "3c30d092-4b12-4e5f-8292-dcc41953c9ce",
       "publicationTime": "2021-12-28T16:00:00+00:00",
       "avalancheActivity": {

@@ -112,9 +112,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -263,9 +265,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists. As a consequence of falling temperatures the snowpack will consolidate during the next few days, in particular below approximately 2000 m in all regions."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists. As a consequence of falling temperatures the snowpack will consolidate during the next few days, in particular below approximately 2000 m in all regions."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -473,9 +477,11 @@
           "problemType": "gliding_snow"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Slight decrease in danger of dry avalanches as a consequence of the ceasing of precipitation. Until the temperature falls at any time small and medium-sized moist and wet avalanches are possible. This applies in particular below approximately 2000 m, as well as on very steep sunny slopes."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Slight decrease in danger of dry avalanches as a consequence of the ceasing of precipitation. Until the temperature falls at any time small and medium-sized moist and wet avalanches are possible. This applies in particular below approximately 2000 m, as well as on very steep sunny slopes."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -648,9 +654,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Fresh wind slabs require caution. In addition a latent danger of gliding avalanches exists."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -843,9 +851,11 @@
           "problemType": "gliding_snow"
         }
       ],
-      "tendency": {
-        "tendencyComment": "As a consequence of new snow and wind, further wind slabs will form."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "As a consequence of new snow and wind, further wind slabs will form."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -930,9 +940,11 @@
           "problemType": "wind_slab"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Fresh wind slabs represent the main danger."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Fresh wind slabs represent the main danger."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [

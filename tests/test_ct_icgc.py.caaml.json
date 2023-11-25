@@ -34,9 +34,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Divendres predominar\u00e0 el problema de neu ventada, tot i que de forma local i amb possibles allaus de mida petita. Perill EN LLEU AUGMENT. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Divendres predominar\u00e0 el problema de neu ventada, tot i que de forma local i amb possibles allaus de mida petita. Perill EN LLEU AUGMENT. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-L-04_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {
@@ -78,9 +80,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Les condicions d'estabilitat seran similars, amb facetes enterrades que podrien donar lloc a allaus accidentals de forma molt local. Perill ESTACIONARI. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Les condicions d'estabilitat seran similars, amb facetes enterrades que podrien donar lloc a allaus accidentals de forma molt local. Perill ESTACIONARI. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-RF_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {
@@ -122,9 +126,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Hi haur\u00e0 pocs canvis en les condicions d'estabilitat del mantell, amb facetes enterrades que podrien donar lloc a allaus accidentals de forma molt local. Perill ESTACIONARI. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Hi haur\u00e0 pocs canvis en les condicions d'estabilitat del mantell, amb facetes enterrades que podrien donar lloc a allaus accidentals de forma molt local. Perill ESTACIONARI. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-PA_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {
@@ -166,9 +172,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "No hi haur\u00e0 canvis importants en l'estabilitat del mantell. Perill ESTACIONARI. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "No hi haur\u00e0 canvis importants en l'estabilitat del mantell. Perill ESTACIONARI. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-PP_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {
@@ -206,9 +214,11 @@
           "problemType": "favourable_situation"
         }
       ],
-      "tendency": {
-        "tendencyComment": "No s'esperen gaires canvis en l'estabilitat del mantell nival. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "No s'esperen gaires canvis en l'estabilitat del mantell nival. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-VN_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {
@@ -246,9 +256,11 @@
           "problemType": "favourable_situation"
         }
       ],
-      "tendency": {
-        "tendencyComment": "No s'esperen gaires canvis en l'estabilitat del mantell nival. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "No s'esperen gaires canvis en l'estabilitat del mantell nival. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-PR_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {
@@ -290,9 +302,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "No es preveuen canvis significatius en l'estabilitat del mantell. Perill ESTACIONARI. "
-      },
+      "tendency": [
+        {
+          "tendencyComment": "No es preveuen canvis significatius en l'estabilitat del mantell. Perill ESTACIONARI. "
+        }
+      ],
       "publicationTime": "2022-01-19T00:00:00+01:00",
       "bulletinID": "ES-CT-TF_2022-01-19 00:00:00+01:00",
       "avalancheActivity": {

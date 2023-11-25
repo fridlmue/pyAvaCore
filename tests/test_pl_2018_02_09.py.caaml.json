@@ -30,9 +30,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "no-change"
-      }
+      "tendency": [
+        {
+          "tendencyComment": "no-change"
+        }
+      ]
     }
   ]
 }

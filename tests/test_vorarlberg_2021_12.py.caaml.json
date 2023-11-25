@@ -80,7 +80,7 @@
             "NW"
           ],
           "problemType": "wind_slab",
-          "terrainFeature": "Neu- und Triebschnee sind st\u00f6ranf\u00e4llig. Steilgel\u00e4nde, hinter Gel\u00e4ndekanten und eingewehte Rinnen und Mulden"
+          "comment": "Neu- und Triebschnee sind st\u00f6ranf\u00e4llig. Steilgel\u00e4nde, hinter Gel\u00e4ndekanten und eingewehte Rinnen und Mulden"
         },
         {
           "aspects": [
@@ -94,15 +94,17 @@
             "NW"
           ],
           "problemType": "wet_snow",
-          "terrainFeature": "mit milden Temperaturen und Regeneintrag nimmt die Gefahr von Gleit- und Nassschneelawinen im Tagesverlauf zu."
+          "comment": "mit milden Temperaturen und Regeneintrag nimmt die Gefahr von Gleit- und Nassschneelawinen im Tagesverlauf zu."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Mit der Warmfront steigt die Schneefallgrenze in der Nacht auf Donnerstag bis auf 2500m, somit ist nur in Hochlagen mit ergiebigeren Neuschneemengen zu rechnen. Die Lawinensituation bleibt weiter angespannt."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Mit der Warmfront steigt die Schneefallgrenze in der Nacht auf Donnerstag bis auf 2500m, somit ist nur in Hochlagen mit ergiebigeren Neuschneemengen zu rechnen. Die Lawinensituation bleibt weiter angespannt."
+        }
+      ],
       "bulletinID": "RID1242RGR1",
       "publicationTime": "2021-12-29T06:30:52+00:00",
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Vormittags vor\u00fcbergehend trocken, aber nur wenige Auflockerungen. Ab Mittag wieder Eintr\u00fcbung, zunehmend neblig, es kommt langsam ergiebiger Niederschlag auf. Dabei schneit es im Hochgebirge, bis etwa 2000m hinauf ist es aber Regen. Temperatur in 2000 m: von -3 auf +3 Grad steigend, H\u00f6henwind: stark bis st\u00fcrmisch erst aus West, sp\u00e4ter aus Nordwest."
       },
       "avalancheActivity": {

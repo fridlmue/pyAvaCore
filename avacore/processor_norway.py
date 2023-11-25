@@ -24,6 +24,7 @@ from avacore.avabulletin import (
     AvalancheProblem,
     Elevation,
     Region,
+    Tendency,
     Texts,
 )
 from avacore.avabulletins import Bulletins
@@ -31,7 +32,6 @@ from avacore.processor import JsonProcessor
 
 
 class Processor(JsonProcessor):
-
     fetch_time_dependant = True
 
     def process_bulletin(self, region_id) -> Bulletins:
@@ -62,7 +62,6 @@ class Processor(JsonProcessor):
         return all_reports
 
     def parse_json(self, region_id, data) -> Bulletins:
-
         reports = Bulletins()
         report = AvaBulletin()
 
@@ -123,7 +122,7 @@ class Processor(JsonProcessor):
                     problem.problemType = problem_type
                     report.avalancheProblems.append(problem)
 
-        wxSynopsis = Texts()
+        weatherForecast = Texts()
         avalancheActivity = Texts()
         snowpackStructure = Texts()
 
@@ -134,9 +133,9 @@ class Processor(JsonProcessor):
             waek_layers = "\n" + data[0]["CurrentWeaklayers"]
         if data[current]["SnowSurface"] is not None:
             snowpackStructure.comment = data[current]["SnowSurface"] + waek_layers
-        report.tendency.tendencyComment = data[current + 1]["MainText"]
+        report.tendency = [Tendency(tendencyComment=data[current + 1]["MainText"])]
 
-        report.wxSynopsis = wxSynopsis
+        report.weatherForecast = weatherForecast
         report.avalancheActivity = avalancheActivity
         report.snowpackStructure = snowpackStructure
 

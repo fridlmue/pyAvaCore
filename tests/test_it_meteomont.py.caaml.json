@@ -1114,9 +1114,6 @@
           "mainValue": "no_snow"
         }
       ],
-      "avalancheProblems": [
-        {}
-      ],
       "customData": {
         "MeteoMont": {
           "snowDepth": "0",
@@ -1551,9 +1548,6 @@
           "validTimePeriod": "all_day",
           "mainValue": "no_snow"
         }
-      ],
-      "avalancheProblems": [
-        {}
       ],
       "customData": {
         "MeteoMont": {
@@ -2757,9 +2751,6 @@
           "mainValue": "no_snow"
         }
       ],
-      "avalancheProblems": [
-        {}
-      ],
       "customData": {
         "MeteoMont": {
           "snowDepth": null,
@@ -4402,9 +4393,6 @@
           "mainValue": "no_snow"
         }
       ],
-      "avalancheProblems": [
-        {}
-      ],
       "customData": {
         "MeteoMont": {
           "snowDepth": null,
@@ -6046,9 +6034,6 @@
           "validTimePeriod": "all_day",
           "mainValue": "no_snow"
         }
-      ],
-      "avalancheProblems": [
-        {}
       ],
       "customData": {
         "MeteoMont": {

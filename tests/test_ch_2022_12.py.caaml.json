@@ -121,9 +121,11 @@
           "mainValue": "considerable"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
+        }
+      ],
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -142,7 +144,7 @@
       "snowpackStructure": {
         "comment": "At elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground. On shady slopes above approximately 2200 to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Skies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime. \nFresh snow -Temperature At midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.Wind Winds were blowing at light to moderate strength from southwesterly to westerly directions.:\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest. \nFresh snow -Temperature Temperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.Wind Winds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.:"
       },
       "bulletinID": "52492000"
@@ -298,9 +300,11 @@
           "mainValue": "moderate"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
+        }
+      ],
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -319,7 +323,7 @@
       "snowpackStructure": {
         "comment": "At elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground. On shady slopes above approximately 2200 to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Skies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime. \nFresh snow -Temperature At midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.Wind Winds were blowing at light to moderate strength from southwesterly to westerly directions.:\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest. \nFresh snow -Temperature Temperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.Wind Winds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.:"
       },
       "bulletinID": "52492001"
@@ -397,9 +401,11 @@
           "mainValue": "moderate"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
+        }
+      ],
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -418,7 +424,7 @@
       "snowpackStructure": {
         "comment": "At elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground. On shady slopes above approximately 2200 to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Skies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime. \nFresh snow -Temperature At midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.Wind Winds were blowing at light to moderate strength from southwesterly to westerly directions.:\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest. \nFresh snow -Temperature Temperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.Wind Winds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.:"
       },
       "bulletinID": "52492002"
@@ -472,9 +478,11 @@
           "mainValue": "moderate"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
+        }
+      ],
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -493,7 +501,7 @@
       "snowpackStructure": {
         "comment": "At elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground. On shady slopes above approximately 2200 to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Skies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime. \nFresh snow -Temperature At midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.Wind Winds were blowing at light to moderate strength from southwesterly to westerly directions.:\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest. \nFresh snow -Temperature Temperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.Wind Winds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.:"
       },
       "bulletinID": "52492003"
@@ -523,9 +531,11 @@
           "mainValue": "moderate"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
+        }
+      ],
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -544,7 +554,7 @@
       "snowpackStructure": {
         "comment": "At elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground. On shady slopes above approximately 2200 to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Skies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime. \nFresh snow -Temperature At midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.Wind Winds were blowing at light to moderate strength from southwesterly to westerly directions.:\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest. \nFresh snow -Temperature Temperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.Wind Winds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.:"
       },
       "bulletinID": "52492004"
@@ -628,9 +638,11 @@
           "mainValue": "low"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Outlook through Saturday, 10.12.2022 <!----> \nFriday On Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity. <br/> The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.Saturday Skies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions. <br/> Avalanche danger levels are not expected to change significantly.:"
+        }
+      ],
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -646,7 +658,7 @@
       "snowpackStructure": {
         "comment": "At elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground. On shady slopes above approximately 2200 to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Skies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime. \nFresh snow -Temperature At midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.Wind Winds were blowing at light to moderate strength from southwesterly to westerly directions.:\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest. \nFresh snow -Temperature Temperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.Wind Winds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.:"
       },
       "bulletinID": "52492005"

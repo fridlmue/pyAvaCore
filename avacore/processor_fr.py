@@ -107,11 +107,9 @@ class Processor(XmlProcessor):
         am_danger_ratings = []
 
         for cartoucherisque in root.iter(tag="CARTOUCHERISQUE"):
-
             danger_rating_pre = DangerRating()
             aspects = []
             for pente in cartoucherisque.iter(tag="PENTE"):
-
                 if pente.get("N") == "true":
                     aspects.append("N")
                 if pente.get("NE") == "true":
@@ -159,11 +157,9 @@ class Processor(XmlProcessor):
         pm_available = False
 
         for cartoucherisque in root.iter(tag="CARTOUCHERISQUE"):
-
             danger_rating_pre = DangerRating()
             aspects = []
             for pente in cartoucherisque.iter(tag="PENTE"):
-
                 if pente.get("N") == "true":
                     aspects.append("N")
                 if pente.get("NE") == "true":

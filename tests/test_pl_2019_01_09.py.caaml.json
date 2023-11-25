@@ -30,9 +30,11 @@
           "problemType": "wind_slab"
         }
       ],
-      "tendency": {
-        "tendencyComment": "no-change"
-      }
+      "tendency": [
+        {
+          "tendencyComment": "no-change"
+        }
+      ]
     }
   ]
 }

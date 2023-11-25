@@ -223,9 +223,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "The conditions remain spring-like. Increase in danger of wet avalanches in the course of the day."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "The conditions remain spring-like. Increase in danger of wet avalanches in the course of the day."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -298,9 +300,11 @@
           "mainValue": "low"
         }
       ],
-      "tendency": {
-        "tendencyComment": "The conditions remain spring-like."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "The conditions remain spring-like."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [

@@ -34,6 +34,7 @@ from avacore.avabulletin import (
     DangerRating,
     AvalancheProblem,
     Region,
+    Tendency,
     Texts,
 )
 from avacore.processor import Processor as AbstractProcessor
@@ -205,7 +206,7 @@ class Processor(AbstractProcessor):
         text = text.split('<div class="footer-meteo-mobile')[0]
         segments = text.split("popover-flag")
 
-        wxSynopsis = Texts()
+        weatherForecast = Texts()
 
         for segment in segments[1:]:
             outlook = None
@@ -219,15 +220,17 @@ class Processor(AbstractProcessor):
                     comment=segment.split("popover-snowpack ")[1]
                 )
             if "popover-actual-weather" in segment:
-                wxSynopsis.comment = segment.split("popover-actual-weather ")[1]
+                weatherForecast.comment = segment.split("popover-actual-weather ")[1]
             if "popover-weather-forecast" in segment:
-                wxSynopsis.comment += (
+                weatherForecast.comment += (
                     "\n" + segment.split("popover-weather-forecast ")[1]
                 )
             if outlook:
-                common_report.tendency.tendencyComment = self.clean_html_string(outlook)
+                common_report.tendency = [
+                    Tendency(tendencyComment=self.clean_html_string(outlook))
+                ]
 
-        common_report.wxSynopsis = wxSynopsis
+        common_report.weatherForecast = weatherForecast
 
         bulletinIDs = []
         bulletin_combinations: Set[AvaBulletin] = set()

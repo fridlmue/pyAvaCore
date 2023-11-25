@@ -76,7 +76,7 @@
       "snowpackStructure": {
         "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
       },
       "bulletinID": "BYCAAMLGenID3631-BYALL"
@@ -137,7 +137,7 @@
       "snowpackStructure": {
         "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
       },
       "bulletinID": "BYCAAMLGenID3631-BYAMM"
@@ -218,7 +218,7 @@
       "snowpackStructure": {
         "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
       },
       "bulletinID": "BYCAAMLGenID3631-BYWFK"
@@ -279,7 +279,7 @@
       "snowpackStructure": {
         "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
       },
       "bulletinID": "BYCAAMLGenID3631-BYBVA"
@@ -340,7 +340,7 @@
       "snowpackStructure": {
         "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
       },
       "bulletinID": "BYCAAMLGenID3631-BYCHG"
@@ -421,7 +421,7 @@
       "snowpackStructure": {
         "comment": "Kleinere Triebschneeansammlungen liegen auf lockeren Schneeschichten und sind vor allem in den Hochlagen noch st\u00f6ranf\u00e4llig. Zudem finden sich in schattigen H\u00e4ngen und windgesch\u00fctzten Mulden der Hochlagen bodennah noch Schneeschichten aus kantigen Kristallen. In mittleren Lagen ist die Schneedecke leicht feucht, ansonsten aber kompakt und ohne Schwachschichten. Br\u00fcchige Wind- und Schmelzharschdeckel an der Schneeoberfl\u00e4che weichen im Tagesverlauf auf, die Schneedecke wird von oben her durchfeuchtet, womit Festigkeitseinbu\u00dfen verbunden sind. Sonnseitig apert die Schneedecke unterhalb 1400m zunehmend aus. Es stellen sich in den n\u00e4chsten Tagen Fr\u00fchjahrsverh\u00e4ltnisse mit einem tageszeitlichen Anstieg der Lawinengefahr ein. Hinweis: Skipisten werden momentan nicht \u00fcberwacht und vor Lawinengefahren gesichert."
       },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Der Hochdruckeinfluss \u00fcber dem bayerischen Alpenraum verst\u00e4rkt sich, die Luftmasse kann sich weiter erw\u00e4rmen. Es ist leicht f\u00f6hnig. Im Verlauf der Nacht zum Samstag klart der Himmel zunehmend auf. Am Samstag gibt es viel Sonnenschein und nur wenige Wolken. Die H\u00f6chsttemperaturen liegen in den T\u00e4lern und in 1000 m bei 12 bis 16 Grad, in 2000 m bei 6 bis 8 und in 3000 m bei 1 Grad. In freien Berglagen weht der Wind im Mittel mit 20 bis 35 km/h um S\u00fcd.  Deutscher Wetterdienst - Regionale Wetterberatung M\u00fcnchen"
       },
       "bulletinID": "BYCAAMLGenID3631-BYBGD"

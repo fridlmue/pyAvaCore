@@ -112,7 +112,6 @@ class Bulletins:
         """
         ratings = {}
         for bulletin in self.strip_wrong_day_reports(validity_date):
-
             for region in bulletin.regions:
                 local_ratings = {}
                 regionId = region.regionID
@@ -137,7 +136,6 @@ class Bulletins:
                         del bulletin.dangerRatings[j]
 
                 for danger in bulletin.dangerRatings:
-
                     key_elev = ""
                     key_time = ""
 

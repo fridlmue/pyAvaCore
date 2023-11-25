@@ -109,12 +109,14 @@ class Processor(JsonProcessor):
             DangerRating().set_mainValue_int(int(valanga["colorePericolo1"])),
             DangerRating().set_mainValue_int(int(valanga["colorePericolo2"])),
         ]
-        bulletin.avalancheProblems = [
-            AvalancheProblem(
-                problemType=problemTypes.get(valanga["situazioneTipoImg"], None),
-                # aspects=valanga["esposizioneImg"]
-            )
-        ]
+        problemType = problemTypes.get(valanga["situazioneTipoImg"], None)
+        if problemType:
+            bulletin.avalancheProblems = [
+                AvalancheProblem(
+                    problemType=problemType,
+                    # aspects=valanga["esposizioneImg"]
+                )
+            ]
         bulletin.customData = dict(
             MeteoMont=dict(
                 snowDepth=valanga["hNeve"],

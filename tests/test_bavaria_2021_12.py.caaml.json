@@ -53,9 +53,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
+        }
+      ],
       "bulletinID": "RID1076RGR1",
       "publicationTime": "2021-12-09T17:00:00+00:00",
       "avalancheActivity": {
@@ -129,9 +131,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
+        }
+      ],
       "bulletinID": "RID1076RGR2",
       "publicationTime": "2021-12-09T17:00:00+00:00",
       "avalancheActivity": {
@@ -213,9 +217,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Avalanche danger levels are not expected to recede in the next few days."
+        }
+      ],
       "bulletinID": "RID1076RGR3",
       "publicationTime": "2021-12-09T17:00:00+00:00",
       "avalancheActivity": {

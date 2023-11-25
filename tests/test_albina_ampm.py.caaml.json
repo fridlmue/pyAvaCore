@@ -207,9 +207,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "As a consequence of rising temperatures and solar radiation a sometimes critical avalanche situation will develop during the next few days. The avalanche danger will increase significantly during the day."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "As a consequence of rising temperatures and solar radiation a sometimes critical avalanche situation will develop during the next few days. The avalanche danger will increase significantly during the day."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -468,9 +470,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Wet avalanches as the day progresses. As a consequence of warming and solar radiation, the natural avalanche activity will increase."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Wet avalanches as the day progresses. As a consequence of warming and solar radiation, the natural avalanche activity will increase."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -710,9 +714,11 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Increase in danger of wet avalanches as a consequence of warming during the day."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Increase in danger of wet avalanches as a consequence of warming during the day."
+        }
+      ],
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [

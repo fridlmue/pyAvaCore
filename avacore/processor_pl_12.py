@@ -30,11 +30,9 @@ from avacore.processor import JsonProcessor
 
 
 class Processor(JsonProcessor):
-
     fetch_time_dependant = True
 
     def process_bulletin(self, region_id) -> Bulletins:
-
         response: str = self._fetch_url(self.url, {})
 
         raw = (
@@ -51,7 +49,6 @@ class Processor(JsonProcessor):
         return self.parse_json(region_id, pl_12_report)
 
     def parse_json(self, region_id, data) -> Bulletins:
-
         bulletins = Bulletins()
         bulletin = AvaBulletin()
 

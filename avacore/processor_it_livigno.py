@@ -52,7 +52,7 @@ class Processor(AbstractProcessor):
         )
         delta = timedelta(days=1, seconds=-1)
         bulletin.validTime.endTime = bulletin.validTime.startTime + delta
-        for (match, elevation) in zip(
+        for match, elevation in zip(
             re.finditer(r'data-valore="(?P<rating>\d)"', html),
             (
                 # alpine

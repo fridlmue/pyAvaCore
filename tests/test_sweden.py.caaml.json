@@ -35,7 +35,7 @@
             "NW"
           ],
           "problemType": "persistent_weak_layers",
-          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+          "comment": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
         },
         {
           "aspects": [
@@ -48,12 +48,14 @@
             "lowerBound": "treeline"
           },
           "problemType": "wind_slab",
-          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+          "comment": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Betydande lavinfara"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Betydande lavinfara"
+        }
+      ],
       "bulletinID": "SE-01-5185",
       "publicationTime": "2021-03-01T00:00:00",
       "avalancheActivity": {
@@ -102,7 +104,7 @@
             "lowerBound": "treeline"
           },
           "problemType": "persistent_weak_layers",
-          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+          "comment": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
         },
         {
           "aspects": [
@@ -116,12 +118,14 @@
             "lowerBound": "treeline"
           },
           "problemType": "wind_slab",
-          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+          "comment": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Betydande lavinfara"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Betydande lavinfara"
+        }
+      ],
       "bulletinID": "SE-02-5182",
       "publicationTime": "2021-02-28T00:00:00",
       "avalancheActivity": {
@@ -169,7 +173,7 @@
             "lowerBound": "treeline"
           },
           "problemType": "wind_slab",
-          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+          "comment": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
         },
         {
           "aspects": [
@@ -183,12 +187,14 @@
             "NW"
           ],
           "problemType": "persistent_weak_layers",
-          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+          "comment": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Betydande lavinfara"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Betydande lavinfara"
+        }
+      ],
       "bulletinID": "SE-03-5187",
       "publicationTime": "2021-03-01T00:00:00",
       "avalancheActivity": {
@@ -236,7 +242,7 @@
             "lowerBound": "treeline"
           },
           "problemType": "wind_slab",
-          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+          "comment": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
         },
         {
           "aspects": [
@@ -250,12 +256,14 @@
             "lowerBound": "treeline"
           },
           "problemType": "persistent_weak_layers",
-          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+          "comment": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Betydande lavinfara"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Betydande lavinfara"
+        }
+      ],
       "bulletinID": "SE-07-5177",
       "publicationTime": "2021-02-28T00:00:00",
       "avalancheActivity": {
@@ -305,7 +313,7 @@
             "lowerBound": "treeline"
           },
           "problemType": "persistent_weak_layers",
-          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+          "comment": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
         },
         {
           "aspects": [
@@ -318,12 +326,14 @@
             "lowerBound": "treeline"
           },
           "problemType": "wind_slab",
-          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+          "comment": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Betydande lavinfara"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Betydande lavinfara"
+        }
+      ],
       "bulletinID": "SE-08-5180",
       "publicationTime": "2021-02-28T00:00:00",
       "avalancheActivity": {
@@ -368,7 +378,7 @@
             "S"
           ],
           "problemType": "persistent_weak_layers",
-          "terrainFeature": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
+          "comment": "Kr\u00e4vande f\u00f6rh\u00e5llanden. Lavinfaran syns inte och finns kvar l\u00e5ngt efter senaste sn\u00f6fall. Lavinaktiviteten \u00e4r of\u00f6ruts\u00e4gbar, om laviner blir utl\u00f6sta kan de bli stora eftersom sprickutbredningen \u00e4r god. Det kan vara m\u00f6jligt att utl\u00f6sa laviner p\u00e5 avst\u00e5nd. Var extra f\u00f6rsiktig och t\u00e4nk konsekvens n\u00e4r du g\u00f6r dina v\u00e4gval."
         },
         {
           "aspects": [
@@ -381,12 +391,14 @@
             "lowerBound": "treeline"
           },
           "problemType": "wind_slab",
-          "terrainFeature": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
+          "comment": "Lavinfaran \u00e4r st\u00f6rst p\u00e5 l\u00e4sidorna av fj\u00e4llet och i terr\u00e4ngformationer som har en l\u00e4sida fr\u00e5n vinden, till exempel bakom \u00e5sar och kr\u00f6n eller i raviner. Problemet hanteras enklast genom att undvika de platser som samlat sn\u00f6 i det senaste sn\u00f6drevet. Du kan k\u00e4nna igen drevsn\u00f6n p\u00e5 att sn\u00f6ytan \u00e4r j\u00e4mn och sl\u00e4t. Sprickor som bildas i sn\u00f6n \u00e4r ett typiskt tecken p\u00e5 att drevsn\u00f6n \u00e4r instabil."
         }
       ],
-      "tendency": {
-        "tendencyComment": "Betydande lavinfara"
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Betydande lavinfara"
+        }
+      ],
       "bulletinID": "SE-09-5186",
       "publicationTime": "2021-03-01T00:00:00",
       "avalancheActivity": {

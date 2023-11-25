@@ -37,9 +37,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Avoid leeward slopes, wind deposited snow are covering persistent weak layer. Beware of danger signs like shooting cracks and whumpf-sounds."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "Avoid leeward slopes, wind deposited snow are covering persistent weak layer. Beware of danger signs like shooting cracks and whumpf-sounds."
+        }
+      ],
       "publicationTime": "2021-12-01T15:42:45",
       "bulletinID": "NO-3016_2021-12-01 15:42:45",
       "avalancheActivity": {

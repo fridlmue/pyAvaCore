@@ -25,6 +25,7 @@ from avacore.avabulletins import Bulletins
 from avacore.processor import Processor as AbstractProcessor
 from avacore.png import png
 
+
 # https://cdn.fmi.fi/apps/avalanche-forecast/show-map.php?lang=en
 # https://api.ocr.space/parse/imageurl?apikey=K81943660188957&url=https://cdn.fmi.fi/apps/avalanche-forecast/show-map.php
 class Processor(AbstractProcessor):

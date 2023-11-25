@@ -30,7 +30,6 @@ class ValidTime:
     """valid time end"""
 
     def __init__(self, startTime=None, endTime=None):
-
         if startTime is not None:
             if not isinstance(startTime, datetime):
                 startTime = datetime.fromisoformat(startTime)
@@ -225,7 +224,7 @@ class AvalancheProblem:
     """problem type as standardized descriptive text"""
     elevation: Elevation
     aspects: list
-    terrainFeature: str
+    comment: str
     validTimePeriod: str  # Should be 'all_day', 'earlier' and 'later'
 
     def __init__(
@@ -236,16 +235,13 @@ class AvalancheProblem:
         dangerRating=None,
         aspects=None,
         elevation=None,
-        terrainFeature=None,
     ) -> None:
         self.aspects = []
         self.elevation = Elevation()
         if problemType is not None:
             self.problemType = problemType
         if comment is not None:
-            self.terrainFeature = comment
-        if terrainFeature is not None:
-            self.terrainFeature = terrainFeature
+            self.comment = comment
         if dangerRating is not None:  # Compatibility with older parsers, deprecated
             self.elevation = dangerRating.elevation
             self.aspects = dangerRating.aspect
@@ -360,12 +356,14 @@ class AvaBulletin:
     """avalanche danger rating"""
     avalancheProblems: typing.List[AvalancheProblem]
     """avalanche problem"""
-    tendency: Tendency
+    tendency: typing.List[Tendency]
     """tendency of the av situation"""
     highlights: str
     """very important note in the report"""
-    wxSynopsis: Texts
+    weatherForecast: Texts
     """weather forecast"""
+    weatherReview: Texts
+    """weather review"""
     avalancheActivity: Texts
     """avalanche activity"""
     snowpackStructure: Texts
@@ -385,7 +383,7 @@ class AvaBulletin:
         self.source = Source()
         self.dangerRatings = []
         self.avalancheProblems = []
-        self.tendency = Tendency()
+        self.tendency = []
         self.customData = []
 
     def get_region_list(self):
@@ -440,13 +438,6 @@ class AvaBulletin:
                     self.validTime = ValidTime(
                         bulletin_json[attribute]["startTime"],
                         bulletin_json[attribute]["endTime"],
-                    )
-
-                elif attribute == "tendency":
-                    self.tendency = Tendency(
-                        bulletin_json[attribute].get("tendencyType"),
-                        bulletin_json[attribute].get("validTime"),
-                        bulletin_json[attribute].get("tendencyComment"),
                     )
 
                 elif attribute == "source":
@@ -577,10 +568,14 @@ class AvaBulletin:
         self.print_if_attr_exists("travelAdvisory", "highlights")
         self.print_if_attr_exists("travelAdvisory", "comment")
 
-        self.print_if_attr_exists("wxSynopsis", "highlights")
-        self.print_if_attr_exists("wxSynopsis", "comment")
+        self.print_if_attr_exists("weatherForecast", "highlights")
+        self.print_if_attr_exists("weatherForecast", "comment")
+
+        self.print_if_attr_exists("weatherReview", "highlights")
+        self.print_if_attr_exists("weatherReview", "comment")
 
         if hasattr(self.tendency, "tendencyComment"):
-            self.prettify_out("tendencyComment: " + self.tendency.tendencyComment)
+            for t in self.tendency:
+                self.prettify_out("tendencyComment: " + t.tendencyComment)
 
         print("╚═══════════════════════════════════════════════════════════\n")

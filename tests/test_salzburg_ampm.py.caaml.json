@@ -35,7 +35,7 @@
             "W"
           ],
           "problemType": "wet_snow",
-          "terrainFeature": "daytime cycle of naturally triggered avalanches"
+          "comment": "daytime cycle of naturally triggered avalanches"
         },
         {
           "aspects": [
@@ -49,15 +49,17 @@
             "NW"
           ],
           "problemType": "gliding_snow",
-          "terrainFeature": "in extremely steep grass-covered terrain"
+          "comment": "in extremely steep grass-covered terrain"
         }
       ],
-      "tendency": {
-        "tendencyComment": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
+        }
+      ],
       "bulletinID": "RID489RGR1",
       "publicationTime": "2021-02-25T17:00:00+00:00",
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "On Friday, weather will be pleasant in the mountains. Initially, sunshine will be hazy due to Sahara dust, in late afternoon high-altitude clouds will move in. Visibility will be somewhat diffuse. Light to moderate westerly winds will be blowing. Slightly lower temperatures than recently: at 1500 m, 5-10 degrees, at 2000 m 3-6 degrees."
       },
       "avalancheActivity": {
@@ -140,7 +142,7 @@
             "W"
           ],
           "problemType": "wet_snow",
-          "terrainFeature": "Daytime cycle of natural avalanche activity on sun-drenched steep slopes"
+          "comment": "Daytime cycle of natural avalanche activity on sun-drenched steep slopes"
         },
         {
           "aspects": [
@@ -151,15 +153,17 @@
             "W"
           ],
           "problemType": "gliding_snow",
-          "terrainFeature": "on extremely steep grass-covered slopes"
+          "comment": "on extremely steep grass-covered slopes"
         }
       ],
-      "tendency": {
-        "tendencyComment": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
+        }
+      ],
       "bulletinID": "RID489RGR2",
       "publicationTime": "2021-02-25T17:00:00+00:00",
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "On Friday, weather will be pleasant in the mountains. Initially, sunshine will be hazy due to Sahara dust, in late afternoon high-altitude clouds will move in. Visibility will be somewhat diffuse. Light to moderate westerly winds will be blowing. Slightly lower temperatures than recently: at 2000 m 4-7 degrees, at 3000 m -3 to 0 degrees."
       },
       "avalancheActivity": {
@@ -241,7 +245,7 @@
             "W"
           ],
           "problemType": "wet_snow",
-          "terrainFeature": "daytime cycle of naturally triggered avalanche activity in sun-drenched steep terrain below 2600 m"
+          "comment": "daytime cycle of naturally triggered avalanche activity in sun-drenched steep terrain below 2600 m"
         },
         {
           "aspects": [
@@ -252,15 +256,17 @@
             "W"
           ],
           "problemType": "gliding_snow",
-          "terrainFeature": "on extremely steep grass-covered slopes"
+          "comment": "on extremely steep grass-covered slopes"
         }
       ],
-      "tendency": {
-        "tendencyComment": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
-      },
+      "tendency": [
+        {
+          "tendencyComment": "On Saturday a few centimetres of fresh snow is anticipated, deposited atop a melt-freeze crust. Little wind influence is expected, temperatures 5-10 degrees cooler. Thus, overall favourable conditions without a relevant daytime cycle and only isolated danger zones."
+        }
+      ],
       "bulletinID": "RID489RGR3",
       "publicationTime": "2021-02-25T17:00:00+00:00",
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "On Friday, weather will be pleasant in the mountains. Initially, sunshine will be hazy due to Sahara dust, in late afternoon high-altitude clouds will move in. Visibility will be somewhat diffuse. Light to moderate westerly winds will be blowing. Slightly lower temperatures than recently: at 2000 m 4-7 degrees, at 3000 m -3 to 0 degrees."
       },
       "avalancheActivity": {
