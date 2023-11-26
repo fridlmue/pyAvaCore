@@ -1,4 +1,3 @@
-import json
 from avacore.processor_norway import Processor
 
 from tests import SnowTest
