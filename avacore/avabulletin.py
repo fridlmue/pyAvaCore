@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, date
 import re
 import typing
-from typing import Optional, Any, List
+from typing import Optional, Any, List, Union
 from enum import Enum
 import textwrap
 
@@ -114,7 +114,11 @@ class ValidTime:
     endTime: Optional[datetime] = None
     startTime: Optional[datetime] = None
 
-    def __init__(self, startTime=None, endTime=None):
+    def __init__(
+        self,
+        startTime: Union[datetime, str, None] = None,
+        endTime: Union[datetime, str, None] = None,
+    ):
         if startTime is not None:
             if not isinstance(startTime, datetime):
                 startTime = datetime.fromisoformat(startTime)
@@ -123,6 +127,16 @@ class ValidTime:
             if not isinstance(endTime, datetime):
                 endTime = datetime.fromisoformat(endTime)
             self.endTime = endTime
+
+    @staticmethod
+    def from_dict(obj: Any) -> "ValidTime":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return ValidTime(
+            startTime=obj.get("startTime"),
+            endTime=obj.get("endTime"),
+        )
 
 
 @dataclass
@@ -133,6 +147,18 @@ class Person:
     metaData: Optional[MetaData] = None
     name: Optional[str] = None
     website: Optional[str] = None
+
+    @staticmethod
+    def from_dict(obj: Any) -> "Person":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return Person(
+            customData=obj.get("customData"),
+            metaData=obj.get("metaData"),
+            name=obj.get("name"),
+            website=obj.get("website"),
+        )
 
 
 @dataclass
@@ -147,6 +173,19 @@ class Provider:
     name: Optional[str] = None
     website: Optional[str] = None
 
+    @staticmethod
+    def from_dict(obj: Any) -> "Provider":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return Provider(
+            customData=obj.get("customData"),
+            contactPerson=Person.from_dict(obj.get("contactPerson")),
+            metaData=obj.get("metaData"),
+            name=obj.get("name"),
+            website=obj.get("website"),
+        )
+
 
 @dataclass
 class Source:
@@ -158,6 +197,16 @@ class Source:
 
     person: Optional[Person] = None
     provider: Optional[Provider] = None
+
+    @staticmethod
+    def from_dict(obj: Any) -> "Source":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return Source(
+            person=Person.from_dict(obj.get("person")),
+            provider=Provider.from_dict(obj.get("provider")),
+        )
 
 
 @dataclass
@@ -195,10 +244,13 @@ class Elevation:
 
     @staticmethod
     def from_dict(obj: Any) -> "Elevation":
+        if not obj:
+            return None
         assert isinstance(obj, dict)
-        lowerBound = obj.get("lowerBound")
-        upperBound = obj.get("upperBound")
-        return Elevation(lowerBound, upperBound)
+        return Elevation(
+            lowerBound=obj.get("lowerBound"),
+            upperBound=obj.get("upperBound"),
+        )
 
     def toString(self):
         """
@@ -262,6 +314,8 @@ class DangerRating:
 
     @staticmethod
     def from_dict(obj: typing.Dict) -> "DangerRating":
+        if not obj:
+            return None
         assert isinstance(obj, dict)
         return DangerRating(
             mainValue=obj.get("mainValue"),
@@ -325,6 +379,25 @@ class AvalancheProblem:
         self.aspects = aspects_list[index_from : index_to + 1]
         return self
 
+    @staticmethod
+    def from_dict(obj: Any) -> "AvalancheProblem":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return AvalancheProblem(
+            customData=obj.get("customData"),
+            problemType=AvalancheProblemType(obj.get("problemType")),
+            aspects=obj.get("aspects", []),
+            avalancheSize=float(obj.get("avalancheSize")),
+            comment=obj.get("comment"),
+            dangerRatingValue=obj.get("dangerRatingValue"),
+            elevation=Elevation.from_dict(obj.get("elevation")),
+            frequency=obj.get("frequency"),
+            metaData=obj.get("metaData"),
+            snowpackStability=obj.get("snowpackStability"),
+            validTimePeriod=obj.get("validTimePeriod"),
+        )
+
 
 @dataclass
 class Tendency:
@@ -354,6 +427,20 @@ class Tendency:
     tendencyType: Optional[TendencyType] = None
     validTime: Optional[ValidTime] = None
 
+    @staticmethod
+    def from_dict(obj: Any) -> "Tendency":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return Tendency(
+            customData=obj.get("customData"),
+            comment=obj.get("comment"),
+            highlights=obj.get("highlights"),
+            metaData=obj.get("metaData"),
+            tendencyType=obj.get("tendencyType"),
+            validTime=ValidTime.from_dict(obj.get("validTime")),
+        )
+
 
 @dataclass
 class Region:
@@ -366,6 +453,18 @@ class Region:
     name: Optional[str] = None
     metaData: Optional[MetaData] = None
     customData: Any = None
+
+    @staticmethod
+    def from_dict(obj: Any) -> "Region":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return Region(
+            customData=obj.get("customData"),
+            regionID=obj.get("regionID"),
+            metaData=obj.get("metaData"),
+            name=obj.get("name"),
+        )
 
 
 @dataclass
@@ -388,6 +487,16 @@ class Texts:
 
     comment: Optional[str] = None
     highlights: Optional[str] = None
+
+    @staticmethod
+    def from_dict(obj: Any) -> "Texts":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return Texts(
+            comment=obj.get("comment"),
+            highlights=obj.get("highlights"),
+        )
 
 
 @dataclass
@@ -445,71 +554,44 @@ class AvaBulletin:
         """
         return [r.regionID for r in self.regions]
 
-    def from_json(self, bulletin_json):
-        """
-        convert to avaBulletin from JSON
-        """
-        attributes = AvaBulletin.__dict__["__annotations__"]
-        for attribute in attributes:
-            if not attribute.startswith("__") and attribute in bulletin_json:
-                if attributes[attribute] in {str, datetime, dict}:
-                    setattr(self, attribute, bulletin_json[attribute])
-
-                elif (
-                    str(attributes[attribute]) == "<class 'avacore.avabulletin.Texts'>"
-                ):
-                    highlights = None
-                    comments = None
-                    if hasattr(bulletin_json[attribute], "highlights"):
-                        highlights = bulletin_json[attribute]["highlights"]
-                    if hasattr(bulletin_json[attribute], "comment"):
-                        highlights = bulletin_json[attribute]["comment"]
-                    setattr(self, attribute, Texts(highlights, comments))
-
-                elif attribute == "regions":
-                    for region in bulletin_json[attribute]:
-                        self.regions.append(
-                            Region(region.get("regionID"), name=region.get("name"))
-                        )
-
-                elif attribute == "dangerRatings":
-                    for dangerRating_json in bulletin_json[attribute]:
-                        dangerRating = DangerRating.from_dict(dangerRating_json)
-                        self.dangerRatings.append(dangerRating)
-
-                elif attribute == "avalancheProblems":
-                    for avalancheProblem_json in bulletin_json[attribute]:
-                        avalancheProblem = AvalancheProblem(
-                            problemType=avalancheProblem_json.get("problemType"),
-                            comment=avalancheProblem_json.get("comment"),
-                            dangerRating_json=avalancheProblem_json.get("dangerRating"),
-                        )
-                        self.avalancheProblems.append(avalancheProblem)
-
-                elif attribute == "validTime":
-                    self.validTime = ValidTime(
-                        bulletin_json[attribute]["startTime"],
-                        bulletin_json[attribute]["endTime"],
-                    )
-
-                elif attribute == "source":
-                    if hasattr(bulletin_json[attribute], "provider"):
-                        self.source = Source(
-                            provider=bulletin_json[attribute]["provider"]
-                        )
-                    elif hasattr(bulletin_json[attribute], "person"):
-                        ...
-
-                elif attribute == "customData":
-                    self.customData = bulletin_json[attribute]
-
-                else:
-                    print(
-                        "Not handled Attribute:",
-                        attribute,
-                        attributes[attribute],
-                        type(attributes[attribute]),
-                    )
+    @staticmethod
+    def from_dict(obj: Any) -> "AvaBulletin":
+        if not obj:
+            return None
+        assert isinstance(obj, dict)
+        return AvaBulletin(
+            avalancheActivity=Texts.from_dict(obj.get("avalancheActivity")),
+            avalancheProblems=[
+                AvalancheProblem.from_dict(p) for p in obj.get("avalancheProblem", [])
+            ],
+            bulletinID=obj.get("bulletinID"),
+            customData=obj.get("customData"),
+            dangerRatings=[
+                DangerRating.from_dict(r) for r in obj.get("dangerRatings", [])
+            ],
+            highlights=obj.get("highlights"),
+            lang=obj.get("lang"),
+            metaData=obj.get("metaData"),
+            nextUpdate=datetime.fromisoformat(obj.get("nextUpdate"))
+            if obj.get("nextUpdate")
+            else None,
+            publicationTime=datetime.fromisoformat(obj.get("publicationTime"))
+            if obj.get("publicationTime")
+            else None,
+            regions=[Region.from_dict(r) for r in obj.get("regions", [])],
+            snowpackStructure=Texts.from_dict(obj.get("snowpackStructure")),
+            source=Source.from_dict(obj.get("source"))
+            if obj.get("source")
+            else Source(),
+            tendency=[Tendency.from_dict(t) for t in obj.get("tendency", [])],
+            travelAdvisory=Texts.from_dict(obj.get("travelAdvisory")),
+            unscheduled=obj.get("unscheduled"),
+            validTime=ValidTime.from_dict(obj.get("validTime"))
+            if obj.get("validTime")
+            else ValidTime(),
+            weatherForecast=Texts.from_dict(obj.get("weatherForecast")),
+            weatherReview=Texts.from_dict(obj.get("weatherReview")),
+        )
 
     def main_date(self) -> date:
         """

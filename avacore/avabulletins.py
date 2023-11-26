@@ -50,6 +50,7 @@ class Bulletins:
         """
         Stores the given raw data as customData
         """
+        self.customData = self.customData or {}
         self.customData["file_extension"] = file_extension
         self.customData["data"] = data
 
@@ -310,15 +311,14 @@ class Bulletins:
             return
         feature.properties.max_danger_rating = max(dangers)
 
-    def from_json(self, bulletins_json):
-        """
-        read bulletins from CAAMLv6 JSON
-        """
-        self.bulletins = []
-        for bulletin_json in bulletins_json["bulletins"]:
-            bulletin = AvaBulletin()
-            bulletin.from_json(bulletin_json)
-            self.bulletins.append(bulletin)
+    @staticmethod
+    def from_dict(obj: Any) -> "Bulletins":
+        assert isinstance(obj, dict)
+        return Bulletins(
+            bulletins=[AvaBulletin.from_dict(b) for b in obj.get("bulletins", [])],
+            customData=obj.get("customData"),
+            metaData=obj.get("metaData"),
+        )
 
     def to_json(self) -> str:
         """write bulletins as CAAMLv6 JSON string"""

@@ -10,8 +10,7 @@ class TestFrance_diff_dates(unittest.TestCase):
         with open(f"{__file__}.json") as fp:
             data = json.load(fp)
 
-        bulletins = Bulletins()
-        bulletins.from_json(data)
+        bulletins = Bulletins.from_dict(data)
 
         ratings = bulletins.max_danger_ratings(datetime.datetime(2022, 4, 20).date())
 
