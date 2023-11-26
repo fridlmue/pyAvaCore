@@ -1,6 +1,33 @@
 {
   "bulletins": [
     {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "The new snow and wind slabs of the last two days can still be released in some cases. As a consequence of a strengthening westerly wind, sometimes avalanche prone wind slabs will form on Monday as well. Even single winter sport participants can release avalanches, including dangerously large ones. Backcountry touring calls for experience in the assessment of avalanche danger.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"considerable\" (3=) in all aspects above 2000m. Other slopes about one danger level less.",
+              "subdivision": "neutral"
+            }
+          },
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "problemType": "new_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-A",
       "customData": {
         "CH": {
@@ -162,6 +189,33 @@
       }
     },
     {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Fresh and somewhat older wind slabs are in some cases still prone to triggering. Single winter sport participants can release avalanches. These can reach medium size. Off-piste activities call for experience in the assessment of avalanche danger.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"considerable\" (3-) in all aspects above 2200m. Other slopes about one danger level less.",
+              "subdivision": "minus"
+            }
+          },
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-B",
       "customData": {
         "CH": {
@@ -319,6 +373,33 @@
       }
     },
     {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "The new snow and wind slabs of the last two days are in some cases still prone to triggering. As a consequence of westerly wind, mostly small wind slabs will form on Monday. Single winter sport participants can release avalanches, including medium-sized ones. Off-piste activities call for experience in the assessment of avalanche danger.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"considerable\" (3-) in all aspects above 2000m. Other slopes about one danger level less.",
+              "subdivision": "minus"
+            }
+          },
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "problemType": "new_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-C",
       "customData": {
         "CH": {
@@ -488,6 +569,33 @@
       }
     },
     {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Fresh and somewhat older wind slabs are in some cases prone to triggering. Avalanche prone locations are to be found in particular in gullies and bowls, and behind abrupt changes in the terrain. The number and size of avalanche prone locations will increase with altitude. The wind slabs are to be evaluated with care and prudence in steep terrain.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"moderate\" (2=) in all aspects above 2200m. Other slopes about one danger level less.",
+              "subdivision": "neutral"
+            }
+          },
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-D",
       "customData": {
         "CH": {
@@ -681,6 +789,31 @@
       }
     },
     {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "comment": "As a consequence of westerly wind, mostly small wind slabs will form on Monday. Fresh and somewhat older wind slabs are in some cases prone to triggering. The avalanche prone locations are to be found in particular in gullies and bowls, and behind abrupt changes in the terrain and generally at elevated altitudes. The avalanches can in isolated cases reach medium size.\nThe wind slabs are to be evaluated with care and prudence in steep terrain.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"moderate\" (2=) in north to south to southwest facing aspects above 1800m. Other slopes about one danger level less.",
+              "subdivision": "neutral"
+            }
+          },
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-E",
       "customData": {
         "CH": {
@@ -762,6 +895,19 @@
       }
     },
     {
+      "avalancheProblems": [
+        {
+          "comment": "Individual avalanche prone locations are to be found in particular in extremely steep terrain at elevated altitudes. Restraint should be exercised because avalanches can sweep people along and give rise to falls.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": null
+            }
+          },
+          "dangerRatingValue": "low",
+          "problemType": "no_distinct_avalanche_problem",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-F",
       "customData": {
         "CH": {
@@ -827,6 +973,19 @@
       }
     },
     {
+      "avalancheProblems": [
+        {
+          "comment": "Only a little snow is lying. As a consequence of a strong westerly wind, small wind slabs will form. They are to be evaluated with care and prudence in particular in extremely steep terrain. Restraint should be exercised because avalanches can sweep people along and give rise to falls.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": null
+            }
+          },
+          "dangerRatingValue": "low",
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "bulletinID": "52838-G",
       "customData": {
         "CH": {

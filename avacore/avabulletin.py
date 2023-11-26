@@ -246,8 +246,8 @@ class Elevation:
             return None
         assert isinstance(obj, dict)
         return Elevation(
-            lowerBound=obj.get("lowerBound"),
-            upperBound=obj.get("upperBound"),
+            lowerBound=str(obj.get("lowerBound")) if obj.get("lowerBound") else None,
+            upperBound=str(obj.get("upperBound")) if obj.get("upperBound") else None,
         )
 
     def toString(self):
@@ -338,7 +338,7 @@ class AvalancheProblem:
     customData: Any = None
     problemType: Optional[AvalancheProblemType] = None
     aspects: Optional[List[Aspect]] = None
-    avalancheSize: Optional[float] = None
+    avalancheSize: Optional[int] = None
     comment: Optional[str] = None
     dangerRatingValue: Optional[DangerRatingValue] = None
     elevation: Optional[Elevation] = None
@@ -384,9 +384,11 @@ class AvalancheProblem:
         assert isinstance(obj, dict)
         return AvalancheProblem(
             customData=obj.get("customData"),
-            problemType=AvalancheProblemType(obj.get("problemType")),
+            problemType=obj.get("problemType"),
             aspects=obj.get("aspects", []),
-            avalancheSize=float(obj.get("avalancheSize")),
+            avalancheSize=int(obj.get("avalancheSize"))
+            if obj.get("avalancheSize")
+            else None,
             comment=obj.get("comment"),
             dangerRatingValue=obj.get("dangerRatingValue"),
             elevation=Elevation.from_dict(obj.get("elevation")),
@@ -560,7 +562,7 @@ class AvaBulletin:
         return AvaBulletin(
             avalancheActivity=Texts.from_dict(obj.get("avalancheActivity")),
             avalancheProblems=[
-                AvalancheProblem.from_dict(p) for p in obj.get("avalancheProblem", [])
+                AvalancheProblem.from_dict(p) for p in obj.get("avalancheProblems", [])
             ],
             bulletinID=obj.get("bulletinID"),
             customData=obj.get("customData"),
