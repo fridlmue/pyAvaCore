@@ -51,6 +51,11 @@ class Processor(ABC):
 
 
 class JsonProcessor(Processor):
+    def process_bulletin(self, region_id) -> Bulletins:
+        headers = {"Content-Type": "application/json; charset=utf-8"}
+        root = self._fetch_json(self.url, headers)
+        return self.parse_json(region_id, root)
+
     @abstractmethod
     def parse_json(self, region_id: str, data: Any) -> Bulletins:
         """

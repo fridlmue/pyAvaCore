@@ -133,7 +133,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": ""
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
       "tendency": [
@@ -312,7 +312,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": ""
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
       "tendency": [
@@ -413,7 +413,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": ""
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
       "tendency": [
@@ -490,7 +490,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": ""
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
       "tendency": [
@@ -543,7 +543,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": ""
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
       "tendency": [
@@ -647,7 +647,7 @@
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": ""
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
       "tendency": [
