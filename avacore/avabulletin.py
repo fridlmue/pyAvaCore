@@ -119,14 +119,12 @@ class ValidTime:
         startTime: Union[datetime, str, None] = None,
         endTime: Union[datetime, str, None] = None,
     ):
-        if startTime is not None:
-            if not isinstance(startTime, datetime):
-                startTime = datetime.fromisoformat(startTime)
-            self.startTime = startTime
-        if endTime is not None:
-            if not isinstance(endTime, datetime):
-                endTime = datetime.fromisoformat(endTime)
-            self.endTime = endTime
+        if isinstance(startTime, str):
+            startTime = datetime.fromisoformat(startTime.replace("Z", "+00:00"))
+        self.startTime = startTime
+        if isinstance(endTime, str):
+            endTime = datetime.fromisoformat(endTime.replace("Z", "+00:00"))
+        self.endTime = endTime
 
     @staticmethod
     def from_dict(obj: Any) -> "ValidTime":
@@ -572,10 +570,14 @@ class AvaBulletin:
             highlights=obj.get("highlights"),
             lang=obj.get("lang"),
             metaData=obj.get("metaData"),
-            nextUpdate=datetime.fromisoformat(obj.get("nextUpdate"))
+            nextUpdate=datetime.fromisoformat(
+                obj.get("nextUpdate").replace("Z", "+00:00")
+            )
             if obj.get("nextUpdate")
             else None,
-            publicationTime=datetime.fromisoformat(obj.get("publicationTime"))
+            publicationTime=datetime.fromisoformat(
+                obj.get("publicationTime").replace("Z", "+00:00")
+            )
             if obj.get("publicationTime")
             else None,
             regions=[Region.from_dict(r) for r in obj.get("regions", [])],
