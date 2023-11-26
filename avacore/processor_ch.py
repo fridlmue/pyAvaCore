@@ -208,7 +208,7 @@ class Processor(JsonProcessor):
                 rating.get("additionalDangerDescription", None)
             )
             paragraphs = data_bulletins["snow_weather"]["paragraphs"]
-            bulletin.wxSynopsis = Texts(
+            bulletin.weatherForecast = Texts(
                 comment="\n".join(p for p in self._parse_paragraphs(paragraphs) if p)
             )
         return bulletins

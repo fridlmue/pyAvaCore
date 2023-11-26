@@ -23,6 +23,7 @@ from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
     Region,
+    Tendency,
     Texts,
 )
 from avacore.avabulletins import Bulletins
@@ -110,12 +111,16 @@ class Processor(XmlProcessor):
             r"(?<=4\.- Predicción meteorológica)(?s:.*)(?=5\.- Avance para)",
             aemet_reports,
         )
-        report.wxSynopsis = Texts(comment=" ".join(re_result.group(0).splitlines()[1:]))
+        report.weatherForecast = Texts(
+            comment=" ".join(re_result.group(0).splitlines()[1:])
+        )
 
         re_result = re.search(
             r"(?<=5\.- Avance para el)(?s:.*)(?=</TXT_PREDICCION>)?", aemet_reports
         )
-        report.tendency.tendencyComment = " ".join(re_result.group(0).splitlines()[1:])
+        report.tendency = [
+            Tendency(comment=" ".join(re_result.group(0).splitlines()[1:]))
+        ]
 
         re_result = re.search(
             r"(?<=1\.- Estimación del nivel de peligro:)(?s:.*)(?=2\.- Estado del manto y observaciones recientes)",

@@ -1,14 +1,95 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "problemType": "new_snow"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1500"
+          },
+          "problemType": "wind_slab"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2023-01-09T12:37:36+00:00",
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-10T00:00:00+01:00",
-        "endTime": "2023-01-10T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -16,36 +97,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-10T23:59:59.999000+01:00",
+        "startTime": "2023-01-10T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -92,33 +161,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-10T00:00:00+01:00",
-        "endTime": "2023-01-10T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -126,36 +207,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-10T23:59:59.999000+01:00",
+        "startTime": "2023-01-10T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -202,33 +271,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-10T00:00:00+01:00",
-        "endTime": "2023-01-10T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -236,36 +317,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-10T23:59:59.999000+01:00",
+        "startTime": "2023-01-10T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -312,33 +381,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-10T00:00:00+01:00",
-        "endTime": "2023-01-10T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -346,36 +427,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-10T23:59:59.999000+01:00",
+        "startTime": "2023-01-10T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -422,33 +491,25 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI5"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-10T00:00:00+01:00",
-        "endTime": "2023-01-10T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -456,16 +517,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-10T23:59:59.999000+01:00",
+        "startTime": "2023-01-10T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -512,33 +581,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-11T00:00:00+01:00",
-        "endTime": "2023-01-11T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -546,36 +627,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-11T23:59:59.999000+01:00",
+        "startTime": "2023-01-11T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -622,33 +691,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-11T00:00:00+01:00",
-        "endTime": "2023-01-11T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -656,36 +737,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-11T23:59:59.999000+01:00",
+        "startTime": "2023-01-11T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -732,33 +801,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-11T00:00:00+01:00",
-        "endTime": "2023-01-11T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -766,36 +847,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-11T23:59:59.999000+01:00",
+        "startTime": "2023-01-11T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -842,33 +911,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-11T00:00:00+01:00",
-        "endTime": "2023-01-11T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -876,36 +957,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-11T23:59:59.999000+01:00",
+        "startTime": "2023-01-11T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -952,33 +1021,25 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI5"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-11T00:00:00+01:00",
-        "endTime": "2023-01-11T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -986,16 +1047,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-11T23:59:59.999000+01:00",
+        "startTime": "2023-01-11T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1042,33 +1111,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI1"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-12T00:00:00+01:00",
-        "endTime": "2023-01-12T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1076,36 +1157,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-12T23:59:59.999000+01:00",
+        "startTime": "2023-01-12T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1152,33 +1221,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI2"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-12T00:00:00+01:00",
-        "endTime": "2023-01-12T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1186,36 +1267,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-12T23:59:59.999000+01:00",
+        "startTime": "2023-01-12T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1262,33 +1331,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI3"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-12T00:00:00+01:00",
-        "endTime": "2023-01-12T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1296,36 +1377,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-12T23:59:59.999000+01:00",
+        "startTime": "2023-01-12T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1372,33 +1441,45 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "1800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI4"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-12T00:00:00+01:00",
-        "endTime": "2023-01-12T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1406,36 +1487,24 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-12T23:59:59.999000+01:00",
+        "startTime": "2023-01-12T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "",
+        "highlights": ""
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -1482,33 +1551,25 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
-      "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "SI5"
         }
       ],
-      "validTime": {
-        "startTime": "2023-01-12T00:00:00+01:00",
-        "endTime": "2023-01-12T23:59:59.999000+01:00"
+      "snowpackStructure": {
+        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            ",
+        "highlights": ""
       },
       "source": {
         "provider": {
@@ -1516,78 +1577,17 @@
           "website": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "SE",
-            "S",
-            "SW",
-            "W",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "1500"
-          },
-          "problemType": "new_snow"
-        },
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "SE",
-            "S",
-            "SW",
-            "W",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "1500"
-          },
-          "problemType": "wind_slab"
-        },
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "1800"
-          },
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "publicationTime": "2023-01-09T12:37:36+00:00",
-      "wxSynopsis": {
-        "highlights": "",
-        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            "
-      },
-      "avalancheActivity": {
-        "highlights": "",
-        "comment": ""
-      },
-      "snowpackStructure": {
-        "highlights": "",
-        "comment": "\n                Novi sneg je v visokogorju suh in rahel ter mo\u010dno spihan, ni\u017eje pa moker in mehak. Spihana mesta v visokogorju so trda in ponekod poledenela. Sne\u017ene razmere se zaradi padavin in ohlajanja \u0161e spreminjajo.\n                Nevarnost sne\u017enih plazov bo predvidoma povsod v visokogorju ZNATNA, 3. stopnje, ni\u017eje se bo do jutri zjutraj nekoliko pove\u010dala in bo ZMERNA, 2. stopnje, a le na obmo\u010djih, kjer je bila stara sne\u017ena odeja. Tam se bo v naslednjih dneh hitro spet zmanj\u0161ala in bo MAJHNA, 1. stopnje, medtem ko bo v visokogorju ostala 3. stropnje. Nevarnost bo trajnej\u0161a zaradi \u0161tevilnih zametov na vseh straneh grebenov in sedel, pa tudi zaradi \u0161ibke plasti, ki bo pod novim snegom. Temperatura bo namre\u010d nad okoli 1800 m do petka ostala pod ni\u010dlo, zato se bo novi sneg le po\u010dasi preobra\u017eal in sesedal, ob\u010dasno ga bo \u0161e prena\u0161al veter spremenljive smeri. Padavine v no\u010di na \u010detrtek ne bodo kaj dosti vplivale na plazovne razmere, ker jih bo premalo.\nV tem \u010dasu boste lahko na mestih z napihanom snegom na dovolj strmih pobo\u010djih \u017ee ob manj\u0161i obremenitvi spro\u017eili plaz suhega sprijetega snega, s strmih pobo\u010dij bodo mo\u017eni \u0161e posamezni manj\u0161i plazovi nesprijetega snega. Pod okoli 1800 m bo nevarnost precej manj\u0161a.\n            "
-      },
       "travelAdvisory": {
-        "highlights": "",
-        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            "
+        "comment": "\n                Nevarnost sne\u017enih plazov SE POVE\u010cUJE zaradi padavin. V visokogorju nad okoli 1500 m je zapadlo od 20 do 60 cm snega, precej manj pa v vzhodnem delu gora, le do 10 cm, a \u0161e sne\u017ei in meja sne\u017eenja se spu\u0161\u010da. Zaradi mo\u010dnih vetrov je veliko zametov in opasti, grebeni so skoraj povsem spihani. Nevarna so mesta z napihanim snegom, pod novim snegom je nad okoli 1800 m \u0161ibka plast. Ni\u017eje je sneg kopnel ali pa je bil moker in je bolje sprijet s podlago. Nevarnost je nad okoli 1800 m ve\u010dinoma ZNATNA, 3. stopnje, ni\u017eje pa trenutno MAJHNA, 1. stopnje. Sne\u017eni plaz lahko spro\u017eite na strmih in zmerno strmih pobo\u010djih predvsem na mestih z napihanim snegom, lahko se pro\u017eijo tudi manj\u0161i in srednje veliki plazovi nepsrijetega novega snega s strmih pobo\u010dij visokogorja. Tudi ni\u017eje se nevarnost plazov po\u010dasi pove\u010duje.\n            ",
+        "highlights": ""
+      },
+      "validTime": {
+        "endTime": "2023-01-12T23:59:59.999000+01:00",
+        "startTime": "2023-01-12T00:00:00+01:00"
+      },
+      "weatherForecast": {
+        "comment": "\n                Danes bo obla\u010dno s padavinami. Hladilo se bo, do ve\u010dera se bo meja sne\u017eenja spustila do okoli 800 m nadmorske vi\u0161ine, ponekod tudi ni\u017eje. Zapihal bo okrepljen severni veter.\nV no\u010di na torek bodo padavine ponehale. V torek se bo zjasnilo, najkasneje v vzhodnem delu gora. Ob\u010dasno bodo nekaterih vrhovi v oblakih. \u0160e bo pihal okrepljen severnik. Ni\u010dta izoterma bo na nadmorski vi\u0161ini okoli 1200 m.\nV sredo bo delno jasno z ob\u010dasno pove\u010dano obla\u010dnostjo, ve\u010d jo bo na vzhodu. V visokogorju bo pihal \u0161ibak do zmeren severnik, ki bo popoldne slabel. Nekoliko topleje bo. \nV no\u010di na \u010detrtek se bo poobla\u010dilo in prehodno bo v gorah sne\u017eilo. Predvidoma bo lahko zapadlo od 5 do 10 cm snega. Prehodno bo zapihal zmeren severni veter. V \u010detrtek dopoldne se bo zjasnilo, popoldne bo zapihal jugozahodnik.\n            ",
+        "highlights": ""
       }
     }
   ]

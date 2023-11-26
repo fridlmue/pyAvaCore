@@ -14,10 +14,10 @@
 """
 from datetime import datetime
 from urllib.request import urlopen, Request
-import copy
 import logging
 import re
 import string
+import typing
 import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
 
@@ -104,14 +104,12 @@ class Processor(XmlProcessor):
             root.attrib.get("DATEVALIDITE")
         ).replace(tzinfo=tzinfo)
 
-        am_danger_ratings = []
+        am_danger_ratings: typing.List[DangerRating] = []
 
         for cartoucherisque in root.iter(tag="CARTOUCHERISQUE"):
-
-            danger_rating_pre = DangerRating()
             aspects = []
+            danger_rating_pre = DangerRating(aspects=aspects)
             for pente in cartoucherisque.iter(tag="PENTE"):
-
                 if pente.get("N") == "true":
                     aspects.append("N")
                 if pente.get("NE") == "true":
@@ -134,12 +132,12 @@ class Processor(XmlProcessor):
             }
 
             for risque in cartoucherisque.iter(tag="RISQUE"):
-                danger_rating = copy.deepcopy(danger_rating_pre)
+                danger_rating = DangerRating(aspects=danger_rating_pre.aspects)
                 danger_rating.set_mainValue_int(int(risque.attrib.get("RISQUE1")))
                 danger_rating.elevation.auto_select(risque.attrib.get("LOC1"))
                 am_danger_ratings.append(danger_rating)
                 if not risque.attrib.get("RISQUE2") == "":
-                    danger_rating2 = copy.deepcopy(danger_rating_pre)
+                    danger_rating2 = DangerRating(aspects=danger_rating_pre.aspects)
                     danger_rating2.set_mainValue_int(int(risque.attrib.get("RISQUE2")))
                     danger_rating2.elevation.auto_select(risque.attrib.get("LOC2"))
                     am_danger_ratings.append(danger_rating2)
@@ -155,15 +153,13 @@ class Processor(XmlProcessor):
             for texte in qualite.iter(tag="TEXTE"):
                 report.snowpackStructure = Texts(comment=texte.text)
 
-        pm_danger_ratings = []
+        pm_danger_ratings: typing.List[DangerRating] = []
         pm_available = False
 
         for cartoucherisque in root.iter(tag="CARTOUCHERISQUE"):
-
             danger_rating_pre = DangerRating()
             aspects = []
             for pente in cartoucherisque.iter(tag="PENTE"):
-
                 if pente.get("N") == "true":
                     aspects.append("N")
                 if pente.get("NE") == "true":
@@ -188,7 +184,7 @@ class Processor(XmlProcessor):
             for risque in cartoucherisque.iter(tag="RISQUE"):
                 if not risque.attrib.get("EVOLURISQUE1") == "":
                     pm_available = True
-                    danger_rating_pm = copy.deepcopy(danger_rating_pre)
+                    danger_rating_pm = DangerRating(aspects=danger_rating_pre.aspects)
                     danger_rating_pm.set_mainValue_int(
                         int(risque.attrib.get("EVOLURISQUE1"))
                     )
@@ -198,7 +194,7 @@ class Processor(XmlProcessor):
                     pm_danger_ratings.append(am_danger_ratings[0])
                 if not risque.attrib.get("EVOLURISQUE2") == "":
                     pm_available = True
-                    danger_rating_pm2 = copy.deepcopy(danger_rating_pre)
+                    danger_rating_pm2 = DangerRating(aspects=danger_rating_pre.aspects)
                     danger_rating_pm2.set_mainValue_int(
                         int(risque.attrib.get("EVOLURISQUE2"))
                     )
@@ -217,7 +213,7 @@ class Processor(XmlProcessor):
             else:
                 validTimePeriod = "all_day"
             dangerRating.validTimePeriod = validTimePeriod
-            report.dangerRatings.append(copy.deepcopy(dangerRating))
+            report.dangerRatings.append(dangerRating)
 
         if pm_available:
             for dangerRating in pm_danger_ratings:

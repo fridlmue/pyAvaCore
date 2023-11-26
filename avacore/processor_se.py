@@ -21,6 +21,7 @@ from .avabulletin import (
     AvalancheProblem,
     Elevation,
     Region,
+    Tendency,
     Texts,
 )
 from .avabulletins import Bulletins
@@ -39,7 +40,6 @@ class Processor(JsonProcessor):
         return bulletins
 
     def parse_json(self, region_id, data) -> Bulletins:
-
         bulletins = Bulletins()
 
         for feature in data["features"]:
@@ -102,10 +102,10 @@ class Processor(JsonProcessor):
                         av_problem.aspects = aspect_list
                         av_problem.elevation = elevation
                         av_problem.problemType = problem_type
-                        av_problem.terrainFeature = problem["content"]
+                        av_problem.comment = problem["content"]
                         report.avalancheProblems.append(av_problem)
 
-            wxSynopsis = Texts()
+            weatherForecast = Texts()
             avalancheActivity = Texts()
             snowpackStructure = Texts()
             travelAdvisory = Texts()
@@ -113,10 +113,10 @@ class Processor(JsonProcessor):
             avalancheActivity.highlights = properties["assessment_title"]
             avalancheActivity.comment = properties["assessment_content"]
             snowpackStructure.comment = properties["size_and_spread"]
-            report.tendency.tendencyComment = properties["trend_label"]
+            report.tendency = [Tendency(comment=properties["trend_label"])]
             travelAdvisory.comment = properties["recommendation"]
 
-            report.wxSynopsis = wxSynopsis
+            report.weatherForecast = weatherForecast
             report.avalancheActivity = avalancheActivity
             report.snowpackStructure = snowpackStructure
             report.travelAdvisory = travelAdvisory

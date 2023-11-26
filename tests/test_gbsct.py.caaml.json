@@ -1,14 +1,25 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "Forecast Snow Stability: The very limited and patchy snowpack will remain firm and stable throughout. Minor accumulations of fresh snow are possible, most notably on sheltered Westerly aspects at higher elevations. The avalanche hazard will be Low.",
+        "highlights": "TOR for 23/12 The very limited and patchy snowpack will remain firm and stable throughout. Minor accums of fresh snow. Av Haz Low. "
+      },
+      "bulletinID": "GB-SCT-9788",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2021-12-22T00:00:00",
       "regions": [
         {
           "regionID": "GB-SCT-7"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-22T18:00:00",
-        "endTime": "2021-12-23T18:00:00"
+      "snowpackStructure": {
+        "comment": "Forecast Weather Influences: Limited outbreaks of rain, sleet and snow are forecast throughout the period. It will remain cold, generally freezing at most elevations. A light Easterly breeze overnight will gradually strengthen through the day, becoming strong by the end of the period. \nObserved Weather Influences: Dry, light South-Easterly wind, freezing at most elevations. Cloud generally above the summits.\nObservedSnowStability: The very limited and patchy snow cover is frozen and stable throughout. The avalanche hazard is Low."
       },
       "source": {
         "provider": {
@@ -16,31 +27,31 @@
           "website": "https://www.sais.gov.uk/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "bulletinID": "GB-SCT-9788",
-      "publicationTime": "2021-12-22T00:00:00",
-      "avalancheActivity": {
-        "highlights": "TOR for 23/12 The very limited and patchy snowpack will remain firm and stable throughout. Minor accums of fresh snow. Av Haz Low. ",
-        "comment": "Forecast Snow Stability: The very limited and patchy snowpack will remain firm and stable throughout. Minor accumulations of fresh snow are possible, most notably on sheltered Westerly aspects at higher elevations. The avalanche hazard will be Low."
-      },
-      "snowpackStructure": {
-        "comment": "Forecast Weather Influences: Limited outbreaks of rain, sleet and snow are forecast throughout the period. It will remain cold, generally freezing at most elevations. A light Easterly breeze overnight will gradually strengthen through the day, becoming strong by the end of the period. \nObserved Weather Influences: Dry, light South-Easterly wind, freezing at most elevations. Cloud generally above the summits.\nObservedSnowStability: The very limited and patchy snow cover is frozen and stable throughout. The avalanche hazard is Low."
+      "validTime": {
+        "endTime": "2021-12-23T18:00:00",
+        "startTime": "2021-12-22T18:00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "Forecast Snow Stability: Little change is expected in the existing snowpack, which will remain hard, well bonded and stable throughout.  A few minor pockets of windslab may accumulate on West to North facing slopes above 1000m, but this is expected to be minimal and easily avoidable. Snow cover is patchy, greatest amounts remain on steep north facing aspects above 1000m and on a range of aspects on the high plateau areas. The avalanche hazard will be Low",
+        "highlights": "NC for 23.12 Remaining snow remains hard, well bonded and stable throughout. Avalanche Hazard Low."
+      },
+      "bulletinID": "GB-SCT-9789",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2021-12-22T00:00:00",
       "regions": [
         {
           "regionID": "GB-SCT-2"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-22T18:00:00",
-        "endTime": "2021-12-23T18:00:00"
+      "snowpackStructure": {
+        "comment": "Forecast Weather Influences: Winds will be from the South during the evening, backing Easterly through the forecast period and increasing from light to moderate strength during daylight hours.  A mixture of rain, freezing rain, sleet and snow is expected.  The freezing level will be on or above summit level.\nObserved Weather Influences: The temperature inversion continued today, with light to moderate South-Westerly winds. A dry day with good visibility above lower cloud inversion layers.  Temperatures remained sub zero at lower elevations rising with altitude to around 6 degrees at 1000m. \nObservedSnowStability: The remaining snow pack is extremely hard, well bonded and stable throughout.  Snow cover is patchy, greatest amounts remain on steep North facing aspects above 1000m and on a range of aspects on the high plateau areas.  The avalanche hazard is Low"
       },
       "source": {
         "provider": {
@@ -48,31 +59,31 @@
           "website": "https://www.sais.gov.uk/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "bulletinID": "GB-SCT-9789",
-      "publicationTime": "2021-12-22T00:00:00",
-      "avalancheActivity": {
-        "highlights": "NC for 23.12 Remaining snow remains hard, well bonded and stable throughout. Avalanche Hazard Low.",
-        "comment": "Forecast Snow Stability: Little change is expected in the existing snowpack, which will remain hard, well bonded and stable throughout.  A few minor pockets of windslab may accumulate on West to North facing slopes above 1000m, but this is expected to be minimal and easily avoidable. Snow cover is patchy, greatest amounts remain on steep north facing aspects above 1000m and on a range of aspects on the high plateau areas. The avalanche hazard will be Low"
-      },
-      "snowpackStructure": {
-        "comment": "Forecast Weather Influences: Winds will be from the South during the evening, backing Easterly through the forecast period and increasing from light to moderate strength during daylight hours.  A mixture of rain, freezing rain, sleet and snow is expected.  The freezing level will be on or above summit level.\nObserved Weather Influences: The temperature inversion continued today, with light to moderate South-Westerly winds. A dry day with good visibility above lower cloud inversion layers.  Temperatures remained sub zero at lower elevations rising with altitude to around 6 degrees at 1000m. \nObservedSnowStability: The remaining snow pack is extremely hard, well bonded and stable throughout.  Snow cover is patchy, greatest amounts remain on steep North facing aspects above 1000m and on a range of aspects on the high plateau areas.  The avalanche hazard is Low"
+      "validTime": {
+        "endTime": "2021-12-23T18:00:00",
+        "startTime": "2021-12-22T18:00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "Forecast Snow Stability: Existing old areas of snow will remain. Some fresh snow is possible but amounts are not expected to be significant. Snowpack stability will remain good.  The avalanche hazard will be Low",
+        "highlights": "LO for 23/12.Some fresh snow is possible but amounts are not expected to be significant. Snowpack stability remains good. Low hazard"
+      },
+      "bulletinID": "GB-SCT-9790",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2021-12-22T00:00:00",
       "regions": [
         {
           "regionID": "GB-SCT-3"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-22T18:00:00",
-        "endTime": "2021-12-23T18:00:00"
+      "snowpackStructure": {
+        "comment": "Forecast Weather Influences: Some precipitation is expected overnight and during Thursday with the freezing level above the summits. \nObserved Weather Influences: An overcast day with light winds and mainly dry. Freezing level around 750m with a temperature inversion however this has dissipated during the early afternoon\nObservedSnowStability: Main accumulations of old frozen snow remain in high North and East facing worries. Stability is good.  The avalanche hazard is Low"
       },
       "source": {
         "provider": {
@@ -80,43 +91,24 @@
           "website": "https://www.sais.gov.uk/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "bulletinID": "GB-SCT-9790",
-      "publicationTime": "2021-12-22T00:00:00",
-      "avalancheActivity": {
-        "highlights": "LO for 23/12.Some fresh snow is possible but amounts are not expected to be significant. Snowpack stability remains good. Low hazard",
-        "comment": "Forecast Snow Stability: Existing old areas of snow will remain. Some fresh snow is possible but amounts are not expected to be significant. Snowpack stability will remain good.  The avalanche hazard will be Low"
-      },
-      "snowpackStructure": {
-        "comment": "Forecast Weather Influences: Some precipitation is expected overnight and during Thursday with the freezing level above the summits. \nObserved Weather Influences: An overcast day with light winds and mainly dry. Freezing level around 750m with a temperature inversion however this has dissipated during the early afternoon\nObservedSnowStability: Main accumulations of old frozen snow remain in high North and East facing worries. Stability is good.  The avalanche hazard is Low"
+      "validTime": {
+        "endTime": "2021-12-23T18:00:00",
+        "startTime": "2021-12-22T18:00:00"
       }
     },
     {
-      "regions": [
+      "avalancheActivity": {
+        "comment": "Forecast Snow Stability: Where exposed the old snow will be firm and icy with good stability. Areas of fresh windslab will form on slopes sheltered from the Easterly winds. Instabilities will exist where these accumulations form to depth on older snow, mostly around corrie rims and summit gully exits with a Westerly to Northerly aspect mainly above 900 metres.  The avalanche hazard will be Moderate.",
+        "highlights": "GC23/12 Rain sleet and snow east winds, old snow firm+icy. Areas of fresh windslab W-N slopes where old snow underlies. Hazard Mod"
+      },
+      "avalancheProblems": [
         {
-          "regionID": "GB-SCT-4"
+          "problemType": "wind_slab"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-22T18:00:00",
-        "endTime": "2021-12-23T18:00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "Scottish Avalanche Information Service",
-          "website": "https://www.sais.gov.uk/"
-        }
-      },
+      "bulletinID": "GB-SCT-9791",
       "dangerRatings": [
         {
-          "elevation": {
-            "lowerBound": "900"
-          },
           "customData": {
             "SAIS": {
               "aspects": [
@@ -128,13 +120,13 @@
               ]
             }
           },
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        },
-        {
           "elevation": {
             "lowerBound": "900"
           },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
           "customData": {
             "SAIS": {
               "aspects": [
@@ -144,13 +136,13 @@
               ]
             }
           },
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
+          "elevation": {
+            "lowerBound": "900"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         },
         {
-          "elevation": {
-            "upperBound": "900"
-          },
           "customData": {
             "SAIS": {
               "aspects": [
@@ -165,34 +157,53 @@
               ]
             }
           },
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
+          "elevation": {
+            "upperBound": "900"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
         }
       ],
-      "avalancheProblems": [
-        {
-          "problemType": "wind_slab"
-        }
-      ],
-      "bulletinID": "GB-SCT-9791",
       "publicationTime": "2021-12-22T00:00:00",
-      "avalancheActivity": {
-        "highlights": "GC23/12 Rain sleet and snow east winds, old snow firm+icy. Areas of fresh windslab W-N slopes where old snow underlies. Hazard Mod",
-        "comment": "Forecast Snow Stability: Where exposed the old snow will be firm and icy with good stability. Areas of fresh windslab will form on slopes sheltered from the Easterly winds. Instabilities will exist where these accumulations form to depth on older snow, mostly around corrie rims and summit gully exits with a Westerly to Northerly aspect mainly above 900 metres.  The avalanche hazard will be Moderate."
-      },
+      "regions": [
+        {
+          "regionID": "GB-SCT-4"
+        }
+      ],
       "snowpackStructure": {
         "comment": "Forecast Weather Influences: Some messy temperature details overnight with temperatures becoming almost zero between surface and summits as an isothermal layer develops. This will give the possibility of rain, freezing rain, sleet or snow. Amounts of new snow are uncertain at present. Winds will be generally Easterly becoming fresh to strong through the day.\nObserved Weather Influences: Mainly dry and calm this morning with light precipitation later in the day. It was misty at lower elevations clear above.  Winds were very light from a Southerly direction.\nObservedSnowStability: The limited re-frozen snowpack is well bonded in all locations.  The avalanche hazard is Low."
+      },
+      "source": {
+        "provider": {
+          "name": "Scottish Avalanche Information Service",
+          "website": "https://www.sais.gov.uk/"
+        }
+      },
+      "validTime": {
+        "endTime": "2021-12-23T18:00:00",
+        "startTime": "2021-12-22T18:00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "Forecast Snow Stability: The remaining snow patches will be firm and well bonded. Limited, fresh accumulations will start to form at the end of the period in wind sheltered locations on South through West to North-West aspects above 1000 metres. Deposits are not expected to be significant.  The avalanche hazard will be Low.",
+        "highlights": "SC for 23/12 Limited new accumulations forming on S through W to  NW aspects above 1000m. Stability will remain good. Av Hazard-Low"
+      },
+      "bulletinID": "GB-SCT-9792",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2021-12-22T00:00:00",
       "regions": [
         {
           "regionID": "GB-SCT-5"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-22T18:00:00",
-        "endTime": "2021-12-23T18:00:00"
+      "snowpackStructure": {
+        "comment": "Forecast Weather Influences: Sleet during the early evening will die out to give a mostly dry night. Rain will return at daybreak, turning to sleet at 900 metres and light snow at 1200 metres during the afternoon as the freezing level starts to lower. Light overnight winds will increase in strength to become fresh East-North-Easterly.\nObserved Weather Influences: The bright and sunny morning quickly clouded over to give a grey but dry day. Light Westerly winds increased in strength to fresh as they backed to the South-West. Sub zero temperatures in the bands of cloud but with positive temperatures at higher elevations.\nObservedSnowStability: The remaining snow provides only patchy cover with greatest amounts being found on high North and East facing aspects. These patches are very firm and well bonded.  The avalanche hazard is Low."
       },
       "source": {
         "provider": {
@@ -200,31 +211,31 @@
           "website": "https://www.sais.gov.uk/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "bulletinID": "GB-SCT-9792",
-      "publicationTime": "2021-12-22T00:00:00",
-      "avalancheActivity": {
-        "highlights": "SC for 23/12 Limited new accumulations forming on S through W to  NW aspects above 1000m. Stability will remain good. Av Hazard-Low",
-        "comment": "Forecast Snow Stability: The remaining snow patches will be firm and well bonded. Limited, fresh accumulations will start to form at the end of the period in wind sheltered locations on South through West to North-West aspects above 1000 metres. Deposits are not expected to be significant.  The avalanche hazard will be Low."
-      },
-      "snowpackStructure": {
-        "comment": "Forecast Weather Influences: Sleet during the early evening will die out to give a mostly dry night. Rain will return at daybreak, turning to sleet at 900 metres and light snow at 1200 metres during the afternoon as the freezing level starts to lower. Light overnight winds will increase in strength to become fresh East-North-Easterly.\nObserved Weather Influences: The bright and sunny morning quickly clouded over to give a grey but dry day. Light Westerly winds increased in strength to fresh as they backed to the South-West. Sub zero temperatures in the bands of cloud but with positive temperatures at higher elevations.\nObservedSnowStability: The remaining snow provides only patchy cover with greatest amounts being found on high North and East facing aspects. These patches are very firm and well bonded.  The avalanche hazard is Low."
+      "validTime": {
+        "endTime": "2021-12-23T18:00:00",
+        "startTime": "2021-12-22T18:00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "Forecast Snow Stability: Any quantities of new snow are not expected to be significant. Some new drifted accumulations may start to develop toward the end of the period, bringing moderately bonded deposits on high Westerly aspects above 850 metres. Elsewhere the sparse snowpack will remain patchy and stable. The avalanche hazard will be Low",
+        "highlights": "CM for 23/12/19 Low hazard. Patchy, hard, refrozen snowpack. Some thin, new windslab possible on W aspects later."
+      },
+      "bulletinID": "GB-SCT-9793",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2021-12-22T00:00:00",
       "regions": [
         {
           "regionID": "GB-SCT-6"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-22T18:00:00",
-        "endTime": "2021-12-23T18:00:00"
+      "snowpackStructure": {
+        "comment": "Forecast Weather Influences: Outbreaks of rain, freezing rain, sleet and snow are possible at any level overnight and during the day, as a new weather system results in complex temperature variables over the period. The light Southerly airflow will strengthen to a moderate Easterly as the day progresses.\nObserved Weather Influences: Dry and cold overnight. Low hill cloud affected the area for much of the period. A few sleety snow showers appeared at the end of the period. The winds have been light to moderate ,generally Southerly.\nObservedSnowStability: The snowpack is extremely limited, patchy, hard and stable. Remaining accumulations are in high sheltered, mainly North to Easterly aspects above 900 metres.  The avalanche hazard is Low"
       },
       "source": {
         "provider": {
@@ -232,20 +243,9 @@
           "website": "https://www.sais.gov.uk/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "bulletinID": "GB-SCT-9793",
-      "publicationTime": "2021-12-22T00:00:00",
-      "avalancheActivity": {
-        "highlights": "CM for 23/12/19 Low hazard. Patchy, hard, refrozen snowpack. Some thin, new windslab possible on W aspects later.",
-        "comment": "Forecast Snow Stability: Any quantities of new snow are not expected to be significant. Some new drifted accumulations may start to develop toward the end of the period, bringing moderately bonded deposits on high Westerly aspects above 850 metres. Elsewhere the sparse snowpack will remain patchy and stable. The avalanche hazard will be Low"
-      },
-      "snowpackStructure": {
-        "comment": "Forecast Weather Influences: Outbreaks of rain, freezing rain, sleet and snow are possible at any level overnight and during the day, as a new weather system results in complex temperature variables over the period. The light Southerly airflow will strengthen to a moderate Easterly as the day progresses.\nObserved Weather Influences: Dry and cold overnight. Low hill cloud affected the area for much of the period. A few sleety snow showers appeared at the end of the period. The winds have been light to moderate ,generally Southerly.\nObservedSnowStability: The snowpack is extremely limited, patchy, hard and stable. Remaining accumulations are in high sheltered, mainly North to Easterly aspects above 900 metres.  The avalanche hazard is Low"
+      "validTime": {
+        "endTime": "2021-12-23T18:00:00",
+        "startTime": "2021-12-22T18:00:00"
       }
     }
   ]

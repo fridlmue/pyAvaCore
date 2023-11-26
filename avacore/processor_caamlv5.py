@@ -28,6 +28,7 @@ from avacore.avabulletin import (
     Region,
     Elevation,
     Texts,
+    Tendency,
     ValidTime,
 )
 from avacore.avabulletins import Bulletins
@@ -39,7 +40,6 @@ XLINK_NS = "{http://www.w3.org/1999/xlink}"
 
 
 def et_add_parent_info(element_tree):
-
     """Add Parent-Info to structure an ElementTree"""
 
     for child in element_tree:
@@ -48,7 +48,6 @@ def et_add_parent_info(element_tree):
 
 
 def et_get_parent(element_tree):
-
     """get Parent-Info from ElementTree, when parent Info was added previously."""
 
     if "__my_parent__" in element_tree.attrib:
@@ -73,7 +72,7 @@ class Processor(XmlProcessor):
                     pm_available = True
                     break
 
-            wxSynopsis = Texts()
+            weatherForecast = Texts()
             avalancheActivity = Texts()
             snowpackStructure = Texts()
 
@@ -177,7 +176,7 @@ class Processor(XmlProcessor):
                     problem.elevation = elevation
                     problem.aspects = aspect
                     if comment_r != "":
-                        problem.terrainFeature = comment_r
+                        problem.comment = comment_r
                     report.avalancheProblems.append(problem)
 
                 for avActivityHighlights in observations.iter(
@@ -190,7 +189,9 @@ class Processor(XmlProcessor):
                 for wxSynopsisComment in observations.iter(
                     CAAML_NS + "wxSynopsisComment"
                 ):
-                    wxSynopsis.comment = wxSynopsisComment.text.replace("&nbsp;", "\n")
+                    weatherForecast.comment = wxSynopsisComment.text.replace(
+                        "&nbsp;", "\n"
+                    )
                 for avActivityComment in observations.iter(
                     CAAML_NS + "avActivityComment"
                 ):
@@ -207,11 +208,15 @@ class Processor(XmlProcessor):
                         )
                 for tendencyComment in observations.iter(CAAML_NS + "tendencyComment"):
                     if tendencyComment.text is not None:
-                        report.tendency.tendencyComment = tendencyComment.text.replace(
-                            "&nbsp;", "\n"
-                        )
+                        report.tendency = [
+                            Tendency(
+                                comment=tendencyComment.text.replace(
+                                    "&nbsp;", "\n"
+                                )
+                            )
+                        ]
 
-            report.wxSynopsis = wxSynopsis
+            report.weatherForecast = weatherForecast
             report.avalancheActivity = avalancheActivity
             report.snowpackStructure = snowpackStructure
 
@@ -284,7 +289,7 @@ class VorarlbergProcessor(XmlProcessor):
                         report.avalancheActivityHighlights = highlights.text
                     for comment in bulletinResultsOf.iter(CAAML_NS + "comment"):
                         if comment_empty:
-                            report.tendency.tendencyComment = comment.text
+                            report.tendency = [Tendency(comment=comment.text)]
                             comment_empty = 0
                     for wxSynopsisComment in bulletinResultsOf.iter(
                         CAAML_NS + "wxSynopsisComment"
@@ -340,7 +345,7 @@ class VorarlbergProcessor(XmlProcessor):
                         # problem_danger_rating.elevation.auto_select(valid_elevation)
                         problem = AvalancheProblem()
                         problem.aspects = aspect
-                        problem.elevation.auto_select(valid_elevation)
+                        problem.elevation = Elevation().auto_select(valid_elevation)
                         problem.add_problemType(type_r)
                         # problem.dangerRating = problem_danger_rating
                         report.avalancheProblems.append(problem)
@@ -428,7 +433,6 @@ class VorarlbergProcessor(XmlProcessor):
                     .elevation.toString()
                     == loc_elem[3].elevation.toString()
                 ):
-
                     reports[report_elem_number].dangerRatings.append(loc_elem[3])
                 del_index.append(index)
 
@@ -492,7 +496,7 @@ class BavariaProcessor(Processor):
                         tzinfo=tzinfo
                     )
 
-        wxSynopsis = Texts()
+        weatherForecast = Texts()
         avalancheActivity = Texts()
         snowpackStructure = Texts()
 
@@ -505,9 +509,9 @@ class BavariaProcessor(Processor):
             for wxSynopsisComment in bulletinMeasurements.iter(
                 CAAML_NS + "wxSynopsisComment"
             ):
-                wxSynopsis.comment = wxSynopsisComment.text
-                if isinstance(wxSynopsis.comment, str):
-                    wxSynopsis.comment = wxSynopsis.comment.strip()
+                weatherForecast.comment = wxSynopsisComment.text
+                if isinstance(weatherForecast.comment, str):
+                    weatherForecast.comment = weatherForecast.comment.strip()
             for snowpackStructureComment in bulletinMeasurements.iter(
                 CAAML_NS + "snowpackStructureComment"
             ):
@@ -558,13 +562,13 @@ class BavariaProcessor(Processor):
                 problem = AvalancheProblem()
                 problem.add_problemType(type_r)
                 problem.aspects = aspect
-                problem.elevation.auto_select(valid_elevation)
+                problem.elevation = Elevation().auto_select(valid_elevation)
 
                 report.avalancheProblems.append(problem)
 
         report.avalancheActivity = avalancheActivity
         report.snowpackStructure = snowpackStructure
-        report.wxSynopsis = wxSynopsis
+        report.weatherForecast = weatherForecast
 
         for bulletinResultOf in root.iter(CAAML_NS + "bulletinResultsOf"):
             et_add_parent_info(bulletinResultOf)
@@ -729,7 +733,7 @@ class SloveniaProcessor(XmlProcessor):
             for dangerRating in root.iterfind(f".//{CAAML_NS}DangerRating")
         )
         for bulletin in bulletins.bulletins:
-            bulletin.wxSynopsis = Texts(
+            bulletin.weatherForecast = Texts(
                 highlights=root.findtext(f".//{CAAML_NS}wxSynopsisHighlights"),
                 comment=root.findtext(f".//{CAAML_NS}wxSynopsisComment"),
             )

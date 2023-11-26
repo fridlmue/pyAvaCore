@@ -1,4 +1,3 @@
-from pathlib import Path
 from avacore.processor_pl_12 import Processor
 
 from tests import SnowTest

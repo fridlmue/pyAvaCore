@@ -1,5 +1,4 @@
 from avacore.processor_is import Processor
-import xml.etree.ElementTree as ET
 
 from tests import SnowTest
 

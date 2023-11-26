@@ -1,0 +1,1082 @@
+{
+  "bulletins": [
+    {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "The new snow and wind slabs of the last two days can still be released in some cases. As a consequence of a strengthening westerly wind, sometimes avalanche prone wind slabs will form on Monday as well. Even single winter sport participants can release avalanches, including dangerously large ones. Backcountry touring calls for experience in the assessment of avalanche danger.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"considerable\" (3=) in all aspects above 2000m. Other slopes about one danger level less.",
+              "subdivision": "neutral"
+            }
+          },
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "problemType": "new_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-A",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "new_snow"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "Gadmertal",
+          "regionID": "CH-1246"
+        },
+        {
+          "name": "Engelberg",
+          "regionID": "CH-2122"
+        },
+        {
+          "name": "Bisistal",
+          "regionID": "CH-2134"
+        },
+        {
+          "name": "Sch\u00e4chental",
+          "regionID": "CH-2211"
+        },
+        {
+          "name": "Uri Rot Stock",
+          "regionID": "CH-2212"
+        },
+        {
+          "name": "Meiental",
+          "regionID": "CH-2221"
+        },
+        {
+          "name": "Maderanertal",
+          "regionID": "CH-2222"
+        },
+        {
+          "name": "n\u00f6rdliches Urseren",
+          "regionID": "CH-2223"
+        },
+        {
+          "name": "Glarus S\u00fcd-Grosstal",
+          "regionID": "CH-3112"
+        },
+        {
+          "name": "Glarus S\u00fcd-Sernftal",
+          "regionID": "CH-3113"
+        },
+        {
+          "name": "Glarus Mitte",
+          "regionID": "CH-3114"
+        },
+        {
+          "name": "Alpstein - Alvier",
+          "regionID": "CH-3222"
+        },
+        {
+          "name": "Flumserberg",
+          "regionID": "CH-3223"
+        },
+        {
+          "name": "Sarganserland",
+          "regionID": "CH-3224"
+        },
+        {
+          "name": "Liechtenstein",
+          "regionID": "CH-3311"
+        },
+        {
+          "name": "n\u00f6rdliches Pr\u00e4ttigau",
+          "regionID": "CH-5111"
+        },
+        {
+          "name": "s\u00fcdliches Pr\u00e4ttigau",
+          "regionID": "CH-5112"
+        },
+        {
+          "name": "westliche Silvretta",
+          "regionID": "CH-5113"
+        },
+        {
+          "name": "Calanda",
+          "regionID": "CH-5121"
+        },
+        {
+          "name": "Davos",
+          "regionID": "CH-5123"
+        },
+        {
+          "name": "Flims",
+          "regionID": "CH-5124"
+        },
+        {
+          "name": "n\u00f6rdliches Tujetsch",
+          "regionID": "CH-5211"
+        },
+        {
+          "name": "Samnaun",
+          "regionID": "CH-7121"
+        },
+        {
+          "name": "\u00f6stliche Silvretta",
+          "regionID": "CH-7122"
+        },
+        {
+          "name": "Sur Tasna",
+          "regionID": "CH-7123"
+        },
+        {
+          "name": "Val Suot",
+          "regionID": "CH-7124"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Fresh and somewhat older wind slabs are in some cases still prone to triggering. Single winter sport participants can release avalanches. These can reach medium size. Off-piste activities call for experience in the assessment of avalanche danger.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"considerable\" (3-) in all aspects above 2200m. Other slopes about one danger level less.",
+              "subdivision": "minus"
+            }
+          },
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-B",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "wind_slab"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus"
+            }
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "s\u00fcdliches Urseren",
+          "regionID": "CH-2224"
+        },
+        {
+          "name": "Conthey-Fully",
+          "regionID": "CH-4114"
+        },
+        {
+          "name": "Montana",
+          "regionID": "CH-4121"
+        },
+        {
+          "name": "Leukerbad - L\u00f6tschental",
+          "regionID": "CH-4211"
+        },
+        {
+          "name": "Konkordia Gebiet",
+          "regionID": "CH-4213"
+        },
+        {
+          "name": "Riederalp",
+          "regionID": "CH-4214"
+        },
+        {
+          "name": "Leuk",
+          "regionID": "CH-4215"
+        },
+        {
+          "name": "Reckingen",
+          "regionID": "CH-4241"
+        },
+        {
+          "name": "n\u00f6rdliches Obergoms",
+          "regionID": "CH-4243"
+        },
+        {
+          "name": "s\u00fcdliches Obergoms",
+          "regionID": "CH-4244"
+        },
+        {
+          "name": "Schanfigg",
+          "regionID": "CH-5122"
+        },
+        {
+          "name": "s\u00fcdliches Tujetsch",
+          "regionID": "CH-5212"
+        },
+        {
+          "name": "Obersaxen - Safiental",
+          "regionID": "CH-5214"
+        },
+        {
+          "name": "Val Sumvitg",
+          "regionID": "CH-5215"
+        },
+        {
+          "name": "Domleschg - Lenzerheide",
+          "regionID": "CH-5221"
+        },
+        {
+          "name": "Schams",
+          "regionID": "CH-5222"
+        },
+        {
+          "name": "Albulatal",
+          "regionID": "CH-5231"
+        },
+        {
+          "name": "Savognin",
+          "regionID": "CH-5232"
+        },
+        {
+          "name": "Bivio",
+          "regionID": "CH-5234"
+        },
+        {
+          "name": "Bedrettotal",
+          "regionID": "CH-6111"
+        },
+        {
+          "name": "obere Leventina",
+          "regionID": "CH-6112"
+        },
+        {
+          "name": "Zuoz",
+          "regionID": "CH-7113"
+        },
+        {
+          "name": "St. Moritz",
+          "regionID": "CH-7114"
+        },
+        {
+          "name": "Val dal Sp\u00f6l",
+          "regionID": "CH-7125"
+        },
+        {
+          "name": "Val S-charl",
+          "regionID": "CH-7126"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "The new snow and wind slabs of the last two days are in some cases still prone to triggering. As a consequence of westerly wind, mostly small wind slabs will form on Monday. Single winter sport participants can release avalanches, including medium-sized ones. Off-piste activities call for experience in the assessment of avalanche danger.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"considerable\" (3-) in all aspects above 2000m. Other slopes about one danger level less.",
+              "subdivision": "minus"
+            }
+          },
+          "dangerRatingValue": "considerable",
+          "elevation": {
+            "lowerBound": "2000"
+          },
+          "problemType": "new_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-C",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "new_snow"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "minus"
+            }
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "Pays d'Enhaut",
+          "regionID": "CH-1112"
+        },
+        {
+          "name": "Aigle-Leysin",
+          "regionID": "CH-1113"
+        },
+        {
+          "name": "Bex-Villars",
+          "regionID": "CH-1114"
+        },
+        {
+          "name": "Hohgant",
+          "regionID": "CH-1213"
+        },
+        {
+          "name": "Gstaad",
+          "regionID": "CH-1222"
+        },
+        {
+          "name": "Wildhorn",
+          "regionID": "CH-1223"
+        },
+        {
+          "name": "Lenk",
+          "regionID": "CH-1224"
+        },
+        {
+          "name": "Iffigen",
+          "regionID": "CH-1225"
+        },
+        {
+          "name": "Adelboden",
+          "regionID": "CH-1226"
+        },
+        {
+          "name": "Engstligen",
+          "regionID": "CH-1227"
+        },
+        {
+          "name": "Obersimmental",
+          "regionID": "CH-1228"
+        },
+        {
+          "name": "Kandersteg",
+          "regionID": "CH-1231"
+        },
+        {
+          "name": "Bl\u00fcemlisalp",
+          "regionID": "CH-1232"
+        },
+        {
+          "name": "Lauterbrunnen",
+          "regionID": "CH-1233"
+        },
+        {
+          "name": "Jungfrau - Schilthorn",
+          "regionID": "CH-1234"
+        },
+        {
+          "name": "Brienz-Interlaken",
+          "regionID": "CH-1241"
+        },
+        {
+          "name": "Grindelwald",
+          "regionID": "CH-1242"
+        },
+        {
+          "name": "Schreckhorn",
+          "regionID": "CH-1243"
+        },
+        {
+          "name": "Hasliberg - Rosenlaui",
+          "regionID": "CH-1244"
+        },
+        {
+          "name": "Guttannen",
+          "regionID": "CH-1245"
+        },
+        {
+          "name": "Grimselpass",
+          "regionID": "CH-1247"
+        },
+        {
+          "name": "Pilatus",
+          "regionID": "CH-2111"
+        },
+        {
+          "name": "Glaubenberg",
+          "regionID": "CH-2121"
+        },
+        {
+          "name": "Melchtal",
+          "regionID": "CH-2123"
+        },
+        {
+          "name": "Gersau",
+          "regionID": "CH-2124"
+        },
+        {
+          "name": "Ybrig",
+          "regionID": "CH-2132"
+        },
+        {
+          "name": "Stoos",
+          "regionID": "CH-2133"
+        },
+        {
+          "name": "Glarus Nord",
+          "regionID": "CH-3111"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "comment": "Fresh and somewhat older wind slabs are in some cases prone to triggering. Avalanche prone locations are to be found in particular in gullies and bowls, and behind abrupt changes in the terrain. The number and size of avalanche prone locations will increase with altitude. The wind slabs are to be evaluated with care and prudence in steep terrain.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"moderate\" (2=) in all aspects above 2200m. Other slopes about one danger level less.",
+              "subdivision": "neutral"
+            }
+          },
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-D",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "wind_slab"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "Monthey-Val d'Illiez",
+          "regionID": "CH-1312"
+        },
+        {
+          "name": "Emosson",
+          "regionID": "CH-4111"
+        },
+        {
+          "name": "G\u00e9n\u00e9pi",
+          "regionID": "CH-4112"
+        },
+        {
+          "name": "Val d'Entremont-Val Ferret",
+          "regionID": "CH-4113"
+        },
+        {
+          "name": "Martigny-Verbier",
+          "regionID": "CH-4115"
+        },
+        {
+          "name": "Haut Val de Bagnes",
+          "regionID": "CH-4116"
+        },
+        {
+          "name": "Val d'H\u00e9rens",
+          "regionID": "CH-4122"
+        },
+        {
+          "name": "Arolla",
+          "regionID": "CH-4123"
+        },
+        {
+          "name": "Val d'Anniviers",
+          "regionID": "CH-4124"
+        },
+        {
+          "name": "Mountet",
+          "regionID": "CH-4125"
+        },
+        {
+          "name": "Turtmanntal",
+          "regionID": "CH-4212"
+        },
+        {
+          "name": "untere Vispert\u00e4ler",
+          "regionID": "CH-4221"
+        },
+        {
+          "name": "Zermatt",
+          "regionID": "CH-4222"
+        },
+        {
+          "name": "Saas Fee",
+          "regionID": "CH-4223"
+        },
+        {
+          "name": "Monte Rosa",
+          "regionID": "CH-4224"
+        },
+        {
+          "name": "Mattmark",
+          "regionID": "CH-4225"
+        },
+        {
+          "name": "n\u00f6rdliches Simplon Gebiet",
+          "regionID": "CH-4231"
+        },
+        {
+          "name": "s\u00fcdliches Simplon Gebiet",
+          "regionID": "CH-4232"
+        },
+        {
+          "name": "Binntal",
+          "regionID": "CH-4242"
+        },
+        {
+          "name": "Zervreila",
+          "regionID": "CH-5216"
+        },
+        {
+          "name": "Rheinwald",
+          "regionID": "CH-5223"
+        },
+        {
+          "name": "Avers",
+          "regionID": "CH-5233"
+        },
+        {
+          "name": "Bleniotal",
+          "regionID": "CH-6113"
+        },
+        {
+          "name": "obere Maggiat\u00e4ler",
+          "regionID": "CH-6114"
+        },
+        {
+          "name": "untere Leventina",
+          "regionID": "CH-6115"
+        },
+        {
+          "name": "alto Moesano",
+          "regionID": "CH-6211"
+        },
+        {
+          "name": "basso Moesano",
+          "regionID": "CH-6212"
+        },
+        {
+          "name": "Corvatsch",
+          "regionID": "CH-7111"
+        },
+        {
+          "name": "Bernina",
+          "regionID": "CH-7112"
+        },
+        {
+          "name": "Val Chamuera",
+          "regionID": "CH-7115"
+        },
+        {
+          "name": "Bergell",
+          "regionID": "CH-7211"
+        },
+        {
+          "name": "oberes Puschlav",
+          "regionID": "CH-7221"
+        },
+        {
+          "name": "unteres Puschlav",
+          "regionID": "CH-7222"
+        },
+        {
+          "name": "M\u00fcnstertal",
+          "regionID": "CH-7231"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW"
+          ],
+          "comment": "As a consequence of westerly wind, mostly small wind slabs will form on Monday. Fresh and somewhat older wind slabs are in some cases prone to triggering. The avalanche prone locations are to be found in particular in gullies and bowls, and behind abrupt changes in the terrain and generally at elevated altitudes. The avalanches can in isolated cases reach medium size.\nThe wind slabs are to be evaluated with care and prudence in steep terrain.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": "Danger level \"moderate\" (2=) in north to south to southwest facing aspects above 1800m. Other slopes about one danger level less.",
+              "subdivision": "neutral"
+            }
+          },
+          "dangerRatingValue": "moderate",
+          "elevation": {
+            "lowerBound": "1800"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-E",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "wind_slab"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": "neutral"
+            }
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "Waadtl\u00e4nder Voralpen",
+          "regionID": "CH-1111"
+        },
+        {
+          "name": "Jaun",
+          "regionID": "CH-1121"
+        },
+        {
+          "name": "Niedersimmental",
+          "regionID": "CH-1221"
+        },
+        {
+          "name": "Vouvry",
+          "regionID": "CH-1311"
+        },
+        {
+          "name": "Appenzeller Alpen",
+          "regionID": "CH-3211"
+        },
+        {
+          "name": "Toggenburg",
+          "regionID": "CH-3221"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "comment": "Individual avalanche prone locations are to be found in particular in extremely steep terrain at elevated altitudes. Restraint should be exercised because avalanches can sweep people along and give rise to falls.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": null
+            }
+          },
+          "dangerRatingValue": "low",
+          "problemType": "no_distinct_avalanche_problem",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-F",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "no_distinct_avalanche_problem"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": null
+            }
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "untere Maggiat\u00e4ler",
+          "regionID": "CH-6121"
+        },
+        {
+          "name": "Riviera",
+          "regionID": "CH-6122"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "comment": "Only a little snow is lying. As a consequence of a strong westerly wind, small wind slabs will form. They are to be evaluated with care and prudence in particular in extremely steep terrain. Restraint should be exercised because avalanches can sweep people along and give rise to falls.\nThe Avalanche Warning Service currently has only a small amount of information that has been collected in the field, so that the avalanche danger should be investigated especially thoroughly in the relevant locality.",
+          "customData": {
+            "CH": {
+              "coreZoneText": null
+            }
+          },
+          "dangerRatingValue": "low",
+          "problemType": "wind_slab",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "52838-G",
+      "customData": {
+        "CH": {
+          "aggregation": [
+            {
+              "category": "dry",
+              "problemTypes": [
+                "wind_slab"
+              ],
+              "validTimePeriod": "all_day"
+            }
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "customData": {
+            "CH": {
+              "subdivision": null
+            }
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "Considerable avalanche danger will be encountered over a wide area.",
+      "lang": "en",
+      "nextUpdate": "2023-11-27T16:00:00+00:00",
+      "regions": [
+        {
+          "name": "Gruy\u00e8re",
+          "regionID": "CH-1122"
+        },
+        {
+          "name": "westliche Berner Voralpen",
+          "regionID": "CH-1211"
+        },
+        {
+          "name": "\u00f6stliche Berner Voralpen",
+          "regionID": "CH-1212"
+        },
+        {
+          "name": "Schwarzenberg",
+          "regionID": "CH-2112"
+        },
+        {
+          "name": "Rothenthurm",
+          "regionID": "CH-2131"
+        },
+        {
+          "name": "Saint-Cergue",
+          "regionID": "CH-8111"
+        },
+        {
+          "name": "Vall\u00e9e de Joux",
+          "regionID": "CH-8112"
+        },
+        {
+          "name": "Yverdon - Bevaix",
+          "regionID": "CH-8113"
+        },
+        {
+          "name": "Val de Ruz - Colombier",
+          "regionID": "CH-8211"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "<h1>Snowpack</h1><p>The fresh fallen snow of the last two days has been intensively transported by strong to storm-strength winds from northerly directions. Fresh snow and freshly generated snowdrift accumulations were frequently deposited on top of a relatively unfavourable old snowpack surface. In more deeply embedded layers inside the snow cover, crusts have been generated as a consequence of repeated bouts of rainfall and subsequently descending temperatures. These layers are predominantly compact and stable. However, above approximately 2600 m there is an expansively metamorphosed (faceted) layer wedged between generally thin crusts which constitutes a potentially weak layer.</p>"
+      },
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "<h1>Outlook through Wednesday, 29.11.2023</h1><h2>Tuesday</h2><p>In the northern regions, snowfall is anticipated down to low lying areas, accompanied by strong to storm-velocity northwesterly winds. Most of the snowfall is expected on the northern Alpine Ridge: 30 to 60 cm. Avalanche danger levels are expected to increase, significantly so in the major areas of precipitation.  <br/>  On the southern flank of the Alps only a small amount of snowfall is anticipated. In the furthermost southern regions it will remain dry and predominantly sunny. Avalanche danger is not expected to change significantly.</p><h2>Wednesday</h2><p>On Tuesday night the precipitation will come to an end. During the daytime hours on Wednesday it will temporarily be predominantly sunny in all regions of Switzerland. Winds are expected to slacken off somewhat, nevertheless at high altitudes still be blowing at moderate to strong velocity from westerly directions. Avalanche danger levels will decrease somewhat, however the situation in the major areas of precipitation will still remain critical for snow sports in outlying terrain away from secured ski pistes.</p>"
+        }
+      ],
+      "unscheduled": false,
+      "validTime": {
+        "endTime": "2023-11-27T16:00:00+00:00",
+        "startTime": "2023-11-26T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "<h1>Weather forecast through Monday, 27.11.2023</h1><p>During the daytime hours, skies will in general be heavily overcast. During the afternoon in the western regions, a small amount of precipitation is anticipated from region to region. The snowfall level will lie between 800 and 1000 m.</p><h2>Fresh snow</h2><p>-</p><h2>Temperature</h2><p>At midday at 2000 m, between -2 \u00b0C in the northern regions and -6 \u00b0C in the southern regions.</p><h2>Wind</h2><p>Winds will be blowing from westerly to southwesterly directions,  <br/>  </p><ul>    <li>intensifying during the course of the day and blowing at moderate to strong velocity on the northern flank of the Alps and in general at heightened altitudes;</li>    <li>blowing at light to moderate strength on the southern flank of the Alps.</li>  </ul>"
+      },
+      "weatherReview": {
+        "comment": "<h1>Observed weather review Sunday, 26.11.2023</h1><p>It was already sunny in early morning in the western and the southern regions, while in northeastern regions the last bit of snowfall was registered. During the daytime hours it then remained generally dry and turned increasingly sunny from the west. In the eastern sector of the northern flank of the Alps, however, skies remained overcast.</p><h2>Fresh snow</h2><p>The snowfall level lay below 500 m. Between Saturday midday and Sunday midday the following amounts of fresh snow were registered:  </p><ul>    <li>Urner and Glarus Alps, upper Pr\u00e4ttigau: 30 to 50 cm;</li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 15 to 30 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul> <p> Thus, the following overall amounts of snowfall have been registered since the beginning of this period of precipitation on Thursday night:  </p><ul>    <li>      Urner and Glarus Alps, upper Pr\u00e4ttigau, Silvretta: 50 to 80 cm:      <br/>    </li>    <li>remaining parts of northern Alpine Ridge, remaining parts of northern Grisons: generally 30 to 50 cm;</li>    <li>further towards the north and towards the south, less; in the Jura region, along the Prealps, from southern Valais over northern Ticino into the southern part of Upper Engadine: 5 to 15 cm;</li>    <li>      in the other regions of Switzerland, less; in the furthermost southern regions it remained dry.      <br/>    </li>  </ul><h2>Temperature</h2><p>At midday at 2000 m, between -8 \u00b0C in the northern regions and -2 \u00b0C in the furthermost southern regions.</p><h2>Wind</h2><p>Winds were blowing from northerly to northwesterly directions,  </p><ul>    <li>predominantly at strong velocity at high altitudes until Sunday morning;</li>    <li>slackening off during the course of the day, blowing at light strength, at high altitudes mostly at moderate strength.</li>  </ul>"
+      }
+    }
+  ]
+}

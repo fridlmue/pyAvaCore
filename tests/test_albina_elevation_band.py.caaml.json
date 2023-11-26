@@ -1,168 +1,10 @@
 {
   "bulletins": [
     {
-      "regions": [
-        {
-          "regionID": "AT-07-20"
-        },
-        {
-          "regionID": "AT-07-10"
-        },
-        {
-          "regionID": "AT-07-21"
-        },
-        {
-          "regionID": "AT-07-22"
-        },
-        {
-          "regionID": "AT-07-11"
-        },
-        {
-          "regionID": "AT-07-23"
-        },
-        {
-          "regionID": "AT-07-01"
-        },
-        {
-          "regionID": "AT-07-12"
-        },
-        {
-          "regionID": "AT-07-24"
-        },
-        {
-          "regionID": "AT-07-13"
-        },
-        {
-          "regionID": "AT-07-02"
-        },
-        {
-          "regionID": "AT-07-14"
-        },
-        {
-          "regionID": "AT-07-03"
-        },
-        {
-          "regionID": "AT-07-15"
-        },
-        {
-          "regionID": "AT-07-04"
-        },
-        {
-          "regionID": "AT-07-16"
-        },
-        {
-          "regionID": "AT-07-07"
-        },
-        {
-          "regionID": "AT-07-08"
-        },
-        {
-          "regionID": "AT-07-19"
-        },
-        {
-          "regionID": "AT-07-09"
-        },
-        {
-          "regionID": "AT-07-20"
-        },
-        {
-          "regionID": "AT-07-10"
-        },
-        {
-          "regionID": "AT-07-21"
-        },
-        {
-          "regionID": "AT-07-22"
-        },
-        {
-          "regionID": "AT-07-11"
-        },
-        {
-          "regionID": "AT-07-23"
-        },
-        {
-          "regionID": "AT-07-01"
-        },
-        {
-          "regionID": "AT-07-12"
-        },
-        {
-          "regionID": "AT-07-24"
-        },
-        {
-          "regionID": "AT-07-13"
-        },
-        {
-          "regionID": "AT-07-02"
-        },
-        {
-          "regionID": "AT-07-14"
-        },
-        {
-          "regionID": "AT-07-03"
-        },
-        {
-          "regionID": "AT-07-15"
-        },
-        {
-          "regionID": "AT-07-04"
-        },
-        {
-          "regionID": "AT-07-16"
-        },
-        {
-          "regionID": "AT-07-07"
-        },
-        {
-          "regionID": "AT-07-08"
-        },
-        {
-          "regionID": "AT-07-19"
-        },
-        {
-          "regionID": "AT-07-09"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-12-28T23:00:00+00:00",
-        "endTime": "2021-12-29T23:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. Caution is to be exercised above the tree line. Fresh wind slabs are mostly small but can in some cases be released easily, in particular in the west and in the north. <br/> Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. Wet avalanches can release the saturated snowpack and reach large size. This applies in all aspects between approximately 1900 and 2400 m. Below the tree line a little snow is lying. Slides are to be expected on cut slopes. The peak danger point will be reached during the night. <br/> As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. This applies above approximately 2400 m. Such avalanche prone locations are sometimes covered with new snow and are therefore difficult to recognise. Single winter sport participants can release avalanches easily, including large ones. At elevated altitudes these avalanche prone locations are more prevalent and larger. Medium-sized and, in isolated cases, large natural avalanches are to be expected as the snowfall becomes more intense.",
+        "highlights": "Significant increase in danger of dry and wet avalanches as the precipitation becomes more intense. Dry avalanches above approximately 2400 m. Wet and gliding avalanches below approximately 2400 m. Danger level 4 (high) will be reached during the night probably."
       },
-      "source": {
-        "provider": {
-          "name": "Lawinenwarndienst Tirol",
-          "website": "https://avalanche.report/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "lowerBound": "treeline"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "treeline"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "1900"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "high"
-        },
-        {
-          "elevation": {
-            "upperBound": "1900"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "aspects": [
@@ -231,9 +73,7 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Up to 2400 m rain will fall on Thursday in some regions, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
-      },
+      "bulletinID": "178ed2f5-9e29-4495-b34b-3a355390895b",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -242,124 +82,161 @@
           ]
         }
       },
-      "bulletinID": "178ed2f5-9e29-4495-b34b-3a355390895b",
-      "publicationTime": "2021-12-29T07:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Significant increase in danger of dry and wet avalanches as the precipitation becomes more intense. Dry avalanches above approximately 2400 m. Wet and gliding avalanches below approximately 2400 m. Danger level 4 (high) will be reached during the night probably.",
-        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. Caution is to be exercised above the tree line. Fresh wind slabs are mostly small but can in some cases be released easily, in particular in the west and in the north. <br/> Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. Wet avalanches can release the saturated snowpack and reach large size. This applies in all aspects between approximately 1900 and 2400 m. Below the tree line a little snow is lying. Slides are to be expected on cut slopes. The peak danger point will be reached during the night. <br/> As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. This applies above approximately 2400 m. Such avalanche prone locations are sometimes covered with new snow and are therefore difficult to recognise. Single winter sport participants can release avalanches easily, including large ones. At elevated altitudes these avalanche prone locations are more prevalent and larger. Medium-sized and, in isolated cases, large natural avalanches are to be expected as the snowfall becomes more intense."
-      },
-      "snowpackStructure": {
-        "comment": "Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night. <br/> Over a wide area 40 to 60 cm of snow, and even more in some localities, will fall above approximately 2400 m. This applies in particular in the Verwall Mountains and in the Deferegger Alps. As a consequence of heavy snowfall and the storm force westerly wind, fresh snow drift accumulations will form from the middle of the day."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "IT-32-BZ-10"
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
         },
         {
-          "regionID": "IT-32-BZ-11"
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
         },
         {
-          "regionID": "IT-32-BZ-12"
+          "elevation": {
+            "lowerBound": "1900"
+          },
+          "mainValue": "high",
+          "validTimePeriod": "later"
         },
         {
-          "regionID": "IT-32-BZ-01"
-        },
-        {
-          "regionID": "IT-32-BZ-13"
-        },
-        {
-          "regionID": "IT-32-BZ-02"
-        },
-        {
-          "regionID": "IT-32-BZ-14"
-        },
-        {
-          "regionID": "IT-32-BZ-03"
-        },
-        {
-          "regionID": "IT-32-BZ-04"
-        },
-        {
-          "regionID": "IT-32-BZ-05"
-        },
-        {
-          "regionID": "IT-32-BZ-06"
-        },
-        {
-          "regionID": "AT-07-25"
-        },
-        {
-          "regionID": "IT-32-BZ-07"
-        },
-        {
-          "regionID": "AT-07-26"
-        },
-        {
-          "regionID": "AT-07-27"
-        },
-        {
-          "regionID": "IT-32-BZ-09"
-        },
-        {
-          "regionID": "AT-07-28"
-        },
-        {
-          "regionID": "IT-32-BZ-10"
-        },
-        {
-          "regionID": "IT-32-BZ-11"
-        },
-        {
-          "regionID": "IT-32-BZ-12"
-        },
-        {
-          "regionID": "IT-32-BZ-01"
-        },
-        {
-          "regionID": "IT-32-BZ-13"
-        },
-        {
-          "regionID": "IT-32-BZ-02"
-        },
-        {
-          "regionID": "IT-32-BZ-14"
-        },
-        {
-          "regionID": "IT-32-BZ-03"
-        },
-        {
-          "regionID": "IT-32-BZ-04"
-        },
-        {
-          "regionID": "IT-32-BZ-05"
-        },
-        {
-          "regionID": "IT-32-BZ-06"
-        },
-        {
-          "regionID": "AT-07-25"
-        },
-        {
-          "regionID": "IT-32-BZ-07"
-        },
-        {
-          "regionID": "AT-07-26"
-        },
-        {
-          "regionID": "AT-07-27"
-        },
-        {
-          "regionID": "IT-32-BZ-09"
-        },
-        {
-          "regionID": "AT-07-28"
+          "elevation": {
+            "upperBound": "1900"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-28T23:00:00+00:00",
-        "endTime": "2021-12-29T23:00:00+00:00"
+      "publicationTime": "2021-12-29T07:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "AT-07-20"
+        },
+        {
+          "regionID": "AT-07-10"
+        },
+        {
+          "regionID": "AT-07-21"
+        },
+        {
+          "regionID": "AT-07-22"
+        },
+        {
+          "regionID": "AT-07-11"
+        },
+        {
+          "regionID": "AT-07-23"
+        },
+        {
+          "regionID": "AT-07-01"
+        },
+        {
+          "regionID": "AT-07-12"
+        },
+        {
+          "regionID": "AT-07-24"
+        },
+        {
+          "regionID": "AT-07-13"
+        },
+        {
+          "regionID": "AT-07-02"
+        },
+        {
+          "regionID": "AT-07-14"
+        },
+        {
+          "regionID": "AT-07-03"
+        },
+        {
+          "regionID": "AT-07-15"
+        },
+        {
+          "regionID": "AT-07-04"
+        },
+        {
+          "regionID": "AT-07-16"
+        },
+        {
+          "regionID": "AT-07-07"
+        },
+        {
+          "regionID": "AT-07-08"
+        },
+        {
+          "regionID": "AT-07-19"
+        },
+        {
+          "regionID": "AT-07-09"
+        },
+        {
+          "regionID": "AT-07-20"
+        },
+        {
+          "regionID": "AT-07-10"
+        },
+        {
+          "regionID": "AT-07-21"
+        },
+        {
+          "regionID": "AT-07-22"
+        },
+        {
+          "regionID": "AT-07-11"
+        },
+        {
+          "regionID": "AT-07-23"
+        },
+        {
+          "regionID": "AT-07-01"
+        },
+        {
+          "regionID": "AT-07-12"
+        },
+        {
+          "regionID": "AT-07-24"
+        },
+        {
+          "regionID": "AT-07-13"
+        },
+        {
+          "regionID": "AT-07-02"
+        },
+        {
+          "regionID": "AT-07-14"
+        },
+        {
+          "regionID": "AT-07-03"
+        },
+        {
+          "regionID": "AT-07-15"
+        },
+        {
+          "regionID": "AT-07-04"
+        },
+        {
+          "regionID": "AT-07-16"
+        },
+        {
+          "regionID": "AT-07-07"
+        },
+        {
+          "regionID": "AT-07-08"
+        },
+        {
+          "regionID": "AT-07-19"
+        },
+        {
+          "regionID": "AT-07-09"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night. <br/> Over a wide area 40 to 60 cm of snow, and even more in some localities, will fall above approximately 2400 m. This applies in particular in the Verwall Mountains and in the Deferegger Alps. As a consequence of heavy snowfall and the storm force westerly wind, fresh snow drift accumulations will form from the middle of the day."
       },
       "source": {
         "provider": {
@@ -367,36 +244,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        },
-        {
-          "elevation": {
-            "upperBound": "2400"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
+          "comment": "Up to 2400 m rain will fall on Thursday in some regions, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
         }
       ],
+      "validTime": {
+        "endTime": "2021-12-29T23:00:00+00:00",
+        "startTime": "2021-12-28T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> Significant increase in avalanche danger as the precipitation becomes more intense. As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. Single winter sport participants can release avalanches easily, including large ones. The avalanche-prone wind slabs will be covered with new snow in some cases and therefore difficult to recognise. At elevated altitudes these avalanche prone locations are more prevalent and larger. <br/> As the snowfall level rises wet and gliding avalanches are to be expected, in particular on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach quite a large size. The peak danger point is expected during the night probably. In the regions where rain falls the avalanche danger is greater. <br/>",
+        "highlights": "Significant increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -447,9 +309,7 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Up to 2200 m and above rain will fall on Thursday in the north and in the northeast, this applies in particular until the early morning. As a consequence of the ceasing of precipitation there will be a decrease in the danger of wet and gliding avalanches. As a consequence of solar radiation loose snow avalanches are to be expected. The danger of dry avalanches will persist."
-      },
+      "bulletinID": "ccb43d8b-3121-4857-9dd1-85a78ba6cd41",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -458,46 +318,143 @@
           ]
         }
       },
-      "bulletinID": "ccb43d8b-3121-4857-9dd1-85a78ba6cd41",
-      "publicationTime": "2021-12-29T07:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Significant increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m.",
-        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> Significant increase in avalanche danger as the precipitation becomes more intense. As a consequence of new snow and stormy weather the wind slabs will increase in size appreciably as the day progresses. Single winter sport participants can release avalanches easily, including large ones. The avalanche-prone wind slabs will be covered with new snow in some cases and therefore difficult to recognise. At elevated altitudes these avalanche prone locations are more prevalent and larger. <br/> As the snowfall level rises wet and gliding avalanches are to be expected, in particular on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach quite a large size. The peak danger point is expected during the night probably. In the regions where rain falls the avalanche danger is greater. <br/>"
-      },
-      "snowpackStructure": {
-        "comment": "As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. In the regions neighbouring those that are subject to danger level 4 (high) 20 to 40 cm of snow will fall. In the other regions 15 to 30 cm of snow will fall. The fresh wind slabs are prone to triggering. <br/> The rain will give rise in the afternoon to increasing and thorough wetting of the old snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "AT-07-05"
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
         },
         {
-          "regionID": "AT-07-17"
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
         },
         {
-          "regionID": "AT-07-06"
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
         },
         {
-          "regionID": "AT-07-18"
-        },
-        {
-          "regionID": "AT-07-05"
-        },
-        {
-          "regionID": "AT-07-17"
-        },
-        {
-          "regionID": "AT-07-06"
-        },
-        {
-          "regionID": "AT-07-18"
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-28T23:00:00+00:00",
-        "endTime": "2021-12-29T23:00:00+00:00"
+      "publicationTime": "2021-12-29T07:00:00+00:00",
+      "regions": [
+        {
+          "regionID": "IT-32-BZ-10"
+        },
+        {
+          "regionID": "IT-32-BZ-11"
+        },
+        {
+          "regionID": "IT-32-BZ-12"
+        },
+        {
+          "regionID": "IT-32-BZ-01"
+        },
+        {
+          "regionID": "IT-32-BZ-13"
+        },
+        {
+          "regionID": "IT-32-BZ-02"
+        },
+        {
+          "regionID": "IT-32-BZ-14"
+        },
+        {
+          "regionID": "IT-32-BZ-03"
+        },
+        {
+          "regionID": "IT-32-BZ-04"
+        },
+        {
+          "regionID": "IT-32-BZ-05"
+        },
+        {
+          "regionID": "IT-32-BZ-06"
+        },
+        {
+          "regionID": "AT-07-25"
+        },
+        {
+          "regionID": "IT-32-BZ-07"
+        },
+        {
+          "regionID": "AT-07-26"
+        },
+        {
+          "regionID": "AT-07-27"
+        },
+        {
+          "regionID": "IT-32-BZ-09"
+        },
+        {
+          "regionID": "AT-07-28"
+        },
+        {
+          "regionID": "IT-32-BZ-10"
+        },
+        {
+          "regionID": "IT-32-BZ-11"
+        },
+        {
+          "regionID": "IT-32-BZ-12"
+        },
+        {
+          "regionID": "IT-32-BZ-01"
+        },
+        {
+          "regionID": "IT-32-BZ-13"
+        },
+        {
+          "regionID": "IT-32-BZ-02"
+        },
+        {
+          "regionID": "IT-32-BZ-14"
+        },
+        {
+          "regionID": "IT-32-BZ-03"
+        },
+        {
+          "regionID": "IT-32-BZ-04"
+        },
+        {
+          "regionID": "IT-32-BZ-05"
+        },
+        {
+          "regionID": "IT-32-BZ-06"
+        },
+        {
+          "regionID": "AT-07-25"
+        },
+        {
+          "regionID": "IT-32-BZ-07"
+        },
+        {
+          "regionID": "AT-07-26"
+        },
+        {
+          "regionID": "AT-07-27"
+        },
+        {
+          "regionID": "IT-32-BZ-09"
+        },
+        {
+          "regionID": "AT-07-28"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. In the regions neighbouring those that are subject to danger level 4 (high) 20 to 40 cm of snow will fall. In the other regions 15 to 30 cm of snow will fall. The fresh wind slabs are prone to triggering. <br/> The rain will give rise in the afternoon to increasing and thorough wetting of the old snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night."
       },
       "source": {
         "provider": {
@@ -505,16 +462,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
+          "comment": "Up to 2200 m and above rain will fall on Thursday in the north and in the northeast, this applies in particular until the early morning. As a consequence of the ceasing of precipitation there will be a decrease in the danger of wet and gliding avalanches. As a consequence of solar radiation loose snow avalanches are to be expected. The danger of dry avalanches will persist."
         }
       ],
+      "validTime": {
+        "endTime": "2021-12-29T23:00:00+00:00",
+        "startTime": "2021-12-28T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. This applies in all aspects below approximately 2400 m. Slides are to be expected on cut slopes. The peak danger point will be reached during the night.",
+        "highlights": "Rapid increase in danger of dry and wet avalanches as a consequence of the precipitation. Wet and gliding avalanches below approximately 2400 m."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -528,9 +490,7 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "Up to 2400 m rain will fall on Thursday, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
-      },
+      "bulletinID": "35239130-9e33-4b3c-a168-5cfc6d5796c1",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -539,46 +499,45 @@
           ]
         }
       },
-      "bulletinID": "35239130-9e33-4b3c-a168-5cfc6d5796c1",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-12-29T07:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Rapid increase in danger of dry and wet avalanches as a consequence of the precipitation. Wet and gliding avalanches below approximately 2400 m.",
-        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> Rapid increase in avalanche danger as the precipitation becomes more intense. With the onset of the intense rainfall, the natural activity of medium and large wet and gliding avalanches will rapidly increase. This applies in all aspects below approximately 2400 m. Slides are to be expected on cut slopes. The peak danger point will be reached during the night."
-      },
+      "regions": [
+        {
+          "regionID": "AT-07-05"
+        },
+        {
+          "regionID": "AT-07-17"
+        },
+        {
+          "regionID": "AT-07-06"
+        },
+        {
+          "regionID": "AT-07-18"
+        },
+        {
+          "regionID": "AT-07-05"
+        },
+        {
+          "regionID": "AT-07-17"
+        },
+        {
+          "regionID": "AT-07-06"
+        },
+        {
+          "regionID": "AT-07-18"
+        }
+      ],
       "snowpackStructure": {
         "comment": "Over a wide area intensive precipitation. The rain will give rise from midday to increasing and thorough wetting of the old snowpack below approximately 2400 m. These weather conditions will cause a rapid weakening of the snowpack during the course of the night."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "IT-32-BZ-08"
-        },
-        {
-          "regionID": "IT-32-TN-19"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-BZ-15"
-        },
-        {
-          "regionID": "IT-32-BZ-08"
-        },
-        {
-          "regionID": "IT-32-TN-19"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-BZ-15"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-12-28T23:00:00+00:00",
-        "endTime": "2021-12-29T23:00:00+00:00"
       },
       "source": {
         "provider": {
@@ -586,36 +545,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2400"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
+          "comment": "Up to 2400 m rain will fall on Thursday, this applies in particular until the early morning. The danger of moist and wet avalanches will already be elevated in the early morning. The danger of dry avalanches will persist."
         }
       ],
+      "validTime": {
+        "endTime": "2021-12-29T23:00:00+00:00",
+        "startTime": "2021-12-28T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. As a consequence of new snow and wind the prevalence and size of such avalanche prone locations will increase from midday. <br/> As the snowfall level rises wet and gliding avalanches are to be expected during the course of the night, especially on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach medium size.",
+        "highlights": "In some regions increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -666,9 +610,7 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
-      },
+      "bulletinID": "df0c4d83-e5c4-470e-8ec0-3d80741125cc",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -677,118 +619,65 @@
           ]
         }
       },
-      "bulletinID": "df0c4d83-e5c4-470e-8ec0-3d80741125cc",
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-12-28T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "In some regions increase in danger of dry and wet avalanches as a consequence of the precipitation. Fresh wind slabs require caution. Wet and gliding avalanches below approximately 2400 m.",
-        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. As a consequence of new snow and wind the prevalence and size of such avalanche prone locations will increase from midday. <br/> As the snowfall level rises wet and gliding avalanches are to be expected during the course of the night, especially on west, north and east facing slopes below approximately 2400 m. Wet avalanches can in isolated cases release the saturated snowpack and reach medium size."
-      },
+      "regions": [
+        {
+          "regionID": "IT-32-BZ-08"
+        },
+        {
+          "regionID": "IT-32-TN-19"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-BZ-15"
+        },
+        {
+          "regionID": "IT-32-BZ-08"
+        },
+        {
+          "regionID": "IT-32-TN-19"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-BZ-15"
+        }
+      ],
       "snowpackStructure": {
         "comment": "As a consequence of snowfall above approximately 2400 m and the storm force westerly wind, fresh snow drift accumulations will form. The sometimes storm force wind will transport the new snow and, in some cases, old snow as well. The new snow and wind slabs are in some cases prone to triggering. <br/> The rain will give rise in the afternoon to increasing and thorough wetting of the snowpack over a wide area below approximately 2400 m. These weather conditions will cause a rapid weakening of the weak layers during the course of the night, in particular on west, north and east facing slopes. On sunny slopes below approximately 2200 m only a little snow is lying."
-      }
-    },
-    {
-      "regions": [
-        {
-          "regionID": "IT-32-BZ-20"
-        },
-        {
-          "regionID": "IT-32-TN-09"
-        },
-        {
-          "regionID": "IT-32-BZ-16"
-        },
-        {
-          "regionID": "IT-32-BZ-17"
-        },
-        {
-          "regionID": "IT-32-BZ-18"
-        },
-        {
-          "regionID": "IT-32-TN-02"
-        },
-        {
-          "regionID": "IT-32-TN-13"
-        },
-        {
-          "regionID": "IT-32-BZ-19"
-        },
-        {
-          "regionID": "IT-32-TN-01"
-        },
-        {
-          "regionID": "IT-32-TN-04"
-        },
-        {
-          "regionID": "AT-07-29"
-        },
-        {
-          "regionID": "IT-32-TN-17"
-        },
-        {
-          "regionID": "IT-32-TN-05"
-        },
-        {
-          "regionID": "IT-32-TN-16"
-        },
-        {
-          "regionID": "IT-32-TN-07"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-BZ-20"
-        },
-        {
-          "regionID": "IT-32-TN-09"
-        },
-        {
-          "regionID": "IT-32-BZ-16"
-        },
-        {
-          "regionID": "IT-32-BZ-17"
-        },
-        {
-          "regionID": "IT-32-BZ-18"
-        },
-        {
-          "regionID": "IT-32-TN-02"
-        },
-        {
-          "regionID": "IT-32-TN-13"
-        },
-        {
-          "regionID": "IT-32-BZ-19"
-        },
-        {
-          "regionID": "IT-32-TN-01"
-        },
-        {
-          "regionID": "IT-32-TN-04"
-        },
-        {
-          "regionID": "AT-07-29"
-        },
-        {
-          "regionID": "IT-32-TN-17"
-        },
-        {
-          "regionID": "IT-32-TN-05"
-        },
-        {
-          "regionID": "IT-32-TN-16"
-        },
-        {
-          "regionID": "IT-32-TN-07"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-12-28T23:00:00+00:00",
-        "endTime": "2021-12-29T23:00:00+00:00"
       },
       "source": {
         "provider": {
@@ -796,36 +685,21 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "2200"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2200"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "2200"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2200"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
+          "comment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
         }
       ],
+      "validTime": {
+        "endTime": "2021-12-29T23:00:00+00:00",
+        "startTime": "2021-12-28T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. <br/> During the course of the night as a consequence of warming there will be only a slight increase in the danger of wet and gliding avalanches, especially on west, north and east facing slopes below approximately 2200 m.",
+        "highlights": "Fresh wind slabs require caution."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -876,9 +750,7 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
-      },
+      "bulletinID": "d3eabfc0-ee67-44e0-8729-d254b33e0acb",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -887,17 +759,222 @@
           ]
         }
       },
-      "bulletinID": "d3eabfc0-ee67-44e0-8729-d254b33e0acb",
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-12-29T07:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Fresh wind slabs require caution.",
-        "comment": "In the late morning a quite favourable avalanche situation will still be encountered. <br/> In the afternoon as a consequence of new snow and wind there will be a gradual increase in the avalanche danger. As a consequence of a strong to storm force wind from northwesterly directions, mostly small wind slabs will form at high altitudes and in high Alpine regions. Avalanches can be released, even by a single winter sport participant and reach medium size. The avalanche-prone wind slabs are to be avoided in particular in steep terrain. <br/> During the course of the night as a consequence of warming there will be only a slight increase in the danger of wet and gliding avalanches, especially on west, north and east facing slopes below approximately 2200 m."
-      },
+      "regions": [
+        {
+          "regionID": "IT-32-BZ-20"
+        },
+        {
+          "regionID": "IT-32-TN-09"
+        },
+        {
+          "regionID": "IT-32-BZ-16"
+        },
+        {
+          "regionID": "IT-32-BZ-17"
+        },
+        {
+          "regionID": "IT-32-BZ-18"
+        },
+        {
+          "regionID": "IT-32-TN-02"
+        },
+        {
+          "regionID": "IT-32-TN-13"
+        },
+        {
+          "regionID": "IT-32-BZ-19"
+        },
+        {
+          "regionID": "IT-32-TN-01"
+        },
+        {
+          "regionID": "IT-32-TN-04"
+        },
+        {
+          "regionID": "AT-07-29"
+        },
+        {
+          "regionID": "IT-32-TN-17"
+        },
+        {
+          "regionID": "IT-32-TN-05"
+        },
+        {
+          "regionID": "IT-32-TN-16"
+        },
+        {
+          "regionID": "IT-32-TN-07"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-BZ-20"
+        },
+        {
+          "regionID": "IT-32-TN-09"
+        },
+        {
+          "regionID": "IT-32-BZ-16"
+        },
+        {
+          "regionID": "IT-32-BZ-17"
+        },
+        {
+          "regionID": "IT-32-BZ-18"
+        },
+        {
+          "regionID": "IT-32-TN-02"
+        },
+        {
+          "regionID": "IT-32-TN-13"
+        },
+        {
+          "regionID": "IT-32-BZ-19"
+        },
+        {
+          "regionID": "IT-32-TN-01"
+        },
+        {
+          "regionID": "IT-32-TN-04"
+        },
+        {
+          "regionID": "AT-07-29"
+        },
+        {
+          "regionID": "IT-32-TN-17"
+        },
+        {
+          "regionID": "IT-32-TN-05"
+        },
+        {
+          "regionID": "IT-32-TN-16"
+        },
+        {
+          "regionID": "IT-32-TN-07"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        }
+      ],
       "snowpackStructure": {
         "comment": "Some new snow above approximately 2200 m. As a consequence of snowfall and the storm force westerly wind, fresh snow drift accumulations will form. The fresh wind slabs are in some cases prone to triggering. <br/> The rain will give rise in the afternoon to increasing softening of the snowpack below approximately 2200 m, in particular on west, north and east facing slopes. On sunny slopes below approximately 2200 m only a little snow is now lying."
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Tirol",
+          "website": "https://avalanche.report/"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "The danger of dry avalanches will persist. As a consequence of the strong wind the wind slabs will increase in size additionally on Thursday. As a consequence of warming more wet and gliding avalanches are possible."
+        }
+      ],
+      "validTime": {
+        "endTime": "2021-12-29T23:00:00+00:00",
+        "startTime": "2021-12-28T23:00:00+00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "Avalanches can in very isolated cases be released in the weakly bonded old snow, mostly by large additional loads, especially on very steep shady slopes above approximately 2200 m, as well as in gullies and bowls at elevated altitudes. In particular transitions from a shallow to a deep snowpack are unfavourable. The avalanche prone locations are rare but are barely recognisable, even to the trained eye. Snow slides and moist small and medium sized avalanches are possible from the afternoon.",
+        "highlights": "A generally favourable avalanche situation will prevail. Weakly bonded old snow requires caution. Slight increase in danger of wet and gliding avalanches as a consequence of warming."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "NE",
+            "NW",
+            "W",
+            "N",
+            "E"
+          ],
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "problemType": "persistent_weak_layers",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "NE",
+            "NW",
+            "W",
+            "N",
+            "E"
+          ],
+          "problemType": "wet_snow",
+          "validTimePeriod": "later"
+        },
+        {
+          "aspects": [
+            "NE",
+            "NW",
+            "W",
+            "N",
+            "E"
+          ],
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "problemType": "persistent_weak_layers",
+          "validTimePeriod": "later"
+        }
+      ],
+      "bulletinID": "3c30d092-4b12-4e5f-8292-dcc41953c9ce",
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2200"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "2200"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-12-28T16:00:00+00:00",
       "regions": [
         {
           "regionID": "IT-32-TN-12"
@@ -960,9 +1037,8 @@
           "regionID": "IT-32-TN-21"
         }
       ],
-      "validTime": {
-        "startTime": "2021-12-28T23:00:00+00:00",
-        "endTime": "2021-12-29T23:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "Faceted weak layers exist in the centre of the snowpack, in particular on shady slopes above approximately 2200 m. <br/> The snowpack will be generally subject to considerable local variations. Above the tree line snow depths vary greatly, depending on the infuence of the wind. The old snowpack consists of faceted crystals; its surface is loosely bonded and consists of surface hoar and faceted crystals. This applies in particular on shady slopes above the tree line. As a consequence of mild temperatures and solar radiation a crust formed on the surface. <br/> On sunny slopes below approximately 2000 m only a little snow is now lying."
       },
       "source": {
         "provider": {
@@ -970,78 +1046,14 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "2200"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "upperBound": "2200"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "low"
+          "comment": "Over a wide area further warming: Gradual increase in danger of wet and gliding avalanches in particular on shady slopes."
         }
       ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "NE",
-            "NW",
-            "W",
-            "N",
-            "E"
-          ],
-          "elevation": {
-            "lowerBound": "2200"
-          },
-          "problemType": "persistent_weak_layers",
-          "validTimePeriod": "earlier"
-        },
-        {
-          "aspects": [
-            "NE",
-            "NW",
-            "W",
-            "N",
-            "E"
-          ],
-          "problemType": "wet_snow",
-          "validTimePeriod": "later"
-        },
-        {
-          "aspects": [
-            "NE",
-            "NW",
-            "W",
-            "N",
-            "E"
-          ],
-          "elevation": {
-            "lowerBound": "2200"
-          },
-          "problemType": "persistent_weak_layers",
-          "validTimePeriod": "later"
-        }
-      ],
-      "tendency": {
-        "tendencyComment": "Over a wide area further warming: Gradual increase in danger of wet and gliding avalanches in particular on shady slopes."
-      },
-      "bulletinID": "3c30d092-4b12-4e5f-8292-dcc41953c9ce",
-      "publicationTime": "2021-12-28T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "A generally favourable avalanche situation will prevail. Weakly bonded old snow requires caution. Slight increase in danger of wet and gliding avalanches as a consequence of warming.",
-        "comment": "Avalanches can in very isolated cases be released in the weakly bonded old snow, mostly by large additional loads, especially on very steep shady slopes above approximately 2200 m, as well as in gullies and bowls at elevated altitudes. In particular transitions from a shallow to a deep snowpack are unfavourable. The avalanche prone locations are rare but are barely recognisable, even to the trained eye. Snow slides and moist small and medium sized avalanches are possible from the afternoon."
-      },
-      "snowpackStructure": {
-        "comment": "Faceted weak layers exist in the centre of the snowpack, in particular on shady slopes above approximately 2200 m. <br/> The snowpack will be generally subject to considerable local variations. Above the tree line snow depths vary greatly, depending on the infuence of the wind. The old snowpack consists of faceted crystals; its surface is loosely bonded and consists of surface hoar and faceted crystals. This applies in particular on shady slopes above the tree line. As a consequence of mild temperatures and solar radiation a crust formed on the surface. <br/> On sunny slopes below approximately 2000 m only a little snow is now lying."
+      "validTime": {
+        "endTime": "2021-12-29T23:00:00+00:00",
+        "startTime": "2021-12-28T23:00:00+00:00"
       }
     }
   ]

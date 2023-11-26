@@ -41,6 +41,17 @@
                     "title": "Valid Time",
                     "description": "Date and Time from and until this bulletin is valid. ISO 8601 Timestamp in UTC or with time zone information.",
                     "$ref" : "#/definitions/validTime"
+                },              
+                "nextUpdate" : {
+                    "title": "Next Update",
+                    "description": "Time and date when the next bulletin will be published by the AWS to the Public. ISO 8601 timestamp in UTC or with time zone information.",
+                    "type" : "string",
+                    "format" : "date-time"
+                },
+                "unscheduled" : {
+                    "title": "Unscheduled",
+                    "description": "Flag if bulletin is unscheduled or not.",
+                    "type" : "boolean"
                 },
                 "source" : {
                     "title": "Source",
@@ -76,9 +87,14 @@
                     "description": "Contains an optional short text to highlight an exceptionally dangerous situation.",
                     "type" : "string"
                 },
-                "wxSynopsis" : {
+                "weatherForecast" : {
                     "title": "Weather Forecast Synopsis",
                     "description": "Texts element with highlight and comment for weather forecast information.",
+                    "$ref" : "#/definitions/texts"
+                },
+                "weatherReview" : {
+                    "title": "Weather Review Synopsis",
+                    "description": "Texts element with highlight and comment for weather review information.",
                     "$ref" : "#/definitions/texts"
                 },
                 "avalancheActivity" : {
@@ -99,10 +115,15 @@
                 "tendency" : {
                     "title": "Tendency",
                     "description": "Tendency element for a detailed description of the expected avalanche situation tendency after the bulletin's period of validity.",
-                    "anyOf": [
-                        { "$ref": "#/definitions/texts" },
-                        { "$ref": "#/definitions/tendency" }
-                    ]
+                    "type" : "array",
+                    "items" : {
+                        "anyOf": [
+                            { "$ref": "#/definitions/texts" },
+                            { "$ref": "#/definitions/tendency" }
+                        ]
+                    }
+
+
                 },
                 "metaData" : { "$ref" : "#/definitions/metaData" },
                 "customData" : { "$ref" : "#/definitions/customData" }
@@ -116,10 +137,12 @@
             "properties" : {
                 "mainValue": { "$ref" : "#/definitions/dangerRatingValue" },
                 "elevation" : { "$ref" : "#/definitions/elevation" },
+                "aspects" : { "$ref" : "#/definitions/aspects" },
                 "validTimePeriod" : { "$ref" : "#/definitions/validTimePeriod" },
                 "metaData" : { "$ref" : "#/definitions/metaData" },
                 "customData" : { "$ref" : "#/definitions/customData" }
             },
+            "required": ["mainValue"],
             "additionalProperties": false
         },     
         "dangerRatingValue" : {
@@ -130,20 +153,22 @@
         },
         "avalancheProblem" : {
             "title": "Avalanche Problem",
-            "description": "Defines an avalanche problem, its time, aspect, and elevation constraints. A textual detail about the affected terrain can be given in the terrainFeature field. Also, details about the expected avalanche size, snowpack stability and its frequency can be defined.",
+            "description": "Defines an avalanche problem, its time, aspect, and elevation constraints. A textual detail about the affected terrain can be given in the comment field. Also, details about the expected avalanche size, snowpack stability and its frequency can be defined. The implied danger rating value is optional.",
             "type" : "object",
             "properties" : {
                 "problemType" : { "$ref" : "#/definitions/avalancheProblemType" },
-                "elevation" : { "$ref" : "#/definitions/elevation" },
-                "aspects" : { "$ref" : "#/definitions/aspects" },
-                "validTimePeriod" : { "$ref" : "#/definitions/validTimePeriod" },
-                "terrainFeature" : { "type" : "string" },
+                "comment" : { "type" : "string" },
                 "avalancheSize" : { "$ref" : "#/definitions/avalancheSize" },
                 "snowpackStability" : { "$ref" : "#/definitions/snowpackStability" },
                 "frequency" : { "$ref" : "#/definitions/frequency" },
+                "dangerRatingValue": { "$ref" : "#/definitions/dangerRatingValue" },
+                "elevation" : { "$ref" : "#/definitions/elevation" },
+                "aspects" : { "$ref" : "#/definitions/aspects" },
+                "validTimePeriod" : { "$ref" : "#/definitions/validTimePeriod" },
                 "metaData" : { "$ref" : "#/definitions/metaData" },
                 "customData" : { "$ref" : "#/definitions/customData" }
             },
+            "required": ["problemType"],
             "additionalProperties": false
         },
         "avalancheProblemType" : {
@@ -163,13 +188,13 @@
             "title": "Expected Snowpack Stability",
             "description": "Snowpack stability, according to the EAWS definition. Four stage scale (very poor, poor, fair, good).",
             "type" : "string",
-            "enum" : [ "very_poor", "poor", "fair", "good"]
+            "enum" : [ "good", "fair", "poor", "very_poor"]
         },
         "frequency" : {
             "title": "Expected Avalanche Frequency",
             "description": "Expected frequency of lowest snowpack stability, according to the EAWS definition. Three stage scale (few, some, many).",
             "type" : "string",
-            "enum" : [ "few", "some", "many"]
+            "enum" : [ "none", "few", "some", "many"]
         },
         "tendency" : {
             "title": "Avalanche Situation Tendency",
@@ -220,27 +245,13 @@
             "title": "Custom Data",
             "description": "Custom data can be used to add arbitrary additional information. There can be AWS specific custom data types defined."
         },
-        "texts" : {
-            "title": "Texts",
-            "description": "Texts contains a highlight and a comment string, where highlights could also be described as a kind of headline for the longer comment. For text-formatting only the HTML-Tags <br/> for a new line and <b> followed by </b> for a bold text.",
-            "type" : "object",
-            "properties" : {
-                "highlights" : {
-                    "type" : "string"
-                },
-                "comment" : {
-                    "type" : "string"
-                }
-            },
-            "additionalProperties": false
-        },
         "source" : {
             "title": "Avalanche Bulletin Source",
             "description": "Information about the bulletin source. Either as in a person or with a provider element to specify details about the AWS.",
             "type" : "object",
             "properties": {
                 "provider" : { "$ref" : "#/definitions/provider" },
-                "contactPerson" : { "$ref" : "#/definitions/person" }
+                "person" : { "$ref" : "#/definitions/person" }
             },
             "oneOf" : [
                 { "required" : [ "provider" ] },
@@ -293,6 +304,7 @@
                 "metaData" : { "$ref" : "#/definitions/metaData" },
                 "customData" : { "$ref" : "#/definitions/customData" }
             },
+            "required": ["regionID"],
             "additionalProperties": false
         },
         "aspects" : {
@@ -341,6 +353,20 @@
             "description": "Valid time period can be used to limit the validity of an element to an earlier or later period. It can be used to distinguish danger ratings or avalanche problems.",
             "type" : "string",
             "enum" : [ "all_day", "earlier", "later" ]
+        },
+        "texts" : {
+            "title": "Texts",
+            "description": "Texts contains a highlight and a comment string, where highlights could also be described as a kind of headline for the longer comment. For text-formatting the HTML-Tags <br/> for a new line, (<ul>,<ul/>) and (<li>,<li/>) for lists, (<h1>,<h1/>) to (<h6>,<h6/>) for headings and (<b>,</b>) for a bold text are allowed.",
+            "type" : "object",
+            "properties" : {
+                "highlights" : {
+                    "type" : "string"
+                },
+                "comment" : {
+                    "type" : "string"
+                }
+            },
+            "additionalProperties": false
         },
         "languageCode" : {
             "title": "Language Code",

@@ -32,7 +32,6 @@ from avacore.processor import XmlProcessor
 
 class Processor(XmlProcessor):
     def parse_xml(self, region_id, root: ET.ElementTree) -> Bulletins:
-
         """
         Processes downloaded report
         """
@@ -49,13 +48,15 @@ class Processor(XmlProcessor):
         ).replace(tzinfo=tzinfo)
 
         weather_forecast = root.find("weather_forecast")
-        common_report.wxSynopsis = Texts(comment=weather_forecast.find("forecast").text)
+        common_report.weatherForecast = Texts(
+            comment=weather_forecast.find("forecast").text
+        )
 
         reports = Bulletins()
 
         area_forecasts = root.find("area_forecasts")
         for area_forcast in area_forecasts.iter(tag="area_forecast"):
-            wxSynopsis = Texts()
+            weatherForecast = Texts()
             avalancheActivity = Texts()
             snowpackStructure = Texts()
             report = copy.deepcopy(common_report)
@@ -79,7 +80,7 @@ class Processor(XmlProcessor):
             avalancheActivity.highlights = area_forcast.find("forecast").text
             avalancheActivity.comment = area_forcast.find("recent_avalances").text
             snowpackStructure.highlights = area_forcast.find("snow_condition").text
-            wxSynopsis.highlights = area_forcast.find("weather").text
+            weatherForecast.highlights = area_forcast.find("weather").text
 
             danger_rating = DangerRating()
             danger_rating.set_mainValue_int(
@@ -87,7 +88,7 @@ class Processor(XmlProcessor):
             )
             report.dangerRatings.append(danger_rating)
 
-            report.wxSynopsis = wxSynopsis
+            report.weatherForecast = weatherForecast
             report.avalancheActivity = avalancheActivity
             report.snowpackStructure = snowpackStructure
 

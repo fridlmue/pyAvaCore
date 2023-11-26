@@ -1,6 +1,42 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "The new snow of the weekend is lying on top of a weakly bonded old snowpack in particular on steep shady slopes above approximately 2400 m. The avalanche prone locations are difficult to recognise. Single winter sport participants can release avalanches, including dangerously large ones. Backcountry touring calls for experience and a certain restraint."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        },
+        {
+          "problemType": "gliding_snow"
+        }
+      ],
+      "bulletinID": "CH-52492-1",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": [
+              "NW",
+              "N",
+              "NE",
+              "E"
+            ],
+            "elevation": {
+              "altitude": 2400,
+              "indicator": "ABOVE"
+            }
+          },
+          "dangerLevelDetail": "LEVDET_MINUS"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "In the south a considerable avalanche danger will persist.",
       "regions": [
         {
           "regionID": "CH-1247"
@@ -105,30 +141,33 @@
           "regionID": "CH-7211"
         }
       ],
-      "validTime": {
-        "startTime": "2022-12-07T16:00:00+00:00",
-        "endTime": "2022-12-08T16:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "In particular on steep south facing slopes gliding avalanches are possible below approximately 2000 m."
       },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
+      "validTime": {
+        "endTime": "2022-12-08T16:00:00+00:00",
+        "startTime": "2022-12-07T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In some places avalanches can be triggered in the old snow and reach medium size in isolated cases. These avalanche prone locations are to be found especially in gullies and bowls and adjacent to ridgelines.\nAs a consequence of a gathering strong westerly wind, mostly small wind slabs will form in the course of the day. These can be released easily. Apart from the danger of being buried, restraint should be exercised as well in view of the danger of avalanches sweeping people along and giving rise to falls."
+      },
       "avalancheProblems": [
         {
           "problemType": "persistent_weak_layers"
-        },
-        {
-          "problemType": "gliding_snow"
         }
       ],
+      "bulletinID": "CH-52492-2",
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -139,26 +178,20 @@
               "E"
             ],
             "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2400
+              "altitude": 2200,
+              "indicator": "ABOVE"
             }
           },
-          "dangerLevelDetail": "LEVDET_MINUS"
+          "dangerLevelDetail": "LEVDET_NEUTRAL"
         }
       },
-      "bulletinID": "CH-52492-1",
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "highlights": "In the south a considerable avalanche danger will persist.",
-      "avalancheActivity": {
-        "comment": "The new snow of the weekend is lying on top of a weakly bonded old snowpack in particular on steep shady slopes above approximately 2400 m. The avalanche prone locations are difficult to recognise. Single winter sport participants can release avalanches, including dangerously large ones. Backcountry touring calls for experience and a certain restraint."
-      },
-      "snowpackStructure": {
-        "comment": "In particular on steep south facing slopes gliding avalanches are possible below approximately 2000 m."
-      },
-      "wxSynopsis": {
-        "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "CH-1114"
@@ -293,27 +326,30 @@
           "regionID": "CH-7231"
         }
       ],
-      "validTime": {
-        "startTime": "2022-12-07T16:00:00+00:00",
-        "endTime": "2022-12-08T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
+      "validTime": {
+        "endTime": "2022-12-08T16:00:00+00:00",
+        "startTime": "2022-12-07T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In isolated cases avalanches can be triggered in the old snow. These avalanche prone locations are to be found especially in gullies and bowls.\nAs a consequence of a gathering strong westerly wind, mostly small wind slabs will form in the course of the day especially adjacent to ridgelines as well as at elevated altitudes. These can be released easily. Restraint should be exercised because avalanches can sweep people along and give rise to falls."
+      },
       "avalancheProblems": [
         {
           "problemType": "persistent_weak_layers"
         }
       ],
+      "bulletinID": "CH-52492-3",
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -324,23 +360,20 @@
               "E"
             ],
             "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2200
+              "altitude": 2400,
+              "indicator": "ABOVE"
             }
           },
           "dangerLevelDetail": "LEVDET_NEUTRAL"
         }
       },
-      "bulletinID": "CH-52492-2",
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "highlights": "In the south a considerable avalanche danger will persist.",
-      "avalancheActivity": {
-        "comment": "In some places avalanches can be triggered in the old snow and reach medium size in isolated cases. These avalanche prone locations are to be found especially in gullies and bowls and adjacent to ridgelines.\nAs a consequence of a gathering strong westerly wind, mostly small wind slabs will form in the course of the day. These can be released easily. Apart from the danger of being buried, restraint should be exercised as well in view of the danger of avalanches sweeping people along and giving rise to falls."
-      },
-      "wxSynopsis": {
-        "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "CH-4111"
@@ -397,27 +430,30 @@
           "regionID": "CH-4222"
         }
       ],
-      "validTime": {
-        "startTime": "2022-12-07T16:00:00+00:00",
-        "endTime": "2022-12-08T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
+      "validTime": {
+        "endTime": "2022-12-08T16:00:00+00:00",
+        "startTime": "2022-12-07T16:00:00+00:00"
+      },
+      "weatherForecast": {
+        "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In isolated cases avalanches can be triggered in the old snow. The avalanche prone locations are to be found especially in gullies and bowls and adjacent to ridgelines. Mostly the avalanches are small. Restraint should be exercised because avalanches can sweep people along and give rise to falls."
+      },
       "avalancheProblems": [
         {
           "problemType": "persistent_weak_layers"
         }
       ],
+      "bulletinID": "CH-52492-4",
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -428,23 +464,20 @@
               "E"
             ],
             "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2400
+              "altitude": 2600,
+              "indicator": "ABOVE"
             }
           },
-          "dangerLevelDetail": "LEVDET_NEUTRAL"
+          "dangerLevelDetail": "LEVDET_MINUS"
         }
       },
-      "bulletinID": "CH-52492-3",
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "highlights": "In the south a considerable avalanche danger will persist.",
-      "avalancheActivity": {
-        "comment": "In isolated cases avalanches can be triggered in the old snow. These avalanche prone locations are to be found especially in gullies and bowls.\nAs a consequence of a gathering strong westerly wind, mostly small wind slabs will form in the course of the day especially adjacent to ridgelines as well as at elevated altitudes. These can be released easily. Restraint should be exercised because avalanches can sweep people along and give rise to falls."
-      },
-      "wxSynopsis": {
-        "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "CH-5111"
@@ -477,78 +510,24 @@
           "regionID": "CH-7124"
         }
       ],
-      "validTime": {
-        "startTime": "2022-12-07T16:00:00+00:00",
-        "endTime": "2022-12-08T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "persistent_weak_layers"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": [
-              "NW",
-              "N",
-              "NE",
-              "E"
-            ],
-            "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 2600
-            }
-          },
-          "dangerLevelDetail": "LEVDET_MINUS"
-        }
+      "validTime": {
+        "endTime": "2022-12-08T16:00:00+00:00",
+        "startTime": "2022-12-07T16:00:00+00:00"
       },
-      "bulletinID": "CH-52492-4",
-      "highlights": "In the south a considerable avalanche danger will persist.",
-      "avalancheActivity": {
-        "comment": "In isolated cases avalanches can be triggered in the old snow. The avalanche prone locations are to be found especially in gullies and bowls and adjacent to ridgelines. Mostly the avalanches are small. Restraint should be exercised because avalanches can sweep people along and give rise to falls."
-      },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
       }
     },
     {
-      "regions": [
-        {
-          "regionID": "CH-6131"
-        },
-        {
-          "regionID": "CH-6132"
-        }
-      ],
-      "validTime": {
-        "startTime": "2022-12-07T16:00:00+00:00",
-        "endTime": "2022-12-08T16:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "The new snow has settled to a large extent. Avalanches can in some places be released, mostly by large loads. Ski touring and other off-piste activities, including snowshoe hiking, call for careful route selection."
       },
-      "source": {
-        "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
       "avalancheProblems": [
         {
           "problemType": "no_distinct_avalanche_problem"
@@ -557,6 +536,7 @@
           "problemType": "gliding_snow"
         }
       ],
+      "bulletinID": "CH-52492-5",
       "customData": {
         "SLF": {
           "avalancheProneLocation": {
@@ -566,26 +546,71 @@
               "NE"
             ],
             "elevation": {
-              "indicator": "ABOVE",
-              "altitude": 1600
+              "altitude": 1600,
+              "indicator": "ABOVE"
             }
           },
           "dangerLevelDetail": "LEVDET_MINUS"
         }
       },
-      "bulletinID": "CH-52492-5",
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "highlights": "In the south a considerable avalanche danger will persist.",
-      "avalancheActivity": {
-        "comment": "The new snow has settled to a large extent. Avalanches can in some places be released, mostly by large loads. Ski touring and other off-piste activities, including snowshoe hiking, call for careful route selection."
-      },
+      "regions": [
+        {
+          "regionID": "CH-6131"
+        },
+        {
+          "regionID": "CH-6132"
+        }
+      ],
       "snowpackStructure": {
         "comment": "On steep grassy slopes gliding avalanches are possible."
       },
-      "wxSynopsis": {
+      "source": {
+        "provider": {
+          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "website": "https://whiterisk.ch/en/conditions"
+        }
+      },
+      "validTime": {
+        "endTime": "2022-12-08T16:00:00+00:00",
+        "startTime": "2022-12-07T16:00:00+00:00"
+      },
+      "weatherForecast": {
         "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "Thus far only a little snow is lying. Individual avalanche prone locations are to be found in extremely steep terrain. In the course of the day small wind slabs will form at elevated altitudes. These are prone to triggering. Even a snow slide can sweep people along and give rise to falls."
+      },
+      "avalancheProblems": [
+        {
+          "problemType": "no_distinct_avalanche_problem"
+        }
+      ],
+      "bulletinID": "CH-52492-6",
+      "customData": {
+        "SLF": {
+          "avalancheProneLocation": {
+            "aspects": null,
+            "elevation": null
+          },
+          "dangerLevelDetail": null
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "highlights": "In the south a considerable avalanche danger will persist.",
       "regions": [
         {
           "regionID": "CH-1111"
@@ -648,42 +673,17 @@
           "regionID": "CH-3221"
         }
       ],
-      "validTime": {
-        "startTime": "2022-12-07T16:00:00+00:00",
-        "endTime": "2022-12-08T16:00:00+00:00"
-      },
       "source": {
         "provider": {
           "name": "WSL Institute for Snow and Avalanche Research SLF",
-          "website": "https://www.slf.ch/en/avalanche-bulletin-and-snow-situation.html"
+          "website": "https://whiterisk.ch/en/conditions"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "problemType": "no_distinct_avalanche_problem"
-        }
-      ],
-      "customData": {
-        "SLF": {
-          "avalancheProneLocation": {
-            "aspects": null,
-            "elevation": null
-          },
-          "dangerLevelDetail": null
-        }
+      "validTime": {
+        "endTime": "2022-12-08T16:00:00+00:00",
+        "startTime": "2022-12-07T16:00:00+00:00"
       },
-      "bulletinID": "CH-52492-6",
-      "highlights": "In the south a considerable avalanche danger will persist.",
-      "avalancheActivity": {
-        "comment": "Thus far only a little snow is lying. Individual avalanche prone locations are to be found in extremely steep terrain. In the course of the day small wind slabs will form at elevated altitudes. These are prone to triggering. Even a snow slide can sweep people along and give rise to falls."
-      },
-      "wxSynopsis": {
+      "weatherForecast": {
         "comment": "Snowpack\nAt elevated altitudes there is less snow on the ground than is usual for this juncture of the season. At 2500 m the snow depths from the Simplon region over Goms into the Gotthard region and in the central sector of the southern flank of the Alps is approximately 80 cm, otherwise widespread 40 to 60 cm. In the Lower Engadine and in the central Valais there is still less snow on the ground.    On shady slopes above approximately 2200  to 2400 m more than anywhere else, the snowpack evidences weak, expansively metamorphosed (faceted) layers over widespread areas. Wherever these layers have been blanketed over by new fallen snow and freshly generated snowdrifts during the last few days, avalanches can be easily triggered. This weak snow cover is deep enough, and cohesive, on the Main Alpine Ridge from the Matterhorn into the Bernina region so that even dangerously large-sized avalanches can be generated.\nObserved weather review Wednesday, 07.12.2022\nSkies in the mountains were clear during the nocturnal hours, and it was sunny during the daytime.\nFresh snow\n-\nTemperature\nAt midday at 2000 m, temperatures lay between -2 \u00b0C in the western and the southern regions and -5 \u00b0C in the eastern regions.\nWind\nWinds were blowing at light to moderate strength from southwesterly to westerly directions.\nWeather forecast through Thursday, 08.12.2022\nIt is expected to be predominantly sunny in the mountains. During the afternoon, high-altitude clouds are expected to move in from the southwest.\nFresh snow\n-\nTemperature\nTemperatures at midday at 2000 m will lie between -2 \u00b0C in the western regions and -4 \u00b0C in the eastern regions; in the southern regions it will be -6 \u00b0C.\nWind\nWinds will be blowing at moderate strength, increasingly strong in velocity at elevated altitudes during the course of the day, from southwesterly to westerly directions.\nOutlook through Saturday, 10.12.2022\nFriday\nOn Thursday night, snowfall is expected to set in over widespread areas. On Friday, skies will be predominantly overcast, and at intermediate and high altitudes intermittent snowfall is anticipated. By evening along the French border and in the western sector of the northern flank of the Alps, 15 to 30 cm of fresh snow is expected, less in the other regions of Switzerland. Winds in the mountains will be blowing at moderate to strong velocity.  <br/>  The avalanche danger levels are expected to increase over widespread areas on Thursday night as a consequence of fresh snow and winds.\nSaturday\nSkies will be heavily overcast. On the northern flank of the Alps, 5 to 10 cm of snowfall is anticipated down to low lying areas, less in the remaining regions of Switzerland. Winds will be blowing at light to moderate strength from westerly directions.  <br/>  Avalanche danger levels are not expected to change significantly."
       }
     }

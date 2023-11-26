@@ -71,7 +71,9 @@ class Processor(JsonProcessor):
             elif "Snehová pokrývka" in description["heading"]:
                 snowpackStructure.comment = description["text"]
             elif "Krátkodobý vývoj" in description["heading"]:
-                common_bulletin.tendency = Tendency(tendencyComment=description["text"])
+                common_bulletin.tendency = [
+                    Tendency(comment=description["text"])
+                ]
 
         common_bulletin.avalancheActivity = avalancheActivity
         common_bulletin.snowpackStructure = snowpackStructure

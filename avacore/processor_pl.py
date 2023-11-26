@@ -83,7 +83,7 @@ class Processor(AbstractProcessor):
 
         tendency = re.compile(r'avalanche/trend/(?P<tendency>[^"]+).png').search(html)
         if tendency:
-            bulletin.tendency = Tendency(tendencyComment=tendency.group("tendency"))
+            bulletin.tendency = [Tendency(comment=tendency.group("tendency"))]
 
         # TODO N-W -> N-NW-W
         # bulletin.customData = dict(

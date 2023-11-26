@@ -1,154 +1,154 @@
 {
   "bulletins": [
     {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "FI-01",
-          "name": "Kilpisj\u00e4rvi"
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-04T00:00:00",
-        "endTime": "2023-02-04T23:59:59"
-      },
+      "publicationTime": "2023-02-03T14:08:00",
+      "regions": [
+        {
+          "name": "Kilpisj\u00e4rvi",
+          "regionID": "FI-01"
+        }
+      ],
       "source": {
         "provider": {
           "name": "Finnish Meteorological Institute",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "publicationTime": "2023-02-03T14:08:00"
+      "validTime": {
+        "endTime": "2023-02-04T23:59:59",
+        "startTime": "2023-02-04T00:00:00"
+      }
     },
     {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "FI-02",
-          "name": "Saariselk\u00e4"
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-04T00:00:00",
-        "endTime": "2023-02-04T23:59:59"
-      },
+      "publicationTime": "2023-02-03T14:08:00",
+      "regions": [
+        {
+          "name": "Saariselk\u00e4",
+          "regionID": "FI-02"
+        }
+      ],
       "source": {
         "provider": {
           "name": "Finnish Meteorological Institute",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "publicationTime": "2023-02-03T14:08:00"
+      "validTime": {
+        "endTime": "2023-02-04T23:59:59",
+        "startTime": "2023-02-04T00:00:00"
+      }
     },
     {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "FI-03",
-          "name": "Ounas-Pallas"
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-04T00:00:00",
-        "endTime": "2023-02-04T23:59:59"
-      },
+      "publicationTime": "2023-02-03T14:08:00",
+      "regions": [
+        {
+          "name": "Ounas-Pallas",
+          "regionID": "FI-03"
+        }
+      ],
       "source": {
         "provider": {
           "name": "Finnish Meteorological Institute",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "publicationTime": "2023-02-03T14:08:00"
+      "validTime": {
+        "endTime": "2023-02-04T23:59:59",
+        "startTime": "2023-02-04T00:00:00"
+      }
     },
     {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "FI-04",
-          "name": "Yll\u00e4s-Levi"
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-04T00:00:00",
-        "endTime": "2023-02-04T23:59:59"
-      },
+      "publicationTime": "2023-02-03T14:08:00",
+      "regions": [
+        {
+          "name": "Yll\u00e4s-Levi",
+          "regionID": "FI-04"
+        }
+      ],
       "source": {
         "provider": {
           "name": "Finnish Meteorological Institute",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "publicationTime": "2023-02-03T14:08:00"
+      "validTime": {
+        "endTime": "2023-02-04T23:59:59",
+        "startTime": "2023-02-04T00:00:00"
+      }
     },
     {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "FI-05",
-          "name": "Luosto-Pyh\u00e4"
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-04T00:00:00",
-        "endTime": "2023-02-04T23:59:59"
-      },
+      "publicationTime": "2023-02-03T14:08:00",
+      "regions": [
+        {
+          "name": "Luosto-Pyh\u00e4",
+          "regionID": "FI-05"
+        }
+      ],
       "source": {
         "provider": {
           "name": "Finnish Meteorological Institute",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "publicationTime": "2023-02-03T14:08:00"
+      "validTime": {
+        "endTime": "2023-02-04T23:59:59",
+        "startTime": "2023-02-04T00:00:00"
+      }
     },
     {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "FI-06",
-          "name": "Ruka"
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2023-02-04T00:00:00",
-        "endTime": "2023-02-04T23:59:59"
-      },
+      "publicationTime": "2023-02-03T14:08:00",
+      "regions": [
+        {
+          "name": "Ruka",
+          "regionID": "FI-06"
+        }
+      ],
       "source": {
         "provider": {
           "name": "Finnish Meteorological Institute",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "moderate"
-        }
-      ],
-      "publicationTime": "2023-02-03T14:08:00"
+      "validTime": {
+        "endTime": "2023-02-04T23:59:59",
+        "startTime": "2023-02-04T00:00:00"
+      }
     }
   ]
 }

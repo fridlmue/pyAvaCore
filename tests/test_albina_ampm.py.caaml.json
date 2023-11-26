@@ -1,154 +1,10 @@
 {
   "bulletins": [
     {
-      "regions": [
-        {
-          "regionID": "IT-32-TN-09"
-        },
-        {
-          "regionID": "IT-32-TN-02"
-        },
-        {
-          "regionID": "IT-32-TN-13"
-        },
-        {
-          "regionID": "IT-32-TN-01"
-        },
-        {
-          "regionID": "IT-32-TN-12"
-        },
-        {
-          "regionID": "IT-32-TN-04"
-        },
-        {
-          "regionID": "IT-32-TN-15"
-        },
-        {
-          "regionID": "IT-32-TN-03"
-        },
-        {
-          "regionID": "IT-32-TN-14"
-        },
-        {
-          "regionID": "IT-32-TN-17"
-        },
-        {
-          "regionID": "IT-32-TN-06"
-        },
-        {
-          "regionID": "IT-32-TN-05"
-        },
-        {
-          "regionID": "IT-32-TN-16"
-        },
-        {
-          "regionID": "IT-32-TN-19"
-        },
-        {
-          "regionID": "IT-32-TN-08"
-        },
-        {
-          "regionID": "IT-32-TN-18"
-        },
-        {
-          "regionID": "IT-32-TN-07"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-TN-11"
-        },
-        {
-          "regionID": "IT-32-TN-10"
-        },
-        {
-          "regionID": "IT-32-TN-21"
-        },
-        {
-          "regionID": "IT-32-TN-09"
-        },
-        {
-          "regionID": "IT-32-TN-02"
-        },
-        {
-          "regionID": "IT-32-TN-13"
-        },
-        {
-          "regionID": "IT-32-TN-01"
-        },
-        {
-          "regionID": "IT-32-TN-12"
-        },
-        {
-          "regionID": "IT-32-TN-04"
-        },
-        {
-          "regionID": "IT-32-TN-15"
-        },
-        {
-          "regionID": "IT-32-TN-03"
-        },
-        {
-          "regionID": "IT-32-TN-14"
-        },
-        {
-          "regionID": "IT-32-TN-17"
-        },
-        {
-          "regionID": "IT-32-TN-06"
-        },
-        {
-          "regionID": "IT-32-TN-05"
-        },
-        {
-          "regionID": "IT-32-TN-16"
-        },
-        {
-          "regionID": "IT-32-TN-19"
-        },
-        {
-          "regionID": "IT-32-TN-08"
-        },
-        {
-          "regionID": "IT-32-TN-18"
-        },
-        {
-          "regionID": "IT-32-TN-07"
-        },
-        {
-          "regionID": "IT-32-TN-20"
-        },
-        {
-          "regionID": "IT-32-TN-11"
-        },
-        {
-          "regionID": "IT-32-TN-10"
-        },
-        {
-          "regionID": "IT-32-TN-21"
-        }
-      ],
-      "validTime": {
-        "startTime": "2021-02-21T23:00:00+00:00",
-        "endTime": "2021-02-22T23:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "Gradual increase in danger of moist and wet avalanches as a consequence of warming during the day and solar radiation. In some places moist avalanches can also penetrate deep layers and reach quite a large size. <br/> In addition an appreciable danger of gliding avalanches exists. Areas with glide cracks are to be avoided. <br/> The somewhat older wind slabs are to be evaluated with care and prudence in particular in rocky terrain. They can be released, especially by large additional loads, on steep shady slopes above the tree line. <br/> Backcountry tours should be started and concluded early. Off-piste activities call for a certain restraint.",
+        "highlights": "Moist and wet avalanches require caution. Over a wide area warming."
       },
-      "source": {
-        "provider": {
-          "name": "Lawinenwarndienst Trentino",
-          "website": "https://avalanche.report/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "aspects": [
@@ -207,9 +63,7 @@
           "validTimePeriod": "later"
         }
       ],
-      "tendency": {
-        "tendencyComment": "As a consequence of rising temperatures and solar radiation a sometimes critical avalanche situation will develop during the next few days. The avalanche danger will increase significantly during the day."
-      },
+      "bulletinID": "15b7b04b-5f3f-435c-a4f4-33a4eabeb965",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -217,17 +71,251 @@
           ]
         }
       },
-      "bulletinID": "15b7b04b-5f3f-435c-a4f4-33a4eabeb965",
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
       "publicationTime": "2021-02-21T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Moist and wet avalanches require caution. Over a wide area warming.",
-        "comment": "Gradual increase in danger of moist and wet avalanches as a consequence of warming during the day and solar radiation. In some places moist avalanches can also penetrate deep layers and reach quite a large size. <br/> In addition an appreciable danger of gliding avalanches exists. Areas with glide cracks are to be avoided. <br/> The somewhat older wind slabs are to be evaluated with care and prudence in particular in rocky terrain. They can be released, especially by large additional loads, on steep shady slopes above the tree line. <br/> Backcountry tours should be started and concluded early. Off-piste activities call for a certain restraint."
-      },
+      "regions": [
+        {
+          "regionID": "IT-32-TN-09"
+        },
+        {
+          "regionID": "IT-32-TN-02"
+        },
+        {
+          "regionID": "IT-32-TN-13"
+        },
+        {
+          "regionID": "IT-32-TN-01"
+        },
+        {
+          "regionID": "IT-32-TN-12"
+        },
+        {
+          "regionID": "IT-32-TN-04"
+        },
+        {
+          "regionID": "IT-32-TN-15"
+        },
+        {
+          "regionID": "IT-32-TN-03"
+        },
+        {
+          "regionID": "IT-32-TN-14"
+        },
+        {
+          "regionID": "IT-32-TN-17"
+        },
+        {
+          "regionID": "IT-32-TN-06"
+        },
+        {
+          "regionID": "IT-32-TN-05"
+        },
+        {
+          "regionID": "IT-32-TN-16"
+        },
+        {
+          "regionID": "IT-32-TN-19"
+        },
+        {
+          "regionID": "IT-32-TN-08"
+        },
+        {
+          "regionID": "IT-32-TN-18"
+        },
+        {
+          "regionID": "IT-32-TN-07"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-TN-11"
+        },
+        {
+          "regionID": "IT-32-TN-10"
+        },
+        {
+          "regionID": "IT-32-TN-21"
+        },
+        {
+          "regionID": "IT-32-TN-09"
+        },
+        {
+          "regionID": "IT-32-TN-02"
+        },
+        {
+          "regionID": "IT-32-TN-13"
+        },
+        {
+          "regionID": "IT-32-TN-01"
+        },
+        {
+          "regionID": "IT-32-TN-12"
+        },
+        {
+          "regionID": "IT-32-TN-04"
+        },
+        {
+          "regionID": "IT-32-TN-15"
+        },
+        {
+          "regionID": "IT-32-TN-03"
+        },
+        {
+          "regionID": "IT-32-TN-14"
+        },
+        {
+          "regionID": "IT-32-TN-17"
+        },
+        {
+          "regionID": "IT-32-TN-06"
+        },
+        {
+          "regionID": "IT-32-TN-05"
+        },
+        {
+          "regionID": "IT-32-TN-16"
+        },
+        {
+          "regionID": "IT-32-TN-19"
+        },
+        {
+          "regionID": "IT-32-TN-08"
+        },
+        {
+          "regionID": "IT-32-TN-18"
+        },
+        {
+          "regionID": "IT-32-TN-07"
+        },
+        {
+          "regionID": "IT-32-TN-20"
+        },
+        {
+          "regionID": "IT-32-TN-11"
+        },
+        {
+          "regionID": "IT-32-TN-10"
+        },
+        {
+          "regionID": "IT-32-TN-21"
+        }
+      ],
       "snowpackStructure": {
         "comment": "The meteorological conditions facilitated a gradual strengthening of the near-surface layers in particular on sunny slopes. The no longer entirely fresh wind slabs remain in some cases prone to triggering on steep shady slopes. <br/> Faceted weak layers exist in the centre of the snowpack in particular in areas close to the tree line. This also applies in gullies and bowls below the tree line. <br/> Towards its base, the snowpack is wet and its surface has a melt-freeze crust that is not capable of bearing a load."
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Trentino",
+          "website": "https://avalanche.report/"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "As a consequence of rising temperatures and solar radiation a sometimes critical avalanche situation will develop during the next few days. The avalanche danger will increase significantly during the day."
+        }
+      ],
+      "validTime": {
+        "endTime": "2021-02-22T23:00:00+00:00",
+        "startTime": "2021-02-21T23:00:00+00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "A clear night will be followed in the early morning by quite favourable conditions. As the day progresses as a consequence of warming during the day and solar radiation there will be an appreciable increase in the danger of wet and gliding avalanches, caution is to be exercised on very steep sunny slopes below approximately 2400 m, as well as in steep rocky terrain. Wet avalanches can release the wet snowpack and reach large size. Backcountry tours should be concluded timely. <br/> <br/> As a consequence of the strong southwesterly wind, fresh snow drift accumulations will form on Monday. The wind slabs are mostly easy to recognise and can be released by large loads in particular. The avalanche prone locations are to be found in particular on very steep shady slopes above approximately 2200 m and adjacent to ridgelines. Avalanches can additionally in very isolated cases be released in deeper layers, mostly by large additional loads in isolated cases, especially in areas where the snow cover is rather shallow. Such avalanche prone locations are very rare.",
+        "highlights": "Wet avalanches as the day progresses. Fresh wind slabs require caution."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "E",
+            "N",
+            "NE",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "SW",
+            "S",
+            "E",
+            "W",
+            "SE"
+          ],
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "problemType": "wet_snow",
+          "validTimePeriod": "later"
+        },
+        {
+          "aspects": [
+            "E",
+            "N",
+            "NE",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "later"
+        }
+      ],
+      "bulletinID": "2e0ec415-4cc5-42ea-a25f-4524047e8b8a",
+      "customData": {
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP10",
+            "DP6"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2600"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "mainValue": "considerable",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-21T16:00:00+00:00",
       "regions": [
         {
           "regionID": "IT-32-BZ-20"
@@ -386,110 +474,110 @@
           "regionID": "AT-07-29"
         }
       ],
-      "validTime": {
-        "startTime": "2021-02-21T23:00:00+00:00",
-        "endTime": "2021-02-22T23:00:00+00:00"
-      },
-      "source": {
-        "provider": {
-          "name": "Lawinenwarndienst Trentino",
-          "website": "https://avalanche.report/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "2600"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2600"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "considerable"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "E",
-            "N",
-            "NE",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "problemType": "wind_slab",
-          "validTimePeriod": "earlier"
-        },
-        {
-          "aspects": [
-            "SW",
-            "S",
-            "E",
-            "W",
-            "SE"
-          ],
-          "elevation": {
-            "upperBound": "2600"
-          },
-          "problemType": "wet_snow",
-          "validTimePeriod": "later"
-        },
-        {
-          "aspects": [
-            "E",
-            "N",
-            "NE",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "problemType": "wind_slab",
-          "validTimePeriod": "later"
-        }
-      ],
-      "tendency": {
-        "tendencyComment": "Wet avalanches as the day progresses. As a consequence of warming and solar radiation, the natural avalanche activity will increase."
-      },
-      "customData": {
-        "LWD_Tyrol": {
-          "dangerPatterns": [
-            "DP10",
-            "DP6"
-          ]
-        }
-      },
-      "bulletinID": "2e0ec415-4cc5-42ea-a25f-4524047e8b8a",
-      "publicationTime": "2021-02-21T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Wet avalanches as the day progresses. Fresh wind slabs require caution.",
-        "comment": "A clear night will be followed in the early morning by quite favourable conditions. As the day progresses as a consequence of warming during the day and solar radiation there will be an appreciable increase in the danger of wet and gliding avalanches, caution is to be exercised on very steep sunny slopes below approximately 2400 m, as well as in steep rocky terrain. Wet avalanches can release the wet snowpack and reach large size. Backcountry tours should be concluded timely. <br/> <br/> As a consequence of the strong southwesterly wind, fresh snow drift accumulations will form on Monday. The wind slabs are mostly easy to recognise and can be released by large loads in particular. The avalanche prone locations are to be found in particular on very steep shady slopes above approximately 2200 m and adjacent to ridgelines. Avalanches can additionally in very isolated cases be released in deeper layers, mostly by large additional loads in isolated cases, especially in areas where the snow cover is rather shallow. Such avalanche prone locations are very rare."
-      },
       "snowpackStructure": {
         "comment": "Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften earlier than the day before, in particular on steep sunny slopes below approximately 2400 m. The spring-like weather conditions as the day progresses will give rise to increasing and thorough wetting of the snowpack. <br/> The strong wind will transport the old snow. The fresh and older wind slabs are lying on soft layers in particular on steep shady slopes above approximately 2400 m. As a consequence of mild temperatures and solar radiation the snow drift accumulations stabilised. Isolated avalanche prone weak layers exist in the centre of the snowpack on west, north and east facing slopes."
+      },
+      "source": {
+        "provider": {
+          "name": "Lawinenwarndienst Trentino",
+          "website": "https://avalanche.report/"
+        }
+      },
+      "tendency": [
+        {
+          "comment": "Wet avalanches as the day progresses. As a consequence of warming and solar radiation, the natural avalanche activity will increase."
+        }
+      ],
+      "validTime": {
+        "endTime": "2021-02-22T23:00:00+00:00",
+        "startTime": "2021-02-21T23:00:00+00:00"
       }
     },
     {
+      "avalancheActivity": {
+        "comment": "A clear night will be followed in the early morning by quite favourable conditions, but the danger of wet avalanches will increase later. In the afternoon, many wet and gliding avalanches are to be expected, especially on very steep sunny slopes below approximately 2600 m, as well as in steep rocky terrain. These can in many cases reach medium size. Backcountry tours should be started early and concluded timely. <br/> As a consequence of the moderate to strong southerly foehn wind, fresh snow drift accumulations will form. These can be released in isolated cases especially on very steep shady slopes above approximately 2400 m. Caution is to be exercised in particular adjacent to ridgelines. The prevalence of avalanche prone locations and likelihood of triggering will increase in the regions exposed to the foehn.",
+        "highlights": "Increase in danger of wet avalanches in the course of the day. Fresh wind slabs require caution."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "aspects": [
+            "SW",
+            "S",
+            "E",
+            "W",
+            "SE"
+          ],
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "problemType": "wet_snow",
+          "validTimePeriod": "later"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "problemType": "wind_slab",
+          "validTimePeriod": "later"
+        }
+      ],
+      "bulletinID": "56410e01-259b-4b8e-a97b-f4628744b70e",
+      "customData": {
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP10",
+            "DP6"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "2400"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "upperBound": "2400"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2600"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2021-02-21T16:00:00+00:00",
       "regions": [
         {
           "regionID": "AT-07-20"
@@ -630,9 +718,8 @@
           "regionID": "AT-07-09"
         }
       ],
-      "validTime": {
-        "startTime": "2021-02-21T23:00:00+00:00",
-        "endTime": "2021-02-22T23:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "Outgoing longwave radiation during the night was good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften during the day. The high temperatures will give rise to gradual and thorough wetting of the snowpack, in particular on steep sunny slopes below approximately 2600 m. <br/> The mostly small wind slabs of the last few days are lying on soft layers in particular on steep shady slopes above approximately 2400 m. As a consequence of mild temperatures and solar radiation the snow drift accumulations stabilised. Isolated avalanche prone weak layers exist in the centre of the snowpack. At low altitude a little snow is lying."
       },
       "source": {
         "provider": {
@@ -640,95 +727,14 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2400"
-          },
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "2600"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
-        },
-        {
-          "elevation": {
-            "upperBound": "2600"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
+          "comment": "Increase in danger of wet avalanches as a consequence of warming during the day."
         }
       ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "problemType": "wind_slab",
-          "validTimePeriod": "earlier"
-        },
-        {
-          "aspects": [
-            "SW",
-            "S",
-            "E",
-            "W",
-            "SE"
-          ],
-          "elevation": {
-            "upperBound": "2600"
-          },
-          "problemType": "wet_snow",
-          "validTimePeriod": "later"
-        },
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "NW"
-          ],
-          "elevation": {
-            "lowerBound": "2400"
-          },
-          "problemType": "wind_slab",
-          "validTimePeriod": "later"
-        }
-      ],
-      "tendency": {
-        "tendencyComment": "Increase in danger of wet avalanches as a consequence of warming during the day."
-      },
-      "customData": {
-        "LWD_Tyrol": {
-          "dangerPatterns": [
-            "DP10",
-            "DP6"
-          ]
-        }
-      },
-      "bulletinID": "56410e01-259b-4b8e-a97b-f4628744b70e",
-      "publicationTime": "2021-02-21T16:00:00+00:00",
-      "avalancheActivity": {
-        "highlights": "Increase in danger of wet avalanches in the course of the day. Fresh wind slabs require caution.",
-        "comment": "A clear night will be followed in the early morning by quite favourable conditions, but the danger of wet avalanches will increase later. In the afternoon, many wet and gliding avalanches are to be expected, especially on very steep sunny slopes below approximately 2600 m, as well as in steep rocky terrain. These can in many cases reach medium size. Backcountry tours should be started early and concluded timely. <br/> As a consequence of the moderate to strong southerly foehn wind, fresh snow drift accumulations will form. These can be released in isolated cases especially on very steep shady slopes above approximately 2400 m. Caution is to be exercised in particular adjacent to ridgelines. The prevalence of avalanche prone locations and likelihood of triggering will increase in the regions exposed to the foehn."
-      },
-      "snowpackStructure": {
-        "comment": "Outgoing longwave radiation during the night was good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften during the day. The high temperatures will give rise to gradual and thorough wetting of the snowpack, in particular on steep sunny slopes below approximately 2600 m. <br/> The mostly small wind slabs of the last few days are lying on soft layers in particular on steep shady slopes above approximately 2400 m. As a consequence of mild temperatures and solar radiation the snow drift accumulations stabilised. Isolated avalanche prone weak layers exist in the centre of the snowpack. At low altitude a little snow is lying."
+      "validTime": {
+        "endTime": "2021-02-22T23:00:00+00:00",
+        "startTime": "2021-02-21T23:00:00+00:00"
       }
     }
   ]

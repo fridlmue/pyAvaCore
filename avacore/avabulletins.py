@@ -17,6 +17,9 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 import json
 import typing
+from typing import Optional, Any, List
+
+from .MetaData import MetaData
 
 from .avajson import JSONEncoder
 from .avabulletin import AvaBulletin, DangerRating, Provider
@@ -25,13 +28,11 @@ from .geojson import Feature, FeatureCollection
 
 @dataclass
 class Bulletins:
-    """
-    Class for the AvaBulletin collection
-    Follows partly CAAMLv6 caaml:Bulletins
-    """
+    """JSON schema for EAWS avalanche bulletin collection following the CAAMLv6 schema"""
 
-    bulletins: typing.List[AvaBulletin] = field(default_factory=list)
-    customData: typing.Dict[str, str] = field(default_factory=dict)
+    bulletins: List[AvaBulletin] = field(default_factory=list)
+    customData: Any = None
+    metaData: Optional[MetaData] = None
 
     def __getitem__(self, item):
         return self.bulletins[item]
@@ -49,6 +50,7 @@ class Bulletins:
         """
         Stores the given raw data as customData
         """
+        self.customData = self.customData or {}
         self.customData["file_extension"] = file_extension
         self.customData["data"] = data
 
@@ -95,24 +97,14 @@ class Bulletins:
 
         return validity_dates
 
-    def strip_wrong_day_reports(self, validity_date):
-        """
-        Returns only Bulletins of validityDate in main_dates
-        """
-        rel_bulletins = []
-
-        for bulletin in self.bulletins:
-            if validity_date in bulletin.main_dates():
-                rel_bulletins.append(bulletin)
-        return rel_bulletins
-
     def max_danger_ratings(self, validity_date):
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
         ratings = {}
-        for bulletin in self.strip_wrong_day_reports(validity_date):
-
+        for bulletin in self.bulletins:
+            if validity_date not in bulletin.main_dates():
+                continue
             for region in bulletin.regions:
                 local_ratings = {}
                 regionId = region.regionID
@@ -137,7 +129,6 @@ class Bulletins:
                         del bulletin.dangerRatings[j]
 
                 for danger in bulletin.dangerRatings:
-
                     key_elev = ""
                     key_time = ""
 
@@ -320,16 +311,15 @@ class Bulletins:
             return
         feature.properties.max_danger_rating = max(dangers)
 
-    def from_json(self, bulletins_json):
-        """
-        read bulletins from CAAMLv6 JSON
-        """
-        self.bulletins = []
-        for bulletin_json in bulletins_json["bulletins"]:
-            bulletin = AvaBulletin()
-            bulletin.from_json(bulletin_json)
-            self.bulletins.append(bulletin)
+    @staticmethod
+    def from_dict(obj: Any) -> "Bulletins":
+        assert isinstance(obj, dict)
+        return Bulletins(
+            bulletins=[AvaBulletin.from_dict(b) for b in obj.get("bulletins", [])],
+            customData=obj.get("customData"),
+            metaData=obj.get("metaData"),
+        )
 
     def to_json(self) -> str:
         """write bulletins as CAAMLv6 JSON string"""
-        return json.dumps(self, cls=JSONEncoder, indent=2)
+        return json.dumps(self, cls=JSONEncoder, indent=2, sort_keys=True)

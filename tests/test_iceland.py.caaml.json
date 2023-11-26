@@ -1,14 +1,50 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "A child was buried 19.2. when snow collapsed on it from Hamarinn above Hverager\u00f0i. Another human triggered avalanche 19.2. in a small steep slope south of \u00deingvallavatn. A naturally triggered avalanche released in Reykjafell in Mosfellsb\u00e6r on 20.02.",
+        "highlights": "Severe blizzard in mountains on Monday evening will form windslabs in northwesterly aspects, and earlier much snow is had drifted in E-winds. Weak layers increase the likelihood of human triggered avalanches. Snowstorm on Tuesday will probably maintain instabilities."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "SW",
+            "W",
+            "NW",
+            "N",
+            "NE"
+          ],
+          "problemType": "wind_slab"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "bulletinID": "IS-SV-2022-02-21T16:40:51+00:00",
+      "dangerRatings": [
+        {
+          "mainValue": "high",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2022-02-21T16:40:51+00:00",
       "regions": [
         {
           "regionID": "IS-SV"
         }
       ],
-      "validTime": {
-        "startTime": "2022-02-21T19:00:00+00:00",
-        "endTime": "2022-02-22T19:00:00+00:00"
+      "snowpackStructure": {
+        "highlights": "Considerable new snow in very strong southeast winds on Monday evening, and earlier much snow had accumulated in west facing slopes due to prevailing easterly winds. Weak layers have been found in the area, differently deeply buried. This increases the likelihood of human triggered avalanches. Instabilities are expected to be maintained in strong southwest winds with snow on Tuesday."
       },
       "source": {
         "provider": {
@@ -16,12 +52,23 @@
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "high"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse.",
+        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords."
+      },
+      "validTime": {
+        "endTime": "2022-02-22T19:00:00+00:00",
+        "startTime": "2022-02-21T19:00:00+00:00"
+      },
+      "weatherForecast": {
+        "highlights": "Su\u00f0austan\u00e1tt \u00e1 m\u00e1nudagskv\u00f6ld, 23-28 m/s, mikil snj\u00f3koma til fjalla og hl\u00fdnandi ve\u00f0ur. Su\u00f0vestan stormur e\u00f0a rok fram eftir degi \u00e1 \u00feri\u00f0judag, gengur \u00e1 me\u00f0 \u00e9ljum og k\u00f3lnar aftur. Heldur h\u00e6gari breytileg \u00e1tt um kv\u00f6ldi\u00f0, og d\u00e1l\u00edtil snj\u00f3koma. H\u00e6g nor\u00f0l\u00e6g e\u00f0a breytileg \u00e1tt \u00e1 mi\u00f0vikudag og fimmtudag, \u00feurrt og kalt \u00ed ve\u00f0ri."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "Cornices collapsed in Skutulsfj\u00f6r\u00f0ur 19.2. and triggered avalanches.",
+        "highlights": "Unstable windslabs in westerly aspects and increasing after ENE storm night to Tuesday. Windslabs expected in easterly aspects after strong SW on Tuesday. NE storm and snowfall on Wednesday that can create high avalanche danger in mountains."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -32,47 +79,23 @@
             "NE"
           ],
           "problemType": "wind_slab"
-        },
-        {
-          "aspects": [
-            "N",
-            "NE",
-            "E",
-            "SE",
-            "S",
-            "SW",
-            "W",
-            "NW"
-          ],
-          "problemType": "persistent_weak_layers"
         }
       ],
-      "travelAdvisory": {
-        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords.",
-        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse."
-      },
-      "publicationTime": "2022-02-21T16:40:51+00:00",
-      "wxSynopsis": {
-        "highlights": "Su\u00f0austan\u00e1tt \u00e1 m\u00e1nudagskv\u00f6ld, 23-28 m/s, mikil snj\u00f3koma til fjalla og hl\u00fdnandi ve\u00f0ur. Su\u00f0vestan stormur e\u00f0a rok fram eftir degi \u00e1 \u00feri\u00f0judag, gengur \u00e1 me\u00f0 \u00e9ljum og k\u00f3lnar aftur. Heldur h\u00e6gari breytileg \u00e1tt um kv\u00f6ldi\u00f0, og d\u00e1l\u00edtil snj\u00f3koma. H\u00e6g nor\u00f0l\u00e6g e\u00f0a breytileg \u00e1tt \u00e1 mi\u00f0vikudag og fimmtudag, \u00feurrt og kalt \u00ed ve\u00f0ri."
-      },
-      "bulletinID": "IS-SV-2022-02-21T16:40:51+00:00",
-      "avalancheActivity": {
-        "highlights": "Severe blizzard in mountains on Monday evening will form windslabs in northwesterly aspects, and earlier much snow is had drifted in E-winds. Weak layers increase the likelihood of human triggered avalanches. Snowstorm on Tuesday will probably maintain instabilities.",
-        "comment": "A child was buried 19.2. when snow collapsed on it from Hamarinn above Hverager\u00f0i. Another human triggered avalanche 19.2. in a small steep slope south of \u00deingvallavatn. A naturally triggered avalanche released in Reykjafell in Mosfellsb\u00e6r on 20.02."
-      },
-      "snowpackStructure": {
-        "highlights": "Considerable new snow in very strong southeast winds on Monday evening, and earlier much snow had accumulated in west facing slopes due to prevailing easterly winds. Weak layers have been found in the area, differently deeply buried. This increases the likelihood of human triggered avalanches. Instabilities are expected to be maintained in strong southwest winds with snow on Tuesday."
-      }
-    },
-    {
+      "bulletinID": "IS-VN-2022-02-21T15:49:01+00:00",
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2022-02-21T15:49:01+00:00",
       "regions": [
         {
           "regionID": "IS-VN"
         }
       ],
-      "validTime": {
-        "startTime": "2022-02-21T19:00:00+00:00",
-        "endTime": "2022-02-22T19:00:00+00:00"
+      "snowpackStructure": {
+        "highlights": "Much snow has been added in easterly winds. Most snow is therefore expected to have accumulated in W-facing slopes. Cornices have collapsed and triggered avalanches. Snow is thought mostly wind packed and stiff. Increased instability expected after ENE storm night to Tuesday and higher instability in NE storm on Wednesday."
       },
       "source": {
         "provider": {
@@ -80,63 +103,23 @@
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "SW",
-            "W",
-            "NW",
-            "N",
-            "NE"
-          ],
-          "problemType": "wind_slab"
-        }
-      ],
       "travelAdvisory": {
-        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords.",
-        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse."
+        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse.",
+        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords."
       },
-      "publicationTime": "2022-02-21T15:49:01+00:00",
-      "wxSynopsis": {
+      "validTime": {
+        "endTime": "2022-02-22T19:00:00+00:00",
+        "startTime": "2022-02-21T19:00:00+00:00"
+      },
+      "weatherForecast": {
         "highlights": "A-NA 20-25 m/s og hr\u00ed\u00f0arve\u00f0ur a\u00f0faran\u00f3tt \u00feri\u00f0judags. Breytilegur vindur \u00e1 \u00feri\u00f0judag, hv\u00f6ss SV-\u00e1tt me\u00f0 snj\u00f3komu um t\u00edma seinnipartinn. NA stormur me\u00f0 snj\u00f3komu \u00e1 mi\u00f0vikudag. Dregur \u00far vind og snj\u00f3komu \u00e1 fimmtudagsmorgun, h\u00e6gar \u00e1ttir yfir daginn og her\u00f0ir \u00e1 frosti."
-      },
-      "bulletinID": "IS-VN-2022-02-21T15:49:01+00:00",
-      "avalancheActivity": {
-        "highlights": "Unstable windslabs in westerly aspects and increasing after ENE storm night to Tuesday. Windslabs expected in easterly aspects after strong SW on Tuesday. NE storm and snowfall on Wednesday that can create high avalanche danger in mountains.",
-        "comment": "Cornices collapsed in Skutulsfj\u00f6r\u00f0ur 19.2. and triggered avalanches."
-      },
-      "snowpackStructure": {
-        "highlights": "Much snow has been added in easterly winds. Most snow is therefore expected to have accumulated in W-facing slopes. Cornices have collapsed and triggered avalanches. Snow is thought mostly wind packed and stiff. Increased instability expected after ENE storm night to Tuesday and higher instability in NE storm on Wednesday."
       }
     },
     {
-      "regions": [
-        {
-          "regionID": "IS-TN"
-        }
-      ],
-      "validTime": {
-        "startTime": "2022-02-21T19:00:00+00:00",
-        "endTime": "2022-02-22T19:00:00+00:00"
+      "avalancheActivity": {
+        "comment": "Minor avalanches fell in \u00d3lafsfj\u00f6r\u00f0ur during the weekend in wild E-wind. Avalanche fell the night to Friday in Kerahnj\u00fakur\"s S-face. Two slabs were remotely triggered 12.2. (300-500 m) by a snowmobile in Burstabrekkudalur, SW-W aspect, 30-60 cm fracture line sliding on blue ice.",
+        "highlights": "There have been very strong E-winds last two days with wild snowdrift on ridges. Tonight the SE-winds will be picking up, turning to E with snowfall for a while and SW-winds tomorrow."
       },
-      "source": {
-        "provider": {
-          "name": "Ve\u00f0urstofa \u00cdslands",
-          "website": "https://en.vedur.is/avalanches/forecast/"
-        }
-      },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
       "avalancheProblems": [
         {
           "aspects": [
@@ -165,32 +148,21 @@
           "problemType": "persistent_weak_layers"
         }
       ],
-      "travelAdvisory": {
-        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords.",
-        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse."
-      },
-      "publicationTime": "2022-02-21T19:27:54+00:00",
-      "wxSynopsis": {
-        "highlights": "Mj\u00f6g hv\u00f6ss SA-l\u00e6g \u00e1tt \u00ed n\u00f3tt me\u00f0 snj\u00f3komu um t\u00edma en sn\u00fdst \u00ed ekki s\u00ed\u00f0ur hvassa SV-\u00e1tt \u00e1 morgun \u00feri me\u00f0 snj\u00f3komu um t\u00edma \u00ed vesturfj\u00f6llum."
-      },
       "bulletinID": "IS-TN-2022-02-21T19:27:54+00:00",
-      "avalancheActivity": {
-        "highlights": "There have been very strong E-winds last two days with wild snowdrift on ridges. Tonight the SE-winds will be picking up, turning to E with snowfall for a while and SW-winds tomorrow.",
-        "comment": "Minor avalanches fell in \u00d3lafsfj\u00f6r\u00f0ur during the weekend in wild E-wind. Avalanche fell the night to Friday in Kerahnj\u00fakur\"s S-face. Two slabs were remotely triggered 12.2. (300-500 m) by a snowmobile in Burstabrekkudalur, SW-W aspect, 30-60 cm fracture line sliding on blue ice."
-      },
-      "snowpackStructure": {
-        "highlights": "New windslabs have formed in westerly aspects showing activity. Older windslabs are possible in most aspects due to variable wind directions lately and they can be unstable with icy firn surface below the slabs. Snowpit from Illvi\u00f0rishjn\u00fakur 19.2. showed a firm windslab on top of weaker layers. Stability tests gave medium results. Snowpit from Burstabrekkudalur 19.2. showed new snow on top of windslabs and stable firn underneath. Stability test gave medium results in the windslabs at 63 cm."
-      }
-    },
-    {
-      "regions": [
+      "dangerRatings": [
         {
-          "regionID": "IS-AF"
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
         }
       ],
-      "validTime": {
-        "startTime": "2022-02-21T19:00:00+00:00",
-        "endTime": "2022-02-22T19:00:00+00:00"
+      "publicationTime": "2022-02-21T19:27:54+00:00",
+      "regions": [
+        {
+          "regionID": "IS-TN"
+        }
+      ],
+      "snowpackStructure": {
+        "highlights": "New windslabs have formed in westerly aspects showing activity. Older windslabs are possible in most aspects due to variable wind directions lately and they can be unstable with icy firn surface below the slabs. Snowpit from Illvi\u00f0rishjn\u00fakur 19.2. showed a firm windslab on top of weaker layers. Stability tests gave medium results. Snowpit from Burstabrekkudalur 19.2. showed new snow on top of windslabs and stable firn underneath. Stability test gave medium results in the windslabs at 63 cm."
       },
       "source": {
         "provider": {
@@ -198,12 +170,23 @@
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
-      "dangerRatings": [
-        {
-          "validTimePeriod": "all_day",
-          "mainValue": "considerable"
-        }
-      ],
+      "travelAdvisory": {
+        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse.",
+        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords."
+      },
+      "validTime": {
+        "endTime": "2022-02-22T19:00:00+00:00",
+        "startTime": "2022-02-21T19:00:00+00:00"
+      },
+      "weatherForecast": {
+        "highlights": "Mj\u00f6g hv\u00f6ss SA-l\u00e6g \u00e1tt \u00ed n\u00f3tt me\u00f0 snj\u00f3komu um t\u00edma en sn\u00fdst \u00ed ekki s\u00ed\u00f0ur hvassa SV-\u00e1tt \u00e1 morgun \u00feri me\u00f0 snj\u00f3komu um t\u00edma \u00ed vesturfj\u00f6llum."
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "No recent avalanches reported.",
+        "highlights": "Unstable wind slabs possible in various aspects, especially though west facing. SE-E storm with heavy snowfall night to Tuesday and increased avalanche danger expected because of that."
+      },
       "avalancheProblems": [
         {
           "aspects": [
@@ -216,21 +199,38 @@
           "problemType": "wind_slab"
         }
       ],
-      "travelAdvisory": {
-        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords.",
-        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse."
-      },
-      "publicationTime": "2022-02-21T16:23:51+00:00",
-      "wxSynopsis": {
-        "highlights": "\u00c1k\u00f6f snj\u00f3koma og skafrenningur \u00ed SA- og A-stormi e\u00f0a -roki a\u00f0faran\u00f3tt \u00feri\u00f0judags. Sn\u00fdst \u00ed sunnan\u00e1tt \u00e1 \u00feri\u00f0judagsmorgun og styttir upp. Fremur h\u00e6g breytileg \u00e1tt \u00e1 \u00feri\u00f0judag og mi\u00f0vikudag, l\u00edtilsh\u00e1ttar ofankoma \u00ed h\u00e6gum vindi a\u00f0faran\u00f3tt mi\u00f0vikudags. Hvassar nor\u00f0l\u00e6gar \u00e1ttir \u00e1 fimmtudag me\u00f0 snj\u00f3komu."
-      },
       "bulletinID": "IS-AF-2022-02-21T16:23:51+00:00",
-      "avalancheActivity": {
-        "highlights": "Unstable wind slabs possible in various aspects, especially though west facing. SE-E storm with heavy snowfall night to Tuesday and increased avalanche danger expected because of that.",
-        "comment": "No recent avalanches reported."
-      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2022-02-21T16:23:51+00:00",
+      "regions": [
+        {
+          "regionID": "IS-AF"
+        }
+      ],
       "snowpackStructure": {
         "highlights": "New wind slabs, that can be unstable, have formed in west facing slopes. Older windslabs exist in most aspects after variable winds but are considered rather local. A snow pit from Oddskar\u00f0 19.2. showed loose snow on top of wind packed snow and hard crust underneath. A stiff layer was 27-30 cm deep, and a compression test showed a fracture after heavy force where this layer meets the loose snow on top. The temperature gradient was also high over this intersection which can lead to crystallization and the formation of weak layers. SE and E storm with heavy snowfall the night to Tuesday is expected to lead to the formation of new unstable wind slabs in W and NW aspects. On Thursday snow is expected to accumulate in S facing slopes."
+      },
+      "source": {
+        "provider": {
+          "name": "Ve\u00f0urstofa \u00cdslands",
+          "website": "https://en.vedur.is/avalanches/forecast/"
+        }
+      },
+      "travelAdvisory": {
+        "comment": "Southeast severe blizzard in mountains on Monday evening and considerable new snow being added in northwest and west aspects. Two human triggered avalanches reported on the 19th of Feb. in the SW part of the country in small steep slopes. Considerable snow was before in the country, it has drifted in strong winds. Easterly winds have been prevailing so older unstable wind slabs are most likely in W-facing slopes. Weak layers have been found in the snow in the SW-corner and southern Westfjords. Cornices are widely and they may collapse.",
+        "highlights": "Southeast severe blizzard in mountains on Monday night. Human triggered avalanches in SW part. Unstable wind slabs in W-facing slopes. Weak layers in the SW-corner and southern Westfjords."
+      },
+      "validTime": {
+        "endTime": "2022-02-22T19:00:00+00:00",
+        "startTime": "2022-02-21T19:00:00+00:00"
+      },
+      "weatherForecast": {
+        "highlights": "\u00c1k\u00f6f snj\u00f3koma og skafrenningur \u00ed SA- og A-stormi e\u00f0a -roki a\u00f0faran\u00f3tt \u00feri\u00f0judags. Sn\u00fdst \u00ed sunnan\u00e1tt \u00e1 \u00feri\u00f0judagsmorgun og styttir upp. Fremur h\u00e6g breytileg \u00e1tt \u00e1 \u00feri\u00f0judag og mi\u00f0vikudag, l\u00edtilsh\u00e1ttar ofankoma \u00ed h\u00e6gum vindi a\u00f0faran\u00f3tt mi\u00f0vikudags. Hvassar nor\u00f0l\u00e6gar \u00e1ttir \u00e1 fimmtudag me\u00f0 snj\u00f3komu."
       }
     }
   ]

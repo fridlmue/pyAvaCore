@@ -1,6 +1,55 @@
 {
   "bulletins": [
     {
+      "avalancheActivity": {
+        "comment": "A clear night will be followed in the early morning by favourable conditions generally. As the day progresses as a consequence of warming during the day and solar radiation there will be an increase in the avalanche danger. Small to medium-sized wet and gliding avalanches are possible, especially on steep east, south and west facing slopes below approximately 2600 m, as well as in all aspects at intermediate altitudes. Wet avalanches can in some places be released by people. Avalanches can release the wet old snow as well and reach quite a large size, especially in the regions with a lot of snow in the north. <br/> Backcountry tours should be started early and concluded timely.",
+        "highlights": "The conditions are spring-like."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "E",
+            "SW",
+            "SE",
+            "S",
+            "W"
+          ],
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "problemType": "wet_snow",
+          "validTimePeriod": "later"
+        }
+      ],
+      "bulletinID": "da6a2ab6-93c0-492f-abc5-957427ae0974",
+      "customData": {
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP10"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "earlier"
+        },
+        {
+          "elevation": {
+            "lowerBound": "2600"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "later"
+        },
+        {
+          "elevation": {
+            "upperBound": "2600"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "later"
+        }
+      ],
+      "publicationTime": "2022-03-21T16:00:00.002475+00:00",
       "regions": [
         {
           "regionID": "IT-32-BZ-20"
@@ -177,9 +226,8 @@
           "regionID": "IT-32-TN-19"
         }
       ],
-      "validTime": {
-        "startTime": "2022-03-21T23:00:00+00:00",
-        "endTime": "2022-03-22T23:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften during the day. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes below approximately 2600 m. <br/> In particular in the south less snow than usual is lying."
       },
       "source": {
         "provider": {
@@ -187,45 +235,22 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "validTimePeriod": "earlier",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "lowerBound": "2600"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "low"
-        },
-        {
-          "elevation": {
-            "upperBound": "2600"
-          },
-          "validTimePeriod": "later",
-          "mainValue": "moderate"
+          "comment": "The conditions remain spring-like. Increase in danger of wet avalanches in the course of the day."
         }
       ],
-      "avalancheProblems": [
-        {
-          "aspects": [
-            "E",
-            "SW",
-            "SE",
-            "S",
-            "W"
-          ],
-          "elevation": {
-            "upperBound": "2600"
-          },
-          "problemType": "wet_snow",
-          "validTimePeriod": "later"
-        }
-      ],
-      "tendency": {
-        "tendencyComment": "The conditions remain spring-like. Increase in danger of wet avalanches in the course of the day."
+      "validTime": {
+        "endTime": "2022-03-22T23:00:00+00:00",
+        "startTime": "2022-03-21T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "A clear night will be followed in the early morning by favourable conditions over a wide area. The danger of wet and gliding avalanches will increase a little during the day. On steep slopes individual mostly small wet avalanches are possible. In the north the avalanche prone locations are more prevalent.",
+        "highlights": "Over a wide area from a snow sport perspective, insufficient snow is lying. Wet snow requires caution."
       },
+      "bulletinID": "0eaf7a51-8dc1-42e4-8359-7027b3601a4a",
       "customData": {
         "LWD_Tyrol": {
           "dangerPatterns": [
@@ -233,17 +258,13 @@
           ]
         }
       },
-      "bulletinID": "da6a2ab6-93c0-492f-abc5-957427ae0974",
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
       "publicationTime": "2022-03-21T16:00:00.002475+00:00",
-      "avalancheActivity": {
-        "highlights": "The conditions are spring-like.",
-        "comment": "A clear night will be followed in the early morning by favourable conditions generally. As the day progresses as a consequence of warming during the day and solar radiation there will be an increase in the avalanche danger. Small to medium-sized wet and gliding avalanches are possible, especially on steep east, south and west facing slopes below approximately 2600 m, as well as in all aspects at intermediate altitudes. Wet avalanches can in some places be released by people. Avalanches can release the wet old snow as well and reach quite a large size, especially in the regions with a lot of snow in the north. <br/> Backcountry tours should be started early and concluded timely."
-      },
-      "snowpackStructure": {
-        "comment": "Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust and will soften during the day. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes below approximately 2600 m. <br/> In particular in the south less snow than usual is lying."
-      }
-    },
-    {
       "regions": [
         {
           "regionID": "IT-32-TN-12"
@@ -282,9 +303,8 @@
           "regionID": "IT-32-TN-21"
         }
       ],
-      "validTime": {
-        "startTime": "2022-03-21T23:00:00+00:00",
-        "endTime": "2022-03-22T23:00:00+00:00"
+      "snowpackStructure": {
+        "comment": "Only a little snow is now lying. <br/> Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes."
       },
       "source": {
         "provider": {
@@ -292,30 +312,14 @@
           "website": "https://avalanche.report/"
         }
       },
-      "dangerRatings": [
+      "tendency": [
         {
-          "validTimePeriod": "all_day",
-          "mainValue": "low"
+          "comment": "The conditions remain spring-like."
         }
       ],
-      "tendency": {
-        "tendencyComment": "The conditions remain spring-like."
-      },
-      "customData": {
-        "LWD_Tyrol": {
-          "dangerPatterns": [
-            "DP10"
-          ]
-        }
-      },
-      "bulletinID": "0eaf7a51-8dc1-42e4-8359-7027b3601a4a",
-      "publicationTime": "2022-03-21T16:00:00.002475+00:00",
-      "avalancheActivity": {
-        "highlights": "Over a wide area from a snow sport perspective, insufficient snow is lying. Wet snow requires caution.",
-        "comment": "A clear night will be followed in the early morning by favourable conditions over a wide area. The danger of wet and gliding avalanches will increase a little during the day. On steep slopes individual mostly small wet avalanches are possible. In the north the avalanche prone locations are more prevalent."
-      },
-      "snowpackStructure": {
-        "comment": "Only a little snow is now lying. <br/> Outgoing longwave radiation during the night will be good over a wide area. The surface of the snowpack will freeze to form a strong crust. Sunshine and high temperatures will give rise as the day progresses to softening of the snowpack in particular on steep sunny slopes."
+      "validTime": {
+        "endTime": "2022-03-22T23:00:00+00:00",
+        "startTime": "2022-03-21T23:00:00+00:00"
       }
     }
   ]
