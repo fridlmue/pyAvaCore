@@ -68,6 +68,8 @@ class Bulletins:
         """
         Returns Main validity date of Reports
         """
+        if not self.bulletins:
+            return None
         return self.bulletins[0].main_date()
 
     def main_dates(

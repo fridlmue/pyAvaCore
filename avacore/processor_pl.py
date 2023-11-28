@@ -24,10 +24,10 @@ from avacore.avabulletin import (
     ValidTime,
 )
 from avacore.avabulletins import Bulletins
-from avacore.processor import Processor as AbstractProcessor
+from avacore.processor import HtmlProcessor
 
 
-class Processor(AbstractProcessor):
+class Processor(HtmlProcessor):
     def process_all_reports(self) -> Bulletins:
         return Bulletins(
             bulletins=[

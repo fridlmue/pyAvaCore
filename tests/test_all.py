@@ -1,0 +1,223 @@
+import datetime
+import io
+import unittest
+from tests import SnowTest
+import avacore.processor
+import avacore.processor_ad
+import avacore.processor_caamlv5
+import avacore.processor_caamlv6
+import avacore.processor_catalunya
+import avacore.processor_ch
+import avacore.processor_ch_zip
+import avacore.processor_cz
+import avacore.processor_es
+import avacore.processor_fi
+import avacore.processor_fr
+import avacore.processor_is
+import avacore.processor_it_livigno
+import avacore.processor_it_meteomont
+import avacore.processor_norway
+import avacore.processor_pl
+import avacore.processor_pl_12
+import avacore.processor_se
+import avacore.processor_sk
+import avacore.processor_uk
+
+
+class TestAll(SnowTest):
+    def test_ad(self):
+        processor = avacore.processor_ad.Processor()
+        self._test_processor(processor)
+
+    def test_ad_2022_12(self):
+        processor = avacore.processor_ad.Processor()
+        self._test_processor(processor)
+
+    def test_albina_2023_03_14(self):
+        processor = avacore.processor_caamlv6.Processor2022()
+        self._test_processor(processor)
+
+    def test_aineva(self):
+        processor = avacore.processor_caamlv5.Processor()
+        self._test_processor(processor)
+
+    def test_albina_2023_11_27(self):
+        processor = avacore.processor_caamlv6.Processor()
+        self._test_processor(processor)
+
+    def test_albina_ampm(self):
+        processor = avacore.processor_caamlv5.Processor()
+        bulletins = self._test_processor(processor)
+        self.assertEqual(bulletins.main_date().isoformat(), "2021-02-22")
+
+    def test_albina_elevation_band(self):
+        processor = avacore.processor_caamlv5.Processor()
+        self._test_processor(processor)
+
+    def test_albina_ratings(self):
+        processor = avacore.processor_caamlv5.Processor()
+        bulletins = self._test_processor(processor)
+        self.assertEqual(bulletins.main_date().isoformat(), "2022-03-22")
+
+    def test_albina(self):
+        processor = avacore.processor_caamlv5.Processor()
+        bulletins = self._test_processor(processor)
+        self.assertEqual(bulletins.main_date().isoformat(), "2021-02-10")
+
+    def test_bavaria_2021_12(self):
+        processor = avacore.processor_caamlv5.Processor()
+        self._test_processor(processor)
+
+    def test_bavaria_ampm(self):
+        processor = avacore.processor_caamlv5.BavariaProcessor()
+        self._test_processor(processor, "DE-BY")
+
+    def test_bavaria(self):
+        processor = avacore.processor_caamlv5.BavariaProcessor()
+        self._test_processor(processor, "DE-BY")
+
+    def test_ch_2022_12_07(self):
+        processor = avacore.processor_ch.Processor()
+        self._test_processor(processor)
+
+    def test_ch_2022_12(self):
+        processor = avacore.processor_ch_zip.Processor()
+        processor.raw_data = io.BytesIO(self._fixture("zip").read_bytes())
+        processor.year = 2022
+        self._test_processor(processor)
+
+    def test_ch_2023_02_14(self):
+        processor = avacore.processor_ch.Processor()
+        self._test_processor(processor)
+
+    def test_ch_2023_11_27(self):
+        processor = avacore.processor_caamlv6.Processor()
+        self._test_processor(processor)
+
+    @unittest.skip("2021 format unsupported")
+    def test_ch_ampm(self):
+        processor = avacore.processor_ch_zip.Processor()
+        processor.raw_data = io.BytesIO(self._fixture("zip").read_bytes())
+        processor.year = 2021
+        self._test_processor(processor)
+
+    def test_ct_icgc(self):
+        processor = avacore.processor_catalunya.Processor()
+        self._test_processor(processor)
+
+    def test_cz(self):
+        processor = avacore.processor_cz.Processor()
+        self._test_processor(processor)
+
+    def test_es_am_pm(self):
+        processor = avacore.processor_es.Processor()
+        self._test_processor(processor)
+
+    def test_es(self):
+        processor = avacore.processor_es.Processor()
+        self._test_processor(processor)
+
+    def test_fi(self):
+        processor = avacore.processor_fi.Processor()
+        processor.raw_data = io.BytesIO(self._fixture("png").read_bytes())
+        processor.today = datetime.datetime.fromisoformat("2023-02-03T14:08:00")
+        self._test_processor(processor)
+
+    def test_france(self):
+        processor = avacore.processor_fr.Processor()
+        self._test_processor(processor)
+
+    def test_gbsct(self):
+        processor = avacore.processor_uk.Processor()
+        self._test_processor(processor)
+
+    def test_iceland(self):
+        processor = avacore.processor_is.Processor()
+        self._test_processor(processor)
+
+    def test_it_livigno(self):
+        processor = avacore.processor_it_livigno.Processor()
+        bulletins = self._test_processor(processor, "IT-Livigno")
+        self.assertEqual("2022-12-18", bulletins.main_date().isoformat())
+
+    def test_it_meteomont(self):
+        processor = avacore.processor_it_meteomont.Processor()
+        processor.add_eaws_id = True
+        bulletins = self._test_processor(processor, "IT-MeteoMont")
+        self.assertEqual("2022-12-12", bulletins.main_date().isoformat())
+        self.assertEqual(
+            ["2022-12-12", "2022-12-13", "2022-12-14", "2022-12-15"],
+            sorted([d.isoformat() for d in bulletins.main_dates()]),
+        )
+
+    def test_norway(self):
+        processor = avacore.processor_norway.Processor()
+        processor.fetch_time_dependant = False
+        self._test_processor(processor, "NO-3016")
+
+    def test_pl_12_2022_12_01(self):
+        processor = avacore.processor_pl_12.Processor()
+        processor.fetch_time_dependant = False
+        self._test_processor(processor, "PL-12")
+
+    def test_pl_2018_02_09(self):
+        processor = avacore.processor_pl.Processor()
+        processor.fetch_time_dependant = False
+        self._test_processor(processor, "PL-01")
+
+    def test_pl_2019_01_09(self):
+        processor = avacore.processor_pl.Processor()
+        processor.fetch_time_dependant = False
+        self._test_processor(processor, "PL-01")
+
+    def test_salzburg_ampm(self):
+        processor = avacore.processor_caamlv5.Processor()
+        self._test_processor(processor)
+
+    def test_slovakia_2023_11_28(self):
+        processor = avacore.processor_caamlv6.Processor2022()
+        self._test_processor(processor)
+
+    def test_slovakia(self):
+        processor = avacore.processor_sk.Processor()
+        self._test_processor(processor)
+
+    def test_slovenia_2023(self):
+        processor = avacore.processor_caamlv5.SloveniaProcessor()
+        processor.today = datetime.date(2023, 1, 9)
+        self._test_processor(processor, "SI")
+
+    def test_slovenia(self):
+        processor = avacore.processor_caamlv5.SloveniaProcessor()
+        processor.today = datetime.date(2021, 3, 20)
+        self._test_processor(processor, "SI")
+
+    def test_sweden_2022_12(self):
+        processor = avacore.processor_se.Processor()
+        with self.assertRaises(Exception) as context:
+            self._test_processor(processor, "SE")
+        self.assertRegex(str(context.exception), "'bulletins' is a required property")
+
+    def test_sweden(self):
+        processor = avacore.processor_se.Processor()
+        self._test_processor(processor, "SE")
+
+    def test_vorarlberg_2021_12(self):
+        processor = avacore.processor_caamlv5.Processor()
+        bulletins = self._test_processor(processor)
+        self.assertEqual(bulletins.main_date().isoformat(), "2021-12-29")
+
+    def test_vorarlberg_2022_01(self):
+        processor = avacore.processor_caamlv5.Processor()
+        bulletins = self._test_processor(processor)
+        self.assertEqual(bulletins.main_date().isoformat(), "2022-01-31")
+
+    @unittest.skip("wxSynopsisComment")
+    def test_vorarlberg_ampm(self):
+        processor = avacore.processor_caamlv5.VorarlbergProcessor()
+        self._test_processor(processor)
+
+    @unittest.skip("wxSynopsisComment")
+    def test_vorarlberg(self):
+        processor = avacore.processor_caamlv5.VorarlbergProcessor()
+        self._test_processor(processor)
