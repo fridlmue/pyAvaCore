@@ -1,0 +1,200 @@
+{
+  "bulletins": [
+    {
+      "avalancheActivity": {
+        "comment": "For all mountains above 1700 mn.m. the avalanche danger level 2 is declared. Especially windward slopes, couloirs and couloirs where large amounts of snow are blown by the wind are critical. Care should be taken in particular in places where the hardness of the snow changes, wind-blown slabs are noticeable or signs of wind-blown slabs (ripples or unevenly distributed snow cover) appear. In these places it is possible to release an avalanche even with a small additional load. Alternatively, smaller spontaneous avalanches, avalanches, or 'bursts' may occur.",
+        "highlights": "Watch out for wind-blown snow slabs and pillows!"
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "SE",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "frequency": "some",
+          "problemType": "wind_slab",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "NW",
+            "SE",
+            "W",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 2,
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "frequency": "some",
+          "problemType": "new_snow",
+          "snowpackStability": "fair",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "c772338e-0fc7-4848-827d-c61afb993b6b",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-11-28"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP6",
+            "DP7"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "upperBound": "1700"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "lowerBound": "1700"
+          },
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "en",
+      "publicationTime": "2023-11-27T15:44:28+00:00",
+      "regions": [
+        {
+          "name": "Vysok\u00e9 Tatry - v\u00fdchod",
+          "regionID": "SK-01"
+        },
+        {
+          "name": "Vysok\u00e9 Tatry - z\u00e1pad",
+          "regionID": "SK-02"
+        },
+        {
+          "name": "Z\u00e1padn\u00e9 Tatry",
+          "regionID": "SK-03"
+        },
+        {
+          "name": "\u010eumbierske N\u00edzke Tatry",
+          "regionID": "SK-05"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Snowfall is expected to arrive in the morning, when up to 15 cm of new snow could be added. The flow this time will come from the south to south-west and should not be accompanied by strong winds. This means that the snow will remain dry and loose thanks to the freezing temperatures. Locally, however, there will be wind-blown snow slabs and pillows on some slopes, which have their typical features."
+      },
+      "source": {
+        "provider": {
+          "name": "SLP HZS",
+          "website": "https://avalanches.sk/"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "During the whole day due to snowfall and reduced visibility, it is FREEZING.\n\n<br><br><i> Compiled by:  Martin Be\u0161insk\u00fd </i>",
+          "tendencyType": "steady"
+        }
+      ],
+      "validTime": {
+        "endTime": "2023-11-28T23:00:00+00:00",
+        "startTime": "2023-11-27T23:00:00+00:00"
+      }
+    },
+    {
+      "avalancheActivity": {
+        "comment": "In the Fatra Mountains and in the Kraljeho\u013ea part of the Low Tatras, a low avalanche danger is declared, level 1. There is little snow in these mountains and in the forest zone in general and it does not pose a significant avalanche danger. Very locally, larger amounts of snow may be accumulated in places. Mainly in a terrain depression or in a narrow couloir."
+      },
+      "avalancheProblems": [
+        {
+          "aspects": [
+            "E",
+            "S",
+            "NE",
+            "NW",
+            "SE",
+            "W",
+            "SW",
+            "N"
+          ],
+          "avalancheSize": 1,
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "frequency": "few",
+          "problemType": "new_snow",
+          "snowpackStability": "poor",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "bulletinID": "272af3c3-3412-4757-9d57-1cb4b8637c17",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-11-28"
+        },
+        "LWD_Tyrol": {
+          "dangerPatterns": [
+            "DP7"
+          ]
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "en",
+      "publicationTime": "2023-11-27T15:44:28+00:00",
+      "regions": [
+        {
+          "name": "Kriv\u00e1nska Mal\u00e1 Fatra",
+          "regionID": "SK-07"
+        },
+        {
+          "name": "L\u00fa\u010dianska Mal\u00e1 Fatra",
+          "regionID": "SK-08"
+        },
+        {
+          "name": "Kr\u00e1\u013eovoho\u013esk\u00e9 N\u00edzke Tatry",
+          "regionID": "SK-04"
+        },
+        {
+          "name": "Ve\u013ek\u00e1 Fatra",
+          "regionID": "SK-06"
+        }
+      ],
+      "snowpackStructure": {
+        "comment": "Snow cover is below average in these mountains. Loose powder snow predominates, or very locally there may be a larger amount of snow or wind-blown slabs. Such places are very few and do not represent a potential risk."
+      },
+      "source": {
+        "provider": {
+          "name": "SLP HZS",
+          "website": "https://avalanches.sk/"
+        }
+      },
+      "tendency": [
+        {
+          "highlights": "During the whole day due to snowfall and reduced visibility, it is FREEZING.\n\n<br><br><i> Compiled by:  Martin Be\u0161insk\u00fd </i>",
+          "tendencyType": "steady"
+        }
+      ],
+      "validTime": {
+        "endTime": "2023-11-28T23:00:00+00:00",
+        "startTime": "2023-11-27T23:00:00+00:00"
+      }
+    }
+  ]
+}

@@ -17,5 +17,23 @@ from avacore.processor import JsonProcessor
 
 
 class Processor(JsonProcessor):
+    """Processor for CAAMLv6 JSON -- http://caaml.org/Schemas/BulletinEAWS/ -- http://caaml.org/Schemas/BulletinEAWS/v6.0/json/CAAMLv6_BulletinEAWS.json"""
+
     def parse_json(self, region_id, root) -> Bulletins:
         return Bulletins.from_dict(root)
+
+
+class Processor2022(Processor):
+    """Processor for intermediate CAAML format"""
+
+    def parse_json(self, region_id, root) -> Bulletins:
+        for b in root["bulletins"]:
+            if "wxSynopsis" in b and isinstance(b["wxSynopsis"], dict):
+                b["weatherForecast"] = b["wxSynopsis"]
+            if "tendency" in b and isinstance(b["tendency"], dict):
+                b["tendency"] = [b["tendency"]]
+            if "avalancheProblems" in b and isinstance(b["avalancheProblems"], list):
+                for p in b["avalancheProblems"]:
+                    if "terrainFeature" in p:
+                        p["comment"] = p["terrainFeature"]
+        return super().parse_json(region_id, root)

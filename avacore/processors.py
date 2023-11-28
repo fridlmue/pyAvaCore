@@ -81,5 +81,5 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
     if region_id.startswith("SI"):
         return avacore.processor_caamlv5.SloveniaProcessor()
     if region_id.startswith("SK"):
-        return avacore.processor_sk.Processor()
+        return avacore.processor_caamlv6.Processor2022()
     return avacore.processor_caamlv5.Processor()
