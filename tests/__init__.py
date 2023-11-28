@@ -1,17 +1,18 @@
 import json
 import os
-from pathlib import Path
+import pathlib
 import unittest
 from jsonschema import validate
 from avacore.pyAvaCore import get_report_provider
 
 from avacore.avabulletins import Bulletins
 
+ROOT = pathlib.Path(__file__).parent
+
 
 class SnowTest(unittest.TestCase):
     def assertEqualBulletinJSON(
         self,
-        expected_basename: str,
         bulletins: Bulletins,
         region_id: str = "",
         date: str = "",
@@ -25,7 +26,7 @@ class SnowTest(unittest.TestCase):
         provider = get_report_provider(region_id, date=date, lang="en")
         bulletins.append_provider(provider.name, provider.website)
 
-        expected = Path(f"{expected_basename}.caaml.json")
+        expected = self._fixture("caaml.json")
         if overwrite:
             expected.write_text(bulletins.to_json())
         self.assertEqual(
@@ -37,7 +38,7 @@ class SnowTest(unittest.TestCase):
             "maxDangerRatings": bulletins.max_danger_ratings(bulletins.main_date()),
         }
         ratings = json.dumps(maxDangerRatings, indent=2, sort_keys=True)
-        expected = Path(f"{expected_basename}.ratings.json")
+        expected = self._fixture("ratings.json")
         if overwrite:
             expected.write_text(ratings)
         self.assertEqual(
@@ -45,8 +46,19 @@ class SnowTest(unittest.TestCase):
             ratings,
         )
 
-        schema = Path(__file__).with_name("test_json_schema.py.schema.json").read_text()
+        schema = (ROOT / "CAAMLv6_BulletinEAWS.json").read_text()
         validate(
             instance=json.loads(bulletins.to_json()),
             schema=json.loads(schema),
         )
+
+    def _fixture(self, ext=""):
+        return ROOT / "fixtures" / f"{self._testMethodName}.{ext}"
+
+    @property
+    def _json(self):
+        return self._fixture("json")
+
+    @property
+    def _xml(self):
+        return self._fixture("xml")
