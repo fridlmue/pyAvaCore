@@ -63,7 +63,12 @@ class SnowTest(unittest.TestCase):
     def _xml(self):
         return self._fixture("xml")
 
-    def _test_processor(self, processor: avacore.processor.Processor, region_id=""):
+    def _test_processor(
+        self,
+        processor: avacore.processor.Processor,
+        region_id="",
+        overwrite=False,
+    ):
         if isinstance(processor, avacore.processor.JsonProcessor):
             bulletins = processor.parse_json_file(region_id, self._json)
         elif isinstance(processor, avacore.processor.XmlProcessor):
@@ -73,5 +78,5 @@ class SnowTest(unittest.TestCase):
             bulletins = processor.parse_html(region_id, html)
         else:
             bulletins = processor.process_bulletin(region_id)
-        self.assertEqualBulletinJSON(bulletins, region_id)
+        self.assertEqualBulletinJSON(bulletins, region_id, overwrite=overwrite)
         return bulletins
