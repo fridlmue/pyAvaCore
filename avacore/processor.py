@@ -97,3 +97,11 @@ class XmlProcessor(Processor):
         self.raw_data = self._fetch_url(url, headers)
         self.raw_data_format = "xml"
         return ET.fromstring(self.raw_data)
+
+
+class HtmlProcessor(Processor):
+    @abstractmethod
+    def parse_html(self, region_id, html: str) -> Bulletins:
+        """
+        Builds the CAAML JSONs form the original HTML formats.
+        """
