@@ -137,10 +137,8 @@ class TestAll(SnowTest):
 
     def test_it_livigno(self):
         processor = avacore.processor_it_livigno.Processor()
-        html = self._fixture("html").read_text("utf-8")
-        bulletins = processor.parse_html("IT-Livigno", html)
+        bulletins = self._test_processor(processor, "IT-Livigno")
         self.assertEqual("2022-12-18", bulletins.main_date().isoformat())
-        self.assertEqualBulletinJSON(bulletins)
 
     def test_it_meteomont(self):
         processor = avacore.processor_it_meteomont.Processor()
@@ -165,16 +163,12 @@ class TestAll(SnowTest):
     def test_pl_2018_02_09(self):
         processor = avacore.processor_pl.Processor()
         processor.fetch_time_dependant = False
-        html = self._fixture("html").read_text("utf-8")
-        bulletins = processor.parse_html("PL-01", html)
-        self.assertEqualBulletinJSON(bulletins)
+        self._test_processor(processor, "PL-01")
 
     def test_pl_2019_01_09(self):
         processor = avacore.processor_pl.Processor()
         processor.fetch_time_dependant = False
-        html = self._fixture("html").read_text("utf-8")
-        bulletins = processor.parse_html("PL-01", html)
-        self.assertEqualBulletinJSON(bulletins)
+        self._test_processor(processor, "PL-01")
 
     def test_salzburg_ampm(self):
         processor = avacore.processor_caamlv5.Processor()

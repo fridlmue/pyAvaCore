@@ -68,6 +68,9 @@ class SnowTest(unittest.TestCase):
             bulletins = processor.parse_json_file(region_id, self._json)
         elif isinstance(processor, avacore.processor.XmlProcessor):
             bulletins = processor.parse_xml_file(region_id, self._xml)
+        elif isinstance(processor, avacore.processor.HtmlProcessor):
+            html = self._fixture("html").read_text()
+            bulletins = processor.parse_html(region_id, html)
         else:
             bulletins = processor.process_bulletin(region_id)
         self.assertEqualBulletinJSON(bulletins, region_id)

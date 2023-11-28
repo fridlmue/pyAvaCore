@@ -24,10 +24,10 @@ from avacore.avabulletin import (
     Region,
 )
 from avacore.avabulletins import Bulletins
-from avacore.processor import Processor as AbstractProcessor
+from avacore.processor import HtmlProcessor
 
 
-class Processor(AbstractProcessor):
+class Processor(HtmlProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         html = self._fetch_url(self.url, {})
         self.raw_data = html
