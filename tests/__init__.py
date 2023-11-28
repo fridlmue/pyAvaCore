@@ -1,4 +1,5 @@
 import json
+import os
 from pathlib import Path
 import unittest
 from jsonschema import validate
@@ -14,14 +15,19 @@ class SnowTest(unittest.TestCase):
         bulletins: Bulletins,
         region_id: str = "",
         date: str = "",
+        overwrite: bool = False,
     ):
+        if overwrite and os.getenv("CI_JOB_NAME"):
+            # https://docs.gitlab.com/ee/ci/variables/#list-all-environment-variables
+            raise ValueError("overwrite=True must not be used in CI!")
 
         region_id = region_id or bulletins[0].get_region_list()[0].upper()
         provider = get_report_provider(region_id, date=date, lang="en")
         bulletins.append_provider(provider.name, provider.website)
 
         expected = Path(f"{expected_basename}.caaml.json")
-        # expected.write_text(bulletins.to_json())
+        if overwrite:
+            expected.write_text(bulletins.to_json())
         self.assertEqual(
             expected.read_text(encoding="utf-8"),
             bulletins.to_json(),
@@ -32,7 +38,8 @@ class SnowTest(unittest.TestCase):
         }
         ratings = json.dumps(maxDangerRatings, indent=2, sort_keys=True)
         expected = Path(f"{expected_basename}.ratings.json")
-        # expected.write_text(ratings)
+        if overwrite:
+            expected.write_text(ratings)
         self.assertEqual(
             expected.read_text(encoding="utf-8"),
             ratings,
