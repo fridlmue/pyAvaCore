@@ -3,9 +3,9 @@ import os
 import pathlib
 import unittest
 from jsonschema import validate
-from avacore.pyAvaCore import get_report_provider
-
+import avacore.processor
 from avacore.avabulletins import Bulletins
+from avacore.pyAvaCore import get_report_provider
 
 ROOT = pathlib.Path(__file__).parent
 
@@ -62,3 +62,13 @@ class SnowTest(unittest.TestCase):
     @property
     def _xml(self):
         return self._fixture("xml")
+
+    def _test_processor(self, processor: avacore.processor.Processor, region_id=""):
+        if isinstance(processor, avacore.processor.JsonProcessor):
+            bulletins = processor.parse_json_file(region_id, self._json)
+        elif isinstance(processor, avacore.processor.XmlProcessor):
+            bulletins = processor.parse_xml_file(region_id, self._xml)
+        else:
+            bulletins = processor.process_bulletin(region_id)
+        self.assertEqualBulletinJSON(bulletins, region_id)
+        return bulletins
