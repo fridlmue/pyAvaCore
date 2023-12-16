@@ -23,6 +23,9 @@
       ],
       "bulletinID": "da6a2ab6-93c0-492f-abc5-957427ae0974",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-03-22"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP10"
@@ -252,6 +255,9 @@
       },
       "bulletinID": "0eaf7a51-8dc1-42e4-8359-7027b3601a4a",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-03-22"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP10"

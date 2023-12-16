@@ -33,6 +33,11 @@
         }
       ],
       "bulletinID": "RID489RGR1",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-26"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -100,6 +105,11 @@
         }
       ],
       "bulletinID": "RID489RGR2",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-26"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -204,6 +214,11 @@
         }
       ],
       "bulletinID": "RID489RGR3",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-26"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

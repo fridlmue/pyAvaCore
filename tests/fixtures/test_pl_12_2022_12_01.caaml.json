@@ -20,6 +20,11 @@
         }
       ],
       "bulletinID": "PL-12_2022-12-01 20:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-01"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

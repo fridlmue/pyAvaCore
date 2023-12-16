@@ -28,6 +28,11 @@
         }
       ],
       "bulletinID": "BYCAAMLGenID3631-BYALL",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-20"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -109,6 +114,11 @@
         }
       ],
       "bulletinID": "BYCAAMLGenID3631-BYAMM",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -170,6 +180,11 @@
         }
       ],
       "bulletinID": "BYCAAMLGenID3631-BYWFK",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-20"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -251,6 +266,11 @@
         }
       ],
       "bulletinID": "BYCAAMLGenID3631-BYBVA",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -312,6 +332,11 @@
         }
       ],
       "bulletinID": "BYCAAMLGenID3631-BYCHG",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -373,6 +398,11 @@
         }
       ],
       "bulletinID": "BYCAAMLGenID3631-BYBGD",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-20"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

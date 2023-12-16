@@ -9,6 +9,11 @@
           "problemType": "wind_slab"
         }
       ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-18"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

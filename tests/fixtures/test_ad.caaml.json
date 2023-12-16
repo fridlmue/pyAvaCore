@@ -2,6 +2,11 @@
   "bulletins": [
     {
       "bulletinID": "AD-01_2022-04-19 00:00:00+02:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-04-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -31,6 +36,11 @@
     },
     {
       "bulletinID": "AD-02_2022-04-19 00:00:00+02:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-04-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -60,6 +70,11 @@
     },
     {
       "bulletinID": "AD-03_2022-04-19 00:00:00+02:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-04-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",

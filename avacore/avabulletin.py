@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, date
 import re
 import typing
-from typing import Optional, Any, List, Union
+from typing import Optional, Any, List, Union, Dict
 from enum import Enum
 import textwrap
 
@@ -509,7 +509,7 @@ class AvaBulletin:
     """Unique ID for the bulletin."""
     bulletinID: Optional[str] = None
     """Collection of Danger Rating elements for this bulletin."""
-    customData: Any = None
+    customData: Optional[Dict[str, Any]] = None
     """Texts element with highlight and comment for the avalanche activity."""
     dangerRatings: Optional[List[DangerRating]] = field(default_factory=list)
     """Contains an optional short text to highlight an exceptionally dangerous situation."""

@@ -6,6 +6,11 @@
         "highlights": "TOR for 23/12 The very limited and patchy snowpack will remain firm and stable throughout. Minor accums of fresh snow. Av Haz Low. "
       },
       "bulletinID": "GB-SCT-9788",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-23"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -38,6 +43,11 @@
         "highlights": "NC for 23.12 Remaining snow remains hard, well bonded and stable throughout. Avalanche Hazard Low."
       },
       "bulletinID": "GB-SCT-9789",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-23"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -70,6 +80,11 @@
         "highlights": "LO for 23/12.Some fresh snow is possible but amounts are not expected to be significant. Snowpack stability remains good. Low hazard"
       },
       "bulletinID": "GB-SCT-9790",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-23"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -107,6 +122,11 @@
         }
       ],
       "bulletinID": "GB-SCT-9791",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-23"
+        }
+      },
       "dangerRatings": [
         {
           "customData": {
@@ -190,6 +210,11 @@
         "highlights": "SC for 23/12 Limited new accumulations forming on S through W to  NW aspects above 1000m. Stability will remain good. Av Hazard-Low"
       },
       "bulletinID": "GB-SCT-9792",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-23"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -222,6 +247,11 @@
         "highlights": "CM for 23/12/19 Low hazard. Patchy, hard, refrozen snowpack. Some thin, new windslab possible on W aspects later."
       },
       "bulletinID": "GB-SCT-9793",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-23"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",

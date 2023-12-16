@@ -64,6 +64,11 @@ class Bulletins:
             bulletin.source.provider.name = provider_name
             bulletin.source.provider.website = website
 
+    def append_main_date(self):
+        for bulletin in self.bulletins:
+            bulletin.customData = bulletin.customData or {}
+            bulletin.customData.update(dict(ALBINA=dict(mainDate=bulletin.main_date().isoformat())))
+
     def main_date(self) -> date:
         """
         Returns Main validity date of Reports

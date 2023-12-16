@@ -1,6 +1,11 @@
 {
   "bulletins": [
     {
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-02-04"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",
@@ -26,6 +31,11 @@
       }
     },
     {
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-02-04"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",
@@ -51,6 +61,11 @@
       }
     },
     {
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-02-04"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",
@@ -76,6 +91,11 @@
       }
     },
     {
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-02-04"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",
@@ -101,6 +121,11 @@
       }
     },
     {
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-02-04"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",
@@ -126,6 +151,11 @@
       }
     },
     {
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2023-02-04"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",

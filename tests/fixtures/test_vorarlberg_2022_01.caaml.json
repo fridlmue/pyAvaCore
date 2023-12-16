@@ -36,6 +36,11 @@
         }
       ],
       "bulletinID": "RID1535RGR1",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-31"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

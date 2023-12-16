@@ -31,6 +31,11 @@
         }
       ],
       "bulletinID": "IS-SV-2022-02-21T16:40:51+00:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-02-22"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "high",
@@ -82,6 +87,11 @@
         }
       ],
       "bulletinID": "IS-VN-2022-02-21T15:49:01+00:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-02-22"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "considerable",
@@ -149,6 +159,11 @@
         }
       ],
       "bulletinID": "IS-TN-2022-02-21T19:27:54+00:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-02-22"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "considerable",
@@ -200,6 +215,11 @@
         }
       ],
       "bulletinID": "IS-AF-2022-02-21T16:23:51+00:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-02-22"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "considerable",

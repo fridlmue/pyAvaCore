@@ -34,6 +34,11 @@
         }
       ],
       "bulletinID": "RID1076RGR1",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-10"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "considerable",
@@ -102,6 +107,11 @@
         }
       ],
       "bulletinID": "RID1076RGR2",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-10"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
@@ -176,6 +186,11 @@
         }
       ],
       "bulletinID": "RID1076RGR3",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-10"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {
