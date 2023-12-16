@@ -65,6 +65,9 @@
       ],
       "bulletinID": "15b7b04b-5f3f-435c-a4f4-33a4eabeb965",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-22"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP10"
@@ -278,6 +281,9 @@
       ],
       "bulletinID": "2e0ec415-4cc5-42ea-a25f-4524047e8b8a",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-22"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP10",
@@ -540,6 +546,9 @@
       ],
       "bulletinID": "56410e01-259b-4b8e-a97b-f4628744b70e",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-02-22"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP10",

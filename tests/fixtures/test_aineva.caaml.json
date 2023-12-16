@@ -56,6 +56,11 @@
         }
       ],
       "bulletinID": "fd72a18c-0cf0-4212-931a-19e66314e8b3",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-11-23"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

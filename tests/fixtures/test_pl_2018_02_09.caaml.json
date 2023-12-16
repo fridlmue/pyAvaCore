@@ -9,6 +9,11 @@
           "problemType": "persistent_weak_layers"
         }
       ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2018-02-09"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",

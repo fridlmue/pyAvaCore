@@ -2,6 +2,11 @@
   "bulletins": [
     {
       "bulletinID": "AD-01_2022-12-09 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-10"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "considerable",
@@ -31,6 +36,11 @@
     },
     {
       "bulletinID": "AD-02_2022-12-09 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-10"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",
@@ -56,6 +66,11 @@
     },
     {
       "bulletinID": "AD-03_2022-12-09 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-10"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "moderate",

@@ -6,6 +6,9 @@
       },
       "bulletinID": "FR-22_2021-03-18T16:00:00+01:00",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-03-19"
+        },
         "MeteoFrance": {
           "avalancheProneLocation": {
             "aspects": [

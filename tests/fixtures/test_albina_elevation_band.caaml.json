@@ -75,6 +75,9 @@
       ],
       "bulletinID": "178ed2f5-9e29-4495-b34b-3a355390895b",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-29"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP3",
@@ -311,6 +314,9 @@
       ],
       "bulletinID": "ccb43d8b-3121-4857-9dd1-85a78ba6cd41",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-29"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP6",
@@ -492,6 +498,9 @@
       ],
       "bulletinID": "35239130-9e33-4b3c-a168-5cfc6d5796c1",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-29"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP3",
@@ -612,6 +621,9 @@
       ],
       "bulletinID": "df0c4d83-e5c4-470e-8ec0-3d80741125cc",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-29"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP6",
@@ -752,6 +764,9 @@
       ],
       "bulletinID": "d3eabfc0-ee67-44e0-8729-d254b33e0acb",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-29"
+        },
         "LWD_Tyrol": {
           "dangerPatterns": [
             "DP6",
@@ -954,6 +969,11 @@
         }
       ],
       "bulletinID": "3c30d092-4b12-4e5f-8292-dcc41953c9ce",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-29"
+        }
+      },
       "dangerRatings": [
         {
           "elevation": {

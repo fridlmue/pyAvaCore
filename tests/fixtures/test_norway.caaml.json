@@ -21,6 +21,11 @@
         }
       ],
       "bulletinID": "NO-3016_2021-12-01 15:42:45",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2021-12-02"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "considerable",

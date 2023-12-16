@@ -73,6 +73,7 @@ class BulletinProvider:
             )
         ]
         reports.append_provider(self.name, self.website)
+        reports.append_main_date()
         return reports
 
     @classmethod

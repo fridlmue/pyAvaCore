@@ -14,6 +14,9 @@
       ],
       "bulletinID": "CH-52492-1",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-08"
+        },
         "SLF": {
           "avalancheProneLocation": {
             "aspects": [
@@ -169,6 +172,9 @@
       ],
       "bulletinID": "CH-52492-2",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-08"
+        },
         "SLF": {
           "avalancheProneLocation": {
             "aspects": [
@@ -351,6 +357,9 @@
       ],
       "bulletinID": "CH-52492-3",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-08"
+        },
         "SLF": {
           "avalancheProneLocation": {
             "aspects": [
@@ -455,6 +464,9 @@
       ],
       "bulletinID": "CH-52492-4",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-08"
+        },
         "SLF": {
           "avalancheProneLocation": {
             "aspects": [
@@ -538,6 +550,9 @@
       ],
       "bulletinID": "CH-52492-5",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-08"
+        },
         "SLF": {
           "avalancheProneLocation": {
             "aspects": [
@@ -596,6 +611,9 @@
       ],
       "bulletinID": "CH-52492-6",
       "customData": {
+        "ALBINA": {
+          "mainDate": "2022-12-08"
+        },
         "SLF": {
           "avalancheProneLocation": {
             "aspects": null,

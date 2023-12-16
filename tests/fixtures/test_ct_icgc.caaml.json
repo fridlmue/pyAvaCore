@@ -14,6 +14,11 @@
         }
       ],
       "bulletinID": "ES-CT-L-04_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -60,6 +65,11 @@
         }
       ],
       "bulletinID": "ES-CT-RF_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -106,6 +116,11 @@
         }
       ],
       "bulletinID": "ES-CT-PA_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -152,6 +167,11 @@
         }
       ],
       "bulletinID": "ES-CT-PP_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -198,6 +218,11 @@
         }
       ],
       "bulletinID": "ES-CT-VN_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -240,6 +265,11 @@
         }
       ],
       "bulletinID": "ES-CT-PR_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",
@@ -282,6 +312,11 @@
         }
       ],
       "bulletinID": "ES-CT-TF_2022-01-19 00:00:00+01:00",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2022-01-20"
+        }
+      },
       "dangerRatings": [
         {
           "mainValue": "low",

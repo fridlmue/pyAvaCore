@@ -25,6 +25,7 @@ class SnowTest(unittest.TestCase):
         region_id = region_id or bulletins[0].get_region_list()[0].upper()
         provider = BulletinProvider.get(region_id, date=date, lang="en")
         bulletins.append_provider(provider.name, provider.website)
+        bulletins.append_main_date()
 
         expected = self._fixture("caaml.json")
         if overwrite:
