@@ -105,21 +105,27 @@ class Processor(JsonProcessor):
                     if c == "1":
                         aspect_list.append(aspects[i])
 
-                problem_type = ""
-                if data[rating][elev]["prb"] == "prwd":
-                    problem_type = "wind_slab"
-                if data[rating][elev]["prb"] == "prws":
-                    problem_type = "wet_snow"
-
                 bulletin.dangerRatings.append(danger_rating)
 
-                if not problem_type == "":
+                if data[rating][elev]["prb"]:
                     problem = AvalancheProblem()
                     problem.aspects = aspect_list
                     if len(elev) > 1:
                         problem.elevation = elevation
-                    problem.problemType = problem_type
-                    bulletin.avalancheProblems.append(problem)
+                    if data[rating][elev]["prb"] == "prgs":
+                        problem.problemType = "gliding_snow"
+                    if data[rating][elev]["prb"] == "prnn":
+                        problem.problemType = "no_distinct_avalanche_problem"
+                    if data[rating][elev]["prb"] == "prns":
+                        problem.problemType = "new_snow"
+                    if data[rating][elev]["prb"] == "prwd":
+                        problem.problemType = "wind_slab"
+                    if data[rating][elev]["prb"] == "prwl":
+                        problem.problemType = "persistent_weak_layers"
+                    if data[rating][elev]["prb"] == "prws":
+                        problem.problemType = "wet_snow"
+                    if problem.problemType:
+                        bulletin.avalancheProblems.append(problem)
 
         bulletins.append(bulletin)
 
