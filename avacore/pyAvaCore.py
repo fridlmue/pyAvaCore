@@ -18,6 +18,7 @@ import dataclasses
 import datetime as dt
 from datetime import datetime
 from pathlib import Path
+from warnings import warn
 from typing import List, Tuple
 
 import avacore.processors
@@ -32,42 +33,20 @@ def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
     """
     returns Bulletins object for requested region_id and provider information
     """
-    processor = avacore.processors.new_processor(region_id)
-    provider = get_report_provider(region_id, date=date, lang=lang)
-    processor.url = provider.url
-
-    reports = processor.process_bulletin(region_id)
-    reports.append_raw_data(processor.raw_data_format, processor.raw_data)
-    reports.bulletins = [
-        report
-        for report in reports.bulletins
-        if any(region.startswith(region_id) for region in report.get_region_list())
-    ]
-    reports.append_provider(provider.name, provider.website)
-    return reports
+    warn("Use BulletinProvider.get().download_bulletins() instead", DeprecationWarning)
+    provider = BulletinProvider.get(region_id, date=date, lang=lang)
+    return provider.download_bulletins()
 
 
 def get_reports(region_id, lang="en") -> Tuple[List[AvaBulletin], str, str]:
     """
     returns array of AvaReports for requested region_id and provider information
     """
+    warn("Use BulletinProvider.get().download_bulletins() instead", DeprecationWarning)
     bulletins = get_bulletins(region_id=region_id, lang=lang)
     provider = bulletins.customData["provider"]
     url = bulletins.customData["url"]
     return bulletins.bulletins, provider, url
-
-
-def get_config(region_id: str, option: str, fallback="") -> str:
-    """
-    returns the requested option for the requested region_id
-    """
-    while (
-        not config.has_section(region_id)
-        and not config.has_option(region_id, option)
-        and "-" in region_id
-    ):
-        region_id = region_id[0 : region_id.rindex("-")]
-    return config.get(region_id, option, fallback=fallback)
 
 
 @dataclasses.dataclass
@@ -78,27 +57,58 @@ class BulletinProvider:
     url: str
     website: str
 
+    def download_bulletins(self) -> Bulletins:
+        """
+        Downloads, augments and returns requested Avalanche Bulletins
+        """
+        processor = avacore.processors.new_processor(self.region)
+        processor.url = self.url
+        reports = processor.process_bulletin(self.region)
+        reports.append_raw_data(processor.raw_data_format, processor.raw_data)
+        reports.bulletins = [
+            report
+            for report in reports.bulletins
+            if any(
+                region.startswith(self.region) for region in report.get_region_list()
+            )
+        ]
+        reports.append_provider(self.name, self.website)
+        return reports
 
-def get_report_provider(region_id, *, date="", lang="") -> BulletinProvider:
-    """
-    returns the valid URL for requested region_id
-    """
-    url = get_config(region_id, "url.date" if date else f"url.{lang}")
-    if not url:
-        url = get_config(region_id, "url")
-    url = url.format(
-        date=date or datetime.today().date(),
-        lang=lang,
-        region="{region}",
-    )
+    @classmethod
+    def get(cls, region_id, *, date="", lang="") -> "BulletinProvider":
+        """
+        returns the valid URL for requested region_id
+        """
+        url = cls.get_config(region_id, "url.date" if date else f"url.{lang}")
+        if not url:
+            url = cls.get_config(region_id, "url")
+        url = url.format(
+            date=date or datetime.today().date(),
+            lang=lang,
+            region="{region}",
+        )
 
-    return BulletinProvider(
-        lang=lang,
-        name=get_config(region_id, "name"),
-        region=region_id,
-        url=url,
-        website=get_config(region_id, "website"),
-    )
+        return BulletinProvider(
+            lang=lang,
+            name=cls.get_config(region_id, "name"),
+            region=region_id,
+            url=url,
+            website=cls.get_config(region_id, "website"),
+        )
+
+    @staticmethod
+    def get_config(region_id: str, option: str, fallback="") -> str:
+        """
+        returns the requested option for the requested region_id
+        """
+        while (
+            not config.has_section(region_id)
+            and not config.has_option(region_id, option)
+            and "-" in region_id
+        ):
+            region_id = region_id[0 : region_id.rindex("-")]
+        return config.get(region_id, option, fallback=fallback)
 
 
 def parse_dates(date_str: str) -> List[str]:

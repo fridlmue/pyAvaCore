@@ -5,7 +5,7 @@ import unittest
 from jsonschema import validate
 import avacore.processor
 from avacore.avabulletins import Bulletins
-from avacore.pyAvaCore import get_report_provider
+from avacore.pyAvaCore import BulletinProvider
 
 ROOT = pathlib.Path(__file__).parent
 
@@ -23,7 +23,7 @@ class SnowTest(unittest.TestCase):
             raise ValueError("overwrite=True must not be used in CI!")
 
         region_id = region_id or bulletins[0].get_region_list()[0].upper()
-        provider = get_report_provider(region_id, date=date, lang="en")
+        provider = BulletinProvider.get(region_id, date=date, lang="en")
         bulletins.append_provider(provider.name, provider.website)
 
         expected = self._fixture("caaml.json")
