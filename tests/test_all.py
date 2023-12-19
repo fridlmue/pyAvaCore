@@ -94,6 +94,10 @@ class TestAll(SnowTest):
         processor = avacore.processor_caamlv6.Processor()
         self._test_processor(processor)
 
+    def test_ch_2023_12_19(self):
+        processor = avacore.processor_caamlv6.Processor()
+        self._test_processor(processor)
+
     @unittest.skip("2021 format unsupported")
     def test_ch_ampm(self):
         processor = avacore.processor_ch_zip.Processor()

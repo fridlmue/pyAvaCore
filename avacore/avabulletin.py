@@ -578,7 +578,7 @@ class AvaBulletin:
             if obj.get("nextUpdate")
             else None,
             publicationTime=datetime.fromisoformat(
-                obj.get("publicationTime").replace("Z", "+00:00")
+                re.sub(r"\.\d+" , "", obj.get("publicationTime").replace("Z", "+00:00"))
             )
             if obj.get("publicationTime")
             else None,
