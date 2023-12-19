@@ -12,6 +12,7 @@
     You should have received a copy of the GNU General Public License
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+import re
 from datetime import datetime, timedelta
 from typing import Any, List, Optional, TypedDict
 from zoneinfo import ZoneInfo
@@ -90,7 +91,7 @@ class Processor(JsonProcessor):
     ) -> AvaBulletin:
         bulletin = AvaBulletin()
         time = bulletin.validTime
-        time.startTime = datetime.fromisoformat(valanga["dataRif"]) + delta
+        time.startTime = datetime.fromisoformat(re.sub(r'^.*(?=\+)' , valanga["dataRif"][:20], valanga["dataRif"])) + delta
         time.startTime = time.startTime.replace(tzinfo=self.tzinfo)
         time.endTime = time.startTime + timedelta(days=1)
         bulletin.regions = [
