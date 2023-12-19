@@ -91,7 +91,7 @@ class Processor(JsonProcessor):
     ) -> AvaBulletin:
         bulletin = AvaBulletin()
         time = bulletin.validTime
-        time.startTime = datetime.fromisoformat(re.sub(r'^.*(?=\+)' , valanga["dataRif"][:20], valanga["dataRif"])) + delta
+        time.startTime = datetime.fromisoformat(re.sub(r"\.\d+" , "", valanga["dataRif"])) + delta
         time.startTime = time.startTime.replace(tzinfo=self.tzinfo)
         time.endTime = time.startTime + timedelta(days=1)
         bulletin.regions = [
