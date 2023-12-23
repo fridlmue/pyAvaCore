@@ -104,9 +104,15 @@ parser.add_argument(
     metavar="TIMESTAMP",
     help="exclude bulletins prior the given timestamp",
 )
-parser.add_argument("--output", default="./data", help="output directory")
+parser.add_argument(
+    "--output",
+    default=Path("./data"),
+    type=Path,
+    help="output directory",
+)
 parser.add_argument(
     "--geojson",
+    type=Path,
     help="eaws-regions directory containing *micro-regions_elevation.geojson.json of",
 )
 parser.add_argument(
@@ -124,7 +130,7 @@ class CliArgs:
     lang: str
     merge_dates: str
     merge_regions: str
-    output: str
+    output: Path
     protect_overwrite_now: str
     regions: str
 
@@ -164,26 +170,24 @@ def download_region(regionID, date: str):
     if args.cli == "o":
         return
     for validity_date in validity_dates:
-        directory = Path(f"{args.output}/{validity_date}")
+        directory = args.output / validity_date.isoformat()
         directory.mkdir(parents=True, exist_ok=True)
         data = bulletins.customData.pop("data", "")
         ext = bulletins.customData.pop("file_extension", "")
         if data and ext:
-            raw = Path(f"{directory}/{validity_date}-{regionID}.raw.{ext}")
+            raw = directory / f"{validity_date}-{regionID}.raw.{ext}"
             logging.info("Writing %s", raw)
             if isinstance(data, BytesIO):
                 raw.write_bytes(data.getvalue())
             else:
                 raw.write_text(data, encoding="utf-8")
-        with open(
-            f"{directory}/{validity_date}-{regionID}.json",
+        with (directory / f"{validity_date}-{regionID}.json").open(
             mode="w",
             encoding="utf-8",
         ) as f:
             logging.info("Writing %s", f.name)
             json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
-        with open(
-            f"{directory}/{validity_date}-{regionID}.ratings.json",
+        with (directory / f"{validity_date}-{regionID}.ratings.json").open(
             mode="w",
             encoding="utf-8",
         ) as f:
@@ -198,14 +202,11 @@ def download_region(regionID, date: str):
         for bulletin in bulletins.bulletins:
             bulletin.cli_out()
     if args.geojson:
-        with open(
-            f"{args.geojson}/{regionID}_micro-regions_elevation.geojson.json",
-            encoding="utf-8",
-        ) as f:
+        geojson_path = args.geojson / f"{regionID}_micro-regions_elevation.geojson.json"
+        with geojson_path.open(encoding="utf-8") as f:
             geojson = FeatureCollection.from_dict(json.load(f))
         bulletins.augment_geojson(geojson)
-        with open(
-            f"{directory}/{validity_date}-{regionID}.geojson",
+        with (directory / f"{validity_date}-{regionID}.geojson").open(
             mode="w",
             encoding="utf-8",
         ) as f:
@@ -242,11 +243,11 @@ def download_regions():
 
 def merge_regions(validity_date: str):
     """Create ratings JSON containing all regions"""
-    directory = Path(f"{args.output}/{validity_date}")
+    directory = args.output / validity_date
     merge_ratings = {}
     for regionID in args.merge_regions.split():
         try:
-            path = directory.joinpath(f"{validity_date}-{regionID}.ratings.json")
+            path = directory / f"{validity_date}-{regionID}.ratings.json"
             if not path.exists():
                 continue
             with path.open(encoding="utf-8") as f:
@@ -256,7 +257,7 @@ def merge_regions(validity_date: str):
                 merge_ratings.update(ratings["maxDangerRatings"])
         except Exception as e:
             logging.error("Failed to load %s from %s", regionID, path, exc_info=e)
-    path = directory.joinpath(f"{validity_date}.ratings.json")
+    path = directory / f"{validity_date}.ratings.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open(mode="w", encoding="utf-8") as f:
         maxDangerRatings = {"maxDangerRatings": merge_ratings}
