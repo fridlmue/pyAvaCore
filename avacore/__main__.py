@@ -95,7 +95,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "--merge-regions",
-    default=" ".join([r for r in default_regions if not r.startswith("IT")]),
+    default=" ".join(default_regions),
     metavar="REGIONS",
     help="avalanche regions to merge into one file",
 )
