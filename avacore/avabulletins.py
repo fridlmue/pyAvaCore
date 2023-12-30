@@ -110,39 +110,37 @@ class Bulletins:
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
-        ratings = {}
-        for bulletin in self.bulletins:
-            if validity_date not in bulletin.main_dates():
-                continue
-            for region in bulletin.regions:
-                for validTimePeriod in [
-                    ValidTimePeriod.all_day,
-                    ValidTimePeriod.earlier,
-                    ValidTimePeriod.later,
-                ]:
-                    for elevation in ["", "low", "high"]:
-                        to_am_pm = {
-                            ValidTimePeriod.all_day: "",
-                            ValidTimePeriod.earlier: "am",
-                            ValidTimePeriod.later: "pm",
-                        }
-                        key = (
-                            f"{region.regionID}:{elevation}:{to_am_pm[validTimePeriod]}"
-                        )
-                        key = key.replace("::", ":").rstrip(":")
-                        relevant_ratings = [
-                            r.get_mainValue_int()
-                            for r in bulletin.dangerRatings
-                            if (
-                                not r.elevation
-                                or r.elevation.matches_elevation(elevation)
-                            )
-                            and validTimePeriod.matches_valid_time_period(
-                                r.validTimePeriod
-                            )
-                        ]
-                        ratings[key] = max(relevant_ratings or [0])
-        return ratings
+        return {
+            key: max(
+                [
+                    r.get_mainValue_int()
+                    for r in bulletin.dangerRatings
+                    if (not r.elevation or r.elevation.matches_elevation(elevation))
+                    and validTimePeriod.matches_valid_time_period(r.validTimePeriod)
+                ]
+                or [0]
+            )
+            for bulletin in self.bulletins
+            for region in bulletin.regions
+            for validTimePeriod in [
+                ValidTimePeriod.all_day,
+                ValidTimePeriod.earlier,
+                ValidTimePeriod.later,
+            ]
+            for elevation in ["", "low", "high"]
+            if validity_date in bulletin.main_dates()
+            if (
+                key := ":".join(
+                    s
+                    for s in [
+                        region.regionID,
+                        elevation,
+                        validTimePeriod.to_am_pm(),
+                    ]
+                    if s
+                )
+            )
+        }
 
     def augment_geojson(self, geojson: FeatureCollection):
         """

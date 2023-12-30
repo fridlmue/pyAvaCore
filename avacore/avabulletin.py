@@ -107,6 +107,13 @@ class ValidTimePeriod(Enum):
             or (self == ValidTimePeriod.later and period == ValidTimePeriod.later)
         )
 
+    def to_am_pm(self):
+        return {
+            ValidTimePeriod.all_day: "",
+            ValidTimePeriod.earlier: "am",
+            ValidTimePeriod.later: "pm",
+        }[self]
+
 
 class TendencyType(Enum):
     decreasing = "decreasing"
