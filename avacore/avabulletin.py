@@ -16,7 +16,7 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, date
 import re
 import typing
-from typing import Optional, Any, List, Union, Dict
+from typing import Optional, Any, List, Union, Dict, Literal
 from enum import Enum
 import textwrap
 
@@ -95,6 +95,17 @@ class ValidTimePeriod(Enum):
     all_day = "all_day"
     earlier = "earlier"
     later = "later"
+
+    def matches_valid_time_period(self, period: Union["ValidTimePeriod", str]) -> bool:
+        if period and isinstance(period, str):
+            period = ValidTimePeriod[period]
+        return (
+            not period
+            or self == ValidTimePeriod.all_day
+            or period == ValidTimePeriod.all_day
+            or (self == ValidTimePeriod.earlier and period == ValidTimePeriod.earlier)
+            or (self == ValidTimePeriod.later and period == ValidTimePeriod.later)
+        )
 
 
 class TendencyType(Enum):
@@ -263,6 +274,16 @@ class Elevation:
 
         return ""
 
+    def matches_elevation(
+        self, elev: Union[Literal[""], Literal["low"], Literal["high"]]
+    ):
+        return (
+            not elev
+            or (not self.lowerBound and not self.upperBound)
+            or (not self.lowerBound and self.upperBound and elev == "low")
+            or (self.lowerBound and elev == "high")
+        )
+
 
 @dataclass
 class DangerRating:
@@ -290,7 +311,7 @@ class DangerRating:
         "very_high": 5,
     }
 
-    def get_mainValue_int(self):
+    def get_mainValue_int(self) -> int:
         """
         Returns danger main as int value
         """
@@ -578,7 +599,7 @@ class AvaBulletin:
             if obj.get("nextUpdate")
             else None,
             publicationTime=datetime.fromisoformat(
-                re.sub(r"\.\d+" , "", obj.get("publicationTime").replace("Z", "+00:00"))
+                re.sub(r"\.\d+", "", obj.get("publicationTime").replace("Z", "+00:00"))
             )
             if obj.get("publicationTime")
             else None,

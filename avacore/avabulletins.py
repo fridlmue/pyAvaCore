@@ -22,7 +22,7 @@ from typing import Optional, Any, List
 from .MetaData import MetaData
 
 from .avajson import JSONEncoder
-from .avabulletin import AvaBulletin, DangerRating, Provider
+from .avabulletin import AvaBulletin, DangerRating, Provider, ValidTimePeriod
 from .geojson import Feature, FeatureCollection
 
 
@@ -67,7 +67,9 @@ class Bulletins:
     def append_main_date(self):
         for bulletin in self.bulletins:
             bulletin.customData = bulletin.customData or {}
-            bulletin.customData.update(dict(ALBINA=dict(mainDate=bulletin.main_date().isoformat())))
+            bulletin.customData.update(
+                dict(ALBINA=dict(mainDate=bulletin.main_date().isoformat()))
+            )
 
     def main_date(self) -> date:
         """
@@ -113,167 +115,33 @@ class Bulletins:
             if validity_date not in bulletin.main_dates():
                 continue
             for region in bulletin.regions:
-                local_ratings = {}
-                regionId = region.regionID
-
-                if len(bulletin.dangerRatings) > 1:
-                    remove = []
-                    for i in range(0, len(bulletin.dangerRatings) - 1):
-                        if (
-                            bulletin.dangerRatings[i].elevation.toString()
-                            == bulletin.dangerRatings[i + 1].elevation.toString()
-                            and bulletin.dangerRatings[i].validTimePeriod
-                            == bulletin.dangerRatings[i + 1].validTimePeriod
-                        ):
+                for validTimePeriod in [
+                    ValidTimePeriod.all_day,
+                    ValidTimePeriod.earlier,
+                    ValidTimePeriod.later,
+                ]:
+                    for elevation in ["", "low", "high"]:
+                        to_am_pm = {
+                            ValidTimePeriod.all_day: "",
+                            ValidTimePeriod.earlier: "am",
+                            ValidTimePeriod.later: "pm",
+                        }
+                        key = (
+                            f"{region.regionID}:{elevation}:{to_am_pm[validTimePeriod]}"
+                        )
+                        key = key.replace("::", ":").rstrip(":")
+                        relevant_ratings = [
+                            r.get_mainValue_int()
+                            for r in bulletin.dangerRatings
                             if (
-                                bulletin.dangerRatings[i].get_mainValue_int()
-                                > bulletin.dangerRatings[i + 1].get_mainValue_int()
-                            ):
-                                remove.append(i + 1)
-                            else:
-                                remove.append(i)
-                    for j in remove:
-                        del bulletin.dangerRatings[j]
-
-                for danger in bulletin.dangerRatings:
-                    key_elev = ""
-                    key_time = ""
-
-                    if danger.elevation.toString().startswith(">"):
-                        key_elev = ":high"
-                    elif danger.elevation.toString().startswith("<"):
-                        key_elev = ":low"
-
-                    if danger.validTimePeriod == "earlier":
-                        key_time = ":am"
-                    elif danger.validTimePeriod == "later":
-                        key_time = ":pm"
-
-                    local_ratings[
-                        f"{regionId}{key_elev}{key_time}"
-                    ] = danger.get_mainValue_int()
-
-                    if key_elev == "":
-                        local_ratings[
-                            f"{regionId}:high{key_time}"
-                        ] = danger.get_mainValue_int()
-                        local_ratings[
-                            f"{regionId}:low{key_time}"
-                        ] = danger.get_mainValue_int()
-
-                    if key_time == "":
-                        if key_elev == "":
-                            local_ratings[
-                                f"{regionId}:high:am"
-                            ] = danger.get_mainValue_int()
-                            local_ratings[
-                                f"{regionId}:high:pm"
-                            ] = danger.get_mainValue_int()
-                            local_ratings[
-                                f"{regionId}:low:am"
-                            ] = danger.get_mainValue_int()
-                            local_ratings[
-                                f"{regionId}:low:pm"
-                            ] = danger.get_mainValue_int()
-                        else:
-                            local_ratings[
-                                f"{regionId}{key_elev}:am"
-                            ] = danger.get_mainValue_int()
-                            local_ratings[
-                                f"{regionId}{key_elev}:pm"
-                            ] = danger.get_mainValue_int()
-
-                # Fill missing ratings for the current Region
-                if f"{regionId}:low" not in local_ratings:
-                    if (
-                        f"{regionId}:low:am" in local_ratings
-                        and f"{regionId}:low:pm" in local_ratings
-                    ):
-                        local_ratings[f"{regionId}:low"] = max(
-                            local_ratings[f"{regionId}:low:am"],
-                            local_ratings[f"{regionId}:low:pm"],
-                        )
-                    elif f"{regionId}:low:am" in local_ratings:
-                        local_ratings[f"{regionId}:low"] = local_ratings[
-                            f"{regionId}:low:am"
+                                not r.elevation
+                                or r.elevation.matches_elevation(elevation)
+                            )
+                            and validTimePeriod.matches_valid_time_period(
+                                r.validTimePeriod
+                            )
                         ]
-                    elif f"{regionId}:low:pm" in local_ratings:
-                        local_ratings[f"{regionId}:low"] = local_ratings[
-                            f"{regionId}:low:pm"
-                        ]
-                    elif f"{regionId}:high" in local_ratings:
-                        local_ratings[f"{regionId}:low"] = local_ratings[
-                            f"{regionId}:high"
-                        ]
-
-                if f"{regionId}:high" not in local_ratings:
-                    if (
-                        f"{regionId}:high:am" in local_ratings
-                        and f"{regionId}:high:pm" in local_ratings
-                    ):
-                        local_ratings[f"{regionId}:high"] = max(
-                            local_ratings[f"{regionId}:high:am"],
-                            local_ratings[f"{regionId}:high:pm"],
-                        )
-                    elif f"{regionId}:high:am" in local_ratings:
-                        local_ratings[f"{regionId}:high"] = local_ratings[
-                            f"{regionId}:high:am"
-                        ]
-                    elif f"{regionId}:high:pm" in local_ratings:
-                        local_ratings[f"{regionId}:high"] = local_ratings[
-                            f"{regionId}:high:pm"
-                        ]
-                    elif f"{regionId}:low" in local_ratings:
-                        local_ratings[f"{regionId}:high"] = local_ratings[
-                            f"{regionId}:low"
-                        ]
-
-                if (
-                    f"{regionId}:high:am" not in local_ratings
-                    and f"{regionId}:high:pm" not in local_ratings
-                ):
-                    local_ratings[f"{regionId}:high:am"] = local_ratings[
-                        f"{regionId}:high:pm"
-                    ] = local_ratings[f"{regionId}:high"]
-
-                if (
-                    f"{regionId}:low:am" not in local_ratings
-                    and f"{regionId}:low:pm" not in local_ratings
-                ):
-                    local_ratings[f"{regionId}:low:am"] = local_ratings[
-                        f"{regionId}:low:pm"
-                    ] = local_ratings[f"{regionId}:low"]
-
-                key = f"{regionId}:high"
-                if key not in local_ratings:
-                    local_ratings[key] = max(
-                        local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
-                    )
-
-                key = f"{regionId}:low"
-                if key not in local_ratings:
-                    local_ratings[key] = max(
-                        local_ratings[f"{key}:am"], local_ratings[f"{key}:pm"]
-                    )
-
-                key = regionId
-                local_ratings[f"{key}:am"] = max(
-                    local_ratings[f"{key}:high:am"], local_ratings[f"{key}:low:am"]
-                )
-
-                local_ratings[f"{key}:pm"] = max(
-                    local_ratings[f"{key}:high:pm"], local_ratings[f"{key}:low:pm"]
-                )
-
-                local_ratings[key] = max(local_ratings.values())
-
-                ratings.update(local_ratings)
-
-        # return 0 independent of "no_snow" or "no_rating"
-        for key, value in ratings.items():
-            if value == -1:
-                ratings[key] = 0
-
+                        ratings[key] = max(relevant_ratings or [0])
         return ratings
 
     def augment_geojson(self, geojson: FeatureCollection):
