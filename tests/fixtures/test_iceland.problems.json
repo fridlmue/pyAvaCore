@@ -1,0 +1,130 @@
+{
+  "avalancheProblems": {
+    "IS-AF": [
+      "wind_slab"
+    ],
+    "IS-AF:am": [
+      "wind_slab"
+    ],
+    "IS-AF:high": [
+      "wind_slab"
+    ],
+    "IS-AF:high:am": [
+      "wind_slab"
+    ],
+    "IS-AF:high:pm": [
+      "wind_slab"
+    ],
+    "IS-AF:low": [
+      "wind_slab"
+    ],
+    "IS-AF:low:am": [
+      "wind_slab"
+    ],
+    "IS-AF:low:pm": [
+      "wind_slab"
+    ],
+    "IS-AF:pm": [
+      "wind_slab"
+    ],
+    "IS-SV": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-SV:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-TN:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "IS-VN": [
+      "wind_slab"
+    ],
+    "IS-VN:am": [
+      "wind_slab"
+    ],
+    "IS-VN:high": [
+      "wind_slab"
+    ],
+    "IS-VN:high:am": [
+      "wind_slab"
+    ],
+    "IS-VN:high:pm": [
+      "wind_slab"
+    ],
+    "IS-VN:low": [
+      "wind_slab"
+    ],
+    "IS-VN:low:am": [
+      "wind_slab"
+    ],
+    "IS-VN:low:pm": [
+      "wind_slab"
+    ],
+    "IS-VN:pm": [
+      "wind_slab"
+    ]
+  }
+}

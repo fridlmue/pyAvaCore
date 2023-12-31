@@ -1,0 +1,202 @@
+{
+  "avalancheProblems": {
+    "ES-CT-L-04": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-L-04:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:high": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:high:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:high:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:low": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:low:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PA:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:high": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:high:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:high:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:low": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:low:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PP:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-PR": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:am": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:high": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:high:am": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:high:pm": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:low": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:low:am": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:low:pm": [
+      "favourable_situation"
+    ],
+    "ES-CT-PR:pm": [
+      "favourable_situation"
+    ],
+    "ES-CT-RF": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:high": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:high:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:high:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:low": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:low:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-RF:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:high": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:high:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:high:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:low": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:low:am": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-TF:pm": [
+      "persistent_weak_layers"
+    ],
+    "ES-CT-VN": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:am": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:high": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:high:am": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:high:pm": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:low": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:low:am": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:low:pm": [
+      "favourable_situation"
+    ],
+    "ES-CT-VN:pm": [
+      "favourable_situation"
+    ]
+  }
+}

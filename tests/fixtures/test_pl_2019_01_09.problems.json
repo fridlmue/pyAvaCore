@@ -1,0 +1,40 @@
+{
+  "avalancheProblems": {
+    "PL-01": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:am": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:high": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:high:am": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:high:pm": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:low": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:low:am": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:low:pm": [
+      "new_snow",
+      "wind_slab"
+    ],
+    "PL-01:pm": [
+      "new_snow",
+      "wind_slab"
+    ]
+  }
+}

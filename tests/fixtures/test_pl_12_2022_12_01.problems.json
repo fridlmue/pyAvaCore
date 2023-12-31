@@ -1,0 +1,25 @@
+{
+  "avalancheProblems": {
+    "PL-12": [
+      "wind_slab"
+    ],
+    "PL-12:am": [
+      "wind_slab"
+    ],
+    "PL-12:high": [
+      "wind_slab"
+    ],
+    "PL-12:high:am": [
+      "wind_slab"
+    ],
+    "PL-12:high:pm": [
+      "wind_slab"
+    ],
+    "PL-12:low": [],
+    "PL-12:low:am": [],
+    "PL-12:low:pm": [],
+    "PL-12:pm": [
+      "wind_slab"
+    ]
+  }
+}

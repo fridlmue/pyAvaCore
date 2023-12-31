@@ -191,13 +191,18 @@ def download_region(regionID, date: str):
             mode="w",
             encoding="utf-8",
         ) as f:
-            ratings = bulletins.max_danger_ratings(validity_date)
-            relevant_ratings = {
-                key: value for key, value in ratings.items() if key.startswith(regionID)
-            }
-            maxDangerRatings = {"maxDangerRatings": relevant_ratings}
+            ratings = bulletins.max_danger_ratings(validity_date, regionID)
+            maxDangerRatings = {"maxDangerRatings": ratings}
             logging.info("Writing %s", f.name)
             json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+        with (directory / f"{validity_date}-{regionID}.problems.json").open(
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            problems = bulletins.all_avalanche_problems(validity_date, regionID)
+            avalancheProblems = {"avalancheProblems": problems}
+            logging.info("Writing %s", f.name)
+            json.dump(avalancheProblems, fp=f, indent=2, sort_keys=True)
     if args.cli in ("o", "y"):
         for bulletin in bulletins.bulletins:
             bulletin.cli_out()

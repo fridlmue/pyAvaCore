@@ -1,0 +1,1098 @@
+{
+  "avalancheProblems": {
+    "AT-07-01": [
+      "wet_snow"
+    ],
+    "AT-07-01:am": [],
+    "AT-07-01:high": [],
+    "AT-07-01:high:am": [],
+    "AT-07-01:high:pm": [],
+    "AT-07-01:low": [
+      "wet_snow"
+    ],
+    "AT-07-01:low:am": [],
+    "AT-07-01:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-01:pm": [
+      "wet_snow"
+    ],
+    "AT-07-02": [
+      "wet_snow"
+    ],
+    "AT-07-02:am": [],
+    "AT-07-02:high": [],
+    "AT-07-02:high:am": [],
+    "AT-07-02:high:pm": [],
+    "AT-07-02:low": [
+      "wet_snow"
+    ],
+    "AT-07-02:low:am": [],
+    "AT-07-02:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-02:pm": [
+      "wet_snow"
+    ],
+    "AT-07-03": [
+      "wet_snow"
+    ],
+    "AT-07-03:am": [],
+    "AT-07-03:high": [],
+    "AT-07-03:high:am": [],
+    "AT-07-03:high:pm": [],
+    "AT-07-03:low": [
+      "wet_snow"
+    ],
+    "AT-07-03:low:am": [],
+    "AT-07-03:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-03:pm": [
+      "wet_snow"
+    ],
+    "AT-07-04": [
+      "wet_snow"
+    ],
+    "AT-07-04:am": [],
+    "AT-07-04:high": [],
+    "AT-07-04:high:am": [],
+    "AT-07-04:high:pm": [],
+    "AT-07-04:low": [
+      "wet_snow"
+    ],
+    "AT-07-04:low:am": [],
+    "AT-07-04:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-04:pm": [
+      "wet_snow"
+    ],
+    "AT-07-05": [
+      "wet_snow"
+    ],
+    "AT-07-05:am": [],
+    "AT-07-05:high": [],
+    "AT-07-05:high:am": [],
+    "AT-07-05:high:pm": [],
+    "AT-07-05:low": [
+      "wet_snow"
+    ],
+    "AT-07-05:low:am": [],
+    "AT-07-05:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-05:pm": [
+      "wet_snow"
+    ],
+    "AT-07-06": [
+      "wet_snow"
+    ],
+    "AT-07-06:am": [],
+    "AT-07-06:high": [],
+    "AT-07-06:high:am": [],
+    "AT-07-06:high:pm": [],
+    "AT-07-06:low": [
+      "wet_snow"
+    ],
+    "AT-07-06:low:am": [],
+    "AT-07-06:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-06:pm": [
+      "wet_snow"
+    ],
+    "AT-07-07": [
+      "wet_snow"
+    ],
+    "AT-07-07:am": [],
+    "AT-07-07:high": [],
+    "AT-07-07:high:am": [],
+    "AT-07-07:high:pm": [],
+    "AT-07-07:low": [
+      "wet_snow"
+    ],
+    "AT-07-07:low:am": [],
+    "AT-07-07:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-07:pm": [
+      "wet_snow"
+    ],
+    "AT-07-08": [
+      "wet_snow"
+    ],
+    "AT-07-08:am": [],
+    "AT-07-08:high": [],
+    "AT-07-08:high:am": [],
+    "AT-07-08:high:pm": [],
+    "AT-07-08:low": [
+      "wet_snow"
+    ],
+    "AT-07-08:low:am": [],
+    "AT-07-08:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-08:pm": [
+      "wet_snow"
+    ],
+    "AT-07-09": [
+      "wet_snow"
+    ],
+    "AT-07-09:am": [],
+    "AT-07-09:high": [],
+    "AT-07-09:high:am": [],
+    "AT-07-09:high:pm": [],
+    "AT-07-09:low": [
+      "wet_snow"
+    ],
+    "AT-07-09:low:am": [],
+    "AT-07-09:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-09:pm": [
+      "wet_snow"
+    ],
+    "AT-07-10": [
+      "wet_snow"
+    ],
+    "AT-07-10:am": [],
+    "AT-07-10:high": [],
+    "AT-07-10:high:am": [],
+    "AT-07-10:high:pm": [],
+    "AT-07-10:low": [
+      "wet_snow"
+    ],
+    "AT-07-10:low:am": [],
+    "AT-07-10:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-10:pm": [
+      "wet_snow"
+    ],
+    "AT-07-11": [
+      "wet_snow"
+    ],
+    "AT-07-11:am": [],
+    "AT-07-11:high": [],
+    "AT-07-11:high:am": [],
+    "AT-07-11:high:pm": [],
+    "AT-07-11:low": [
+      "wet_snow"
+    ],
+    "AT-07-11:low:am": [],
+    "AT-07-11:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-11:pm": [
+      "wet_snow"
+    ],
+    "AT-07-12": [
+      "wet_snow"
+    ],
+    "AT-07-12:am": [],
+    "AT-07-12:high": [],
+    "AT-07-12:high:am": [],
+    "AT-07-12:high:pm": [],
+    "AT-07-12:low": [
+      "wet_snow"
+    ],
+    "AT-07-12:low:am": [],
+    "AT-07-12:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-12:pm": [
+      "wet_snow"
+    ],
+    "AT-07-13": [
+      "wet_snow"
+    ],
+    "AT-07-13:am": [],
+    "AT-07-13:high": [],
+    "AT-07-13:high:am": [],
+    "AT-07-13:high:pm": [],
+    "AT-07-13:low": [
+      "wet_snow"
+    ],
+    "AT-07-13:low:am": [],
+    "AT-07-13:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-13:pm": [
+      "wet_snow"
+    ],
+    "AT-07-14": [
+      "wet_snow"
+    ],
+    "AT-07-14:am": [],
+    "AT-07-14:high": [],
+    "AT-07-14:high:am": [],
+    "AT-07-14:high:pm": [],
+    "AT-07-14:low": [
+      "wet_snow"
+    ],
+    "AT-07-14:low:am": [],
+    "AT-07-14:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-14:pm": [
+      "wet_snow"
+    ],
+    "AT-07-15": [
+      "wet_snow"
+    ],
+    "AT-07-15:am": [],
+    "AT-07-15:high": [],
+    "AT-07-15:high:am": [],
+    "AT-07-15:high:pm": [],
+    "AT-07-15:low": [
+      "wet_snow"
+    ],
+    "AT-07-15:low:am": [],
+    "AT-07-15:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-15:pm": [
+      "wet_snow"
+    ],
+    "AT-07-16": [
+      "wet_snow"
+    ],
+    "AT-07-16:am": [],
+    "AT-07-16:high": [],
+    "AT-07-16:high:am": [],
+    "AT-07-16:high:pm": [],
+    "AT-07-16:low": [
+      "wet_snow"
+    ],
+    "AT-07-16:low:am": [],
+    "AT-07-16:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-16:pm": [
+      "wet_snow"
+    ],
+    "AT-07-17": [
+      "wet_snow"
+    ],
+    "AT-07-17:am": [],
+    "AT-07-17:high": [],
+    "AT-07-17:high:am": [],
+    "AT-07-17:high:pm": [],
+    "AT-07-17:low": [
+      "wet_snow"
+    ],
+    "AT-07-17:low:am": [],
+    "AT-07-17:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-17:pm": [
+      "wet_snow"
+    ],
+    "AT-07-18": [
+      "wet_snow"
+    ],
+    "AT-07-18:am": [],
+    "AT-07-18:high": [],
+    "AT-07-18:high:am": [],
+    "AT-07-18:high:pm": [],
+    "AT-07-18:low": [
+      "wet_snow"
+    ],
+    "AT-07-18:low:am": [],
+    "AT-07-18:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-18:pm": [
+      "wet_snow"
+    ],
+    "AT-07-19": [
+      "wet_snow"
+    ],
+    "AT-07-19:am": [],
+    "AT-07-19:high": [],
+    "AT-07-19:high:am": [],
+    "AT-07-19:high:pm": [],
+    "AT-07-19:low": [
+      "wet_snow"
+    ],
+    "AT-07-19:low:am": [],
+    "AT-07-19:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-19:pm": [
+      "wet_snow"
+    ],
+    "AT-07-20": [
+      "wet_snow"
+    ],
+    "AT-07-20:am": [],
+    "AT-07-20:high": [],
+    "AT-07-20:high:am": [],
+    "AT-07-20:high:pm": [],
+    "AT-07-20:low": [
+      "wet_snow"
+    ],
+    "AT-07-20:low:am": [],
+    "AT-07-20:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-20:pm": [
+      "wet_snow"
+    ],
+    "AT-07-21": [
+      "wet_snow"
+    ],
+    "AT-07-21:am": [],
+    "AT-07-21:high": [],
+    "AT-07-21:high:am": [],
+    "AT-07-21:high:pm": [],
+    "AT-07-21:low": [
+      "wet_snow"
+    ],
+    "AT-07-21:low:am": [],
+    "AT-07-21:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-21:pm": [
+      "wet_snow"
+    ],
+    "AT-07-22": [
+      "wet_snow"
+    ],
+    "AT-07-22:am": [],
+    "AT-07-22:high": [],
+    "AT-07-22:high:am": [],
+    "AT-07-22:high:pm": [],
+    "AT-07-22:low": [
+      "wet_snow"
+    ],
+    "AT-07-22:low:am": [],
+    "AT-07-22:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-22:pm": [
+      "wet_snow"
+    ],
+    "AT-07-23": [
+      "wet_snow"
+    ],
+    "AT-07-23:am": [],
+    "AT-07-23:high": [],
+    "AT-07-23:high:am": [],
+    "AT-07-23:high:pm": [],
+    "AT-07-23:low": [
+      "wet_snow"
+    ],
+    "AT-07-23:low:am": [],
+    "AT-07-23:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-23:pm": [
+      "wet_snow"
+    ],
+    "AT-07-24": [
+      "wet_snow"
+    ],
+    "AT-07-24:am": [],
+    "AT-07-24:high": [],
+    "AT-07-24:high:am": [],
+    "AT-07-24:high:pm": [],
+    "AT-07-24:low": [
+      "wet_snow"
+    ],
+    "AT-07-24:low:am": [],
+    "AT-07-24:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-24:pm": [
+      "wet_snow"
+    ],
+    "AT-07-25": [
+      "wet_snow"
+    ],
+    "AT-07-25:am": [],
+    "AT-07-25:high": [],
+    "AT-07-25:high:am": [],
+    "AT-07-25:high:pm": [],
+    "AT-07-25:low": [
+      "wet_snow"
+    ],
+    "AT-07-25:low:am": [],
+    "AT-07-25:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-25:pm": [
+      "wet_snow"
+    ],
+    "AT-07-26": [
+      "wet_snow"
+    ],
+    "AT-07-26:am": [],
+    "AT-07-26:high": [],
+    "AT-07-26:high:am": [],
+    "AT-07-26:high:pm": [],
+    "AT-07-26:low": [
+      "wet_snow"
+    ],
+    "AT-07-26:low:am": [],
+    "AT-07-26:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-26:pm": [
+      "wet_snow"
+    ],
+    "AT-07-27": [
+      "wet_snow"
+    ],
+    "AT-07-27:am": [],
+    "AT-07-27:high": [],
+    "AT-07-27:high:am": [],
+    "AT-07-27:high:pm": [],
+    "AT-07-27:low": [
+      "wet_snow"
+    ],
+    "AT-07-27:low:am": [],
+    "AT-07-27:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-27:pm": [
+      "wet_snow"
+    ],
+    "AT-07-28": [
+      "wet_snow"
+    ],
+    "AT-07-28:am": [],
+    "AT-07-28:high": [],
+    "AT-07-28:high:am": [],
+    "AT-07-28:high:pm": [],
+    "AT-07-28:low": [
+      "wet_snow"
+    ],
+    "AT-07-28:low:am": [],
+    "AT-07-28:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-28:pm": [
+      "wet_snow"
+    ],
+    "AT-07-29": [
+      "wet_snow"
+    ],
+    "AT-07-29:am": [],
+    "AT-07-29:high": [],
+    "AT-07-29:high:am": [],
+    "AT-07-29:high:pm": [],
+    "AT-07-29:low": [
+      "wet_snow"
+    ],
+    "AT-07-29:low:am": [],
+    "AT-07-29:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-29:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-01": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-01:am": [],
+    "IT-32-BZ-01:high": [],
+    "IT-32-BZ-01:high:am": [],
+    "IT-32-BZ-01:high:pm": [],
+    "IT-32-BZ-01:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-01:low:am": [],
+    "IT-32-BZ-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-01:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-02": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-02:am": [],
+    "IT-32-BZ-02:high": [],
+    "IT-32-BZ-02:high:am": [],
+    "IT-32-BZ-02:high:pm": [],
+    "IT-32-BZ-02:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-02:low:am": [],
+    "IT-32-BZ-02:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-02:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-03": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-03:am": [],
+    "IT-32-BZ-03:high": [],
+    "IT-32-BZ-03:high:am": [],
+    "IT-32-BZ-03:high:pm": [],
+    "IT-32-BZ-03:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-03:low:am": [],
+    "IT-32-BZ-03:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-03:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-04": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-04:am": [],
+    "IT-32-BZ-04:high": [],
+    "IT-32-BZ-04:high:am": [],
+    "IT-32-BZ-04:high:pm": [],
+    "IT-32-BZ-04:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-04:low:am": [],
+    "IT-32-BZ-04:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-04:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-05": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-05:am": [],
+    "IT-32-BZ-05:high": [],
+    "IT-32-BZ-05:high:am": [],
+    "IT-32-BZ-05:high:pm": [],
+    "IT-32-BZ-05:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-05:low:am": [],
+    "IT-32-BZ-05:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-05:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-06": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-06:am": [],
+    "IT-32-BZ-06:high": [],
+    "IT-32-BZ-06:high:am": [],
+    "IT-32-BZ-06:high:pm": [],
+    "IT-32-BZ-06:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-06:low:am": [],
+    "IT-32-BZ-06:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-06:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-07": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-07:am": [],
+    "IT-32-BZ-07:high": [],
+    "IT-32-BZ-07:high:am": [],
+    "IT-32-BZ-07:high:pm": [],
+    "IT-32-BZ-07:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-07:low:am": [],
+    "IT-32-BZ-07:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-07:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-08": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-08:am": [],
+    "IT-32-BZ-08:high": [],
+    "IT-32-BZ-08:high:am": [],
+    "IT-32-BZ-08:high:pm": [],
+    "IT-32-BZ-08:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-08:low:am": [],
+    "IT-32-BZ-08:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-08:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-09": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-09:am": [],
+    "IT-32-BZ-09:high": [],
+    "IT-32-BZ-09:high:am": [],
+    "IT-32-BZ-09:high:pm": [],
+    "IT-32-BZ-09:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-09:low:am": [],
+    "IT-32-BZ-09:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-09:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-10": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-10:am": [],
+    "IT-32-BZ-10:high": [],
+    "IT-32-BZ-10:high:am": [],
+    "IT-32-BZ-10:high:pm": [],
+    "IT-32-BZ-10:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-10:low:am": [],
+    "IT-32-BZ-10:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-10:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-11": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-11:am": [],
+    "IT-32-BZ-11:high": [],
+    "IT-32-BZ-11:high:am": [],
+    "IT-32-BZ-11:high:pm": [],
+    "IT-32-BZ-11:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-11:low:am": [],
+    "IT-32-BZ-11:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-11:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-12": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-12:am": [],
+    "IT-32-BZ-12:high": [],
+    "IT-32-BZ-12:high:am": [],
+    "IT-32-BZ-12:high:pm": [],
+    "IT-32-BZ-12:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-12:low:am": [],
+    "IT-32-BZ-12:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-12:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-13": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-13:am": [],
+    "IT-32-BZ-13:high": [],
+    "IT-32-BZ-13:high:am": [],
+    "IT-32-BZ-13:high:pm": [],
+    "IT-32-BZ-13:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-13:low:am": [],
+    "IT-32-BZ-13:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-13:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-14": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-14:am": [],
+    "IT-32-BZ-14:high": [],
+    "IT-32-BZ-14:high:am": [],
+    "IT-32-BZ-14:high:pm": [],
+    "IT-32-BZ-14:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-14:low:am": [],
+    "IT-32-BZ-14:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-14:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-15": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-15:am": [],
+    "IT-32-BZ-15:high": [],
+    "IT-32-BZ-15:high:am": [],
+    "IT-32-BZ-15:high:pm": [],
+    "IT-32-BZ-15:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-15:low:am": [],
+    "IT-32-BZ-15:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-15:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-16": [],
+    "IT-32-BZ-16:am": [],
+    "IT-32-BZ-16:high": [],
+    "IT-32-BZ-16:high:am": [],
+    "IT-32-BZ-16:high:pm": [],
+    "IT-32-BZ-16:low": [],
+    "IT-32-BZ-16:low:am": [],
+    "IT-32-BZ-16:low:pm": [],
+    "IT-32-BZ-16:pm": [],
+    "IT-32-BZ-17": [],
+    "IT-32-BZ-17:am": [],
+    "IT-32-BZ-17:high": [],
+    "IT-32-BZ-17:high:am": [],
+    "IT-32-BZ-17:high:pm": [],
+    "IT-32-BZ-17:low": [],
+    "IT-32-BZ-17:low:am": [],
+    "IT-32-BZ-17:low:pm": [],
+    "IT-32-BZ-17:pm": [],
+    "IT-32-BZ-18": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-18:am": [],
+    "IT-32-BZ-18:high": [],
+    "IT-32-BZ-18:high:am": [],
+    "IT-32-BZ-18:high:pm": [],
+    "IT-32-BZ-18:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-18:low:am": [],
+    "IT-32-BZ-18:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-18:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-19": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-19:am": [],
+    "IT-32-BZ-19:high": [],
+    "IT-32-BZ-19:high:am": [],
+    "IT-32-BZ-19:high:pm": [],
+    "IT-32-BZ-19:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-19:low:am": [],
+    "IT-32-BZ-19:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-19:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-20": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-20:am": [],
+    "IT-32-BZ-20:high": [],
+    "IT-32-BZ-20:high:am": [],
+    "IT-32-BZ-20:high:pm": [],
+    "IT-32-BZ-20:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-20:low:am": [],
+    "IT-32-BZ-20:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-20:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-01": [
+      "wet_snow"
+    ],
+    "IT-32-TN-01:am": [],
+    "IT-32-TN-01:high": [],
+    "IT-32-TN-01:high:am": [],
+    "IT-32-TN-01:high:pm": [],
+    "IT-32-TN-01:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-01:low:am": [],
+    "IT-32-TN-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-01:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-02": [
+      "wet_snow"
+    ],
+    "IT-32-TN-02:am": [],
+    "IT-32-TN-02:high": [],
+    "IT-32-TN-02:high:am": [],
+    "IT-32-TN-02:high:pm": [],
+    "IT-32-TN-02:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-02:low:am": [],
+    "IT-32-TN-02:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-02:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-03": [],
+    "IT-32-TN-03:am": [],
+    "IT-32-TN-03:high": [],
+    "IT-32-TN-03:high:am": [],
+    "IT-32-TN-03:high:pm": [],
+    "IT-32-TN-03:low": [],
+    "IT-32-TN-03:low:am": [],
+    "IT-32-TN-03:low:pm": [],
+    "IT-32-TN-03:pm": [],
+    "IT-32-TN-04": [
+      "wet_snow"
+    ],
+    "IT-32-TN-04:am": [],
+    "IT-32-TN-04:high": [],
+    "IT-32-TN-04:high:am": [],
+    "IT-32-TN-04:high:pm": [],
+    "IT-32-TN-04:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-04:low:am": [],
+    "IT-32-TN-04:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-04:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-05": [
+      "wet_snow"
+    ],
+    "IT-32-TN-05:am": [],
+    "IT-32-TN-05:high": [],
+    "IT-32-TN-05:high:am": [],
+    "IT-32-TN-05:high:pm": [],
+    "IT-32-TN-05:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-05:low:am": [],
+    "IT-32-TN-05:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-05:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-06": [],
+    "IT-32-TN-06:am": [],
+    "IT-32-TN-06:high": [],
+    "IT-32-TN-06:high:am": [],
+    "IT-32-TN-06:high:pm": [],
+    "IT-32-TN-06:low": [],
+    "IT-32-TN-06:low:am": [],
+    "IT-32-TN-06:low:pm": [],
+    "IT-32-TN-06:pm": [],
+    "IT-32-TN-07": [
+      "wet_snow"
+    ],
+    "IT-32-TN-07:am": [],
+    "IT-32-TN-07:high": [],
+    "IT-32-TN-07:high:am": [],
+    "IT-32-TN-07:high:pm": [],
+    "IT-32-TN-07:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-07:low:am": [],
+    "IT-32-TN-07:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-07:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-08": [
+      "wet_snow"
+    ],
+    "IT-32-TN-08:am": [],
+    "IT-32-TN-08:high": [],
+    "IT-32-TN-08:high:am": [],
+    "IT-32-TN-08:high:pm": [],
+    "IT-32-TN-08:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-08:low:am": [],
+    "IT-32-TN-08:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-08:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-09": [
+      "wet_snow"
+    ],
+    "IT-32-TN-09:am": [],
+    "IT-32-TN-09:high": [],
+    "IT-32-TN-09:high:am": [],
+    "IT-32-TN-09:high:pm": [],
+    "IT-32-TN-09:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-09:low:am": [],
+    "IT-32-TN-09:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-09:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-10": [],
+    "IT-32-TN-10:am": [],
+    "IT-32-TN-10:high": [],
+    "IT-32-TN-10:high:am": [],
+    "IT-32-TN-10:high:pm": [],
+    "IT-32-TN-10:low": [],
+    "IT-32-TN-10:low:am": [],
+    "IT-32-TN-10:low:pm": [],
+    "IT-32-TN-10:pm": [],
+    "IT-32-TN-11": [],
+    "IT-32-TN-11:am": [],
+    "IT-32-TN-11:high": [],
+    "IT-32-TN-11:high:am": [],
+    "IT-32-TN-11:high:pm": [],
+    "IT-32-TN-11:low": [],
+    "IT-32-TN-11:low:am": [],
+    "IT-32-TN-11:low:pm": [],
+    "IT-32-TN-11:pm": [],
+    "IT-32-TN-12": [],
+    "IT-32-TN-12:am": [],
+    "IT-32-TN-12:high": [],
+    "IT-32-TN-12:high:am": [],
+    "IT-32-TN-12:high:pm": [],
+    "IT-32-TN-12:low": [],
+    "IT-32-TN-12:low:am": [],
+    "IT-32-TN-12:low:pm": [],
+    "IT-32-TN-12:pm": [],
+    "IT-32-TN-13": [
+      "wet_snow"
+    ],
+    "IT-32-TN-13:am": [],
+    "IT-32-TN-13:high": [],
+    "IT-32-TN-13:high:am": [],
+    "IT-32-TN-13:high:pm": [],
+    "IT-32-TN-13:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-13:low:am": [],
+    "IT-32-TN-13:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-13:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-14": [],
+    "IT-32-TN-14:am": [],
+    "IT-32-TN-14:high": [],
+    "IT-32-TN-14:high:am": [],
+    "IT-32-TN-14:high:pm": [],
+    "IT-32-TN-14:low": [],
+    "IT-32-TN-14:low:am": [],
+    "IT-32-TN-14:low:pm": [],
+    "IT-32-TN-14:pm": [],
+    "IT-32-TN-15": [],
+    "IT-32-TN-15:am": [],
+    "IT-32-TN-15:high": [],
+    "IT-32-TN-15:high:am": [],
+    "IT-32-TN-15:high:pm": [],
+    "IT-32-TN-15:low": [],
+    "IT-32-TN-15:low:am": [],
+    "IT-32-TN-15:low:pm": [],
+    "IT-32-TN-15:pm": [],
+    "IT-32-TN-16": [
+      "wet_snow"
+    ],
+    "IT-32-TN-16:am": [],
+    "IT-32-TN-16:high": [],
+    "IT-32-TN-16:high:am": [],
+    "IT-32-TN-16:high:pm": [],
+    "IT-32-TN-16:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-16:low:am": [],
+    "IT-32-TN-16:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-16:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-17": [],
+    "IT-32-TN-17:am": [],
+    "IT-32-TN-17:high": [],
+    "IT-32-TN-17:high:am": [],
+    "IT-32-TN-17:high:pm": [],
+    "IT-32-TN-17:low": [],
+    "IT-32-TN-17:low:am": [],
+    "IT-32-TN-17:low:pm": [],
+    "IT-32-TN-17:pm": [],
+    "IT-32-TN-18": [],
+    "IT-32-TN-18:am": [],
+    "IT-32-TN-18:high": [],
+    "IT-32-TN-18:high:am": [],
+    "IT-32-TN-18:high:pm": [],
+    "IT-32-TN-18:low": [],
+    "IT-32-TN-18:low:am": [],
+    "IT-32-TN-18:low:pm": [],
+    "IT-32-TN-18:pm": [],
+    "IT-32-TN-19": [
+      "wet_snow"
+    ],
+    "IT-32-TN-19:am": [],
+    "IT-32-TN-19:high": [],
+    "IT-32-TN-19:high:am": [],
+    "IT-32-TN-19:high:pm": [],
+    "IT-32-TN-19:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-19:low:am": [],
+    "IT-32-TN-19:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-19:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-20": [
+      "wet_snow"
+    ],
+    "IT-32-TN-20:am": [],
+    "IT-32-TN-20:high": [],
+    "IT-32-TN-20:high:am": [],
+    "IT-32-TN-20:high:pm": [],
+    "IT-32-TN-20:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-20:low:am": [],
+    "IT-32-TN-20:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-20:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-21": [],
+    "IT-32-TN-21:am": [],
+    "IT-32-TN-21:high": [],
+    "IT-32-TN-21:high:am": [],
+    "IT-32-TN-21:high:pm": [],
+    "IT-32-TN-21:low": [],
+    "IT-32-TN-21:low:am": [],
+    "IT-32-TN-21:low:pm": [],
+    "IT-32-TN-21:pm": []
+  }
+}

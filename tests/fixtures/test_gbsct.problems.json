@@ -1,0 +1,76 @@
+{
+  "avalancheProblems": {
+    "GB-SCT-2": [],
+    "GB-SCT-2:am": [],
+    "GB-SCT-2:high": [],
+    "GB-SCT-2:high:am": [],
+    "GB-SCT-2:high:pm": [],
+    "GB-SCT-2:low": [],
+    "GB-SCT-2:low:am": [],
+    "GB-SCT-2:low:pm": [],
+    "GB-SCT-2:pm": [],
+    "GB-SCT-3": [],
+    "GB-SCT-3:am": [],
+    "GB-SCT-3:high": [],
+    "GB-SCT-3:high:am": [],
+    "GB-SCT-3:high:pm": [],
+    "GB-SCT-3:low": [],
+    "GB-SCT-3:low:am": [],
+    "GB-SCT-3:low:pm": [],
+    "GB-SCT-3:pm": [],
+    "GB-SCT-4": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:am": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:high": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:high:am": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:high:pm": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:low": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:low:am": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:low:pm": [
+      "wind_slab"
+    ],
+    "GB-SCT-4:pm": [
+      "wind_slab"
+    ],
+    "GB-SCT-5": [],
+    "GB-SCT-5:am": [],
+    "GB-SCT-5:high": [],
+    "GB-SCT-5:high:am": [],
+    "GB-SCT-5:high:pm": [],
+    "GB-SCT-5:low": [],
+    "GB-SCT-5:low:am": [],
+    "GB-SCT-5:low:pm": [],
+    "GB-SCT-5:pm": [],
+    "GB-SCT-6": [],
+    "GB-SCT-6:am": [],
+    "GB-SCT-6:high": [],
+    "GB-SCT-6:high:am": [],
+    "GB-SCT-6:high:pm": [],
+    "GB-SCT-6:low": [],
+    "GB-SCT-6:low:am": [],
+    "GB-SCT-6:low:pm": [],
+    "GB-SCT-6:pm": [],
+    "GB-SCT-7": [],
+    "GB-SCT-7:am": [],
+    "GB-SCT-7:high": [],
+    "GB-SCT-7:high:am": [],
+    "GB-SCT-7:high:pm": [],
+    "GB-SCT-7:low": [],
+    "GB-SCT-7:low:am": [],
+    "GB-SCT-7:low:pm": [],
+    "GB-SCT-7:pm": []
+  }
+}

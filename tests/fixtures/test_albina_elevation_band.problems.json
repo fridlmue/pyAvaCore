@@ -1,0 +1,2102 @@
+{
+  "avalancheProblems": {
+    "AT-07-01": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-01:am": [
+      "wind_slab"
+    ],
+    "AT-07-01:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-01:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-01:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-01:low": [
+      "wet_snow"
+    ],
+    "AT-07-01:low:am": [],
+    "AT-07-01:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-01:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-02": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-02:am": [
+      "wind_slab"
+    ],
+    "AT-07-02:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-02:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-02:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-02:low": [
+      "wet_snow"
+    ],
+    "AT-07-02:low:am": [],
+    "AT-07-02:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-02:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-03": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-03:am": [
+      "wind_slab"
+    ],
+    "AT-07-03:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-03:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-03:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-03:low": [
+      "wet_snow"
+    ],
+    "AT-07-03:low:am": [],
+    "AT-07-03:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-03:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-04": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-04:am": [
+      "wind_slab"
+    ],
+    "AT-07-04:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-04:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-04:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-04:low": [
+      "wet_snow"
+    ],
+    "AT-07-04:low:am": [],
+    "AT-07-04:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-04:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-05": [
+      "wet_snow"
+    ],
+    "AT-07-05:am": [],
+    "AT-07-05:high": [
+      "wet_snow"
+    ],
+    "AT-07-05:high:am": [],
+    "AT-07-05:high:pm": [
+      "wet_snow"
+    ],
+    "AT-07-05:low": [
+      "wet_snow"
+    ],
+    "AT-07-05:low:am": [],
+    "AT-07-05:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-05:pm": [
+      "wet_snow"
+    ],
+    "AT-07-06": [
+      "wet_snow"
+    ],
+    "AT-07-06:am": [],
+    "AT-07-06:high": [
+      "wet_snow"
+    ],
+    "AT-07-06:high:am": [],
+    "AT-07-06:high:pm": [
+      "wet_snow"
+    ],
+    "AT-07-06:low": [
+      "wet_snow"
+    ],
+    "AT-07-06:low:am": [],
+    "AT-07-06:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-06:pm": [
+      "wet_snow"
+    ],
+    "AT-07-07": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-07:am": [
+      "wind_slab"
+    ],
+    "AT-07-07:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-07:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-07:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-07:low": [
+      "wet_snow"
+    ],
+    "AT-07-07:low:am": [],
+    "AT-07-07:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-07:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-08": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-08:am": [
+      "wind_slab"
+    ],
+    "AT-07-08:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-08:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-08:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-08:low": [
+      "wet_snow"
+    ],
+    "AT-07-08:low:am": [],
+    "AT-07-08:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-08:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-09": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-09:am": [
+      "wind_slab"
+    ],
+    "AT-07-09:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-09:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-09:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-09:low": [
+      "wet_snow"
+    ],
+    "AT-07-09:low:am": [],
+    "AT-07-09:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-09:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-10": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-10:am": [
+      "wind_slab"
+    ],
+    "AT-07-10:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-10:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-10:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-10:low": [
+      "wet_snow"
+    ],
+    "AT-07-10:low:am": [],
+    "AT-07-10:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-10:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-11": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-11:am": [
+      "wind_slab"
+    ],
+    "AT-07-11:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-11:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-11:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-11:low": [
+      "wet_snow"
+    ],
+    "AT-07-11:low:am": [],
+    "AT-07-11:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-11:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-12": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-12:am": [
+      "wind_slab"
+    ],
+    "AT-07-12:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-12:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-12:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-12:low": [
+      "wet_snow"
+    ],
+    "AT-07-12:low:am": [],
+    "AT-07-12:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-12:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-13": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-13:am": [
+      "wind_slab"
+    ],
+    "AT-07-13:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-13:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-13:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-13:low": [
+      "wet_snow"
+    ],
+    "AT-07-13:low:am": [],
+    "AT-07-13:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-13:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-14": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-14:am": [
+      "wind_slab"
+    ],
+    "AT-07-14:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-14:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-14:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-14:low": [
+      "wet_snow"
+    ],
+    "AT-07-14:low:am": [],
+    "AT-07-14:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-14:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-15": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-15:am": [
+      "wind_slab"
+    ],
+    "AT-07-15:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-15:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-15:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-15:low": [
+      "wet_snow"
+    ],
+    "AT-07-15:low:am": [],
+    "AT-07-15:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-15:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-16": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-16:am": [
+      "wind_slab"
+    ],
+    "AT-07-16:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-16:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-16:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-16:low": [
+      "wet_snow"
+    ],
+    "AT-07-16:low:am": [],
+    "AT-07-16:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-16:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-17": [
+      "wet_snow"
+    ],
+    "AT-07-17:am": [],
+    "AT-07-17:high": [
+      "wet_snow"
+    ],
+    "AT-07-17:high:am": [],
+    "AT-07-17:high:pm": [
+      "wet_snow"
+    ],
+    "AT-07-17:low": [
+      "wet_snow"
+    ],
+    "AT-07-17:low:am": [],
+    "AT-07-17:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-17:pm": [
+      "wet_snow"
+    ],
+    "AT-07-18": [
+      "wet_snow"
+    ],
+    "AT-07-18:am": [],
+    "AT-07-18:high": [
+      "wet_snow"
+    ],
+    "AT-07-18:high:am": [],
+    "AT-07-18:high:pm": [
+      "wet_snow"
+    ],
+    "AT-07-18:low": [
+      "wet_snow"
+    ],
+    "AT-07-18:low:am": [],
+    "AT-07-18:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-18:pm": [
+      "wet_snow"
+    ],
+    "AT-07-19": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-19:am": [
+      "wind_slab"
+    ],
+    "AT-07-19:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-19:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-19:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-19:low": [
+      "wet_snow"
+    ],
+    "AT-07-19:low:am": [],
+    "AT-07-19:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-19:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-20": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-20:am": [
+      "wind_slab"
+    ],
+    "AT-07-20:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-20:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-20:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-20:low": [
+      "wet_snow"
+    ],
+    "AT-07-20:low:am": [],
+    "AT-07-20:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-20:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-21": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-21:am": [
+      "wind_slab"
+    ],
+    "AT-07-21:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-21:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-21:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-21:low": [
+      "wet_snow"
+    ],
+    "AT-07-21:low:am": [],
+    "AT-07-21:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-21:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-22": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-22:am": [
+      "wind_slab"
+    ],
+    "AT-07-22:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-22:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-22:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-22:low": [
+      "wet_snow"
+    ],
+    "AT-07-22:low:am": [],
+    "AT-07-22:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-22:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-23": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-23:am": [
+      "wind_slab"
+    ],
+    "AT-07-23:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-23:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-23:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-23:low": [
+      "wet_snow"
+    ],
+    "AT-07-23:low:am": [],
+    "AT-07-23:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-23:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-24": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-24:am": [
+      "wind_slab"
+    ],
+    "AT-07-24:high": [
+      "wind_slab",
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-24:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-24:high:pm": [
+      "wet_snow",
+      "new_snow"
+    ],
+    "AT-07-24:low": [
+      "wet_snow"
+    ],
+    "AT-07-24:low:am": [],
+    "AT-07-24:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-24:pm": [
+      "wet_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "AT-07-25": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-25:am": [
+      "wind_slab"
+    ],
+    "AT-07-25:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "AT-07-25:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-25:high:pm": [
+      "wind_slab"
+    ],
+    "AT-07-25:low": [
+      "wet_snow"
+    ],
+    "AT-07-25:low:am": [],
+    "AT-07-25:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-25:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-26": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-26:am": [
+      "wind_slab"
+    ],
+    "AT-07-26:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "AT-07-26:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-26:high:pm": [
+      "wind_slab"
+    ],
+    "AT-07-26:low": [
+      "wet_snow"
+    ],
+    "AT-07-26:low:am": [],
+    "AT-07-26:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-26:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-27": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-27:am": [
+      "wind_slab"
+    ],
+    "AT-07-27:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "AT-07-27:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-27:high:pm": [
+      "wind_slab"
+    ],
+    "AT-07-27:low": [
+      "wet_snow"
+    ],
+    "AT-07-27:low:am": [],
+    "AT-07-27:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-27:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-28": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-28:am": [
+      "wind_slab"
+    ],
+    "AT-07-28:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "AT-07-28:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-28:high:pm": [
+      "wind_slab"
+    ],
+    "AT-07-28:low": [
+      "wet_snow"
+    ],
+    "AT-07-28:low:am": [],
+    "AT-07-28:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-28:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-29": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "AT-07-29:am": [
+      "wind_slab"
+    ],
+    "AT-07-29:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "AT-07-29:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-29:high:pm": [
+      "wind_slab"
+    ],
+    "AT-07-29:low": [
+      "wet_snow"
+    ],
+    "AT-07-29:low:am": [],
+    "AT-07-29:low:pm": [
+      "wet_snow"
+    ],
+    "AT-07-29:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-01": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-01:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-01:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-01:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-01:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-01:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-01:low:am": [],
+    "IT-32-BZ-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-01:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-02": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-02:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-02:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-02:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-02:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-02:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-02:low:am": [],
+    "IT-32-BZ-02:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-02:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-03": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-03:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-03:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-03:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-03:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-03:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-03:low:am": [],
+    "IT-32-BZ-03:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-03:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-04": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-04:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-04:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-04:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-04:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-04:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-04:low:am": [],
+    "IT-32-BZ-04:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-04:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-05": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-05:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-05:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-05:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-05:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-05:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-05:low:am": [],
+    "IT-32-BZ-05:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-05:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-06": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-06:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-06:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-06:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-06:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-06:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-06:low:am": [],
+    "IT-32-BZ-06:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-06:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-07": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-07:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-07:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-07:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-07:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-07:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-07:low:am": [],
+    "IT-32-BZ-07:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-07:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-08": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-08:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-08:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-08:low:am": [],
+    "IT-32-BZ-08:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-08:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-09": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-09:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-09:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-09:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-09:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-09:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-09:low:am": [],
+    "IT-32-BZ-09:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-09:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-10": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-10:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-10:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-10:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-10:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-10:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-10:low:am": [],
+    "IT-32-BZ-10:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-10:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-11": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-11:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-11:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-11:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-11:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-11:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-11:low:am": [],
+    "IT-32-BZ-11:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-11:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-12": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-12:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-12:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-12:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-12:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-12:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-12:low:am": [],
+    "IT-32-BZ-12:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-12:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-13": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-13:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-13:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-13:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-13:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-13:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-13:low:am": [],
+    "IT-32-BZ-13:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-13:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-14": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-14:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-14:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-14:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-14:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-14:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-14:low:am": [],
+    "IT-32-BZ-14:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-14:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-15": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-15:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-15:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-15:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-15:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-15:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-15:low:am": [],
+    "IT-32-BZ-15:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-15:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-16": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-16:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-16:low:am": [],
+    "IT-32-BZ-16:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-16:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-17": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-17:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-17:low:am": [],
+    "IT-32-BZ-17:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-17:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-18": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-18:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-18:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-18:low:am": [],
+    "IT-32-BZ-18:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-18:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-19": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-19:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-19:low:am": [],
+    "IT-32-BZ-19:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-19:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-20": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-BZ-20:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:low": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-20:low:am": [],
+    "IT-32-BZ-20:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-BZ-20:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-01": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-01:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-01:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-01:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-01:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-01:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-01:low:am": [],
+    "IT-32-TN-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-01:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-02": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-02:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-02:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-02:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-02:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-02:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-02:low:am": [],
+    "IT-32-TN-02:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-02:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-03": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-03:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-03:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-03:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-03:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-03:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-03:low:am": [],
+    "IT-32-TN-03:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-03:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-04": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-04:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-04:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-04:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-04:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-04:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-04:low:am": [],
+    "IT-32-TN-04:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-04:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-05": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-05:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-05:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-05:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-05:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-05:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-05:low:am": [],
+    "IT-32-TN-05:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-05:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-06": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-06:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-06:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-06:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-06:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-06:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-06:low:am": [],
+    "IT-32-TN-06:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-06:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-07": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-07:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-07:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-07:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-07:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-07:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-07:low:am": [],
+    "IT-32-TN-07:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-07:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-08": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-08:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-08:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-08:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-08:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-08:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-08:low:am": [],
+    "IT-32-TN-08:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-08:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-09": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-09:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-09:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-09:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-09:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-09:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-09:low:am": [],
+    "IT-32-TN-09:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-09:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-10": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-10:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-10:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-10:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-10:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-10:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-10:low:am": [],
+    "IT-32-TN-10:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-10:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-11": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-11:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-11:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-11:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-11:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-11:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-11:low:am": [],
+    "IT-32-TN-11:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-11:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-12": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-12:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-12:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-12:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-12:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-12:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-12:low:am": [],
+    "IT-32-TN-12:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-12:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-13": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-13:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-13:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-13:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-13:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-13:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-13:low:am": [],
+    "IT-32-TN-13:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-13:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-14": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-14:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-14:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-14:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-14:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-14:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-14:low:am": [],
+    "IT-32-TN-14:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-14:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-15": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-15:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-15:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-15:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-15:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-15:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-15:low:am": [],
+    "IT-32-TN-15:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-15:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-16": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-16:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-16:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-16:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-16:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-16:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-16:low:am": [],
+    "IT-32-TN-16:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-16:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-17": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-17:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-17:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-17:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-17:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-17:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-17:low:am": [],
+    "IT-32-TN-17:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-17:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-18": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-18:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-18:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-18:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-18:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-18:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-18:low:am": [],
+    "IT-32-TN-18:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-18:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-19": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-19:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-19:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-19:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-19:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-19:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-19:low:am": [],
+    "IT-32-TN-19:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-19:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-20": [
+      "wind_slab",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-20:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-20:high": [
+      "wind_slab",
+      "wind_slab"
+    ],
+    "IT-32-TN-20:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-TN-20:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-TN-20:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-20:low:am": [],
+    "IT-32-TN-20:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-20:pm": [
+      "wind_slab",
+      "wet_snow"
+    ],
+    "IT-32-TN-21": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-21:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-21:high": [
+      "persistent_weak_layers",
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-21:high:am": [
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-21:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-TN-21:low": [
+      "wet_snow"
+    ],
+    "IT-32-TN-21:low:am": [],
+    "IT-32-TN-21:low:pm": [
+      "wet_snow"
+    ],
+    "IT-32-TN-21:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ]
+  }
+}

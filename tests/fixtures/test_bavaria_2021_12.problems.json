@@ -1,0 +1,364 @@
+{
+  "avalancheProblems": {
+    "DE-BY-11": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:low": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:low:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:low:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-11:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:low": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:low:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:low:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-12:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:low": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:low:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:low:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-20:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:low": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:low:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:low:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-30:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-41:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-42:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-43:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-51:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-52:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:low": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:low:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:low:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "DE-BY-60:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ]
+  }
+}

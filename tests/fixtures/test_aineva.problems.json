@@ -1,0 +1,292 @@
+{
+  "avalancheProblems": {
+    "IT-34-BL-01": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-01:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-01:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-01:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-01:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-01:low": [
+      "wet_snow"
+    ],
+    "IT-34-BL-01:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-BL-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-BL-01:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-02": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-02:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-02:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-02:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-02:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-02:low": [
+      "wet_snow"
+    ],
+    "IT-34-BL-02:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-BL-02:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-BL-02:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-03": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-03:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-03:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-03:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-03:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-03:low": [
+      "wet_snow"
+    ],
+    "IT-34-BL-03:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-BL-03:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-BL-03:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-04": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-04:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-04:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-04:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-04:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-04:low": [
+      "wet_snow"
+    ],
+    "IT-34-BL-04:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-BL-04:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-BL-04:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-05": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-05:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-05:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-05:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-05:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-05:low": [
+      "wet_snow"
+    ],
+    "IT-34-BL-05:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-BL-05:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-BL-05:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-06": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-06:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-BL-06:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-06:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-06:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-BL-06:low": [
+      "wet_snow"
+    ],
+    "IT-34-BL-06:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-BL-06:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-BL-06:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-VI-01": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-VI-01:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-VI-01:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-VI-01:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-VI-01:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-VI-01:low": [
+      "wet_snow"
+    ],
+    "IT-34-VI-01:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-VI-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-VI-01:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-VR-01": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-VR-01:am": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ],
+    "IT-34-VR-01:high": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-VR-01:high:am": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-VR-01:high:pm": [
+      "gliding_snow",
+      "new_snow"
+    ],
+    "IT-34-VR-01:low": [
+      "wet_snow"
+    ],
+    "IT-34-VR-01:low:am": [
+      "wet_snow"
+    ],
+    "IT-34-VR-01:low:pm": [
+      "wet_snow"
+    ],
+    "IT-34-VR-01:pm": [
+      "gliding_snow",
+      "new_snow",
+      "wet_snow"
+    ]
+  }
+}

@@ -1,0 +1,1783 @@
+{
+  "avalancheProblems": {
+    "AT-07-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-01:low": [
+      "new_snow"
+    ],
+    "AT-07-01:low:am": [
+      "new_snow"
+    ],
+    "AT-07-01:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-02-01": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-02-01:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-02-01:high": [
+      "new_snow"
+    ],
+    "AT-07-02-01:high:am": [
+      "new_snow"
+    ],
+    "AT-07-02-01:high:pm": [
+      "new_snow"
+    ],
+    "AT-07-02-01:low": [
+      "new_snow"
+    ],
+    "AT-07-02-01:low:am": [
+      "new_snow"
+    ],
+    "AT-07-02-01:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-02-01:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-02-02": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-02-02:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-02-02:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-02-02:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-02-02:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-02-02:low": [
+      "new_snow"
+    ],
+    "AT-07-02-02:low:am": [
+      "new_snow"
+    ],
+    "AT-07-02-02:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-02-02:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-03": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-03:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-03:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-03:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-03:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-03:low": [
+      "new_snow"
+    ],
+    "AT-07-03:low:am": [
+      "new_snow"
+    ],
+    "AT-07-03:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-03:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-04-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-04-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-04-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-04-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-04-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-04-01:low": [
+      "new_snow"
+    ],
+    "AT-07-04-01:low:am": [
+      "new_snow"
+    ],
+    "AT-07-04-01:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-04-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-04-02": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-04-02:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-04-02:high": [
+      "new_snow"
+    ],
+    "AT-07-04-02:high:am": [
+      "new_snow"
+    ],
+    "AT-07-04-02:high:pm": [
+      "new_snow"
+    ],
+    "AT-07-04-02:low": [
+      "new_snow"
+    ],
+    "AT-07-04-02:low:am": [
+      "new_snow"
+    ],
+    "AT-07-04-02:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-04-02:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-05": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-05:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-05:high": [
+      "new_snow"
+    ],
+    "AT-07-05:high:am": [
+      "new_snow"
+    ],
+    "AT-07-05:high:pm": [
+      "new_snow"
+    ],
+    "AT-07-05:low": [
+      "new_snow"
+    ],
+    "AT-07-05:low:am": [
+      "new_snow"
+    ],
+    "AT-07-05:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-05:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-06": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-06:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-06:high": [
+      "new_snow"
+    ],
+    "AT-07-06:high:am": [
+      "new_snow"
+    ],
+    "AT-07-06:high:pm": [
+      "new_snow"
+    ],
+    "AT-07-06:low": [
+      "new_snow"
+    ],
+    "AT-07-06:low:am": [
+      "new_snow"
+    ],
+    "AT-07-06:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-06:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-07": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-07:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-07:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-07:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-07:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-07:low": [
+      "new_snow"
+    ],
+    "AT-07-07:low:am": [
+      "new_snow"
+    ],
+    "AT-07-07:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-07:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-08": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-08:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-08:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-08:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-08:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-08:low": [
+      "new_snow"
+    ],
+    "AT-07-08:low:am": [
+      "new_snow"
+    ],
+    "AT-07-08:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-08:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-09": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-09:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-09:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-09:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-09:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-09:low": [
+      "new_snow"
+    ],
+    "AT-07-09:low:am": [
+      "new_snow"
+    ],
+    "AT-07-09:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-09:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-10": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-10:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-10:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-10:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-10:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-10:low": [
+      "new_snow"
+    ],
+    "AT-07-10:low:am": [
+      "new_snow"
+    ],
+    "AT-07-10:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-10:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-11": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-11:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-11:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-11:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-11:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-11:low": [
+      "new_snow"
+    ],
+    "AT-07-11:low:am": [
+      "new_snow"
+    ],
+    "AT-07-11:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-11:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-12": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-12:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-12:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-12:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-12:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-12:low": [
+      "new_snow"
+    ],
+    "AT-07-12:low:am": [
+      "new_snow"
+    ],
+    "AT-07-12:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-12:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-13": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-13:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-13:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-13:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-13:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-13:low": [
+      "new_snow"
+    ],
+    "AT-07-13:low:am": [
+      "new_snow"
+    ],
+    "AT-07-13:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-13:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-01:low": [
+      "new_snow"
+    ],
+    "AT-07-14-01:low:am": [
+      "new_snow"
+    ],
+    "AT-07-14-01:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-14-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-02": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-02:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-02:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-02:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-02:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-02:low": [
+      "new_snow"
+    ],
+    "AT-07-14-02:low:am": [
+      "new_snow"
+    ],
+    "AT-07-14-02:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-14-02:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-03": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-03:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-03:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-03:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-03:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-03:low": [
+      "new_snow"
+    ],
+    "AT-07-14-03:low:am": [
+      "new_snow"
+    ],
+    "AT-07-14-03:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-14-03:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-04": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-04:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-04:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-04:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-04:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-04:low": [
+      "new_snow"
+    ],
+    "AT-07-14-04:low:am": [
+      "new_snow"
+    ],
+    "AT-07-14-04:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-14-04:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-05": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-05:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-14-05:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-05:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-05:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-14-05:low": [
+      "new_snow"
+    ],
+    "AT-07-14-05:low:am": [
+      "new_snow"
+    ],
+    "AT-07-14-05:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-14-05:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-15": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-15:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-15:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-15:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-15:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-15:low": [
+      "new_snow"
+    ],
+    "AT-07-15:low:am": [
+      "new_snow"
+    ],
+    "AT-07-15:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-15:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-16": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-16:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-16:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-16:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-16:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-16:low": [
+      "new_snow"
+    ],
+    "AT-07-16:low:am": [
+      "new_snow"
+    ],
+    "AT-07-16:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-16:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-17-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-17-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-17-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-17-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-17-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-17-01:low": [
+      "new_snow"
+    ],
+    "AT-07-17-01:low:am": [
+      "new_snow"
+    ],
+    "AT-07-17-01:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-17-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-17-02": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-17-02:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-17-02:high": [
+      "new_snow"
+    ],
+    "AT-07-17-02:high:am": [
+      "new_snow"
+    ],
+    "AT-07-17-02:high:pm": [
+      "new_snow"
+    ],
+    "AT-07-17-02:low": [
+      "new_snow"
+    ],
+    "AT-07-17-02:low:am": [
+      "new_snow"
+    ],
+    "AT-07-17-02:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-17-02:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-18": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-18:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-18:high": [
+      "new_snow"
+    ],
+    "AT-07-18:high:am": [
+      "new_snow"
+    ],
+    "AT-07-18:high:pm": [
+      "new_snow"
+    ],
+    "AT-07-18:low": [
+      "new_snow"
+    ],
+    "AT-07-18:low:am": [
+      "new_snow"
+    ],
+    "AT-07-18:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-18:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "AT-07-19": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-19:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-19:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-19:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-19:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-19:low": [
+      "new_snow"
+    ],
+    "AT-07-19:low:am": [
+      "new_snow"
+    ],
+    "AT-07-19:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-19:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-20": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-20:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-20:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-20:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-20:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-20:low": [
+      "new_snow"
+    ],
+    "AT-07-20:low:am": [
+      "new_snow"
+    ],
+    "AT-07-20:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-20:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-21": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-21:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-21:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-21:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-21:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-21:low": [
+      "new_snow"
+    ],
+    "AT-07-21:low:am": [
+      "new_snow"
+    ],
+    "AT-07-21:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-21:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-22": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-22:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-22:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-22:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-22:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-22:low": [
+      "new_snow"
+    ],
+    "AT-07-22:low:am": [
+      "new_snow"
+    ],
+    "AT-07-22:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-22:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-23": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-23:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-23:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-23:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-23:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-23:low": [
+      "new_snow"
+    ],
+    "AT-07-23:low:am": [
+      "new_snow"
+    ],
+    "AT-07-23:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-23:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-24": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-24:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-24:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-24:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-24:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-24:low": [
+      "new_snow"
+    ],
+    "AT-07-24:low:am": [
+      "new_snow"
+    ],
+    "AT-07-24:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-24:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-25": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-25:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-25:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-25:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-25:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-25:low": [
+      "new_snow"
+    ],
+    "AT-07-25:low:am": [
+      "new_snow"
+    ],
+    "AT-07-25:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-25:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-26": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-26:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-26:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-26:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-26:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-26:low": [
+      "new_snow"
+    ],
+    "AT-07-26:low:am": [
+      "new_snow"
+    ],
+    "AT-07-26:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-26:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-27": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "AT-07-27:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "AT-07-27:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "AT-07-27:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "AT-07-27:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "AT-07-27:low": [],
+    "AT-07-27:low:am": [],
+    "AT-07-27:low:pm": [],
+    "AT-07-27:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "AT-07-28": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-28:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-28:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-28:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-28:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "AT-07-28:low": [
+      "new_snow"
+    ],
+    "AT-07-28:low:am": [
+      "new_snow"
+    ],
+    "AT-07-28:low:pm": [
+      "new_snow"
+    ],
+    "AT-07-28:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "AT-07-29": [
+      "wind_slab"
+    ],
+    "AT-07-29:am": [
+      "wind_slab"
+    ],
+    "AT-07-29:high": [
+      "wind_slab"
+    ],
+    "AT-07-29:high:am": [
+      "wind_slab"
+    ],
+    "AT-07-29:high:pm": [
+      "wind_slab"
+    ],
+    "AT-07-29:low": [],
+    "AT-07-29:low:am": [],
+    "AT-07-29:low:pm": [],
+    "AT-07-29:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-01-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-01-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-01-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-01-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-01-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-01-01:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-01-01:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-01-01:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-01-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-01-02": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-01-02:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-01-02:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-01-02:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-01-02:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-01-02:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-01-02:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-01-02:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-01-02:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-02-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-02-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-02-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-02-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-02-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-02-01:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-02-01:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-02-01:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-02-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-03": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-03:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-03:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-03:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-03:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-03:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-03:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-03:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-03:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-04-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-04-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-04-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-04-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-04-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-04-01:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-04-01:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-04-01:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-04-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-01:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-01:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-01:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-02": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-02:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-02:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-02:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-02:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-02:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-02:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-02:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-02:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-03": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-03:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-05-03:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-03:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-03:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-05-03:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-03:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-03:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-05-03:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-07-01": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-07-01:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-07-01:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-07-01:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-07-01:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-07-01:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-07-01:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-07-01:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-07-01:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-08-03": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08-03:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08-03:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08-03:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08-03:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-08-03:low": [],
+    "IT-32-BZ-08-03:low:am": [],
+    "IT-32-BZ-08-03:low:pm": [],
+    "IT-32-BZ-08-03:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-11": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-11:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-11:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-11:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-11:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-11:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-11:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-11:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-11:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-12": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-12:am": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-12:high": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-12:high:am": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-12:high:pm": [
+      "new_snow",
+      "persistent_weak_layers"
+    ],
+    "IT-32-BZ-12:low": [
+      "new_snow"
+    ],
+    "IT-32-BZ-12:low:am": [
+      "new_snow"
+    ],
+    "IT-32-BZ-12:low:pm": [
+      "new_snow"
+    ],
+    "IT-32-BZ-12:pm": [
+      "new_snow",
+      "persistent_weak_layers",
+      "new_snow"
+    ],
+    "IT-32-BZ-16": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-16:low": [],
+    "IT-32-BZ-16:low:am": [],
+    "IT-32-BZ-16:low:pm": [],
+    "IT-32-BZ-16:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-17:low": [],
+    "IT-32-BZ-17:low:am": [],
+    "IT-32-BZ-17:low:pm": [],
+    "IT-32-BZ-17:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-01": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-01:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-01:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-01:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-01:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-01:low": [],
+    "IT-32-BZ-18-01:low:am": [],
+    "IT-32-BZ-18-01:low:pm": [],
+    "IT-32-BZ-18-01:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-02": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-02:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-02:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-02:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-02:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-18-02:low": [],
+    "IT-32-BZ-18-02:low:am": [],
+    "IT-32-BZ-18-02:low:pm": [],
+    "IT-32-BZ-18-02:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-19:low": [],
+    "IT-32-BZ-19:low:am": [],
+    "IT-32-BZ-19:low:pm": [],
+    "IT-32-BZ-19:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:high": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:high:am": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:high:pm": [
+      "wind_slab"
+    ],
+    "IT-32-BZ-20:low": [],
+    "IT-32-BZ-20:low:am": [],
+    "IT-32-BZ-20:low:pm": [],
+    "IT-32-BZ-20:pm": [
+      "wind_slab"
+    ]
+  }
+}

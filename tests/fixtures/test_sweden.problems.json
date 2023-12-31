@@ -1,0 +1,184 @@
+{
+  "avalancheProblems": {
+    "SE-01": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-01:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-01:high": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-01:high:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-01:high:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-01:low": [
+      "persistent_weak_layers"
+    ],
+    "SE-01:low:am": [
+      "persistent_weak_layers"
+    ],
+    "SE-01:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "SE-01:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-02": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-02:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-02:high": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-02:high:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-02:high:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-02:low": [],
+    "SE-02:low:am": [],
+    "SE-02:low:pm": [],
+    "SE-02:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-03": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-03:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-03:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-03:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-03:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-03:low": [
+      "persistent_weak_layers"
+    ],
+    "SE-03:low:am": [
+      "persistent_weak_layers"
+    ],
+    "SE-03:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "SE-03:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-07": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-07:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-07:high": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-07:high:am": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-07:high:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-07:low": [],
+    "SE-07:low:am": [],
+    "SE-07:low:pm": [],
+    "SE-07:pm": [
+      "wind_slab",
+      "persistent_weak_layers"
+    ],
+    "SE-08": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-08:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-08:high": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-08:high:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-08:high:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-08:low": [],
+    "SE-08:low:am": [],
+    "SE-08:low:pm": [],
+    "SE-08:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-09": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-09:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-09:high": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-09:high:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-09:high:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "SE-09:low": [
+      "persistent_weak_layers"
+    ],
+    "SE-09:low:am": [
+      "persistent_weak_layers"
+    ],
+    "SE-09:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "SE-09:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ]
+  }
+}

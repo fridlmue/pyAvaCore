@@ -17,12 +17,12 @@ from dataclasses import dataclass, field
 from datetime import date, datetime
 import json
 import typing
-from typing import Optional, Any, List
+from typing import Optional, Any, List, Callable
 
 from .MetaData import MetaData
 
 from .avajson import JSONEncoder
-from .avabulletin import AvaBulletin, DangerRating, Provider, ValidTimePeriod
+from .avabulletin import AvaBulletin, DangerRating, Provider, ValidTimePeriod, Elevation
 from .geojson import Feature, FeatureCollection
 
 
@@ -106,12 +106,29 @@ class Bulletins:
 
         return validity_dates
 
-    def max_danger_ratings(self, validity_date):
+    def all_avalanche_problems(self, validity_date, region_id=""):
+        """
+        Returns a Dict containing a list of all avalanche problems
+        """
+        return self._to_dict(
+            validity_date,
+            region_id,
+            lambda bulletin, elevation, validTimePeriod: [
+                r.problemType
+                for r in bulletin.avalancheProblems
+                if (not r.elevation or r.elevation.matches_elevation(elevation))
+                and validTimePeriod.matches_valid_time_period(r.validTimePeriod)
+            ],
+        )
+
+    def max_danger_ratings(self, validity_date, region_id=""):
         """
         Returns a Dict containing the main danger ratings (total, high, low, am, pm)
         """
-        return {
-            key: max(
+        return self._to_dict(
+            validity_date,
+            region_id,
+            lambda bulletin, elevation, validTimePeriod: max(
                 [
                     r.get_mainValue_int()
                     for r in bulletin.dangerRatings
@@ -119,7 +136,24 @@ class Bulletins:
                     and validTimePeriod.matches_valid_time_period(r.validTimePeriod)
                 ]
                 or [0]
-            )
+            ),
+        )
+
+    def _to_dict(
+        self,
+        validity_date,
+        region_id,
+        to_value: Callable[
+            [
+                AvaBulletin,
+                Elevation,
+                ValidTimePeriod,
+            ],
+            Any,
+        ],
+    ):
+        return {
+            key: to_value(bulletin, elevation, validTimePeriod)
             for bulletin in self.bulletins
             for region in bulletin.regions
             for validTimePeriod in [
@@ -140,6 +174,7 @@ class Bulletins:
                     if s
                 )
             )
+            if (not region_id or key.startswith(region_id))
         }
 
     def augment_geojson(self, geojson: FeatureCollection):

@@ -1,0 +1,4063 @@
+{
+  "avalancheProblems": {
+    "CH-1111": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1111:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1112:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1113:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1114": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1114:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1114:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1114:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1114:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1114:low": [
+      "gliding_snow"
+    ],
+    "CH-1114:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1114:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1114:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1121": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1121:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1122:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1211:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1212": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:high": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:high:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:high:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:low": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:low:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:low:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1212:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1213": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1213:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1221:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1222:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1223": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1223:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1223:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1223:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1223:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1223:low": [
+      "gliding_snow"
+    ],
+    "CH-1223:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1223:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1223:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1224": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1224:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1225": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1225:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1225:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1225:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1225:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1225:low": [
+      "gliding_snow"
+    ],
+    "CH-1225:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1225:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1225:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1226": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1226:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1227": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1227:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1227:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1227:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1227:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1227:low": [
+      "gliding_snow"
+    ],
+    "CH-1227:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1227:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1227:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1228": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1228:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1231:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1232": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1232:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1232:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1232:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1232:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1232:low": [
+      "gliding_snow"
+    ],
+    "CH-1232:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1232:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1232:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1233": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1233:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1234": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1234:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1234:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1234:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1234:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1234:low": [
+      "gliding_snow"
+    ],
+    "CH-1234:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1234:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1234:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1241": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1241:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1242:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1243": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1243:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1243:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1243:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1243:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1243:low": [
+      "gliding_snow"
+    ],
+    "CH-1243:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1243:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1243:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1244": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1244:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1245": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1245:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1245:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1245:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1245:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1245:low": [
+      "gliding_snow"
+    ],
+    "CH-1245:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1245:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1245:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1246": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1246:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1246:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1246:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1246:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1246:low": [
+      "gliding_snow"
+    ],
+    "CH-1246:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1246:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1246:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1247": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1247:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1247:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1247:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1247:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1247:low": [
+      "gliding_snow"
+    ],
+    "CH-1247:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1247:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1247:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1311": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1311:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1312": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1312:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-1312:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1312:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1312:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-1312:low": [
+      "gliding_snow"
+    ],
+    "CH-1312:low:am": [
+      "gliding_snow"
+    ],
+    "CH-1312:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-1312:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2111": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2111:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2112": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:high": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:high:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:high:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:low": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:low:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:low:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2112:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2121": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2121:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2122": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2122:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2122:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2122:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2122:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2122:low": [
+      "gliding_snow"
+    ],
+    "CH-2122:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2122:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2122:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2123": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2123:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2124:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2131": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:high": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:high:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:high:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:low": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:low:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:low:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2131:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2132": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2132:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2133:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2134": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2134:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2134:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2134:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2134:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2134:low": [
+      "gliding_snow"
+    ],
+    "CH-2134:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2134:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2134:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2211": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2211:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2211:low": [
+      "gliding_snow"
+    ],
+    "CH-2211:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2211:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2211:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2212": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2212:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2212:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2212:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2212:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2212:low": [
+      "gliding_snow"
+    ],
+    "CH-2212:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2212:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2212:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2221": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2221:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2221:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2221:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2221:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2221:low": [
+      "gliding_snow"
+    ],
+    "CH-2221:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2221:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2221:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2222": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2222:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2222:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2222:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2222:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2222:low": [
+      "gliding_snow"
+    ],
+    "CH-2222:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2222:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2222:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2223": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2223:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2223:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2223:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2223:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2223:low": [
+      "gliding_snow"
+    ],
+    "CH-2223:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2223:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2223:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2224": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2224:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-2224:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2224:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2224:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-2224:low": [
+      "gliding_snow"
+    ],
+    "CH-2224:low:am": [
+      "gliding_snow"
+    ],
+    "CH-2224:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-2224:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3111": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3111:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3112": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3112:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3112:low": [
+      "gliding_snow"
+    ],
+    "CH-3112:low:am": [
+      "gliding_snow"
+    ],
+    "CH-3112:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-3112:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3113": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3113:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3113:low": [
+      "gliding_snow"
+    ],
+    "CH-3113:low:am": [
+      "gliding_snow"
+    ],
+    "CH-3113:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-3113:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3114": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3114:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3211": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:high": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:high:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:high:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:low": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:low:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:low:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3211:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:high": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:high:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:high:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:low": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:low:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:low:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3221:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3222": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3222:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3223:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3224": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3224:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3224:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3224:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3224:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3224:low": [
+      "gliding_snow"
+    ],
+    "CH-3224:low:am": [
+      "gliding_snow"
+    ],
+    "CH-3224:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-3224:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-3311": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:low": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:low:am": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:low:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-3311:pm": [
+      "gliding_snow",
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4111": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4111:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4111:low": [
+      "gliding_snow"
+    ],
+    "CH-4111:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4111:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4111:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4112": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4112:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4112:low": [
+      "gliding_snow"
+    ],
+    "CH-4112:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4112:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4112:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4113": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4113:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4113:low": [
+      "gliding_snow"
+    ],
+    "CH-4113:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4113:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4113:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4114": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4114:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4114:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4114:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4114:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4114:low": [
+      "gliding_snow"
+    ],
+    "CH-4114:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4114:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4114:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4115": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4115:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4115:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4115:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4115:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4115:low": [
+      "gliding_snow"
+    ],
+    "CH-4115:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4115:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4115:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4116": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4116:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4116:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4116:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4116:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4116:low": [
+      "gliding_snow"
+    ],
+    "CH-4116:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4116:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4116:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4121": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4121:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4121:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4121:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4121:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4121:low": [
+      "gliding_snow"
+    ],
+    "CH-4121:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4121:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4121:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4122": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4122:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4122:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4122:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4122:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4122:low": [
+      "gliding_snow"
+    ],
+    "CH-4122:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4122:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4122:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4123": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4123:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4123:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4123:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4123:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4123:low": [
+      "gliding_snow"
+    ],
+    "CH-4123:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4123:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4123:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4124": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4124:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4124:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4124:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4124:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4124:low": [
+      "gliding_snow"
+    ],
+    "CH-4124:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4124:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4124:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4125": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4125:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4125:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4125:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4125:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4125:low": [
+      "gliding_snow"
+    ],
+    "CH-4125:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4125:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4125:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4211": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4211:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4211:low": [
+      "gliding_snow"
+    ],
+    "CH-4211:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4211:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4211:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4212": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4212:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4212:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4212:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4212:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4212:low": [
+      "gliding_snow"
+    ],
+    "CH-4212:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4212:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4212:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4213": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4213:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4213:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4213:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4213:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4213:low": [
+      "gliding_snow"
+    ],
+    "CH-4213:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4213:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4213:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4214": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4214:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4214:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4214:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4214:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4214:low": [
+      "gliding_snow"
+    ],
+    "CH-4214:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4214:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4214:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4215": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4215:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4215:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4215:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4215:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4215:low": [
+      "gliding_snow"
+    ],
+    "CH-4215:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4215:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4215:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4221": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4221:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4221:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4221:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4221:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4221:low": [
+      "gliding_snow"
+    ],
+    "CH-4221:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4221:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4221:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4222": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4222:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4222:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4222:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4222:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4222:low": [
+      "gliding_snow"
+    ],
+    "CH-4222:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4222:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4222:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4223": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4223:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4223:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4223:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4223:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4223:low": [
+      "gliding_snow"
+    ],
+    "CH-4223:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4223:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4223:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4224": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4224:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4224:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4224:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4224:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4224:low": [
+      "gliding_snow"
+    ],
+    "CH-4224:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4224:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4224:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4225": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4225:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4225:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4225:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4225:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4225:low": [
+      "gliding_snow"
+    ],
+    "CH-4225:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4225:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4225:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4231": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4231:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4231:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4231:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4231:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4231:low": [
+      "gliding_snow"
+    ],
+    "CH-4231:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4231:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4231:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4232": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4232:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4232:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4232:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4232:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4232:low": [
+      "gliding_snow"
+    ],
+    "CH-4232:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4232:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4232:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4241": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4241:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4241:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4241:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4241:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4241:low": [
+      "gliding_snow"
+    ],
+    "CH-4241:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4241:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4241:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4242": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4242:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4242:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4242:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4242:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4242:low": [
+      "gliding_snow"
+    ],
+    "CH-4242:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4242:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4242:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4243": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4243:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4243:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4243:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4243:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4243:low": [
+      "gliding_snow"
+    ],
+    "CH-4243:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4243:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4243:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4244": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4244:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-4244:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4244:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4244:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-4244:low": [
+      "gliding_snow"
+    ],
+    "CH-4244:low:am": [
+      "gliding_snow"
+    ],
+    "CH-4244:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-4244:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5111": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5111:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5111:low": [
+      "gliding_snow"
+    ],
+    "CH-5111:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5111:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5111:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5112": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5112:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5112:low": [
+      "gliding_snow"
+    ],
+    "CH-5112:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5112:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5112:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5113": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5113:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5113:low": [
+      "gliding_snow"
+    ],
+    "CH-5113:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5113:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5113:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5121": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5121:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5121:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5121:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5121:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5121:low": [
+      "gliding_snow"
+    ],
+    "CH-5121:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5121:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5121:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5122": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5122:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5122:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5122:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5122:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5122:low": [
+      "gliding_snow"
+    ],
+    "CH-5122:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5122:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5122:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5123": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5123:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5123:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5123:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5123:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5123:low": [
+      "gliding_snow"
+    ],
+    "CH-5123:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5123:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5123:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5124": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5124:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5124:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5124:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5124:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5124:low": [
+      "gliding_snow"
+    ],
+    "CH-5124:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5124:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5124:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5211": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5211:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5211:low": [
+      "gliding_snow"
+    ],
+    "CH-5211:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5211:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5211:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5212": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5212:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5212:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5212:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5212:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5212:low": [
+      "gliding_snow"
+    ],
+    "CH-5212:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5212:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5212:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5214": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5214:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5214:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5214:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5214:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5214:low": [
+      "gliding_snow"
+    ],
+    "CH-5214:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5214:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5214:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5215": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5215:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5215:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5215:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5215:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5215:low": [
+      "gliding_snow"
+    ],
+    "CH-5215:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5215:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5215:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5216": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5216:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5216:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5216:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5216:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5216:low": [
+      "gliding_snow"
+    ],
+    "CH-5216:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5216:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5216:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5221": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5221:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5221:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5221:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5221:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5221:low": [
+      "gliding_snow"
+    ],
+    "CH-5221:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5221:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5221:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5222": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5222:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5222:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5222:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5222:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5222:low": [
+      "gliding_snow"
+    ],
+    "CH-5222:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5222:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5222:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5223": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5223:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5223:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5223:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5223:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5223:low": [
+      "gliding_snow"
+    ],
+    "CH-5223:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5223:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5223:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5231": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5231:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5231:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5231:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5231:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5231:low": [
+      "gliding_snow"
+    ],
+    "CH-5231:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5231:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5231:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5232": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5232:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5232:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5232:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5232:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5232:low": [
+      "gliding_snow"
+    ],
+    "CH-5232:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5232:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5232:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5233": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5233:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5233:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5233:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5233:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5233:low": [
+      "gliding_snow"
+    ],
+    "CH-5233:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5233:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5233:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5234": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5234:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-5234:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5234:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5234:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-5234:low": [
+      "gliding_snow"
+    ],
+    "CH-5234:low:am": [
+      "gliding_snow"
+    ],
+    "CH-5234:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-5234:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6111": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6111:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6111:low": [
+      "gliding_snow"
+    ],
+    "CH-6111:low:am": [
+      "gliding_snow"
+    ],
+    "CH-6111:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-6111:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6112": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6112:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6112:low": [
+      "gliding_snow"
+    ],
+    "CH-6112:low:am": [
+      "gliding_snow"
+    ],
+    "CH-6112:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-6112:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6113": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6113:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6113:low": [
+      "gliding_snow"
+    ],
+    "CH-6113:low:am": [
+      "gliding_snow"
+    ],
+    "CH-6113:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-6113:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6114": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6114:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6115:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6121:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6122:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6211": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6211:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6211:low": [
+      "gliding_snow"
+    ],
+    "CH-6211:low:am": [
+      "gliding_snow"
+    ],
+    "CH-6211:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-6211:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-6212": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-6212:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7111": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7111:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7111:low": [
+      "gliding_snow"
+    ],
+    "CH-7111:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7111:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7111:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7112": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7112:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7112:low": [
+      "gliding_snow"
+    ],
+    "CH-7112:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7112:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7112:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7113": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7113:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7113:low": [
+      "gliding_snow"
+    ],
+    "CH-7113:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7113:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7113:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7114": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7114:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7114:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7114:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7114:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7114:low": [
+      "gliding_snow"
+    ],
+    "CH-7114:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7114:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7114:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7115": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7115:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7115:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7115:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7115:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7115:low": [
+      "gliding_snow"
+    ],
+    "CH-7115:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7115:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7115:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7121": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7121:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7121:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7121:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7121:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7121:low": [
+      "gliding_snow"
+    ],
+    "CH-7121:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7121:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7121:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7122": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7122:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7122:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7122:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7122:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7122:low": [
+      "gliding_snow"
+    ],
+    "CH-7122:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7122:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7122:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7123": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7123:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7123:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7123:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7123:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7123:low": [
+      "gliding_snow"
+    ],
+    "CH-7123:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7123:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7123:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7124": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7124:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7124:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7124:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7124:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7124:low": [
+      "gliding_snow"
+    ],
+    "CH-7124:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7124:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7124:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7125": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7125:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7125:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7125:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7125:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7125:low": [
+      "gliding_snow"
+    ],
+    "CH-7125:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7125:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7125:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7126": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7126:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7126:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7126:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7126:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7126:low": [
+      "gliding_snow"
+    ],
+    "CH-7126:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7126:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7126:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7211": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7211:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7211:low": [
+      "gliding_snow"
+    ],
+    "CH-7211:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7211:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7211:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7221": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7221:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7221:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7221:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7221:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7221:low": [
+      "gliding_snow"
+    ],
+    "CH-7221:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7221:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7221:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7222": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7222:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7222:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7222:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7222:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7222:low": [
+      "gliding_snow"
+    ],
+    "CH-7222:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7222:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7222:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7231": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7231:am": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-7231:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7231:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7231:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-7231:low": [
+      "gliding_snow"
+    ],
+    "CH-7231:low:am": [
+      "gliding_snow"
+    ],
+    "CH-7231:low:pm": [
+      "gliding_snow"
+    ],
+    "CH-7231:pm": [
+      "no_distinct_avalanche_problem",
+      "gliding_snow"
+    ],
+    "CH-8111": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8111:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8112:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8113:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8114:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8211:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8212:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:high": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:high:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:high:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:low": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:low:am": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:low:pm": [
+      "no_distinct_avalanche_problem"
+    ],
+    "CH-8213:pm": [
+      "no_distinct_avalanche_problem"
+    ]
+  }
+}

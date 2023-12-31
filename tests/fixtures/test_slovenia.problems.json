@@ -1,0 +1,109 @@
+{
+  "avalancheProblems": {
+    "SI1": [
+      "wind_slab"
+    ],
+    "SI1:am": [
+      "wind_slab"
+    ],
+    "SI1:high": [
+      "wind_slab"
+    ],
+    "SI1:high:am": [
+      "wind_slab"
+    ],
+    "SI1:high:pm": [
+      "wind_slab"
+    ],
+    "SI1:low": [],
+    "SI1:low:am": [],
+    "SI1:low:pm": [],
+    "SI1:pm": [
+      "wind_slab"
+    ],
+    "SI2": [
+      "wind_slab"
+    ],
+    "SI2:am": [
+      "wind_slab"
+    ],
+    "SI2:high": [
+      "wind_slab"
+    ],
+    "SI2:high:am": [
+      "wind_slab"
+    ],
+    "SI2:high:pm": [
+      "wind_slab"
+    ],
+    "SI2:low": [],
+    "SI2:low:am": [],
+    "SI2:low:pm": [],
+    "SI2:pm": [
+      "wind_slab"
+    ],
+    "SI3": [
+      "wind_slab"
+    ],
+    "SI3:am": [
+      "wind_slab"
+    ],
+    "SI3:high": [
+      "wind_slab"
+    ],
+    "SI3:high:am": [
+      "wind_slab"
+    ],
+    "SI3:high:pm": [
+      "wind_slab"
+    ],
+    "SI3:low": [],
+    "SI3:low:am": [],
+    "SI3:low:pm": [],
+    "SI3:pm": [
+      "wind_slab"
+    ],
+    "SI4": [
+      "wind_slab"
+    ],
+    "SI4:am": [
+      "wind_slab"
+    ],
+    "SI4:high": [
+      "wind_slab"
+    ],
+    "SI4:high:am": [
+      "wind_slab"
+    ],
+    "SI4:high:pm": [
+      "wind_slab"
+    ],
+    "SI4:low": [],
+    "SI4:low:am": [],
+    "SI4:low:pm": [],
+    "SI4:pm": [
+      "wind_slab"
+    ],
+    "SI5": [
+      "wind_slab"
+    ],
+    "SI5:am": [
+      "wind_slab"
+    ],
+    "SI5:high": [
+      "wind_slab"
+    ],
+    "SI5:high:am": [
+      "wind_slab"
+    ],
+    "SI5:high:pm": [
+      "wind_slab"
+    ],
+    "SI5:low": [],
+    "SI5:low:am": [],
+    "SI5:low:pm": [],
+    "SI5:pm": [
+      "wind_slab"
+    ]
+  }
+}

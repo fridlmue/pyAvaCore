@@ -1,0 +1,3676 @@
+{
+  "avalancheProblems": {
+    "CH-1111": [
+      "wet_snow"
+    ],
+    "CH-1111:am": [
+      "wet_snow"
+    ],
+    "CH-1111:high": [
+      "wet_snow"
+    ],
+    "CH-1111:high:am": [
+      "wet_snow"
+    ],
+    "CH-1111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1111:low": [
+      "wet_snow"
+    ],
+    "CH-1111:low:am": [
+      "wet_snow"
+    ],
+    "CH-1111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1111:pm": [
+      "wet_snow"
+    ],
+    "CH-1112": [
+      "wet_snow"
+    ],
+    "CH-1112:am": [
+      "wet_snow"
+    ],
+    "CH-1112:high": [
+      "wet_snow"
+    ],
+    "CH-1112:high:am": [
+      "wet_snow"
+    ],
+    "CH-1112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1112:low": [
+      "wet_snow"
+    ],
+    "CH-1112:low:am": [
+      "wet_snow"
+    ],
+    "CH-1112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1112:pm": [
+      "wet_snow"
+    ],
+    "CH-1113": [
+      "wet_snow"
+    ],
+    "CH-1113:am": [
+      "wet_snow"
+    ],
+    "CH-1113:high": [
+      "wet_snow"
+    ],
+    "CH-1113:high:am": [
+      "wet_snow"
+    ],
+    "CH-1113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1113:low": [
+      "wet_snow"
+    ],
+    "CH-1113:low:am": [
+      "wet_snow"
+    ],
+    "CH-1113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1113:pm": [
+      "wet_snow"
+    ],
+    "CH-1114": [
+      "wet_snow"
+    ],
+    "CH-1114:am": [
+      "wet_snow"
+    ],
+    "CH-1114:high": [
+      "wet_snow"
+    ],
+    "CH-1114:high:am": [
+      "wet_snow"
+    ],
+    "CH-1114:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1114:low": [
+      "wet_snow"
+    ],
+    "CH-1114:low:am": [
+      "wet_snow"
+    ],
+    "CH-1114:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1114:pm": [
+      "wet_snow"
+    ],
+    "CH-1121": [
+      "wet_snow"
+    ],
+    "CH-1121:am": [
+      "wet_snow"
+    ],
+    "CH-1121:high": [
+      "wet_snow"
+    ],
+    "CH-1121:high:am": [
+      "wet_snow"
+    ],
+    "CH-1121:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1121:low": [
+      "wet_snow"
+    ],
+    "CH-1121:low:am": [
+      "wet_snow"
+    ],
+    "CH-1121:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1121:pm": [
+      "wet_snow"
+    ],
+    "CH-1122": [
+      "wet_snow"
+    ],
+    "CH-1122:am": [
+      "wet_snow"
+    ],
+    "CH-1122:high": [
+      "wet_snow"
+    ],
+    "CH-1122:high:am": [
+      "wet_snow"
+    ],
+    "CH-1122:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1122:low": [
+      "wet_snow"
+    ],
+    "CH-1122:low:am": [
+      "wet_snow"
+    ],
+    "CH-1122:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1122:pm": [
+      "wet_snow"
+    ],
+    "CH-1211": [
+      "wet_snow"
+    ],
+    "CH-1211:am": [
+      "wet_snow"
+    ],
+    "CH-1211:high": [
+      "wet_snow"
+    ],
+    "CH-1211:high:am": [
+      "wet_snow"
+    ],
+    "CH-1211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1211:low": [
+      "wet_snow"
+    ],
+    "CH-1211:low:am": [
+      "wet_snow"
+    ],
+    "CH-1211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1211:pm": [
+      "wet_snow"
+    ],
+    "CH-1212": [
+      "wet_snow"
+    ],
+    "CH-1212:am": [
+      "wet_snow"
+    ],
+    "CH-1212:high": [
+      "wet_snow"
+    ],
+    "CH-1212:high:am": [
+      "wet_snow"
+    ],
+    "CH-1212:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1212:low": [
+      "wet_snow"
+    ],
+    "CH-1212:low:am": [
+      "wet_snow"
+    ],
+    "CH-1212:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1212:pm": [
+      "wet_snow"
+    ],
+    "CH-1213": [
+      "wet_snow"
+    ],
+    "CH-1213:am": [
+      "wet_snow"
+    ],
+    "CH-1213:high": [
+      "wet_snow"
+    ],
+    "CH-1213:high:am": [
+      "wet_snow"
+    ],
+    "CH-1213:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1213:low": [
+      "wet_snow"
+    ],
+    "CH-1213:low:am": [
+      "wet_snow"
+    ],
+    "CH-1213:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1213:pm": [
+      "wet_snow"
+    ],
+    "CH-1221": [
+      "wet_snow"
+    ],
+    "CH-1221:am": [
+      "wet_snow"
+    ],
+    "CH-1221:high": [
+      "wet_snow"
+    ],
+    "CH-1221:high:am": [
+      "wet_snow"
+    ],
+    "CH-1221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1221:low": [
+      "wet_snow"
+    ],
+    "CH-1221:low:am": [
+      "wet_snow"
+    ],
+    "CH-1221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1221:pm": [
+      "wet_snow"
+    ],
+    "CH-1222": [
+      "wet_snow"
+    ],
+    "CH-1222:am": [
+      "wet_snow"
+    ],
+    "CH-1222:high": [
+      "wet_snow"
+    ],
+    "CH-1222:high:am": [
+      "wet_snow"
+    ],
+    "CH-1222:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1222:low": [
+      "wet_snow"
+    ],
+    "CH-1222:low:am": [
+      "wet_snow"
+    ],
+    "CH-1222:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1222:pm": [
+      "wet_snow"
+    ],
+    "CH-1223": [
+      "wet_snow"
+    ],
+    "CH-1223:am": [
+      "wet_snow"
+    ],
+    "CH-1223:high": [
+      "wet_snow"
+    ],
+    "CH-1223:high:am": [
+      "wet_snow"
+    ],
+    "CH-1223:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1223:low": [
+      "wet_snow"
+    ],
+    "CH-1223:low:am": [
+      "wet_snow"
+    ],
+    "CH-1223:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1223:pm": [
+      "wet_snow"
+    ],
+    "CH-1224": [
+      "wet_snow"
+    ],
+    "CH-1224:am": [
+      "wet_snow"
+    ],
+    "CH-1224:high": [
+      "wet_snow"
+    ],
+    "CH-1224:high:am": [
+      "wet_snow"
+    ],
+    "CH-1224:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1224:low": [
+      "wet_snow"
+    ],
+    "CH-1224:low:am": [
+      "wet_snow"
+    ],
+    "CH-1224:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1224:pm": [
+      "wet_snow"
+    ],
+    "CH-1225": [
+      "wet_snow"
+    ],
+    "CH-1225:am": [
+      "wet_snow"
+    ],
+    "CH-1225:high": [
+      "wet_snow"
+    ],
+    "CH-1225:high:am": [
+      "wet_snow"
+    ],
+    "CH-1225:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1225:low": [
+      "wet_snow"
+    ],
+    "CH-1225:low:am": [
+      "wet_snow"
+    ],
+    "CH-1225:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1225:pm": [
+      "wet_snow"
+    ],
+    "CH-1226": [
+      "wet_snow"
+    ],
+    "CH-1226:am": [
+      "wet_snow"
+    ],
+    "CH-1226:high": [
+      "wet_snow"
+    ],
+    "CH-1226:high:am": [
+      "wet_snow"
+    ],
+    "CH-1226:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1226:low": [
+      "wet_snow"
+    ],
+    "CH-1226:low:am": [
+      "wet_snow"
+    ],
+    "CH-1226:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1226:pm": [
+      "wet_snow"
+    ],
+    "CH-1227": [
+      "wet_snow"
+    ],
+    "CH-1227:am": [
+      "wet_snow"
+    ],
+    "CH-1227:high": [
+      "wet_snow"
+    ],
+    "CH-1227:high:am": [
+      "wet_snow"
+    ],
+    "CH-1227:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1227:low": [
+      "wet_snow"
+    ],
+    "CH-1227:low:am": [
+      "wet_snow"
+    ],
+    "CH-1227:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1227:pm": [
+      "wet_snow"
+    ],
+    "CH-1228": [
+      "wet_snow"
+    ],
+    "CH-1228:am": [
+      "wet_snow"
+    ],
+    "CH-1228:high": [
+      "wet_snow"
+    ],
+    "CH-1228:high:am": [
+      "wet_snow"
+    ],
+    "CH-1228:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1228:low": [
+      "wet_snow"
+    ],
+    "CH-1228:low:am": [
+      "wet_snow"
+    ],
+    "CH-1228:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1228:pm": [
+      "wet_snow"
+    ],
+    "CH-1231": [
+      "wet_snow"
+    ],
+    "CH-1231:am": [
+      "wet_snow"
+    ],
+    "CH-1231:high": [
+      "wet_snow"
+    ],
+    "CH-1231:high:am": [
+      "wet_snow"
+    ],
+    "CH-1231:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1231:low": [
+      "wet_snow"
+    ],
+    "CH-1231:low:am": [
+      "wet_snow"
+    ],
+    "CH-1231:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1231:pm": [
+      "wet_snow"
+    ],
+    "CH-1232": [
+      "wet_snow"
+    ],
+    "CH-1232:am": [
+      "wet_snow"
+    ],
+    "CH-1232:high": [
+      "wet_snow"
+    ],
+    "CH-1232:high:am": [
+      "wet_snow"
+    ],
+    "CH-1232:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1232:low": [
+      "wet_snow"
+    ],
+    "CH-1232:low:am": [
+      "wet_snow"
+    ],
+    "CH-1232:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1232:pm": [
+      "wet_snow"
+    ],
+    "CH-1233": [
+      "wet_snow"
+    ],
+    "CH-1233:am": [
+      "wet_snow"
+    ],
+    "CH-1233:high": [
+      "wet_snow"
+    ],
+    "CH-1233:high:am": [
+      "wet_snow"
+    ],
+    "CH-1233:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1233:low": [
+      "wet_snow"
+    ],
+    "CH-1233:low:am": [
+      "wet_snow"
+    ],
+    "CH-1233:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1233:pm": [
+      "wet_snow"
+    ],
+    "CH-1234": [
+      "wet_snow"
+    ],
+    "CH-1234:am": [
+      "wet_snow"
+    ],
+    "CH-1234:high": [
+      "wet_snow"
+    ],
+    "CH-1234:high:am": [
+      "wet_snow"
+    ],
+    "CH-1234:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1234:low": [
+      "wet_snow"
+    ],
+    "CH-1234:low:am": [
+      "wet_snow"
+    ],
+    "CH-1234:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1234:pm": [
+      "wet_snow"
+    ],
+    "CH-1241": [
+      "wet_snow"
+    ],
+    "CH-1241:am": [
+      "wet_snow"
+    ],
+    "CH-1241:high": [
+      "wet_snow"
+    ],
+    "CH-1241:high:am": [
+      "wet_snow"
+    ],
+    "CH-1241:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1241:low": [
+      "wet_snow"
+    ],
+    "CH-1241:low:am": [
+      "wet_snow"
+    ],
+    "CH-1241:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1241:pm": [
+      "wet_snow"
+    ],
+    "CH-1242": [
+      "wet_snow"
+    ],
+    "CH-1242:am": [
+      "wet_snow"
+    ],
+    "CH-1242:high": [
+      "wet_snow"
+    ],
+    "CH-1242:high:am": [
+      "wet_snow"
+    ],
+    "CH-1242:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1242:low": [
+      "wet_snow"
+    ],
+    "CH-1242:low:am": [
+      "wet_snow"
+    ],
+    "CH-1242:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1242:pm": [
+      "wet_snow"
+    ],
+    "CH-1243": [
+      "wet_snow"
+    ],
+    "CH-1243:am": [
+      "wet_snow"
+    ],
+    "CH-1243:high": [
+      "wet_snow"
+    ],
+    "CH-1243:high:am": [
+      "wet_snow"
+    ],
+    "CH-1243:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1243:low": [
+      "wet_snow"
+    ],
+    "CH-1243:low:am": [
+      "wet_snow"
+    ],
+    "CH-1243:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1243:pm": [
+      "wet_snow"
+    ],
+    "CH-1244": [
+      "wet_snow"
+    ],
+    "CH-1244:am": [
+      "wet_snow"
+    ],
+    "CH-1244:high": [
+      "wet_snow"
+    ],
+    "CH-1244:high:am": [
+      "wet_snow"
+    ],
+    "CH-1244:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1244:low": [
+      "wet_snow"
+    ],
+    "CH-1244:low:am": [
+      "wet_snow"
+    ],
+    "CH-1244:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1244:pm": [
+      "wet_snow"
+    ],
+    "CH-1245": [
+      "wet_snow"
+    ],
+    "CH-1245:am": [
+      "wet_snow"
+    ],
+    "CH-1245:high": [
+      "wet_snow"
+    ],
+    "CH-1245:high:am": [
+      "wet_snow"
+    ],
+    "CH-1245:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1245:low": [
+      "wet_snow"
+    ],
+    "CH-1245:low:am": [
+      "wet_snow"
+    ],
+    "CH-1245:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1245:pm": [
+      "wet_snow"
+    ],
+    "CH-1246": [
+      "wet_snow"
+    ],
+    "CH-1246:am": [
+      "wet_snow"
+    ],
+    "CH-1246:high": [
+      "wet_snow"
+    ],
+    "CH-1246:high:am": [
+      "wet_snow"
+    ],
+    "CH-1246:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1246:low": [
+      "wet_snow"
+    ],
+    "CH-1246:low:am": [
+      "wet_snow"
+    ],
+    "CH-1246:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1246:pm": [
+      "wet_snow"
+    ],
+    "CH-1247": [
+      "wet_snow"
+    ],
+    "CH-1247:am": [
+      "wet_snow"
+    ],
+    "CH-1247:high": [
+      "wet_snow"
+    ],
+    "CH-1247:high:am": [
+      "wet_snow"
+    ],
+    "CH-1247:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1247:low": [
+      "wet_snow"
+    ],
+    "CH-1247:low:am": [
+      "wet_snow"
+    ],
+    "CH-1247:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1247:pm": [
+      "wet_snow"
+    ],
+    "CH-1311": [
+      "wet_snow"
+    ],
+    "CH-1311:am": [
+      "wet_snow"
+    ],
+    "CH-1311:high": [
+      "wet_snow"
+    ],
+    "CH-1311:high:am": [
+      "wet_snow"
+    ],
+    "CH-1311:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1311:low": [
+      "wet_snow"
+    ],
+    "CH-1311:low:am": [
+      "wet_snow"
+    ],
+    "CH-1311:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1311:pm": [
+      "wet_snow"
+    ],
+    "CH-1312": [
+      "wet_snow"
+    ],
+    "CH-1312:am": [
+      "wet_snow"
+    ],
+    "CH-1312:high": [
+      "wet_snow"
+    ],
+    "CH-1312:high:am": [
+      "wet_snow"
+    ],
+    "CH-1312:high:pm": [
+      "wet_snow"
+    ],
+    "CH-1312:low": [
+      "wet_snow"
+    ],
+    "CH-1312:low:am": [
+      "wet_snow"
+    ],
+    "CH-1312:low:pm": [
+      "wet_snow"
+    ],
+    "CH-1312:pm": [
+      "wet_snow"
+    ],
+    "CH-2111": [
+      "wet_snow"
+    ],
+    "CH-2111:am": [
+      "wet_snow"
+    ],
+    "CH-2111:high": [
+      "wet_snow"
+    ],
+    "CH-2111:high:am": [
+      "wet_snow"
+    ],
+    "CH-2111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2111:low": [
+      "wet_snow"
+    ],
+    "CH-2111:low:am": [
+      "wet_snow"
+    ],
+    "CH-2111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2111:pm": [
+      "wet_snow"
+    ],
+    "CH-2112": [
+      "wet_snow"
+    ],
+    "CH-2112:am": [
+      "wet_snow"
+    ],
+    "CH-2112:high": [
+      "wet_snow"
+    ],
+    "CH-2112:high:am": [
+      "wet_snow"
+    ],
+    "CH-2112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2112:low": [
+      "wet_snow"
+    ],
+    "CH-2112:low:am": [
+      "wet_snow"
+    ],
+    "CH-2112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2112:pm": [
+      "wet_snow"
+    ],
+    "CH-2121": [
+      "wet_snow"
+    ],
+    "CH-2121:am": [
+      "wet_snow"
+    ],
+    "CH-2121:high": [
+      "wet_snow"
+    ],
+    "CH-2121:high:am": [
+      "wet_snow"
+    ],
+    "CH-2121:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2121:low": [
+      "wet_snow"
+    ],
+    "CH-2121:low:am": [
+      "wet_snow"
+    ],
+    "CH-2121:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2121:pm": [
+      "wet_snow"
+    ],
+    "CH-2122": [
+      "wet_snow"
+    ],
+    "CH-2122:am": [
+      "wet_snow"
+    ],
+    "CH-2122:high": [
+      "wet_snow"
+    ],
+    "CH-2122:high:am": [
+      "wet_snow"
+    ],
+    "CH-2122:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2122:low": [
+      "wet_snow"
+    ],
+    "CH-2122:low:am": [
+      "wet_snow"
+    ],
+    "CH-2122:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2122:pm": [
+      "wet_snow"
+    ],
+    "CH-2123": [
+      "wet_snow"
+    ],
+    "CH-2123:am": [
+      "wet_snow"
+    ],
+    "CH-2123:high": [
+      "wet_snow"
+    ],
+    "CH-2123:high:am": [
+      "wet_snow"
+    ],
+    "CH-2123:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2123:low": [
+      "wet_snow"
+    ],
+    "CH-2123:low:am": [
+      "wet_snow"
+    ],
+    "CH-2123:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2123:pm": [
+      "wet_snow"
+    ],
+    "CH-2124": [
+      "wet_snow"
+    ],
+    "CH-2124:am": [
+      "wet_snow"
+    ],
+    "CH-2124:high": [
+      "wet_snow"
+    ],
+    "CH-2124:high:am": [
+      "wet_snow"
+    ],
+    "CH-2124:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2124:low": [
+      "wet_snow"
+    ],
+    "CH-2124:low:am": [
+      "wet_snow"
+    ],
+    "CH-2124:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2124:pm": [
+      "wet_snow"
+    ],
+    "CH-2131": [
+      "wet_snow"
+    ],
+    "CH-2131:am": [
+      "wet_snow"
+    ],
+    "CH-2131:high": [
+      "wet_snow"
+    ],
+    "CH-2131:high:am": [
+      "wet_snow"
+    ],
+    "CH-2131:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2131:low": [
+      "wet_snow"
+    ],
+    "CH-2131:low:am": [
+      "wet_snow"
+    ],
+    "CH-2131:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2131:pm": [
+      "wet_snow"
+    ],
+    "CH-2132": [
+      "wet_snow"
+    ],
+    "CH-2132:am": [
+      "wet_snow"
+    ],
+    "CH-2132:high": [
+      "wet_snow"
+    ],
+    "CH-2132:high:am": [
+      "wet_snow"
+    ],
+    "CH-2132:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2132:low": [
+      "wet_snow"
+    ],
+    "CH-2132:low:am": [
+      "wet_snow"
+    ],
+    "CH-2132:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2132:pm": [
+      "wet_snow"
+    ],
+    "CH-2133": [
+      "wet_snow"
+    ],
+    "CH-2133:am": [
+      "wet_snow"
+    ],
+    "CH-2133:high": [
+      "wet_snow"
+    ],
+    "CH-2133:high:am": [
+      "wet_snow"
+    ],
+    "CH-2133:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2133:low": [
+      "wet_snow"
+    ],
+    "CH-2133:low:am": [
+      "wet_snow"
+    ],
+    "CH-2133:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2133:pm": [
+      "wet_snow"
+    ],
+    "CH-2134": [
+      "wet_snow"
+    ],
+    "CH-2134:am": [
+      "wet_snow"
+    ],
+    "CH-2134:high": [
+      "wet_snow"
+    ],
+    "CH-2134:high:am": [
+      "wet_snow"
+    ],
+    "CH-2134:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2134:low": [
+      "wet_snow"
+    ],
+    "CH-2134:low:am": [
+      "wet_snow"
+    ],
+    "CH-2134:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2134:pm": [
+      "wet_snow"
+    ],
+    "CH-2211": [
+      "wet_snow"
+    ],
+    "CH-2211:am": [
+      "wet_snow"
+    ],
+    "CH-2211:high": [
+      "wet_snow"
+    ],
+    "CH-2211:high:am": [
+      "wet_snow"
+    ],
+    "CH-2211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2211:low": [
+      "wet_snow"
+    ],
+    "CH-2211:low:am": [
+      "wet_snow"
+    ],
+    "CH-2211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2211:pm": [
+      "wet_snow"
+    ],
+    "CH-2212": [
+      "wet_snow"
+    ],
+    "CH-2212:am": [
+      "wet_snow"
+    ],
+    "CH-2212:high": [
+      "wet_snow"
+    ],
+    "CH-2212:high:am": [
+      "wet_snow"
+    ],
+    "CH-2212:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2212:low": [
+      "wet_snow"
+    ],
+    "CH-2212:low:am": [
+      "wet_snow"
+    ],
+    "CH-2212:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2212:pm": [
+      "wet_snow"
+    ],
+    "CH-2221": [
+      "wet_snow"
+    ],
+    "CH-2221:am": [
+      "wet_snow"
+    ],
+    "CH-2221:high": [
+      "wet_snow"
+    ],
+    "CH-2221:high:am": [
+      "wet_snow"
+    ],
+    "CH-2221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2221:low": [
+      "wet_snow"
+    ],
+    "CH-2221:low:am": [
+      "wet_snow"
+    ],
+    "CH-2221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2221:pm": [
+      "wet_snow"
+    ],
+    "CH-2222": [
+      "wet_snow"
+    ],
+    "CH-2222:am": [
+      "wet_snow"
+    ],
+    "CH-2222:high": [
+      "wet_snow"
+    ],
+    "CH-2222:high:am": [
+      "wet_snow"
+    ],
+    "CH-2222:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2222:low": [
+      "wet_snow"
+    ],
+    "CH-2222:low:am": [
+      "wet_snow"
+    ],
+    "CH-2222:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2222:pm": [
+      "wet_snow"
+    ],
+    "CH-2223": [
+      "wet_snow"
+    ],
+    "CH-2223:am": [
+      "wet_snow"
+    ],
+    "CH-2223:high": [
+      "wet_snow"
+    ],
+    "CH-2223:high:am": [
+      "wet_snow"
+    ],
+    "CH-2223:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2223:low": [
+      "wet_snow"
+    ],
+    "CH-2223:low:am": [
+      "wet_snow"
+    ],
+    "CH-2223:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2223:pm": [
+      "wet_snow"
+    ],
+    "CH-2224": [
+      "wet_snow"
+    ],
+    "CH-2224:am": [
+      "wet_snow"
+    ],
+    "CH-2224:high": [
+      "wet_snow"
+    ],
+    "CH-2224:high:am": [
+      "wet_snow"
+    ],
+    "CH-2224:high:pm": [
+      "wet_snow"
+    ],
+    "CH-2224:low": [
+      "wet_snow"
+    ],
+    "CH-2224:low:am": [
+      "wet_snow"
+    ],
+    "CH-2224:low:pm": [
+      "wet_snow"
+    ],
+    "CH-2224:pm": [
+      "wet_snow"
+    ],
+    "CH-3111": [
+      "wet_snow"
+    ],
+    "CH-3111:am": [
+      "wet_snow"
+    ],
+    "CH-3111:high": [
+      "wet_snow"
+    ],
+    "CH-3111:high:am": [
+      "wet_snow"
+    ],
+    "CH-3111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3111:low": [
+      "wet_snow"
+    ],
+    "CH-3111:low:am": [
+      "wet_snow"
+    ],
+    "CH-3111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3111:pm": [
+      "wet_snow"
+    ],
+    "CH-3112": [
+      "wet_snow"
+    ],
+    "CH-3112:am": [
+      "wet_snow"
+    ],
+    "CH-3112:high": [
+      "wet_snow"
+    ],
+    "CH-3112:high:am": [
+      "wet_snow"
+    ],
+    "CH-3112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3112:low": [
+      "wet_snow"
+    ],
+    "CH-3112:low:am": [
+      "wet_snow"
+    ],
+    "CH-3112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3112:pm": [
+      "wet_snow"
+    ],
+    "CH-3113": [
+      "wet_snow"
+    ],
+    "CH-3113:am": [
+      "wet_snow"
+    ],
+    "CH-3113:high": [
+      "wet_snow"
+    ],
+    "CH-3113:high:am": [
+      "wet_snow"
+    ],
+    "CH-3113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3113:low": [
+      "wet_snow"
+    ],
+    "CH-3113:low:am": [
+      "wet_snow"
+    ],
+    "CH-3113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3113:pm": [
+      "wet_snow"
+    ],
+    "CH-3114": [
+      "wet_snow"
+    ],
+    "CH-3114:am": [
+      "wet_snow"
+    ],
+    "CH-3114:high": [
+      "wet_snow"
+    ],
+    "CH-3114:high:am": [
+      "wet_snow"
+    ],
+    "CH-3114:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3114:low": [
+      "wet_snow"
+    ],
+    "CH-3114:low:am": [
+      "wet_snow"
+    ],
+    "CH-3114:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3114:pm": [
+      "wet_snow"
+    ],
+    "CH-3211": [
+      "wet_snow"
+    ],
+    "CH-3211:am": [
+      "wet_snow"
+    ],
+    "CH-3211:high": [
+      "wet_snow"
+    ],
+    "CH-3211:high:am": [
+      "wet_snow"
+    ],
+    "CH-3211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3211:low": [
+      "wet_snow"
+    ],
+    "CH-3211:low:am": [
+      "wet_snow"
+    ],
+    "CH-3211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3211:pm": [
+      "wet_snow"
+    ],
+    "CH-3221": [
+      "wet_snow"
+    ],
+    "CH-3221:am": [
+      "wet_snow"
+    ],
+    "CH-3221:high": [
+      "wet_snow"
+    ],
+    "CH-3221:high:am": [
+      "wet_snow"
+    ],
+    "CH-3221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3221:low": [
+      "wet_snow"
+    ],
+    "CH-3221:low:am": [
+      "wet_snow"
+    ],
+    "CH-3221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3221:pm": [
+      "wet_snow"
+    ],
+    "CH-3222": [
+      "wet_snow"
+    ],
+    "CH-3222:am": [
+      "wet_snow"
+    ],
+    "CH-3222:high": [
+      "wet_snow"
+    ],
+    "CH-3222:high:am": [
+      "wet_snow"
+    ],
+    "CH-3222:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3222:low": [
+      "wet_snow"
+    ],
+    "CH-3222:low:am": [
+      "wet_snow"
+    ],
+    "CH-3222:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3222:pm": [
+      "wet_snow"
+    ],
+    "CH-3223": [
+      "wet_snow"
+    ],
+    "CH-3223:am": [
+      "wet_snow"
+    ],
+    "CH-3223:high": [
+      "wet_snow"
+    ],
+    "CH-3223:high:am": [
+      "wet_snow"
+    ],
+    "CH-3223:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3223:low": [
+      "wet_snow"
+    ],
+    "CH-3223:low:am": [
+      "wet_snow"
+    ],
+    "CH-3223:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3223:pm": [
+      "wet_snow"
+    ],
+    "CH-3224": [
+      "wet_snow"
+    ],
+    "CH-3224:am": [
+      "wet_snow"
+    ],
+    "CH-3224:high": [
+      "wet_snow"
+    ],
+    "CH-3224:high:am": [
+      "wet_snow"
+    ],
+    "CH-3224:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3224:low": [
+      "wet_snow"
+    ],
+    "CH-3224:low:am": [
+      "wet_snow"
+    ],
+    "CH-3224:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3224:pm": [
+      "wet_snow"
+    ],
+    "CH-3311": [
+      "wet_snow"
+    ],
+    "CH-3311:am": [
+      "wet_snow"
+    ],
+    "CH-3311:high": [
+      "wet_snow"
+    ],
+    "CH-3311:high:am": [
+      "wet_snow"
+    ],
+    "CH-3311:high:pm": [
+      "wet_snow"
+    ],
+    "CH-3311:low": [
+      "wet_snow"
+    ],
+    "CH-3311:low:am": [
+      "wet_snow"
+    ],
+    "CH-3311:low:pm": [
+      "wet_snow"
+    ],
+    "CH-3311:pm": [
+      "wet_snow"
+    ],
+    "CH-4111": [
+      "wet_snow"
+    ],
+    "CH-4111:am": [
+      "wet_snow"
+    ],
+    "CH-4111:high": [
+      "wet_snow"
+    ],
+    "CH-4111:high:am": [
+      "wet_snow"
+    ],
+    "CH-4111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4111:low": [
+      "wet_snow"
+    ],
+    "CH-4111:low:am": [
+      "wet_snow"
+    ],
+    "CH-4111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4111:pm": [
+      "wet_snow"
+    ],
+    "CH-4112": [
+      "wet_snow"
+    ],
+    "CH-4112:am": [
+      "wet_snow"
+    ],
+    "CH-4112:high": [
+      "wet_snow"
+    ],
+    "CH-4112:high:am": [
+      "wet_snow"
+    ],
+    "CH-4112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4112:low": [
+      "wet_snow"
+    ],
+    "CH-4112:low:am": [
+      "wet_snow"
+    ],
+    "CH-4112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4112:pm": [
+      "wet_snow"
+    ],
+    "CH-4113": [
+      "wet_snow"
+    ],
+    "CH-4113:am": [
+      "wet_snow"
+    ],
+    "CH-4113:high": [
+      "wet_snow"
+    ],
+    "CH-4113:high:am": [
+      "wet_snow"
+    ],
+    "CH-4113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4113:low": [
+      "wet_snow"
+    ],
+    "CH-4113:low:am": [
+      "wet_snow"
+    ],
+    "CH-4113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4113:pm": [
+      "wet_snow"
+    ],
+    "CH-4114": [
+      "wet_snow"
+    ],
+    "CH-4114:am": [
+      "wet_snow"
+    ],
+    "CH-4114:high": [
+      "wet_snow"
+    ],
+    "CH-4114:high:am": [
+      "wet_snow"
+    ],
+    "CH-4114:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4114:low": [
+      "wet_snow"
+    ],
+    "CH-4114:low:am": [
+      "wet_snow"
+    ],
+    "CH-4114:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4114:pm": [
+      "wet_snow"
+    ],
+    "CH-4115": [
+      "wet_snow"
+    ],
+    "CH-4115:am": [
+      "wet_snow"
+    ],
+    "CH-4115:high": [
+      "wet_snow"
+    ],
+    "CH-4115:high:am": [
+      "wet_snow"
+    ],
+    "CH-4115:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4115:low": [
+      "wet_snow"
+    ],
+    "CH-4115:low:am": [
+      "wet_snow"
+    ],
+    "CH-4115:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4115:pm": [
+      "wet_snow"
+    ],
+    "CH-4116": [
+      "wet_snow"
+    ],
+    "CH-4116:am": [
+      "wet_snow"
+    ],
+    "CH-4116:high": [
+      "wet_snow"
+    ],
+    "CH-4116:high:am": [
+      "wet_snow"
+    ],
+    "CH-4116:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4116:low": [
+      "wet_snow"
+    ],
+    "CH-4116:low:am": [
+      "wet_snow"
+    ],
+    "CH-4116:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4116:pm": [
+      "wet_snow"
+    ],
+    "CH-4121": [
+      "wet_snow"
+    ],
+    "CH-4121:am": [
+      "wet_snow"
+    ],
+    "CH-4121:high": [
+      "wet_snow"
+    ],
+    "CH-4121:high:am": [
+      "wet_snow"
+    ],
+    "CH-4121:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4121:low": [
+      "wet_snow"
+    ],
+    "CH-4121:low:am": [
+      "wet_snow"
+    ],
+    "CH-4121:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4121:pm": [
+      "wet_snow"
+    ],
+    "CH-4122": [
+      "wet_snow"
+    ],
+    "CH-4122:am": [
+      "wet_snow"
+    ],
+    "CH-4122:high": [
+      "wet_snow"
+    ],
+    "CH-4122:high:am": [
+      "wet_snow"
+    ],
+    "CH-4122:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4122:low": [
+      "wet_snow"
+    ],
+    "CH-4122:low:am": [
+      "wet_snow"
+    ],
+    "CH-4122:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4122:pm": [
+      "wet_snow"
+    ],
+    "CH-4123": [
+      "wet_snow"
+    ],
+    "CH-4123:am": [
+      "wet_snow"
+    ],
+    "CH-4123:high": [
+      "wet_snow"
+    ],
+    "CH-4123:high:am": [
+      "wet_snow"
+    ],
+    "CH-4123:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4123:low": [
+      "wet_snow"
+    ],
+    "CH-4123:low:am": [
+      "wet_snow"
+    ],
+    "CH-4123:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4123:pm": [
+      "wet_snow"
+    ],
+    "CH-4124": [
+      "wet_snow"
+    ],
+    "CH-4124:am": [
+      "wet_snow"
+    ],
+    "CH-4124:high": [
+      "wet_snow"
+    ],
+    "CH-4124:high:am": [
+      "wet_snow"
+    ],
+    "CH-4124:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4124:low": [
+      "wet_snow"
+    ],
+    "CH-4124:low:am": [
+      "wet_snow"
+    ],
+    "CH-4124:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4124:pm": [
+      "wet_snow"
+    ],
+    "CH-4125": [
+      "wet_snow"
+    ],
+    "CH-4125:am": [
+      "wet_snow"
+    ],
+    "CH-4125:high": [
+      "wet_snow"
+    ],
+    "CH-4125:high:am": [
+      "wet_snow"
+    ],
+    "CH-4125:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4125:low": [
+      "wet_snow"
+    ],
+    "CH-4125:low:am": [
+      "wet_snow"
+    ],
+    "CH-4125:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4125:pm": [
+      "wet_snow"
+    ],
+    "CH-4211": [
+      "wet_snow"
+    ],
+    "CH-4211:am": [
+      "wet_snow"
+    ],
+    "CH-4211:high": [
+      "wet_snow"
+    ],
+    "CH-4211:high:am": [
+      "wet_snow"
+    ],
+    "CH-4211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4211:low": [
+      "wet_snow"
+    ],
+    "CH-4211:low:am": [
+      "wet_snow"
+    ],
+    "CH-4211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4211:pm": [
+      "wet_snow"
+    ],
+    "CH-4212": [
+      "wet_snow"
+    ],
+    "CH-4212:am": [
+      "wet_snow"
+    ],
+    "CH-4212:high": [
+      "wet_snow"
+    ],
+    "CH-4212:high:am": [
+      "wet_snow"
+    ],
+    "CH-4212:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4212:low": [
+      "wet_snow"
+    ],
+    "CH-4212:low:am": [
+      "wet_snow"
+    ],
+    "CH-4212:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4212:pm": [
+      "wet_snow"
+    ],
+    "CH-4213": [
+      "wet_snow"
+    ],
+    "CH-4213:am": [
+      "wet_snow"
+    ],
+    "CH-4213:high": [
+      "wet_snow"
+    ],
+    "CH-4213:high:am": [
+      "wet_snow"
+    ],
+    "CH-4213:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4213:low": [
+      "wet_snow"
+    ],
+    "CH-4213:low:am": [
+      "wet_snow"
+    ],
+    "CH-4213:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4213:pm": [
+      "wet_snow"
+    ],
+    "CH-4214": [
+      "wet_snow"
+    ],
+    "CH-4214:am": [
+      "wet_snow"
+    ],
+    "CH-4214:high": [
+      "wet_snow"
+    ],
+    "CH-4214:high:am": [
+      "wet_snow"
+    ],
+    "CH-4214:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4214:low": [
+      "wet_snow"
+    ],
+    "CH-4214:low:am": [
+      "wet_snow"
+    ],
+    "CH-4214:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4214:pm": [
+      "wet_snow"
+    ],
+    "CH-4215": [
+      "wet_snow"
+    ],
+    "CH-4215:am": [
+      "wet_snow"
+    ],
+    "CH-4215:high": [
+      "wet_snow"
+    ],
+    "CH-4215:high:am": [
+      "wet_snow"
+    ],
+    "CH-4215:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4215:low": [
+      "wet_snow"
+    ],
+    "CH-4215:low:am": [
+      "wet_snow"
+    ],
+    "CH-4215:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4215:pm": [
+      "wet_snow"
+    ],
+    "CH-4221": [
+      "wet_snow"
+    ],
+    "CH-4221:am": [
+      "wet_snow"
+    ],
+    "CH-4221:high": [
+      "wet_snow"
+    ],
+    "CH-4221:high:am": [
+      "wet_snow"
+    ],
+    "CH-4221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4221:low": [
+      "wet_snow"
+    ],
+    "CH-4221:low:am": [
+      "wet_snow"
+    ],
+    "CH-4221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4221:pm": [
+      "wet_snow"
+    ],
+    "CH-4222": [
+      "wet_snow"
+    ],
+    "CH-4222:am": [
+      "wet_snow"
+    ],
+    "CH-4222:high": [
+      "wet_snow"
+    ],
+    "CH-4222:high:am": [
+      "wet_snow"
+    ],
+    "CH-4222:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4222:low": [
+      "wet_snow"
+    ],
+    "CH-4222:low:am": [
+      "wet_snow"
+    ],
+    "CH-4222:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4222:pm": [
+      "wet_snow"
+    ],
+    "CH-4223": [
+      "wet_snow"
+    ],
+    "CH-4223:am": [
+      "wet_snow"
+    ],
+    "CH-4223:high": [
+      "wet_snow"
+    ],
+    "CH-4223:high:am": [
+      "wet_snow"
+    ],
+    "CH-4223:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4223:low": [
+      "wet_snow"
+    ],
+    "CH-4223:low:am": [
+      "wet_snow"
+    ],
+    "CH-4223:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4223:pm": [
+      "wet_snow"
+    ],
+    "CH-4224": [
+      "wet_snow"
+    ],
+    "CH-4224:am": [
+      "wet_snow"
+    ],
+    "CH-4224:high": [
+      "wet_snow"
+    ],
+    "CH-4224:high:am": [
+      "wet_snow"
+    ],
+    "CH-4224:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4224:low": [
+      "wet_snow"
+    ],
+    "CH-4224:low:am": [
+      "wet_snow"
+    ],
+    "CH-4224:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4224:pm": [
+      "wet_snow"
+    ],
+    "CH-4225": [
+      "wet_snow"
+    ],
+    "CH-4225:am": [
+      "wet_snow"
+    ],
+    "CH-4225:high": [
+      "wet_snow"
+    ],
+    "CH-4225:high:am": [
+      "wet_snow"
+    ],
+    "CH-4225:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4225:low": [
+      "wet_snow"
+    ],
+    "CH-4225:low:am": [
+      "wet_snow"
+    ],
+    "CH-4225:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4225:pm": [
+      "wet_snow"
+    ],
+    "CH-4231": [
+      "wet_snow"
+    ],
+    "CH-4231:am": [
+      "wet_snow"
+    ],
+    "CH-4231:high": [
+      "wet_snow"
+    ],
+    "CH-4231:high:am": [
+      "wet_snow"
+    ],
+    "CH-4231:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4231:low": [
+      "wet_snow"
+    ],
+    "CH-4231:low:am": [
+      "wet_snow"
+    ],
+    "CH-4231:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4231:pm": [
+      "wet_snow"
+    ],
+    "CH-4232": [
+      "wet_snow"
+    ],
+    "CH-4232:am": [
+      "wet_snow"
+    ],
+    "CH-4232:high": [
+      "wet_snow"
+    ],
+    "CH-4232:high:am": [
+      "wet_snow"
+    ],
+    "CH-4232:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4232:low": [
+      "wet_snow"
+    ],
+    "CH-4232:low:am": [
+      "wet_snow"
+    ],
+    "CH-4232:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4232:pm": [
+      "wet_snow"
+    ],
+    "CH-4241": [
+      "wet_snow"
+    ],
+    "CH-4241:am": [
+      "wet_snow"
+    ],
+    "CH-4241:high": [
+      "wet_snow"
+    ],
+    "CH-4241:high:am": [
+      "wet_snow"
+    ],
+    "CH-4241:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4241:low": [
+      "wet_snow"
+    ],
+    "CH-4241:low:am": [
+      "wet_snow"
+    ],
+    "CH-4241:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4241:pm": [
+      "wet_snow"
+    ],
+    "CH-4242": [
+      "wet_snow"
+    ],
+    "CH-4242:am": [
+      "wet_snow"
+    ],
+    "CH-4242:high": [
+      "wet_snow"
+    ],
+    "CH-4242:high:am": [
+      "wet_snow"
+    ],
+    "CH-4242:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4242:low": [
+      "wet_snow"
+    ],
+    "CH-4242:low:am": [
+      "wet_snow"
+    ],
+    "CH-4242:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4242:pm": [
+      "wet_snow"
+    ],
+    "CH-4243": [
+      "wet_snow"
+    ],
+    "CH-4243:am": [
+      "wet_snow"
+    ],
+    "CH-4243:high": [
+      "wet_snow"
+    ],
+    "CH-4243:high:am": [
+      "wet_snow"
+    ],
+    "CH-4243:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4243:low": [
+      "wet_snow"
+    ],
+    "CH-4243:low:am": [
+      "wet_snow"
+    ],
+    "CH-4243:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4243:pm": [
+      "wet_snow"
+    ],
+    "CH-4244": [
+      "wet_snow"
+    ],
+    "CH-4244:am": [
+      "wet_snow"
+    ],
+    "CH-4244:high": [
+      "wet_snow"
+    ],
+    "CH-4244:high:am": [
+      "wet_snow"
+    ],
+    "CH-4244:high:pm": [
+      "wet_snow"
+    ],
+    "CH-4244:low": [
+      "wet_snow"
+    ],
+    "CH-4244:low:am": [
+      "wet_snow"
+    ],
+    "CH-4244:low:pm": [
+      "wet_snow"
+    ],
+    "CH-4244:pm": [
+      "wet_snow"
+    ],
+    "CH-5111": [
+      "wet_snow"
+    ],
+    "CH-5111:am": [
+      "wet_snow"
+    ],
+    "CH-5111:high": [
+      "wet_snow"
+    ],
+    "CH-5111:high:am": [
+      "wet_snow"
+    ],
+    "CH-5111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5111:low": [
+      "wet_snow"
+    ],
+    "CH-5111:low:am": [
+      "wet_snow"
+    ],
+    "CH-5111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5111:pm": [
+      "wet_snow"
+    ],
+    "CH-5112": [
+      "wet_snow"
+    ],
+    "CH-5112:am": [
+      "wet_snow"
+    ],
+    "CH-5112:high": [
+      "wet_snow"
+    ],
+    "CH-5112:high:am": [
+      "wet_snow"
+    ],
+    "CH-5112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5112:low": [
+      "wet_snow"
+    ],
+    "CH-5112:low:am": [
+      "wet_snow"
+    ],
+    "CH-5112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5112:pm": [
+      "wet_snow"
+    ],
+    "CH-5113": [
+      "wet_snow"
+    ],
+    "CH-5113:am": [
+      "wet_snow"
+    ],
+    "CH-5113:high": [
+      "wet_snow"
+    ],
+    "CH-5113:high:am": [
+      "wet_snow"
+    ],
+    "CH-5113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5113:low": [
+      "wet_snow"
+    ],
+    "CH-5113:low:am": [
+      "wet_snow"
+    ],
+    "CH-5113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5113:pm": [
+      "wet_snow"
+    ],
+    "CH-5121": [
+      "wet_snow"
+    ],
+    "CH-5121:am": [
+      "wet_snow"
+    ],
+    "CH-5121:high": [
+      "wet_snow"
+    ],
+    "CH-5121:high:am": [
+      "wet_snow"
+    ],
+    "CH-5121:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5121:low": [
+      "wet_snow"
+    ],
+    "CH-5121:low:am": [
+      "wet_snow"
+    ],
+    "CH-5121:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5121:pm": [
+      "wet_snow"
+    ],
+    "CH-5122": [
+      "wet_snow"
+    ],
+    "CH-5122:am": [
+      "wet_snow"
+    ],
+    "CH-5122:high": [
+      "wet_snow"
+    ],
+    "CH-5122:high:am": [
+      "wet_snow"
+    ],
+    "CH-5122:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5122:low": [
+      "wet_snow"
+    ],
+    "CH-5122:low:am": [
+      "wet_snow"
+    ],
+    "CH-5122:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5122:pm": [
+      "wet_snow"
+    ],
+    "CH-5123": [
+      "wet_snow"
+    ],
+    "CH-5123:am": [
+      "wet_snow"
+    ],
+    "CH-5123:high": [
+      "wet_snow"
+    ],
+    "CH-5123:high:am": [
+      "wet_snow"
+    ],
+    "CH-5123:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5123:low": [
+      "wet_snow"
+    ],
+    "CH-5123:low:am": [
+      "wet_snow"
+    ],
+    "CH-5123:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5123:pm": [
+      "wet_snow"
+    ],
+    "CH-5124": [
+      "wet_snow"
+    ],
+    "CH-5124:am": [
+      "wet_snow"
+    ],
+    "CH-5124:high": [
+      "wet_snow"
+    ],
+    "CH-5124:high:am": [
+      "wet_snow"
+    ],
+    "CH-5124:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5124:low": [
+      "wet_snow"
+    ],
+    "CH-5124:low:am": [
+      "wet_snow"
+    ],
+    "CH-5124:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5124:pm": [
+      "wet_snow"
+    ],
+    "CH-5211": [
+      "wet_snow"
+    ],
+    "CH-5211:am": [
+      "wet_snow"
+    ],
+    "CH-5211:high": [
+      "wet_snow"
+    ],
+    "CH-5211:high:am": [
+      "wet_snow"
+    ],
+    "CH-5211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5211:low": [
+      "wet_snow"
+    ],
+    "CH-5211:low:am": [
+      "wet_snow"
+    ],
+    "CH-5211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5211:pm": [
+      "wet_snow"
+    ],
+    "CH-5212": [
+      "wet_snow"
+    ],
+    "CH-5212:am": [
+      "wet_snow"
+    ],
+    "CH-5212:high": [
+      "wet_snow"
+    ],
+    "CH-5212:high:am": [
+      "wet_snow"
+    ],
+    "CH-5212:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5212:low": [
+      "wet_snow"
+    ],
+    "CH-5212:low:am": [
+      "wet_snow"
+    ],
+    "CH-5212:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5212:pm": [
+      "wet_snow"
+    ],
+    "CH-5214": [
+      "wet_snow"
+    ],
+    "CH-5214:am": [
+      "wet_snow"
+    ],
+    "CH-5214:high": [
+      "wet_snow"
+    ],
+    "CH-5214:high:am": [
+      "wet_snow"
+    ],
+    "CH-5214:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5214:low": [
+      "wet_snow"
+    ],
+    "CH-5214:low:am": [
+      "wet_snow"
+    ],
+    "CH-5214:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5214:pm": [
+      "wet_snow"
+    ],
+    "CH-5215": [
+      "wet_snow"
+    ],
+    "CH-5215:am": [
+      "wet_snow"
+    ],
+    "CH-5215:high": [
+      "wet_snow"
+    ],
+    "CH-5215:high:am": [
+      "wet_snow"
+    ],
+    "CH-5215:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5215:low": [
+      "wet_snow"
+    ],
+    "CH-5215:low:am": [
+      "wet_snow"
+    ],
+    "CH-5215:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5215:pm": [
+      "wet_snow"
+    ],
+    "CH-5216": [
+      "wet_snow"
+    ],
+    "CH-5216:am": [
+      "wet_snow"
+    ],
+    "CH-5216:high": [
+      "wet_snow"
+    ],
+    "CH-5216:high:am": [
+      "wet_snow"
+    ],
+    "CH-5216:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5216:low": [
+      "wet_snow"
+    ],
+    "CH-5216:low:am": [
+      "wet_snow"
+    ],
+    "CH-5216:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5216:pm": [
+      "wet_snow"
+    ],
+    "CH-5221": [
+      "wet_snow"
+    ],
+    "CH-5221:am": [
+      "wet_snow"
+    ],
+    "CH-5221:high": [
+      "wet_snow"
+    ],
+    "CH-5221:high:am": [
+      "wet_snow"
+    ],
+    "CH-5221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5221:low": [
+      "wet_snow"
+    ],
+    "CH-5221:low:am": [
+      "wet_snow"
+    ],
+    "CH-5221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5221:pm": [
+      "wet_snow"
+    ],
+    "CH-5222": [
+      "wet_snow"
+    ],
+    "CH-5222:am": [
+      "wet_snow"
+    ],
+    "CH-5222:high": [
+      "wet_snow"
+    ],
+    "CH-5222:high:am": [
+      "wet_snow"
+    ],
+    "CH-5222:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5222:low": [
+      "wet_snow"
+    ],
+    "CH-5222:low:am": [
+      "wet_snow"
+    ],
+    "CH-5222:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5222:pm": [
+      "wet_snow"
+    ],
+    "CH-5223": [
+      "wet_snow"
+    ],
+    "CH-5223:am": [
+      "wet_snow"
+    ],
+    "CH-5223:high": [
+      "wet_snow"
+    ],
+    "CH-5223:high:am": [
+      "wet_snow"
+    ],
+    "CH-5223:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5223:low": [
+      "wet_snow"
+    ],
+    "CH-5223:low:am": [
+      "wet_snow"
+    ],
+    "CH-5223:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5223:pm": [
+      "wet_snow"
+    ],
+    "CH-5231": [
+      "wet_snow"
+    ],
+    "CH-5231:am": [
+      "wet_snow"
+    ],
+    "CH-5231:high": [
+      "wet_snow"
+    ],
+    "CH-5231:high:am": [
+      "wet_snow"
+    ],
+    "CH-5231:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5231:low": [
+      "wet_snow"
+    ],
+    "CH-5231:low:am": [
+      "wet_snow"
+    ],
+    "CH-5231:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5231:pm": [
+      "wet_snow"
+    ],
+    "CH-5232": [
+      "wet_snow"
+    ],
+    "CH-5232:am": [
+      "wet_snow"
+    ],
+    "CH-5232:high": [
+      "wet_snow"
+    ],
+    "CH-5232:high:am": [
+      "wet_snow"
+    ],
+    "CH-5232:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5232:low": [
+      "wet_snow"
+    ],
+    "CH-5232:low:am": [
+      "wet_snow"
+    ],
+    "CH-5232:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5232:pm": [
+      "wet_snow"
+    ],
+    "CH-5233": [
+      "wet_snow"
+    ],
+    "CH-5233:am": [
+      "wet_snow"
+    ],
+    "CH-5233:high": [
+      "wet_snow"
+    ],
+    "CH-5233:high:am": [
+      "wet_snow"
+    ],
+    "CH-5233:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5233:low": [
+      "wet_snow"
+    ],
+    "CH-5233:low:am": [
+      "wet_snow"
+    ],
+    "CH-5233:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5233:pm": [
+      "wet_snow"
+    ],
+    "CH-5234": [
+      "wet_snow"
+    ],
+    "CH-5234:am": [
+      "wet_snow"
+    ],
+    "CH-5234:high": [
+      "wet_snow"
+    ],
+    "CH-5234:high:am": [
+      "wet_snow"
+    ],
+    "CH-5234:high:pm": [
+      "wet_snow"
+    ],
+    "CH-5234:low": [
+      "wet_snow"
+    ],
+    "CH-5234:low:am": [
+      "wet_snow"
+    ],
+    "CH-5234:low:pm": [
+      "wet_snow"
+    ],
+    "CH-5234:pm": [
+      "wet_snow"
+    ],
+    "CH-6111": [
+      "wet_snow"
+    ],
+    "CH-6111:am": [
+      "wet_snow"
+    ],
+    "CH-6111:high": [
+      "wet_snow"
+    ],
+    "CH-6111:high:am": [
+      "wet_snow"
+    ],
+    "CH-6111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6111:low": [
+      "wet_snow"
+    ],
+    "CH-6111:low:am": [
+      "wet_snow"
+    ],
+    "CH-6111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6111:pm": [
+      "wet_snow"
+    ],
+    "CH-6112": [
+      "wet_snow"
+    ],
+    "CH-6112:am": [
+      "wet_snow"
+    ],
+    "CH-6112:high": [
+      "wet_snow"
+    ],
+    "CH-6112:high:am": [
+      "wet_snow"
+    ],
+    "CH-6112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6112:low": [
+      "wet_snow"
+    ],
+    "CH-6112:low:am": [
+      "wet_snow"
+    ],
+    "CH-6112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6112:pm": [
+      "wet_snow"
+    ],
+    "CH-6113": [
+      "wet_snow"
+    ],
+    "CH-6113:am": [
+      "wet_snow"
+    ],
+    "CH-6113:high": [
+      "wet_snow"
+    ],
+    "CH-6113:high:am": [
+      "wet_snow"
+    ],
+    "CH-6113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6113:low": [
+      "wet_snow"
+    ],
+    "CH-6113:low:am": [
+      "wet_snow"
+    ],
+    "CH-6113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6113:pm": [
+      "wet_snow"
+    ],
+    "CH-6114": [
+      "wet_snow"
+    ],
+    "CH-6114:am": [
+      "wet_snow"
+    ],
+    "CH-6114:high": [
+      "wet_snow"
+    ],
+    "CH-6114:high:am": [
+      "wet_snow"
+    ],
+    "CH-6114:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6114:low": [
+      "wet_snow"
+    ],
+    "CH-6114:low:am": [
+      "wet_snow"
+    ],
+    "CH-6114:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6114:pm": [
+      "wet_snow"
+    ],
+    "CH-6115": [
+      "wet_snow"
+    ],
+    "CH-6115:am": [
+      "wet_snow"
+    ],
+    "CH-6115:high": [
+      "wet_snow"
+    ],
+    "CH-6115:high:am": [
+      "wet_snow"
+    ],
+    "CH-6115:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6115:low": [
+      "wet_snow"
+    ],
+    "CH-6115:low:am": [
+      "wet_snow"
+    ],
+    "CH-6115:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6115:pm": [
+      "wet_snow"
+    ],
+    "CH-6121": [
+      "wet_snow"
+    ],
+    "CH-6121:am": [
+      "wet_snow"
+    ],
+    "CH-6121:high": [
+      "wet_snow"
+    ],
+    "CH-6121:high:am": [
+      "wet_snow"
+    ],
+    "CH-6121:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6121:low": [
+      "wet_snow"
+    ],
+    "CH-6121:low:am": [
+      "wet_snow"
+    ],
+    "CH-6121:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6121:pm": [
+      "wet_snow"
+    ],
+    "CH-6122": [
+      "wet_snow"
+    ],
+    "CH-6122:am": [
+      "wet_snow"
+    ],
+    "CH-6122:high": [
+      "wet_snow"
+    ],
+    "CH-6122:high:am": [
+      "wet_snow"
+    ],
+    "CH-6122:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6122:low": [
+      "wet_snow"
+    ],
+    "CH-6122:low:am": [
+      "wet_snow"
+    ],
+    "CH-6122:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6122:pm": [
+      "wet_snow"
+    ],
+    "CH-6131": [
+      "wet_snow"
+    ],
+    "CH-6131:am": [
+      "wet_snow"
+    ],
+    "CH-6131:high": [
+      "wet_snow"
+    ],
+    "CH-6131:high:am": [
+      "wet_snow"
+    ],
+    "CH-6131:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6131:low": [
+      "wet_snow"
+    ],
+    "CH-6131:low:am": [
+      "wet_snow"
+    ],
+    "CH-6131:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6131:pm": [
+      "wet_snow"
+    ],
+    "CH-6132": [
+      "wet_snow"
+    ],
+    "CH-6132:am": [
+      "wet_snow"
+    ],
+    "CH-6132:high": [
+      "wet_snow"
+    ],
+    "CH-6132:high:am": [
+      "wet_snow"
+    ],
+    "CH-6132:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6132:low": [
+      "wet_snow"
+    ],
+    "CH-6132:low:am": [
+      "wet_snow"
+    ],
+    "CH-6132:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6132:pm": [
+      "wet_snow"
+    ],
+    "CH-6211": [
+      "wet_snow"
+    ],
+    "CH-6211:am": [
+      "wet_snow"
+    ],
+    "CH-6211:high": [
+      "wet_snow"
+    ],
+    "CH-6211:high:am": [
+      "wet_snow"
+    ],
+    "CH-6211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6211:low": [
+      "wet_snow"
+    ],
+    "CH-6211:low:am": [
+      "wet_snow"
+    ],
+    "CH-6211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6211:pm": [
+      "wet_snow"
+    ],
+    "CH-6212": [
+      "wet_snow"
+    ],
+    "CH-6212:am": [
+      "wet_snow"
+    ],
+    "CH-6212:high": [
+      "wet_snow"
+    ],
+    "CH-6212:high:am": [
+      "wet_snow"
+    ],
+    "CH-6212:high:pm": [
+      "wet_snow"
+    ],
+    "CH-6212:low": [
+      "wet_snow"
+    ],
+    "CH-6212:low:am": [
+      "wet_snow"
+    ],
+    "CH-6212:low:pm": [
+      "wet_snow"
+    ],
+    "CH-6212:pm": [
+      "wet_snow"
+    ],
+    "CH-7111": [
+      "wet_snow"
+    ],
+    "CH-7111:am": [
+      "wet_snow"
+    ],
+    "CH-7111:high": [
+      "wet_snow"
+    ],
+    "CH-7111:high:am": [
+      "wet_snow"
+    ],
+    "CH-7111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7111:low": [
+      "wet_snow"
+    ],
+    "CH-7111:low:am": [
+      "wet_snow"
+    ],
+    "CH-7111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7111:pm": [
+      "wet_snow"
+    ],
+    "CH-7112": [
+      "wet_snow"
+    ],
+    "CH-7112:am": [
+      "wet_snow"
+    ],
+    "CH-7112:high": [
+      "wet_snow"
+    ],
+    "CH-7112:high:am": [
+      "wet_snow"
+    ],
+    "CH-7112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7112:low": [
+      "wet_snow"
+    ],
+    "CH-7112:low:am": [
+      "wet_snow"
+    ],
+    "CH-7112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7112:pm": [
+      "wet_snow"
+    ],
+    "CH-7113": [
+      "wet_snow"
+    ],
+    "CH-7113:am": [
+      "wet_snow"
+    ],
+    "CH-7113:high": [
+      "wet_snow"
+    ],
+    "CH-7113:high:am": [
+      "wet_snow"
+    ],
+    "CH-7113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7113:low": [
+      "wet_snow"
+    ],
+    "CH-7113:low:am": [
+      "wet_snow"
+    ],
+    "CH-7113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7113:pm": [
+      "wet_snow"
+    ],
+    "CH-7114": [
+      "wet_snow"
+    ],
+    "CH-7114:am": [
+      "wet_snow"
+    ],
+    "CH-7114:high": [
+      "wet_snow"
+    ],
+    "CH-7114:high:am": [
+      "wet_snow"
+    ],
+    "CH-7114:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7114:low": [
+      "wet_snow"
+    ],
+    "CH-7114:low:am": [
+      "wet_snow"
+    ],
+    "CH-7114:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7114:pm": [
+      "wet_snow"
+    ],
+    "CH-7115": [
+      "wet_snow"
+    ],
+    "CH-7115:am": [
+      "wet_snow"
+    ],
+    "CH-7115:high": [
+      "wet_snow"
+    ],
+    "CH-7115:high:am": [
+      "wet_snow"
+    ],
+    "CH-7115:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7115:low": [
+      "wet_snow"
+    ],
+    "CH-7115:low:am": [
+      "wet_snow"
+    ],
+    "CH-7115:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7115:pm": [
+      "wet_snow"
+    ],
+    "CH-7121": [
+      "wet_snow"
+    ],
+    "CH-7121:am": [
+      "wet_snow"
+    ],
+    "CH-7121:high": [
+      "wet_snow"
+    ],
+    "CH-7121:high:am": [
+      "wet_snow"
+    ],
+    "CH-7121:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7121:low": [
+      "wet_snow"
+    ],
+    "CH-7121:low:am": [
+      "wet_snow"
+    ],
+    "CH-7121:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7121:pm": [
+      "wet_snow"
+    ],
+    "CH-7122": [
+      "wet_snow"
+    ],
+    "CH-7122:am": [
+      "wet_snow"
+    ],
+    "CH-7122:high": [
+      "wet_snow"
+    ],
+    "CH-7122:high:am": [
+      "wet_snow"
+    ],
+    "CH-7122:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7122:low": [
+      "wet_snow"
+    ],
+    "CH-7122:low:am": [
+      "wet_snow"
+    ],
+    "CH-7122:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7122:pm": [
+      "wet_snow"
+    ],
+    "CH-7123": [
+      "wet_snow"
+    ],
+    "CH-7123:am": [
+      "wet_snow"
+    ],
+    "CH-7123:high": [
+      "wet_snow"
+    ],
+    "CH-7123:high:am": [
+      "wet_snow"
+    ],
+    "CH-7123:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7123:low": [
+      "wet_snow"
+    ],
+    "CH-7123:low:am": [
+      "wet_snow"
+    ],
+    "CH-7123:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7123:pm": [
+      "wet_snow"
+    ],
+    "CH-7124": [
+      "wet_snow"
+    ],
+    "CH-7124:am": [
+      "wet_snow"
+    ],
+    "CH-7124:high": [
+      "wet_snow"
+    ],
+    "CH-7124:high:am": [
+      "wet_snow"
+    ],
+    "CH-7124:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7124:low": [
+      "wet_snow"
+    ],
+    "CH-7124:low:am": [
+      "wet_snow"
+    ],
+    "CH-7124:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7124:pm": [
+      "wet_snow"
+    ],
+    "CH-7125": [
+      "wet_snow"
+    ],
+    "CH-7125:am": [
+      "wet_snow"
+    ],
+    "CH-7125:high": [
+      "wet_snow"
+    ],
+    "CH-7125:high:am": [
+      "wet_snow"
+    ],
+    "CH-7125:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7125:low": [
+      "wet_snow"
+    ],
+    "CH-7125:low:am": [
+      "wet_snow"
+    ],
+    "CH-7125:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7125:pm": [
+      "wet_snow"
+    ],
+    "CH-7126": [
+      "wet_snow"
+    ],
+    "CH-7126:am": [
+      "wet_snow"
+    ],
+    "CH-7126:high": [
+      "wet_snow"
+    ],
+    "CH-7126:high:am": [
+      "wet_snow"
+    ],
+    "CH-7126:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7126:low": [
+      "wet_snow"
+    ],
+    "CH-7126:low:am": [
+      "wet_snow"
+    ],
+    "CH-7126:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7126:pm": [
+      "wet_snow"
+    ],
+    "CH-7211": [
+      "wet_snow"
+    ],
+    "CH-7211:am": [
+      "wet_snow"
+    ],
+    "CH-7211:high": [
+      "wet_snow"
+    ],
+    "CH-7211:high:am": [
+      "wet_snow"
+    ],
+    "CH-7211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7211:low": [
+      "wet_snow"
+    ],
+    "CH-7211:low:am": [
+      "wet_snow"
+    ],
+    "CH-7211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7211:pm": [
+      "wet_snow"
+    ],
+    "CH-7221": [
+      "wet_snow"
+    ],
+    "CH-7221:am": [
+      "wet_snow"
+    ],
+    "CH-7221:high": [
+      "wet_snow"
+    ],
+    "CH-7221:high:am": [
+      "wet_snow"
+    ],
+    "CH-7221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7221:low": [
+      "wet_snow"
+    ],
+    "CH-7221:low:am": [
+      "wet_snow"
+    ],
+    "CH-7221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7221:pm": [
+      "wet_snow"
+    ],
+    "CH-7222": [
+      "wet_snow"
+    ],
+    "CH-7222:am": [
+      "wet_snow"
+    ],
+    "CH-7222:high": [
+      "wet_snow"
+    ],
+    "CH-7222:high:am": [
+      "wet_snow"
+    ],
+    "CH-7222:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7222:low": [
+      "wet_snow"
+    ],
+    "CH-7222:low:am": [
+      "wet_snow"
+    ],
+    "CH-7222:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7222:pm": [
+      "wet_snow"
+    ],
+    "CH-7231": [
+      "wet_snow"
+    ],
+    "CH-7231:am": [
+      "wet_snow"
+    ],
+    "CH-7231:high": [
+      "wet_snow"
+    ],
+    "CH-7231:high:am": [
+      "wet_snow"
+    ],
+    "CH-7231:high:pm": [
+      "wet_snow"
+    ],
+    "CH-7231:low": [
+      "wet_snow"
+    ],
+    "CH-7231:low:am": [
+      "wet_snow"
+    ],
+    "CH-7231:low:pm": [
+      "wet_snow"
+    ],
+    "CH-7231:pm": [
+      "wet_snow"
+    ],
+    "CH-8111": [
+      "wet_snow"
+    ],
+    "CH-8111:am": [
+      "wet_snow"
+    ],
+    "CH-8111:high": [
+      "wet_snow"
+    ],
+    "CH-8111:high:am": [
+      "wet_snow"
+    ],
+    "CH-8111:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8111:low": [
+      "wet_snow"
+    ],
+    "CH-8111:low:am": [
+      "wet_snow"
+    ],
+    "CH-8111:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8111:pm": [
+      "wet_snow"
+    ],
+    "CH-8112": [
+      "wet_snow"
+    ],
+    "CH-8112:am": [
+      "wet_snow"
+    ],
+    "CH-8112:high": [
+      "wet_snow"
+    ],
+    "CH-8112:high:am": [
+      "wet_snow"
+    ],
+    "CH-8112:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8112:low": [
+      "wet_snow"
+    ],
+    "CH-8112:low:am": [
+      "wet_snow"
+    ],
+    "CH-8112:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8112:pm": [
+      "wet_snow"
+    ],
+    "CH-8113": [
+      "wet_snow"
+    ],
+    "CH-8113:am": [
+      "wet_snow"
+    ],
+    "CH-8113:high": [
+      "wet_snow"
+    ],
+    "CH-8113:high:am": [
+      "wet_snow"
+    ],
+    "CH-8113:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8113:low": [
+      "wet_snow"
+    ],
+    "CH-8113:low:am": [
+      "wet_snow"
+    ],
+    "CH-8113:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8113:pm": [
+      "wet_snow"
+    ],
+    "CH-8114": [
+      "wet_snow"
+    ],
+    "CH-8114:am": [
+      "wet_snow"
+    ],
+    "CH-8114:high": [
+      "wet_snow"
+    ],
+    "CH-8114:high:am": [
+      "wet_snow"
+    ],
+    "CH-8114:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8114:low": [
+      "wet_snow"
+    ],
+    "CH-8114:low:am": [
+      "wet_snow"
+    ],
+    "CH-8114:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8114:pm": [
+      "wet_snow"
+    ],
+    "CH-8211": [
+      "wet_snow"
+    ],
+    "CH-8211:am": [
+      "wet_snow"
+    ],
+    "CH-8211:high": [
+      "wet_snow"
+    ],
+    "CH-8211:high:am": [
+      "wet_snow"
+    ],
+    "CH-8211:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8211:low": [
+      "wet_snow"
+    ],
+    "CH-8211:low:am": [
+      "wet_snow"
+    ],
+    "CH-8211:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8211:pm": [
+      "wet_snow"
+    ],
+    "CH-8212": [
+      "wet_snow"
+    ],
+    "CH-8212:am": [
+      "wet_snow"
+    ],
+    "CH-8212:high": [
+      "wet_snow"
+    ],
+    "CH-8212:high:am": [
+      "wet_snow"
+    ],
+    "CH-8212:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8212:low": [
+      "wet_snow"
+    ],
+    "CH-8212:low:am": [
+      "wet_snow"
+    ],
+    "CH-8212:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8212:pm": [
+      "wet_snow"
+    ],
+    "CH-8213": [
+      "wet_snow"
+    ],
+    "CH-8213:am": [
+      "wet_snow"
+    ],
+    "CH-8213:high": [
+      "wet_snow"
+    ],
+    "CH-8213:high:am": [
+      "wet_snow"
+    ],
+    "CH-8213:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8213:low": [
+      "wet_snow"
+    ],
+    "CH-8213:low:am": [
+      "wet_snow"
+    ],
+    "CH-8213:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8213:pm": [
+      "wet_snow"
+    ],
+    "CH-8221": [
+      "wet_snow"
+    ],
+    "CH-8221:am": [
+      "wet_snow"
+    ],
+    "CH-8221:high": [
+      "wet_snow"
+    ],
+    "CH-8221:high:am": [
+      "wet_snow"
+    ],
+    "CH-8221:high:pm": [
+      "wet_snow"
+    ],
+    "CH-8221:low": [
+      "wet_snow"
+    ],
+    "CH-8221:low:am": [
+      "wet_snow"
+    ],
+    "CH-8221:low:pm": [
+      "wet_snow"
+    ],
+    "CH-8221:pm": [
+      "wet_snow"
+    ]
+  }
+}

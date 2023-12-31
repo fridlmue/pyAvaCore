@@ -1,0 +1,166 @@
+{
+  "avalancheProblems": {
+    "BYALL": [
+      "wind_slab"
+    ],
+    "BYALL:am": [
+      "wind_slab"
+    ],
+    "BYALL:high": [
+      "wind_slab"
+    ],
+    "BYALL:high:am": [
+      "wind_slab"
+    ],
+    "BYALL:high:pm": [
+      "wind_slab"
+    ],
+    "BYALL:low": [
+      "wind_slab"
+    ],
+    "BYALL:low:am": [
+      "wind_slab"
+    ],
+    "BYALL:low:pm": [
+      "wind_slab"
+    ],
+    "BYALL:pm": [
+      "wind_slab"
+    ],
+    "BYAMM": [
+      "wind_slab"
+    ],
+    "BYAMM:am": [
+      "wind_slab"
+    ],
+    "BYAMM:high": [
+      "wind_slab"
+    ],
+    "BYAMM:high:am": [
+      "wind_slab"
+    ],
+    "BYAMM:high:pm": [
+      "wind_slab"
+    ],
+    "BYAMM:low": [
+      "wind_slab"
+    ],
+    "BYAMM:low:am": [
+      "wind_slab"
+    ],
+    "BYAMM:low:pm": [
+      "wind_slab"
+    ],
+    "BYAMM:pm": [
+      "wind_slab"
+    ],
+    "BYBGD": [
+      "wind_slab"
+    ],
+    "BYBGD:am": [
+      "wind_slab"
+    ],
+    "BYBGD:high": [
+      "wind_slab"
+    ],
+    "BYBGD:high:am": [
+      "wind_slab"
+    ],
+    "BYBGD:high:pm": [
+      "wind_slab"
+    ],
+    "BYBGD:low": [
+      "wind_slab"
+    ],
+    "BYBGD:low:am": [
+      "wind_slab"
+    ],
+    "BYBGD:low:pm": [
+      "wind_slab"
+    ],
+    "BYBGD:pm": [
+      "wind_slab"
+    ],
+    "BYBVA": [
+      "wind_slab"
+    ],
+    "BYBVA:am": [
+      "wind_slab"
+    ],
+    "BYBVA:high": [
+      "wind_slab"
+    ],
+    "BYBVA:high:am": [
+      "wind_slab"
+    ],
+    "BYBVA:high:pm": [
+      "wind_slab"
+    ],
+    "BYBVA:low": [
+      "wind_slab"
+    ],
+    "BYBVA:low:am": [
+      "wind_slab"
+    ],
+    "BYBVA:low:pm": [
+      "wind_slab"
+    ],
+    "BYBVA:pm": [
+      "wind_slab"
+    ],
+    "BYCHG": [
+      "wind_slab"
+    ],
+    "BYCHG:am": [
+      "wind_slab"
+    ],
+    "BYCHG:high": [
+      "wind_slab"
+    ],
+    "BYCHG:high:am": [
+      "wind_slab"
+    ],
+    "BYCHG:high:pm": [
+      "wind_slab"
+    ],
+    "BYCHG:low": [
+      "wind_slab"
+    ],
+    "BYCHG:low:am": [
+      "wind_slab"
+    ],
+    "BYCHG:low:pm": [
+      "wind_slab"
+    ],
+    "BYCHG:pm": [
+      "wind_slab"
+    ],
+    "BYWFK": [
+      "wind_slab"
+    ],
+    "BYWFK:am": [
+      "wind_slab"
+    ],
+    "BYWFK:high": [
+      "wind_slab"
+    ],
+    "BYWFK:high:am": [
+      "wind_slab"
+    ],
+    "BYWFK:high:pm": [
+      "wind_slab"
+    ],
+    "BYWFK:low": [
+      "wind_slab"
+    ],
+    "BYWFK:low:am": [
+      "wind_slab"
+    ],
+    "BYWFK:low:pm": [
+      "wind_slab"
+    ],
+    "BYWFK:pm": [
+      "wind_slab"
+    ]
+  }
+}

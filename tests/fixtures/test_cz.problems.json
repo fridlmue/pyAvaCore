@@ -1,0 +1,67 @@
+{
+  "avalancheProblems": {
+    "CZ-04": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:am": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:high": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:high:am": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:high:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:low": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:low:am": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:low:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-04:pm": [
+      "wet_snow",
+      "persistent_weak_layers"
+    ],
+    "CZ-06": [
+      "wind_slab"
+    ],
+    "CZ-06:am": [
+      "wind_slab"
+    ],
+    "CZ-06:high": [
+      "wind_slab"
+    ],
+    "CZ-06:high:am": [
+      "wind_slab"
+    ],
+    "CZ-06:high:pm": [
+      "wind_slab"
+    ],
+    "CZ-06:low": [
+      "wind_slab"
+    ],
+    "CZ-06:low:am": [
+      "wind_slab"
+    ],
+    "CZ-06:low:pm": [
+      "wind_slab"
+    ],
+    "CZ-06:pm": [
+      "wind_slab"
+    ]
+  }
+}

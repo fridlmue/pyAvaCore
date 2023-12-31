@@ -47,6 +47,20 @@ class SnowTest(unittest.TestCase):
             ratings,
         )
 
+        avalancheProblems = {
+            "avalancheProblems": bulletins.all_avalanche_problems(
+                bulletins.main_date()
+            ),
+        }
+        problems = json.dumps(avalancheProblems, indent=2, sort_keys=True)
+        expected = self._fixture("problems.json")
+        if overwrite:
+            expected.write_text(problems)
+        self.assertEqual(
+            expected.read_text(encoding="utf-8"),
+            problems,
+        )
+
         schema = (ROOT / "CAAMLv6_BulletinEAWS.json").read_text()
         validate(
             instance=json.loads(bulletins.to_json()),

@@ -1,0 +1,196 @@
+{
+  "avalancheProblems": {
+    "SK-01": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-01:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-01:high": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-01:high:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-01:high:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-01:low": [],
+    "SK-01:low:am": [],
+    "SK-01:low:pm": [],
+    "SK-01:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-02": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-02:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-02:high": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-02:high:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-02:high:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-02:low": [],
+    "SK-02:low:am": [],
+    "SK-02:low:pm": [],
+    "SK-02:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-03": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-03:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-03:high": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-03:high:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-03:high:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-03:low": [],
+    "SK-03:low:am": [],
+    "SK-03:low:pm": [],
+    "SK-03:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-04": [
+      "new_snow"
+    ],
+    "SK-04:am": [
+      "new_snow"
+    ],
+    "SK-04:high": [
+      "new_snow"
+    ],
+    "SK-04:high:am": [
+      "new_snow"
+    ],
+    "SK-04:high:pm": [
+      "new_snow"
+    ],
+    "SK-04:low": [],
+    "SK-04:low:am": [],
+    "SK-04:low:pm": [],
+    "SK-04:pm": [
+      "new_snow"
+    ],
+    "SK-05": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-05:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-05:high": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-05:high:am": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-05:high:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-05:low": [],
+    "SK-05:low:am": [],
+    "SK-05:low:pm": [],
+    "SK-05:pm": [
+      "wind_slab",
+      "new_snow"
+    ],
+    "SK-06": [
+      "new_snow"
+    ],
+    "SK-06:am": [
+      "new_snow"
+    ],
+    "SK-06:high": [
+      "new_snow"
+    ],
+    "SK-06:high:am": [
+      "new_snow"
+    ],
+    "SK-06:high:pm": [
+      "new_snow"
+    ],
+    "SK-06:low": [],
+    "SK-06:low:am": [],
+    "SK-06:low:pm": [],
+    "SK-06:pm": [
+      "new_snow"
+    ],
+    "SK-07": [
+      "new_snow"
+    ],
+    "SK-07:am": [
+      "new_snow"
+    ],
+    "SK-07:high": [
+      "new_snow"
+    ],
+    "SK-07:high:am": [
+      "new_snow"
+    ],
+    "SK-07:high:pm": [
+      "new_snow"
+    ],
+    "SK-07:low": [],
+    "SK-07:low:am": [],
+    "SK-07:low:pm": [],
+    "SK-07:pm": [
+      "new_snow"
+    ],
+    "SK-08": [
+      "new_snow"
+    ],
+    "SK-08:am": [
+      "new_snow"
+    ],
+    "SK-08:high": [
+      "new_snow"
+    ],
+    "SK-08:high:am": [
+      "new_snow"
+    ],
+    "SK-08:high:pm": [
+      "new_snow"
+    ],
+    "SK-08:low": [],
+    "SK-08:low:am": [],
+    "SK-08:low:pm": [],
+    "SK-08:pm": [
+      "new_snow"
+    ]
+  }
+}

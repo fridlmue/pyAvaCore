@@ -1,0 +1,25 @@
+{
+  "avalancheProblems": {
+    "NO-3016": [
+      "persistent_weak_layers"
+    ],
+    "NO-3016:am": [
+      "persistent_weak_layers"
+    ],
+    "NO-3016:high": [
+      "persistent_weak_layers"
+    ],
+    "NO-3016:high:am": [
+      "persistent_weak_layers"
+    ],
+    "NO-3016:high:pm": [
+      "persistent_weak_layers"
+    ],
+    "NO-3016:low": [],
+    "NO-3016:low:am": [],
+    "NO-3016:low:pm": [],
+    "NO-3016:pm": [
+      "persistent_weak_layers"
+    ]
+  }
+}

@@ -1,0 +1,760 @@
+{
+  "avalancheProblems": {
+    "AT-05-01": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-01:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-02:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-03:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-04:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-05:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-06:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-07:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-08:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-09:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-10:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-11:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-12:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-13:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-14:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-15:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-16:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-17:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-18:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-19:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-20:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:high": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:high:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:high:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:low": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:low:am": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:low:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ],
+    "AT-05-21:pm": [
+      "wet_snow",
+      "gliding_snow"
+    ]
+  }
+}
