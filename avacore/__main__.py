@@ -246,32 +246,32 @@ def download_regions():
         )
 
 
-def merge_regions(validity_date: str):
+def merge_json_files(validity_date: str, suffix: str, json_key: str):
     """Create ratings JSON containing all regions"""
     directory = args.output / validity_date
-    merge_ratings = {}
+    merge_keys = {}
     for regionID in args.merge_regions.split():
         try:
-            path = directory / f"{validity_date}-{regionID}.ratings.json"
+            path = directory / f"{validity_date}-{regionID}.{suffix}"
             if not path.exists():
                 continue
             with path.open(encoding="utf-8") as f:
                 logging.info("Reading %s", f.name)
                 ratings = json.load(fp=f)
-            if "maxDangerRatings" in ratings:
-                merge_ratings.update(ratings["maxDangerRatings"])
+            if json_key in ratings:
+                merge_keys.update(ratings[json_key])
         except Exception as e:
             logging.error("Failed to load %s from %s", regionID, path, exc_info=e)
-    path = directory / f"{validity_date}.ratings.json"
+    path = directory / f"{validity_date}.{suffix}"
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open(mode="w", encoding="utf-8") as f:
-        maxDangerRatings = {"maxDangerRatings": merge_ratings}
         logging.info("Writing %s", f.name)
-        json.dump(maxDangerRatings, fp=f, indent=2, sort_keys=True)
+        json.dump({json_key: merge_keys}, fp=f, indent=2, sort_keys=True)
 
 
 if __name__ == "__main__":
     init_logging()
     download_regions()
     for date_string in parse_dates(args.date or args.merge_dates):
-        merge_regions(date_string)
+        merge_json_files(date_string, "ratings.json", "maxDangerRatings")
+        merge_json_files(date_string, "problems.json", "avalancheProblems")
