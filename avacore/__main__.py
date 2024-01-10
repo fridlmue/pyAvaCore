@@ -60,6 +60,7 @@ default_regions = [
     "NO",
     "PL",
     "PL-12",
+    "RO",
     "SE",
     "SI",
     "SK",
