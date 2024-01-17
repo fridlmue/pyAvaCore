@@ -33,6 +33,7 @@ import avacore.processor_pl_12
 import avacore.processor_ro
 import avacore.processor_se
 import avacore.processor_sk
+import avacore.processor_ua
 import avacore.processor_uk
 
 
@@ -85,4 +86,6 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_caamlv5.SloveniaProcessor()
     if region_id.startswith("SK"):
         return avacore.processor_caamlv6.Processor2022()
+    if region_id.startswith("UA"):
+        return avacore.processor_ua.Processor()
     return avacore.processor_caamlv5.Processor()

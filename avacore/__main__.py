@@ -64,6 +64,7 @@ default_regions = [
     "SE",
     "SI",
     "SK",
+    "UA",
 ]
 
 parser = argparse.ArgumentParser(

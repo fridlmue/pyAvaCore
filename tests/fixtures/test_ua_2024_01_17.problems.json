@@ -1,0 +1,85 @@
+{
+  "avalancheProblems": {
+    "UA-01": [
+      "new_snow"
+    ],
+    "UA-01:am": [
+      "new_snow"
+    ],
+    "UA-01:high": [
+      "new_snow"
+    ],
+    "UA-01:high:am": [
+      "new_snow"
+    ],
+    "UA-01:high:pm": [
+      "new_snow"
+    ],
+    "UA-01:low": [
+      "new_snow"
+    ],
+    "UA-01:low:am": [
+      "new_snow"
+    ],
+    "UA-01:low:pm": [
+      "new_snow"
+    ],
+    "UA-01:pm": [
+      "new_snow"
+    ],
+    "UA-02": [
+      "wind_slab"
+    ],
+    "UA-02:am": [
+      "wind_slab"
+    ],
+    "UA-02:high": [
+      "wind_slab"
+    ],
+    "UA-02:high:am": [
+      "wind_slab"
+    ],
+    "UA-02:high:pm": [
+      "wind_slab"
+    ],
+    "UA-02:low": [
+      "wind_slab"
+    ],
+    "UA-02:low:am": [
+      "wind_slab"
+    ],
+    "UA-02:low:pm": [
+      "wind_slab"
+    ],
+    "UA-02:pm": [
+      "wind_slab"
+    ],
+    "UA-03": [
+      "wind_slab"
+    ],
+    "UA-03:am": [
+      "wind_slab"
+    ],
+    "UA-03:high": [
+      "wind_slab"
+    ],
+    "UA-03:high:am": [
+      "wind_slab"
+    ],
+    "UA-03:high:pm": [
+      "wind_slab"
+    ],
+    "UA-03:low": [
+      "wind_slab"
+    ],
+    "UA-03:low:am": [
+      "wind_slab"
+    ],
+    "UA-03:low:pm": [
+      "wind_slab"
+    ],
+    "UA-03:pm": [
+      "wind_slab"
+    ]
+  }
+}
