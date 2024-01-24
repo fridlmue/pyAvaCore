@@ -1,0 +1,214 @@
+{
+  "bulletins": [
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-01-24"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2024-01-24T10:09:00+02:00",
+      "regions": [
+        {
+          "name": "Western and central parts of Zakarpattia oblast",
+          "regionID": "UA-01"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "Ukrainian Hydrometeorological Center",
+          "website": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-01-25T23:59:00+02:00",
+        "startTime": "2024-01-24T09:46:00+02:00"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-01-24"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2024-01-24T10:09:00+02:00",
+      "regions": [
+        {
+          "name": "Eastern part of Zakarpattia oblast",
+          "regionID": "UA-02"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "Ukrainian Hydrometeorological Center",
+          "website": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-01-25T23:59:00+02:00",
+        "startTime": "2024-01-24T09:46:00+02:00"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "persistent_weak_layers"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-01-24"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "moderate",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2024-01-24T10:09:00+02:00",
+      "regions": [
+        {
+          "name": "Ivano-Frankivsk oblast",
+          "regionID": "UA-03"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "Ukrainian Hydrometeorological Center",
+          "website": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-01-24T23:59:00+02:00",
+        "startTime": "2024-01-24T09:39:00+02:00"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-01-24"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2024-01-24T10:09:00+02:00",
+      "regions": [
+        {
+          "name": "Western and central parts of Zakarpattia oblast",
+          "regionID": "UA-01"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "Ukrainian Hydrometeorological Center",
+          "website": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-01-25T23:59:00+02:00",
+        "startTime": "2024-01-24T09:46:00+02:00"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-01-24"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2024-01-24T10:09:00+02:00",
+      "regions": [
+        {
+          "name": "Eastern part of Zakarpattia oblast",
+          "regionID": "UA-02"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "Ukrainian Hydrometeorological Center",
+          "website": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-01-25T23:59:00+02:00",
+        "startTime": "2024-01-24T09:46:00+02:00"
+      }
+    },
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-01-25"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "considerable",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "publicationTime": "2024-01-24T10:09:00+02:00",
+      "regions": [
+        {
+          "name": "Ivano-Frankivsk oblast",
+          "regionID": "UA-03"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "Ukrainian Hydrometeorological Center",
+          "website": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-01-25T23:59:00+02:00",
+        "startTime": "2024-01-25T00:00:00+02:00"
+      }
+    }
+  ]
+}

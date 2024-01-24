@@ -211,6 +211,10 @@ class TestAll(SnowTest):
         processor = avacore.processor_ua.Processor()
         self._test_processor(processor, "UA")
 
+    def test_ua_2024_01_24(self):
+        processor = avacore.processor_ua.Processor()
+        self._test_processor(processor, "UA")
+
     def test_vorarlberg_2021_12(self):
         processor = avacore.processor_caamlv5.Processor()
         bulletins = self._test_processor(processor)

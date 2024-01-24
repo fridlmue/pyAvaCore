@@ -92,9 +92,12 @@ class Processor(JsonProcessor):
             publicationTime = publicationTime.replace(tzinfo=self.tz)
             for a in obj["A"]:
                 [start, end] = a["P"].split(" &mdash; ")
-                startTime = datetime.strptime(start, "%d.%m %H:%M")
+                fmt = "%d.%m, %H:%M" if "," in start else "%d.%m %H:%M"
+                startTime = datetime.strptime(start, fmt)
                 startTime = startTime.replace(year=publicationTime.year, tzinfo=self.tz)
-                endTime = datetime.strptime(start[:6] + end, "%d.%m %H:%M")
+                if len(end) < 8:
+                    end = start.split()[0] + " " + end
+                endTime = datetime.strptime(end, fmt)
                 endTime = endTime.replace(year=publicationTime.year, tzinfo=self.tz)
                 bulletin = AvaBulletin(
                     publicationTime=publicationTime,

@@ -1,0 +1,85 @@
+{
+  "avalancheProblems": {
+    "UA-01": [
+      "wind_slab"
+    ],
+    "UA-01:am": [
+      "wind_slab"
+    ],
+    "UA-01:high": [
+      "wind_slab"
+    ],
+    "UA-01:high:am": [
+      "wind_slab"
+    ],
+    "UA-01:high:pm": [
+      "wind_slab"
+    ],
+    "UA-01:low": [
+      "wind_slab"
+    ],
+    "UA-01:low:am": [
+      "wind_slab"
+    ],
+    "UA-01:low:pm": [
+      "wind_slab"
+    ],
+    "UA-01:pm": [
+      "wind_slab"
+    ],
+    "UA-02": [
+      "wind_slab"
+    ],
+    "UA-02:am": [
+      "wind_slab"
+    ],
+    "UA-02:high": [
+      "wind_slab"
+    ],
+    "UA-02:high:am": [
+      "wind_slab"
+    ],
+    "UA-02:high:pm": [
+      "wind_slab"
+    ],
+    "UA-02:low": [
+      "wind_slab"
+    ],
+    "UA-02:low:am": [
+      "wind_slab"
+    ],
+    "UA-02:low:pm": [
+      "wind_slab"
+    ],
+    "UA-02:pm": [
+      "wind_slab"
+    ],
+    "UA-03": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:am": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:high": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:high:am": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:high:pm": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:low": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:low:am": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:low:pm": [
+      "persistent_weak_layers"
+    ],
+    "UA-03:pm": [
+      "persistent_weak_layers"
+    ]
+  }
+}
