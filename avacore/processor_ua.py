@@ -13,7 +13,7 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 from typing import List, TypedDict
 from avacore.avabulletin import (
@@ -99,19 +99,27 @@ class Processor(JsonProcessor):
                     end = start.split()[0] + " " + end
                 endTime = datetime.strptime(end, fmt)
                 endTime = endTime.replace(year=publicationTime.year, tzinfo=self.tz)
-                bulletin = AvaBulletin(
-                    publicationTime=publicationTime,
-                    validTime=ValidTime(startTime=startTime, endTime=endTime),
-                    regions=[
-                        Region(
-                            regionID="UA-%02d" % obj["R"],
-                            name=ATTNS_REGIONS[obj["R"]],
-                        )
-                    ],
-                    dangerRatings=[DangerRating().set_mainValue_int(a["C"] + 1)],
-                    avalancheProblems=[
-                        AvalancheProblem(problemType=avalancheProblemTypes[a["T"]])
-                    ],
-                )
-                bulletins.append(bulletin)
+                while startTime < endTime:
+                    startTime2359 = startTime.replace(hour=23, minute=59, second=0)
+                    bulletin = AvaBulletin(
+                        publicationTime=publicationTime,
+                        validTime=ValidTime(
+                            startTime=startTime,
+                            endTime=endTime
+                            if endTime > startTime2359
+                            else startTime2359,
+                        ),
+                        regions=[
+                            Region(
+                                regionID="UA-%02d" % obj["R"],
+                                name=ATTNS_REGIONS[obj["R"]],
+                            )
+                        ],
+                        dangerRatings=[DangerRating().set_mainValue_int(a["C"] + 1)],
+                        avalancheProblems=[
+                            AvalancheProblem(problemType=avalancheProblemTypes[a["T"]])
+                        ],
+                    )
+                    bulletins.append(bulletin)
+                    startTime = startTime2359 + timedelta(minutes=1)
         return bulletins
