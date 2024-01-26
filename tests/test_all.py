@@ -21,6 +21,7 @@ import avacore.processor_pl
 import avacore.processor_pl_12
 import avacore.processor_se
 import avacore.processor_sk
+import avacore.processor_ua
 import avacore.processor_uk
 
 
@@ -205,6 +206,14 @@ class TestAll(SnowTest):
     def test_sweden(self):
         processor = avacore.processor_se.Processor()
         self._test_processor(processor, "SE")
+
+    def test_ua_2024_01_17(self):
+        processor = avacore.processor_ua.Processor()
+        self._test_processor(processor, "UA")
+
+    def test_ua_2024_01_24(self):
+        processor = avacore.processor_ua.Processor()
+        self._test_processor(processor, "UA")
 
     def test_vorarlberg_2021_12(self):
         processor = avacore.processor_caamlv5.Processor()
