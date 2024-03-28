@@ -107,8 +107,8 @@ class Processor(JsonProcessor):
         ):
             bulletin.regions.append(Region(regionID=eaws_id))
         bulletin.dangerRatings = [
-            DangerRating().set_mainValue_int(int(valanga["colorePericolo1"])),
-            DangerRating().set_mainValue_int(int(valanga["colorePericolo2"])),
+            DangerRating().set_mainValue_int(int(valanga["colorePericolo1"] or "0")),
+            DangerRating().set_mainValue_int(int(valanga["colorePericolo2"] or "0")),
         ]
         problemType = problemTypes.get(valanga["situazioneTipoImg"], None)
         if problemType:
