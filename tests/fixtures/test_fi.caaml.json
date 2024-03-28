@@ -21,7 +21,7 @@
       ],
       "source": {
         "provider": {
-          "name": "Finnish Meteorological Institute",
+          "name": "FMI",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
@@ -51,7 +51,7 @@
       ],
       "source": {
         "provider": {
-          "name": "Finnish Meteorological Institute",
+          "name": "FMI",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
@@ -81,7 +81,7 @@
       ],
       "source": {
         "provider": {
-          "name": "Finnish Meteorological Institute",
+          "name": "FMI",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
@@ -111,7 +111,7 @@
       ],
       "source": {
         "provider": {
-          "name": "Finnish Meteorological Institute",
+          "name": "FMI",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
@@ -141,7 +141,7 @@
       ],
       "source": {
         "provider": {
-          "name": "Finnish Meteorological Institute",
+          "name": "FMI",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },
@@ -171,7 +171,7 @@
       ],
       "source": {
         "provider": {
-          "name": "Finnish Meteorological Institute",
+          "name": "FMI",
           "website": "https://en.ilmatieteenlaitos.fi/avalanche-forecast"
         }
       },

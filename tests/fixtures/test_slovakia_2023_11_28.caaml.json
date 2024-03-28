@@ -98,7 +98,7 @@
       },
       "source": {
         "provider": {
-          "name": "SLP HZS",
+          "name": "SLP+HZS",
           "website": "https://avalanches.sk/"
         }
       },
@@ -181,7 +181,7 @@
       },
       "source": {
         "provider": {
-          "name": "SLP HZS",
+          "name": "SLP+HZS",
           "website": "https://avalanches.sk/"
         }
       },

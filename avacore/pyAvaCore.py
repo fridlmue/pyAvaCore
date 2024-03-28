@@ -13,20 +13,17 @@
     along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-import configparser
 import dataclasses
 import datetime as dt
+import json
 from datetime import datetime
 from pathlib import Path
 from warnings import warn
-from typing import List, Tuple
+from typing import Optional, List, Tuple, TypedDict
 
 import avacore.processors
 from avacore.avabulletin import AvaBulletin
 from avacore.avabulletins import Bulletins
-
-config = configparser.ConfigParser()
-config.read_string(Path(f"{__file__}.ini").read_text(encoding="utf-8"))
 
 
 def get_bulletins(region_id, *, date="", lang="en") -> Bulletins:
@@ -81,35 +78,65 @@ class BulletinProvider:
         """
         returns the valid URL for requested region_id
         """
-        url = cls.get_config(region_id, "url.date" if date else f"url.{lang}")
-        if not url:
-            url = cls.get_config(region_id, "url")
+        if region_id == "IT-MeteoMont":
+            region = ConfigRegion.of_config("IT-21")
+            aws_name = "METEOMONT Carabinieri"
+        elif region_id == "IT-Livigno":
+            region = ConfigRegion.of_config("IT-25-SO-LI")
+            aws_name = "ALPSOLUT"
+        else:
+            region = ConfigRegion.of_config(
+                {"NO-3016": "NO", "PL-01": "PL"}.get(region_id, region_id)
+            )
+            aws_name = "AINEVA" if region_id.startswith("IT") else ""
+        aws = region["aws"]
+        if aws_name:
+            aws = [a for a in aws if aws_name in a["name"]]
+        if len(aws) != 1:
+            raise ValueError()
+        urls = aws[0]["url"]
+        url = urls["api.date"] if date else urls.get(f"api.{lang}", urls["api"])
         url = url.format(
             date=date or datetime.today().date(),
             lang=lang,
             region="{region}",
         )
+        website = urls.get(
+            lang, next(url for (la, url) in urls.items() if len(la) == 2)
+        )
 
         return BulletinProvider(
             lang=lang,
-            name=cls.get_config(region_id, "name"),
+            name=aws[0]["name"],
             region=region_id,
             url=url,
-            website=cls.get_config(region_id, "website"),
+            website=website,
         )
 
-    @staticmethod
-    def get_config(region_id: str, option: str, fallback="") -> str:
-        """
-        returns the requested option for the requested region_id
-        """
-        while (
-            not config.has_section(region_id)
-            and not config.has_option(region_id, option)
-            and "-" in region_id
-        ):
-            region_id = region_id[0 : region_id.rindex("-")]
-        return config.get(region_id, option, fallback=fallback)
+
+class ConfigURL(TypedDict):
+    mail: Optional[str] = None
+    en: Optional[str] = None
+    de: Optional[str] = None
+    api: str = ""
+    # api:date
+    api_date: Optional[str] = None
+
+
+class ConfigAws(TypedDict):
+    name: str
+    url: ConfigURL
+
+
+class ConfigRegion(TypedDict):
+    id: str
+    aws: List[ConfigAws]
+
+    @classmethod
+    def of_config(cls, region_id) -> "ConfigRegion":
+        json_str = Path(f"{__file__}.json").read_text(encoding="utf-8")
+        config: List["ConfigRegion"] = json.loads(json_str)
+        return next(c for c in config if c["id"] == region_id)
 
 
 def parse_dates(date_str: str) -> List[str]:

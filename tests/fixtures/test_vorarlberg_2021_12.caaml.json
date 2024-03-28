@@ -103,8 +103,8 @@
       },
       "source": {
         "provider": {
-          "name": "Landeswarnzentrale Vorarlberg",
-          "website": "https://warndienste.cnv.at/dibos/lawine"
+          "name": "LWD Vorarlberg",
+          "website": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_en.html"
         }
       },
       "tendency": [

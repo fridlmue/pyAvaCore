@@ -53,7 +53,7 @@
       },
       "source": {
         "provider": {
-          "name": "Ve\u00f0urstofa \u00cdslands",
+          "name": "IMO",
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
@@ -109,7 +109,7 @@
       },
       "source": {
         "provider": {
-          "name": "Ve\u00f0urstofa \u00cdslands",
+          "name": "IMO",
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
@@ -181,7 +181,7 @@
       },
       "source": {
         "provider": {
-          "name": "Ve\u00f0urstofa \u00cdslands",
+          "name": "IMO",
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },
@@ -237,7 +237,7 @@
       },
       "source": {
         "provider": {
-          "name": "Ve\u00f0urstofa \u00cdslands",
+          "name": "IMO",
           "website": "https://en.vedur.is/avalanches/forecast/"
         }
       },

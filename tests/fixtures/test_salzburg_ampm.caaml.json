@@ -58,8 +58,8 @@
       },
       "source": {
         "provider": {
-          "name": "Lawinenwarndienst Salzburg",
-          "website": "https://lawine.salzburg.at/"
+          "name": "LWD Salzburg",
+          "website": "https://lawine.salzburg.at/en"
         }
       },
       "tendency": [
@@ -167,8 +167,8 @@
       },
       "source": {
         "provider": {
-          "name": "Lawinenwarndienst Salzburg",
-          "website": "https://lawine.salzburg.at/"
+          "name": "LWD Salzburg",
+          "website": "https://lawine.salzburg.at/en"
         }
       },
       "tendency": [
@@ -275,8 +275,8 @@
       },
       "source": {
         "provider": {
-          "name": "Lawinenwarndienst Salzburg",
-          "website": "https://lawine.salzburg.at/"
+          "name": "LWD Salzburg",
+          "website": "https://lawine.salzburg.at/en"
         }
       },
       "tendency": [

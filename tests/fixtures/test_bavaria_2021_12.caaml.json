@@ -59,8 +59,8 @@
       },
       "source": {
         "provider": {
-          "name": "Lawinenwarnzentrale Bayern",
-          "website": "https://www.lawinenwarndienst-bayern.de/"
+          "name": "LWD Bayern",
+          "website": "https://lawinenwarndienst.bayern.de/"
         }
       },
       "tendency": [
@@ -142,8 +142,8 @@
       },
       "source": {
         "provider": {
-          "name": "Lawinenwarnzentrale Bayern",
-          "website": "https://www.lawinenwarndienst-bayern.de/"
+          "name": "LWD Bayern",
+          "website": "https://lawinenwarndienst.bayern.de/"
         }
       },
       "tendency": [
@@ -233,8 +233,8 @@
       },
       "source": {
         "provider": {
-          "name": "Lawinenwarnzentrale Bayern",
-          "website": "https://www.lawinenwarndienst-bayern.de/"
+          "name": "LWD Bayern",
+          "website": "https://lawinenwarndienst.bayern.de/"
         }
       },
       "tendency": [

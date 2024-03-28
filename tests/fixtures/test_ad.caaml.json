@@ -25,8 +25,8 @@
       ],
       "source": {
         "provider": {
-          "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
-          "website": "https://www.meteo.ad/fr/etatneige"
+          "name": "SMA",
+          "website": "https://www.meteo.ad/en/snowstate"
         }
       },
       "validTime": {
@@ -59,8 +59,8 @@
       ],
       "source": {
         "provider": {
-          "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
-          "website": "https://www.meteo.ad/fr/etatneige"
+          "name": "SMA",
+          "website": "https://www.meteo.ad/en/snowstate"
         }
       },
       "validTime": {
@@ -93,8 +93,8 @@
       ],
       "source": {
         "provider": {
-          "name": "Govern d'Andorra Servei Meteorol\u00f2gic Nacional",
-          "website": "https://www.meteo.ad/fr/etatneige"
+          "name": "SMA",
+          "website": "https://www.meteo.ad/en/snowstate"
         }
       },
       "validTime": {
