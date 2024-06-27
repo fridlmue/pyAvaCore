@@ -17,7 +17,7 @@ import dataclasses
 import datetime as dt
 import json
 from datetime import datetime
-from pathlib import Path
+import pkgutil
 from warnings import warn
 from typing import Optional, List, Tuple, TypedDict
 
@@ -134,7 +134,8 @@ class ConfigRegion(TypedDict):
 
     @classmethod
     def of_config(cls, region_id) -> "ConfigRegion":
-        json_str = Path(f"{__file__}.json").read_text(encoding="utf-8")
+        json_bytes = pkgutil.get_data(__package__, "pyAvaCore.py.json")
+        json_str = json_bytes.decode(encoding="utf-8")
         config: List["ConfigRegion"] = json.loads(json_str)
         return next(c for c in config if c["id"] == region_id)
 
