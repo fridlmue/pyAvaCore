@@ -27,14 +27,28 @@ ruff:
     - pip install ruff
     - ruff avacore
 
+zipapp:
+  stage: test
+  script:
+    - python -V
+    - python -m zipapp --help
+    - python -m zipfile -c pyAvaCore.pyz avacore/ __main__.py
+    - python pyAvaCore.pyz --help
+  artifacts:
+    paths:
+      - pyAvaCore.pyz
+
 deploy:
   stage: deploy
   image: alpine:latest
-  script:
-    - apk add openssh-client rsync
+  dependencies:
+    - zipapp
+  before_script:
+    - apk add openssh-client
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh && chmod 700 ~/.ssh
     - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-    - rsync --recursive --verbose --compress --delete --exclude=logs --exclude=tests -e 'ssh -p2201' ./ $SFTP_SERVER
+  script:
+    - echo put pyAvaCore.pyz | sftp -P2201 $SFTP_SERVER
   when: manual

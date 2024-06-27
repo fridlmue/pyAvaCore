@@ -271,9 +271,13 @@ def merge_json_files(validity_date: str, suffix: str, json_key: str):
         json.dump({json_key: merge_keys}, fp=f, indent=2, sort_keys=True)
 
 
-if __name__ == "__main__":
+def main():
     init_logging()
     download_regions()
     for date_string in parse_dates(args.date or args.merge_dates):
         merge_json_files(date_string, "ratings.json", "maxDangerRatings")
         merge_json_files(date_string, "problems.json", "avalancheProblems")
+
+
+if __name__ == "__main__":
+    main()
