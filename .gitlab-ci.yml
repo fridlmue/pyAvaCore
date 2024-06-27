@@ -27,6 +27,17 @@ ruff:
     - pip install ruff
     - ruff avacore
 
+zipapp:
+  stage: test
+  script:
+    - python -V
+    - python -m zipapp --help
+    - python -m zipfile -c pyAvaCore.pyz avacore/ __main__.py
+    - python pyAvaCore.pyz --help
+  artifacts:
+    paths:
+      - pyAvaCore.pyz
+
 deploy:
   stage: deploy
   image: alpine:latest
