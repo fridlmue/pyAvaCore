@@ -443,7 +443,7 @@
       },
       "source": {
         "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "name": "SLF",
           "website": "https://whiterisk.ch/en/conditions"
         }
       },
@@ -655,7 +655,7 @@
       },
       "source": {
         "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "name": "SLF",
           "website": "https://whiterisk.ch/en/conditions"
         }
       },
@@ -747,7 +747,7 @@
       },
       "source": {
         "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "name": "SLF",
           "website": "https://whiterisk.ch/en/conditions"
         }
       },
@@ -855,7 +855,7 @@
       },
       "source": {
         "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "name": "SLF",
           "website": "https://whiterisk.ch/en/conditions"
         }
       },
@@ -976,7 +976,7 @@
       },
       "source": {
         "provider": {
-          "name": "WSL Institute for Snow and Avalanche Research SLF",
+          "name": "SLF",
           "website": "https://whiterisk.ch/en/conditions"
         }
       },

@@ -1,0 +1,858 @@
+[
+  {
+    "id": "AD",
+    "aws": [
+      {
+        "name": "SMA",
+        "url": {
+          "fr": "http://www.meteo.ad/fr/etatneige",
+          "en": "https://www.meteo.ad/en/snowstate",
+          "es": "https://www.meteo.ad/es/estadonieve",
+          "api": "https://www.meteo.ad/xml/neige.xml",
+          "twitter": "https://twitter.com/MeteoAnd_OECC",
+          "youtube": "https://www.youtube.com/channel/UCVC31YuG1kjqUpvRt2AKr4w"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-02",
+    "aws": [
+      {
+        "name": "LWD Kärnten",
+        "url": {
+          "de": "https://lawine-kaernten.at",
+          "api": "https://www.avalanche-warnings.eu/public/kaernten/caaml",
+          "api:en": "https://www.avalanche-warnings.eu/public/kaernten/caaml/en",
+          "mail": "mailto:lawine@ktn.gv.at",
+          "facebook": "https://www.facebook.com/Lawinenwarndienst-Krnten-182262981858129/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-03",
+    "aws": [
+      {
+        "name": "LWD Niederösterreich",
+        "url": {
+          "de": "https://www.lawinenwarndienst-niederoesterreich.at",
+          "api": "https://www.avalanche-warnings.eu/public/niederoesterreich/caaml",
+          "mail": "mailto:lwd@lawinenwarndienst-niederoesterreich.at"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-04",
+    "aws": [
+      {
+        "name": "LWD Oberösterreich",
+        "url": {
+          "de": "https://oberoesterreich.avalanche-warnings.eu",
+          "api": "https://www.avalanche-warnings.eu/public/oberoesterreich/caaml",
+          "mail": "mailto:lawinenwarndienst.post@ooe.gv.at",
+          "facebook": "https://www.facebook.com/lawinenwarndienst.oberosterreich/",
+          "twitter": "https://twitter.com/lwdooe"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-05",
+    "aws": [
+      {
+        "name": "LWD Salzburg",
+        "url": {
+          "en": "https://lawine.salzburg.at/en",
+          "de": "https://lawine.salzburg.at",
+          "api": "https://www.avalanche-warnings.eu/public/salzburg/caaml/en",
+          "api:de": "https://www.avalanche-warnings.eu/public/salzburg/caaml",
+          "mail": "mailto:lawine@salzburg.gv.at",
+          "facebook": "https://www.facebook.com/LWDSalzburg/",
+          "twitter": "https://twitter.com/LWDSalzburg"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-06",
+    "aws": [
+      {
+        "name": "LWD Steiermark",
+        "url": {
+          "de": "https://www.lawine-steiermark.at",
+          "api": "https://www.avalanche-warnings.eu/public/steiermark/caaml/en",
+          "api:de": "https://www.avalanche-warnings.eu/public/steiermark/caaml",
+          "mail": "mailto:lawine@lawine-steiermark.at",
+          "facebook": "https://www.facebook.com/LawinenwarndienstSteiermark/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-07",
+    "aws": [
+      {
+        "name": "LWD Tirol",
+        "url": {
+          "en": "https://avalanche.report",
+          "de": "https://lawinen.report",
+          "it": "https://valanghe.report",
+          "oc": "https://oc.avalanche.report",
+          "ca": "https://ca.avalanche.report",
+          "es": "https://es.avalanche.report",
+          "fr": "https://fr.avalanche.report",
+          "api": "https://static.avalanche.report/bulletins/latest/AT-07_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_AT-07_{lang}_CAAMLv6.json",
+          "mail": "mailto:lawine@tirol.gv.at",
+          "telegram:de": "https://t.me/lawinenwarndienst_tirol",
+          "telegram:it": "https://t.me/servizio_valanghe_tirolo",
+          "telegram:en": "https://t.me/avalanche_warning_service_tirol",
+          "facebook": "https://www.facebook.com/lawinenwarndienst/",
+          "instagram": "https://www.instagram.com/lawinenwarndienst_tirol/",
+          "youtube": "https://www.youtube.com/channel/UC3H4Xqv_wfHajvogV3ooYdQ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "AT-08",
+    "aws": [
+      {
+        "name": "LWD Vorarlberg",
+        "url": {
+          "en": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_en.html",
+          "de": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_de.html",
+          "api": "https://www.avalanche-warnings.eu/public/vorarlberg/caaml/en",
+          "api:de": "https://www.avalanche-warnings.eu/public/vorarlberg/caaml",
+          "mail": "mailto:lawinenwarndienst@lwz-vorarlberg.at",
+          "facebook": "https://www.facebook.com/lwzvorarlberg/",
+          "twitter": "https://twitter.com/lwzvorarlberg",
+          "instagram": "https://www.instagram.com/lwzvorarlberg/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "CH",
+    "aws": [
+      {
+        "name": "SLF",
+        "url": {
+          "en": "https://whiterisk.ch/en/conditions",
+          "de": "https://whiterisk.ch/de/conditions",
+          "fr": "https://whiterisk.ch/fr/conditions",
+          "it": "https://whiterisk.ch/it/conditions",
+          "api": "https://aws.slf.ch/api/bulletin/caaml/{lang}/json",
+          "api:date": "https://aws.slf.ch/api/bulletin/caaml/{lang}/json?activeAt={date}T12:00:00.000Z",
+          "mail": "mailto:bulletin@slf.ch",
+          "facebook": "https://www.facebook.com/whiterisk/",
+          "twitter": "https://twitter.com/wsl_research",
+          "instagram": "https://www.instagram.com/whiteriskslf/?hl=de",
+          "youtube": "https://www.youtube.com/user/WSLForschung"
+        }
+      }
+    ]
+  },
+  {
+    "id": "CZ",
+    "aws": [
+      {
+        "name": "HS CR",
+        "url": {
+          "cs": "https://www.horskasluzba.cz/cz/pocasi-na-horach/lavinova-predpoved",
+          "api": "https://www.horskasluzba.cz/cz/avalanche-json"
+        }
+      }
+    ]
+  },
+  {
+    "id": "DE-BY",
+    "aws": [
+      {
+        "name": "LWD Bayern",
+        "url": {
+          "de": "https://lawinenwarndienst.bayern.de/",
+          "api": "https://www.avalanche-warnings.eu/public/bayern/caaml/en",
+          "api:de": "https://www.avalanche-warnings.eu/public/bayern/caaml",
+          "mail": "mailto:lawinenwarnzentrale@lfu.bayern.de",
+          "facebook": "https://www.facebook.com/lawinenwarndienst.bayern/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ES-CT-L",
+    "aws": [
+      {
+        "name": "CLA",
+        "url": {
+          "oc": "https://lauegi.report/oc",
+          "ca": "https://lauegi.report/ca",
+          "es": "https://lauegi.report/es",
+          "en": "https://lauegi.report/en",
+          "it": "https://lauegi.report/it",
+          "fr": "https://lauegi.report/fr",
+          "de": "https://lauegi.report/de",
+          "api": "https://static.lauegi.report/albina_files/latest/ES-CT-L_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lauegi.report/albina_files/{date}/{date}_ES-CT-L_{lang}_CAAMLv6.json",
+          "mail": "mailto:lauegi@aran.org",
+          "facebook": "https://www.facebook.com/centrelauegiaran",
+          "twitter": "https://twitter.com/lauegi",
+          "instagram": "https://www.instagram.com/centredelauegi/",
+          "youtube": "https://www.youtube.com/user/centrelauegi"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ES-CT",
+    "aws": [
+      {
+        "name": "ICGC",
+        "url": {
+          "en": "https://bpa.icgc.cat",
+          "ca": "https://bpa.icgc.cat",
+          "es": "https://bpa.icgc.cat",
+          "api": "https://bpa.icgc.cat/api/apiext/butlletiglobal?values={date};3",
+          "api:ca": "https://bpa.icgc.cat/api/apiext/butlletiglobal?values={date};1",
+          "api:es": "https://bpa.icgc.cat/api/apiext/butlletiglobal?values={date};2",
+          "mail": "mailto:allaus@icgs.cat",
+          "facebook": "https://www.facebook.com/ICGCat",
+          "twitter": "https://twitter.com/ICGCat",
+          "youtube": "https://www.youtube.com/user/ICGCat"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ES",
+    "aws": [
+      {
+        "name": "AEMET",
+        "url": {
+          "es": "https://www.aemet.es/es/eltiempo/prediccion/montana/boletin_peligro_aludes",
+          "api": "http://www.aemet.es/xml/montana/p18tarn1.xml",
+          "mail": "mailto:gsanza@aemet.es",
+          "twitter": "https://twitter.com/AEMET_Esp",
+          "youtube": "https://www.youtube.com/channel/UCd-ceYPisAtCmmoZa26I-5g/feed"
+        }
+      }
+    ]
+  },
+  {
+    "id": "FI",
+    "aws": [
+      {
+        "name": "FMI",
+        "url": {
+          "es": "https://en.ilmatieteenlaitos.fi/avalanche-forecast",
+          "fi": "https://www.ilmatieteenlaitos.fi/lumivyoryennuste",
+          "sv": "https://sv.ilmatieteenlaitos.fi/lavinprognos",
+          "api": "https://cdn.fmi.fi/apps/avalanche-forecast/show-map.php?lang=en",
+          "facebook": "https://www.facebook.com/fmibeta",
+          "twitter": "https://twitter.com/meteorologit",
+          "youtube": "https://www.youtube.com/user/ilmatieteenlaitos",
+          "flickr": "https://www.flickr.com/photos/ilmatieteenlaitos/",
+          "linkedin": "https://www.linkedin.com/company/finnish-meteorological-institute"
+        }
+      }
+    ]
+  },
+  {
+    "id": "FR",
+    "aws": [
+      {
+        "name": "Meteo France",
+        "url": {
+          "fr": "https://meteofrance.com/meteo-montagne",
+          "api": "https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain={region}&report_type=Forecast&report_subtype=BRA",
+          "facebook": "https://www.facebook.com/MeteoFrance/",
+          "twitter": "https://twitter.com/meteofrance",
+          "instagram": "https://www.instagram.com/meteofrance/",
+          "youtube": "https://www.youtube.com/channel/UCnBToLuuyq7Qn5j7e5BRhaw"
+        }
+      }
+    ]
+  },
+  {
+    "id": "GB",
+    "aws": [
+      {
+        "name": "SAIS",
+        "url": {
+          "en": "https://www.sais.gov.uk",
+          "api": "https://www.sais.gov.uk/api?action=getForecast",
+          "mail": "mailto:co-ordinator@sais.gov.uk",
+          "facebook": "https://www.facebook.com/ScottishAvalancheInformationService",
+          "twitter": "https://twitter.com/coordinatorsais",
+          "youtube": "https://www.youtube.com/channel/UC8OSabw8CKChlYpPXzeZ5wQ"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IS",
+    "aws": [
+      {
+        "name": "IMO",
+        "url": {
+          "en": "https://en.vedur.is/avalanches/forecast/",
+          "is": "https://www.vedur.is/",
+          "api": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=en",
+          "api:is": "https://xmlweather.vedur.is/avalanche?op=xml&type=status&lang=is",
+          "facebook": "https://www.facebook.com/Vedurstofan",
+          "twitter": "https://twitter.com/vedurstofan/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-21",
+    "aws": [
+      {
+        "name": "AINEVA Piemonte",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-23",
+    "aws": [
+      {
+        "name": "AINEVA Valle d'Aosta",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-25-SO-LI",
+    "aws": [
+      {
+        "name": "ALPSOLUT",
+        "url": {
+          "en": "https://www.livigno.eu/en/avalanche-bulletin",
+          "it": "https://www.livigno.eu/bollettino-valanghe",
+          "api": "https://www.livigno.eu/en/avalanche-bulletin",
+          "mail": "mailto:monti@alpsolut.eu",
+          "facebook": "https://www.facebook.com/alpsolut.eu"
+        }
+      },
+      {
+        "name": "AINEVA",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-25",
+    "aws": [
+      {
+        "name": "AINEVA Lombardia",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-32-BZ",
+    "aws": [
+      {
+        "name": "AINEVA Provinz Bozen / Provincia Bolzano",
+        "url": {
+          "en": "https://avalanche.report",
+          "de": "https://lawinen.report",
+          "it": "https://valanghe.report",
+          "oc": "https://oc.avalanche.report",
+          "ca": "https://ca.avalanche.report",
+          "es": "https://es.avalanche.report",
+          "fr": "https://fr.avalanche.report",
+          "api": "https://static.avalanche.report/bulletins/latest/IT-32-BZ_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-BZ_{lang}_CAAMLv6.json",
+          "telegram:de": "https://t.me/lawinenwarndienst_suedtirol",
+          "telegram:it": "https://t.me/servizio_valanghe_alto_adige",
+          "telegram:en": "https://t.me/aws_south_tyrol",
+          "facebook": "https://www.facebook.com/Lawinenwarndienst-S%C3%BCdtirol-Servizio-Prevenzione-Valanghe-Alto-Adige-577952379288951/"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-32-TN",
+    "aws": [
+      {
+        "name": "AINEVA Trentino",
+        "url": {
+          "en": "https://avalanche.report",
+          "de": "https://lawinen.report",
+          "it": "https://valanghe.report",
+          "oc": "https://oc.avalanche.report",
+          "ca": "https://ca.avalanche.report",
+          "es": "https://es.avalanche.report",
+          "fr": "https://fr.avalanche.report",
+          "api": "https://static.avalanche.report/bulletins/latest/IT-32-TN_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-TN_{lang}_CAAMLv6.json",
+          "telegram:de": "https://t.me/lawinenwarndienst_trentino",
+          "telegram:it": "https://t.me/servizio_valanghe_trento",
+          "telegram:en": "https://t.me/avalanche_warning_service_trento",
+          "facebook": "https://www.facebook.com/Servizio-Prevenzione-Valanghe-Trentino-353994245173831/"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-34",
+    "aws": [
+      {
+        "name": "AINEVA Veneto",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-36",
+    "aws": [
+      {
+        "name": "AINEVA Friuli Venezia Giulia",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-42",
+    "aws": [
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-45",
+    "aws": [
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-52",
+    "aws": [
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-57",
+    "aws": [
+      {
+        "name": "AINEVA Marche",
+        "url": {
+          "en": "https://bollettini-en.aineva.it",
+          "it": "https://bollettini.aineva.it",
+          "de": "https://bollettini-de.aineva.it",
+          "es": "https://bollettini-es.aineva.it",
+          "fr": "https://bollettini-fr.aineva.it",
+          "oc": "https://bollettini-oc.aineva.it",
+          "ca": "https://bollettini-ca.aineva.it",
+          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+        }
+      },
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-65",
+    "aws": [
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      },
+      {
+        "name": "METEOMONT Esercito",
+        "url": {
+          "it": "https://www.meteomont.org/BOLLETTINI/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-77",
+    "aws": [
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "IT-82",
+    "aws": [
+      {
+        "name": "METEOMONT Carabinieri",
+        "url": {
+          "en": "https://meteomont.carabinieri.it/home?lang=en",
+          "it": "https://meteomont.carabinieri.it/home?lang=it",
+          "api": "https://servizimeteomont.csifa.carabinieri.it/api/meteomontweb/previsioni/getprevisionivalanghe/data?data={date}",
+          "mail": "mailto:meteomont@carabinieri.it",
+          "facebook": "https://www.facebook.com/carabinieri.it",
+          "instagram": "https://www.instagram.com/armadeicarabinieri/?hl=en",
+          "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
+        }
+      }
+    ]
+  },
+  {
+    "id": "LI",
+    "aws": [
+      {
+        "name": "SLF",
+        "url": {
+          "en": "https://whiterisk.ch/en/conditions",
+          "de": "https://whiterisk.ch/de/conditions",
+          "fr": "https://whiterisk.ch/fr/conditions",
+          "it": "https://whiterisk.ch/it/conditions",
+          "mail": "mailto:bulletin@slf.ch",
+          "facebook": "https://www.facebook.com/whiterisk/",
+          "twitter": "https://twitter.com/wsl_research",
+          "instagram": "https://www.instagram.com/whiteriskslf/?hl=de",
+          "youtube": "https://www.youtube.com/user/WSLForschung"
+        }
+      }
+    ]
+  },
+  {
+    "id": "NO",
+    "aws": [
+      {
+        "name": "NVE",
+        "url": {
+          "en": "https://www.varsom.no/en/avalanches/avalanche-warnings/",
+          "no": "https://www.varsom.no/snoskred/varsling/",
+          "api": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.0/api/AvalancheWarningByRegion/Detail/{region}/2/",
+          "api:no": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.0/api/AvalancheWarningByRegion/Detail/{region}/1/",
+          "mail": "mailto:snoskredvarsling@nve.no",
+          "facebook": "https://www.facebook.com/Snoskredvarsling"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL-12",
+    "aws": [
+      {
+        "name": "Tatrańskie OPR",
+        "url": {
+          "en": "https://lawiny.topr.pl/",
+          "pl": "https://lawiny.topr.pl",
+          "api": "https://lawiny.topr.pl/",
+          "mail": "mailto:topr@topr.pl",
+          "facebook": "https://www.facebook.com/1909.topr/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "PL",
+    "aws": [
+      {
+        "name": "Górskie OPR",
+        "url": {
+          "en": "https://www.gopr.pl/en/avalanches",
+          "pl": "https://www.gopr.pl/lawiny",
+          "api": "https://www.gopr.pl/lawiny/{region}",
+          "mail": "mailto:lawiny@gopr.pl"
+        }
+      }
+    ]
+  },
+  {
+    "id": "RO",
+    "aws": [
+      {
+        "name": "ANM",
+        "url": {
+          "ro": "https://www.meteoromania.ro/Upload-Produse/nivologie/nivologie.pdf",
+          "api": "https://www.meteoromania.ro/Upload-Produse/nivologie/nivologie.pdf",
+          "mail": "mailto:nivologie.sibiu@meteoromania.ro"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SE",
+    "aws": [
+      {
+        "name": "Naturvårdsverket",
+        "url": {
+          "en": "https://lavinprognoser.se/en/",
+          "se": "https://lavinprognoser.se/",
+          "api": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;",
+          "api:date": "https://nvgis.naturvardsverket.se/geoserver/lavinprognoser/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=lavinprognoser:published_forecasts&outputformat=application/json&viewparams=lang:sv;valid_date:{date}",
+          "mail": "mailto:lavinprongoser@naturvardsverket.se",
+          "facebook": "https://sv-se.facebook.com/Lavinprognoser/",
+          "instagram": "https://www.instagram.com/lavinprognoser/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SI",
+    "aws": [
+      {
+        "name": "ARSO METEO",
+        "url": {
+          "si": "https://vreme.arso.gov.si/plazovi",
+          "api": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml",
+          "mail": "mailto:plaz.arso@gov.si",
+          "facebook": "https://www.facebook.com/ArsoVreme/",
+          "twitter": "https://twitter.com/meteoSI"
+        }
+      }
+    ]
+  },
+  {
+    "id": "SK",
+    "aws": [
+      {
+        "name": "SLP+HZS",
+        "url": {
+          "en": "https://avalanches.sk/",
+          "sk": "https://laviny.sk/",
+          "api": "https://static.laviny.sk/bulletins/latest/{lang}_CAAMLv6_2022.json",
+          "api:date": "https://static.laviny.sk/bulletins/{date}/{date}_{lang}_CAAMLv6_2022.json",
+          "mail": "mailto:slp@hzs.sk",
+          "facebook": "https://www.facebook.com/laviny.sk/",
+          "instagram": "https://www.instagram.com/laviny.sk/",
+          "youtube": "https://www.youtube.com/user/lavinyHZS"
+        }
+      }
+    ]
+  },
+  {
+    "id": "UA",
+    "aws": [
+      {
+        "name": "Ukrainian Hydrometeorological Center",
+        "url": {
+          "en": "https://www.meteo.gov.ua/en/Sniholavinni-poperedzhennya",
+          "ua": "https://www.meteo.gov.ua/ua/Sniholavinni-poperedzhennya",
+          "api": "https://www.meteo.gov.ua/en/_attns-snigo.json",
+          "mail": "mailto:hydro@meteo.gov.ua",
+          "facebook": "https://www.facebook.com/lavyny.official/"
+        }
+      }
+    ]
+  }
+]
