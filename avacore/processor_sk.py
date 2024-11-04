@@ -1,17 +1,18 @@
 """
-    Copyright (C) 2022 Friedrich Mütschele and other contributors
-    This file is part of pyAvaCore.
-    pyAvaCore is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-    pyAvaCore is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.
-    You should have received a copy of the GNU General Public License
-    along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
+Copyright (C) 2022 Friedrich Mütschele and other contributors
+This file is part of pyAvaCore.
+pyAvaCore is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+pyAvaCore is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
+
 import copy
 import json
 
@@ -71,9 +72,7 @@ class Processor(JsonProcessor):
             elif "Snehová pokrývka" in description["heading"]:
                 snowpackStructure.comment = description["text"]
             elif "Krátkodobý vývoj" in description["heading"]:
-                common_bulletin.tendency = [
-                    Tendency(comment=description["text"])
-                ]
+                common_bulletin.tendency = [Tendency(comment=description["text"])]
 
         common_bulletin.avalancheActivity = avalancheActivity
         common_bulletin.snowpackStructure = snowpackStructure
