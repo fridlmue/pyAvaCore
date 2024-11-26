@@ -21,7 +21,8 @@
       {
         "name": "LWD Kärnten",
         "url": {
-          "de": "https://lawine-kaernten.at",
+          "de": "https://lawinenwarndienst.ktn.gv.at",
+          "en": "https://lawinenwarndienst.ktn.gv.at/lawinenwarnung/avalanchebulletin-en",
           "api": "https://www.avalanche-warnings.eu/public/kaernten/caaml",
           "api:en": "https://www.avalanche-warnings.eu/public/kaernten/caaml/en",
           "mail": "mailto:lawine@ktn.gv.at",
