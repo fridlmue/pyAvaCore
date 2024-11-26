@@ -42,7 +42,9 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_ad.Processor()
     if region_id.startswith("CH"):
         return avacore.processor_caamlv6.Processor()
-    if region_id.startswith("AT-07"):
+    if region_id.startswith("AT"):
+        return avacore.processor_caamlv6.Processor()
+    if region_id.startswith("DE-BY"):
         return avacore.processor_caamlv6.Processor()
     if region_id.startswith("IT-32-BZ"):
         return avacore.processor_caamlv6.Processor()
