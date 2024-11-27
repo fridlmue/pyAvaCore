@@ -19,6 +19,7 @@ import argparse
 import json
 import logging
 import logging.handlers
+import socket
 import datetime as dt
 from datetime import datetime, timedelta
 from io import BytesIO
@@ -272,6 +273,7 @@ def merge_json_files(validity_date: str, suffix: str, json_key: str):
 
 
 def main():
+    socket.setdefaulttimeout(13)
     init_logging()
     download_regions()
     for date_string in parse_dates(args.date or args.merge_dates):

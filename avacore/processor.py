@@ -46,7 +46,7 @@ class Processor(ABC):
         if not req.has_header("User-Agent"):
             req.add_header("User-Agent", "gitlab.com/albina-euregio/pyAvaCore")
         logging.info("Fetching %s", req.full_url)
-        with urllib.request.urlopen(req, timeout=13) as response:
+        with urllib.request.urlopen(req) as response:
             return response.read().decode(encoding=self.raw_data_encoding)
 
 
