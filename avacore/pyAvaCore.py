@@ -95,7 +95,7 @@ class BulletinProvider:
         if len(aws) != 1:
             raise ValueError()
         urls = aws[0]["url"]
-        url = urls["api.date"] if date else urls.get(f"api.{lang}", urls["api"])
+        url = urls["api:date"] if date else urls.get(f"api:{lang}", urls["api"])
         url = url.format(
             date=date or datetime.today().date(),
             lang=lang,
