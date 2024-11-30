@@ -324,8 +324,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -361,8 +361,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -396,8 +396,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -427,8 +427,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -516,8 +516,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -553,8 +553,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -641,8 +641,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{lang}.xml",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{lang}.xml"
+          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       },
       {

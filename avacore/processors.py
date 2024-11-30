@@ -46,9 +46,11 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_caamlv6.Processor()
     if region_id.startswith("DE-BY"):
         return avacore.processor_caamlv6.Processor()
-    if region_id.startswith("IT-32-BZ"):
-        return avacore.processor_caamlv6.Processor()
-    if region_id.startswith("IT-32-TN"):
+    if region_id.startswith("IT-25-SO-LI"):
+        return avacore.processor_it_livigno.Processor()
+    if region_id.startswith("IT-MeteoMont"):
+        return avacore.processor_it_meteomont.Processor()
+    if region_id.startswith("IT"):
         return avacore.processor_caamlv6.Processor()
     if region_id.startswith("CZ"):
         return avacore.processor_cz.Processor()
@@ -70,10 +72,6 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_uk.Processor()
     if region_id.startswith("IS"):
         return avacore.processor_is.Processor()
-    if region_id.startswith("IT-25-SO-LI"):
-        return avacore.processor_it_livigno.Processor()
-    if region_id.startswith("IT-MeteoMont"):
-        return avacore.processor_it_meteomont.Processor()
     if region_id.startswith("NO"):
         return avacore.processor_norway.Processor()
     if region_id.startswith("PL-12"):
