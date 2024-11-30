@@ -1,0 +1,31 @@
+{
+  "avalancheProblems": {
+    "IT-Livigno": [
+      "wind_slab"
+    ],
+    "IT-Livigno:am": [
+      "wind_slab"
+    ],
+    "IT-Livigno:high": [
+      "wind_slab"
+    ],
+    "IT-Livigno:high:am": [
+      "wind_slab"
+    ],
+    "IT-Livigno:high:pm": [
+      "wind_slab"
+    ],
+    "IT-Livigno:low": [
+      "wind_slab"
+    ],
+    "IT-Livigno:low:am": [
+      "wind_slab"
+    ],
+    "IT-Livigno:low:pm": [
+      "wind_slab"
+    ],
+    "IT-Livigno:pm": [
+      "wind_slab"
+    ]
+  }
+}

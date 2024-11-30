@@ -1,0 +1,56 @@
+{
+  "bulletins": [
+    {
+      "avalancheProblems": [
+        {
+          "problemType": "wind_slab"
+        }
+      ],
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2024-12-01"
+        }
+      },
+      "dangerRatings": [
+        {
+          "elevation": {
+            "lowerBound": "treeline"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "lowerBound": "treeline",
+            "upperBound": "treeline"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "elevation": {
+            "upperBound": "treeline"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "regions": [
+        {
+          "name": "Livigno",
+          "regionID": "IT-Livigno"
+        }
+      ],
+      "source": {
+        "provider": {
+          "name": "ALPSOLUT",
+          "website": "https://www.livigno.eu/en/avalanche-bulletin"
+        }
+      },
+      "validTime": {
+        "endTime": "2024-12-01T23:59:59",
+        "startTime": "2024-12-01T00:00:00"
+      }
+    }
+  ]
+}

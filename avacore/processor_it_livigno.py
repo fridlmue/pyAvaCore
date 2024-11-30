@@ -39,7 +39,7 @@ class Processor(HtmlProcessor):
         bulletin = AvaBulletin()
         bulletin.regions = [Region(regionID=region_id, name="Livigno")]
         time = re.search(
-            r'<div class="dataBollettino">.*?(?P<day>\d+)<sup>th</sup>.*(?P<month>[A-Z]{3}) (?P<year>\d+)</div>',
+            r'<div class="dataBollettino">.*?(?P<day>\d+)<sup>(st|nd|rd|th)</sup>.*(?P<month>[A-Z]{3}) (?P<year>\d+)</div>',
             html,
         )
         bulletin.validTime.startTime = datetime(

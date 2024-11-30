@@ -145,6 +145,11 @@ class TestAll(SnowTest):
         bulletins = self._test_processor(processor, "IT-Livigno")
         self.assertEqual("2022-12-18", bulletins.main_date().isoformat())
 
+    def test_it_livigno_2024(self):
+        processor = avacore.processor_it_livigno.Processor()
+        bulletins = self._test_processor(processor, "IT-Livigno")
+        self.assertEqual("2024-12-01", bulletins.main_date().isoformat())
+
     def test_it_meteomont(self):
         processor = avacore.processor_it_meteomont.Processor()
         processor.add_eaws_id = True
