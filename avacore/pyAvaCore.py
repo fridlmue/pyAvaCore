@@ -100,6 +100,7 @@ class BulletinProvider:
             date=date or datetime.today().date(),
             lang=lang,
             region=region_id,
+            micro_region="{micro_region}",  # set in some processors
         )
         website = urls.get(
             lang, next(url for (la, url) in urls.items() if len(la) == 2)

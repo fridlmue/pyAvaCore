@@ -38,7 +38,7 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         if region_id == "NO":
             return self.process_all_reports_no()
-        url = self.url.format(region=region_id[3:])
+        url = self.url.format(micro_region=region_id[3:])
         headers = {"Content-Type": "application/json; charset=utf-8"}
         varsom_report = self._fetch_json(url, headers=headers)
         return self.parse_json(region_id, varsom_report)

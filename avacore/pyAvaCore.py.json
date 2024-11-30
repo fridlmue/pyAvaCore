@@ -270,7 +270,7 @@
         "name": "Meteo France",
         "url": {
           "fr": "https://meteofrance.com/meteo-montagne",
-          "api": "https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain={region}&report_type=Forecast&report_subtype=BRA",
+          "api": "https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain={micro_region}&report_type=Forecast&report_subtype=BRA",
           "facebook": "https://www.facebook.com/MeteoFrance/",
           "twitter": "https://twitter.com/meteofrance",
           "instagram": "https://www.instagram.com/meteofrance/",
@@ -743,8 +743,8 @@
         "url": {
           "en": "https://www.varsom.no/en/avalanches/avalanche-warnings/",
           "no": "https://www.varsom.no/snoskred/varsling/",
-          "api": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.0/api/AvalancheWarningByRegion/Detail/{region}/2/",
-          "api:no": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.0/api/AvalancheWarningByRegion/Detail/{region}/1/",
+          "api": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.0/api/AvalancheWarningByRegion/Detail/{micro_region}/2/",
+          "api:no": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.0/api/AvalancheWarningByRegion/Detail/{micro_region}/1/",
           "mail": "mailto:snoskredvarsling@nve.no",
           "facebook": "https://www.facebook.com/Snoskredvarsling"
         }
@@ -774,7 +774,7 @@
         "url": {
           "en": "https://www.gopr.pl/en/avalanches",
           "pl": "https://www.gopr.pl/lawiny",
-          "api": "https://www.gopr.pl/lawiny/{region}",
+          "api": "https://www.gopr.pl/lawiny/{micro_region}",
           "mail": "mailto:lawiny@gopr.pl"
         }
       }
