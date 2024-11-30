@@ -23,8 +23,8 @@
         "url": {
           "de": "https://lawinenwarndienst.ktn.gv.at",
           "en": "https://lawinenwarndienst.ktn.gv.at/lawinenwarnung/avalanchebulletin-en",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-02_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-02_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@ktn.gv.at",
           "facebook": "https://www.facebook.com/Lawinenwarndienst-Krnten-182262981858129/"
         }
@@ -38,8 +38,8 @@
         "name": "LWD Niederösterreich",
         "url": {
           "de": "https://www.lawinenwarndienst-niederoesterreich.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-03_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-03_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lwd@lawinenwarndienst-niederoesterreich.at"
         }
       }
@@ -52,8 +52,8 @@
         "name": "LWD Oberösterreich",
         "url": {
           "de": "https://oberoesterreich.avalanche-warnings.eu",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-04_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-04_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawinenwarndienst.post@ooe.gv.at",
           "facebook": "https://www.facebook.com/lawinenwarndienst.oberosterreich/",
           "twitter": "https://twitter.com/lwdooe"
@@ -69,8 +69,8 @@
         "url": {
           "en": "https://lawine.salzburg.at/en",
           "de": "https://lawine.salzburg.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-05_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-05_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@salzburg.gv.at",
           "facebook": "https://www.facebook.com/LWDSalzburg/",
           "twitter": "https://twitter.com/LWDSalzburg"
@@ -85,8 +85,8 @@
         "name": "LWD Steiermark",
         "url": {
           "de": "https://www.lawine-steiermark.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-06_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-06_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@lawine-steiermark.at",
           "facebook": "https://www.facebook.com/LawinenwarndienstSteiermark/"
         }
@@ -106,8 +106,8 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/AT-07_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_AT-07_{lang}_CAAMLv6.json",
+          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@tirol.gv.at",
           "telegram:de": "https://t.me/lawinenwarndienst_tirol",
           "telegram:it": "https://t.me/servizio_valanghe_tirolo",
@@ -127,8 +127,8 @@
         "url": {
           "en": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_en.html",
           "de": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_de.html",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-08_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-08_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawinenwarndienst@lwz-vorarlberg.at",
           "facebook": "https://www.facebook.com/lwzvorarlberg/",
           "twitter": "https://twitter.com/lwzvorarlberg",
@@ -177,8 +177,8 @@
         "name": "LWD Bayern",
         "url": {
           "de": "https://lawinenwarndienst.bayern.de/",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/DE-BY_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_DE-BY_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawinenwarnzentrale@lfu.bayern.de",
           "facebook": "https://www.facebook.com/lawinenwarndienst.bayern/"
         }
@@ -198,8 +198,8 @@
           "it": "https://lauegi.report/it",
           "fr": "https://lauegi.report/fr",
           "de": "https://lauegi.report/de",
-          "api": "https://static.lauegi.report/albina_files/latest/ES-CT-L_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lauegi.report/albina_files/{date}/{date}_ES-CT-L_{lang}_CAAMLv6.json",
+          "api": "https://static.lauegi.report/albina_files/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lauegi.report/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lauegi@aran.org",
           "facebook": "https://www.facebook.com/centrelauegiaran",
           "twitter": "https://twitter.com/lauegi",
@@ -458,8 +458,8 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/IT-32-BZ_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-BZ_{lang}_CAAMLv6.json",
+          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "telegram:de": "https://t.me/lawinenwarndienst_suedtirol",
           "telegram:it": "https://t.me/servizio_valanghe_alto_adige",
           "telegram:en": "https://t.me/aws_south_tyrol",
@@ -487,8 +487,8 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/IT-32-TN_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-TN_{lang}_CAAMLv6.json",
+          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "telegram:de": "https://t.me/lawinenwarndienst_trentino",
           "telegram:it": "https://t.me/servizio_valanghe_trento",
           "telegram:en": "https://t.me/avalanche_warning_service_trento",
@@ -833,8 +833,8 @@
         "url": {
           "en": "https://avalanches.sk/",
           "sk": "https://laviny.sk/",
-          "api": "https://static.laviny.sk/bulletins/latest/{lang}_CAAMLv6_2022.json",
-          "api:date": "https://static.laviny.sk/bulletins/{date}/{date}_{lang}_CAAMLv6_2022.json",
+          "api": "https://static.laviny.sk/bulletins/latest/{region}_{lang}_CAAMLv6_2022.json",
+          "api:date": "https://static.laviny.sk/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6_2022.json",
           "mail": "mailto:slp@hzs.sk",
           "facebook": "https://www.facebook.com/laviny.sk/",
           "instagram": "https://www.instagram.com/laviny.sk/",

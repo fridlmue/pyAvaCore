@@ -99,7 +99,7 @@ class BulletinProvider:
         url = url.format(
             date=date or datetime.today().date(),
             lang=lang,
-            region="{region}",
+            region=region_id,
         )
         website = urls.get(
             lang, next(url for (la, url) in urls.items() if len(la) == 2)
