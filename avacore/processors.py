@@ -18,8 +18,6 @@ import avacore.processor_ad
 import avacore.processor_caamlv5
 import avacore.processor_caamlv6
 import avacore.processor_catalunya
-import avacore.processor_ch
-import avacore.processor_ch_zip
 import avacore.processor_cz
 import avacore.processor_es
 import avacore.processor_fi
@@ -32,7 +30,6 @@ import avacore.processor_pl
 import avacore.processor_pl_12
 import avacore.processor_ro
 import avacore.processor_se
-import avacore.processor_sk
 import avacore.processor_ua
 import avacore.processor_uk
 
@@ -88,4 +85,4 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_caamlv6.Processor2022()
     if region_id.startswith("UA"):
         return avacore.processor_ua.Processor()
-    return avacore.processor_caamlv5.Processor()
+    raise ValueError
