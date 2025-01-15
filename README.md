@@ -48,6 +48,7 @@ options:
   --protect-overwrite-now TIMESTAMP
                         exclude bulletins prior the given timestamp
   --output OUTPUT       output directory
+  --log LOG             directory for log files
   --geojson GEOJSON     eaws-regions directory containing *micro-regions_elevation.geojson.json of
   --cli CLI             print output to cli? [y]es, [n]o or [o]nly to cli ([o] will not write files)
 ```
@@ -57,6 +58,7 @@ In default configuration, pyAvaCore will fetch the bulletins for all supported r
 The regions to fetch can be limited with the `--regions` parameter. Multiple regions can be entered delimited by space. E. g. `python -m avacore --regions AT-02 IT-57` will fetch the bulletins for AT-02 and IT-57 only.
 
 The files are written to `./data` by default the folder can be adjusted by setting the `--output ./subfolder/of/choice`.
+The log files are written to `./logs` by default the folder can be adjusted by setting the `--log ./subfolder/of/choice`.
 
 A CLI output of the bulletin can be generated with the `--cli` parameter. Default is `n`, which gives no CLI output. With `y` a CLI output is generated in addition to the JSON files. With `o`, only the cli output is generated but no JSON files are written.
 
