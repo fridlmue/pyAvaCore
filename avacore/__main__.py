@@ -114,6 +114,12 @@ parser.add_argument(
     help="output directory",
 )
 parser.add_argument(
+    "--log",
+    default=Path("./logs"),
+    type=Path,
+    help="output directory for logs",
+)
+parser.add_argument(
     "--geojson",
     type=Path,
     help="eaws-regions directory containing *micro-regions_elevation.geojson.json of",
@@ -134,6 +140,7 @@ class CliArgs:
     merge_dates: str
     merge_regions: str
     output: Path
+    log: Path
     protect_overwrite_now: str
     regions: str
 
@@ -141,15 +148,16 @@ class CliArgs:
 args = parser.parse_args(namespace=CliArgs)
 
 
-def init_logging(filename="logs/pyAvaCore.log"):
+def init_logging(filename="pyAvaCore.log"):
     """Initialize the logging system"""
-    Path(filename).parent.mkdir(parents=True, exist_ok=True)
+    log_path = args.log / filename
+    log_path.parent.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(
         format="[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s",
         level=logging.INFO,
         handlers=[
             logging.handlers.TimedRotatingFileHandler(
-                filename=filename, when="midnight"
+                filename=log_path, when="midnight"
             ),
             logging.StreamHandler(),
         ],
