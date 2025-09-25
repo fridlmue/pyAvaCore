@@ -44,7 +44,7 @@ deploy:
   dependencies:
     - zipapp
   before_script:
-    - apk add openssh-client
+    - apk add openssl openssh-client
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh && chmod 700 ~/.ssh
