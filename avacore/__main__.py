@@ -150,17 +150,22 @@ args = parser.parse_args(namespace=CliArgs)
 
 def init_logging(filename="pyAvaCore.log"):
     """Initialize the logging system"""
-    log_path = args.log / filename
-    log_path.parent.mkdir(parents=True, exist_ok=True)
+    handlers = [
+        logging.StreamHandler(),
+    ]
+    if args.log:
+        log_path = args.log / filename
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        handlers.append(
+            logging.handlers.TimedRotatingFileHandler(
+                filename=log_path,
+                when="midnight",
+            ),
+        )
     logging.basicConfig(
         format="[%(asctime)s] {%(module)s:%(lineno)d} %(levelname)s - %(message)s",
         level=logging.INFO,
-        handlers=[
-            logging.handlers.TimedRotatingFileHandler(
-                filename=log_path, when="midnight"
-            ),
-            logging.StreamHandler(),
-        ],
+        handlers=handlers,
     )
 
 
