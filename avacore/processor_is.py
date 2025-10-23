@@ -37,7 +37,7 @@ class Processor(XmlProcessor):
         Processes downloaded report
         """
         common_report = AvaBulletin()
-        tzinfo = ZoneInfo("Iceland")
+        tzinfo = ZoneInfo("Atlantic/Reykjavik")
 
         conditions = root.find("conditions")
         common_report.travelAdvisory = Texts(
