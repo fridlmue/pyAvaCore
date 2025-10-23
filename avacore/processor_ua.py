@@ -84,7 +84,7 @@ class Processor(JsonProcessor):
         Builds the CAAML JSONs form the original JSON formats.
         """
 
-        tzinfo = ZoneInfo("Europe/Kiev")
+        tzinfo = ZoneInfo("Europe/Kyiv")
         bulletins = Bulletins()
         for obj in (j for i in root["OBJ"] for j in i):
             publicationTime = datetime.strptime(root["UPD"], "%d.%m.%Y, %H:%M")
