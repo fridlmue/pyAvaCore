@@ -1,2 +1,10 @@
 [tool.ruff]
 lint.ignore = ["E501", "E722"]
+
+[dependency-groups]
+dev = [
+    "jsonschema",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
