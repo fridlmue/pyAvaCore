@@ -79,26 +79,25 @@ class Root(TypedDict):
 
 
 class Processor(JsonProcessor):
-    tz = ZoneInfo("Europe/Kiev")
-
     def parse_json(self, region_id, root: Root) -> Bulletins:
         """
         Builds the CAAML JSONs form the original JSON formats.
         """
 
+        tzinfo = ZoneInfo("Europe/Kiev")
         bulletins = Bulletins()
         for obj in (j for i in root["OBJ"] for j in i):
             publicationTime = datetime.strptime(root["UPD"], "%d.%m.%Y, %H:%M")
-            publicationTime = publicationTime.replace(tzinfo=self.tz)
+            publicationTime = publicationTime.replace(tzinfo=tzinfo)
             for a in obj["A"]:
                 [start, end] = a["P"].split(" &mdash; ")
                 fmt = "%d.%m, %H:%M" if "," in start else "%d.%m %H:%M"
                 startTime = datetime.strptime(start, fmt)
-                startTime = startTime.replace(year=publicationTime.year, tzinfo=self.tz)
+                startTime = startTime.replace(year=publicationTime.year, tzinfo=tzinfo)
                 if len(end) < 8:
                     end = start.split()[0] + " " + end
                 endTime = datetime.strptime(end, fmt)
-                endTime = endTime.replace(year=publicationTime.year, tzinfo=self.tz)
+                endTime = endTime.replace(year=publicationTime.year, tzinfo=tzinfo)
                 while startTime < endTime:
                     startTime2359 = startTime.replace(hour=23, minute=59, second=0)
                     bulletin = AvaBulletin(
