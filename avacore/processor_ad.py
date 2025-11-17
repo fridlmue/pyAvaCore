@@ -52,7 +52,7 @@ class Processor(XmlProcessor):
             local_bulletin = copy.deepcopy(bulletin)
             local_bulletin.regions.append(Region(ad_ids[geopos.attrib["id"]]))
             local_bulletin.bulletinID = (
-                f'{ad_ids[geopos.attrib["id"]]}_{bulletin.publicationTime}'
+                f"{ad_ids[geopos.attrib['id']]}_{bulletin.publicationTime}"
             )
 
             for neige in geopos.iter("neige"):

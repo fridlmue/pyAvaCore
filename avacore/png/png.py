@@ -268,7 +268,7 @@ def check_palette(palette):
         for x in t:
             if int(x) != x or not (0 <= x <= 255):
                 raise ProtocolError(
-                    "palette entry %d: " "values must be integer: 0 <= x <= 255" % i
+                    "palette entry %d: values must be integer: 0 <= x <= 255" % i
                 )
     return p
 
