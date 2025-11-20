@@ -817,7 +817,8 @@
         "name": "ARSO METEO",
         "url": {
           "si": "https://vreme.arso.gov.si/plazovi",
-          "api": "https://meteo.arso.gov.si/uploads/probase/www/avalanche/text/sl/bulletinAvalanche.xml",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:plaz.arso@gov.si",
           "facebook": "https://www.facebook.com/ArsoVreme/",
           "twitter": "https://twitter.com/meteoSI"

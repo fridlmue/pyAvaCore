@@ -63,6 +63,7 @@ class Bulletins:
                 bulletin.source.provider = Provider()
             bulletin.source.provider.name = provider_name
             bulletin.source.provider.website = website
+            bulletin.source.person = None
 
     def append_main_date(self):
         for bulletin in self.bulletins:

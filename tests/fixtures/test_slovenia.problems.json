@@ -1,109 +1,331 @@
 {
   "avalancheProblems": {
-    "SI1": [
+    "SI-1": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-10": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-10:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-10:high": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-10:high:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-10:high:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-10:low": [],
+    "SI-10:low:am": [],
+    "SI-10:low:pm": [],
+    "SI-10:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-11": [
+      "new_snow"
+    ],
+    "SI-11:am": [
+      "new_snow"
+    ],
+    "SI-11:high": [
+      "new_snow"
+    ],
+    "SI-11:high:am": [
+      "new_snow"
+    ],
+    "SI-11:high:pm": [
+      "new_snow"
+    ],
+    "SI-11:low": [],
+    "SI-11:low:am": [],
+    "SI-11:low:pm": [],
+    "SI-11:pm": [
+      "new_snow"
+    ],
+    "SI-13": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-13:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-13:high": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-13:high:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-13:high:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-13:low": [],
+    "SI-13:low:am": [],
+    "SI-13:low:pm": [],
+    "SI-13:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-15": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-15:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-15:high": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-15:high:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-15:high:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-15:low": [],
+    "SI-15:low:am": [],
+    "SI-15:low:pm": [],
+    "SI-15:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-16": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-16:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-16:high": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-16:high:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-16:high:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-16:low": [],
+    "SI-16:low:am": [],
+    "SI-16:low:pm": [],
+    "SI-16:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-1:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-1:high": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-1:high:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-1:high:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-1:low": [],
+    "SI-1:low:am": [],
+    "SI-1:low:pm": [],
+    "SI-1:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-2": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-2:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-2:high": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-2:high:am": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-2:high:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-2:low": [],
+    "SI-2:low:am": [],
+    "SI-2:low:pm": [],
+    "SI-2:pm": [
+      "new_snow",
+      "new_snow"
+    ],
+    "SI-3": [
+      "new_snow"
+    ],
+    "SI-3:am": [
+      "new_snow"
+    ],
+    "SI-3:high": [
+      "new_snow"
+    ],
+    "SI-3:high:am": [
+      "new_snow"
+    ],
+    "SI-3:high:pm": [
+      "new_snow"
+    ],
+    "SI-3:low": [],
+    "SI-3:low:am": [],
+    "SI-3:low:pm": [],
+    "SI-3:pm": [
+      "new_snow"
+    ],
+    "SI-4": [
+      "new_snow"
+    ],
+    "SI-4:am": [
+      "new_snow"
+    ],
+    "SI-4:high": [
+      "new_snow"
+    ],
+    "SI-4:high:am": [
+      "new_snow"
+    ],
+    "SI-4:high:pm": [
+      "new_snow"
+    ],
+    "SI-4:low": [],
+    "SI-4:low:am": [],
+    "SI-4:low:pm": [],
+    "SI-4:pm": [
+      "new_snow"
+    ],
+    "SI-6": [
+      "new_snow"
+    ],
+    "SI-6:am": [
+      "new_snow"
+    ],
+    "SI-6:high": [
+      "new_snow"
+    ],
+    "SI-6:high:am": [
+      "new_snow"
+    ],
+    "SI-6:high:pm": [
+      "new_snow"
+    ],
+    "SI-6:low": [],
+    "SI-6:low:am": [],
+    "SI-6:low:pm": [],
+    "SI-6:pm": [
+      "new_snow"
+    ],
+    "SI-7": [
+      "persistent_weak_layers",
+      "new_snow",
       "wind_slab"
     ],
-    "SI1:am": [
+    "SI-7:am": [
+      "persistent_weak_layers",
+      "new_snow",
       "wind_slab"
     ],
-    "SI1:high": [
+    "SI-7:high": [
+      "persistent_weak_layers",
+      "new_snow",
       "wind_slab"
     ],
-    "SI1:high:am": [
+    "SI-7:high:am": [
+      "persistent_weak_layers",
+      "new_snow",
       "wind_slab"
     ],
-    "SI1:high:pm": [
+    "SI-7:high:pm": [
+      "persistent_weak_layers",
+      "new_snow",
       "wind_slab"
     ],
-    "SI1:low": [],
-    "SI1:low:am": [],
-    "SI1:low:pm": [],
-    "SI1:pm": [
+    "SI-7:low": [],
+    "SI-7:low:am": [],
+    "SI-7:low:pm": [],
+    "SI-7:pm": [
+      "persistent_weak_layers",
+      "new_snow",
       "wind_slab"
     ],
-    "SI2": [
-      "wind_slab"
+    "SI-8": [
+      "new_snow",
+      "new_snow"
     ],
-    "SI2:am": [
-      "wind_slab"
+    "SI-8:am": [
+      "new_snow",
+      "new_snow"
     ],
-    "SI2:high": [
-      "wind_slab"
+    "SI-8:high": [
+      "new_snow",
+      "new_snow"
     ],
-    "SI2:high:am": [
-      "wind_slab"
+    "SI-8:high:am": [
+      "new_snow",
+      "new_snow"
     ],
-    "SI2:high:pm": [
-      "wind_slab"
+    "SI-8:high:pm": [
+      "new_snow",
+      "new_snow"
     ],
-    "SI2:low": [],
-    "SI2:low:am": [],
-    "SI2:low:pm": [],
-    "SI2:pm": [
-      "wind_slab"
+    "SI-8:low": [],
+    "SI-8:low:am": [],
+    "SI-8:low:pm": [],
+    "SI-8:pm": [
+      "new_snow",
+      "new_snow"
     ],
-    "SI3": [
-      "wind_slab"
+    "SI-9": [
+      "new_snow"
     ],
-    "SI3:am": [
-      "wind_slab"
+    "SI-9:am": [
+      "new_snow"
     ],
-    "SI3:high": [
-      "wind_slab"
+    "SI-9:high": [
+      "new_snow"
     ],
-    "SI3:high:am": [
-      "wind_slab"
+    "SI-9:high:am": [
+      "new_snow"
     ],
-    "SI3:high:pm": [
-      "wind_slab"
+    "SI-9:high:pm": [
+      "new_snow"
     ],
-    "SI3:low": [],
-    "SI3:low:am": [],
-    "SI3:low:pm": [],
-    "SI3:pm": [
-      "wind_slab"
-    ],
-    "SI4": [
-      "wind_slab"
-    ],
-    "SI4:am": [
-      "wind_slab"
-    ],
-    "SI4:high": [
-      "wind_slab"
-    ],
-    "SI4:high:am": [
-      "wind_slab"
-    ],
-    "SI4:high:pm": [
-      "wind_slab"
-    ],
-    "SI4:low": [],
-    "SI4:low:am": [],
-    "SI4:low:pm": [],
-    "SI4:pm": [
-      "wind_slab"
-    ],
-    "SI5": [
-      "wind_slab"
-    ],
-    "SI5:am": [
-      "wind_slab"
-    ],
-    "SI5:high": [
-      "wind_slab"
-    ],
-    "SI5:high:am": [
-      "wind_slab"
-    ],
-    "SI5:high:pm": [
-      "wind_slab"
-    ],
-    "SI5:low": [],
-    "SI5:low:am": [],
-    "SI5:low:pm": [],
-    "SI5:pm": [
-      "wind_slab"
+    "SI-9:low": [],
+    "SI-9:low:am": [],
+    "SI-9:low:pm": [],
+    "SI-9:pm": [
+      "new_snow"
     ]
   }
 }

@@ -147,14 +147,8 @@ class TestAll(SnowTest):
         processor = avacore.processor_caamlv6.Processor2022()
         self._test_processor(processor, "SK")
 
-    def test_slovenia_2023(self):
-        processor = avacore.processor_caamlv5.SloveniaProcessor()
-        processor.today = datetime.date(2023, 1, 9)
-        self._test_processor(processor, "SI")
-
     def test_slovenia(self):
-        processor = avacore.processor_caamlv5.SloveniaProcessor()
-        processor.today = datetime.date(2021, 3, 20)
+        processor = avacore.processor_caamlv6.Processor()
         self._test_processor(processor, "SI")
 
     def test_sweden_2022_12(self):
