@@ -115,8 +115,7 @@ parser.add_argument(
 )
 parser.add_argument(
     "--log",
-    default=Path("./logs"),
-    type=Path,
+    default="./logs",
     help="output directory for logs",
 )
 parser.add_argument(
@@ -140,7 +139,7 @@ class CliArgs:
     merge_dates: str
     merge_regions: str
     output: Path
-    log: Path
+    log: str
     protect_overwrite_now: str
     regions: str
 
@@ -154,7 +153,7 @@ def init_logging(filename="pyAvaCore.log"):
         logging.StreamHandler(),
     ]
     if args.log:
-        log_path = args.log / filename
+        log_path = Path(args.log) / filename
         log_path.parent.mkdir(parents=True, exist_ok=True)
         handlers.append(
             logging.handlers.TimedRotatingFileHandler(
