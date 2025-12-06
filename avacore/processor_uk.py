@@ -23,7 +23,6 @@ from avacore.avabulletin import (
     Region,
     Texts,
 )
-from avacore.avabulletin import AvalancheProblemType
 from avacore.avabulletins import Bulletins
 from avacore.processor import JsonProcessor
 
@@ -69,31 +68,29 @@ class Processor(JsonProcessor):
 
             problems = int(sais_report["KeyIcons"])
 
-            problem = AvalancheProblem()
-
             if problems & (1 << 1):
                 problem = AvalancheProblem()
-                problem.problemType = AvalancheProblemType.wind_slab
+                problem.problemType = "wind_slab"
                 report.avalancheProblems.append(problem)
             if problems & (1 << 2):
                 problem = AvalancheProblem()
-                problem.problemType = AvalancheProblemType.persistent_weak_layers
+                problem.problemType = "persistent_weak_layers"
                 report.avalancheProblems.append(problem)
             if problems & (1 << 3):
                 problem = AvalancheProblem()
-                problem.problemType = AvalancheProblemType.new_snow
+                problem.problemType = "new_snow"
                 report.avalancheProblems.append(problem)
             if problems & (1 << 4):
                 problem = AvalancheProblem()
-                problem.problemType = AvalancheProblemType.wet_snow
+                problem.problemType = "wet_snow"
                 report.avalancheProblems.append(problem)
             if problems & (1 << 5):
                 problem = AvalancheProblem()
-                problem.problemType = AvalancheProblemType.cornices
+                problem.problemType = "cornices"
                 report.avalancheProblems.append(problem)
             if problems & (1 << 6):
                 problem = AvalancheProblem()
-                problem.problemType = AvalancheProblemType.gliding_snow
+                problem.problemType = "gliding_snow"
                 report.avalancheProblems.append(problem)
 
             danger_ratings_raw = sais_report["CompassRose"][4:36]
