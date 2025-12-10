@@ -38,8 +38,8 @@
         "name": "LWD Niederösterreich",
         "url": {
           "de": "https://www.lawinenwarndienst-niederoesterreich.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-03_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-03_{lang}_CAAMLv6.json",
           "mail": "mailto:lwd@lawinenwarndienst-niederoesterreich.at"
         }
       }
@@ -52,8 +52,8 @@
         "name": "LWD Oberösterreich",
         "url": {
           "de": "https://oberoesterreich.avalanche-warnings.eu",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-04_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-04_{lang}_CAAMLv6.json",
           "mail": "mailto:lawinenwarndienst.post@ooe.gv.at",
           "facebook": "https://www.facebook.com/lawinenwarndienst.oberosterreich/",
           "twitter": "https://twitter.com/lwdooe"
@@ -69,8 +69,8 @@
         "url": {
           "en": "https://lawine.salzburg.at/en",
           "de": "https://lawine.salzburg.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-05_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-05_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@salzburg.gv.at",
           "facebook": "https://www.facebook.com/LWDSalzburg/",
           "twitter": "https://twitter.com/LWDSalzburg"
@@ -85,8 +85,8 @@
         "name": "LWD Steiermark",
         "url": {
           "de": "https://www.lawine-steiermark.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-06_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-06_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@lawine-steiermark.at",
           "facebook": "https://www.facebook.com/LawinenwarndienstSteiermark/"
         }
@@ -106,12 +106,15 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.avalanche.report/bulletins/latest/AT-07_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_AT-07_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@tirol.gv.at",
           "telegram:de": "https://t.me/lawinenwarndienst_tirol",
           "telegram:it": "https://t.me/servizio_valanghe_tirolo",
           "telegram:en": "https://t.me/avalanche_warning_service_tirol",
+          "whatsapp:de": "https://whatsapp.com/channel/0029Vb9EFivJUM2ShOiocj3h",
+          "whatsapp:it": "https://whatsapp.com/channel/0029VbAybBt8vd1XOKzGPN2S",
+          "whatsapp:en": "https://whatsapp.com/channel/0029Vb5ry3RDOQIZDZuS3p26",
           "facebook": "https://www.facebook.com/lawinenwarndienst/",
           "instagram": "https://www.instagram.com/lawinenwarndienst_tirol/",
           "youtube": "https://www.youtube.com/channel/UC3H4Xqv_wfHajvogV3ooYdQ"
@@ -127,8 +130,8 @@
         "url": {
           "en": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_en.html",
           "de": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_de.html",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-08_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-08_{lang}_CAAMLv6.json",
           "mail": "mailto:lawinenwarndienst@lwz-vorarlberg.at",
           "facebook": "https://www.facebook.com/lwzvorarlberg/",
           "twitter": "https://twitter.com/lwzvorarlberg",
@@ -177,8 +180,8 @@
         "name": "LWD Bayern",
         "url": {
           "de": "https://lawinenwarndienst.bayern.de/",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lawinen-warnung.eu/bulletins/latest/DE-BY_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_DE-BY_{lang}_CAAMLv6.json",
           "mail": "mailto:lawinenwarnzentrale@lfu.bayern.de",
           "facebook": "https://www.facebook.com/lawinenwarndienst.bayern/"
         }
@@ -211,8 +214,8 @@
           "it": "https://lauegi.report/it",
           "fr": "https://lauegi.report/fr",
           "de": "https://lauegi.report/de",
-          "api": "https://static.lauegi.report/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lauegi.report/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.lauegi.report/albina_files/latest/ES-CT-L_{lang}_CAAMLv6.json",
+          "api:date": "https://static.lauegi.report/albina_files/{date}/{date}_ES-CT-L_{lang}_CAAMLv6.json",
           "mail": "mailto:lauegi@aran.org",
           "facebook": "https://www.facebook.com/centrelauegiaran",
           "twitter": "https://twitter.com/lauegi",
@@ -337,8 +340,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-21_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-21_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -374,8 +377,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-23_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-23_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -409,8 +412,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-25-SO-LI_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-25-SO-LI_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -440,8 +443,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-25_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-25_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -471,8 +474,11 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.avalanche.report/bulletins/latest/IT-32-BZ_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-BZ_{lang}_CAAMLv6.json",
+          "whatsapp:de": "https://whatsapp.com/channel/0029VbBQNt9GzzKZNXIFjG0S",
+          "whatsapp:it": "https://whatsapp.com/channel/0029VbBFSLlFCCoSZm1c2U0e",
+          "whatsapp:en": "https://whatsapp.com/channel/0029Vb67QJ87T8bOx9dwAz06",
           "telegram:de": "https://t.me/lawinenwarndienst_suedtirol",
           "telegram:it": "https://t.me/servizio_valanghe_alto_adige",
           "telegram:en": "https://t.me/aws_south_tyrol",
@@ -500,12 +506,13 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.avalanche.report/bulletins/latest/IT-32-TN_{lang}_CAAMLv6.json",
+          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-TN_{lang}_CAAMLv6.json",
           "telegram:de": "https://t.me/lawinenwarndienst_trentino",
           "telegram:it": "https://t.me/servizio_valanghe_trento",
           "telegram:en": "https://t.me/avalanche_warning_service_trento",
-          "facebook": "https://www.facebook.com/Servizio-Prevenzione-Valanghe-Trentino-353994245173831/"
+          "facebook": "https://www.facebook.com/@meteoTNprotciv",
+          "instagram": "https://www.instagram.com/meteotrentino/"
         }
       },
       {
@@ -529,8 +536,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-34_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-34_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -566,8 +573,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-36_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-36_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -654,8 +661,8 @@
           "fr": "https://bollettini-fr.aineva.it",
           "oc": "https://bollettini-oc.aineva.it",
           "ca": "https://bollettini-ca.aineva.it",
-          "api": "https://bollettini.aineva.it/albina_files/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+          "api": "https://bollettini.aineva.it/albina_files/latest/IT-57_{lang}_CAAMLv6.json",
+          "api:date": "https://bollettini.aineva.it/albina_files/{date}/{date}_IT-57_{lang}_CAAMLv6.json"
         }
       },
       {
@@ -829,7 +836,8 @@
       {
         "name": "ARSO METEO",
         "url": {
-          "si": "https://vreme.arso.gov.si/plazovi",
+          "si": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/bulletin/",
+          "en": "https://meteo.arso.gov.si/met/en/weather/bulletin/mountain/avalanche/bulletin/",
           "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
           "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:plaz.arso@gov.si",
@@ -847,8 +855,8 @@
         "url": {
           "en": "https://avalanches.sk/",
           "sk": "https://laviny.sk/",
-          "api": "https://static.laviny.sk/bulletins/latest/{region}_{lang}_CAAMLv6_2022.json",
-          "api:date": "https://static.laviny.sk/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6_2022.json",
+          "api": "https://static.laviny.sk/bulletins/latest/{lang}_CAAMLv6_2022.json",
+          "api:date": "https://static.laviny.sk/bulletins/{date}/{date}_{lang}_CAAMLv6_2022.json",
           "mail": "mailto:slp@hzs.sk",
           "facebook": "https://www.facebook.com/laviny.sk/",
           "instagram": "https://www.instagram.com/laviny.sk/",
