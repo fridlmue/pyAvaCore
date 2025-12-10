@@ -104,7 +104,7 @@
       "source": {
         "provider": {
           "name": "ARSO METEO",
-          "website": "https://vreme.arso.gov.si/plazovi"
+          "website": "https://meteo.arso.gov.si/met/en/weather/bulletin/mountain/avalanche/bulletin/"
         }
       },
       "tendency": [
@@ -225,7 +225,7 @@
       "source": {
         "provider": {
           "name": "ARSO METEO",
-          "website": "https://vreme.arso.gov.si/plazovi"
+          "website": "https://meteo.arso.gov.si/met/en/weather/bulletin/mountain/avalanche/bulletin/"
         }
       },
       "tendency": [
@@ -321,7 +321,7 @@
       "source": {
         "provider": {
           "name": "ARSO METEO",
-          "website": "https://vreme.arso.gov.si/plazovi"
+          "website": "https://meteo.arso.gov.si/met/en/weather/bulletin/mountain/avalanche/bulletin/"
         }
       },
       "tendency": [
