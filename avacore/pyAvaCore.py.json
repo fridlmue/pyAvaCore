@@ -186,6 +186,19 @@
     ]
   },
   {
+    "id": "ES-AR",
+    "aws": [
+      {
+        "name": "Aragon",
+        "url": {
+          "es": "https://aludes.aragon.es/",
+          "api": "https://static-aludes.aragon.es/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static-aludes.aragon.es/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json"
+        }
+      }
+    ]
+  },
+  {
     "id": "ES-CT-L",
     "aws": [
       {

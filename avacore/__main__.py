@@ -41,6 +41,7 @@ default_regions = [
     "CH",
     "CZ",
     "DE-BY",
+    "ES-AR",
     "ES-CT-L",
     "ES-CT",
     "ES",
