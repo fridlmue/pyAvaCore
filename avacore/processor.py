@@ -105,3 +105,11 @@ class HtmlProcessor(Processor):
         """
         Builds the CAAML JSONs form the original HTML formats.
         """
+
+
+class TextProcessor(Processor):
+    @abstractmethod
+    def parse_text(self, region_id, text: str) -> Bulletins:
+        """
+        Builds the CAAML JSONs form the text formats.
+        """

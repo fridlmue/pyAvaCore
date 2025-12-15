@@ -22,13 +22,16 @@ from io import BytesIO
 
 from avacore.avabulletin import AvaBulletin, Region, Texts, ValidTime
 from avacore.avabulletins import Bulletins
-from avacore.processor import Processor as AbstractProcessor
+from avacore.processor import TextProcessor
 
 
-class Processor(AbstractProcessor):
+class Processor(TextProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         self._fetch_pdf()
         text = self._convert_to_text()
+        self.parse_text(region_id, text)
+
+    def parse_text(self, region_id, text: str) -> Bulletins:
         matches = [
             datetime.datetime.strptime(s, "%d.%m.%Y ora %H")
             for s in re.findall(r"\d{2}\.\d{2}\.20\d{2} ora \d{2}", text)
