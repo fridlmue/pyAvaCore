@@ -1,16 +1,22 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
 
 # https://hub.docker.com/r/library/python/tags/
-image: python:3.9
+
+.python:
+  image: ghcr.io/astral-sh/uv:python3.9-alpine
+  before_script:
+    - python --version
+    - uv --version
+    - uv sync
+  variables:
+    UV_LINK_MODE: copy
 
 unittest:
+  extends: .python
   stage: test
   script:
-    - python -V
-    - pip install pytest pytest-cov jsonschema
-    - pip install --requirement requirements.txt
-    - pytest --junitxml=report.xml --cov=avacore tests/
-    - coverage xml
+    - uv run pytest --junitxml=report.xml --cov=avacore tests/
+    - uv run coverage xml
   artifacts:
     when: always
     reports:
@@ -20,17 +26,15 @@ unittest:
         path: coverage.xml
 
 ruff:
+  extends: .python
   stage: test
   script:
-    - python -V
-    - pip install --requirement requirements.txt
-    - pip install ruff
-    - ruff check avacore
+    - uv run ruff check avacore
 
 zipapp:
+  extends: .python
   stage: test
   script:
-    - python -V
     - python -m zipapp --help
     - python -m zipfile -c pyAvaCore.pyz avacore/ __main__.py
     - python pyAvaCore.pyz --help
@@ -39,8 +43,8 @@ zipapp:
       - pyAvaCore.pyz
 
 deploy:
+  extends: .python
   stage: deploy
-  image: alpine:latest
   dependencies:
     - zipapp
   before_script:

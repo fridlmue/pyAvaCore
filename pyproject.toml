@@ -1,3 +1,18 @@
+[project]
+authors = [
+    {name="Friedrich Mütschele"},
+    {name="Simon Legner"},
+]
+description = "Library to download and parse EAWS avalanche bulletins"
+license = "GPL-3.0-or-later"
+name = "pyAvaCore"
+readme = "README.md"
+requires-python = ">=3.9"
+version = "0.1.0"
+
+[project.urls]
+Homepage = "https://gitlab.com/albina-euregio/pyAvaCore"
+
 [tool.ruff]
 lint.ignore = ["E501", "E722"]
 
