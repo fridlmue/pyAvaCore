@@ -21,7 +21,11 @@ It is also used as parser for the mobile app ["avaRisk"](https://github.com/frid
 
 ## Dependencies
 
-As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["requirements.txt"](requirements.txt). Python 3.9 is the current Python target version. On Windows, please install the package `tzdata`.
+As on some target platforms the number of available Python dependencies is limited, the project aims to work with minimal external dependencies. The dependencies can be found in the ["pyproject.toml"](pyproject.toml). Python 3.9 is the current Python target version. On Windows, please install the package `tzdata`.
+
+## Contributing
+
+Install [uv](https://docs.astral.sh/uv/). Run `uv sync`.
 
 ## CLI Parameters
 
