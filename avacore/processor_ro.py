@@ -20,12 +20,22 @@ import subprocess
 import urllib.request
 from io import BytesIO
 
-from avacore.avabulletin import AvaBulletin, Region, Texts, ValidTime
+from avacore.avabulletin import AvaBulletin, DangerRating, Region, Texts, ValidTime
 from avacore.avabulletins import Bulletins
 from avacore.processor import TextProcessor
 
 
 class Processor(TextProcessor):
+    regions = {
+        "RO-1": "Rodnei",
+        "RO-2": "Călimani-Bistriței",
+        "RO-3": "Bucegi",
+        "RO-4": "Făgăraș",
+        "RO-5": "Parâng-Șureanu",
+        "RO-6": "Țarcu-Godeanu",
+        "RO-7": "Vlădeasa",
+    }
+
     def process_bulletin(self, region_id) -> Bulletins:
         self._fetch_pdf()
         text = self._convert_to_text()
@@ -36,13 +46,22 @@ class Processor(TextProcessor):
             datetime.datetime.strptime(s, "%d.%m.%Y ora %H")
             for s in re.findall(r"\d{2}\.\d{2}\.20\d{2} ora \d{2}", text)
         ]
-        bulletin = AvaBulletin(
-            avalancheActivity=Texts(comment=text),
-            lang="ro",
-            regions=[Region(regionID="RO")],
-            validTime=ValidTime(startTime=matches[0], endTime=matches[1]),
-        )
-        return Bulletins(bulletins=[bulletin])
+        bulletins: list[AvaBulletin] = []
+        for regionID, name in self.regions.items():
+            t = re.search(name.upper() + r".*\n\nRISC (?P<mainValue>\d)", text)
+            bulletin = AvaBulletin(
+                avalancheActivity=Texts(comment=text),
+                lang="ro",
+                regions=[Region(regionID=regionID, name=name)],
+                validTime=ValidTime(startTime=matches[0], endTime=matches[1]),
+                dangerRatings=[
+                    DangerRating().set_mainValue_int(int(t.group("mainValue")))
+                ]
+                if t
+                else [],
+            )
+            bulletins.append(bulletin)
+        return Bulletins(bulletins=bulletins)
 
     def _fetch_pdf(self) -> None:
         with urllib.request.urlopen(self.url) as response:
