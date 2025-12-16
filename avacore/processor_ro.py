@@ -39,7 +39,7 @@ class Processor(TextProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         self._fetch_pdf()
         text = self._convert_to_text()
-        self.parse_text(region_id, text)
+        return self.parse_text(region_id, text)
 
     def parse_text(self, region_id, text: str) -> Bulletins:
         matches = [
