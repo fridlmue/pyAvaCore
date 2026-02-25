@@ -20,9 +20,11 @@ from avacore.avabulletin import (
     AvaBulletin,
     DangerRating,
     AvalancheProblem,
+    Elevation,
     Region,
     Texts,
 )
+
 from avacore.avabulletins import Bulletins
 from avacore.processor import JsonProcessor
 
@@ -66,32 +68,17 @@ class Processor(JsonProcessor):
             report.avalancheActivity = avalancheActivity
             report.snowpackStructure = snowpackStructure
 
-            problems = int(sais_report["KeyIcons"])
+            problems = sais_report["avalancheProblems"]
+            for problem in problems:
+                prob = AvalancheProblem()
+                prob.problemType = problem["problemType"]
+                prob.elevation = Elevation(
+                    lowerBound=problem["elevation"],
+                    upperBound=None,
+                )
+                prob.aspects = problem["aspects"]
+                report.avalancheProblems.append(prob)
 
-            if problems & (1 << 1):
-                problem = AvalancheProblem()
-                problem.problemType = "wind_slab"
-                report.avalancheProblems.append(problem)
-            if problems & (1 << 2):
-                problem = AvalancheProblem()
-                problem.problemType = "persistent_weak_layers"
-                report.avalancheProblems.append(problem)
-            if problems & (1 << 3):
-                problem = AvalancheProblem()
-                problem.problemType = "new_snow"
-                report.avalancheProblems.append(problem)
-            if problems & (1 << 4):
-                problem = AvalancheProblem()
-                problem.problemType = "wet_snow"
-                report.avalancheProblems.append(problem)
-            if problems & (1 << 5):
-                problem = AvalancheProblem()
-                problem.problemType = "cornices"
-                report.avalancheProblems.append(problem)
-            if problems & (1 << 6):
-                problem = AvalancheProblem()
-                problem.problemType = "gliding_snow"
-                report.avalancheProblems.append(problem)
 
             danger_ratings_raw = sais_report["CompassRose"][4:36]
 
