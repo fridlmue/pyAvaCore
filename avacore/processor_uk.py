@@ -79,62 +79,113 @@ class Processor(JsonProcessor):
                 prob.aspects = problem["aspects"]
                 report.avalancheProblems.append(prob)
 
+            """ 
+                build danger ratings
 
-            danger_ratings_raw = sais_report["CompassRose"][4:36]
+                "dangerRatings":[
+                    "dangerRating" : {
+                        "validTimePeriod": "all_day",
+                        "mainValue": [ "low", "moderate", "considerable", "high", "very_high", "no_snow", "no_rating" ],
+                        "elevation": {
+                            "lowerBound": "integer in meters",
+                            "upperBound": "integer in meters"
+                        },
+                        "aspects": array : [ "N", "NE", "E", "SE", "S", "SW", "W", "NW", "n/a" ],
+                    }
+                ]
+            """
 
-            boundary_group = re.search(
-                r"(?<=txtm\=)(.)*?(?=\&txte)", sais_report["CompassRose"]
-            )
-            boundary = boundary_group.group(
-                0
-            )  # No content if no different ratings for elevations
+            # danger rating values for enum
+            drVal = ["n/a", "low", "moderate", "considerable", "high", "very_high", "no_snow", "no_rating"]
+            # get data for all values on compass rose
+            cpData = sais_report["CompassRose"][4:36]
 
-            filter_lw = [True, False, False, False] * 8
-            filter_hi = [False, True, False, False] * 8
+            # get lower bounds and upper bounds
+            cpBoundsRE = re.search("txts\\=([0-9]*)&txtm\\=([0-9]*)&txte\\=([0-9]*)", sais_report["CompassRose"])
+            cpBounds = []
 
-            danger_ratings_hi = list(
-                d for d, s in zip(danger_ratings_raw, filter_hi) if s
-            )
-            danger_ratings_lw = list(
-                d for d, s in zip(danger_ratings_raw, filter_lw) if s
-            )
-
-            aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
-
-            if (
-                max(danger_ratings_hi) == min(danger_ratings_hi)
-                and max(danger_ratings_lw) == min(danger_ratings_lw)
-                and max(danger_ratings_hi) == max(danger_ratings_lw)
-            ):
-                danger_rating = DangerRating()
-                danger_rating.set_mainValue_int(int(max(danger_ratings_lw)))
-                report.dangerRatings.append(danger_rating)
+            if cpBoundsRE.groups()[1] == "":
+                # if there is no medium text value then there is only one bound and we will only look at outer layer data
+                cpBounds.append({       # just Outer layer
+                    "lowerBound": str(cpBoundsRE.groups()[0]),
+                    "upperBound": str(cpBoundsRE.groups()[2])
+                })
             else:
-                for rating in sorted(set(danger_ratings_hi)):
-                    aspect_list = []
-                    for idx, aspect in enumerate(aspects):
-                        if danger_ratings_hi[idx] == rating:
-                            aspect_list.append(aspect)
+                # two bounds exist outer layer and inner layer
+                cpBounds.append({       # Outer layer
+                    "lowerBound": str(cpBoundsRE.groups()[0]),
+                    "upperBound": str(cpBoundsRE.groups()[1])
+                })
+                cpBounds.append({       # Inner layer
+                    "lowerBound": str(cpBoundsRE.groups()[1]),
+                    "upperBound": str(cpBoundsRE.groups()[2])
+                })
 
-                    danger_rating = DangerRating()
-                    danger_rating.set_mainValue_int(int(rating))
-                    danger_rating.elevation.lowerBound = boundary
-                    danger_rating.customData = {"SAIS": {"aspects": aspect_list}}
-                    # danger_rating.aspect = aspect_list
-                    report.dangerRatings.append(danger_rating)
+            #Outer layer data
+            groupDanger = {"low" : [], "moderate": [], "considerable": [], "high": [], "very_high": []}
+            if cpData[0]!=0:        # North Outer layer
+                groupDanger[drVal[int(cpData[0])]].append("N")
+            if cpData[4]!=0:        # North East Outer layer
+                groupDanger[drVal[int(cpData[4])]].append("NE")
+            if cpData[8]!=0:        # East Outer layer
+                groupDanger[drVal[int(cpData[8])]].append("E")
+            if cpData[12]!=0:        # South East Outer layer
+                groupDanger[drVal[int(cpData[12])]].append("SE")
+            if cpData[16]!=0:        # South Outer layer
+                groupDanger[drVal[int(cpData[16])]].append("S")
+            if cpData[20]!=0:        # South West Outer layer
+                groupDanger[drVal[int(cpData[20])]].append("SW")
+            if cpData[24]!=0:        # West Outer layer
+                groupDanger[drVal[int(cpData[24])]].append("W")
+            if cpData[28]!=0:        # North West Outer layer
+                groupDanger[drVal[int(cpData[28])]].append("NW")
 
-                for rating in sorted(set(danger_ratings_lw)):
-                    aspect_list = []
-                    for idx, aspect in enumerate(aspects):
-                        if danger_ratings_lw[idx] == rating:
-                            aspect_list.append(aspect)
+            for group in groupDanger:
+                if len(groupDanger[group])>0:
+                    # there are identified dangers so create the dangerRating
+                    drMain = DangerRating()
+                    drMain.validTimePeriod = "all_day"
+                    drMain.mainValue = group
+                    drMain.elevation = Elevation(
+                        lowerBound = cpBounds[0]["lowerBound"],
+                        upperBound = cpBounds[0]["upperBound"],
+                    )
+                    drMain.aspects = groupDanger[group]
+                    report.dangerRatings.append(drMain)
+            
+            if len(cpBounds)>1:
+                # add inner layer in case there are more bounds
+                # Inner layer data
+                groupDanger = {"low" : [], "moderate": [], "considerable": [], "high": [], "very_high": []}
+                if cpData[1]!=0:        # North Inner layer
+                    groupDanger[drVal[int(cpData[1])]].append("N")
+                if cpData[5]!=0:        # North East Inner layer
+                    groupDanger[drVal[int(cpData[5])]].append("NE")
+                if cpData[9]!=0:        # East Inner layer
+                    groupDanger[drVal[int(cpData[9])]].append("E")
+                if cpData[13]!=0:        # South East Inner layer
+                    groupDanger[drVal[int(cpData[13])]].append("SE")
+                if cpData[17]!=0:        # South Inner layer
+                    groupDanger[drVal[int(cpData[17])]].append("S")
+                if cpData[21]!=0:        # South West Inner layer
+                    groupDanger[drVal[int(cpData[21])]].append("SW")
+                if cpData[25]!=0:        # West Inner layer
+                    groupDanger[drVal[int(cpData[25])]].append("W")
+                if cpData[29]!=0:        # North West Inner layer
+                    groupDanger[drVal[int(cpData[29])]].append("NW")
 
-                    danger_rating = DangerRating()
-                    danger_rating.set_mainValue_int(int(rating))
-                    danger_rating.elevation.upperBound = boundary
-                    danger_rating.customData = {"SAIS": {"aspects": aspect_list}}
-                    # danger_rating.aspect = aspect_list
-                    report.dangerRatings.append(danger_rating)
+                for group in groupDanger:
+                    if len(groupDanger[group])>0:
+                        # there are identified dangers so create the dangerRating
+                        drMain = DangerRating()
+                        drMain.validTimePeriod = "all_day"
+                        drMain.mainValue = group
+                        drMain.elevation = Elevation(
+                            lowerBound = cpBounds[1]["lowerBound"],
+                            upperBound = cpBounds[1]["upperBound"],
+                        )
+                        drMain.aspects = groupDanger[group]
+                        report.dangerRatings.append(drMain)
 
             reports.append(report)
 
