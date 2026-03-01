@@ -1,34 +1,33 @@
 import datetime
 import io
 from tests import SnowTest
-import avacore.processor
-import avacore.processor_ad
+import avacore.processor_AD
 import avacore.processor_caamlv5
 import avacore.processor_caamlv6
-import avacore.processor_catalunya
-import avacore.processor_cz
-import avacore.processor_es
-import avacore.processor_fi
-import avacore.processor_fr
-import avacore.processor_is
-import avacore.processor_it_livigno
-import avacore.processor_it_meteomont
-import avacore.processor_norway
-import avacore.processor_pl
-import avacore.processor_pl_12
-import avacore.processor_ro
-import avacore.processor_se
-import avacore.processor_ua
-import avacore.processor_uk
+import avacore.processor_ES_CT
+import avacore.processor_CZ
+import avacore.processor_ES
+import avacore.processor_FI
+import avacore.processor_FR
+import avacore.processor_IS
+import avacore.processor_IT_Livigno
+import avacore.processor_IT_MeteoMont
+import avacore.processor_NO
+import avacore.processor_PL
+import avacore.processor_PL_12
+import avacore.processor_RO
+import avacore.processor_SE
+import avacore.processor_UA
+import avacore.processor_GB
 
 
 class TestAll(SnowTest):
     def test_ad(self):
-        processor = avacore.processor_ad.Processor()
+        processor = avacore.processor_AD.Processor()
         self._test_processor(processor, "AD")
 
     def test_ad_2022_12(self):
-        processor = avacore.processor_ad.Processor()
+        processor = avacore.processor_AD.Processor()
         self._test_processor(processor, "AD")
 
     def test_albina_2023_03_14(self):
@@ -71,51 +70,51 @@ class TestAll(SnowTest):
         self._test_processor(processor, "CH")
 
     def test_ct_icgc(self):
-        processor = avacore.processor_catalunya.Processor()
+        processor = avacore.processor_ES_CT.Processor()
         self._test_processor(processor, "ES-CT-L")
 
     def test_cz(self):
-        processor = avacore.processor_cz.Processor()
+        processor = avacore.processor_CZ.Processor()
         self._test_processor(processor, "CZ")
 
     def test_es_am_pm(self):
-        processor = avacore.processor_es.Processor()
+        processor = avacore.processor_ES.Processor()
         self._test_processor(processor, "ES")
 
     def test_es(self):
-        processor = avacore.processor_es.Processor()
+        processor = avacore.processor_ES.Processor()
         self._test_processor(processor, "ES")
 
     def test_fi(self):
-        processor = avacore.processor_fi.Processor()
+        processor = avacore.processor_FI.Processor()
         processor.raw_data = io.BytesIO(self._fixture("png").read_bytes())
         processor.today = datetime.datetime.fromisoformat("2023-02-03T14:08:00")
         self._test_processor(processor, "FI")
 
     def test_france(self):
-        processor = avacore.processor_fr.Processor()
+        processor = avacore.processor_FR.Processor()
         self._test_processor(processor, "FR")
 
     def test_gbsct(self):
-        processor = avacore.processor_uk.Processor()
+        processor = avacore.processor_GB.Processor()
         self._test_processor(processor, "GB")
 
     def test_iceland(self):
-        processor = avacore.processor_is.Processor()
+        processor = avacore.processor_IS.Processor()
         self._test_processor(processor, "IS")
 
     def test_it_livigno(self):
-        processor = avacore.processor_it_livigno.Processor()
+        processor = avacore.processor_IT_Livigno.Processor()
         bulletins = self._test_processor(processor, "IT-Livigno")
         self.assertEqual("2022-12-18", bulletins.main_date().isoformat())
 
     def test_it_livigno_2024(self):
-        processor = avacore.processor_it_livigno.Processor()
+        processor = avacore.processor_IT_Livigno.Processor()
         bulletins = self._test_processor(processor, "IT-Livigno")
         self.assertEqual("2024-12-01", bulletins.main_date().isoformat())
 
     def test_it_meteomont(self):
-        processor = avacore.processor_it_meteomont.Processor()
+        processor = avacore.processor_IT_MeteoMont.Processor()
         processor.add_eaws_id = True
         bulletins = self._test_processor(processor, "IT-MeteoMont")
         self.assertEqual("2022-12-12", bulletins.main_date().isoformat())
@@ -125,22 +124,22 @@ class TestAll(SnowTest):
         )
 
     def test_norway(self):
-        processor = avacore.processor_norway.Processor()
+        processor = avacore.processor_NO.Processor()
         processor.fetch_time_dependant = False
         self._test_processor(processor, "NO-3016")
 
     def test_pl_12_2022_12_01(self):
-        processor = avacore.processor_pl_12.Processor()
+        processor = avacore.processor_PL_12.Processor()
         processor.fetch_time_dependant = False
         self._test_processor(processor, "PL-12")
 
     def test_pl_2018_02_09(self):
-        processor = avacore.processor_pl.Processor()
+        processor = avacore.processor_PL.Processor()
         processor.fetch_time_dependant = False
         self._test_processor(processor, "PL-01")
 
     def test_pl_2019_01_09(self):
-        processor = avacore.processor_pl.Processor()
+        processor = avacore.processor_PL.Processor()
         processor.fetch_time_dependant = False
         self._test_processor(processor, "PL-01")
 
@@ -153,27 +152,27 @@ class TestAll(SnowTest):
         self._test_processor(processor, "SI")
 
     def test_sweden_2022_12(self):
-        processor = avacore.processor_se.Processor()
+        processor = avacore.processor_SE.Processor()
         with self.assertRaises(Exception) as context:
             self._test_processor(processor, "SE")
         self.assertRegex(str(context.exception), "'bulletins' is a required property")
 
     def test_sweden(self):
-        processor = avacore.processor_se.Processor()
+        processor = avacore.processor_SE.Processor()
         self._test_processor(processor, "SE")
 
     def test_ua_2024_01_17(self):
-        processor = avacore.processor_ua.Processor()
+        processor = avacore.processor_UA.Processor()
         self._test_processor(processor, "UA")
 
     def test_ua_2024_01_24(self):
-        processor = avacore.processor_ua.Processor()
+        processor = avacore.processor_UA.Processor()
         self._test_processor(processor, "UA")
 
     def test_ro_2025_03_14(self):
-        processor = avacore.processor_ro.Processor()
+        processor = avacore.processor_RO.Processor()
         self._test_processor(processor, "RO")
 
     def test_ro_2025_12_08(self):
-        processor = avacore.processor_ro.Processor()
+        processor = avacore.processor_RO.Processor()
         self._test_processor(processor, "RO")
