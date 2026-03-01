@@ -13,7 +13,7 @@ You should have received a copy of the GNU General Public License
 along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from avacore.avabulletin import (
@@ -64,11 +64,13 @@ class Processor(JsonProcessor):
             ).replace(tzinfo=tzinfo)
             report.bulletinID = region_id + "_" + str(report.publicationTime)
             report.regions.append(Region(region_id))
-            report.validTime.startTime = datetime.fromisoformat(
-                icgc_report["datavalidesabutlleti"] + "T00:00"
+            report.validTime.startTime = datetime.combine(
+                date.fromisoformat(icgc_report["databutlleti"]) + timedelta(days=1),
+                datetime.min.time(),
             ).replace(tzinfo=tzinfo)
-            report.validTime.endTime = datetime.fromisoformat(
-                icgc_report["datavalidesabutlleti"] + "T23:59"
+            report.validTime.endTime = datetime.combine(
+                date.fromisoformat(icgc_report["datavalidesabutlleti"]),
+                datetime.max.time(),
             ).replace(tzinfo=tzinfo)
 
             report.avalancheActivity = Texts(

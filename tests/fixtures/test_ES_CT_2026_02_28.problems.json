@@ -1,0 +1,265 @@
+{
+  "avalancheProblems": {
+    "ES-CT-L-04": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:am": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:high": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:high:am": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:high:pm": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:low": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:low:am": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:low:pm": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-L-04:pm": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-PA": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:high": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:high:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:high:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:low": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:low:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:low:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PA:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:high": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:high:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:high:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:low": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:low:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:low:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PP:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-PR": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:am": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:high": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:high:am": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:high:pm": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:low": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:low:am": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:low:pm": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-PR:pm": [
+      "gliding_snow",
+      "wind_slab",
+      "wet_snow"
+    ],
+    "ES-CT-RF": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:high": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:high:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:high:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:low": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:low:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:low:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-RF:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:high": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:high:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:high:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:low": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:low:am": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:low:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-TF:pm": [
+      "gliding_snow",
+      "wind_slab"
+    ],
+    "ES-CT-VN": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:am": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:high": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:high:am": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:high:pm": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:low": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:low:am": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:low:pm": [
+      "wind_slab",
+      "gliding_snow"
+    ],
+    "ES-CT-VN:pm": [
+      "wind_slab",
+      "gliding_snow"
+    ]
+  }
+}

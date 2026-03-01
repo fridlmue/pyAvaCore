@@ -69,7 +69,11 @@ class TestAll(SnowTest):
         processor = avacore.processor_caamlv6.Processor()
         self._test_processor(processor, "CH")
 
-    def test_ES_CT_L(self):
+    def test_ES_CT(self):
+        processor = avacore.processor_ES_CT.Processor()
+        self._test_processor(processor, "ES-CT-L")
+
+    def test_ES_CT_2026_02_28(self):
         processor = avacore.processor_ES_CT.Processor()
         self._test_processor(processor, "ES-CT-L")
 
