@@ -26,6 +26,38 @@
       },
       "dangerRatings": [
         {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "700",
+            "upperBound": "800"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "800",
+            "upperBound": "1100"
+          },
           "mainValue": "low",
           "validTimePeriod": "all_day"
         }
@@ -79,6 +111,38 @@
       },
       "dangerRatings": [
         {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "700",
+            "upperBound": "900"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "900",
+            "upperBound": "1200"
+          },
           "mainValue": "low",
           "validTimePeriod": "all_day"
         }
@@ -140,6 +204,38 @@
       },
       "dangerRatings": [
         {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "700",
+            "upperBound": "1000"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1000",
+            "upperBound": "1100"
+          },
           "mainValue": "low",
           "validTimePeriod": "all_day"
         }
@@ -192,6 +288,38 @@
       },
       "dangerRatings": [
         {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "600",
+            "upperBound": "1000"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1000",
+            "upperBound": "1200"
+          },
           "mainValue": "low",
           "validTimePeriod": "all_day"
         }
@@ -254,6 +382,38 @@
       },
       "dangerRatings": [
         {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "700",
+            "upperBound": "1000"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1000",
+            "upperBound": "1200"
+          },
           "mainValue": "low",
           "validTimePeriod": "all_day"
         }
@@ -315,58 +475,49 @@
       },
       "dangerRatings": [
         {
-          "customData": {
-            "SAIS": {
-              "aspects": [
-                "SE",
-                "S",
-                "SW",
-                "W",
-                "NW"
-              ]
-            }
-          },
+          "aspects": [
+            "N",
+            "NE",
+            "E",
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
           "elevation": {
-            "lowerBound": "1000"
-          },
-          "mainValue": "low",
-          "validTimePeriod": "all_day"
-        },
-        {
-          "customData": {
-            "SAIS": {
-              "aspects": [
-                "N",
-                "NE",
-                "E"
-              ]
-            }
-          },
-          "elevation": {
-            "lowerBound": "1000"
-          },
-          "mainValue": "moderate",
-          "validTimePeriod": "all_day"
-        },
-        {
-          "customData": {
-            "SAIS": {
-              "aspects": [
-                "N",
-                "NE",
-                "E",
-                "SE",
-                "S",
-                "SW",
-                "W",
-                "NW"
-              ]
-            }
-          },
-          "elevation": {
+            "lowerBound": "700",
             "upperBound": "1000"
           },
           "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "SE",
+            "S",
+            "SW",
+            "W",
+            "NW"
+          ],
+          "elevation": {
+            "lowerBound": "1000",
+            "upperBound": "1300"
+          },
+          "mainValue": "low",
+          "validTimePeriod": "all_day"
+        },
+        {
+          "aspects": [
+            "N",
+            "NE",
+            "E"
+          ],
+          "elevation": {
+            "lowerBound": "1000",
+            "upperBound": "1300"
+          },
+          "mainValue": "moderate",
           "validTimePeriod": "all_day"
         }
       ],
