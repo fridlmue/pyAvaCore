@@ -723,7 +723,7 @@ class AvaBulletin:
                 print("║ Problem: ", problem.problemType)
 
         print("╟───── Bulletin Texts ─────")
-        if hasattr(self, "highlights"):
+        if hasattr(self, "highlights") and self.highlights is not None:
             self.prettify_out("Highlights: " + self.highlights)
 
         self.print_if_attr_exists("avalancheActivity", "highlights")
