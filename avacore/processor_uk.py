@@ -90,8 +90,6 @@ class Processor(JsonProcessor):
                 "no_snow",
                 "no_rating",
             ]
-            # get data for all values on compass rose
-            cpData = sais_report["CompassRose"][4:36]
 
             # get lower bounds and upper bounds
             cpBoundsRE = re.search(
@@ -123,44 +121,9 @@ class Processor(JsonProcessor):
                     }
                 )
 
-            # Outer layer data
-            groupDanger = {
-                "low": [],
-                "moderate": [],
-                "considerable": [],
-                "high": [],
-                "very_high": [],
-            }
-            if (v := int(cpData[0])) != 0:  # North Outer layer
-                groupDanger[drVal[v]].append("N")
-            if (v := int(cpData[4])) != 0:  # North East Outer layer
-                groupDanger[drVal[v]].append("NE")
-            if (v := int(cpData[8])) != 0:  # East Outer layer
-                groupDanger[drVal[v]].append("E")
-            if (v := int(cpData[12])) != 0:  # South East Outer layer
-                groupDanger[drVal[v]].append("SE")
-            if (v := int(cpData[16])) != 0:  # South Outer layer
-                groupDanger[drVal[v]].append("S")
-            if (v := int(cpData[20])) != 0:  # South West Outer layer
-                groupDanger[drVal[v]].append("SW")
-            if (v := int(cpData[24])) != 0:  # West Outer layer
-                groupDanger[drVal[v]].append("W")
-            if (v := int(cpData[28])) != 0:  # North West Outer layer
-                groupDanger[drVal[v]].append("NW")
-
-            for group, aspects in groupDanger.items():
-                if aspects:
-                    # there are identified dangers so create the dangerRating
-                    drMain = DangerRating()
-                    drMain.validTimePeriod = "all_day"
-                    drMain.mainValue = group
-                    drMain.elevation = Elevation.from_dict(cpBounds[0])
-                    drMain.aspects = aspects
-                    report.dangerRatings.append(drMain)
-
-            if len(cpBounds) > 1:
-                # add inner layer in case there are more bounds
-                # Inner layer data
+            for offset, cpBound in enumerate(cpBounds):
+                # Outer layer data (offset=0, 0,4,8,...,28)
+                # Inner layer data (offset=1, 1,5,9,...,29)
                 groupDanger = {
                     "low": [],
                     "moderate": [],
@@ -168,21 +131,22 @@ class Processor(JsonProcessor):
                     "high": [],
                     "very_high": [],
                 }
-                if (v := int(cpData[1])) != 0:  # North Inner layer
+                cpData = sais_report["CompassRose"][4:36]
+                if (v := int(cpData[offset + 0])) != 0:  # North Outer layer
                     groupDanger[drVal[v]].append("N")
-                if (v := int(cpData[5])) != 0:  # North East Inner layer
+                if (v := int(cpData[offset + 4])) != 0:  # North East Outer layer
                     groupDanger[drVal[v]].append("NE")
-                if (v := int(cpData[9])) != 0:  # East Inner layer
+                if (v := int(cpData[offset + 8])) != 0:  # East Outer layer
                     groupDanger[drVal[v]].append("E")
-                if (v := int(cpData[13])) != 0:  # South East Inner layer
+                if (v := int(cpData[offset + 12])) != 0:  # South East Outer layer
                     groupDanger[drVal[v]].append("SE")
-                if (v := int(cpData[17])) != 0:  # South Inner layer
+                if (v := int(cpData[offset + 16])) != 0:  # South Outer layer
                     groupDanger[drVal[v]].append("S")
-                if (v := int(cpData[21])) != 0:  # South West Inner layer
+                if (v := int(cpData[offset + 20])) != 0:  # South West Outer layer
                     groupDanger[drVal[v]].append("SW")
-                if (v := int(cpData[25])) != 0:  # West Inner layer
+                if (v := int(cpData[offset + 24])) != 0:  # West Outer layer
                     groupDanger[drVal[v]].append("W")
-                if (v := int(cpData[29])) != 0:  # North West Inner layer
+                if (v := int(cpData[offset + 28])) != 0:  # North West Outer layer
                     groupDanger[drVal[v]].append("NW")
 
                 for group, aspects in groupDanger.items():
@@ -191,7 +155,7 @@ class Processor(JsonProcessor):
                         drMain = DangerRating()
                         drMain.validTimePeriod = "all_day"
                         drMain.mainValue = group
-                        drMain.elevation = Elevation.from_dict(cpBounds[1])
+                        drMain.elevation = Elevation.from_dict(cpBound)
                         drMain.aspects = aspects
                         report.dangerRatings.append(drMain)
 
