@@ -13,6 +13,12 @@ version = "0.1.0"
 [project.urls]
 Homepage = "https://gitlab.com/albina-euregio/pyAvaCore"
 
+[tool.setuptools.packages.find]
+include = ["avacore*"]
+
+[tool.setuptools.package-data]
+avacore = ["pyAvaCore.py.json"]
+
 [tool.ruff]
 lint.ignore = ["E501", "E722"]
 
