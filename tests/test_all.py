@@ -109,12 +109,12 @@ class TestAll(SnowTest):
 
     def test_IT_Livigno(self):
         processor = avacore.processor_IT_Livigno.Processor()
-        bulletins = self._test_processor(processor, "IT-Livigno")
+        bulletins = self._test_processor(processor, "IT-25-SO-LI")
         self.assertEqual("2022-12-18", bulletins.main_date().isoformat())
 
     def test_IT_Livigno_2024(self):
         processor = avacore.processor_IT_Livigno.Processor()
-        bulletins = self._test_processor(processor, "IT-Livigno")
+        bulletins = self._test_processor(processor, "IT-25-SO-LI")
         self.assertEqual("2024-12-01", bulletins.main_date().isoformat())
 
     def test_IT_MeteoMont(self):

@@ -1,38 +1,38 @@
 {
   "avalancheProblems": {
-    "IT-Livigno": [
+    "IT-25-SO-LI": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:am": [
+    "IT-25-SO-LI:am": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:high": [
+    "IT-25-SO-LI:high": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:high:am": [
+    "IT-25-SO-LI:high:am": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:high:pm": [
+    "IT-25-SO-LI:high:pm": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:low": [
+    "IT-25-SO-LI:low": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:low:am": [
+    "IT-25-SO-LI:low:am": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:low:pm": [
+    "IT-25-SO-LI:low:pm": [
       "persistent_weak_layers",
       "wind_slab"
     ],
-    "IT-Livigno:pm": [
+    "IT-25-SO-LI:pm": [
       "persistent_weak_layers",
       "wind_slab"
     ]

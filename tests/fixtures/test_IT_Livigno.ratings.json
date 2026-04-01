@@ -1,13 +1,13 @@
 {
   "maxDangerRatings": {
-    "IT-Livigno": 3,
-    "IT-Livigno:am": 3,
-    "IT-Livigno:high": 3,
-    "IT-Livigno:high:am": 3,
-    "IT-Livigno:high:pm": 3,
-    "IT-Livigno:low": 2,
-    "IT-Livigno:low:am": 2,
-    "IT-Livigno:low:pm": 2,
-    "IT-Livigno:pm": 3
+    "IT-25-SO-LI": 3,
+    "IT-25-SO-LI:am": 3,
+    "IT-25-SO-LI:high": 3,
+    "IT-25-SO-LI:high:am": 3,
+    "IT-25-SO-LI:high:pm": 3,
+    "IT-25-SO-LI:low": 2,
+    "IT-25-SO-LI:low:am": 2,
+    "IT-25-SO-LI:low:pm": 2,
+    "IT-25-SO-LI:pm": 3
   }
 }

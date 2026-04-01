@@ -1,30 +1,30 @@
 {
   "avalancheProblems": {
-    "IT-Livigno": [
+    "IT-25-SO-LI": [
       "wind_slab"
     ],
-    "IT-Livigno:am": [
+    "IT-25-SO-LI:am": [
       "wind_slab"
     ],
-    "IT-Livigno:high": [
+    "IT-25-SO-LI:high": [
       "wind_slab"
     ],
-    "IT-Livigno:high:am": [
+    "IT-25-SO-LI:high:am": [
       "wind_slab"
     ],
-    "IT-Livigno:high:pm": [
+    "IT-25-SO-LI:high:pm": [
       "wind_slab"
     ],
-    "IT-Livigno:low": [
+    "IT-25-SO-LI:low": [
       "wind_slab"
     ],
-    "IT-Livigno:low:am": [
+    "IT-25-SO-LI:low:am": [
       "wind_slab"
     ],
-    "IT-Livigno:low:pm": [
+    "IT-25-SO-LI:low:pm": [
       "wind_slab"
     ],
-    "IT-Livigno:pm": [
+    "IT-25-SO-LI:pm": [
       "wind_slab"
     ]
   }

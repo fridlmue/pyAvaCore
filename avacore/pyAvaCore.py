@@ -81,7 +81,7 @@ class BulletinProvider:
         if region_id == "IT-MeteoMont":
             region = ConfigRegion.of_config("IT-21")
             aws_name = "METEOMONT Carabinieri"
-        elif region_id == "IT-Livigno":
+        elif region_id == "IT-25-SO-LI":
             region = ConfigRegion.of_config("IT-25-SO-LI")
             aws_name = "ALPSOLUT"
         else:
