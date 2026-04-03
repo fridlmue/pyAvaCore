@@ -286,7 +286,7 @@
         "name": "Meteo France",
         "url": {
           "fr": "https://meteofrance.com/meteo-montagne",
-          "api": "https://rpcache-aa.meteofrance.com/internet2018client/2.0/report?domain={micro_region}&report_type=Forecast&report_subtype=BRA",
+          "api": "https://rwg.meteofrance.com/gdss/v1/metronome_bra/blob?sort-results-by=-blob_creation_time&blob_filename=BRA_{micro_region}.xml",
           "facebook": "https://www.facebook.com/MeteoFrance/",
           "twitter": "https://twitter.com/meteofrance",
           "instagram": "https://www.instagram.com/meteofrance/",

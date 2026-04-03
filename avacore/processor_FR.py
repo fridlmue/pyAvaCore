@@ -58,7 +58,7 @@ class Processor(XmlProcessor):
     def process_bulletin(self, region_id: str) -> Bulletins:
         if region_id == "FR":
             return self.process_all_reports_fr()
-        url = self.url.format(micro_region=region_id.removeprefix("FR-"))
+        url = self.url.format(micro_region=region_id.removeprefix("FR-").lstrip("0") or "0")
         root = self._fetch_xml(url, {})
         return self.parse_xml(region_id, root)
 
@@ -87,13 +87,23 @@ class Processor(XmlProcessor):
         """
         Process XML file for a region
         """
+        bulletins_node = None
         for bulletins in root.iter(tag="BULLETINS_NEIGE_AVALANCHE"):
-            root = bulletins
+            bulletins_node = bulletins
+
+        if bulletins_node is None:
+            logging.error(
+                f"Could not process region {region_id}: BULLETINS_NEIGE_AVALANCHE tag not found"
+            )
+            return Bulletins()
+
+        root = bulletins_node
 
         report = AvaBulletin()
         reports = Bulletins()
 
         tzinfo = ZoneInfo("Europe/Paris")
+
         report.regions.append(Region("FR-" + root.attrib.get("ID").zfill(2)))
         report.publicationTime = datetime.fromisoformat(
             root.attrib.get("DATEBULLETIN")
