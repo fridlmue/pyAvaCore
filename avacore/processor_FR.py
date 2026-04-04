@@ -87,17 +87,12 @@ class Processor(XmlProcessor):
         """
         Process XML file for a region
         """
-        bulletins_node = None
-        for bulletins in root.iter(tag="BULLETINS_NEIGE_AVALANCHE"):
-            bulletins_node = bulletins
-
-        if bulletins_node is None:
+        root = next(root.iter(tag="BULLETINS_NEIGE_AVALANCHE"), None)
+        if root is None:
             logging.error(
                 f"Could not process region {region_id}: BULLETINS_NEIGE_AVALANCHE tag not found"
             )
             return Bulletins()
-
-        root = bulletins_node
 
         report = AvaBulletin()
         reports = Bulletins()
