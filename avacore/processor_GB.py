@@ -98,28 +98,29 @@ class Processor(JsonProcessor):
             )
             cpBounds = []
 
-            if not cpBoundsRE.group("txtm"):
-                # if there is no medium text value then there is only one bound and we will only look at outer layer data
-                cpBounds.append(
-                    {  # just Outer layer
-                        "lowerBound": round(int(cpBoundsRE.group("txts")), ndigits=-2),
-                        "upperBound": round(int(cpBoundsRE.group("txte")), ndigits=-2),
-                    }
-                )
-            else:
-                # two bounds exist outer layer and inner layer
-                cpBounds.append(
-                    {  # Outer layer
-                        "lowerBound": round(int(cpBoundsRE.group("txts")), ndigits=-2),
-                        "upperBound": round(int(cpBoundsRE.group("txtm")), ndigits=-2),
-                    }
-                )
-                cpBounds.append(
-                    {  # Inner layer
-                        "lowerBound": round(int(cpBoundsRE.group("txtm")), ndigits=-2),
-                        "upperBound": round(int(cpBoundsRE.group("txte")), ndigits=-2),
-                    }
-                )
+            if cpBoundsRE.group("txts")!="":
+                if not cpBoundsRE.group("txtm"):
+                    # if there is no medium text value then there is only one bound and we will only look at outer layer data
+                    cpBounds.append(
+                        {  # just Outer layer
+                            "lowerBound": round(int(cpBoundsRE.group("txts")), ndigits=-2),
+                            "upperBound": round(int(cpBoundsRE.group("txte")), ndigits=-2),
+                        }
+                    )
+                else:
+                    # two bounds exist outer layer and inner layer
+                    cpBounds.append(
+                        {  # Outer layer
+                            "lowerBound": round(int(cpBoundsRE.group("txts")), ndigits=-2),
+                            "upperBound": round(int(cpBoundsRE.group("txtm")), ndigits=-2),
+                        }
+                    )
+                    cpBounds.append(
+                        {  # Inner layer
+                            "lowerBound": round(int(cpBoundsRE.group("txtm")), ndigits=-2),
+                            "upperBound": round(int(cpBoundsRE.group("txte")), ndigits=-2),
+                        }
+                    )
 
             for offset, cpBound in enumerate(cpBounds):
                 # Outer layer data (offset=0, 0,4,8,...,28)
