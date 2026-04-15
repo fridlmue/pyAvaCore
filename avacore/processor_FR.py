@@ -58,7 +58,9 @@ class Processor(XmlProcessor):
     def process_bulletin(self, region_id: str) -> Bulletins:
         if region_id == "FR":
             return self.process_all_reports_fr()
-        url = self.url.format(micro_region=region_id.removeprefix("FR-").lstrip("0") or "0")
+        url = self.url.format(
+            micro_region=region_id.removeprefix("FR-").lstrip("0") or "0"
+        )
         root = self._fetch_xml(url, {})
         return self.parse_xml(region_id, root)
 
