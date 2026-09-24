@@ -72,10 +72,24 @@ class Processor(JsonProcessor):
             for problem in problems:
                 prob = AvalancheProblem()
                 prob.problemType = problem["problemType"]
-                prob.elevation = Elevation(
-                    lowerBound=problem["elevation"],
-                    upperBound=None,
-                )
+
+                if problem["elevation_lower"]!='':
+                    if problem["elevation_upper"]!='':
+                        prob.elevation = Elevation(
+                            lowerBound=problem["elevation_lower"],
+                            upperBound=problem["elevation_upper"],
+                        )
+                    else:
+                        prob.elevation = Elevation(
+                            lowerBound=problem["elevation_lower"],
+                            upperBound=None,
+                        )
+                else:
+                    prob.elevation = Elevation(
+                        lowerBound=problem["elevation"],
+                        upperBound=None,
+                    )
+
                 prob.aspects = problem["aspects"]
                 report.avalancheProblems.append(prob)
 
