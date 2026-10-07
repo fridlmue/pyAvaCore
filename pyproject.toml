@@ -20,6 +20,8 @@ include = ["avacore*"]
 avacore = ["pyAvaCore.py.json"]
 
 [tool.ruff]
+# ruff 0.16 default rules changed, keep the previous defaults
+lint.select = ["E4", "E7", "E9", "F"]
 lint.ignore = ["E501", "E722"]
 
 [dependency-groups]
