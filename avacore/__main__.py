@@ -25,7 +25,9 @@ from datetime import datetime, timedelta
 from io import BytesIO
 import urllib.error
 
-from .pyAvaCore import get_bulletins, parse_dates
+from . import processor_caamlv6
+from .processors import new_processor
+from .pyAvaCore import BulletinProvider, parse_dates
 from .avajson import JSONEncoder
 from .geojson import FeatureCollection
 
@@ -173,14 +175,10 @@ def download_region(regionID, date: str):
     """
     Downloads the given region and converts it to JSON
     """
-    bulletins = get_bulletins(regionID, date=date, lang=args.lang)
+    provider = BulletinProvider.get(regionID, date=date, lang=args.lang)
+    bulletins = provider.download_bulletins()
 
-    protect_overwrite_now = datetime.fromisoformat(
-        args.protect_overwrite_now
-        or date
-        or datetime.now().replace(microsecond=0).isoformat()
-    )
-    validity_dates = bulletins.main_dates(protect_overwrite_now)
+    validity_dates = bulletins.main_dates(get_protect_overwrite_now(date))
     validity_date = None
 
     if args.cli == "o":
@@ -234,6 +232,50 @@ def download_region(regionID, date: str):
             # Rounding of feature.geometry.coordinates is performed in to_float_coordinate
             logging.info("Writing %s", f.name)
             json.dump(geojson.to_dict(), fp=f)
+    download_region_languages(provider, date)
+
+
+def download_region_languages(provider: BulletinProvider, date: str):
+    """
+    Downloads the given region in all other languages offered by the provider
+    """
+    if not isinstance(new_processor(provider.region), processor_caamlv6.Processor):
+        return
+    for lang in provider.languages:
+        if lang == args.lang:
+            continue
+        download_region_language(provider.region, date, lang)
+
+
+def get_protect_overwrite_now(date: str) -> datetime:
+    return datetime.fromisoformat(
+        args.protect_overwrite_now
+        or date
+        or datetime.now().replace(microsecond=0).isoformat()
+    )
+
+
+def download_region_language(regionID, date: str, lang: str):
+    """
+    Downloads the given region in the given language and writes {date}-{region}.{lang}.json
+    """
+    try:
+        provider = BulletinProvider.get(regionID, date=date, lang=lang)
+        bulletins = provider.download_bulletins()
+    except Exception as e:
+        logging.warning("Failed to download %s in %s: %s", regionID, lang, e)
+        return
+    bulletins.customData.pop("data", "")
+    bulletins.customData.pop("file_extension", "")
+    for validity_date in bulletins.main_dates(get_protect_overwrite_now(date)):
+        directory = args.output / validity_date.isoformat()
+        directory.mkdir(parents=True, exist_ok=True)
+        with (directory / f"{validity_date}-{regionID}.{lang}.json").open(
+            mode="w",
+            encoding="utf-8",
+        ) as f:
+            logging.info("Writing %s", f.name)
+            json.dump(bulletins, fp=f, cls=JSONEncoder, indent=2)
 
 
 def download_regions():

@@ -53,6 +53,7 @@ class BulletinProvider:
     region: str
     url: str
     website: str
+    languages: List[str] = dataclasses.field(default_factory=list)
 
     def download_bulletins(self) -> Bulletins:
         """
@@ -112,6 +113,7 @@ class BulletinProvider:
             region=region_id,
             url=url,
             website=website,
+            languages=urls.get("api:lang", []),
         )
 
 
@@ -122,6 +124,8 @@ class ConfigURL(TypedDict):
     api: str = ""
     # api:date
     api_date: Optional[str] = None
+    # api:lang: languages offered by api
+    api_lang: Optional[List[str]] = None
 
 
 class ConfigAws(TypedDict):
