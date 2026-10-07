@@ -13,6 +13,12 @@
           "youtube": "https://www.youtube.com/channel/UCVC31YuG1kjqUpvRt2AKr4w"
         }
       }
+    ],
+    "bbox": [
+      1.42138886451727,
+      42.4363861083985,
+      1.78171968460083,
+      42.6559677124025
     ]
   },
   {
@@ -23,12 +29,18 @@
         "url": {
           "de": "https://lawinenwarndienst.ktn.gv.at",
           "en": "https://lawinenwarndienst.ktn.gv.at/?lang=en",
-          "api": "https://static.avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://avalanche.report/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://avalanche.report/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@ktn.gv.at",
           "facebook": "https://www.facebook.com/Lawinenwarndienst-Krnten-182262981858129/"
         }
       }
+    ],
+    "bbox": [
+      12.656133716531496,
+      46.372300138484825,
+      15.065490661589976,
+      47.130544559605916
     ]
   },
   {
@@ -43,6 +55,12 @@
           "mail": "mailto:lwd@lawinenwarndienst-niederoesterreich.at"
         }
       }
+    ],
+    "bbox": [
+      14.469978324879815,
+      47.422346706109806,
+      16.372436209229843,
+      48.16891047509619
     ]
   },
   {
@@ -59,6 +77,12 @@
           "twitter": "https://twitter.com/lwdooe"
         }
       }
+    ],
+    "bbox": [
+      13.43667147639972,
+      47.46266255319711,
+      14.772226342563606,
+      48.027157726320404
     ]
   },
   {
@@ -76,6 +100,12 @@
           "twitter": "https://twitter.com/LWDSalzburg"
         }
       }
+    ],
+    "bbox": [
+      12.076638970986812,
+      46.94391743408283,
+      13.995949459169639,
+      47.82625890014774
     ]
   },
   {
@@ -91,6 +121,12 @@
           "facebook": "https://www.facebook.com/LawinenwarndienstSteiermark/"
         }
       }
+    ],
+    "bbox": [
+      13.564228194656119,
+      46.64442848399633,
+      16.171277359309336,
+      47.82767024378467
     ]
   },
   {
@@ -106,8 +142,8 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/AT-07_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_AT-07_{lang}_CAAMLv6.json",
+          "api": "https://avalanche.report/bulletins/latest/AT-07_{lang}_CAAMLv6.json",
+          "api:date": "https://avalanche.report/bulletins/{date}/{date}_AT-07_{lang}_CAAMLv6.json",
           "mail": "mailto:lawine@tirol.gv.at",
           "telegram:de": "https://t.me/lawinenwarndienst_tirol",
           "telegram:it": "https://t.me/servizio_valanghe_tirolo",
@@ -120,6 +156,12 @@
           "youtube": "https://www.youtube.com/channel/UC3H4Xqv_wfHajvogV3ooYdQ"
         }
       }
+    ],
+    "bbox": [
+      10.097855353318936,
+      46.65141082118688,
+      12.963418703445392,
+      47.743232331879625
     ]
   },
   {
@@ -138,6 +180,12 @@
           "instagram": "https://www.instagram.com/lwzvorarlberg/"
         }
       }
+    ],
+    "bbox": [
+      9.53078607299793,
+      46.84087565810916,
+      10.237070618396904,
+      47.59629796219034
     ]
   },
   {
@@ -159,6 +207,12 @@
           "youtube": "https://www.youtube.com/user/WSLForschung"
         }
       }
+    ],
+    "bbox": [
+      5.9561,
+      45.8184,
+      10.4916,
+      47.8074
     ]
   },
   {
@@ -171,6 +225,12 @@
           "api": "https://www.horskasluzba.cz/cz/avalanche-json"
         }
       }
+    ],
+    "bbox": [
+      15.355835017912804,
+      49.88170513217049,
+      17.63546148097369,
+      50.8079005
     ]
   },
   {
@@ -186,26 +246,38 @@
           "facebook": "https://www.facebook.com/lawinenwarndienst.bayern/"
         }
       }
+    ],
+    "bbox": [
+      9.96559,
+      47.27021,
+      13.09823,
+      47.8283
     ]
   },
   {
     "id": "ES-AR",
     "aws": [
       {
-        "name": "Aragon",
+        "name": "Centro de Aludes de Aragón",
         "url": {
           "es": "https://aludes.aragon.es/",
           "api": "https://static-aludes.aragon.es/bulletins/latest/{region}_{lang}_CAAMLv6.json",
           "api:date": "https://static-aludes.aragon.es/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json"
         }
       }
+    ],
+    "bbox": [
+      -0.858638768307204,
+      42.45803028553615,
+      0.766492127320078,
+      42.925921608705096
     ]
   },
   {
     "id": "ES-CT-L",
     "aws": [
       {
-        "name": "CLA",
+        "name": "Centre de Lauegi d'Aran",
         "url": {
           "oc": "https://lauegi.report/oc",
           "ca": "https://lauegi.report/ca",
@@ -223,6 +295,12 @@
           "youtube": "https://www.youtube.com/user/centrelauegi"
         }
       }
+    ],
+    "bbox": [
+      0.639679368765103,
+      42.58947756990891,
+      1.037534537307803,
+      42.86135281367885
     ]
   },
   {
@@ -243,6 +321,12 @@
           "youtube": "https://www.youtube.com/user/ICGCat"
         }
       }
+    ],
+    "bbox": [
+      0.714660139694791,
+      42.11577016279555,
+      2.407717141755186,
+      42.78625242196857
     ]
   },
   {
@@ -258,6 +342,12 @@
           "youtube": "https://www.youtube.com/channel/UCd-ceYPisAtCmmoZa26I-5g/feed"
         }
       }
+    ],
+    "bbox": [
+      -5.120655918497868,
+      40.72097364698283,
+      -3.715168259559931,
+      43.315855935737055
     ]
   },
   {
@@ -277,6 +367,12 @@
           "linkedin": "https://www.linkedin.com/company/finnish-meteorological-institute"
         }
       }
+    ],
+    "bbox": [
+      20.552160966731872,
+      66.1280546798309,
+      29.482335254858956,
+      69.15299113863932
     ]
   },
   {
@@ -293,6 +389,12 @@
           "youtube": "https://www.youtube.com/channel/UCnBToLuuyq7Qn5j7e5BRhaw"
         }
       }
+    ],
+    "bbox": [
+      -1.308450275020322,
+      41.70019145185436,
+      9.281644799668008,
+      46.40436260102696
     ]
   },
   {
@@ -309,6 +411,12 @@
           "youtube": "https://www.youtube.com/channel/UC8OSabw8CKChlYpPXzeZ5wQ"
         }
       }
+    ],
+    "bbox": [
+      -6.226636459263103,
+      56.38715303555966,
+      -2.800269994657808,
+      57.70744388626149
     ]
   },
   {
@@ -325,6 +433,12 @@
           "twitter": "https://twitter.com/vedurstofan/"
         }
       }
+    ],
+    "bbox": [
+      -23.833887961467,
+      63.93809663676257,
+      -13.499954763752713,
+      66.19956719393737
     ]
   },
   {
@@ -362,6 +476,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      6.626592715644857,
+      44.059634384640404,
+      8.697799288339045,
+      46.4641
     ]
   },
   {
@@ -387,6 +507,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      6.8011876,
+      45.4670323,
+      7.9397892,
+      45.9876
     ]
   },
   {
@@ -428,6 +554,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      10.0401,
+      46.4197,
+      10.2176,
+      46.6272
     ]
   },
   {
@@ -459,6 +591,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      8.5932753,
+      44.6798728,
+      10.8274363,
+      46.6347
     ]
   },
   {
@@ -474,8 +612,8 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/IT-32-BZ_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-BZ_{lang}_CAAMLv6.json",
+          "api": "https://avalanche.report/bulletins/latest/IT-32-BZ_{lang}_CAAMLv6.json",
+          "api:date": "https://avalanche.report/bulletins/{date}/{date}_IT-32-BZ_{lang}_CAAMLv6.json",
           "whatsapp:de": "https://whatsapp.com/channel/0029VbBQNt9GzzKZNXIFjG0S",
           "whatsapp:it": "https://whatsapp.com/channel/0029VbBFSLlFCCoSZm1c2U0e",
           "whatsapp:en": "https://whatsapp.com/channel/0029Vb67QJ87T8bOx9dwAz06",
@@ -491,6 +629,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      10.384654833520989,
+      46.21870424999996,
+      12.479931117430375,
+      47.092424662039235
     ]
   },
   {
@@ -506,8 +650,8 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
-          "api": "https://static.avalanche.report/bulletins/latest/IT-32-TN_{lang}_CAAMLv6.json",
-          "api:date": "https://static.avalanche.report/bulletins/{date}/{date}_IT-32-TN_{lang}_CAAMLv6.json",
+          "api": "https://avalanche.report/bulletins/latest/IT-32-TN_{lang}_CAAMLv6.json",
+          "api:date": "https://avalanche.report/bulletins/{date}/{date}_IT-32-TN_{lang}_CAAMLv6.json",
           "telegram:de": "https://t.me/lawinenwarndienst_trentino",
           "telegram:it": "https://t.me/servizio_valanghe_trento",
           "telegram:en": "https://t.me/avalanche_warning_service_trento",
@@ -521,6 +665,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      10.451883778323133,
+      45.67330124999996,
+      11.962198703508204,
+      46.53188560187614
     ]
   },
   {
@@ -558,6 +708,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      10.644102648472723,
+      45.526892543885445,
+      12.731,
+      46.6807452686519
     ]
   },
   {
@@ -595,6 +751,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      12.3217709,
+      45.9785006,
+      13.7169,
+      46.6472
     ]
   },
   {
@@ -612,6 +774,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      7.49621486663824,
+      43.83069225624427,
+      9.87535673371781,
+      44.672999946497086
     ]
   },
   {
@@ -629,6 +797,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      9.199196131684682,
+      43.73192428741903,
+      12.432144169962031,
+      45.04108686935468
     ]
   },
   {
@@ -646,6 +820,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      9.686700448591345,
+      42.728203058372756,
+      12.370426406745983,
+      44.47236889536661
     ]
   },
   {
@@ -677,6 +857,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      12.1854536,
+      42.6871561,
+      13.5914955,
+      43.8652232
     ]
   },
   {
@@ -700,6 +886,12 @@
           "it": "https://www.meteomont.org/BOLLETTINI/"
         }
       }
+    ],
+    "bbox": [
+      12.775924194175408,
+      41.279506829690774,
+      14.600164699417983,
+      42.81675758765036
     ]
   },
   {
@@ -717,6 +909,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      13.905111744865401,
+      37.93643846568485,
+      17.081519496726894,
+      41.46248743578837
     ]
   },
   {
@@ -734,6 +932,12 @@
           "youtube": "https://www.youtube.com/channel/UCUDqf6fFfavY5bVw14358PA"
         }
       }
+    ],
+    "bbox": [
+      13.89950587749619,
+      37.56854686463562,
+      15.551438299307172,
+      38.271827614991615
     ]
   },
   {
@@ -753,6 +957,12 @@
           "youtube": "https://www.youtube.com/user/WSLForschung"
         }
       }
+    ],
+    "bbox": [
+      9.4722,
+      47.0493,
+      9.6354,
+      47.2707
     ]
   },
   {
@@ -769,6 +979,12 @@
           "facebook": "https://www.facebook.com/Snoskredvarsling"
         }
       }
+    ],
+    "bbox": [
+      5.2752667,
+      58.5133382,
+      28.5292584,
+      78.356369
     ]
   },
   {
@@ -784,6 +1000,12 @@
           "facebook": "https://www.facebook.com/1909.topr/"
         }
       }
+    ],
+    "bbox": [
+      19.7589914,
+      49.1791481,
+      20.12653690967716,
+      49.29549016540112
     ]
   },
   {
@@ -798,6 +1020,12 @@
           "mail": "mailto:lawiny@gopr.pl"
         }
       }
+    ],
+    "bbox": [
+      15.46086891370796,
+      49.0021366,
+      22.8899563,
+      50.817467731396874
     ]
   },
   {
@@ -811,6 +1039,12 @@
           "mail": "mailto:nivologie.sibiu@meteoromania.ro"
         }
       }
+    ],
+    "bbox": [
+      22.3236399768483,
+      45.11406772866697,
+      26.10205257997322,
+      47.64452969327673
     ]
   },
   {
@@ -828,6 +1062,12 @@
           "instagram": "https://www.instagram.com/lavinprognoser/"
         }
       }
+    ],
+    "bbox": [
+      11.9748787,
+      62.5265512,
+      19.7817361,
+      68.5818715
     ]
   },
   {
@@ -845,6 +1085,12 @@
           "twitter": "https://twitter.com/meteoSI"
         }
       }
+    ],
+    "bbox": [
+      13.3755,
+      45.42155096521373,
+      16.07741131019828,
+      46.659757250829806
     ]
   },
   {
@@ -863,6 +1109,12 @@
           "youtube": "https://www.youtube.com/user/lavinyHZS"
         }
       }
+    ],
+    "bbox": [
+      18.586297,
+      48.7890424,
+      20.3844143,
+      49.2979538
     ]
   },
   {
@@ -878,6 +1130,12 @@
           "facebook": "https://www.facebook.com/lavyny.official/"
         }
       }
+    ],
+    "bbox": [
+      22.425485,
+      47.723622,
+      25.520932,
+      49.328778
     ]
   }
 ]
