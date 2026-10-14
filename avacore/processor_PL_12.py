@@ -36,11 +36,10 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         response: str = self._fetch_url(self.url, {})
 
-        raw = (
-            re.compile(r"const oLawReport = (?P<raw_json>[^*]+?);\n")
-            .search(response)
-            .group(1)
-        )
+        match = re.search(r"const oLawReport = ({.*?});", response, re.DOTALL)
+        if match is None:
+            raise ValueError(f"Could not extract oLawReport from {self.url}")
+        raw = match.group(1)
 
         pl_12_report = json.loads(raw)
 
@@ -78,12 +77,24 @@ class Processor(JsonProcessor):
         bulletin.travelAdvisory = travelAdvisory
 
         ratings = {"am": "earlier", "pm": "later"}
-        for rating in ratings:
-            del data[rating]["img"]
-        if data["am"] == data["pm"]:
+        periods = {
+            rating: {k: v for k, v in data[rating].items() if k != "img"}
+            for rating in ratings
+        }
+        if periods["am"] == periods["pm"]:
             ratings = {"am": "all_day"}
 
         aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+
+        problem_types = {
+            "prgs": "gliding_snow",
+            "prnn": "no_distinct_avalanche_problem",
+            "prns": "new_snow",
+            "prso": "cornices",
+            "prwd": "wind_slab",
+            "prwl": "persistent_weak_layers",
+            "prws": "wet_snow",
+        }
 
         for rating, rating_ident in ratings.items():
             elevs = ["upper"]
@@ -92,7 +103,8 @@ class Processor(JsonProcessor):
             for elev in elevs:
                 danger_rating = DangerRating(validTimePeriod=rating_ident)
                 danger_rating.set_mainValue_int(int(data[rating][elev]["lev"]))
-                if len(elev) > 1:
+                elevation = None
+                if len(elevs) > 1:
                     elevation = Elevation()
                     if elev == "upper":
                         elevation.lowerBound = str(data[rating]["height"])
@@ -108,25 +120,14 @@ class Processor(JsonProcessor):
 
                 bulletin.dangerRatings.append(danger_rating)
 
-                if data[rating][elev]["prb"]:
+                problem_type = problem_types.get(data[rating][elev]["prb"])
+                if problem_type:
                     problem = AvalancheProblem()
                     problem.aspects = aspect_list
-                    if len(elev) > 1:
+                    if elevation:
                         problem.elevation = elevation
-                    if data[rating][elev]["prb"] == "prgs":
-                        problem.problemType = "gliding_snow"
-                    if data[rating][elev]["prb"] == "prnn":
-                        problem.problemType = "no_distinct_avalanche_problem"
-                    if data[rating][elev]["prb"] == "prns":
-                        problem.problemType = "new_snow"
-                    if data[rating][elev]["prb"] == "prwd":
-                        problem.problemType = "wind_slab"
-                    if data[rating][elev]["prb"] == "prwl":
-                        problem.problemType = "persistent_weak_layers"
-                    if data[rating][elev]["prb"] == "prws":
-                        problem.problemType = "wet_snow"
-                    if problem.problemType:
-                        bulletin.avalancheProblems.append(problem)
+                    problem.problemType = problem_type
+                    bulletin.avalancheProblems.append(problem)
 
         bulletins.append(bulletin)
 
