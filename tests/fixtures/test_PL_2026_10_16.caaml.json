@@ -1,0 +1,109 @@
+{
+  "bulletins": [
+    {
+      "bulletinID": "PLGOPR2601099",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-10-16"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "no_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "en",
+      "publicationTime": "2026-10-16T08:30:00+02:00",
+      "regions": [
+        {
+          "name": "Karkonosze",
+          "regionID": "PL-01"
+        }
+      ],
+      "source": {
+        "provider": {
+          "contactPerson": {
+            "name": "Jakub Radli\u0144ski"
+          },
+          "name": "G\u00f3rskie OPR",
+          "website": "https://www.gopr.pl/en/avalanches"
+        }
+      },
+      "validTime": {
+        "endTime": "2026-10-17T08:16:30+02:00",
+        "startTime": "2026-10-16T08:16:30+02:00"
+      }
+    },
+    {
+      "bulletinID": "PLGOPR2601100",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-10-16"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "no_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "en",
+      "publicationTime": "2026-10-16T08:30:00+02:00",
+      "regions": [
+        {
+          "name": "Babia G\u00f3ra",
+          "regionID": "PL-02"
+        }
+      ],
+      "source": {
+        "provider": {
+          "contactPerson": {
+            "name": "Jakub Radli\u0144ski"
+          },
+          "name": "G\u00f3rskie OPR",
+          "website": "https://www.gopr.pl/en/avalanches"
+        }
+      },
+      "validTime": {
+        "endTime": "2026-10-17T08:16:30+02:00",
+        "startTime": "2026-10-16T08:16:30+02:00"
+      }
+    },
+    {
+      "bulletinID": "PLGOPR2601101",
+      "customData": {
+        "ALBINA": {
+          "mainDate": "2026-10-16"
+        }
+      },
+      "dangerRatings": [
+        {
+          "mainValue": "no_snow",
+          "validTimePeriod": "all_day"
+        }
+      ],
+      "lang": "en",
+      "publicationTime": "2026-10-16T08:30:00+02:00",
+      "regions": [
+        {
+          "name": "Bieszczady",
+          "regionID": "PL-03"
+        }
+      ],
+      "source": {
+        "provider": {
+          "contactPerson": {
+            "name": "Jakub Radli\u0144ski"
+          },
+          "name": "G\u00f3rskie OPR",
+          "website": "https://www.gopr.pl/en/avalanches"
+        }
+      },
+      "validTime": {
+        "endTime": "2026-10-17T08:16:30+02:00",
+        "startTime": "2026-10-16T08:16:30+02:00"
+      }
+    }
+  ]
+}

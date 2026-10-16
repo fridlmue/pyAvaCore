@@ -1137,7 +1137,7 @@
         "url": {
           "en": "https://www.gopr.pl/en/avalanches",
           "pl": "https://www.gopr.pl/lawiny",
-          "api": "https://www.gopr.pl/lawiny/{micro_region}",
+          "api": "https://lawiny.gopr.pl/api/bulletins",
           "mail": "mailto:lawiny@gopr.pl"
         }
       }

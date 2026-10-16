@@ -61,6 +61,8 @@ class BulletinProvider:
         """
         processor = avacore.processors.new_processor(self.region)
         processor.url = self.url
+        if self.lang:
+            processor.lang = self.lang
         reports = processor.process_bulletin(self.region)
         reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         reports.bulletins = [
@@ -87,7 +89,12 @@ class BulletinProvider:
             aws_name = "ALPSOLUT"
         else:
             region = ConfigRegion.of_config(
-                {"NO-3016": "NO", "PL-01": "PL"}.get(region_id, region_id)
+                {
+                    "NO-3016": "NO",
+                    "PL-01": "PL",
+                    "PL-02": "PL",
+                    "PL-03": "PL",
+                }.get(region_id, region_id)
             )
             aws_name = "AINEVA" if region_id.startswith("IT") else ""
         aws = region["aws"]

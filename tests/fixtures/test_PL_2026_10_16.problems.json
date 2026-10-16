@@ -1,0 +1,31 @@
+{
+  "avalancheProblems": {
+    "PL-01": [],
+    "PL-01:am": [],
+    "PL-01:high": [],
+    "PL-01:high:am": [],
+    "PL-01:high:pm": [],
+    "PL-01:low": [],
+    "PL-01:low:am": [],
+    "PL-01:low:pm": [],
+    "PL-01:pm": [],
+    "PL-02": [],
+    "PL-02:am": [],
+    "PL-02:high": [],
+    "PL-02:high:am": [],
+    "PL-02:high:pm": [],
+    "PL-02:low": [],
+    "PL-02:low:am": [],
+    "PL-02:low:pm": [],
+    "PL-02:pm": [],
+    "PL-03": [],
+    "PL-03:am": [],
+    "PL-03:high": [],
+    "PL-03:high:am": [],
+    "PL-03:high:pm": [],
+    "PL-03:low": [],
+    "PL-03:low:am": [],
+    "PL-03:low:pm": [],
+    "PL-03:pm": []
+  }
+}
