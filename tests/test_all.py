@@ -137,7 +137,7 @@ class TestAll(SnowTest):
         processor.fetch_time_dependant = False
         self._test_processor(processor, "PL-12")
 
-    def test_PL_2026_05_10(self):
+    def test_PL_2026_10_16(self):
         processor = avacore.processor_PL.Processor()
         self._test_processor(processor, "PL")
 

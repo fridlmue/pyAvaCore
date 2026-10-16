@@ -1,10 +1,10 @@
 {
   "bulletins": [
     {
-      "bulletinID": "PLGOPR2601089",
+      "bulletinID": "PLGOPR2601099",
       "customData": {
         "ALBINA": {
-          "mainDate": "2026-05-04"
+          "mainDate": "2026-10-16"
         }
       },
       "dangerRatings": [
@@ -14,7 +14,7 @@
         }
       ],
       "lang": "en",
-      "publicationTime": "2026-05-03T16:45:00",
+      "publicationTime": "2026-10-16T08:30:00+02:00",
       "regions": [
         {
           "name": "Karkonosze",
@@ -31,15 +31,15 @@
         }
       },
       "validTime": {
-        "endTime": "2026-05-04T16:46:02",
-        "startTime": "2026-05-03T16:46:02"
+        "endTime": "2026-10-17T08:16:30+02:00",
+        "startTime": "2026-10-16T08:16:30+02:00"
       }
     },
     {
-      "bulletinID": "PLGOPR2601098",
+      "bulletinID": "PLGOPR2601100",
       "customData": {
         "ALBINA": {
-          "mainDate": "2026-05-11"
+          "mainDate": "2026-10-16"
         }
       },
       "dangerRatings": [
@@ -49,7 +49,7 @@
         }
       ],
       "lang": "en",
-      "publicationTime": "2026-05-10T17:15:00",
+      "publicationTime": "2026-10-16T08:30:00+02:00",
       "regions": [
         {
           "name": "Babia G\u00f3ra",
@@ -66,15 +66,15 @@
         }
       },
       "validTime": {
-        "endTime": "2026-05-11T17:08:11",
-        "startTime": "2026-05-10T17:08:11"
+        "endTime": "2026-10-17T08:16:30+02:00",
+        "startTime": "2026-10-16T08:16:30+02:00"
       }
     },
     {
-      "bulletinID": "PLGOPR2601056",
+      "bulletinID": "PLGOPR2601101",
       "customData": {
         "ALBINA": {
-          "mainDate": "2026-04-19"
+          "mainDate": "2026-10-16"
         }
       },
       "dangerRatings": [
@@ -84,7 +84,7 @@
         }
       ],
       "lang": "en",
-      "publicationTime": "2026-04-18T17:30:00",
+      "publicationTime": "2026-10-16T08:30:00+02:00",
       "regions": [
         {
           "name": "Bieszczady",
@@ -101,8 +101,8 @@
         }
       },
       "validTime": {
-        "endTime": "2026-04-19T17:28:12",
-        "startTime": "2026-04-18T17:28:12"
+        "endTime": "2026-10-17T08:16:30+02:00",
+        "startTime": "2026-10-16T08:16:30+02:00"
       }
     }
   ]

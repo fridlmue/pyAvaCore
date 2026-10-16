@@ -50,10 +50,8 @@ class Processor(JsonProcessor):
                 {
                     "bulletinID": report.get("bulletinId"),
                     "lang": report["lang"].lower(),
-                    # timestamps carry trailing milliseconds without separator,
-                    # e.g. "2026-05-03 16:45:00000"
-                    "publicationTime": report["publicationTime"][:19],
-                    "validTime": {"startTime": report["validTime"]["startTime"][:19]},
+                    "publicationTime": report["publicationTime"],
+                    "validTime": {"startTime": report["validTime"]["startTime"]},
                     "regions": report_regions,
                     "dangerRatings": report.get("dangerRatings", []),
                     "avalancheProblems": report.get("avalancheProblems", []),
