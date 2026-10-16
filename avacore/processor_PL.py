@@ -50,7 +50,7 @@ class Processor(JsonProcessor):
                 {
                     "bulletinID": report.get("bulletinId"),
                     "lang": report["lang"].lower(),
-                    "publicationTime": report["publicationTime"],
+                    "publicationTime": report.get("publicationTime"),
                     "validTime": {"startTime": report["validTime"]["startTime"]},
                     "regions": report_regions,
                     "dangerRatings": report.get("dangerRatings", []),
