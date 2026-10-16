@@ -82,7 +82,7 @@ class Processor(XmlProcessor):
                         dateTimeReport.text.replace("Z", "+00:00")
                     )
                 for validTime in observations.iter(CAAML_NS + "validTime"):
-                    if not et_get_parent(validTime):
+                    if et_get_parent(validTime) is None:
                         for beginPosition in observations.iter(
                             CAAML_NS + "beginPosition"
                         ):
