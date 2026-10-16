@@ -26,6 +26,6 @@ lint.ignore = ["E501", "E722"]
 
 [dependency-groups]
 dev = [
-    "jsonschema",
-    "ruff",
+    "jsonschema==4.25.1",
+    "ruff==0.17.1",
 ]
