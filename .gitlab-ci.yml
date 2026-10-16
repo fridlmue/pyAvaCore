@@ -15,15 +15,7 @@ unittest:
   extends: .python
   stage: test
   script:
-    - uv run pytest --junitxml=report.xml --cov=avacore tests/
-    - uv run coverage xml
-  artifacts:
-    when: always
-    reports:
-      junit: report.xml
-      coverage_report:
-        coverage_format: cobertura
-        path: coverage.xml
+    - uv run python -m unittest
 
 ruff:
   extends: .python
