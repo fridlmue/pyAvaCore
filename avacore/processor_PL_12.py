@@ -36,12 +36,11 @@ class Processor(JsonProcessor):
     def process_bulletin(self, region_id) -> Bulletins:
         response: str = self._fetch_url(self.url, {})
 
-        match = re.search(r"const oLawReport = ({.*?});", response, re.DOTALL)
+        match = re.search(r"const oLawReport = ", response)
         if match is None:
             raise ValueError(f"Could not extract oLawReport from {self.url}")
-        raw = match.group(1)
-
-        pl_12_report = json.loads(raw)
+        pl_12_report, end = json.JSONDecoder().raw_decode(response, match.end())
+        raw = response[match.end() : end]
 
         self.raw_data = raw
         self.raw_data_format = "JSON"
