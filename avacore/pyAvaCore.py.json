@@ -758,8 +758,7 @@
           "telegram:de": "https://t.me/lawinenwarndienst_trentino",
           "telegram:it": "https://t.me/servizio_valanghe_trento",
           "telegram:en": "https://t.me/avalanche_warning_service_trento",
-          "facebook": "https://www.facebook.com/@meteoTNprotciv",
-          "instagram": "https://www.instagram.com/meteotrentino/"
+          "facebook": "https://www.facebook.com/share/1Au6p4w1dT/?mibextid=wwXIfr"
         }
       },
       {
@@ -1112,9 +1111,9 @@
     "id": "PL-12",
     "aws": [
       {
-        "name": "Tatrańskie OPR",
+        "name": "Tatrzańskie OPR",
         "url": {
-          "en": "https://lawiny.topr.pl/",
+          "en": "https://lawiny.topr.pl/?language=en",
           "pl": "https://lawiny.topr.pl",
           "api": "https://lawiny.topr.pl/",
           "mail": "mailto:topr@topr.pl",
@@ -1135,8 +1134,8 @@
       {
         "name": "Górskie OPR",
         "url": {
-          "en": "https://www.gopr.pl/en/avalanches",
-          "pl": "https://www.gopr.pl/lawiny",
+          "en": "https://lawiny.gopr.pl/",
+          "pl": "https://lawiny.gopr.pl/",
           "api": "https://lawiny.gopr.pl/api/bulletins",
           "mail": "mailto:lawiny@gopr.pl"
         }
