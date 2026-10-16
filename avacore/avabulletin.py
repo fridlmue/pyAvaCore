@@ -139,10 +139,10 @@ class ValidTime:
         endTime: Union[datetime, str, None] = None,
     ):
         if isinstance(startTime, str):
-            startTime = datetime.fromisoformat(startTime.replace("Z", "+00:00"))
+            startTime = _parse_time(startTime)
         self.startTime = startTime
         if isinstance(endTime, str):
-            endTime = datetime.fromisoformat(endTime.replace("Z", "+00:00"))
+            endTime = _parse_time(endTime)
         self.endTime = endTime
 
     @staticmethod
@@ -528,6 +528,15 @@ class Texts:
         )
 
 
+def _parse_time(value: Optional[str]) -> Optional[datetime]:
+    if not value:
+        return None
+    if re.match(r".*:\d\d000$", value):
+        value = value[:19]
+    value = re.sub(r"\.\d+", "", value.replace("Z", "+00:00"))
+    return datetime.fromisoformat(value)
+
+
 @dataclass
 class AvaBulletin:
     """Avalanche Bulletin valid for a given set of regions."""
@@ -606,11 +615,7 @@ class AvaBulletin:
             )
             if obj.get("nextUpdate")
             else None,
-            publicationTime=datetime.fromisoformat(
-                re.sub(r"\.\d+", "", obj.get("publicationTime").replace("Z", "+00:00"))
-            )
-            if obj.get("publicationTime")
-            else None,
+            publicationTime=_parse_time(obj.get("publicationTime")),
             regions=[Region.from_dict(r) for r in obj.get("regions", [])],
             snowpackStructure=Texts.from_dict(obj.get("snowpackStructure")),
             source=Source.from_dict(obj.get("source"))
