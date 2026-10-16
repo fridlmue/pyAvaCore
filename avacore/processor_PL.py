@@ -29,12 +29,12 @@ regions = {
 class Processor(JsonProcessor):
     """Processor for the GOPR avalanche bulletin API -- https://lawiny.gopr.pl/"""
 
-    lang = "EN"
+    lang = "en"
 
     def parse_json(self, region_id, data) -> Bulletins:
         bulletins = Bulletins()
         for report in data["bulletins"]:
-            if report.get("lang") != self.lang:
+            if report.get("lang", "").lower() != self.lang.lower():
                 continue
             report_regions = [
                 {"regionID": regions[r["regionId"]], "name": r.get("name")}

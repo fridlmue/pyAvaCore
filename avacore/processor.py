@@ -27,6 +27,7 @@ from avacore.avabulletins import Bulletins
 
 class Processor(ABC):
     url = ""
+    lang = ""
     raw_data: Union[str, BytesIO] = ""
     raw_data_encoding = "utf-8"
     raw_data_format = ""

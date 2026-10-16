@@ -61,6 +61,8 @@ class BulletinProvider:
         """
         processor = avacore.processors.new_processor(self.region)
         processor.url = self.url
+        if self.lang:
+            processor.lang = self.lang
         reports = processor.process_bulletin(self.region)
         reports.append_raw_data(processor.raw_data_format, processor.raw_data)
         reports.bulletins = [
