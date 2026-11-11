@@ -14,6 +14,7 @@ along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
 from datetime import datetime
+from urllib.error import HTTPError
 from urllib.request import urlopen, Request
 import logging
 import re
@@ -67,11 +68,21 @@ class Processor(XmlProcessor):
     def process_all_reports_fr(self) -> Bulletins:
         """
         Downloads and returns all Reports for FR (iterating threw region IDs)
+
+        Massifs without a current bulletin (HTTP 404 "no matching blob", e.g.
+        before their season starts) are skipped instead of aborting all of FR.
         """
         all_reports = Bulletins()
         all_raw_data = []
         for region in fr_regions:
-            for report in self.process_bulletin(region).bulletins:
+            try:
+                reports = self.process_bulletin(region)
+            except HTTPError as e:
+                if e.code != 404:
+                    raise
+                logging.warning("Skipping region %s: no bulletin (HTTP 404)", region)
+                continue
+            for report in reports.bulletins:
                 all_reports.append(report)
             all_raw_data.append(
                 self.raw_data.removeprefix("""<?xml version="1.0" encoding="utf-8"?>""")
