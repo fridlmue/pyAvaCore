@@ -1,5 +1,7 @@
 import datetime
 import io
+from unittest import mock
+from urllib.error import HTTPError
 from tests import SnowTest
 import avacore.processor_AD
 import avacore.processor_caamlv5
@@ -98,6 +100,34 @@ class TestAll(SnowTest):
     def test_FR(self):
         processor = avacore.processor_FR.Processor()
         self._test_processor(processor, "FR")
+
+    def test_FR_skips_missing_massifs(self):
+        xml = (self._fixture("xml").parent / "test_FR.xml").read_text(encoding="utf-8")
+
+        def fetch_url(url, headers):
+            if url.endswith("BRA_4.xml"):
+                raise HTTPError(url, 404, "Not Found", {}, None)
+            return xml
+
+        processor = avacore.processor_FR.Processor()
+        processor.url = "https://example.com/BRA_{micro_region}.xml"
+        with (
+            mock.patch.object(avacore.processor_FR, "fr_regions", ["FR-01", "FR-04"]),
+            mock.patch.object(processor, "_fetch_url", side_effect=fetch_url),
+        ):
+            bulletins = processor.process_bulletin("FR")
+        self.assertEqual(len(bulletins.bulletins), 1)
+        self.assertTrue(processor.raw_data.startswith("<ROOT>"))
+
+    def test_FR_propagates_other_http_errors(self):
+        def fetch_url(url, headers):
+            raise HTTPError(url, 500, "Server Error", {}, None)
+
+        processor = avacore.processor_FR.Processor()
+        processor.url = "https://example.com/BRA_{micro_region}.xml"
+        with mock.patch.object(processor, "_fetch_url", side_effect=fetch_url):
+            with self.assertRaises(HTTPError):
+                processor.process_bulletin("FR")
 
     def test_GB(self):
         processor = avacore.processor_GB.Processor()
