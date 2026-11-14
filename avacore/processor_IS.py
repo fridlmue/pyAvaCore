@@ -15,6 +15,7 @@ along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 
 from datetime import datetime
 import copy
+import logging
 import re
 import xml.etree.ElementTree as ET
 from zoneinfo import ZoneInfo
@@ -57,6 +58,15 @@ class Processor(XmlProcessor):
 
         area_forecasts = root.find("area_forecasts")
         for area_forcast in area_forecasts.iter(tag="area_forecast"):
+            if not area_forcast.findtext("updated") or not area_forcast.findtext(
+                "danger_level_day1_code"
+            ):
+                # no forecast published for this area (e.g. off-season)
+                logging.warning(
+                    "Skipping region IS-%s: no forecast available",
+                    area_forcast.findtext("region_code", "").upper(),
+                )
+                continue
             weatherForecast = Texts()
             avalancheActivity = Texts()
             snowpackStructure = Texts()

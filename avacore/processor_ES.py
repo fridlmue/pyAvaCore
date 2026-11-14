@@ -14,6 +14,7 @@ along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
 from datetime import datetime, timedelta
+import logging
 import re
 import copy
 from zoneinfo import ZoneInfo
@@ -73,12 +74,18 @@ class Processor(XmlProcessor):
         reports = Bulletins()
         report = AvaBulletin()
 
-        aemet_reports = root.findtext(".//TXT_PREDICCION")
+        aemet_reports = root.findtext(".//TXT_PREDICCION", default="")
 
         re_result = re.search(
             r"Día (?P<day>\d+) de (?P<month>\w+) de (?P<year>\d+) a las (?P<hour>\d+):(?P<minute>\d+) hora",
             aemet_reports,
         )
+        if re_result is None:
+            # e.g. end-of-season notice ("se da por finalizada la campaña")
+            logging.warning(
+                "Skipping %s: no avalanche danger forecast in bulletin text", region_id
+            )
+            return reports
 
         report.publicationTime = datetime(
             year=int(re_result.group("year")),
