@@ -91,6 +91,12 @@ class TestAll(SnowTest):
         processor = avacore.processor_ES.Processor()
         self._test_processor(processor, "ES")
 
+    def test_ES_off_season(self):
+        processor = avacore.processor_ES.Processor()
+        with self.assertLogs(level="WARNING"):
+            bulletins = processor.parse_xml_file("ES", self._xml)
+        self.assertEqual([], bulletins.bulletins)
+
     def test_FI(self):
         processor = avacore.processor_FI.Processor()
         processor.raw_data = io.BytesIO(self._fixture("png").read_bytes())
@@ -136,6 +142,12 @@ class TestAll(SnowTest):
     def test_IS(self):
         processor = avacore.processor_IS.Processor()
         self._test_processor(processor, "IS")
+
+    def test_IS_off_season(self):
+        processor = avacore.processor_IS.Processor()
+        with self.assertLogs(level="WARNING"):
+            bulletins = processor.parse_xml_file("IS", self._xml)
+        self.assertEqual([], bulletins.bulletins)
 
     def test_IT_Livigno(self):
         processor = avacore.processor_IT_Livigno.Processor()

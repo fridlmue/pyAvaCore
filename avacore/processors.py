@@ -50,6 +50,8 @@ def new_processor(region_id: str) -> avacore.processor.Processor:
         return avacore.processor_caamlv6.Processor()
     if region_id.startswith("CZ"):
         return avacore.processor_CZ.Processor()
+    if region_id.startswith("ES-AR"):
+        return avacore.processor_caamlv6.Processor()
     if region_id.startswith("ES-CT-L-04"):
         return avacore.processor_ES_CT.Processor()
     if region_id.startswith("ES-CT-L"):

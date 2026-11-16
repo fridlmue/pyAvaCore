@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<avalanche>
+<conditions>
+
+	<short_description>Little snow is left in the lowlands in most parts but new snow is in the mountains.</short_description>
+	<full_description>Little snow is left in the lowlands in most parts but new snow is in the mountains. Some wind slabs may form in the uppermost part of mountains and a persistant weak layer is found in upper elevations of Eyjafj&amp;ouml;r&amp;eth;ur. New snow is expected in mountains and in the north on Wednesday.</full_description>
+	<update_time>2025-12-15T14:47:51</update_time>
+
+</conditions>
+<area_forecasts>
+			
+	<area_forecast>
+		<region>Southwest corner (experimental) </region>
+		<region_code>sv</region_code>
+		<valid_from></valid_from>
+		<valid_until></valid_until>
+		<updated></updated>
+		<forecast></forecast>
+		<recent_avalances></recent_avalances>
+		<snow_condition></snow_condition>
+		<weather></weather>
+
+		<danger_level_day1>Not available</danger_level_day1>
+		<danger_level_day1_code></danger_level_day1_code>
+		<danger_level_day1_color></danger_level_day1_color>
+		<danger_level_day1_color_rgb></danger_level_day1_color_rgb>
+
+		<danger_level_day2>Not available</danger_level_day2>
+		<danger_level_day2_code></danger_level_day2_code>
+		<danger_level_day2_color></danger_level_day2_color>
+		<danger_level_day2_color_rgb></danger_level_day2_color_rgb>
+
+		<danger_level_day3>Not available</danger_level_day3>
+		<danger_level_day3_code></danger_level_day3_code>
+		<danger_level_day3_color></danger_level_day3_color>
+		<danger_level_day3_color_rgb></danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+		</snow_problems>
+	</area_forecast>
+			
+	<area_forecast>
+		<region>Northern Westfjords </region>
+		<region_code>vn</region_code>
+		<valid_from></valid_from>
+		<valid_until></valid_until>
+		<updated></updated>
+		<forecast></forecast>
+		<recent_avalances></recent_avalances>
+		<snow_condition></snow_condition>
+		<weather></weather>
+
+		<danger_level_day1>Not available</danger_level_day1>
+		<danger_level_day1_code></danger_level_day1_code>
+		<danger_level_day1_color></danger_level_day1_color>
+		<danger_level_day1_color_rgb></danger_level_day1_color_rgb>
+
+		<danger_level_day2>Not available</danger_level_day2>
+		<danger_level_day2_code></danger_level_day2_code>
+		<danger_level_day2_color></danger_level_day2_color>
+		<danger_level_day2_color_rgb></danger_level_day2_color_rgb>
+
+		<danger_level_day3>Not available</danger_level_day3>
+		<danger_level_day3_code></danger_level_day3_code>
+		<danger_level_day3_color></danger_level_day3_color>
+		<danger_level_day3_color_rgb></danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+		</snow_problems>
+	</area_forecast>
+			
+	<area_forecast>
+		<region>Tröllaskagi </region>
+		<region_code>tn</region_code>
+		<valid_from></valid_from>
+		<valid_until></valid_until>
+		<updated></updated>
+		<forecast></forecast>
+		<recent_avalances></recent_avalances>
+		<snow_condition></snow_condition>
+		<weather></weather>
+
+		<danger_level_day1>Not available</danger_level_day1>
+		<danger_level_day1_code></danger_level_day1_code>
+		<danger_level_day1_color></danger_level_day1_color>
+		<danger_level_day1_color_rgb></danger_level_day1_color_rgb>
+
+		<danger_level_day2>Not available</danger_level_day2>
+		<danger_level_day2_code></danger_level_day2_code>
+		<danger_level_day2_color></danger_level_day2_color>
+		<danger_level_day2_color_rgb></danger_level_day2_color_rgb>
+
+		<danger_level_day3>Not available</danger_level_day3>
+		<danger_level_day3_code></danger_level_day3_code>
+		<danger_level_day3_color></danger_level_day3_color>
+		<danger_level_day3_color_rgb></danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+		</snow_problems>
+	</area_forecast>
+			
+	<area_forecast>
+		<region>East fjords </region>
+		<region_code>af</region_code>
+		<valid_from></valid_from>
+		<valid_until></valid_until>
+		<updated></updated>
+		<forecast></forecast>
+		<recent_avalances></recent_avalances>
+		<snow_condition></snow_condition>
+		<weather></weather>
+
+		<danger_level_day1>Not available</danger_level_day1>
+		<danger_level_day1_code></danger_level_day1_code>
+		<danger_level_day1_color></danger_level_day1_color>
+		<danger_level_day1_color_rgb></danger_level_day1_color_rgb>
+
+		<danger_level_day2>Not available</danger_level_day2>
+		<danger_level_day2_code></danger_level_day2_code>
+		<danger_level_day2_color></danger_level_day2_color>
+		<danger_level_day2_color_rgb></danger_level_day2_color_rgb>
+
+		<danger_level_day3>Not available</danger_level_day3>
+		<danger_level_day3_code></danger_level_day3_code>
+		<danger_level_day3_color></danger_level_day3_color>
+		<danger_level_day3_color_rgb></danger_level_day3_color_rgb>
+
+		<snow_problems>
+
+		</snow_problems>
+	</area_forecast>
+
+</area_forecasts>
+<weather_forecast>
+
+	<forecast>Rain on Wednesday in the south and east. Snow in mountains and in the northwest.</forecast>		
+	<update_time>2025-12-15T14:51:08</update_time>
+
+</weather_forecast>
+</avalanche>
+
+
