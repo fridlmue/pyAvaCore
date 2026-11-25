@@ -168,6 +168,7 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
+          "sl": "https://sl.avalanche.report",
           "api": "https://avalanche.report/bulletins/latest/AT-07_{lang}_CAAMLv6.json",
           "api:date": "https://avalanche.report/bulletins/{date}/{date}_AT-07_{lang}_CAAMLv6.json",
           "api:lang": [
@@ -602,7 +603,7 @@
         "url": {
           "en": "https://www.livigno.eu/en/avalanche-bulletin",
           "it": "https://www.livigno.eu/bollettino-valanghe",
-          "api": "https://www.livigno.eu/en/avalanche-bulletin",
+          "api": "https://webview.livigno.eu/en/avalanche-bulletin",
           "mail": "mailto:monti@alpsolut.eu",
           "facebook": "https://www.facebook.com/alpsolut.eu"
         }
@@ -697,6 +698,7 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
+          "sl": "https://sl.avalanche.report",
           "api": "https://avalanche.report/bulletins/latest/IT-32-BZ_{lang}_CAAMLv6.json",
           "api:date": "https://avalanche.report/bulletins/{date}/{date}_IT-32-BZ_{lang}_CAAMLv6.json",
           "api:lang": [
@@ -744,6 +746,7 @@
           "ca": "https://ca.avalanche.report",
           "es": "https://es.avalanche.report",
           "fr": "https://fr.avalanche.report",
+          "sl": "https://sl.avalanche.report",
           "api": "https://avalanche.report/bulletins/latest/IT-32-TN_{lang}_CAAMLv6.json",
           "api:date": "https://avalanche.report/bulletins/{date}/{date}_IT-32-TN_{lang}_CAAMLv6.json",
           "api:lang": [
@@ -1113,7 +1116,7 @@
       {
         "name": "Tatrzańskie OPR",
         "url": {
-          "en": "https://lawiny.topr.pl/?language=en",
+          "en": "https://lawiny.topr.pl/en/home-english/",
           "pl": "https://lawiny.topr.pl",
           "api": "https://lawiny.topr.pl/",
           "mail": "mailto:topr@topr.pl",
