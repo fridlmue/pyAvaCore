@@ -17,7 +17,6 @@ import avacore.processor_IT_MeteoMont
 import avacore.processor_NO
 import avacore.processor_PL
 import avacore.processor_PL_12
-import avacore.processor_RO
 import avacore.processor_SE
 import avacore.processor_UA
 import avacore.processor_GB
@@ -209,10 +208,6 @@ class TestAll(SnowTest):
         processor = avacore.processor_UA.Processor()
         self._test_processor(processor, "UA")
 
-    def test_RO_2025_03_14(self):
-        processor = avacore.processor_RO.Processor()
-        self._test_processor(processor, "RO")
-
-    def test_RO_2025_12_08(self):
-        processor = avacore.processor_RO.Processor()
+    def test_RO_2026_11_24(self):
+        processor = avacore.processor_caamlv6.Processor()
         self._test_processor(processor, "RO")

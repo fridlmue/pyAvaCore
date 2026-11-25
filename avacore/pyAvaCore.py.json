@@ -1155,7 +1155,7 @@
         "name": "ANM",
         "url": {
           "ro": "https://www.meteoromania.ro/Upload-Produse/nivologie/nivologie.pdf",
-          "api": "https://www.meteoromania.ro/Upload-Produse/nivologie/nivologie.pdf",
+          "api": "https://www.meteoromania.ro/Upload-Produse/nivologie/avalanche_report.json",
           "mail": "mailto:nivologie.sibiu@meteoromania.ro"
         }
       }
