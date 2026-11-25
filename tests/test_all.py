@@ -173,10 +173,10 @@ class TestAll(SnowTest):
         processor.fetch_time_dependant = False
         self._test_processor(processor, "NO-3016")
 
-    def test_PL_12_2022_12_01(self):
+    def test_PL_12_2026_11_24(self):
         processor = avacore.processor_PL_12.Processor()
-        processor.fetch_time_dependant = False
-        self._test_processor(processor, "PL-12")
+        bulletins = self._test_processor(processor, "PL-12")
+        self.assertEqual("2026-11-25", bulletins.main_date().isoformat())
 
     def test_PL_2026_10_16(self):
         processor = avacore.processor_PL.Processor()
