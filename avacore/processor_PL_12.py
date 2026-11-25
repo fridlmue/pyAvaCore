@@ -13,121 +13,159 @@ You should have received a copy of the GNU General Public License
 along with pyAvaCore. If not, see <http://www.gnu.org/licenses/>.
 """
 
+from datetime import datetime
+import html as html_lib
 import re
-import json
-
+from zoneinfo import ZoneInfo
 
 from avacore.avabulletin import (
     AvaBulletin,
-    ValidTime,
-    DangerRating,
     AvalancheProblem,
+    DangerRating,
     Elevation,
     Region,
+    Tendency,
     Texts,
+    ValidTime,
 )
 from avacore.avabulletins import Bulletins
-from avacore.processor import JsonProcessor
+from avacore.processor import HtmlProcessor
+
+ASPECTS = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+
+PERIODS = {
+    "allday": "all_day",
+}
 
 
-class Processor(JsonProcessor):
+class Processor(HtmlProcessor):
     fetch_time_dependant = True
 
     def process_bulletin(self, region_id) -> Bulletins:
-        response: str = self._fetch_url(self.url, {})
+        html = self._fetch_url(self.url, {})
+        self.raw_data = html
+        self.raw_data_format = "html"
+        return self.parse_html(region_id, html)
 
-        match = re.search(r"const oLawReport = ", response)
-        if match is None:
-            raise ValueError(f"Could not extract oLawReport from {self.url}")
-        pl_12_report, end = json.JSONDecoder().raw_decode(response, match.end())
-        raw = response[match.end() : end]
+    def parse_html(self, region_id, html: str) -> Bulletins:
+        article = re.search(
+            r"<article class='topr-bulletin'.*?</article>", html, flags=re.DOTALL
+        )
+        if article is None:
+            raise ValueError(f"Could not find TOPR bulletin in {self.url}")
+        article = article.group()
 
-        self.raw_data = raw
-        self.raw_data_format = "JSON"
+        def find(pattern: str) -> str:
+            match = re.search(pattern, article, flags=re.DOTALL)
+            if match is None:
+                raise ValueError(f"Could not find {pattern!r} in TOPR bulletin")
+            return html_lib.unescape(match.group(1).strip())
 
-        return self.parse_json(region_id, pl_12_report)
+        def parse_time(value: str) -> datetime:
+            return datetime.fromisoformat(value).replace(
+                tzinfo=ZoneInfo("Europe/Warsaw")
+            )
 
-    def parse_json(self, region_id, data) -> Bulletins:
-        bulletins = Bulletins()
         bulletin = AvaBulletin()
-
-        # ZoneInfo("Europe/Warsaw")
-
         bulletin.regions = [Region(regionID=region_id)]
-        bulletin.validTime = ValidTime(data["iat"], data["exp"])
+        bulletin.validTime = ValidTime(
+            startTime=parse_time(find(r"Obowiązuje od:</span>\s*<strong>([^<]+)")),
+            endTime=parse_time(find(r"<strong>Obowiązuje do:</strong>([^<]+)")),
+        )
+        bulletin.publicationTime = parse_time(
+            find(r"<strong>Data publikacji:</strong>([^<]+)")
+        )
+        bulletin.bulletinID = f"{region_id}_{bulletin.validTime.endTime.isoformat()}"
 
-        bulletin.publicationTime = bulletin.validTime.startTime
+        definitions = [
+            html_lib.unescape(text.strip())
+            for text in re.findall(
+                r"<span class='topr-mobile-def-label'>[^<]*</span>([^<]*)</p>",
+                article,
+            )
+        ]
+        if len(definitions) == 3:
+            bulletin.snowpackStructure = Texts(comment=" ".join(definitions[:2]))
+            bulletin.travelAdvisory = Texts(comment=definitions[2])
 
-        bulletin.bulletinID = f"{region_id}_{data['exp']}"
+        bulletin.avalancheActivity = Texts(
+            comment=find(r"<div class='avalanche-comment'><h4>[^<]*</h4><p>(.*?)</p>")
+        )
 
-        avalancheActivity = Texts()
-        avalancheActivity.comment = data["comment"]
+        tendency = find(r"<span class='tendency-meta'>.*?</svg><span>([^<]+)</span>")
+        bulletin.tendency = [
+            Tendency(
+                comment=tendency,
+                tendencyType="steady" if "bez zmian" in tendency else None,
+            )
+        ]
 
-        bulletin.avalancheActivity = avalancheActivity
+        problem_list = article[article.index("<div class='problem-list'>") :]
+        periods = list(re.finditer(r"<div class='(\w+)-problems'>", problem_list))
+        for period, next_period in zip(periods, periods[1:] + [None]):
+            if period.group(1) not in PERIODS:
+                raise ValueError(f"Unknown TOPR period {period.group(1)!r}")
+            valid_time_period = PERIODS[period.group(1)]
+            section = problem_list[
+                period.end() : next_period.start() if next_period else None
+            ]
 
-        snowpackStructure = Texts()
-        snowpackStructure.comment = data["mst"]["desc1"]
+            danger_icon = re.search(
+                r"<div class='period-danger-icon'>(.*?)</svg>", section, re.DOTALL
+            ).group(1)
+            values = [
+                int(v)
+                for v in re.findall(r'class="rating-text"[^>]*>(\d)<', danger_icon)
+            ]
+            if len(set(values)) == 1:
+                rating = DangerRating(validTimePeriod=valid_time_period)
+                rating.set_mainValue_int(values[0])
+                bulletin.dangerRatings.append(rating)
+            else:
+                bound = re.search(r'class="elevation-text"[^>]*>(\d+)<', danger_icon)
+                for value, elevation in zip(
+                    values,
+                    [
+                        Elevation(lowerBound=bound.group(1)),
+                        Elevation(upperBound=bound.group(1)),
+                    ],
+                ):
+                    rating = DangerRating(
+                        validTimePeriod=valid_time_period, elevation=elevation
+                    )
+                    rating.set_mainValue_int(value)
+                    bulletin.dangerRatings.append(rating)
 
-        bulletin.snowpackStructure = snowpackStructure
+            for row in section.split("<div class='problem-row'>")[1:]:
+                problem_type = re.search(r"data-problem='prb_(\w+?)_topr", row)
+                if problem_type is None:
+                    continue
+                problem = AvalancheProblem(validTimePeriod=valid_time_period)
+                problem.add_problemType(problem_type.group(1))
 
-        travelAdvisory = Texts()
-        travelAdvisory.comment = data["mst"]["desc2"]
+                elevation_svg, compass_svg = row.split(
+                    "<div class='problem-svg compass'"
+                )[:2]
+                upper, lower = re.findall(
+                    r'<path d="M [^"]*" class="(elevation-\w+)"', elevation_svg
+                )[:2]
+                if upper != lower:
+                    bound = re.search(
+                        r'class="elevation-text"[^>]*>(\d+)<', elevation_svg
+                    )
+                    bound = bound.group(1) if bound else "treeline"
+                    problem.elevation = (
+                        Elevation(lowerBound=bound)
+                        if upper == "elevation-active"
+                        else Elevation(upperBound=bound)
+                    )
 
-        bulletin.travelAdvisory = travelAdvisory
+                sectors = re.findall(r'<path d="m[^"]*" class="([^"]+)"', compass_svg)
+                problem.aspects = [
+                    aspect
+                    for aspect, sector in zip(ASPECTS, sectors)
+                    if sector == "exposure-active"
+                ]
+                bulletin.avalancheProblems.append(problem)
 
-        ratings = {"am": "earlier", "pm": "later"}
-        periods = {
-            rating: {k: v for k, v in data[rating].items() if k != "img"}
-            for rating in ratings
-        }
-        if periods["am"] == periods["pm"]:
-            ratings = {"am": "all_day"}
-
-        aspects = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
-
-        problem_types = {
-            "prgs": "gliding_snow",
-            "prnn": "no_distinct_avalanche_problem",
-            "prns": "new_snow",
-            "prso": "cornices",
-            "prwd": "wind_slab",
-            "prwl": "persistent_weak_layers",
-            "prws": "wet_snow",
-        }
-
-        for rating, rating_ident in ratings.items():
-            elevs = ["upper"]
-            if data[rating]["mode"] == 2:
-                elevs.append("lower")
-            for elev in elevs:
-                danger_rating = DangerRating(validTimePeriod=rating_ident)
-                danger_rating.set_mainValue_int(int(data[rating][elev]["lev"]))
-                elevation = None
-                if len(elevs) > 1:
-                    elevation = Elevation()
-                    if elev == "upper":
-                        elevation.lowerBound = str(data[rating]["height"])
-                    else:
-                        elevation.upperBound = str(data[rating]["height"])
-                    danger_rating.elevation = elevation
-
-                aspect_list = []
-
-                for i, c in enumerate(data[rating][elev]["exp"]):
-                    if c == "1":
-                        aspect_list.append(aspects[i])
-
-                bulletin.dangerRatings.append(danger_rating)
-
-                problem_type = problem_types.get(data[rating][elev]["prb"])
-                if problem_type:
-                    problem = AvalancheProblem()
-                    problem.aspects = aspect_list
-                    if elevation:
-                        problem.elevation = elevation
-                    problem.problemType = problem_type
-                    bulletin.avalancheProblems.append(problem)
-
-        bulletins.append(bulletin)
-
-        return bulletins
+        return Bulletins(bulletins=[bulletin])

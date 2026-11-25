@@ -1,0 +1,40 @@
+{
+  "avalancheProblems": {
+    "PL-12": [
+      "persistent_weak_layers",
+      "wind_slab",
+      "new_snow"
+    ],
+    "PL-12:am": [
+      "persistent_weak_layers",
+      "wind_slab",
+      "new_snow"
+    ],
+    "PL-12:high": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "PL-12:high:am": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "PL-12:high:pm": [
+      "persistent_weak_layers",
+      "wind_slab"
+    ],
+    "PL-12:low": [
+      "new_snow"
+    ],
+    "PL-12:low:am": [
+      "new_snow"
+    ],
+    "PL-12:low:pm": [
+      "new_snow"
+    ],
+    "PL-12:pm": [
+      "persistent_weak_layers",
+      "wind_slab",
+      "new_snow"
+    ]
+  }
+}
