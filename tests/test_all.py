@@ -178,6 +178,11 @@ class TestAll(SnowTest):
         bulletins = self._test_processor(processor, "PL-12")
         self.assertEqual("2026-11-25", bulletins.main_date().isoformat())
 
+    def test_PL_12_2026_11_25(self):
+        processor = avacore.processor_PL_12.Processor()
+        bulletins = self._test_processor(processor, "PL-12")
+        self.assertEqual("2026-11-26", bulletins.main_date().isoformat())
+
     def test_PL_2026_10_16(self):
         processor = avacore.processor_PL.Processor()
         self._test_processor(processor, "PL")
