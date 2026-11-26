@@ -68,12 +68,15 @@ class Processor(HtmlProcessor):
 
         bulletin = AvaBulletin()
         bulletin.regions = [Region(regionID=region_id)]
-        bulletin.validTime = ValidTime(
-            startTime=parse_time(find(r"Obowiązuje od:</span>\s*<strong>([^<]+)")),
-            endTime=parse_time(find(r"<strong>Obowiązuje do:</strong>([^<]+)")),
-        )
         bulletin.publicationTime = parse_time(
             find(r"<strong>Data publikacji:</strong>([^<]+)")
+        )
+        start_time = re.search(r"Obowiązuje od:</span>\s*<strong>([^<]+)", article)
+        bulletin.validTime = ValidTime(
+            startTime=parse_time(start_time.group(1).strip())
+            if start_time
+            else bulletin.publicationTime,
+            endTime=parse_time(find(r"<strong>Obowiązuje do:</strong>([^<]+)")),
         )
         bulletin.bulletinID = f"{region_id}_{bulletin.validTime.endTime.isoformat()}"
 
