@@ -59,8 +59,8 @@
         "name": "LWD Niederösterreich",
         "url": {
           "de": "https://www.lawinenwarndienst-niederoesterreich.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-03_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-03_{lang}_CAAMLv6.json",
+          "api": "https://static.at-03.lawinen-warnung.eu/bulletins/latest/AT-03_{lang}_CAAMLv6.json",
+          "api:date": "https://static.at-03.lawinen-warnung.eu/bulletins/{date}/{date}_AT-03_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de"
@@ -83,8 +83,8 @@
         "name": "LWD Oberösterreich",
         "url": {
           "de": "https://oberoesterreich.avalanche-warnings.eu",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-04_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-04_{lang}_CAAMLv6.json",
+          "api": "https://static.at-04.lawinen-warnung.eu/bulletins/latest/AT-04_{lang}_CAAMLv6.json",
+          "api:date": "https://static.at-04.lawinen-warnung.eu/bulletins/{date}/{date}_AT-04_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de"
@@ -110,8 +110,8 @@
         "url": {
           "en": "https://lawine.salzburg.at/en",
           "de": "https://lawine.salzburg.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-05_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-05_{lang}_CAAMLv6.json",
+          "api": "https://static.at-05.lawinen-warnung.eu/bulletins/latest/AT-05_{lang}_CAAMLv6.json",
+          "api:date": "https://static.at-05.lawinen-warnung.eu/bulletins/{date}/{date}_AT-05_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de"
@@ -136,8 +136,8 @@
         "name": "LWD Steiermark",
         "url": {
           "de": "https://www.lawine-steiermark.at",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-06_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-06_{lang}_CAAMLv6.json",
+          "api": "https://static.at-06.lawinen-warnung.eu/bulletins/latest/AT-06_{lang}_CAAMLv6.json",
+          "api:date": "https://static.at-06.lawinen-warnung.eu/bulletins/{date}/{date}_AT-06_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de",
@@ -208,8 +208,8 @@
         "url": {
           "en": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_en.html",
           "de": "https://warnung.vorarlberg.at/vtgdb/dist/index.html#//lwd_lagebericht_de.html",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/AT-08_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_AT-08_{lang}_CAAMLv6.json",
+          "api": "https://static.at-08.lawinen-warnung.eu/bulletins/latest/AT-08_{lang}_CAAMLv6.json",
+          "api:date": "https://static.at-08.lawinen-warnung.eu/bulletins/{date}/{date}_AT-08_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de"
@@ -286,8 +286,8 @@
         "name": "LWD Bayern",
         "url": {
           "de": "https://lawinenwarndienst.bayern.de/",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/DE-BY_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_DE-BY_{lang}_CAAMLv6.json",
+          "api": "https://static.de-by.lawinen-warnung.eu/bulletins/latest/DE-BY_{lang}_CAAMLv6.json",
+          "api:date": "https://static.de-by.lawinen-warnung.eu/bulletins/{date}/{date}_DE-BY_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de"
@@ -1201,12 +1201,13 @@
         "url": {
           "si": "https://meteo.arso.gov.si/met/sl/weather/bulletin/mountain/avalanche/bulletin/",
           "en": "https://meteo.arso.gov.si/met/en/weather/bulletin/mountain/avalanche/bulletin/",
-          "api": "https://static.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
-          "api:date": "https://static.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
+          "api": "https://static.si.lawinen-warnung.eu/bulletins/latest/{region}_{lang}_CAAMLv6.json",
+          "api:date": "https://static.si.lawinen-warnung.eu/bulletins/{date}/{date}_{region}_{lang}_CAAMLv6.json",
           "api:lang": [
             "en",
             "de",
-            "it"
+            "it",
+            "si"
           ],
           "mail": "mailto:plaz.arso@gov.si",
           "facebook": "https://www.facebook.com/ArsoVreme/",
